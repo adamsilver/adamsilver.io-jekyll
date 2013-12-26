@@ -1,2 +1,0 @@
-adamsilver.github.io
-====================
