@@ -1,3 +1,42 @@
 body {
 	background-color: #f5f5f5;
+	font-family: helvetica;
+}
+
+.active {
+	color: red;
+}
+
+p {
+	font-family: georgia
+}
+
+#container {
+	margin: 0 auto;
+	padding: 10px;
+}
+
+#header {
+	background-color: #fff;
+	padding: 10px;
+	overflow: hidden;
+	border-bottom: 3px solid  #444;
+}
+
+#logo {
+	float: left;
+}
+
+#nav {
+	float: right;
+}
+
+#nav ul {
+	overflow: hidden;
+}
+
+#nav li {
+	float: left;
+	list-style: none;
+	margin-left: 10px;
 }

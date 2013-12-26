@@ -9,9 +9,12 @@
 
 		<meta name="description" content="Adam Silver site">
 
-		<title>{{ page.title }}</title>
+		<title>Adam Silver - {{ page.title }}</title>
 
 		<link rel="stylesheet" href="/css/main.css" type="text/css" media="all">
+		<link rel="stylesheet" href="/css/small.css" type="text/css" media="screen and (max-width: 320px)">
+		<link rel="stylesheet" href="/css/medium.css" type="text/css" media="screen and (min-width: 720px) and (max-width: 959px)">
+		<link rel="stylesheet" href="/css/large.css" type="text/css" media="screen and (min-width: 960px)">
 
 		<link href="/favicon.ico" media="all" rel="icon prefetch">
 	</head>
@@ -19,12 +22,22 @@
 		<div id="container">
 
 			<div id="header">
-				<h1><a href="/">{{ site.name }}</a></h1>
-				<a class="extra" href="/">home</a>
+				<div id="logo"><a href="/">{{ site.name }}</a></div>
+				{% include navigation.html %}
+				<!--<div id="nav">
+					{% for p in site.pages %}
+						<a href="{{ p.url }}">{{ p.title }}</a>
+					{% endfor %}
+				</div>-->
 			</div>
 
-			{{ content }}
+			<div id="content">
+				{{ content }}
+			</div>
 
+			<div id="footer">
+				<p>Copyright &copy; 2014</p>
+			</div>
 
 		</div>
 	</body>
