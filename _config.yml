@@ -1,3 +1,4 @@
 name: Experiences as a front-end web developer, Adam Silver
 markdown: redcarpet
 pygments: true
+permalink: /:title
