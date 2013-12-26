@@ -7,9 +7,6 @@ body {
 	color: red;
 }
 
-p {
-	font-family: georgia
-}
 
 #container {
 	margin: 0 auto;
@@ -39,4 +36,14 @@ p {
 	float: left;
 	list-style: none;
 	margin-left: 10px;
+}
+
+h1 {
+	font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	color: #333332;
+	font-size: 2.2em;
+}
+
+p {
+	font-family: "freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif;
 }
