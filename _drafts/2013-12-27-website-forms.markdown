@@ -6,6 +6,8 @@ categories: forms
 ---
 
  - Introduction to forms
+ - Control types
+ - Accessibility and forms
  - Retrieving a form
  - Retrieving all controls in a form
  - Retrieving a particlar control
