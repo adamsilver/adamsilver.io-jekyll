@@ -1,4 +1,4 @@
 name: Adam Silver
 markdown: redcarpet
 pygments: true
-permalink: /blog/:year/:month/:day/:title
+permalink: /articles/:year/:month/:day/:title
