@@ -4,7 +4,8 @@
 }
 
 body,
-ul, li {
+ul, li,
+p {
 	margin: 0;
 	padding: 0;
 }
@@ -24,6 +25,16 @@ ul, li {
 	border-top: 7px solid  #444;
 	border-bottom: 1px solid #666;
 	margin-bottom: 10px;
+}
+
+#footer {
+	background-color: #444;
+	color: #fff;
+	padding: 10px;
+}
+
+#footer p {
+	margin-bottom: 0;
 }
 
 #breadcrumb {
@@ -57,12 +68,16 @@ ul, li {
 	background-color: #444;
 	color: #fff;
 	text-decoration: underline;
-	padding: 7px 10px;
+	padding: 7px 10px 8px;
 	display: block;
+	text-transform: uppercase;
+	font-size: 0.7em;
+	font-family: arial;
+	font-weight: bold;
 }
 
 #nav li a:hover,
-#nav li a.active {
+#nav li .active {
 	background-color: #000;
 	text-decoration: none;
 }
@@ -72,10 +87,13 @@ h1 {
 	font-size: 2.2em;
 	font-family: familiar, arial;
 	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 15px;
 }
 
 p {
-	font-family: "freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif;
+	font-family: "freight-text-pro",Georgia;
+	margin-bottom: 10px;
 }
 
 #articles ul {
@@ -83,5 +101,24 @@ p {
 }
 
 #articles li {
-	margin-bottom: 4px;
+}
+
+#articles li a {
+	display: block;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+	padding: 10px;
+}
+
+#articles li a:hover {
+	background-color: #ccc;
+}
+
+#articles li a .title {
+	float: left;
+}
+
+#articles li a .date {
+	float: left;
+	margin-right: 20px;
 }
