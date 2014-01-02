@@ -1,15 +1,19 @@
-body {
-	background-color: #f5f5f5;
-	font-family: helvetica;
+@font-face {
+	font-family: familiar;
+	src: url(../fonts/Familiar_Pro-Bold.otf);
 }
 
-.active {
-	color: red;
+body,
+ul, li {
+	margin: 0;
+	padding: 0;
 }
-
 
 #container {
 	margin: 0 auto;
+}
+
+#content {
 	padding: 10px;
 }
 
@@ -17,7 +21,17 @@ body {
 	background-color: #fff;
 	padding: 10px;
 	overflow: hidden;
-	border-bottom: 3px solid  #444;
+	border-top: 7px solid  #444;
+	border-bottom: 1px solid #666;
+	margin-bottom: 10px;
+}
+
+#breadcrumb {
+	margin-bottom: 10px;
+}
+
+#breadcrumb p {
+	font-size: 0.8em;
 }
 
 #logo {
@@ -38,12 +52,36 @@ body {
 	margin-left: 10px;
 }
 
+#nav li a {
+	border-radius: 4px;
+	background-color: #444;
+	color: #fff;
+	text-decoration: underline;
+	padding: 7px 10px;
+	display: block;
+}
+
+#nav li a:hover,
+#nav li a.active {
+	background-color: #000;
+	text-decoration: none;
+}
+
 h1 {
-	font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
 	color: #333332;
 	font-size: 2.2em;
+	font-family: familiar, arial;
+	text-transform: uppercase;
 }
 
 p {
 	font-family: "freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif;
+}
+
+#articles ul {
+	list-style: none;
+}
+
+#articles li {
+	margin-bottom: 4px;
 }

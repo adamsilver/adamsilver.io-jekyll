@@ -260,11 +260,13 @@
 	},
 	"file_history":
 	[
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_site/adamsilver.sublime-workspace",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_config.yml",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/.gitignore",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2013-12-26-welcome-to-jekyll.markdown",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2013-12-27-website-forms.markdown",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_site/Gemfile",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/Gemfile",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_config.yml",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/css/main.css",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2013-12-27-website-forms.markdown",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts",
@@ -385,9 +387,7 @@
 		"/Users/adambsilver/Downloads/PAYG_PPD_TC4_Lookup.xml",
 		"/Users/adambsilver/Downloads/PAYG_PPD_TC4_BuyPass.xml",
 		"/Users/adambsilver/Workspace/dtuk/ebdc-ee/src/main/java/ebdcportal/pdf/LookupResult.java",
-		"/Users/adambsilver/Workspace/dtuk/ebdc-ee/src/main/webapp/WEB-INF/jsp/layoutC/details.jsp",
-		"/Users/adambsilver/Library/Application Support/Sublime Text 2/Packages/User/Side Bar.sublime-settings",
-		"/Users/adambsilver/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/Side Bar.sublime-settings"
+		"/Users/adambsilver/Workspace/dtuk/ebdc-ee/src/main/webapp/WEB-INF/jsp/layoutC/details.jsp"
 	],
 	"find":
 	{
@@ -1168,7 +1168,7 @@
 		[
 			[
 				"",
-				"/Users/adambsilver/Workspace/jsloading/jsloading.sublime-project"
+				"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/adamsilver.sublime-project"
 			]
 		],
 		"width": 380.0
