@@ -86,7 +86,8 @@ p {
 }
 
 body {
-	font-family: 'droid sans', arial;
+	font-family: 'droid sans', arial, helvetica;
+	/* test */
 }
 
 h1 {
