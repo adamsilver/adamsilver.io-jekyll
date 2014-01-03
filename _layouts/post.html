@@ -9,7 +9,8 @@ id: article
 		<p><a href="/articles/">Articles</a> > {{ page.title }}</p>
 	</div>
 
-	<p class="date">{{ page.date | date_to_long_string }}</p>
+	<p class="date">Date: {{ page.date | date_to_long_string }}</p>
+	<!--<p class="count">Word count: {{ page.content | number_of_words }}</p>-->
 	<h1>{{ page.title }}</h1>
 
 
