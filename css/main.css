@@ -249,3 +249,59 @@ a {
 	margin-right: 20px;
 	color: #444;
 }
+
+/**********************************************************
+* Small screens
+**********************************************************/
+
+@media (max-width: 360px) {
+	#container {
+		/*min-width: 280px;*/
+	}
+
+	#logo {
+		float: left;
+		margin-bottom: 20px;
+	}
+
+	#nav {
+		clear: left;
+		float: none;
+		margin-top: 0;
+		border-top: 1px solid #2E3B46;
+		padding-top: 15px;
+	}
+
+	#nav li {
+		float: none;
+		margin-left: 0;
+		margin-bottom: 4px;
+	}
+}
+
+/**********************************************************
+* Medium screens
+**********************************************************/
+
+@media (min-width: 720px) { }
+
+/**********************************************************
+* Large screens
+**********************************************************/
+
+@media (min-width: 960px) {
+
+	#content,
+	#headerInner,
+	#footer {
+		width: 960px;
+		margin: 0 auto;
+	}
+
+}
+
+
+
+
+
+
