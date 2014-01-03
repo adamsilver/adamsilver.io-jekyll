@@ -9,9 +9,10 @@
 
 		<meta name="description" content="Adam Silver site">
 
-		<title>Adam Silver - {{ page.title }}</title>
+		<title>{{ site.name }} - {{ page.title }}</title>
 
 
+		<link rel="stylesheet" href="/css/fonts.css" type="text/css" media="all">
 		<link rel="stylesheet" href="/css/main.css" type="text/css" media="all">
 		<link rel="stylesheet" href="/css/small.css" type="text/css" media="screen and (max-width: 320px)">
 		<link rel="stylesheet" href="/css/medium.css" type="text/css" media="screen and (min-width: 720px) and (max-width: 959px)">
@@ -24,7 +25,10 @@
 
 			<div id="header">
 				<div id="headerInner">
-					<div id="logo"><a href="/">{{ site.name }}</a></div>
+					<div id="logo">
+						<a href="/">Adam Silver</a>
+						<p class="tagLine">Front-end web developer</p>
+					</div>
 					{% include navigation.html %}
 					<!--<div id="nav">
 						{% for p in site.pages %}
@@ -41,9 +45,7 @@
 			</div>
 
 			<div id="footer">
-				<div id="footerInner">
-					<p>Copyright &copy; 2014</p>
-				</div>
+				<p>&copy; 2014 Adam Silver</p>
 			</div>
 
 		</div>

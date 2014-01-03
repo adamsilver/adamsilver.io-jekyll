@@ -1,8 +1,3 @@
-@font-face {
-	font-family: familiar;
-	src: url(../fonts/Familiar_Pro-Bold.otf);
-}
-
 body,
 ul, li,
 p {
@@ -10,26 +5,36 @@ p {
 	padding: 0;
 }
 
+h1 {
+	color: #333332;
+	font-size: 2.2em;
+	font-family: droid_serifregular;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+
+p {
+	margin-bottom: 10px;
+}
+
 #container {
 	margin: 0 auto;
 }
 
 #content {
-	padding: 10px;
+	padding: 10px 10px 30px;
 }
 
 #header {
-	background-color: #fff;
-	padding: 10px;
+	background-color: #21282e;
+	padding: 20px;
 	overflow: hidden;
-	border-top: 7px solid  #444;
-	border-bottom: 1px solid #666;
 	margin-bottom: 10px;
 }
 
 #footer {
-	background-color: #444;
-	color: #fff;
+	border-top: 1px solid #ccc;
 	padding: 10px;
 }
 
@@ -49,8 +54,34 @@ p {
 	float: left;
 }
 
+#logo a {
+	font-size: 1.5em;
+	background-color: #e32d40;
+	padding: 12px 10px 10px;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	font-family: droid_serifregular, 'Helvetica Neue', Helvetica, Arial, sans-serif;;
+	text-transform: uppercase;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+#logo a:hover {
+	background-color: #CA1A2C;
+}
+
+#logo .tagLine {
+	color: #687E91;
+	font-size: 0.9em;
+	font-family: droid_sansregular;
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+
 #nav {
 	float: right;
+	margin-top: 60px;
 }
 
 #nav ul {
@@ -60,65 +91,44 @@ p {
 #nav li {
 	float: left;
 	list-style: none;
-	margin-left: 10px;
+	margin-left: 20px;
 }
 
-#nav li a {
+#nav li a,
+#nav li a:link,
+#nav li a:visited {
 	border-radius: 4px;
-	background-color: #444;
-	color: #fff;
-	text-decoration: underline;
-	padding: 7px 10px 8px;
-	display: block;
+	color: #687E91;
 	text-transform: uppercase;
-	font-size: 0.7em;
-	font-family: arial;
-	font-weight: bold;
+	font-size: 0.9em;
+	font-family: droid_sansregular;
 }
 
 #nav li a:hover,
-#nav li .active {
-	background-color: #000;
+#nav li a.active {
+	color: #fff;
 	text-decoration: none;
 }
 
-h1 {
-	color: #333332;
-	font-size: 2.2em;
-	font-family: familiar, arial;
-	text-transform: uppercase;
-	margin-top: 0;
-	margin-bottom: 15px;
-}
 
-p {
-	font-family: "freight-text-pro",Georgia;
-	margin-bottom: 10px;
-}
 
 #articles ul {
 	list-style: none;
 }
 
 #articles li {
+	overflow: hidden;
+	margin-bottom: 10px;
+	padding-left: 20px;
+	font-size: 1.2em;
 }
 
 #articles li a {
-	display: block;
-	border-bottom: 1px solid #ccc;
-	overflow: hidden;
-	padding: 10px;
-}
-
-#articles li a:hover {
-	background-color: #ccc;
-}
-
-#articles li a .title {
 	float: left;
 }
 
-#articles li a .date {
+#articles li .date {
 	float: left;
 	margin-right: 20px;
+	color: #444;
 }

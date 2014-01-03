@@ -2,10 +2,8 @@
 	<ul class="articles">
 		{% for post in site.posts %}
 			<li class="article">
-				<a href="{{ post.url }}">
-					<span class="date">{{ post.date | date_to_string }}</span>
-					<span class="title">{{ post.title }}</span>
-				</a>
+				<span class="date">{{ post.date | date_to_string }}</span>
+				<a class="title" href="{{ post.url }}">{{ post.title }}</a>
 			</li>
 		{% endfor %}
 	</ul>
