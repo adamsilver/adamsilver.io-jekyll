@@ -13,10 +13,10 @@ categories: forms
 7. [Retrieving a particlar control](#1)
 8. [Inspecting a controls value](#1)
 
-## <a id="introductionToForms">Introduction to forms</a>
+## <a id="introductionToForms">(#1)</a> Introduction to forms
 
 Blah
 
-## <a id="controlTypes">Control types</a>
+## <a id="controlTypes">(#2)</a> Control types
 
 Blah
