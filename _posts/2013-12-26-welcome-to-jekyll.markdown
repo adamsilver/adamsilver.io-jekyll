@@ -5,18 +5,10 @@ date:   2013-12-26 08:08:58
 categories: jekyll
 ---
 
-
-1. [Some link](#header)
-2. [Some link2](#adam2)
-
-## Header
-
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
 To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
 
 Jekyll also offers powerful support for code snippets:
-
-## <a id="adam2">Th heading</a>
 
 {% highlight ruby %}
 def print_hi(name)
