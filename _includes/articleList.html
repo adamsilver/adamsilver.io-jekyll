@@ -1,10 +1,10 @@
 <div id="articles">
-	<ul class="articles">
+	<ol class="articles">
 		{% for post in site.posts %}
 			<li class="article">
 				<span class="date">{{ post.date | date_to_string }}</span>
 				<a class="title" href="{{ post.url }}">{{ post.title }}</a>
 			</li>
 		{% endfor %}
-	</ul>
+	</ol>
 </div>

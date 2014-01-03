@@ -87,7 +87,7 @@ p {
 
 body {
 	font-family: 'droid sans', arial, helvetica;
-	/* test */
+	-webkit-font-smoothing: antialiased;
 }
 
 h1 {
@@ -109,7 +109,6 @@ h2 {
 p {
 	margin-bottom: 18px;
 	color: #444;
-	-webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -121,7 +120,7 @@ a {
 }
 
 #content {
-	padding: 20px 20px 30px;
+	padding: 0px 20px 30px;
 }
 
 #content p {
@@ -141,11 +140,14 @@ a {
 
 #footer {
 	border-top: 1px solid #ccc;
-	padding: 20px;
+	padding: 20px 0px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 #footer p {
 	margin-bottom: 0;
+	font-size: 0.8em;
 }
 
 /**********************************************************
@@ -159,7 +161,8 @@ a {
 }
 
 #breadcrumb p {
-	font-size: 1em;
+	font-size: 0.9em;
+	margin: 0;
 }
 
 /**********************************************************
@@ -233,35 +236,17 @@ a {
 **********************************************************/
 
 #articles ul {
-	list-style: none;
+
 }
 
 #articles li {
-	overflow: hidden;
 	margin-bottom: 10px;
-	padding-left: 20px;
-}
-
-#articles li a {
-	float: left;
-}
-
-#articles li .date {
-	float: left;
-	min-width: 100px;
-	margin-right: 20px;
-	color: #444;
-	text-align: right;
 }
 
 /**********************************************************
 * Post
 **********************************************************/
 
-.post .date {
-	font-size: 0.9em;
-	margin-bottom: 0px;
-}
 
 /**********************************************************
 * Small screen

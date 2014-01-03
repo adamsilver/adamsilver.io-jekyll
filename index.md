@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: static
 title: Home
 id: home
 ---
