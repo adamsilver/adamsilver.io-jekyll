@@ -260,9 +260,10 @@
 	},
 	"file_history":
 	[
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_includes/articleList.html",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/css/main.css",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/default.html",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/css/ie6.css",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/css/main.css",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_includes/articleList.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/index.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_index.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/about.html",
@@ -386,8 +387,7 @@
 		"/Users/adambsilver/Desktop/story",
 		"/Users/adambsilver/Workspace/dtuk/ebdc-ee/src/main/webapp/WEB-INF/tags/layoutC/dtuk.sublime-project",
 		"/Users/adambsilver/Workspace/dtuk/ebdc-ee/data/en/templatedata/ebdc/global/data/common.xml",
-		"/Users/adambsilver/Downloads/PAYG_PPD_TC4_Lookup.xml",
-		"/Users/adambsilver/Downloads/PAYG_PPD_TC4_BuyPass.xml"
+		"/Users/adambsilver/Downloads/PAYG_PPD_TC4_Lookup.xml"
 	],
 	"find":
 	{
@@ -395,7 +395,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 95.0,
 		"where_history":
 		[
 			"/Users/adambsilver/Workspace/dtuk/ebdc-ee",
@@ -646,6 +646,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"main.",
+				"css/main.css"
+			],
+			[
+				"default",
+				"_layouts/default.html"
+			],
 			[
 				"articl",
 				"_includes/articleList.html"
@@ -1149,14 +1157,6 @@
 			[
 				"delegatebound",
 				"functions/delegateBoundListener/rendition1.js"
-			],
-			[
-				"read",
-				"src/database/mysql/sql/README"
-			],
-			[
-				"cdb.term",
-				"src/main/webapp/js/src/cdb/modules/cdb.termsModule.js"
 			]
 		],
 		"width": 0.0
