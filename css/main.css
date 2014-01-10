@@ -236,13 +236,22 @@ a {
 * Article list
 **********************************************************/
 
-#articles ul {
+#articles {
+	padding-top: 1.5em;
+}
+
+#articleList ul {
 
 }
 
-#articles li {
+#articleList li {
 	margin-bottom: 10px;
 }
+
+.static {
+	padding-top: 1.5em;
+}
+
 
 /**********************************************************
 * Post
