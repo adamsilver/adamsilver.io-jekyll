@@ -30,7 +30,7 @@ Once we have the form we can retrieve all the controls in a form:
 
 	var loginControls = loginForm.elements;
 
-If the login form contained the typical username and password controls then `loginFormControls` would be a collection of two controls (and a submit button if you had one of those in the form).
+If the login form contained a username and password control then `loginFormControls` would be a collection of two controls.
 
 <a name="accessingControlByName"></a>
 
