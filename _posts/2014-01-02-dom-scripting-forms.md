@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Dom Scripting forms"
+title:  "DOM Scripting forms"
 date:   2014-01-02 09:00:59
 categories: forms
 ---
