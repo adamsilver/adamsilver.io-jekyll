@@ -240,10 +240,6 @@ a {
 	padding-top: 1.5em;
 }
 
-#articleList ul {
-
-}
-
 #articleList li {
 	margin-bottom: 10px;
 }
@@ -260,7 +256,7 @@ a {
 pre {
 	font-family: Monaco,'Courier New','Courier',monospace;
 	font-size: 16px;
-	background: rgba(0,0,0,0.05);
+	background-color: #eee;
 	margin-bottom: 20px;
 	padding: 20px;
 }
@@ -285,8 +281,8 @@ pre {
 	}
 
 	#nav li {
-		float: none;
 		margin-left: 0;
+		margin-right: 15px;
 		margin-bottom: 4px;
 	}
 
