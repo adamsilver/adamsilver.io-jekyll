@@ -9,10 +9,10 @@ The HTML DOM has dedicated APIs for retrieving and manipulating forms and contro
 
 ## Contents
 
-3. [Accessing a form](#accessingForm)
-4. [Accessing form controls](#accessingControls)
-6. [Accessing form control by name](#accessingControlByName)
-8. [Inspecting a controls value](#inspectingControlValue)
+1. [Accessing a form](#accessingForm)
+2. [Accessing form controls](#accessingControls)
+3. [Accessing form control by name](#accessingControlByName)
+4. [Inspecting a controls value](#inspectingControlValue)
 
 <a name="accessingForm"></a>
 
