@@ -260,11 +260,27 @@
 	},
 	"file_history":
 	[
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/default.html",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/css/ie6.css",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/css/main.css",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_includes/articleList.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/index.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-02-01-form-accessibility.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/css/main.css",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-02-15-translucent-fuzzy-text-internet-explorer.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/post.html",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-02-dom-scripting-forms.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-01-welcome.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/articles/index.html",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/static.html",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/default.html",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_includes/articleList.html",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_config.yml",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/.gitignore",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-01-dom-scripting-forms.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-01-01-dom-scripting-forms.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-01-31-blah.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_site/articles/2014/01/31/2014-01-31-blah/index.html",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-01-01-website-forms.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-01-01-website-forms.markdown",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2013-12-27-website-forms.markdown",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/css/ie6.css",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_index.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/about.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/index.html",
@@ -272,19 +288,13 @@
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/css/large.css",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/css/medium.css",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/css/small.css",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2013-12-27-website-forms.markdown",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/post.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_site/adamsilver.sublime-workspace",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_config.yml",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/.gitignore",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2013-12-26-welcome-to-jekyll.markdown",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_site/Gemfile",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/Gemfile",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2013-12-27-website-forms.markdown",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/blog.html",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/articles/index.html",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/static.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2013-12-27-another.markdown",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/blog/index.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/blog",
@@ -377,17 +387,7 @@
 		"/Users/adambsilver/Desktop/laurent.zip/js/views/View.js",
 		"/Users/adambsilver/Desktop/laurent.zip/js/validation/LoginValidator.js",
 		"/Users/adambsilver/Desktop/laurent.zip/js/views/LoginView.js",
-		"/Users/adambsilver/Desktop/laurent.zip/js/dtuk.js",
-		"/Users/adambsilver/Desktop/laurent.zip/js/validation/Validator.js",
-		"/Users/adambsilver/Desktop/laurent.zip/js/validation/NotEmpty.js",
-		"/Users/adambsilver/Desktop/laurent.zip/index.html",
-		"/Users/adambsilver/Desktop/laurent.zip/test/spec/ValidSpec.js",
-		"/Users/adambsilver/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/Users/adambsilver/Workspace/dtuk/ebdc-ee-test/src/test/resources/pdfstubdataPAYG/PPD/tm/PAYG_PPD_TC4_Lookup.xml",
-		"/Users/adambsilver/Desktop/story",
-		"/Users/adambsilver/Workspace/dtuk/ebdc-ee/src/main/webapp/WEB-INF/tags/layoutC/dtuk.sublime-project",
-		"/Users/adambsilver/Workspace/dtuk/ebdc-ee/data/en/templatedata/ebdc/global/data/common.xml",
-		"/Users/adambsilver/Downloads/PAYG_PPD_TC4_Lookup.xml"
+		"/Users/adambsilver/Desktop/laurent.zip/js/dtuk.js"
 	],
 	"find":
 	{
@@ -447,6 +447,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"selectControlAbuse",
+			"fieldsets",
+			"labels",
+			"accessingForm",
+			"articles",
+			"accessingControlByName",
+			"accessingControls",
+			"accessingControlByName",
+			"point",
 			"Articles",
 			"articleList",
 			" ",
@@ -565,16 +574,7 @@
 			"90px",
 			".actions",
 			"tab",
-			"tabs",
-			"resourceStrings",
-			"resourceString",
-			"td a",
-			"<img src=\"/cms/resources/img/home_icon.png\" width=\"12\">",
-			"Set",
-			"Table",
-			"setupRequestedFunctions",
-			"degradesInIEVersion",
-			"requiredFunctionExists"
+			"tabs"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -647,12 +647,36 @@
 		"selected_items":
 		[
 			[
-				"main.",
+				"main.css",
+				"css/main.css"
+			],
+			[
+				"main.c",
 				"css/main.css"
 			],
 			[
 				"default",
 				"_layouts/default.html"
+			],
+			[
+				"article",
+				"_includes/articleList.html"
+			],
+			[
+				"articles",
+				"articles/index.html"
+			],
+			[
+				"post",
+				"_layouts/post.html"
+			],
+			[
+				".css",
+				"css/main.css"
+			],
+			[
+				"main.",
+				"css/main.css"
 			],
 			[
 				"articl",
@@ -663,16 +687,8 @@
 				"_includes/navigation.html"
 			],
 			[
-				"main.css",
-				"css/main.css"
-			],
-			[
 				"navi",
 				"_includes/navigation.html"
-			],
-			[
-				"main.c",
-				"css/main.css"
 			],
 			[
 				"def",
@@ -1141,22 +1157,6 @@
 			[
 				"style.cs",
 				"src/main/webapp/resources/css/style.css"
-			],
-			[
-				"tyle.css",
-				"src/main/webapp/resources/css/style.css"
-			],
-			[
-				"heade",
-				"src/main/webapp/WEB-INF/jsp/global/header.jsp"
-			],
-			[
-				".css",
-				"src/main/webapp/resources/css/style.css"
-			],
-			[
-				"delegatebound",
-				"functions/delegateBoundListener/rendition1.js"
 			]
 		],
 		"width": 0.0
@@ -1166,6 +1166,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"e",
+				"/Users/adambsilver/Workspace/dtuk/ebdc-ee/ebdc-ee.sublime-project"
+			],
 			[
 				"",
 				"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/adamsilver.sublime-project"
