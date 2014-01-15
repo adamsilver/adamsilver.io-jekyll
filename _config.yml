@@ -1,5 +1,5 @@
 name: Adam Silver
 markdown: redcarpet
 pygments: true
-permalink: /articles/:year/:month/:day/:title
+permalink: ./:title
 exclude: [adamsilver.sublime-project, adamsilver.sublime-workspace]
