@@ -2,7 +2,7 @@
 layout: post
 title:  "Form accessibility"
 date:   2014-02-01 09:00:01
-categories: forms accessibility
+categories: forms accessibility dom js
 ---
 
 ## Contents
