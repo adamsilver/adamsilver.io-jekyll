@@ -140,10 +140,11 @@ a {
 **********************************************************/
 
 #footer {
-	border-top: 1px solid #ccc;
-	padding: 20px 0px;
-	margin-left: 20px;
-	margin-right: 20px;
+	background-color: #f5f5f5;
+}
+
+#footerInner {
+	padding: 10px 20px 20px;
 }
 
 #footer p {
@@ -294,25 +295,6 @@ p code {
 
 @media (max-width: 360px) {
 
-	#logo {
-		float: left;
-		margin-bottom: 20px;
-	}
-
-	#nav {
-		clear: left;
-		float: none;
-		margin-top: 0;
-		border-top: 1px solid #2E3B46;
-		padding-top: 15px;
-	}
-
-	#nav li {
-		margin-left: 0;
-		margin-right: 15px;
-		margin-bottom: 4px;
-	}
-
 }
 
 /**********************************************************
@@ -329,7 +311,7 @@ p code {
 
 	#content,
 	#headerInner,
-	#footer {
+	#footerInner {
 		width: 960px;
 		margin: 0 auto;
 	}
