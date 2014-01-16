@@ -5,15 +5,13 @@ id: article
 
 <div class="post">
 
-	<p><a href="/articles/">< Back to articles</a></p>
+	<p><a href="/">< Back to all articles</a></p>
 
 	<h1>{{ page.title }}</h1>
 	<p class="meta">
 		<span class="date">Published on {{ page.date | date_to_long_string }}</span> |
 		<span class="count">{{ page.content | number_of_words }} words</span>
 	</p>
-
-
 
 	{{ content }}
 </div>

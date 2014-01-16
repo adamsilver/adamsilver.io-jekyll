@@ -131,16 +131,20 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 375.0,
+		"height": 49.0,
 		"selected_items":
 		[
 			[
-				"jasmine",
-				"Set Syntax: Jasmine"
-			],
-			[
 				"install",
 				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"jasmine",
+				"Set Syntax: Jasmine"
 			],
 			[
 				"js",
@@ -149,10 +153,6 @@
 			[
 				"tab",
 				"Indentation: Convert to Tabs"
-			],
-			[
-				"remove",
-				"Package Control: Remove Package"
 			],
 			[
 				"list",
@@ -243,11 +243,11 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 633.0
+		"width": 435.0
 	},
 	"console":
 	{
-		"height": 155.0
+		"height": 461.0
 	},
 	"distraction_free":
 	{
@@ -260,18 +260,21 @@
 	},
 	"file_history":
 	[
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_config.yml",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-01-welcome.md",
+		"/Users/adambsilver/Library/Application Support/Sublime Text 2/Packages/File History/Default (OSX).sublime-keymap",
+		"/Users/adambsilver/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/static.html",
+		"/Users/adambsilver/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/default.html",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/articles/index.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/index.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-02-01-form-accessibility.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/css/main.css",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-02-15-translucent-fuzzy-text-internet-explorer.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/post.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-02-dom-scripting-forms.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-01-welcome.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/articles/index.html",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/static.html",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/default.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_includes/articleList.html",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_config.yml",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/.gitignore",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-01-dom-scripting-forms.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-01-01-dom-scripting-forms.md",
@@ -361,8 +364,6 @@
 		"/Users/adambsilver/Workspace/jessie/functions/createElement/rendition1.js",
 		"/Users/adambsilver/Workspace/_bkjessie/builder/app.js",
 		"/Users/adambsilver/Workspace/dtuk/ebdc-ee/src/main/webapp-temp/WEB-INF/jsp/layoutC/activate.jsp",
-		"/Users/adambsilver/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
-		"/Users/adambsilver/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
 		"/Users/adambsilver/Workspace/dtuk/ebdc-ee/src/main/webapp/public/css/ebdc.css",
 		"/Users/adambsilver/Workspace/dtuk/ebdc-ee/src/main/webapp/public/css/media_queries.css",
 		"/Users/adambsilver/Workspace/dtuk/ebdc-ee/src/main/webapp/public/css/nav.css",
@@ -386,8 +387,7 @@
 		"/Users/adambsilver/Desktop/laurent.zip/test/SpecRunner.html",
 		"/Users/adambsilver/Desktop/laurent.zip/js/views/View.js",
 		"/Users/adambsilver/Desktop/laurent.zip/js/validation/LoginValidator.js",
-		"/Users/adambsilver/Desktop/laurent.zip/js/views/LoginView.js",
-		"/Users/adambsilver/Desktop/laurent.zip/js/dtuk.js"
+		"/Users/adambsilver/Desktop/laurent.zip/js/views/LoginView.js"
 	],
 	"find":
 	{
@@ -395,7 +395,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 95.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"/Users/adambsilver/Workspace/dtuk/ebdc-ee",
@@ -447,6 +447,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"find_resource",
 			"selectControlAbuse",
 			"fieldsets",
 			"labels",
@@ -573,8 +574,7 @@
 			"&3.7.3/",
 			"90px",
 			".actions",
-			"tab",
-			"tabs"
+			"tab"
 		],
 		"highlight": true,
 		"in_selection": false,

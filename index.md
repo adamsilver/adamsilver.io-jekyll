@@ -1,11 +1,15 @@
 ---
-layout: static
+layout: default
 title: Home
 id: home
 ---
 
-# I am Adam Silver
+# My articles
 
+{% include articleList.html %}
+
+<!--
 I am highly experienced in HTML, CSS and various ECMAScript implementations found in the browser and I will be sharing my experience and knowledge through various [articles](/articles/).
 
 Oh and of course these bits are required... [Github](http://www.github.com/adamsilver/), [LinkedIn](http://uk.linkedin.com/in/adambsilver/) and [Twitter](http://www.twitter.com/adambsilver).
+-->
