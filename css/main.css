@@ -240,11 +240,29 @@ a {
 	padding-top: 1.5em;
 }
 
+
+#articleList ol {
+	list-style: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
 #articleList li {
+	margin-left: 0;
 	margin-bottom: 10px;
 }
 
-.static {
+.date {
+	display: inline-block;
+	padding: 1px 3px;
+	border-radius: 3px;
+	background-color: #21282e;
+	color: #fff;
+	font-size: 0.8em;
+	margin-right: 5px;
+}
+
+#page_home {
 	padding-top: 1.5em;
 }
 
@@ -259,6 +277,11 @@ pre {
 	background-color: #eee;
 	margin-bottom: 20px;
 	padding: 20px;
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
 p code {
