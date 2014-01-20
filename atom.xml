@@ -4,13 +4,13 @@ layout: nil
 
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>Eric Jones</title>
+	<title>Adam Silver</title>
 	<link href="http://adamsilver.github.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.github.io/"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
 	<id>http://adamsilver.github.io</id>
 	<author>
-		<name>Eric Jones</name>
+		<name>Adam Silver</name>
 	</author>
 
 	{% for post in site.posts %}
