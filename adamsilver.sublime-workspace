@@ -260,6 +260,9 @@
 	},
 	"file_history":
 	[
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/adamsilver.sublime-project",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/default.html",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/atom.xml",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-02-dom-scripting-forms.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-04-01-javascript-namespacing.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-05-01-input-type-image.md",
@@ -273,7 +276,6 @@
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-01-welcome.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-02-15-translucent-fuzzy-text-internet-explorer.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/index.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/default.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_site/css/main.css",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/blog.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_config.yml",
@@ -385,9 +387,7 @@
 		"/Users/adambsilver/Workspace/ebdc-mockup/ee_files/mockup.css",
 		"/Users/adambsilver/Workspace/ebdc-mockup/ee_files/bookmark.css",
 		"/Users/adambsilver/Desktop/laurent.zip/less/button.less",
-		"/Users/adambsilver/Desktop/laurent.zip/less/forms.less",
-		"/Users/adambsilver/Desktop/laurent.zip/less/global.less",
-		"/Users/adambsilver/Desktop/laurent.zip/less/layout.less"
+		"/Users/adambsilver/Desktop/laurent.zip/less/forms.less"
 	],
 	"find":
 	{
@@ -447,6 +447,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"erjjones",
+			"com",
+			"erjjones",
 			"post",
 			"meta",
 			"Animal",
@@ -571,10 +574,7 @@
 			">>>",
 			"<<",
 			"minificatio",
-			"minif",
-			"jessie",
-			"minif",
-			"minific"
+			"minif"
 		],
 		"highlight": true,
 		"in_selection": false,
