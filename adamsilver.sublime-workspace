@@ -260,12 +260,13 @@
 	},
 	"file_history":
 	[
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/adamsilver.sublime-project",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/default.html",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-06-01-focusable-elements-and-accessibility.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-05-01-input-type-image.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-04-01-javascript-namespacing.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/adamsilver.sublime-project",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/atom.xml",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-02-dom-scripting-forms.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-04-01-javascript-namespacing.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-05-01-input-type-image.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_includes/articleList.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/css/main.css",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/post.html",
@@ -386,8 +387,7 @@
 		"/Users/adambsilver/Workspace/ebdc-mockup/ee_files_old/mockup.css",
 		"/Users/adambsilver/Workspace/ebdc-mockup/ee_files/mockup.css",
 		"/Users/adambsilver/Workspace/ebdc-mockup/ee_files/bookmark.css",
-		"/Users/adambsilver/Desktop/laurent.zip/less/button.less",
-		"/Users/adambsilver/Desktop/laurent.zip/less/forms.less"
+		"/Users/adambsilver/Desktop/laurent.zip/less/button.less"
 	],
 	"find":
 	{
@@ -447,6 +447,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"-",
+			"normally",
+			"commonly",
 			"erjjones",
 			"com",
 			"erjjones",
@@ -571,10 +574,7 @@
 			"alert",
 			"getElementParen",
 			"ancestor",
-			">>>",
-			"<<",
-			"minificatio",
-			"minif"
+			">>>"
 		],
 		"highlight": true,
 		"in_selection": false,
