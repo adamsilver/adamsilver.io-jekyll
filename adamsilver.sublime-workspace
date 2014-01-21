@@ -260,18 +260,19 @@
 	},
 	"file_history":
 	[
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-02-01-form-accessibility.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-04-01-ecmascript-namespacing.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-04-01-javascript-namespacing.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-02-dom-scripting-forms.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/default.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-06-01-focusable-elements-and-accessibility.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-05-01-input-type-image.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-04-01-javascript-namespacing.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/adamsilver.sublime-project",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/atom.xml",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-02-dom-scripting-forms.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_includes/articleList.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/css/main.css",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/post.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-03-01-opting-in-and-out-of-css-rules.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-02-01-form-accessibility.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2013-03-01-opting-in-and-out-of-css-rules.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2013-03-01-blah.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-01-welcome.md",
@@ -386,8 +387,7 @@
 		"/Users/adambsilver/Workspace/ebdc-mockup/css/passes-table.css",
 		"/Users/adambsilver/Workspace/ebdc-mockup/ee_files_old/mockup.css",
 		"/Users/adambsilver/Workspace/ebdc-mockup/ee_files/mockup.css",
-		"/Users/adambsilver/Workspace/ebdc-mockup/ee_files/bookmark.css",
-		"/Users/adambsilver/Desktop/laurent.zip/less/button.less"
+		"/Users/adambsilver/Workspace/ebdc-mockup/ee_files/bookmark.css"
 	],
 	"find":
 	{
@@ -395,9 +395,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 95.0,
 		"where_history":
 		[
+			"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts",
 			"/Users/adambsilver/Workspace/dtuk/ebdc-ee",
 			"/Users/adambsilver/Workspace/dtuk/ebdc-ee/src/main/webapp/public/css",
 			"/Users/adambsilver/Workspace/dtuk/ebdc-ee/src/main/webapp/public/f",
@@ -447,6 +448,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"javascript",
+			"woopah",
+			"JavaScript",
+			"Javascript",
 			"-",
 			"normally",
 			"commonly",
@@ -570,11 +575,7 @@
 			"globalWindow",
 			"getElementParen",
 			"attachLi",
-			"getElementParentElement",
-			"alert",
-			"getElementParen",
-			"ancestor",
-			">>>"
+			"getElementParentElement"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -646,6 +647,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"forms",
+				"_posts/2014-01-02-dom-scripting-forms.md"
+			],
 			[
 				"articl",
 				"_includes/articleList.html"
@@ -1153,10 +1158,6 @@
 			[
 				"builde",
 				"builder/libs/jessie/Builder.js"
-			],
-			[
-				"style.cs",
-				"src/main/webapp/resources/css/style.css"
 			]
 		],
 		"width": 0.0
