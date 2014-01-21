@@ -58,7 +58,7 @@ The `optgroup` element can improve accessibility of the options within a `select
 <a name="selectControlAbuse"></a>
 ## Select control abuse
 
-The select element provides a list of options of which one can be selected for input. An accessibility issue arises when they are abused with the use of JavaScript; submitting the form when the select *changes* value.
+The select element provides a list of options of which one can be selected for input. An accessibility issue arises when they are abused with the use of script; submitting the form when the select *changes* value.
 
 This is an accessibility issue for keyboard users because as they scroll through each value with the keyboard the page is refreshed. So selecting option 5 means 4 page refreshes.
 
