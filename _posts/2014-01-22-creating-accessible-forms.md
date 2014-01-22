@@ -32,7 +32,7 @@ Imagine a form control which allows the user to choose their favourite colour. T
 
 	<fieldset>
 		<legend>Favourite colour</legend>
-		<input type="radio" name="colour_red" id="colour_red">
+		<input type="radio" name="colour" id="colour_red">
 		<label for="colour_red">Red</label>
 		<!-- ... -->
 	</fieldset>
@@ -45,11 +45,11 @@ An example follows:
 
 	<fieldset>
 		<legend>Favourite colour</legend>
-		<input type="radio" name="colour_none" id="colour_none">
+		<input type="radio" name="colour" id="colour_none">
 		<label for="colour_none">None selected</label>
-		<input type="radio" name="colour_red" id="colour_red">
+		<input type="radio" name="colour" id="colour_red">
 		<label for="colour_red">Red</label>
-		<input type="radio" name="colour_blue" id="colour_blue">
+		<input type="radio" name="colour" id="colour_blue">
 		<label for="colour_blue">Blue</label>
 	</fieldset>
 
