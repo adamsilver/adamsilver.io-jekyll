@@ -131,9 +131,21 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 49.0,
+		"height": 225.0,
 		"selected_items":
 		[
+			[
+				"markdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"tab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -145,14 +157,6 @@
 			[
 				"jasmine",
 				"Set Syntax: Jasmine"
-			],
-			[
-				"js",
-				"Set Syntax: JavaScript"
-			],
-			[
-				"tab",
-				"Indentation: Convert to Tabs"
 			],
 			[
 				"list",
@@ -243,7 +247,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 435.0
+		"width": 633.0
 	},
 	"console":
 	{
@@ -260,10 +264,12 @@
 	},
 	"file_history":
 	[
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/default.html",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-08-01-the-mobile-website-problem.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_site/articles/2014/01/31/2014-01-31-blah/index.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-09-01-unobtrusively-retrieving-static-server-side-data.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-10-01-html-structure.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/adamsilver.sublime-workspace",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/default.html",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-08-01-the-mobile-website-problem.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-07-01-multiple-submit-buttons.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/index.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/.gitignore",
@@ -294,7 +300,6 @@
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-01-dom-scripting-forms.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-01-01-dom-scripting-forms.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-01-31-blah.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_site/articles/2014/01/31/2014-01-31-blah/index.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-01-01-website-forms.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-01-01-website-forms.markdown",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2013-12-27-website-forms.markdown",
@@ -386,8 +391,7 @@
 		"/Users/adambsilver/Workspace/ebdc-mockup/ee.html",
 		"/Users/adambsilver/Workspace/ebdc-mockup/css/brand.css",
 		"/Users/adambsilver/Workspace/ebdc-mockup/css/media_queries.css",
-		"/Users/adambsilver/Workspace/ebdc-mockup/css/mockup.css",
-		"/Users/adambsilver/Workspace/ebdc-mockup/css/typography.css"
+		"/Users/adambsilver/Workspace/ebdc-mockup/css/mockup.css"
 	],
 	"find":
 	{
@@ -648,6 +652,10 @@
 		"selected_items":
 		[
 			[
+				"def",
+				"_layouts/default.html"
+			],
+			[
 				"default",
 				"_layouts/default.html"
 			],
@@ -702,10 +710,6 @@
 			[
 				"navi",
 				"_includes/navigation.html"
-			],
-			[
-				"def",
-				"_layouts/default.html"
 			],
 			[
 				"navig",
@@ -1185,7 +1189,7 @@
 	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 517.0,
 	"status_bar_visible": true
 }
