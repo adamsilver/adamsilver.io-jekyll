@@ -5,7 +5,7 @@ date:   2014-01-02 09:00:59
 categories: forms dom js
 ---
 
-The HTML DOM has dedicated APIs for retrieving and manipulating forms and controls. It’s always important to use the right API for the job and in this case the DOM 0 API [[0](#ref0)] Forms collection is appropriate but unfortunately often forgotten.
+The HTML DOM has dedicated APIs for retrieving and manipulating forms and controls. It’s always important to use the right API and in this case the DOM 0 API [[0](#ref0)] Forms collection is appropriate but unfortunately often forgotten.
 
 ## Contents
 
@@ -52,10 +52,6 @@ Once we have a control we can interrogate the value:
 	var usernameValue = usernameControl.value;
 
 This is useful if you want to perform client side validation.
-
-## Summary
-
-Forms have been around on the web for a very long time and the APIs discussed in this article are reliable, convenient and concise. You don’t need a library to script forms. Common libraries will advise using selector engines which is ill advised in general and definitely inappropriate for these requirements.
 
 <a name="ref0"></a>[0]:[DOM 0 API](http://docs.oracle.com/cd/E19957-01/816-6408-10/)
 
