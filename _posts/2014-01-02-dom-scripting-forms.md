@@ -14,9 +14,6 @@ The HTML DOM has dedicated APIs for retrieving and manipulating forms and contro
 3. [Accessing form control by name](#accessingControlByName)
 4. [Inspecting a controls value](#inspectingControlValue)
 
-<!-- a label also allows in some user agents to click or tap the label setting focus or selecting a checkbox -->
-<!-- none option on radios -->
-
 <a name="accessingForm"></a>
 
 ## Accessing a form

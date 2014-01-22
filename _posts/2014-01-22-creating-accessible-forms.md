@@ -5,13 +5,17 @@ date:   2014-01-22 09:00:01
 categories: forms accessibility dom js
 ---
 
+<!-- none option on radios -->
+
 Creating accessible forms is very simple. There are basic rules to follow:
 
 ## Labels
 
-Labels provide information about each control; without them the user wouldn't know what information is required. Visual users will see the label and visually impaired users may use a screen reader which will read out the label. Labels are only needed for controls that provide a vessel for input e.g. submit buttons are fine without.
+Labels provide information about each control. Visual users will see the label and visually impaired users may use a screen reader which will read out the label. Labels are only needed for controls that provide a vessel for input e.g. submit buttons are fine without.
 
-Associate a control with a label as follows:
+Additionaly browsers may provide the ability to click a label which will either move focus to the control or even mark the control as checked in the case of a checkbox or radio control.
+
+Associating a control with a label as follows:
 
 	<label for="username">Username</label>
 	<input id="username">
@@ -31,6 +35,22 @@ Imagine a form control which allows the user to choose their favourite colour. T
 		<input type="radio" name="colour_red" id="colour_red">
 		<label for="colour_red">Red</label>
 		<!-- ... -->
+	</fieldset>
+
+## Optional radio group control
+
+Radio controls can not be toggled; once marked as checked they cannot be unchecked until a different radio control is checked. Therefore it is imperative that an additional radio control is added with a 'None selected' option so that the user may change their mind.
+
+An example follows:
+
+	<fieldset>
+		<legend>Favourite colour</legend>
+		<input type="radio" name="colour_none" id="colour_none">
+		<label for="colour_none">None selected</label>
+		<input type="radio" name="colour_red" id="colour_red">
+		<label for="colour_red">Red</label>
+		<input type="radio" name="colour_blue" id="colour_blue">
+		<label for="colour_blue">Blue</label>
 	</fieldset>
 
 ## Option groups and options
