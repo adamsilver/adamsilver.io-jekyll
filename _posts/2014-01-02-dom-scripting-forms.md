@@ -14,6 +14,9 @@ The HTML DOM has dedicated APIs for retrieving and manipulating forms and contro
 3. [Accessing form control by name](#accessingControlByName)
 4. [Inspecting a controls value](#inspectingControlValue)
 
+<!-- a label also allows in some user agents to click or tap the label setting focus or selecting a checkbox -->
+<!-- none option on radios -->
+
 <a name="accessingForm"></a>
 
 ## Accessing a form
@@ -35,7 +38,6 @@ If the login form contained a username and password control then `loginFormContr
 <a name="accessingControlByName"></a>
 
 ## Accessing a control by name
-
 
 There are several types of controls such as inputs, selects and textareas that each allow user input. Having retrieved the controls earlier we can loop over each control or retrieve a particular control by index or name.
 
