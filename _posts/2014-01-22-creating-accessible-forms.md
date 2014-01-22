@@ -32,8 +32,8 @@ Imagine a form control which allows the user to choose their favourite colour. T
 
 	<fieldset>
 		<legend>Favourite colour</legend>
-		<input type="radio" name="colour" id="colour_red">
-		<label for="colour_red">Red</label>
+		<input type="radio" name="colour" id="colourRed">
+		<label for="colourRed">Red</label>
 		<!-- ... -->
 	</fieldset>
 
@@ -45,12 +45,12 @@ An example follows:
 
 	<fieldset>
 		<legend>Favourite colour</legend>
-		<input type="radio" name="colour" id="colour_none">
-		<label for="colour_none">None selected</label>
-		<input type="radio" name="colour" id="colour_red">
-		<label for="colour_red">Red</label>
-		<input type="radio" name="colour" id="colour_blue">
-		<label for="colour_blue">Blue</label>
+		<input type="radio" name="colour" id="colourNone">
+		<label for="colourNone">None selected</label>
+		<input type="radio" name="colour" id="colourRed">
+		<label for="colourRed">Red</label>
+		<input type="radio" name="colour" id="colourBlue">
+		<label for="colourBlue">Blue</label>
 	</fieldset>
 
 ## Option groups and options
