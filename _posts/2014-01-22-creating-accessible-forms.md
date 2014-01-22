@@ -20,7 +20,7 @@ Associating a control with a label as follows:
 	<label for="username">Username</label>
 	<input id="username">
 
-Note: the `for` attribute associates a label with another control explicitly.
+Note: the `for` attribute associates a label with another control explicitly by matching the id attribute of the control.
 
 ## Fieldsets and related controls
 
