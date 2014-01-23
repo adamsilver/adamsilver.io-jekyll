@@ -52,5 +52,5 @@ Once we have a control we can interrogate the value:
 
 This is useful if you want to perform client side validation.
 
-<a name="ref0"></a>[0]:[DOM 0 API](http://docs.oracle.com/cd/E19957-01/816-6408-10/)
+<a name="ref0"></a>[0]: [DOM 0 API](http://docs.oracle.com/cd/E19957-01/816-6408-10/)
 
