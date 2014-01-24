@@ -7,9 +7,14 @@ categories: js
 
 <!-- minimising globals -->
 
-A namespace is a descriptive way of naming objects in a way that encapsulates its members, which enables the same member names within multiple different objects. Typically, over-engineered solutions [[0](#ref0)] are proposed but best avoided.
+Using namespaces in javascript gives us 2 benefits:
 
-The following solution is both simple and advisable:
+1. Structure
+2. Minimising globals
+
+By introducting a root namespace for the application we are only introducing one global variable minimising the risk of collision with other globals.
+
+Defining a namespace is as simple as defining a variable and assigning an object literal. Typically, over-engineered solutions [[0](#ref0)] are proposed but best avoided as follows:
 
 ## Define top level namespace
 
