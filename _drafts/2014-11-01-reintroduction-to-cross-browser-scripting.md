@@ -57,9 +57,32 @@ If it is valid can I submit the form?
 
 You know what? You CAN ask the browser these questions - maybe not in that exact manner. But also notice that these questions can be asked to *ANY* browser. This is very important.
 
-There is no value in asking what browser they are [link to something saying how crap browser detection is].
+There is no value in asking what browser they are [link to something saying how crap browser detection is]. Imagine asking if they are Firefox on Android 2.3 and then having to infer what the answers are to the above questions and based on that executing the script? Imagine repeating that for every browser, imagine repeating that for every feature. It'
 
 Once you have asked these questions correctly the script can stand the test of time and run safely on any browser no matter the device, no matter when it was released even in the future. If the browser cannot handle this then that feature reverts to a js-disabled equivalent where in this case the server will provide validation with a page refresh.
+
+Peter Michaux [4] demonstrates this technique practically in his article "Cross-browser widgets" [5].
+
+## The meaning of the word 'support'
+
+Developers often use the word support in-place of the 'care about' or 'test in'. Often their support is based on the foundation of another library and *their* 'support'.
+
+If a developer says 'we support IE7 and up' what they are saying is 'we don't care about IE6, we don't test in IE6, our page may or may not break in IE6, our libraries may not support IE6'.
+
+Having now demonstrated cross-browser techniques the meaning of 'support' changes.
+
+YUI support matrix?
+
+Developers usually mean to say 'care about' as opposed to the word support. Let's take an example. If a developer says "we only support IE7+""
+
+## More resources to check out
+
+
+David Mark, an expert in Cross-browser scripting released a good while back a general purpose library called My Library [6] that exposes an API dynamically based on the browser's capability.
+
+David Mark has more recently started an open source project called Jessie [0] which is a collection of cross-browser functions with the added benefit of being able to customise the libary to your exact requirements based on exactly what functionality you need and the level of browser support required - more on that can be found on the Jessie wiki [0].
+
+
 
 This is progressive enhancement and this is cross-browser scripting.
 
@@ -68,7 +91,6 @@ This is progressive enhancement and this is cross-browser scripting.
 Back in 2008 Peter Michaux wrote two particularly excellent articles:
 
 * 'Feature Detection: State of the Art Browser Scripting'
-* 'Cross-browser widgets'
 
 And looking back even further into history Richard Cornford wrote:
 
