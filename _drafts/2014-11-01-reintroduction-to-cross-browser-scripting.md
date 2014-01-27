@@ -23,13 +23,17 @@ You won't find these guys with shiny [0] blogs [0] trying to sell [0] you someth
 * jQuery, Modernizr [INSERT LIBRARY HERE] isn't helping you at all
 * It's going to take time to fully understand
 
-## The web browser
+## Coding on the client
 
-The browser is something developers produce code to run in but it's not something we have control over. Backend developers have the control of the server. When they install Java they know exactly what version it is and exactly what to expect from the API.
+When server-side developers produce software they have a known environment. They are in complete control of the machine it runs on and what software is running.
 
-Browsers are different - there are millions of them and they are all different. There are different sizes, capabilities, they appear on mobile, tablet, phablet, desktop, laptop, watches, glasses, fridges, game consoles, tvs and more.
+Client-side developers don't have this luxury. There are so many different browsers and browser versions running on different operating systems and device. Even in the days of yore there was more than one browser vendor installed on more than one type of desktop computer.
 
-The great thing about the web is that deploy your code once using the right techniques and all your end-users no matter where they are, what device they own can access your content.
+And now there are browsers on watches, car radios, games consoles, mobile phones, tablets, fridges, glasses, tvs and more.
+
+It appears to be quite a challenge, scrap that nigh on impossible to build a website that can be reliably consumed on all of the above - or *is* it?
+
+## HTML and CSS degrade gracefully
 
 Provide any browser with valid HTML and it can be guaranteed that the content can be consumed. Add a sprinkling of CSS and give your site an identity.
 
