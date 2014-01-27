@@ -13,17 +13,17 @@ categories: js
 
 If the answer to any of the above is *no* then keep reading.
 
-The truth is this article won't provide you with anything that hasn't already been shared by the aformention people above but I hope that merely reintroducing some of it may urge other developers to take the red pill.
+The truth is this article won't provide you with anything that hasn't already been shared by the aformentioned people above but I hope that merely reintroducing some of it may urge other developers to take the red pill.
 
 You won't find these guys with shiny [0] blogs [0] trying to sell [0] you something. However, what you *will* find is that the information and techniques stand the test of time and avoid common pitfalls that most developers have faced, yet failed to understand and therefore have implemented poor technial solutions that ultimately pain the end-users and force them to visit competitor sites.
 
-## The red pill in short
+## The red pill
 
 * You have been doing it all wrong
 * jQuery, Modernizr [INSERT LIBRARY HERE] isn't helping you at all
 * It's going to take time to fully understand
 
-## Why do we have all these issues?
+## The web browser
 
 The browser is something developers produce code to run in but it's not something we have control over. Backend developers have the control of the server. When they install Java they know exactly what version it is and exactly what to expect from the API.
 
