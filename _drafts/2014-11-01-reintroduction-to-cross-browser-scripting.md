@@ -1,27 +1,21 @@
----
+b---
 layout: post
 title:  "Reintroduction to cross-browser scripting"
 date:   2014-11-01 09:00:01
 categories: js
 ---
 
-Heard of `isHostMethod`?
+* Heard of `isHostMethod`?
+* Know the difference between multi-browser and cross-browser scripting?
+* Truly understand why websites constantly need upgrading to keep up with new browsers?
+* Still 'optimising' for mobile?
+* Never taken note of professional javascript experts such as Richard Cornford, David Mark and Thomas Lahn?
 
-Know the difference between multi-browser and cross-browser scripting?
+If the answer to any of the above is *no* then keep reading.
 
-Truly understand why websites constantly need upgrading to keep up with new browsers?
+The truth is this article won't provide you with anything that hasn't already been shared by the aformention people above but I hope that merely reintroducing some of it may urge other developers to take the red pill.
 
-Still 'optimising' for mobile?
-
-Haven't heard of and taken note of professional javascript experts such as Richard Cornford, David Mark, Thomas Lahn?
-
-If the answer to any of the above is *no* then keep reading!
-
-The truth is, this article won't add anything these guys haven't already written about in the past but I hope that merely reintroducing some of the experts, some of the techniques and the reasons why might trigger fellow developers to read more, take the red pill etc.
-
-You won't find these guys with shiny [0] blogs [1] trying to sell [2] you anything. However, what you *will* find is that the knowledge stands the test of time and avoids common pitfalls that most developers have faced, yet failed to understand and therefore have implemented poor technial solutions that have eventually been binned or upgraded.
-
-What's worse than any of that? Your (or your client's) end-users have most likely suffered. Either in trying to access content or even buying a product the website sells.
+You won't find these guys with shiny [0] blogs [0] trying to sell [0] you something. However, what you *will* find is that the information and techniques stand the test of time and avoid common pitfalls that most developers have faced, yet failed to understand and therefore have implemented poor technial solutions that ultimately pain the end-users and force them to visit competitor sites.
 
 ## The red pill in short
 

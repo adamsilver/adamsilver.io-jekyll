@@ -29,7 +29,7 @@ Single page apps are inherently a single page meaning you have to load up the en
 
 ## Sheer code size
 
-Take 'hello world'. To produce that in single page application architecture could require hundreds, if not thousands of lines of js. In html its just <p>hello world</p>
+Take 'hello world'. To produce that in single page application architecture could require hundreds, if not thousands of lines of js. In html its just `<p>hello world</p>`
 
 ## Fallback for browsers without those mandatory features
 
