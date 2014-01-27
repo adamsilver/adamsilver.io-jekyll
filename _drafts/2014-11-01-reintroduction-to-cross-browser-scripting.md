@@ -1,4 +1,4 @@
-b---
+---
 layout: post
 title:  "Reintroduction to cross-browser scripting"
 date:   2014-11-01 09:00:01
