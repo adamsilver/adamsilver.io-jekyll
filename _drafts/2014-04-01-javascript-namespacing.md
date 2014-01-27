@@ -12,7 +12,7 @@ Using namespaces in javascript gives us 2 benefits:
 1. Structure
 2. Minimising globals
 
-By introducting a root namespace for the application we are only introducing one global variable minimising the risk of collision with other globals.
+By introducting a root namespace for the application we are only introducing one global variable minimising the risk of collision with other globals which
 
 Defining a namespace is as simple as defining a variable and assigning an object literal. Typically, over-engineered solutions [[0](#ref0)] are proposed but best avoided as follows:
 
