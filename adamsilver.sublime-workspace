@@ -127,29 +127,21 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "_drafts/2014-04-01-javascript-namespacing.md",
-			"settings":
-			{
-				"buffer_size": 1403,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/main.css",
-			"settings":
-			{
-				"buffer_size": 7253,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 225.0,
+		"height": 375.0,
 		"selected_items":
 		[
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"wr",
+				"Word Wrap: Toggle"
+			],
 			[
 				"markdown",
 				"Set Syntax: Markdown"
@@ -280,15 +272,22 @@
 	},
 	"file_history":
 	[
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_site/index.html",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/Gemfile",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-10-01-single-page-applications.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-11-01-reintroduction-to-cross-browser-scripting.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-04-01-javascript-namespacing.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-08-01-the-mobile-website-problem.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-07-01-multiple-submit-buttons.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-03-01-opting-in-and-out-of-css-rules.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/css/main.css",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-09-01-unobtrusively-retrieving-static-server-side-data.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-06-01-focusable-elements-and-accessibility.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-02-15-translucent-fuzzy-text-internet-explorer.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_site/index.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_site/articles/2014/01/31/2014-01-31-blah/index.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_site/2014-03-01-opting-in-and-out-of-css-rules/index.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/index.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-04-01-javascript-namespacing.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-02-dom-scripting-forms.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-10-01-single-page-applications.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/css/main.css",
 		"/Users/adambsilver/Desktop/eg.xml",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-22-creating-accessible-forms.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-04-01-ecmascript-namespacing.md",
@@ -297,19 +296,14 @@
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-10-01-html-structure.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/adamsilver.sublime-workspace",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/default.html",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-08-01-the-mobile-website-problem.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-07-01-multiple-submit-buttons.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-06-01-focusable-elements-and-accessibility.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-05-01-input-type-image.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/adamsilver.sublime-project",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/atom.xml",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_includes/articleList.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/post.html",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-03-01-opting-in-and-out-of-css-rules.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2013-03-01-opting-in-and-out-of-css-rules.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2013-03-01-blah.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-01-welcome.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-02-15-translucent-fuzzy-text-internet-explorer.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_site/css/main.css",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/blog.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_config.yml",
@@ -335,7 +329,6 @@
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_site/adamsilver.sublime-workspace",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2013-12-26-welcome-to-jekyll.markdown",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_site/Gemfile",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/Gemfile",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2013-12-27-website-forms.markdown",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2013-12-27-another.markdown",
@@ -406,8 +399,7 @@
 		"/Users/adambsilver/Workspace/dtuk/ebdc-ee/src/main/webapp-temp/WEB-INF/jsp/layoutC/activate.jsp",
 		"/Users/adambsilver/Workspace/dtuk/ebdc-ee/src/main/webapp/public/css/ebdc.css",
 		"/Users/adambsilver/Workspace/dtuk/ebdc-ee/src/main/webapp/public/css/media_queries.css",
-		"/Users/adambsilver/Workspace/dtuk/ebdc-ee/src/main/webapp/public/css/nav.css",
-		"/Users/adambsilver/Workspace/dtuk/ebdc-ee/src/main/webapp/public/css/brand.css"
+		"/Users/adambsilver/Workspace/dtuk/ebdc-ee/src/main/webapp/public/css/nav.css"
 	],
 	"find":
 	{
@@ -415,7 +407,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 95.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"/Users/adambsilver/Workspace/adoro/adamsilver.github.io",
@@ -469,6 +461,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"knowledge",
+			"add",
+			"true",
+			"this",
+			"perhaeps",
 			"p {",
 			"call",
 			"PAYM",
@@ -591,12 +588,7 @@
 			"validation",
 			"empt",
 			"activePass",
-			"allActivated",
-			"showEndsIn",
-			"false",
-			"selectBundle",
-			"isWithinBundle",
-			"isWithin"
+			"allActivated"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -618,289 +610,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "_drafts/2014-04-01-javascript-namespacing.md",
-					"settings":
-					{
-						"buffer_size": 1403,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								370,
-								370
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": false,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": false,
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"text-indent": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"curly": true,
-								"evil": true,
-								"funcscope": false,
-								"predef":
-								[
-									"ebdc",
-									"CDB",
-									"jessie",
-									"Handlebars",
-									"spyOn",
-									"describe",
-									"it",
-									"expect",
-									"beforeEach",
-									"afterEach",
-									"jasmine",
-									"$"
-								],
-								"regexdash": true,
-								"smarttabs": true,
-								"sub": true,
-								"trailing": true,
-								"undef": true,
-								"wsh": true
-							},
-							"jslint_options":
-							{
-								"plusplus": true,
-								"sloppy": true,
-								"undef": true,
-								"vars": true,
-								"white": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "css/main.css",
-					"settings":
-					{
-						"buffer_size": 7253,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3797,
-								3797
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": false,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": false,
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"text-indent": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"curly": true,
-								"evil": true,
-								"funcscope": false,
-								"predef":
-								[
-									"ebdc",
-									"CDB",
-									"jessie",
-									"Handlebars",
-									"spyOn",
-									"describe",
-									"it",
-									"expect",
-									"beforeEach",
-									"afterEach",
-									"jasmine",
-									"$"
-								],
-								"regexdash": true,
-								"smarttabs": true,
-								"sub": true,
-								"trailing": true,
-								"undef": true,
-								"wsh": true
-							},
-							"jslint_options":
-							{
-								"plusplus": true,
-								"sloppy": true,
-								"undef": true,
-								"vars": true,
-								"white": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1980.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -949,6 +660,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"single",
+				"_drafts/2014-10-01-single-page-applications.md"
+			],
+			[
+				".cs",
+				"css/main.css"
+			],
 			[
 				"main.cs",
 				"css/main.css"
@@ -1452,14 +1171,6 @@
 			[
 				"index",
 				"builder/views/index.ejs"
-			],
-			[
-				"app",
-				"builder/app.js"
-			],
-			[
-				"inde",
-				"builder/views/index.ejs"
 			]
 		],
 		"width": 0.0
@@ -1469,6 +1180,14 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"car",
+				"/Users/adambsilver/Workspace/dtuk/car/car.sublime-project"
+			],
+			[
+				"ebdc",
+				"/Users/adambsilver/Workspace/dtuk/ebdc-ee/ebdc-ee.sublime-project"
+			],
 			[
 				"ebdc-t",
 				"/Users/adambsilver/Workspace/dtuk/ebdc-ee-test/ebdc-ee-test.sublime-project"
@@ -1480,10 +1199,6 @@
 			[
 				"adamsil",
 				"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/adamsilver.sublime-project"
-			],
-			[
-				"ebdc",
-				"/Users/adambsilver/Workspace/dtuk/ebdc-ee/ebdc-ee.sublime-project"
 			],
 			[
 				"",
@@ -1500,6 +1215,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 517.0,
+	"side_bar_width": 419.0,
 	"status_bar_visible": true
 }

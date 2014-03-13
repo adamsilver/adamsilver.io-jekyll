@@ -115,6 +115,13 @@ p {
 
 a {
 	color: #E32D40;
+	-webkit-transition:color .3s;
+    transition: color .3s;
+}
+
+a:hover {
+	color: #EC8724;
+
 }
 
 #container {
@@ -204,10 +211,15 @@ a {
 	text-transform: uppercase;
 	border-radius: 5px;
 	margin-bottom: 10px;
+	-webkit-transition:background-color .4s, -webkit-transform 2s;
+    transition: background-color .4s, transform 2s;
 }
 
 #logo a:hover {
-	background-color: #CA1A2C;
+	/*background-color: #CA1A2C;*/
+	background-color: #EC8724;
+	/* -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);*/
 }
 
 #logo .tagLine {

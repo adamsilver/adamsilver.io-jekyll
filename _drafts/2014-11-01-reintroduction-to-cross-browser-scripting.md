@@ -25,19 +25,24 @@ You won't find these guys with shiny [0] blogs [0] trying to sell [0] you someth
 
 ## Coding on the client
 
-When server-side developers produce software they have a known environment. They are in complete control of the machine it runs on and what software is running.
+When server-side developers produce software they program against a known development environment. They are in complete control of the machine it runs on and what software it has running.
 
-Client-side developers don't have this luxury. There are so many different browsers and browser versions running on different operating systems and device. Even in the days of yore there was more than one browser vendor installed on more than one type of desktop computer.
+Client-side developers don't have this luxury. There are so many different browsers and browser versions running on different operating systems and devices. Even in the days of yore there was more than one browser vendor installed on more than one type of desktop computer.
 
 And now there are browsers on watches, car radios, games consoles, mobile phones, tablets, fridges, glasses, tvs and more.
 
 It appears to be quite a challenge, scrap that nigh on impossible to build a website that can be reliably consumed on all of the above - or *is* it?
 
-## HTML and CSS degrade gracefully
+## HTML and CSS naturally degrade gracefully
 
-Provide any browser with valid HTML and it can be guaranteed that the content can be consumed. Add a sprinkling of CSS and give your site an identity.
+Af a browser doesn't recognise an HTML element the worst that happens is the piece of content isn't shown as would be the case with the video element. But even in this case you can provide alternative content that would be displayed - for example some text or images.
 
-Add some script and this is where it can all go wrong but why?
+If a browser doesn't support a particular CSS ruleset the element may end up without styles.
+
+No deal-breakers so far...
+
+But what's different about script?
+
 
 HTML and CSS naturally degrade. If an HTML element is not understood the page won't fundamentally break and most often the content within the tag is still displayed for consumption. If CSS is not understood then the element loses that style - none of this is a deal breaker!
 
