@@ -127,6 +127,17 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "---\nlayout: post\ntitle:  \"Forms with multiple submit buttons\"\ndate:   2014-03-20 09:00:01\ncategories: forms\n---\n\nForms with multiple submit buttons can cause issues. When using a pointing device (e.g a finger or a mouse) these problems don't surface. However, the user may also submit the form via keyboard. In this case the form will be submitted as if the user pressed the first button in the document tree. Let's take an example:\n\n	<form>\n		<input type=\"text\" name=\"username\">\n		<input type=\"text\" name=\"password\">\n		<input type=\"submit\" name=\"forgotPassword\" value=\"Forgot password\">\n		<input type=\"submit\" name=\"login\" value=\"Login\">\n	</form>\n\nIf the username or password control has focus, and the enter key is pressed, the form will submit as if the user clicked (or tapped) the forgot password button. It is unlikely this was the required behaviour.\n\nThe best solution (if possible) would be to split the form into two so each form has just one button.\n\nWhen a form _does_ have two actions it leads to the following question: **What is the primary action of the form?** In the above example it's quite obvious; it should be the login button - but it isn't always a clear decision.\n\nAnother option would be to place the login button first in the document tree and where necessary, use CSS to visually position them as desired - this is not always possible from a design perspective:\n\n	<form>\n		<input type=\"text\" name=\"username\">\n		<input type=\"text\" name=\"password\">\n		<input type=\"submit\" name=\"login\" value=\"Login\">\n		<input type=\"submit\" name=\"forgotPassword\" value=\"Forgot password\">\n	</form>\n\nThe last option would be to place a duplicate button at the top of the form, which if needed can be hidden using CSS:\n\n	<form>\n		<input type=\"submit\" name=\"login\" value=\"Login\">\n		<input type=\"text\" name=\"username\">\n		<input type=\"text\" name=\"password\">\n		<input type=\"submit\" name=\"forgotPassword\" value=\"Forgot password\">\n		<input type=\"submit\" name=\"login\" value=\"Login\">\n	</form>\n\nIf the button *is* hidden, then when the user tabs through the elements of the page and arrives at the hidden button, the user could be unaware of the current focused element and the page will appear unresponsive. This can be alleviated by showing the button on-focus but this isn't perfectly cross-browser or accessible.",
+			"file": "_drafts/2014-07-01-multiple-submit-buttons.md",
+			"file_size": 2312,
+			"file_write_time": 1395304577000000,
+			"settings":
+			{
+				"buffer_size": 2312,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -272,6 +283,7 @@
 	},
 	"file_history":
 	[
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-07-01-multiple-submit-buttons.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/README.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/index.md",
 		"/Users/adambsilver/Desktop/var cloneObject;",
@@ -281,7 +293,6 @@
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-11-01-reintroduction-to-cross-browser-scripting.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-04-01-javascript-namespacing.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-08-01-the-mobile-website-problem.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-07-01-multiple-submit-buttons.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-03-01-opting-in-and-out-of-css-rules.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-09-01-unobtrusively-retrieving-static-server-side-data.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-06-01-focusable-elements-and-accessibility.md",
@@ -461,6 +472,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"button",
+			"lopgin",
+			"username",
 			"Adam",
 			"background",
 			"knowledge",
@@ -585,10 +599,7 @@
 			"./ee_files/",
 			"./ee_files",
 			"img",
-			"http://dtuk:8080/public/css",
-			"hello",
-			"validation",
-			"empt"
+			"http://dtuk:8080/public/css"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -610,8 +621,152 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "_drafts/2014-07-01-multiple-submit-buttons.md",
+					"settings":
+					{
+						"buffer_size": 2312,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2022,
+								2022
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": false,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": false,
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"text-indent": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"curly": true,
+								"evil": true,
+								"funcscope": false,
+								"node": true,
+								"predef":
+								[
+									"process",
+									"ebdc",
+									"CDB",
+									"jessie",
+									"Handlebars",
+									"spyOn",
+									"describe",
+									"it",
+									"expect",
+									"beforeEach",
+									"afterEach",
+									"jasmine",
+									"$",
+									"require"
+								],
+								"regexdash": true,
+								"smarttabs": true,
+								"sub": true,
+								"trailing": true,
+								"undef": true,
+								"wsh": true
+							},
+							"jslint_options":
+							{
+								"plusplus": true,
+								"sloppy": true,
+								"undef": true,
+								"vars": true,
+								"white": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 128.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -660,6 +815,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"multiple",
+				"_drafts/2014-07-01-multiple-submit-buttons.md"
+			],
 			[
 				"single",
 				"_drafts/2014-10-01-single-page-applications.md"
@@ -1167,10 +1326,6 @@
 			[
 				"style.",
 				"builder/node_modules/ejs/test/fixtures/style.css"
-			],
-			[
-				"index",
-				"builder/views/index.ejs"
 			]
 		],
 		"width": 0.0
@@ -1180,6 +1335,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"vpa",
+				"/Users/adambsilver/Workspace/dtuk/vpa/vpa.sublime-project"
+			],
 			[
 				"",
 				"/Users/adambsilver/Workspace/dtuk/vpa/vpa.sublime-project"
