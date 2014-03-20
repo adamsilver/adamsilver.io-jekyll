@@ -22,7 +22,7 @@ The best solution (if possible) would be to split the form into two, so each for
 
 When a form *does* have two actions it leads to the following question: **What is the forms primary action?** In the above example it's quite obvious; it should be the save button - but it isn't always a clear decision.
 
-Another option would be to place the login button first in the document tree:
+Another option would be to place the save button first in the document tree:
 
 	<form>
 		<input type="text" name="firstName" value="Adam">
