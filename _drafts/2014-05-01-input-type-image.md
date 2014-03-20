@@ -5,7 +5,7 @@ date:   2014-05-01 09:00:01
 categories: dom forms
 ---
 
-The `input` element with `type` attribute `image` is typically used over regular submit buttons when finer visual control is required but they have some peculiarities.
+The `input` element with `type` attribute `image` is typically used instead of regular submit buttons when fine grain visual control is a requirement. However, they have some peculiarities.
 
 ## The `elements` collection
 
