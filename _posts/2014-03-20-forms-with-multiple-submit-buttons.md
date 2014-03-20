@@ -16,7 +16,7 @@ Forms with multiple submit buttons can cause issues. When using a pointing devic
 
 The above example represents a typical edit page for a user and the form is convenient as one page provides two different actions; delete or update.
 
-If the firstName or lastName control has focus, and the enter key is pressed, the form will submit as if the user clicked (or tapped) the delete button. It is unlikely this was the required behaviour. It's certainly a dangerous course of action.
+If the firstName or lastName control has focus, and the enter key is pressed, the form will submit as if the user clicked (or tapped) the delete button. It is unlikely this is the intended behaviour. It's certainly a dangerous course of action.
 
 The best solution (if possible) would be to split the form into two, so each form has just one button.
 
