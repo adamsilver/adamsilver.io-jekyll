@@ -5,36 +5,32 @@ date:   2014-04-01 09:00:01
 categories: js
 ---
 
-<!-- minimising globals -->
+Using namespaces in JavaScript provides two benefits:
 
-Using namespaces in javascript gives us 2 benefits:
-
-1. Structure
+1. Organisation/descoverability
 2. Minimising globals
 
-By introducting a root namespace for the application we are only introducing one global variable minimising the risk of collision with other globals which
+Declaring a single variable and assigning an object literal to it enables further system components to be attached, minimising the risk of collision drastically. Typically over-engineered solutions [[0](#ref0)] are used but unnecessary and potentially problematic.
 
-Defining a namespace is as simple as defining a variable and assigning an object literal. Typically, over-engineered solutions [[0](#ref0)] are proposed but best avoided as follows:
+## Root level namespace
 
-## Define top level namespace
-
-The top level should be the name of the application. Let's name our application 'zoo'.
+The root level should be the name of the application. Let's name our application 'zoo'.
 
 	// zoo.js
 	var zoo = {};
 
-Lower camel case naming is used for the namespace as upper camel case is typically reserved for constructors.
+Conventionally constructors utilise upper camel case and so all other variables should be lower camel case and so our namespace is declared as such.
 
-## Define second level namespace
+## Second level namespace
 
-Our 'zoo' needs animals so let's define the second level namespace:
+Our 'zoo' needs animals so let's define the second level:
 
 	// zoo.animals.js
 	zoo.animals = {};
 
-## Define a component within namespace
+## Attaching a component to a namespace
 
-Having provided some structure to our application let's create an animal component called 'Zebra'. This will be placed within the 'animals' namespace:
+The application now has some structure, so let's create an animal component called 'Zebra'. This will be attached to the animals namespace:
 
 	// zoo.animals.Zebra.js
 	zoo.animals.Zebra = function() {};
