@@ -5,35 +5,38 @@ date:   2014-04-01 09:00:01
 categories: js
 ---
 
-Using namespaces in JavaScript provides two benefits:
+Namespaces provide organisation, discoverability and in the context of Javascript the minimisation of global variables [[0](#ref0)]. Implementing namespaces is as simple as declaring a variable and assigning an object literal. Typically, over-engineered solutions [[1](#ref1)] are used but unnecessary and potentially problematic. Here, by example a simple solution is described.
 
-1. Organisation/descoverability
-2. Minimising globals
+Note: Javascript doesn't have a dedicated construct for namespacing but it can be mimicked through the use of variables and object literals.
 
-Declaring a single variable and assigning an object literal to it enables further system components to be attached, minimising the risk of collision drastically. Typically over-engineered solutions [[0](#ref0)] are used but unnecessary and potentially problematic.
+## Defining a root level namespace
 
-## Root level namespace
-
-The root level should be the name of the application. Let's name our application 'zoo'.
+The root level should be the name of the application. The name of the application will be Zoo - see below:
 
 	// zoo.js
 	var zoo = {};
 
-Conventionally constructors utilise upper camel case and so all other variables should be lower camel case and so our namespace is declared as such.
+Each namespace belongs in a single file matching the namespace identifier. Do not be concerned about having too many files; overusing namespaces should be avoided and separate files should be concatenated into one for production-level performance.
 
-## Second level namespace
+## Attaching a second level namespace
 
-Our 'zoo' needs animals so let's define the second level:
+The Zoo needs animals so let's define an animals property on the root namespace:
 
 	// zoo.animals.js
 	zoo.animals = {};
 
-## Attaching a component to a namespace
+The application now has some basic structure.
 
-The application now has some structure, so let's create an animal component called 'Zebra'. This will be attached to the animals namespace:
+## Attaching a component
+
+The Zoo needs animals and so a Zebra component is defined as follows:
 
 	// zoo.animals.Zebra.js
 	zoo.animals.Zebra = function() {};
 	zoo.animals.Zebra.prototype.eat = function() {};
 
-<a name="ref0"></a>[0]: [Over-engineered namespacing solutions on Stackoverflow](http://stackoverflow.com/questions/3410984/javascript-namespace)
+Just repeat the last two steps as the application grows.
+
+<a name="ref0"></a>[0]: [Global Domination](http://www.yuiblog.com/blog/2006/06/01/global-domination/)
+
+<a name="ref1"></a>[1]: [Over-engineered namespacing solutions on Stackoverflow](http://stackoverflow.com/questions/3410984/javascript-namespace)

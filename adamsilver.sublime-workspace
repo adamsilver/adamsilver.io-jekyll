@@ -131,9 +131,37 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 291.0,
+		"height": 181.0,
 		"selected_items":
 		[
+			[
+				"preview mark",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"view",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"markdo",
+				"Markdown Preview: Github Flavored Markdown: Export HTML in Sublime Text"
+			],
+			[
+				"preview",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
 			[
 				"js",
 				"Set Syntax: JavaScript"
@@ -145,10 +173,6 @@
 			[
 				"wr",
 				"Word Wrap: Toggle"
-			],
-			[
-				"markdown",
-				"Set Syntax: Markdown"
 			],
 			[
 				"tab",
@@ -207,10 +231,6 @@
 				"Indentation: Convert to Tabs"
 			],
 			[
-				"instal",
-				"Package Control: Install Package"
-			],
-			[
 				"convert",
 				"Indentation: Convert to Tabs"
 			],
@@ -255,7 +275,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 591.0
+		"width": 633.0
 	},
 	"console":
 	{
@@ -272,18 +292,22 @@
 	},
 	"file_history":
 	[
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/adamsilver.sublime-workspace",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_config.yml",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-03-20-forms-with-multiple-submit-buttons.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-07-01-multiple-submit-buttons.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/atom.xml",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/README.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/index.md",
-		"/Users/adambsilver/Desktop/var cloneObject;",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-04-01-javascript-namespacing.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-03-01-opting-in-and-out-of-css-rules.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-05-01-input-type-image.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-11-01-reintroduction-to-cross-browser-scripting.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/css/main.css",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-07-01-multiple-submit-buttons.md",
+		"/Users/adambsilver/Desktop/var cloneObject;",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/Gemfile",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-10-01-single-page-applications.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-11-01-reintroduction-to-cross-browser-scripting.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-04-01-javascript-namespacing.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-08-01-the-mobile-website-problem.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-03-01-opting-in-and-out-of-css-rules.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-09-01-unobtrusively-retrieving-static-server-side-data.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-06-01-focusable-elements-and-accessibility.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-02-15-translucent-fuzzy-text-internet-explorer.md",
@@ -297,11 +321,8 @@
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/.gitignore",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-02-01-form-accessibility.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-10-01-html-structure.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/adamsilver.sublime-workspace",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/default.html",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-05-01-input-type-image.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/adamsilver.sublime-project",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/atom.xml",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_includes/articleList.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/post.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2013-03-01-opting-in-and-out-of-css-rules.md",
@@ -309,7 +330,6 @@
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-01-welcome.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_site/css/main.css",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_layouts/blog.html",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_config.yml",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/articles/index.html",
 		"/Users/adambsilver/Library/Application Support/Sublime Text 2/Packages/File History/Default (OSX).sublime-keymap",
 		"/Users/adambsilver/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
@@ -461,6 +481,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"top",
+			"required",
+			"update",
+			"Login",
+			"login",
+			"forgotPassword",
+			"password",
 			"button",
 			"lopgin",
 			"username",
@@ -581,14 +608,7 @@
 			".sharer-details .data-left .used",
 			"'",
 			"ebdc/",
-			"ebdc",
-			"ebdc/",
-			"js/",
-			"./ee_files",
-			"./ee_files/",
-			"./ee_files",
-			"img",
-			"http://dtuk:8080/public/css"
+			"ebdc"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -660,6 +680,26 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"mult",
+				"_posts/2014-03-20-forms-with-multiple-submit-buttons.md"
+			],
+			[
+				"multipl",
+				"_posts/2014-03-20-forms-with-multiple-submit-buttons.md"
+			],
+			[
+				"md",
+				"README.md"
+			],
+			[
+				"mul",
+				"_posts/2014-03-20-forms-with-multiple-submit-buttons.md"
+			],
+			[
+				"css",
+				"css/main.css"
+			],
 			[
 				"multiple",
 				"_posts/2014-03-20-forms-with-multiple-submit-buttons.md"
@@ -759,10 +799,6 @@
 			[
 				"navig",
 				"_includes/navigation.html"
-			],
-			[
-				"css",
-				"css/main.css"
 			],
 			[
 				"logispec",
@@ -1155,22 +1191,6 @@
 			[
 				"styl",
 				"src/main/webapp/resources/css/style.css"
-			],
-			[
-				"docty",
-				"src/main/webapp/WEB-INF/jsp/global/doctype.jsp"
-			],
-			[
-				"admin",
-				"src/main/webapp/WEB-INF/jsp/global/adminNavigation.jsp"
-			],
-			[
-				"user",
-				"src/main/webapp/WEB-INF/jsp/admin/users/userList.jsp"
-			],
-			[
-				"style.",
-				"builder/node_modules/ejs/test/fixtures/style.css"
 			]
 		],
 		"width": 0.0
