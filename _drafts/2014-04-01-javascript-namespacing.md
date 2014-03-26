@@ -37,6 +37,9 @@ The Zoo needs animals and so a Zebra component is defined as follows:
 
 Just repeat the last two steps as the application grows.
 
-<a name="ref0"></a>[0]: [Global Domination](http://www.yuiblog.com/blog/2006/06/01/global-domination/)
-
-<a name="ref1"></a>[1]: [Over-engineered namespacing solutions on Stackoverflow](http://stackoverflow.com/questions/3410984/javascript-namespace)
+<dl>
+	<dt><a name="ref0"></a>[0]</dt>
+	<dd><a href="http://www.yuiblog.com/blog/2006/06/01/global-domination/">Global Domination</a></dd>
+	<dt><a name="ref1"></a>[1]</dt>
+	<dd><a href="http://stackoverflow.com/questions/3410984/javascript-namespace">Over-engineered namespacing solutions on Stackoverflow</a></dd>
+</dl>

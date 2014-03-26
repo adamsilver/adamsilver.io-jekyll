@@ -114,13 +114,13 @@ p {
 }
 
 a {
-	color: #E32D40;
+	color: #21282e;
 	-webkit-transition:color .3s;
     transition: color .3s;
 }
 
 a:hover {
-	color: #EC8724;
+	color: #e32d40;
 
 }
 
@@ -164,6 +164,14 @@ a:hover {
 	margin-bottom: 0;
 	font-size: 0.8em;
 	color: #687E91;
+}
+
+#footer a {
+	color: #687E91;
+}
+
+#footer a:hover {
+	color: #e32d40;
 }
 
 #footer .social a {
@@ -217,7 +225,7 @@ a:hover {
 
 #logo a:hover {
 	/*background-color: #CA1A2C;*/
-	background-color: #EC8724;
+	background-color: #687E91;
 	/* -webkit-transform:rotate(180deg);
     transform:rotate(180deg);*/
 }
