@@ -18,7 +18,7 @@ The HTML DOM has dedicated APIs for retrieving and manipulating forms and contro
 
 ## Accessing a form
 
-To access a form:
+Accessing a form with a name attribute 'login' is as follows:
 
 	var loginForm = document.forms.login;
 
@@ -36,9 +36,7 @@ If the login form contained a username and password control then `loginFormContr
 
 ## Accessing a control by name
 
-There are several types of controls such as inputs, selects and textareas that each allow user input. Having retrieved the controls earlier we can loop over each control or retrieve a particular control by index or name.
-
-Retrieving a control with the name “username”:
+There are several types of controls such as inputs, selects and textareas that each allow user input. Having retrieved the controls earlier we can loop over each control or retrieve a particular control by index or name. Retrieving a control by name is as follows:
 
 	var usernameControl = loginControls.username;
 
@@ -46,11 +44,11 @@ Retrieving a control with the name “username”:
 
 ## Inspecting a controls value
 
-Once we have a control we can interrogate the value:
+Once we have a control we can interrogate its value:
 
 	var usernameValue = usernameControl.value;
 
-This is useful if you want to perform client side validation.
+This is useful if you want to perform client side validation for example.
 
 <dl>
 	<dt><a name="ref0"></a>[0]</dt>
