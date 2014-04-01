@@ -292,17 +292,18 @@
 	},
 	"file_history":
 	[
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-04-01-javascript-namespacing.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/atom.xml",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/adamsilver.sublime-workspace",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-02-dom-scripting-forms.md",
+		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/css/main.css",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_config.yml",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-03-20-forms-with-multiple-submit-buttons.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/atom.xml",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/README.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/index.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-04-01-javascript-namespacing.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-03-01-opting-in-and-out-of-css-rules.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-05-01-input-type-image.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-11-01-reintroduction-to-cross-browser-scripting.md",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/css/main.css",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-07-01-multiple-submit-buttons.md",
 		"/Users/adambsilver/Desktop/var cloneObject;",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/Gemfile",
@@ -314,7 +315,6 @@
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_site/index.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_site/articles/2014/01/31/2014-01-31-blah/index.html",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_site/2014-03-01-opting-in-and-out-of-css-rules/index.html",
-		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-02-dom-scripting-forms.md",
 		"/Users/adambsilver/Desktop/eg.xml",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_posts/2014-01-22-creating-accessible-forms.md",
 		"/Users/adambsilver/Workspace/adoro/adamsilver.github.io/_drafts/2014-04-01-ecmascript-namespacing.md",
@@ -481,6 +481,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"footer",
 			"top",
 			"required",
 			"update",
@@ -607,8 +608,7 @@
 			"pass-ac",
 			".sharer-details .data-left .used",
 			"'",
-			"ebdc/",
-			"ebdc"
+			"ebdc/"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -681,6 +681,18 @@
 		"selected_items":
 		[
 			[
+				"dom",
+				"_posts/2014-01-02-dom-scripting-forms.md"
+			],
+			[
+				"main.",
+				"css/main.css"
+			],
+			[
+				"css",
+				"css/main.css"
+			],
+			[
 				"mult",
 				"_posts/2014-03-20-forms-with-multiple-submit-buttons.md"
 			],
@@ -695,10 +707,6 @@
 			[
 				"mul",
 				"_posts/2014-03-20-forms-with-multiple-submit-buttons.md"
-			],
-			[
-				"css",
-				"css/main.css"
 			],
 			[
 				"multiple",
@@ -782,10 +790,6 @@
 			],
 			[
 				".css",
-				"css/main.css"
-			],
-			[
-				"main.",
 				"css/main.css"
 			],
 			[
@@ -1187,10 +1191,6 @@
 			[
 				"terms.",
 				"src/main/webapp/js/src/cdb/modules/cdb.termsModule.js"
-			],
-			[
-				"styl",
-				"src/main/webapp/resources/css/style.css"
 			]
 		],
 		"width": 0.0
