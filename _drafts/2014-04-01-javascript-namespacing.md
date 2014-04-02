@@ -5,35 +5,70 @@ date:   2014-04-01 09:00:01
 categories: js
 ---
 
-Namespaces provide organisation which leads to discoverability and in the context of Javascript, the minimisation of global variables [[0](#ref0)]. Javascript doesn't have a dedicated construct for namespacing but it can be imitated easily which will be shown later. Typically, over-engineered solutions [[1](#ref1)] are used but they are unnecessary and potentially problematic. By example a very simple solution is implemented below.
+Namespaces provide organisation which leads to discoverability and in the context of Javascript, the minimisation of global variables [[0](#ref0)]. Javascript doesn't have a dedicated construct for namespacing but it can be imitated. Typically over-engineered solutions [[1](#ref1)] are used but they are unnecessary and potentially problematic.
 
-## Defining a root level namespace
+For demonstration purposes let's define an example application that we are going to sketch out using a simple, DRY, reliable and performant namespacing solution.
 
-The root level should be the name of the application. The name of our example application will be Zoo. A single global variable called zoo is defined and an object literal is assigned to it. We assign an object literal so that we can attach further namespaces to it as properties of this single global variable which will be shown later.
+Our application will be a zoo and it will have animals and staff members. It will have two types of animal and two types of staff member. Additionally, some basic information about the zoo will be stored in the codebase.
+
+First we define a root level namespace:
 
 	// zoo.js
 	var zoo = {};
 
-Each namespace belongs in a single file matching the namespace identifier. Do not be concerned about having too many files; overly complex namespace hiearchies should be avoided and separate files should be concatenated into one for production-level performance.
+We place this single global variable into a file that matches the name of the application. In this case 'zoo'. An object literal is assigned to it so that we can have deeper namespacing structures and scale up as necessary.
 
-## Attaching a second level namespace
-
-The Zoo needs animals so a second level namespace is defined. This is achieved by assigning a property to the zoo variable and again we assign an object literal to the property.
+We now need to attach two more namespaces:
 
 	// zoo.animals.js
 	zoo.animals = {};
 
-The application now has some basic structure.
+and...
 
-## Attaching a component
+	// zoo.staff.js
+	zoo.staff = {};
 
-The Zoo needs at least one animal and so a Zebra component is defined. Again, we assign another property to the animals namespace but this time instead of assigning an object literal we assign a (constructor) function. This isn't necessary but is used to emphasis that the Zebra property is not another namespace - it's a regular component attached to a namespace.
+Now that we have structure we will first create the animal types:
 
-	// zoo.animals.Zebra.js
-	zoo.animals.Zebra = function() {};
-	zoo.animals.Zebra.prototype.eat = function() {};
+	// zoo.animals.Penguin.js
+	zoo.animals.Penguin = function() {
+		// constructor and not relevant to this
+	};
 
-Just repeat the last two steps as the application grows.
+and...
+
+	// zoo.animals.Tiger.js
+	zoo.animals.Tiger = function() {
+		// constructor and not relevant to this
+	};
+
+You will notice by now that the namespace identifer and the animal components themself match the file names - this improves discoverability.
+
+Now we create the staff member types:
+
+	// zoo.staffMembers.Keeper.js
+	zoo.staffMembers.Keeper = function() {
+		// constructor and not relevant to this
+	};
+
+and...
+
+	// zoo.staffMembers.SalesAssistant.js
+	zoo.staffMembers.SalesAssistant = function() {
+		// constructor and not relevant to this
+	};
+
+Do not be concerned about having too many files; overly complex namespace hiearchies should be avoided and separate files should be concatenated into one for production-level performance.
+
+Finally, we need to represent some basic information about the zoo:
+
+	// zoo.information.js
+	zoo.information = {
+		name: "My Awesome Zoo",
+		address: "52 Zoo Lane, ZA1 2AP"
+	};
+
+In this last case we simple attach properties onto the information object. In this particular case it is a good idea not to attach
 
 <dl>
 	<dt><a name="ref0"></a>[0]</dt>
