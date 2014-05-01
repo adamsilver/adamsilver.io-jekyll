@@ -28,7 +28,7 @@ Fieldsets provide information about a group of related controls. Typically this 
 
 Imagine a form control which allows the user to choose their favourite colour. The choices are represented as radios with associated labels: Red, Yellow and Blue.
 
-“Red” doesn’t convey enough information on it's own. However, wrapping the group of radios in a fieldset with a legend of “Favourite colour” will ensure the control can be read out by a screen reader as "Favourite colour, Red".
+“Red” doesn’t convey enough information on its own. However, wrapping the group of radios in a fieldset with a legend of “Favourite colour” will ensure the control can be read out by a screen reader as "Favourite colour, Red".
 
 	<fieldset>
 		<legend>Favourite colour</legend>
