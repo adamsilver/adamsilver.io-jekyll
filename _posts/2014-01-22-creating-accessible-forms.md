@@ -13,7 +13,7 @@ Creating accessible forms is very simple. There are basic rules to follow:
 
 Labels provide information about each control. Visual users will see the label and visually impaired users may use a screen reader which will read out the label. Labels are only needed for controls that provide a vessel for input e.g. submit buttons are fine without.
 
-Additionaly browsers may provide the ability to click a label which will either move focus to the control or even mark the control as checked in the case of a checkbox or radio control.
+Additionally browsers may provide the ability to click a label which will either move focus to the control or even mark the control as checked in the case of a checkbox or radio control.
 
 Associating a control with a label as follows:
 
@@ -28,7 +28,7 @@ Fieldsets provide information about a group of related controls. Typically this 
 
 Imagine a form control which allows the user to choose their favourite colour. The choices are represented as radios with associated labels: Red, Yellow and Blue.
 
-“Red” doesn’t convey enough information on it’s own. However, wrapping the group of radios in a fieldset with a legend of “Favourite colour” will ensure the control can be read out by a screen reader as "Favourite colour, Red".
+“Red” doesn’t convey enough information on it's own. However, wrapping the group of radios in a fieldset with a legend of “Favourite colour” will ensure the control can be read out by a screen reader as "Favourite colour, Red".
 
 	<fieldset>
 		<legend>Favourite colour</legend>
@@ -69,8 +69,8 @@ The optgroup element can improve accessibility of the options within a select co
 
 The select control provides a list of options of which one can be selected for input. An accessibility issue can arise when script is used to submit the form when the select's change event fires.
 
-Keyboard users may struggle. If a user wan't to select the 4th option this would then require 3 form submissions which would be a terribly frustrating experience.
+Keyboard users may struggle. If a user wants to select the 4th option this would then require 3 form submissions which would be a terribly frustrating experience.
 
 ## Avoid multiple select controls
 
-Multiple select controls allow the user to select multiple options but it is recommended that these controls are avoided due to users not understanding how to use them. Checkboxes provide a better alternative.
+Multiple select controls allow the user to select multiple options but it's recommended that these controls are avoided due to users not understanding how to use them. Checkboxes provide a better alternative.
