@@ -143,6 +143,10 @@ a:hover {
 	margin-bottom: 10px;
 }
 
+#content ul {
+	margin-left: 20px;
+}
+
 #content li {
 	color: #444;
 }
