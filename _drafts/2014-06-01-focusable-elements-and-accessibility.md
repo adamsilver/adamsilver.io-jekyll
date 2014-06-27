@@ -15,7 +15,7 @@ By default the following elements can receive focus:
 
 ## Accessibility
 
-There are users that use their keyboard to navigate a page. It is important that the interactive elements can be used by the mouse and keyboard. To do this I would advise that focusable elements are used to create interactive elements.
+There are users that use their keyboard to navigate a page. It is important that interactive elements can be used by the mouse and keyboard. To do this I would advise that focusable elements are used to create interactive elements.
 
 <!--
 Article by Snook

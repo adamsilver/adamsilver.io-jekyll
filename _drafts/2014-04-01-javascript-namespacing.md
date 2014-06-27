@@ -11,12 +11,30 @@ For demonstration purposes let's define an example application that we are going
 
 Our application will be a zoo and it will have animals and staff members. It will have two types of animal and two types of staff member. Additionally, some basic information about the zoo will be stored in the codebase.
 
-First we define a root level namespace:
+## Directory structure
+
+It's helpful to visualise the directory structure as follows:
+
+	src/
+		zoo/
+			zoo.js
+			zoo.information.js
+			animals/
+				zoo.animals.js
+				zoo.animals.Penguin.js
+				zoo.animals.Tiger.js
+			staff/
+				zoo.staff.js
+				zoo.staff.Keeper.js
+				zoo.staff.SalesAssistant.js
+
+Namespaces will be defined in zoo.js, zoo.animals.js and zoo.staff.js. All other files define components of the zoo. Each folder represents a namespace. Each namespace file simply assigns an empty object to a variable or property.
+
+## Root namespace
 
 	// zoo.js
 	var zoo = {};
 
-We place this single global variable into a file that matches the name of the application. In this case 'zoo'. An object literal is assigned to it so that we can have deeper namespacing structures and scale up as necessary.
 
 We now need to attach two more namespaces:
 
@@ -27,6 +45,8 @@ and...
 
 	// zoo.staff.js
 	zoo.staff = {};
+
+## Components
 
 Now that we have structure we will first create the animal types:
 
@@ -46,19 +66,19 @@ You will notice by now that the namespace identifer and the animal components th
 
 Now we create the staff member types:
 
-	// zoo.staffMembers.Keeper.js
-	zoo.staffMembers.Keeper = function() {
+	// zoo.staff.Keeper.js
+	zoo.staff.Keeper = function() {
 		// constructor and not relevant to this
 	};
 
 and...
 
-	// zoo.staffMembers.SalesAssistant.js
-	zoo.staffMembers.SalesAssistant = function() {
+	// zoo.staff.SalesAssistant.js
+	zoo.staff.SalesAssistant = function() {
 		// constructor and not relevant to this
 	};
 
-Do not be concerned about having too many files; overly complex namespace hiearchies should be avoided and separate files should be concatenated into one for production-level performance.
+Do not be concerned about having too many files; overly complex namespace hiearchies should be avoided and separate files should be concatenated into one for performance.
 
 Finally, we need to represent some basic information about the zoo:
 
@@ -68,7 +88,7 @@ Finally, we need to represent some basic information about the zoo:
 		address: "52 Zoo Lane, ZA1 2AP"
 	};
 
-In this last case we simple attach properties onto the information object. In this particular case it is a good idea not to attach
+In this last case we simply attach properties onto the information object.
 
 <dl>
 	<dt><a name="ref0"></a>[0]</dt>
