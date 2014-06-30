@@ -5,7 +5,7 @@ date:   2014-04-01 09:00:01
 categories: js
 ---
 
-Namespaces provide organisation which leads to discoverability and in the context of Javascript, the minimisation of global variables [[0](#ref0)]. Javascript doesn't have a dedicated construct for namespacing but it can be imitated. Typically over-engineered solutions [[1](#ref1)] are used but they are unnecessary and potentially problematic.
+Namespaces provide organisation which leads to discoverability and in the context of Javascript, the minimisation of global variables [[0](#ref0)]. Javascript doesn't (currently) have a dedicated construct for namespacing but it can be imitated. Typically over-engineered solutions [[1](#ref1)] are used but they are unnecessary and potentially problematic.
 
 For demonstration purposes let's define an example application that we are going to sketch out using a simple, DRY, reliable and performant namespacing solution.
 
@@ -30,57 +30,60 @@ It's helpful to visualise the directory structure as follows:
 
 Namespaces will be defined in zoo.js, zoo.animals.js and zoo.staff.js. All other files define components of the zoo. Each folder represents a namespace. Each namespace file simply assigns an empty object to a variable or property.
 
-## Root namespace
+## Namespace setup
+
+### Root namespace
 
 	// zoo.js
 	var zoo = {};
 
+### Sub level namespace
 
-We now need to attach two more namespaces:
+For our example app we don't need a deep hierarchy. Add levels as you need them.
 
 	// zoo.animals.js
 	zoo.animals = {};
 
-and...
+and
 
 	// zoo.staff.js
 	zoo.staff = {};
 
-## Components
+## Animal component definitions
 
-Now that we have structure we will first create the animal types:
+### Penguin component
 
 	// zoo.animals.Penguin.js
 	zoo.animals.Penguin = function() {
 		// constructor and not relevant to this
 	};
 
-and...
+### Tiger component
 
 	// zoo.animals.Tiger.js
 	zoo.animals.Tiger = function() {
 		// constructor and not relevant to this
 	};
 
-You will notice by now that the namespace identifer and the animal components themself match the file names - this improves discoverability.
+**Note**: The namespace and component definition match which improves discoverability.
 
-Now we create the staff member types:
+## Staff component definitions
+
+### Keeper component
 
 	// zoo.staff.Keeper.js
 	zoo.staff.Keeper = function() {
 		// constructor and not relevant to this
 	};
 
-and...
+### Sales assistant component
 
 	// zoo.staff.SalesAssistant.js
 	zoo.staff.SalesAssistant = function() {
 		// constructor and not relevant to this
 	};
 
-Do not be concerned about having too many files; overly complex namespace hiearchies should be avoided and separate files should be concatenated into one for performance.
-
-Finally, we need to represent some basic information about the zoo:
+### Zoo information
 
 	// zoo.information.js
 	zoo.information = {
@@ -88,7 +91,12 @@ Finally, we need to represent some basic information about the zoo:
 		address: "52 Zoo Lane, ZA1 2AP"
 	};
 
-In this last case we simply attach properties onto the information object.
+**Note**: Do not be concerned about having too many files; overly complex namespace hiearchies should be avoided and separate files should be concatenated into one for performance.
+
+## Summary
+
+
+
 
 <dl>
 	<dt><a name="ref0"></a>[0]</dt>

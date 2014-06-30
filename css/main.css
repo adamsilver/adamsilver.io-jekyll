@@ -98,13 +98,15 @@ h1 {
 }
 
 h2 {
-	font-size: 1.3em;
-	font-family: 'droid serif';
+	font-size: 1.5em;
 	margin-top: 1em;
-	border-bottom: 1px solid #C1CAD1;
-	padding-bottom: 0.3em;
-	padding-top: 1.2em;
 	margin-bottom: 1em;
+}
+
+h3 {
+	font-size: 1em;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
 }
 
 p {
