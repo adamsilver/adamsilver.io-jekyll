@@ -44,4 +44,4 @@ The last option would be to place a duplicate button at the top of the form:
 	</form>
 
 
-If needed, CSS can be used to hide the duplicate button. If the button *is* hidden, when the user tabs through the elements of the page and arrives at the hidden button, the user could be unaware of the currently focused element and the page will appear unresponsive. This can be alleviated by showing the button on-focus but this isn't perfectly cross-browser or accessible.
+If needed, CSS can be used to hide the duplicate button. If the button *is* hidden, when the user tabs through the elements of the page and arrives at the hidden button, the user is likely to be unaware of the currently focused element and the page will appear unresponsive. This can be alleviated by showing the button on focus but this isn't always the desired friendly behaviour.
