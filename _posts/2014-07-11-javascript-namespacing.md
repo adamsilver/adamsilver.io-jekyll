@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Javascript namespacing"
-date:   2014-04-01 09:00:01
+date:   2014-07-11 09:00:01
 categories: js
 ---
 
@@ -49,6 +49,8 @@ and
 	// zoo.staff.js
 	zoo.staff = {};
 
+**Note**: The namespace matches the file name ensuring the namespaces are discoverable.
+
 ## Animal component definitions
 
 ### Penguin component
@@ -64,8 +66,6 @@ and
 	zoo.animals.Tiger = function() {
 		// constructor and not relevant to this
 	};
-
-**Note**: The namespace and component definition match which improves discoverability.
 
 ## Staff component definitions
 
@@ -83,6 +83,8 @@ and
 		// constructor and not relevant to this
 	};
 
+**Note**: The component definition matches the file name ensuring the components are discoverable.
+
 ### Zoo information
 
 	// zoo.information.js
@@ -92,11 +94,6 @@ and
 	};
 
 **Note**: Do not be concerned about having too many files; overly complex namespace hiearchies should be avoided and separate files should be concatenated into one for performance.
-
-## Summary
-
-
-
 
 <dl>
 	<dt><a name="ref0"></a>[0]</dt>
