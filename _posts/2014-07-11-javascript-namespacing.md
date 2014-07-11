@@ -5,7 +5,7 @@ date:   2014-07-11 09:00:01
 categories: js
 ---
 
-Namespaces provide organisation which leads to discoverability and in the context of Javascript, the minimisation of global variables [[0](#ref0)]. Javascript doesn't (currently) have a dedicated construct for namespacing but it can be imitated. Typically over-engineered solutions [[1](#ref1)] are used but they are unnecessary and potentially problematic.
+Namespaces provide organisation which leads to discoverability, and in the context of Javascript, the minimisation of global variables [[0](#ref0)]. Javascript doesn't (currently) have a dedicated construct for namespacing but it can be imitated. Typically over-engineered solutions [[1](#ref1)] are used but they are unnecessary and potentially problematic.
 
 For demonstration purposes let's define an example application that we are going to sketch out using a simple, DRY, reliable and performant namespacing solution.
 
