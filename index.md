@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Front End Developer, London
 id: home
 ---
 
