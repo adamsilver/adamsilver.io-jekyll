@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Front End Developer, London
+title: Front End Development and UX articles
 id: home
 ---
 
