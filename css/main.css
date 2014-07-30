@@ -218,13 +218,12 @@ a:hover {
 	font-size: 1.5em;
 	background-color: #e32d40;
 	padding: 12px 10px 10px;
-	display: block;
+	display: inline-block;
 	color: #fff;
 	text-decoration: none;
 	font-family: 'droid serif';
 	text-transform: uppercase;
 	border-radius: 5px;
-	margin-bottom: 10px;
 	-webkit-transition:background-color .4s, -webkit-transform 2s;
     transition: background-color .4s, transform 2s;
 }
