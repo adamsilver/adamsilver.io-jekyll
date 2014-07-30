@@ -4,7 +4,7 @@ title: Front End Development and UX articles
 id: home
 ---
 
-# My articles
+# Front end web development articles
 
 {% include articleList.html %}
 

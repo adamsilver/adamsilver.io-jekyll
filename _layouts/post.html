@@ -4,7 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta name="viewport" content="initial-scale=1.0">
     <meta name="Author" content="Adam Silver">
-    <meta name="description" content="Adam Silver Blog">
     <title>{{ page.title }} - {{ site.name }}</title>
     <link rel="stylesheet" href="/css/main.css" type="text/css" media="all">
     <!--[if IE 6]><link rel="stylesheet" href="/css/ie6.css" type="text/css" media="all"><![endif]-->
@@ -20,41 +19,20 @@
     </script>
 </head>
 <body>
-<div id="container">
-    <div id="header">
-        <div id="headerInner">
-            <div id="logo">
-                <a href="/">Adam Silver</a>
-                <p class="tagLine">Front-end web developer</p>
-            </div>
-        </div>
-    </div>
-    <div id="content">
-        <div id="page_article">
+    <div id="container">
+        {% include header.html %}
+        <div id="content">
             <div class="post">
                 <a class="back" href="/">Back to all articles</a>
-
                 <h1>{{ page.title }}</h1>
                 <p class="meta">
                     <span class="date">{{ page.date | date: "%-d %B %Y"  }}</span>
                     <span class="wordCount">{{ page.content | number_of_words }} words</span>
                 </p>
-
                 {{ content }}
             </div>
         </div>
+        {% include footer.html %}
     </div>
-    <div id="footer">
-        <div id="footerInner">
-            <p>&copy; 2014 Adam Silver. Powered by <a href="http://jekyllrb.com/">Jekyll</a> and <a href="http://pages.github.com/">Github Pages</a>. Subscribe to <a href="http://feeds.feedburner.com/adamsilver">feed</a>. </p>
-            <p class="social">
-                <a href="http://www.github.com/adamsilver/"><img src="/img/icons/webicon-github-s.png" alt="Github"></a>
-                <a href="http://www.twitter.com/adambsilver/"><img src="/img/icons/webicon-twitter-s.png" alt="Twitter"></a>
-                <a href="http://uk.linkedin.com/in/adambsilver/"><img src="/img/icons/webicon-linkedin-s.png" alt="LinkedIn"></a>
-            </p>
-        </div>
-    </div>
-
-</div>
 </body>
 </html>
