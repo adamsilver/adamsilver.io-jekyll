@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About
+title: About Adam Silver, Front End Developer and UI specialist, based in London.
 id: about
 ---
 
