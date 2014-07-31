@@ -86,19 +86,20 @@ p {
 }
 
 body {
-	font-family: 'droid sans', arial, helvetica;
+	font-family: 'droid serif', helvetica, arial;
 	-webkit-font-smoothing: antialiased;
 }
 
 h1 {
-	font-size: 2.1em;
-	font-family: 'droid serif';
+	font-size: 1.5em;
+    font-family: 'droid sans';
 	margin-top: 0;
 	margin-bottom: 0.2em;
 }
 
 h2 {
-	font-size: 1.5em;
+    font-family: 'droid sans';
+	font-size: 1.2em;
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
@@ -106,7 +107,9 @@ h2 {
 h3 {
 	font-size: 1em;
 	margin-top: 1em;
+    font-family: 'droid sans';
 	margin-bottom: 0.5em;
+    color: #444;
 }
 
 p {
@@ -135,7 +138,7 @@ a:hover {
 }
 
 #content p {
-	line-height: 1.5em;
+	line-height: 1.7em;
 }
 
 #header {
@@ -143,6 +146,14 @@ a:hover {
 	padding: 20px;
 	overflow: hidden;
 	margin-bottom: 10px;
+}
+
+#header h1 {
+    color: #fff;
+    line-height: 1.2em;
+    font-family: 'droid sans';
+    font-size: 1.8em;
+    font-weight: normal;
 }
 
 #content ul {
@@ -259,17 +270,24 @@ a:hover {
 
 #articleList li {
 	margin-left: 0;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+}
+
+#articleList a {
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+#articleList .date {
+    display: inline-block;
 }
 
 .date {
-	display: block;
 	font-size: 0.8em;
 	color: #111;
 }
 
 .wordCount {
-	display: block;
 	font-style: italic;
 	font-size: 0.8em;
 	color: #444;
@@ -286,7 +304,7 @@ a:hover {
 pre {
 	font-family: Monaco,'Courier New','Courier',monospace;
 	font-size: 16px;
-	background-color: #C5D7E6;
+	background-color: #dbe4e6;
 	margin-bottom: 20px;
 	padding: 20px;
 	white-space: pre-wrap;       /* css-3 */
@@ -306,11 +324,11 @@ p code {
 	line-height: 1em;
 }
 
-.post {
+#post {
 	padding-top: 15px;
 }
 
-.post .back {
+#post .back {
 	float: right;
 	border-radius: 4px;
 	border: 1px solid #ccc;
@@ -319,18 +337,18 @@ p code {
 	font-size: 0.9em;
 }
 
-.post .back:hover,
-.post .back:active {
+#post .back:hover,
+#post .back:active {
 	background-color: #ddd;
 }
 
 @media (max-width: 860px) {
-	.post .back {
+	#post .back {
 		float: left;
 		margin-bottom: 10px;
 	}
 
-	.post h1 {
+	#post h1 {
 		clear: left;
 	}
 }

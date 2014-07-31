@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Front End Development and UX articles
+title: Front-end web development articles
 id: home
 ---
 
-# Front end web development articles
+# Front-end web development articles
 
 {% include articleList.html %}
 

@@ -22,11 +22,11 @@
     <div id="container">
         {% include header.html %}
         <div id="content">
-            <div class="post">
+            <div id="post">
                 <a class="back" href="/">Back to all articles</a>
                 <h1>{{ page.title }}</h1>
                 <p class="meta">
-                    <span class="date">{{ page.date | date: "%-d %B %Y"  }}</span>
+                    <span class="date">{{ page.date | date: "%-d %B %Y"  }}</span>,
                     <span class="wordCount">{{ page.content | number_of_words }} words</span>
                 </p>
                 {{ content }}

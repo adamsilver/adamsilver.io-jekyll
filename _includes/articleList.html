@@ -3,8 +3,10 @@
 		{% for post in site.posts %}
 			<li class="article">
 				<a class="title" href="{{ post.url }}">{{ post.title }}</a>
-				<span class="date">{{ post.date | date: "%-d %B %Y"  }}</span>
-				<span class="wordCount">{{ post.content | number_of_words }} words</span>
+				<div class="meta">
+                    <span class="date">{{ post.date | date: "%-d %B %Y"  }}</span>,
+                    <span class="wordCount">{{ post.content | number_of_words }} words</span>
+				</div>
 			</li>
 		{% endfor %}
 	</ol>

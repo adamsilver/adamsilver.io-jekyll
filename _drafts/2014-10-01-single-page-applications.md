@@ -38,7 +38,7 @@ Single page applications require a certain feature set and if your browser doesn
 
 ## Performance
 
-Contrary to popular belief [xxxx](xxx) the browser is the best at navigation, loading HTML, CSS and JS, informing the user that something is loading, where the scroll position should be etc. JS cannot do this better.
+Contrary to popular belief the browser is the best at navigation, loading HTML, CSS and JS, informing the user that something is loading, where the scroll position should be etc. JS cannot do this better.
 
 <a name="ref0"></a>[0]:[Beyond pushState - building single page applications]
 (https://medium.com/joys-of-javascript/4353246f4480)
