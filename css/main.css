@@ -120,8 +120,8 @@ p {
 
 a {
 	color: #21282e;
-	-webkit-transition:color .3s;
-    transition: color .3s;
+	-webkit-transition:color .1s;
+    transition: color .1s;
 }
 
 a:hover {
@@ -180,11 +180,11 @@ a:hover {
 #footer p {
 	margin-bottom: 0;
 	font-size: 0.8em;
-	color: #687E91;
+	color: #fff;
 }
 
 #footer a {
-	color: #687E91;
+	color: #fff;
 }
 
 #footer a:hover {
@@ -199,58 +199,6 @@ a:hover {
 #footer a img {
 	vertical-align: bottom;
 	border: none;
-}
-
-
-/**********************************************************
-* Breadcrumb
-**********************************************************/
-
-#breadcrumb {
-	padding-bottom: 10px;
-	margin-bottom: 20px;
-	border-bottom: 1px solid #ccc;
-}
-
-#breadcrumb p {
-	font-size: 0.9em;
-	margin: 0;
-}
-
-/**********************************************************
-* Logo
-**********************************************************/
-
-#logo {
-	float: left;
-}
-
-#logo a {
-	font-size: 1.5em;
-	background-color: #e32d40;
-	padding: 12px 10px 10px;
-	display: inline-block;
-	color: #fff;
-	text-decoration: none;
-	font-family: 'droid serif';
-	text-transform: uppercase;
-	border-radius: 5px;
-	-webkit-transition:background-color .4s, -webkit-transform 2s;
-    transition: background-color .4s, transform 2s;
-}
-
-#logo a:hover {
-	/*background-color: #CA1A2C;*/
-	background-color: #687E91;
-	/* -webkit-transform:rotate(180deg);
-    transform:rotate(180deg);*/
-}
-
-#logo .tagLine {
-	color: #687E91;
-	font-size: 0.9em;
-	text-transform: uppercase;
-	margin-bottom: 0;
 }
 
 /**********************************************************
