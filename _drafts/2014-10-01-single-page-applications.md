@@ -53,7 +53,11 @@ SPAs don't always require SEO but for those that do there may be solutions but t
 
 If the SPA is of a significant size then loading the entire application JS on page load may be detrimental to the initial experience. It's a little bit like loading all pages of a website when only the home page was requested which doesn't make sense. Unfortunately this leads to attempting to load in 'page' specific CSS and JS only when those 'pages' are requested. Script loading is notoriously difficult and contains unreliable hacks [[3](#ref3)]. This can be fatal to the reliability of the application. Reliability is something that would be right at the top of my list of requirements when building a web application.
 
-## Fallback for browsers without those mandatory features
+## Incapable browsers and accessibility
+
+All browsers can render HTML rather well. Unfortunately, in the case of JS, browsers don't naturally degrade well on their own without employing feature detection and testing [[4](#ref4)]. If just a single critical feature doesn't exist it will be the white screen of death for those users [[5](#ref5)].
+
+Browsers have
 
 Single page applications require a certain feature set and if your browser doesn't support it its **blank** page for them.
 
@@ -80,4 +84,8 @@ SPAs rely on various APIs and if just one API fails, it is likely the end user g
 	<dd><a href="http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo">SPA SEO on stackoverflow</a></dd>
 	<dt><a name="ref3"></a>[3]</dt>
 	<dd><a href="http://blog.getify.com/labjs-script-loading-the-way-it-should-be/">Script loading hacks</a></dd>
+	<dt><a name="ref4"></a>[4]</dt>
+	<dd><a href="http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting">Stare of the Art Cross Browser Scripting</a></dd>
+    <dt><a name="ref5"></a>[5]</dt>
+    <dd><a href="http://sighjavascript.tumblr.com/">Sigh JavaScript</a></dd>
 </dl>
