@@ -57,14 +57,6 @@ If the SPA is of a significant size then loading the entire application JS on pa
 
 All browsers can render HTML rather well. Unfortunately, in the case of JS, browsers don't naturally degrade well on their own without employing feature detection and testing [[4](#ref4)]. If just a single critical feature doesn't exist it will be the white screen of death for those users [[5](#ref5)].
 
-Browsers have
-
-Single page applications require a certain feature set and if your browser doesn't support it its **blank** page for them.
-
-## Accessibility
-
-SPAs rely on various APIs and if just one API fails, it is likely the end user gets a blank page [0](sigh js).
-
 ## Conclusion
 
 Bearing in-mind single page applications are meant to provide a better and faster user experience, it is therefore ironic SPAs are likely to be slower and unreliable. So not only is there significantly extra development effort, the end result is detrimental to the user experience.
