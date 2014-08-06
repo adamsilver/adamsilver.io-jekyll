@@ -61,9 +61,9 @@ All browsers can render HTML rather well. Unfortunately, in the case of JS, brow
 
 Bearing in-mind single page applications are meant to provide a better and faster user experience, it is therefore ironic SPAs are likely to be slower and unreliable. So not only is there significantly extra development effort, the end result is detrimental to the user experience.
 
-Frustratingly, most of the pitfalls described in this article are introduced by the SPA architecture itself so they aren't really problems that require solving if traditional and reliable architectures are employed.
+Frustratingly, most of the pitfalls described in this article are introduced by the SPA architecture. Avoiding the architecture avoids the pitfalls.
 
-Just remember that rich UIs can still be created without needing SPAs. Relying on the browser to navigate pages means most, if not all of the pitfalls disappear.
+And remember, users can still have rich user interfaces without cramming it all into one document.
 
 <dl>
 	<dt><a name="ref0"></a>[0]</dt>
