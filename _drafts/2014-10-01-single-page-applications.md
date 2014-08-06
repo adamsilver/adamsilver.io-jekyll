@@ -45,17 +45,17 @@ SPAs can't detect when the user presses "stop/cancel", so the UI would need to e
 
 Browsers normally provide the `beforeunload` event which allows the application to warn against losing unsaved changes. Providing this functionality within SPAs will mean providing functionality that checks the page before any routing takes place.
 
+## Search engine optimisation
+
+SPAs don't always require SEO but for those that do there may be solutions but they certainly aren't straightforward or quick to implement [[2](#ref2)].
+
 ## Loading CSS and JS when navigating
 
-If the SPA is of a significant size then loading the entire application JS on page load may be detrimental to the initial experience. It's a little bit like loading all pages of a website when only the home page was requested which doesn't make sense. Unfortunately this leads to attempting to load in 'page' specific CSS and JS only when those 'pages' are requested. Script loading is notoriously difficult and admittedly contains hacks. **FIND LINK to LAB.js article explaining that.** This can be fatal to the reliability of the application. Reliability is something that would be right at the top of my list of requirements when building a web application.
+If the SPA is of a significant size then loading the entire application JS on page load may be detrimental to the initial experience. It's a little bit like loading all pages of a website when only the home page was requested which doesn't make sense. Unfortunately this leads to attempting to load in 'page' specific CSS and JS only when those 'pages' are requested. Script loading is notoriously difficult and contains unreliable hacks [[3](#ref3)]. This can be fatal to the reliability of the application. Reliability is something that would be right at the top of my list of requirements when building a web application.
 
 ## Fallback for browsers without those mandatory features
 
 Single page applications require a certain feature set and if your browser doesn't support it its **blank** page for them.
-
-## Search engine optimisation
-
-SPAs don't always require SEO but for those that do there may be solutions but they certainly aren't trivial [000].
 
 ## Accessibility
 
@@ -74,8 +74,10 @@ SPAs rely on various APIs and if just one API fails, it is likely the end user g
 <dl>
 	<dt><a name="ref0"></a>[0]</dt>
 	<dd><a href="http://en.wikipedia.org/wiki/Single-page_application">SPAs on Wikipedia</a></dd>
-	<dt><a name="ref0"></a>[1]</dt>
+	<dt><a name="ref1"></a>[1]</dt>
     <dd><a href="https://medium.com/joys-of-javascript/4353246f4480">Beyond pushState - building single page applications</a></dd>
-	<dt><a name="ref1"></a>[2]</dt>
+	<dt><a name="ref2"></a>[2]</dt>
 	<dd><a href="http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo">SPA SEO on stackoverflow</a></dd>
+	<dt><a name="ref3"></a>[3]</dt>
+	<dd><a href="http://blog.getify.com/labjs-script-loading-the-way-it-should-be/">Script loading hacks</a></dd>
 </dl>
