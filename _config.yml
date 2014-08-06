@@ -3,3 +3,4 @@ markdown: redcarpet
 highlighter: pygments
 permalink: ./:title
 exclude: [adamsilver.sublime-project, adamsilver.sublime-workspace]
+url: http://adamsilver.github.io

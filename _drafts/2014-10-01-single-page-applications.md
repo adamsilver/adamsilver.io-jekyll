@@ -1,14 +1,21 @@
 ---
 layout: post
-title:  "Beware of single page applications"
+title:  "Single page applications"
 date:   2014-10-01 09:00:01
 categories: js
 ---
 
-Single page applications are *supposed* to 'provide a more fluid user 
-experience' [0](#ref0) but beware of the following fatal pitfalls:
+Single page applications are *supposed* to 'provide a more fluid user experience' [0](#ref0) but beware of the following fatal pitfalls:
 
 ## Fast back
+
+> Back should be quick; users don’t expect data to have changed much.
+
+> When a user presses the browser’s back button they expect the change to happen quickly and for the page to be in a similar state to how it was last time they saw it.
+
+> In the traditional web model the browser will typically be able use a cached version of the page and linked resources.
+
+> In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.
 
 Browsers can store previously visited pages in the cache which means when the user clicks back the page is loaded quickly. SPAs don't have this. There will need to be a way to store and retrieve pages from a cache - memory, local storage? Additionally faux navigation hangs off pushState or hashchange and in either situation it will need to differentiate between a user changing the URL via clicking a link, changing the URL manually or  hitting back/forward.
 
@@ -28,10 +35,6 @@ Browsers normally expose a `beforeunload` event meaning you can easily warn agai
 
 SPAs inherently reside in a single HTML document. Either load the entire application's script on load which may not be desired or performant or load scripts via script which is very unreliable [xxx](xxxx). The one thing you don't want to play games with is the reliability of your application even starting.
 
-## Sheer code size
-
-Take 'hello world'. To produce that in single page application architecture could require hundreds, if not thousands of lines of js. In html its just `<p>hello world</p>`
-
 ## Fallback for browsers without those mandatory features
 
 Single page applications require a certain feature set and if your browser doesn't support it its **blank** page for them.
@@ -39,6 +42,10 @@ Single page applications require a certain feature set and if your browser doesn
 ## Performance
 
 Contrary to popular belief the browser is the best at navigation, loading HTML, CSS and JS, informing the user that something is loading, where the scroll position should be etc. JS cannot do this better.
+
+## Sheer code size
+
+Take 'hello world'. To produce that in single page application architecture could require hundreds, if not thousands of lines of js. In html its just `<p>hello world</p>`
 
 <a name="ref0"></a>[0]:[Beyond pushState - building single page applications]
 (https://medium.com/joys-of-javascript/4353246f4480)
