@@ -67,14 +67,12 @@ SPAs rely on various APIs and if just one API fails, it is likely the end user g
 
 ## Conclusion
 
-- Performance
-- Contrary to popular belief the browser is the best at navigation, loading HTML, CSS and JS, informing the user that something is loading, where the scroll position should be etc. JS cannot do this better.
-- Sheer code size
-- reliability
-- Browsers do this for free and architecting a web app degrades the reliability and performance. Very bad considering SPAs are meant to provide a better user experience.
-- all of these issues don't exist if using a traditional website architecture. Don't forget rich experiences can still be provided when SPA architecture is not employed.
--*****The primary issue with single page applications is the fact that they rely on faux navigation either via pushState or the hashchange event. Navigation is something browsers perform superbly well. This article discusses the impact
--*****FIRST thing we have to do is to recreate all the things the browser does so well and for free...
+Bearing in-mind single page applications are meant to provide a better and faster user experience, it is therefore ironic SPAs are likely to be slower and unreliable. So not only is there significantly extra development effort, the end result is detrimental to the user experience.
+
+Frustratingly, most of the pitfalls described in this article are introduced by the SPA architecture itself so they aren't really problems that require solving if traditional and reliable architectures are employed.
+
+Just remember that rich UIs can still be created without needing SPAs. Relying on the browser to navigate pages means most, if not all of the pitfalls disappear.
+
 <dl>
 	<dt><a name="ref0"></a>[0]</dt>
 	<dd><a href="http://en.wikipedia.org/wiki/Single-page_application">SPAs on Wikipedia</a></dd>
