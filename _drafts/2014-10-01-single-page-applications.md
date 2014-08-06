@@ -7,10 +7,6 @@ categories: js
 
 Single page applications are *supposed* to 'provide a more fluid user experience' [[0](#ref0)] but beware of the following fatal pitfalls.
 
-*****The primary issue with single page applications is the fact that they rely on faux navigation either via pushState or the hashchange event. Navigation is something browsers perform superbly well. This article discusses the impact
-
-*****FIRST thing we have to do is to recreate all the things the browser does so well and for free...
-
 ## Navigation and fast back
 
 Browsers store history meaning these pages can load very quickly when the user presses the back button. SPAs need to recreate this functionality. As Daniel Puplus says in his article [[1](#ref1)]:
@@ -73,7 +69,8 @@ SPAs rely on various APIs and if just one API fails, it is likely the end user g
 - reliability
 - Browsers do this for free and architecting a web app degrades the reliability and performance. Very bad considering SPAs are meant to provide a better user experience.
 - all of these issues don't exist if using a traditional website architecture. Don't forget rich experiences can still be provided when SPA architecture is not employed.
-
+-*****The primary issue with single page applications is the fact that they rely on faux navigation either via pushState or the hashchange event. Navigation is something browsers perform superbly well. This article discusses the impact
+-*****FIRST thing we have to do is to recreate all the things the browser does so well and for free...
 <dl>
 	<dt><a name="ref0"></a>[0]</dt>
 	<dd><a href="http://en.wikipedia.org/wiki/Single-page_application">SPAs on Wikipedia</a></dd>
