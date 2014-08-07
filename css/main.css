@@ -91,10 +91,11 @@ body {
 }
 
 h1 {
-	font-size: 1.5em;
+    font-size: 1.5em;
     font-family: 'droid sans';
-	margin-top: 0;
-	margin-bottom: 0.2em;
+    margin-top: 0;
+    margin-bottom: 0.2em;
+    color: #21282e;
 }
 
 h2 {
@@ -164,7 +165,6 @@ a:hover {
 }
 
 #header h1 {
-    color: #21282e;
     font-family: 'droid sans';
     font-size: 0.9em;
     font-weight: normal;
@@ -201,7 +201,7 @@ a:hover {
 
 #nav ul li {
     float: left;
-    margin-left: 10px;
+    margin-left: 20px;
     font-family: 'droid sans';
     font-size: 0.9em;
     text-transform: uppercase;
