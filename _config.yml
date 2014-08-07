@@ -1,6 +1,7 @@
 name: Adam Silver, Front-end web developer, based in London
 markdown: redcarpet
 highlighter: pygments
-permalink: ./:title
+permalink: /articles/:title
 exclude: [adamsilver.sublime-project, adamsilver.sublime-workspace]
 url: http://adamsilver.github.io
+include: ['_pages']

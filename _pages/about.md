@@ -2,6 +2,7 @@
 layout: default
 title: About Adam Silver, Front End Developer and UI specialist, based in London.
 id: about
+permalink: /about/
 ---
 
 # About me
@@ -12,7 +13,7 @@ I endlessly hacked in various HTML, CSS, JS and even some VBScript as I tried to
 
 Soon after I started creating websites for various clients through friends and family; anything from music bands to small businesses. It was really fun and the money was great considering I had been doing it for less than 6 months, but most of all it was really fun.
 
-I found myself obsessed with how e-commerce sites worked, in particular shopping baskets. Good old "view source" couldn't help me and at this point I knew my career path. So I went to the University of Hertfordshire to study Multimedia Technology with the endeavour of learning my trade professionally and hopefully answering the mystical shopping basket puzzle in the process. In my 2nd year I built an e-commerce website using Classic ASP to sell trainers 
+I found myself obsessed with how e-commerce sites worked, in particular shopping baskets. Good old "view source" couldn't help me and at this point I knew my career path. So I went to the University of Hertfordshire to study Multimedia Technology with the endeavour of learning my trade professionally and hopefully answering the mystical shopping basket puzzle in the process. In my 2nd year I built an e-commerce website using Classic ASP to sell trainers
 and solved the shopping basket puzzle once and for all - who knew there was a
  server side?
 
