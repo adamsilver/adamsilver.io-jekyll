@@ -75,6 +75,10 @@
 }
 
 /**********************************************************
+* Color Turquoise: #1abc9c / Midnight blue: #2c3e50 / Clouds: #ecf0f1
+**********************************************************/
+
+/**********************************************************
 * General
 **********************************************************/
 
@@ -95,7 +99,7 @@ h1 {
     font-family: 'droid sans';
     margin-top: 0;
     margin-bottom: 0.2em;
-    color: #21282e;
+    color: #2c3e50 ;
 }
 
 h2 {
@@ -110,20 +114,20 @@ h3 {
 	margin-top: 1em;
     font-family: 'droid sans';
 	margin-bottom: 0.5em;
-    color: #444;
+    color: #2c3e50;
 }
 
 p {
 	margin-bottom: 1.5em;
 	margin-top: 1em;
-	color: #444;
+	color: #2c3e50;
 }
 
 blockquote {
     background-color: #f5f5f5;
     padding: 1px 10px 1px 10px;
     margin: 20px;
-    border-left: 5px solid #444;
+    border-left: 5px solid #2c3e50;
 
 }
 
@@ -132,13 +136,13 @@ blockquote p {
 }
 
 a {
-	color: #21282e;
+	color: #2c3e50;
 	-webkit-transition:color .1s;
     transition: color .1s;
 }
 
 a:hover {
-	color: #e32d40;
+	color: #1abc9c;
 
 }
 
@@ -183,7 +187,7 @@ a:hover {
 }
 
 #content li {
-	color: #444;
+	color: #2c3e50;
 }
 
 /**********************************************************
@@ -208,13 +212,13 @@ a:hover {
 }
 
 #nav ul li a {
-    color: #21282e;
+    color: #2c3e50 ;
     text-decoration: none;
     display: block;
 }
 
 #nav ul li a.active {
-    border-bottom: 3px solid #e32d40;
+    border-bottom: 3px solid #1abc9c;
 }
 
 /**********************************************************
@@ -276,13 +280,13 @@ a:hover {
 
 .date {
 	font-size: 0.8em;
-	color: #111;
+	color: #2c3e50;
 }
 
 .wordCount {
 	font-style: italic;
 	font-size: 0.8em;
-	color: #444;
+	color: #2c3e50;
 }
 
 #pgHome #content {
@@ -296,7 +300,7 @@ a:hover {
 pre {
 	font-family: Monaco,'Courier New','Courier',monospace;
 	font-size: 16px;
-	background-color: #dbe4e6;
+	background-color: #ecf0f1;
 	margin-bottom: 20px;
 	padding: 20px;
 	white-space: pre-wrap;       /* css-3 */
