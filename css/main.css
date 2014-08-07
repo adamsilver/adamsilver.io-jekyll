@@ -210,6 +210,11 @@ a:hover {
 #nav ul li a {
     color: #21282e;
     text-decoration: none;
+    display: block;
+}
+
+#nav ul li a.active {
+    border-bottom: 3px solid #e32d40;
 }
 
 /**********************************************************
@@ -317,16 +322,13 @@ p code {
 
 #post .back {
 	float: right;
-	border-radius: 4px;
 	border: 1px solid #ccc;
-	background-color: #f5f5f5;
 	padding: 10px;
 	font-size: 0.9em;
 }
 
 #post .back:hover,
 #post .back:active {
-	background-color: #ddd;
 }
 
 @media (max-width: 860px) {
