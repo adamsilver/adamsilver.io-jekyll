@@ -4,7 +4,7 @@ title: Front-end web development articles
 id: home
 ---
 
-# Front-end web development articles
+# Hello, my name is Adam Silver and I am a front end developer, based in London. You can read some of my latest articles:
 
 {% include articleList.html %}
 

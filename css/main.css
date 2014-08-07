@@ -154,18 +154,28 @@ a:hover {
 }
 
 #header {
-	background-color: #21282e;
-	padding: 20px;
-	overflow: hidden;
+	border-bottom: 1px solid #ebebeb;
 	margin-bottom: 10px;
 }
 
+#headerInner {
+    padding: 20px;
+    overflow: hidden;
+}
+
 #header h1 {
-    color: #fff;
-    line-height: 1.2em;
+    color: #21282e;
     font-family: 'droid sans';
-    font-size: 1.8em;
+    font-size: 0.9em;
     font-weight: normal;
+    float: left;
+    text-transform: uppercase;
+}
+
+#header h1 span {
+    position: absolute;
+    left: -9999em;
+    top: 0;
 }
 
 #content ul {
@@ -177,11 +187,37 @@ a:hover {
 }
 
 /**********************************************************
+* Navigation
+**********************************************************/
+
+#nav {
+    float: right;
+}
+
+#nav ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+#nav ul li {
+    float: left;
+    margin-left: 10px;
+    font-family: 'droid sans';
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+#nav ul li a {
+    color: #21282e;
+    text-decoration: none;
+}
+
+/**********************************************************
 * Footer
 **********************************************************/
 
 #footer {
-	background-color: #21282e;
+    border-top: 1px solid #ebebeb;
 }
 
 #footerInner {
@@ -192,15 +228,6 @@ a:hover {
 #footer p {
 	margin-bottom: 0;
 	font-size: 0.8em;
-	color: #fff;
-}
-
-#footer a {
-	color: #fff;
-}
-
-#footer a:hover {
-	color: #e32d40;
 }
 
 #footer .social a {
