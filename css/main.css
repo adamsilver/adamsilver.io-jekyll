@@ -176,6 +176,11 @@ a:hover {
     text-transform: uppercase;
 }
 
+#header h1 a {
+    display: block;
+    text-decoration: none;
+}
+
 #header h1 span {
     position: absolute;
     left: -9999em;
