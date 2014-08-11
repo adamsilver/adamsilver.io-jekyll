@@ -21,7 +21,7 @@ Browsers store history, meaning, these pages can load very quickly when the user
 
 Each time the user 'navigates' there needs to be some way of storing and retrieving 'pages' from a cache, unless of course we want to slow down the speed of loading 'pages', which is meant to be a significant benefit of SPAs. Storage could be memory, local (or session) storage, client-side database or cookies.
 
-**Note: The words 'navigates' and 'pages' are in quotes due to the fact the user isn't *really* navigating or loading pages in the traditional sense. Quotes will be discarded for brevity going forward.**
+**Note: The words 'navigates' and 'pages' are in quotes because SPAs, by definition don't have the concept of navigation and pages in the traditional sense. Quotes will be discarded for brevity going forward.**
 
 It's not just a question of recreating a cache. It's also a question of determining when to store and when to retrieve pages from it. Navigation typically utilises `pushState` or `hashchange` and the application will need to differentiate between the user changing the URL (via clicking a link or typing a URL in the location bar) or manually hitting back/forward, which is not trivial [[2](#ref2)].
 
@@ -37,7 +37,7 @@ Each time the user navigates, the scroll position will need to be stored and ret
 
 ## Cancelling navigation
 
-Browsers provide a cancel button, which when pressed cancels the loading of the requested page. Also, if a user clicks another link, the browser will cancel the previous request.
+Browsers provide a cancel button, which when pressed, cancels the loading of the requested page. Also, if a user clicks another link, the browser will cancel the previous request.
 
 SPA links, however, are likely to be XHR meaning several requests could be in progress at the same time and so the first page request might be loaded last, even though it should have been cancelled out by the second page request. A link could also be clicked twice meaning the page will be requested twice and loaded twice causing visual glitches.
 
@@ -51,11 +51,13 @@ Browsers normally provide the `beforeunload` event which allows the application 
 
 ## Search engine optimisation
 
-SPAs don't always require SEO but for those that do there may be solutions but they certainly aren't straightforward or quick to implement [[3](#ref3)].
+SPAs don't always require SEO but for those that do, there ARE solutions, but they aren't necessarily easy or effortless [[3](#ref3)].
 
 ## Loading CSS and JS when navigating
 
-If the SPA is of a significant size then loading the entire application JS on page load may be detrimental to the initial experience. It's a little bit like loading all pages of a website when only the home page was requested which doesn't make sense. Unfortunately this leads to attempting to load in 'page' specific CSS and JS only when those 'pages' are requested. Script loading is notoriously difficult and contains unreliable hacks [[4](#ref4)]. This can be fatal to the reliability of the application. Reliability is something that would be right at the top of my list of requirements when building a web application.
+If an SPA grows to a significant size, loading the entire application on page load may be detrimental to the experience, because it's akin to loading all pages of a website when only the home page was requested.
+
+Unfortunately, this leads to the requirement to load CSS and JS for certain pages. Script loading is notoriously difficult and contains unreliable hacks [[4](#ref4)]. This can be fatal to the reliability of the application. Reliability should obviously be valued highly.
 
 ## Incapable browsers and accessibility
 
@@ -63,11 +65,11 @@ All browsers can render HTML rather well. Unfortunately, in the case of JS, brow
 
 ## Conclusion
 
-Bearing in-mind single page applications are meant to provide a better and faster user experience, it is therefore ironic SPAs are likely to be slower and unreliable. So not only is there significantly extra development effort, the end result is detrimental to the user experience.
+Bearing in-mind SPAs are meant to provide a better and faster user experience, it is therefore ironic SPAs are likely to be slower and unreliable. So not only is there significantly extra development effort, the end result is detrimental to the user experience.
 
-Frustratingly, most of the pitfalls described in this article are introduced by the SPA architecture. Avoiding the architecture avoids the pitfalls.
+Frustratingly, the pitfalls described in this article are introduced by the SPA architecture. Avoiding the architecture avoids the pitfalls.
 
-And remember, users can still have rich user interfaces without cramming it all into one document.
+And remember, websites can still have rich user interfaces without cramming the entire site into one document.
 
 <dl>
 	<dt><a name="ref0"></a>[0]</dt>
