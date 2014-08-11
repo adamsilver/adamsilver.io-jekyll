@@ -37,13 +37,13 @@ Each time the user navigates, the scroll position will need to be stored and ret
 
 ## Cancelling navigation
 
-Browsers provide a cancel button, which when pressed, cancels the loading of the requested page. Also, if a user clicks another link, the browser will cancel the previous request.
+Browsers provide a cancel button, which when pressed, cancels the loading of the requested page. Also, if a user clicks another link, the browser will cancel the previous request. This is useful for performance of the site and the user's internet data allowance.
 
-SPA links, however, are likely to be XHR meaning several requests could be in progress at the same time and so the first page request might be loaded last, even though it should have been cancelled out by the second page request. A link could also be clicked twice meaning the page will be requested twice and loaded twice causing visual glitches.
+SPA pages are likely to be retrieved via XHR meaning, several requests could be in progress at the same time and so, the first page request might be loaded last, even though it should have been cancelled out by the second page request. A link could be clicked twice, meaning the page will be requested twice and loaded twice, which could cause visual glitches.
 
-SPAs can't detect when the user presses "stop/cancel", so the UI would need to expose a custom stop button, which isn't desirable.
+SPAs can't detect when the user presses cancel, so the UI would need to expose a custom stop button, which isn't desirable.
 
-The application would need to manage duplicate requests and cancelling in progress requests.
+The application needs to manage duplicate requests and cancelling in progress requests to reproduce the aforementioned browser behaviour.
 
 ## Avoid data loss on navigation
 
