@@ -61,7 +61,9 @@ Unfortunately, this leads to the requirement to load CSS and JS for certain page
 
 ## Conclusion
 
-SPAs are meant to provide a better and faster experience, it is therefore ironic that SPAs require significantly more development effort with a result that is detrimental to the user experience. Remember that websites can still have rich user interfaces without cramming the entire site into one document. All of the issues described in this article are SPA architecture induced. **Avoiding the SPA architecture avoids the pitfalls**.
+SPAs are meant to provide a better experience. It is therefore ironic that SPAs require significantly more development effort with a result that is detrimental to the user experience.
+
+Remember that websites can still have rich user interfaces without cramming the entire site into one document. All of the issues described in this article arise due to the choice of architecting as as an SPA. **Avoiding the SPA architecture avoids the pitfalls**.
 
 Furthermore, it is interesting to note that sites, such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)], realised the SPA architecture was a mistake and have since reverted their architectures.
 
