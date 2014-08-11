@@ -39,23 +39,27 @@ Each time the user navigates, the scroll position will need to be stored and ret
 
 Browsers provide a cancel button, which when pressed, cancels the loading of the requested page. Also, if a user clicks another link, the browser will cancel the previous request. This is useful for performance of the site and the user's internet data allowance.
 
-SPA pages are likely to be retrieved via XHR meaning, several requests could be in progress at the same time and so, the first page request might be loaded last, even though it should have been cancelled out by the second page request. A link could be clicked twice, meaning the page will be requested twice and loaded twice, which could cause visual glitches.
+Pages in SPAs are likely to be retrieved via XHR, meaning several requests could be in progress at the same time; the first page request might be loaded last even though it should have been cancelled out by the second page request.
+
+Also, the *same* link could be clicked twice, meaning the page will be requested (and loaded) twice, which is not efficient and could also cause visual glitches.
 
 SPAs can't detect when the user presses cancel, so the UI would need to expose a custom stop button, which isn't desirable.
 
-The application needs to manage duplicate requests and cancelling in progress requests to reproduce the aforementioned browser behaviour.
+The application needs to reproduce the aforementioned browser functionality. This means exposing a custom cancel button, which is obviously not desirable, and the application needs to handle duplicate requests as well as cancelling out all previous requests that are still in progress.
 
 ## Avoid data loss on navigation
 
-Browsers normally provide the `beforeunload` event which allows the application to warn against losing unsaved changes. Providing this functionality within SPAs will mean providing functionality that checks the page before any routing takes place.
+Browsers normally provide the `beforeunload` event which allows the application to warn against losing unsaved changes.
+
+Providing this functionality within SPAs will mean providing functionality that checks the page before any routing takes place.
 
 ## Search engine optimisation
 
-SPAs don't always require SEO but for those that do, there ARE solutions, but they aren't necessarily easy or effortless [[3](#ref3)].
+SPAs don't always require SEO but for those that do, there are solutions, but they aren't necessarily easy or effortless [[3](#ref3)].
 
 ## Loading CSS and JS when navigating
 
-If an SPA grows to a significant size, loading the entire application on page load may be detrimental to the experience, because it's akin to loading all pages of a website when only the home page was requested.
+If an SPA grows to a significant size, loading the entire application on page load may be detrimental to the experience because it's akin to loading all pages of a website when only the home page was requested.
 
 Unfortunately, this leads to the requirement to load CSS and JS for certain pages. Script loading is notoriously difficult and contains unreliable hacks [[4](#ref4)]. This can be fatal to the reliability of the application. Reliability should obviously be valued highly.
 
@@ -63,9 +67,9 @@ Unfortunately, this leads to the requirement to load CSS and JS for certain page
 
 SPAs are meant to provide a better experience. It is therefore ironic that SPAs require significantly more development effort with a result that is detrimental to the user experience.
 
-Remember that websites can still have rich user interfaces without cramming the entire site into one document. All of the issues described in this article arise due to the choice of architecting as as an SPA. **Avoiding the SPA architecture avoids the pitfalls**.
+Remember that websites can still have rich user interfaces without cramming the entire site into one document. All of the issues described in this article arise due to the choice of architecting as as an SPA.
 
-Furthermore, it is interesting to note that sites, such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)], realised the SPA architecture was a mistake and have since reverted their architectures.
+Furthermore, it is interesting to note that sites, such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)], realised the SPA architecture was a mistake and have since reverted their architectures. **Avoiding the SPA architecture avoids the pitfalls**.
 
 <dl>
 	<dt><a name="ref0"></a>[0]</dt>
