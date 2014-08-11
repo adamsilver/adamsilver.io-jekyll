@@ -99,7 +99,7 @@ h1 {
     font-family: 'droid sans';
     margin-top: 0;
     margin-bottom: 0.2em;
-    color: #2c3e50 ;
+    color: #2c3e50;
 }
 
 h2 {
@@ -107,6 +107,7 @@ h2 {
 	font-size: 1.2em;
 	margin-top: 1em;
 	margin-bottom: 1em;
+    color: #2c3e50;
 }
 
 h3 {
