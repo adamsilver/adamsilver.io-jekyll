@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Single page applications"
-date:   2014-10-01 09:00:01
+date:   2014-08-11 09:00:01
 categories: js
 ---
 
@@ -19,11 +19,11 @@ Browsers store history, meaning, these pages can load very quickly when the user
 
 > "In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes."
 
-Each time the user 'navigates' there needs to be some way of storing and retrieving 'pages' from a cache, unless of course we want to slow down the speed of loading 'pages', which is meant to be a significant benefit of SPAs. Storage could be memory, local (or session) storage, client-side database or cookies.
+Upon 'navigating', the application will need to a way of storing and retrieving 'pages' from a cache. Unless of course we want to slow down the speed of loading 'pages', which is *meant* to be a significant benefit of SPAs. Storage could be memory, local (or session) storage, client-side database or cookies.
 
-**Note: The words 'navigates' and 'pages' are in quotes because SPAs, by definition don't have the concept of navigation and pages in the traditional sense. Quotes will be discarded for brevity going forward.**
+**Note: The words 'navigating' and 'pages' are in quotes because SPAs, by definition don't have the concept of navigation and pages in the traditional sense. Quotes will be discarded for brevity going forward.**
 
-It's not just a question of recreating a cache. It's also a question of determining when to store and when to retrieve pages from it. Navigation typically utilises `pushState` or `hashchange` and the application will need to differentiate between the user changing the URL (via clicking a link or typing a URL in the location bar) or manually hitting back/forward, which is not trivial [[2](#ref2)].
+The application will also need to determine when to store and retrieve pages from it. Navigation typically utilises `pushState` or `hashchange` and the application will need to differentiate between the user changing the URL (via clicking a link or typing a URL in the location bar) or manually hitting back/forward, which is not trivial [[2](#ref2)].
 
 ## Navigation and remembering scroll history position
 
@@ -33,31 +33,29 @@ Browsers remember the scroll position of the pages you have visited which is ver
 
 Clicking forward or back should remember the scroll position, but unfortunately, as SPAs rely on faux navigation this functionality is absent.
 
-Each time the user navigates, the scroll position will need to be stored and retrieved. This comes with the same pitfalls as the previous point: "Navigation and fast back".
+Upon navigation, the application will need to remember the scroll position so that it can be retrieved later. This is a topic heavily related to "Navigation and fast back" discussed previously.
 
 ## Cancelling navigation
 
-Browsers provide a cancel button, which when pressed, cancels the loading of the requested page. Also, if a user clicks another link, the browser will cancel the previous request. This is useful for performance of the site and the user's internet data allowance.
+Browsers provide a cancel button, which when pressed, cancels the loading of the requested page. Also, if a user clicks another link, the browser will cancel the previous request. This is useful for performance and also ensures the user's internet data allowance isn't eaten up unnecessarily.
 
-Pages in SPAs are likely to be retrieved via XHR, meaning several requests could be in progress at the same time; the first page request might be loaded last even though it should have been cancelled out by the second page request.
+Pages in SPAs are likely to be retrieved via XHR, meaning several requests could be in progress at the same time; the first page request might be loaded last, even though it should have been cancelled out by the second page request.
 
 Also, the *same* link could be clicked twice, meaning the page will be requested (and loaded) twice, which is not efficient and could also cause visual glitches.
 
-SPAs can't detect when the user presses cancel, so the UI would need to expose a custom stop button, which isn't desirable.
-
 The application needs to reproduce the aforementioned browser functionality. This means exposing a custom cancel button, which is obviously not desirable, and the application needs to handle duplicate requests as well as cancelling out all previous requests that are still in progress.
 
-## Avoid data loss on navigation
+## Navigation and data loss
 
 Browsers normally provide the `beforeunload` event which allows the application to warn against losing unsaved changes.
 
-Providing this functionality within SPAs will mean providing functionality that checks the page before any routing takes place.
+The application would need to provide this functionality, before any routing takes place.
 
 ## Search engine optimisation
 
-SPAs don't always require SEO but for those that do, there are solutions, but they aren't necessarily easy or effortless [[3](#ref3)].
+Some SPAs don't require SEO. For those that do, whilst there are solutions, they aren't easy or effortless [[3](#ref3)].
 
-## Loading CSS and JS when navigating
+## Navigation and loading CSS &amp; JS
 
 If an SPA grows to a significant size, loading the entire application on page load may be detrimental to the experience because it's akin to loading all pages of a website when only the home page was requested.
 
@@ -67,7 +65,7 @@ Unfortunately, this leads to the requirement to load CSS and JS for certain page
 
 SPAs are meant to provide a better experience. It is therefore ironic that SPAs require significantly more development effort with a result that is detrimental to the user experience.
 
-Remember that websites can still have rich user interfaces without cramming the entire site into one document. All of the issues described in this article arise due to the choice of architecting as as an SPA.
+Remember that websites can still have rich-user interfaces without cramming the entire site into one document. All of the issues described in this article arise due to the choice of architecting a website as as an SPA.
 
 Furthermore, it is interesting to note that sites, such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)], realised the SPA architecture was a mistake and have since reverted their architectures. **Avoiding the SPA architecture avoids the pitfalls**.
 
