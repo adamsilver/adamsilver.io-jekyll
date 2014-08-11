@@ -59,35 +59,25 @@ If an SPA grows to a significant size, loading the entire application on page lo
 
 Unfortunately, this leads to the requirement to load CSS and JS for certain pages. Script loading is notoriously difficult and contains unreliable hacks [[4](#ref4)]. This can be fatal to the reliability of the application. Reliability should obviously be valued highly.
 
-## Incapable browsers and accessibility
-
-All browsers can render HTML rather well. Unfortunately, in the case of JS, browsers don't naturally degrade well on their own without employing feature detection and testing [[5](#ref5)]. If just a single critical feature doesn't exist it will be the white screen of death for those users [[6](#ref6)].
-
 ## Conclusion
 
-Bearing in-mind SPAs are meant to provide a better and faster user experience, it is therefore ironic SPAs are likely to be slower and unreliable. So not only is there significantly extra development effort, the end result is detrimental to the user experience.
+SPAs are meant to provide a better and faster experience, it is therefore ironic that SPAs require significantly more development effort with a result that is detrimental to the user experience. Remember that websites can still have rich user interfaces without cramming the entire site into one document. All of the issues described in this article are SPA architecture induced. **Avoiding the SPA architecture avoids the pitfalls**.
 
-Frustratingly, the pitfalls described in this article are introduced by the SPA architecture. Avoiding the architecture avoids the pitfalls.
-
-And remember, websites can still have rich user interfaces without cramming the entire site into one document.
+Furthermore, it is interesting to note that sites, such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)], realised the SPA architecture was a mistake and have since reverted their architectures.
 
 <dl>
 	<dt><a name="ref0"></a>[0]</dt>
-	<dd><a href="http://en.wikipedia.org/wiki/Single-page_application">SPAs on Wikipedia</a></dd>
+	<dd><a href="http://en.wikipedia.org/wiki/Single-page_application">Wikipedia: SPAs</a></dd>
 	<dt><a name="ref1"></a>[1]</dt>
     <dd><a href="https://medium.com/joys-of-javascript/4353246f4480">Beyond pushState - building single page applications</a></dd>
 	<dt><a name="ref2"></a>[2]</dt>
-	<dd><a href="http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button">Stackoverflow on detecting back</a></dd>
+	<dd><a href="http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button">Stackoverflow: Detecting back button click</a></dd>
 	<dt><a name="ref3"></a>[3]</dt>
-	<dd><a href="http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo">SPA SEO on stackoverflow</a></dd>
+	<dd><a href="http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo">Stackoverflow: SPAs and SEO</a></dd>
 	<dt><a name="ref4"></a>[4]</dt>
 	<dd><a href="http://blog.getify.com/labjs-script-loading-the-way-it-should-be/">Script loading hacks</a></dd>
-	<dt><a name="ref5"></a>[5]</dt>
-	<dd><a href="http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting">Stare of the Art Cross Browser Scripting</a></dd>
+    <dt><a name="ref5"></a>[5]</dt>
+    <dd><a href="https://blog.twitter.com/2012/improving-performance-on-twittercom">Improving performance on twitter</a></dd>
     <dt><a name="ref6"></a>[6]</dt>
-    <dd><a href="http://sighjavascript.tumblr.com/">Sigh JavaScript</a></dd>
+    <dd><a href="http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs">Lifehacker and the hash bang debarkle</a></dd>
 </dl>
-
-<!--
- twitter, basecamp etc stopped doing it.
--->
