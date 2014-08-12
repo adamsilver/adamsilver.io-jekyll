@@ -61,7 +61,7 @@ If an SPA grows to a significant size, loading the entire application on page lo
 
 Unfortunately, this leads to the requirement to load CSS and JS for certain pages. Script loading is notoriously difficult and contains unreliable hacks [[4](#ref4)]. This can be fatal to the reliability of the application. Reliability should obviously be valued highly.
 
-## Conclusion
+## Summary
 
 SPAs are meant to provide a better experience. It is therefore ironic that SPAs require significantly more development effort with a result that is detrimental to the user experience.
 
