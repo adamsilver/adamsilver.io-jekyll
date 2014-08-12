@@ -4,11 +4,23 @@
         <title>{% if page.title %}{{ page.title }} - {% endif %} {{ site.name }}</title>
         {% include head.html %}
 	</head>
-	<body id="pgHome">
+	<body id="pg-{{page.id}}">
 		<div id="container">
             {% include header.html %}
 			<div id="content">
-				{{ content }}
+                {% if page.id != "home" %}
+                    <div id="secondaryNavigation">
+
+                        <div id="breadcrumb">
+                            <a href="/">Home</a> >
+                            <span>{{ page.title }}</span>
+                        </div>
+                        <!--<div id="back"><a class="back" href="/articles/">Back to articles</a></div>-->
+                    </div>
+                {% endif %}
+                <div id="page">
+				    {{ content }}
+                </div>
 			</div>
             {% include footer.html %}
 		</div>

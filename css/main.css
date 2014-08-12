@@ -232,6 +232,33 @@ a:hover {
 }
 
 /**********************************************************
+* Secondary navigation
+**********************************************************/
+
+#secondaryNavigation {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#breadcrumb {
+    float: left;
+    margin-top: 10px;
+    font-family: 'droid sans';
+    font-size: 0.9em;
+}
+
+#back {
+    float: right;
+}
+
+#back .back {
+    float: right;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+/**********************************************************
 * Footer
 **********************************************************/
 
@@ -240,13 +267,15 @@ a:hover {
 }
 
 #footerInner {
-	padding: 10px 20px 20px;
+	padding: 20px;
 	overflow: hidden;
 }
 
 #footer p {
-	margin-bottom: 0;
+	margin-bottom: 10px;
+    margin-top: 0;
 	font-size: 0.8em;
+    font-family: 'droid sans';
 }
 
 #footer .social a {
@@ -299,7 +328,7 @@ a:hover {
 	color: #2c3e50;
 }
 
-#pgHome #content {
+#pg-home #content {
 	padding-top: 15px;
 }
 
@@ -328,32 +357,6 @@ p code {
 	font-size: 1em;
 	margin-top: 0;
 	line-height: 1em;
-}
-
-#post {
-	padding-top: 15px;
-}
-
-#post .back {
-	float: right;
-	border: 1px solid #ccc;
-	padding: 10px;
-	font-size: 0.9em;
-}
-
-#post .back:hover,
-#post .back:active {
-}
-
-@media (max-width: 860px) {
-	#post .back {
-		float: left;
-		margin-bottom: 10px;
-	}
-
-	#post h1 {
-		clear: left;
-	}
 }
 
 /**********************************************************

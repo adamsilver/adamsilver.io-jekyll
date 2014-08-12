@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Front end development articles
+title: Articles
 id: articles
 permalink: /articles/
 ---
