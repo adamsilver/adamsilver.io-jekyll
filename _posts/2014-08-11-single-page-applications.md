@@ -15,7 +15,7 @@ It's common to relate the plethora of acronyms, design patterns and techniques w
 
 To be clear, it would be sensible to use architectural and design patterns to organise the Javascript code base. Additionally, when appropriate, DOM manipulation and XHR can enhance the user experience.
 
-However, what really defines an SPA is the fact that the **routing is handled by the client-side application using Javascript** instead of the server. Instead of letting the *browser* handle the browsing (read: navigation), the *application* will. Attempting to mimic the browser using Javascript is the primary reason why the issues arise.
+However, what really defines an SPA is the fact that the **routing is handled by the client-side application using Javascript** instead of the server. Instead of letting the *browser* handle the browsing (read: navigation), the *application* will. Attempting to mimic the browser using Javascript is the primary reason why issues arise.
 
 Now we have SPAs cleared up, we can discuss the issues:
 
