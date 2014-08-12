@@ -5,9 +5,21 @@ date:   2014-08-11 09:00:01
 categories: js
 ---
 
-Single page applications (SPA) are *supposed* to 'provide a more fluid user experience' [[0](#ref0)] but beware of the following fatal pitfalls:
+Single page applications (SPA) have become extremely popular in the web development world, but as is so often in the industry, popularity is not necessarily a good sign. SPAs are *supposed* to 'provide a more fluid user experience' [[0](#ref0)] but there are a number of technical issues to tackle when building them. Unfortunately, this can be detrimental to the user experience.
 
-## Navigation and fast back
+Before we get into the issues, let's take this opportunity to briefly discuss what differentiates SPAs from traditional architectures.
+
+## MVC, MVVM, DOM manipulation, templating, XHR etc
+
+It's common to relate the plethora of acronyms, design patterns and techniques with SPAs and whilst these techniques *might* be common in SPAs,	 they certainly aren't a requirement.
+
+To be clear, it would be sensible to use architectural and design patterns to organise the Javascript code base. Additionally, when appropriate, DOM manipulation and XHR can enhance the user experience.
+
+However, what really defines an SPA is the fact that the **routing is handled by the client-side application using Javascript** instead of the server. Instead of letting the *browser* handle the browsing (read: navigation), the *application* will. Attempting to mimic the browser using Javascript is the primary reason why the issues arise.
+
+Now we have SPAs cleared up, we can discuss the issues:
+
+## 1. Navigation and fast back
 
 Browsers store history, meaning, these pages can load very quickly when the user presses the back button. SPAs need to recreate this functionality. As Daniel Puplus says in his article [[1](#ref1)]:
 
@@ -25,7 +37,7 @@ Upon 'navigating', the application will need to a way of storing and retrieving 
 
 The application will also need to determine when to store and retrieve pages from it. Navigation typically utilises `pushState` or `hashchange` and the application will need to differentiate between the user changing the URL (via clicking a link or typing a URL in the location bar) or manually hitting back/forward, which is not trivial [[2](#ref2)].
 
-## Navigation and remembering scroll history position
+## 2. Navigation and remembering scroll history position
 
 Browsers remember the scroll position of the pages you have visited which is very convenient. As Daniel Puplus says in his article:
 
@@ -35,7 +47,7 @@ Clicking forward or back should remember the scroll position, but unfortunately,
 
 Upon navigation, the application will need to remember the scroll position so that it can be retrieved later. This is a topic heavily related to "Navigation and fast back" discussed previously.
 
-## Cancelling navigation
+## 3. Cancelling navigation
 
 Browsers provide a cancel button, which when pressed, cancels the loading of the requested page. Also, if a user clicks another link, the browser will cancel the previous request. This is useful for performance and also ensures the user's internet data allowance isn't eaten up unnecessarily.
 
@@ -45,17 +57,17 @@ Also, the *same* link could be clicked twice, meaning the page will be requested
 
 The application needs to reproduce the aforementioned browser functionality. This means exposing a custom cancel button, which is obviously not desirable, and the application needs to handle duplicate requests as well as cancelling out all previous requests that are still in progress.
 
-## Navigation and data loss
+## 4. Navigation and data loss
 
 Browsers normally provide the `beforeunload` event which allows the application to warn against losing unsaved changes.
 
 The application would need to provide this functionality, before any routing takes place.
 
-## Search engine optimisation
+## 5. Search engine optimisation
 
 Some SPAs don't require SEO. For those that do, whilst there are solutions, they aren't easy or effortless [[3](#ref3)].
 
-## Navigation and loading CSS &amp; JS
+## 6. Navigation and loading CSS &amp; JS
 
 If an SPA grows to a significant size, loading the entire application on page load may be detrimental to the experience because it's akin to loading all pages of a website when only the home page was requested.
 
@@ -65,9 +77,9 @@ Unfortunately, this leads to the requirement to load CSS and JS for certain page
 
 SPAs are meant to provide a better experience. It is therefore ironic that SPAs require significantly more development effort with a result that is detrimental to the user experience.
 
-Remember that websites can still have rich-user interfaces without cramming the entire site into one document. All of the issues described in this article arise due to the choice of architecting a website as as an SPA.
+Websites can still have rich-user interfaces without cramming the entire site into one document. All of the issues described in this article arise due to the choice of architecting a website as as an SPA.
 
-Furthermore, it is interesting to note that sites, such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)], realised the SPA architecture was a mistake and have since reverted their architectures. **Avoiding the SPA architecture avoids the pitfalls**.
+Furthermore, it is interesting to note that sites, such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)], realised the SPA architecture was a mistake and have since reverted their architectures. Remember, **avoiding the SPA architecture avoids the pitfalls**.
 
 <dl>
 	<dt><a name="ref0"></a>[0]</dt>
