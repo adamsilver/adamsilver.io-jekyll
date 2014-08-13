@@ -5,19 +5,17 @@ date:   2014-08-11 09:00:01
 categories: js
 ---
 
-Single page applications (SPA) have become extremely popular in the web development world, but as is so often in the industry, popularity is not necessarily a good sign. SPAs are *supposed* to 'provide a more fluid user experience' [[0](#ref0)] but there are a number of technical issues to tackle when building them. Unfortunately, this can be detrimental to the user experience.
+Single page applications (SPA) have become extremely popular in the web development world, but often in this industry, popularity is not necessarily a good sign. SPAs are *supposed* to 'provide a more fluid user experience' [[0](#ref0)] but there are a number of technical issues to tackle when building them. Unfortunately, this can be detrimental to the user experience.
 
 Before we get into the issues, let's take this opportunity to briefly discuss what differentiates SPAs from traditional architectures.
 
-## MVC, MVVM, DOM manipulation, templating, XHR etc
+## MVC, MVVM, DOM manipulation, XHR etc
 
-It's common to relate the plethora of acronyms, design patterns and techniques with SPAs and whilst these techniques *might* be common in SPAs,	 they certainly aren't a requirement.
+It's common to associate these elements with SPAs, and whilst these techniques *might* be commonly found in SPAs, this article doesn't address these aspects. This is because they aren't necessarily detrimental to a website; a website could employ all of these elements without utilising a SPA architecture; it might even be sensible to do so!
 
-To be clear, it would be sensible to use architectural and design patterns to organise the Javascript code base. Additionally, when appropriate, DOM manipulation and XHR can enhance the user experience.
+What really defines an SPA is the fact that the **routing is handled by the client-side application using Javascript** instead of the server. Instead of letting the *browser* handle the browsing, the *application* will. Attempting to mimic the browser using Javascript is the primary reason why issues arise in the first place.
 
-However, what really defines an SPA is the fact that the **routing is handled by the client-side application using Javascript** instead of the server. Instead of letting the *browser* handle the browsing (read: navigation), the *application* will. Attempting to mimic the browser using Javascript is the primary reason why issues arise.
-
-Now we have SPAs cleared up, we can discuss the issues:
+So, those issues:
 
 ## 1. Navigation and fast back
 
@@ -75,11 +73,9 @@ Unfortunately, this leads to the requirement to load CSS and JS for certain page
 
 ## Summary
 
-SPAs are meant to provide a better experience. It is therefore ironic that SPAs require significantly more development effort with a result that is detrimental to the user experience.
+SPAs are meant to provide a better experience. It is therefore ironic that SPAs require significantly more development effort, with a result that is detrimental to the user experience. Javascript is never going to do it better than the browser! Websites can still have rich-user interfaces without cramming the entire site into one document.
 
-Websites can still have rich-user interfaces without cramming the entire site into one document. All of the issues described in this article arise due to the choice of architecting a website as as an SPA.
-
-Furthermore, it is interesting to note that sites, such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)], realised the SPA architecture was a mistake and have since reverted their architectures. Remember, **avoiding the SPA architecture avoids the pitfalls**.
+Furthermore, it is interesting to note that sites, such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)], realised the SPA architecture was a mistake and have since reverted their architectures. The issues described in this article are self-induced. Remember, **avoiding the SPA architecture avoids the issues**.
 
 <dl>
 	<dt><a name="ref0"></a>[0]</dt>
