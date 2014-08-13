@@ -398,7 +398,7 @@ p code {
 * Large screen
 **********************************************************/
 
-@media (max-width: 320px) {
+@media (max-width: 340px) {
     .avatar {
         display: none;
     }
