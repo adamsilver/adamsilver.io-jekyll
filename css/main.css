@@ -160,7 +160,6 @@ a {
 
 a:hover {
 	color: #1abc9c;
-
 }
 
 #container {
@@ -181,8 +180,21 @@ a:hover {
 }
 
 #headerInner {
-    padding: 20px;
+    padding: 14px 20px;
     overflow: hidden;
+}
+
+#header #logo {
+    float: left;
+}
+
+#header #logo .avatar {
+    float: left;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
 }
 
 #header h1 {
@@ -191,6 +203,7 @@ a:hover {
     font-weight: normal;
     float: left;
     text-transform: uppercase;
+    margin-top: 6px;
 }
 
 #header h1 a {
@@ -218,6 +231,7 @@ a:hover {
 
 #nav {
     float: right;
+    margin-top: 6px;
 }
 
 #nav ul {
@@ -237,6 +251,10 @@ a:hover {
     color: #2c3e50 ;
     text-decoration: none;
     display: block;
+}
+
+#nav ul li a:hover {
+    color: #1abc9c;
 }
 
 #nav ul li a.active {
