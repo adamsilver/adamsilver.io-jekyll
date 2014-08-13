@@ -247,6 +247,11 @@ a:hover {
     font-size: 0.9em;
 }
 
+#breadcrumb span {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
 #back {
     float: right;
 }
