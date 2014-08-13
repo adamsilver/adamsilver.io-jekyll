@@ -124,6 +124,18 @@ p {
 	color: #2c3e50;
 }
 
+p.share {
+    text-align: center;
+    margin-top: 40px;
+}
+
+p.share a {
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    background-color: #39d;
+}
+
 dt {
     color: #2c3e50;
 }
