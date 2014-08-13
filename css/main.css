@@ -398,6 +398,12 @@ p code {
 * Large screen
 **********************************************************/
 
+@media (max-width: 320px) {
+    .avatar {
+        display: none;
+    }
+}
+
 @media (min-width: 960px) {
 
 	#content,
