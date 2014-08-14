@@ -197,6 +197,12 @@ a:hover {
     margin-right: 10px;
 }
 
+@media (max-width: 400px) {
+    .avatar {
+        display: none;
+    }
+}
+
 #header h1 {
     font-family: 'droid sans';
     font-size: 0.9em;
@@ -259,6 +265,12 @@ a:hover {
 
 #nav ul li a.active {
     border-bottom: 3px solid #1abc9c;
+}
+
+@media(max-width: 340px) {
+    #nav ul li {
+        margin-left: 10px;
+    }
 }
 
 /**********************************************************
@@ -386,16 +398,6 @@ p code {
 	font-size: 1em;
 	margin-top: 0;
 	line-height: 1em;
-}
-
-/**********************************************************
-* Large screen
-**********************************************************/
-
-@media (max-width: 360px) {
-    .avatar {
-        display: none;
-    }
 }
 
 @media (min-width: 960px) {
