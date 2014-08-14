@@ -78,18 +78,18 @@ SPAs are meant to provide a better experience. It is therefore ironic that SPAs 
 Furthermore, it is interesting to note that sites, such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)], realised the SPA architecture was a mistake and have since reverted their architectures. The issues described in this article are self-induced. Remember, **avoiding the SPA architecture avoids the issues**.
 
 <dl>
-	<dt><a name="ref0"></a>[0]</dt>
+	<dt class="citation" id="ref0">[0]</dt>
 	<dd><a href="http://en.wikipedia.org/wiki/Single-page_application">Wikipedia: SPAs</a></dd>
-	<dt><a name="ref1"></a>[1]</dt>
+	<dt class="citation" class="citation" id="ref1"><a name="ref1"></a>[1]</dt>
     <dd><a href="https://medium.com/joys-of-javascript/4353246f4480">Beyond pushState - building single page applications</a></dd>
-	<dt><a name="ref2"></a>[2]</dt>
+	<dt class="citation" class="citation" id="ref2"><a name="ref2"></a>[2]</dt>
 	<dd><a href="http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button">Stackoverflow: Detecting back button click</a></dd>
-	<dt><a name="ref3"></a>[3]</dt>
+	<dt class="citation" class="citation" id="ref3"><a name="ref3"></a>[3]</dt>
 	<dd><a href="http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo">Stackoverflow: SPAs and SEO</a></dd>
-	<dt><a name="ref4"></a>[4]</dt>
+	<dt class="citation" class="citation" id="ref4"><a name="ref4"></a>[4]</dt>
 	<dd><a href="http://blog.getify.com/labjs-script-loading-the-way-it-should-be/">Script loading hacks</a></dd>
-    <dt><a name="ref5"></a>[5]</dt>
+    <dt class="citation" class="citation" id="ref5"><a name="ref5"></a>[5]</dt>
     <dd><a href="https://blog.twitter.com/2012/improving-performance-on-twittercom">Improving performance on twitter</a></dd>
-    <dt><a name="ref6"></a>[6]</dt>
+    <dt class="citation" class="citation" id="ref6"><a name="ref6"></a>[6]</dt>
     <dd><a href="http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs">Lifehacker and the hash bang debarkle</a></dd>
 </dl>

@@ -5,3 +5,5 @@ permalink: /articles/:title/
 exclude: [adamsilver.sublime-project, adamsilver.sublime-workspace]
 url: http://adamsilver.github.io
 include: ['_pages']
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]

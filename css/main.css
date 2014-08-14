@@ -282,15 +282,9 @@ a:hover {
     color: #2c3e50;
 }
 
-#back {
-    float: right;
-}
-
-#back .back {
-    float: right;
-    border: 1px solid #ccc;
-    padding: 10px;
-    font-size: 0.9em;
+.citation:target {
+    background: #FFFF00;
+    transition: background 1s linear;
 }
 
 /**********************************************************
