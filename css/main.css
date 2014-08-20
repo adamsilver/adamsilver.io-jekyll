@@ -373,6 +373,20 @@ a img {
 	color: #2c3e50;
 }
 
+.readArticles {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #1abc9c;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.readArticles:hover {
+    background-color: #1AAF8F;
+    color: #fff;
+}
+
 #pg-home #content {
 	padding-top: 15px;
 }
