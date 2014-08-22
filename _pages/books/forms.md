@@ -60,7 +60,10 @@ Blah lorem ipsum blah
     1. checkbox
     1. One add all to basket
 6. Multi page forms, wizards, dependent form controls
-7. Scripting and validation
-8. Enhancement?
+7. Enhancement, scripting and validation
+    1. Always on submit for primary action
+    1. More than one action
+        1. Split out into separate wizard like form
+        1. Decide primary action
 9. Misc
     1. Placeholder
