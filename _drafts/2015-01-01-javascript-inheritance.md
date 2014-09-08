@@ -9,15 +9,15 @@ Douglas Crockford explains why inheritance is useful as a form of code reuse [[0
     
 > It is very common to have a quantity of objects all implementing exactly the same methods. Classes make it possible to create them all from a single set of definitions. It is also common to have objects that are similar to some other objects, but differing only in the addition or modification of a small number of methods. Classical inheritance is useful for this but prototypal inheritance is even more useful.
 
-## Inherit function
+In this article a simple but powerful implementation is discussed. ECMAScript doesn't provide an inherit function natively so we will need to create one.
 
-It is a good idea to abstract the code required to inherit the features of a parent object:
+## Creating an inherit function
 
-Firstly, a `lib` namespace is defined to contain library functions. Don't worry it only needs two small functions to enable Javascript inheritance in a simple, clean way.
+Firstly, a `lib` namespace is defined to contain library functions. Don't worry it only needs two small functions to enable Javascript inheritance in a simple way.
 
     var lib = {};
     
-Then we create a `cloneObject` function:
+Then we create a `cloneObject` function; this function is important, without it, we can't make copies of the same object.
     
     // For browsers that have Object.create
     if(Object.create) {
@@ -37,7 +37,7 @@ Then we create a `cloneObject` function:
         })();
     }
     
-Then we define a `inherit` function.
+Then we define a `inherit` function. Under the hood, this uses the `cloneObject` function. See inline comments for further explanation.
     
     lib.inherit = function(Sub, Super) {
         // Clone the parent's prototype object and assign to child's prototype object
@@ -50,11 +50,11 @@ Then we define a `inherit` function.
         Sub.prototype.constructor = Sub;
     };
     
-That's it. Now we can show an example of one object inheriting the features of another.
+That's it! Now we can show an example of one object inheriting the features of another.
 
-**Note: code taken from Jessie library [[1](#ref1)] **
+**Note: code taken from Jessie library [[1](#ref1)]**
 
-## Example
+## Javascript inheritance example
     
 Let's start with an Animal constructor:
 
