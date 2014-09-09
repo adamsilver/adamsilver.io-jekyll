@@ -11,7 +11,7 @@ In this article a simple but powerful technique is documented. This article cons
 
 ## Creating an inherit function
 
-This will consist of defining a namespace for the library (which we will call `lib`) containing two functions: `cloneObject` and `inherit` both taken from Jessie [[1](#ref1)]. The namespace bit is optional but good practice [[2](#ref2)].
+This consists of defining a namespace for the library (which we will call `lib`) containing two functions: `cloneObject` and `inherit` both taken from Jessie [[1](#ref1)]. The namespace bit is optional but good practice [[2](#ref2)].
 
     var lib = {};
 
@@ -58,39 +58,40 @@ That's the first part complete. Now we can demonstrate its usage.
 
 ## Example usage
     
-Let's start with an Animal constructor:
+Let's start with a Person constructor:
 
-    function Animal(name) {
+    function Person(name) {
         this.name = name;
     }
     
-    Animal.prototype.getName = function() {
+    Person.prototype.getName = function() {
         return this.name;
     };
     
-Creating an instance of an Animal is as follows:
+Creating an instance of a Person is as follows:
 
-    var animal = new Animal('Bob');
-    var animalName = animal.getName(); // returns "Bob"
+    var bob = new Person('Bob');
+    bob.getName(); // returns "Bob"
 
-A dog is an animal so the Dog inherits from Animal.
+Superheros just like people have names so we can define a Superhero constructor that inherits this feature from a person:
 
-    function Dog() {
+    function Superhero(name, alias) {
         // call super constructor so that Dog's also have names
-        Dog.superConstructor.apply(this, arguments);
+        Person.superConstructor.call(this, name);
+        this.alias = alias;
     }
     
-    lib.inherit(Dog, Animal);
+    lib.inherit(Superhero, Person);
     
-    // modify the super constructor getName method so that it states "Dog name: the name"
-    Dog.prototype.getName = function() {
-        return "Dog name: " + Dog.superConstructor.prototype.getName();
+    // modify the super constructor getName method so that it's kept a secret
+    Superhero.prototype.getName = function() {
+        return "Can't tell you that";
     }
 
-Creating an instance of a Dog is as follows:
+Creating an instance of a Superhero is as follows:
 
-    var dog = new Dog("Benny");
-    dog.getName(); // returns "Dog name: Benny"
+    var batman = new Superhero("Bruce Wayne", "Batman");
+    batman.getName(); // returns "Can't tell you that"
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
