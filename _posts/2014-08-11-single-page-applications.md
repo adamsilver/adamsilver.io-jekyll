@@ -13,9 +13,9 @@ Before we get into the issues, let's take this opportunity to briefly discuss wh
 
 It's common to associate these elements with SPAs, and whilst these techniques *might* be commonly found in SPAs, this article doesn't address these aspects. This is because they aren't necessarily detrimental to a website; a website could employ all of these elements without utilising a SPA architecture; it might even be sensible to do so!
 
-What really defines an SPA is the fact that the **routing is handled by the client-side application using Javascript** instead of the server. Instead of letting the *browser* handle the browsing, the *application* will. Attempting to mimic the browser using Javascript is the primary reason why issues arise in the first place.
+What *really* defines an SPA is the fact that the **routing is handled by the client-side application using Javascript** instead of the server. Instead of letting the *browser* handle the browsing, the *application* will. Attempting to mimic the browser using Javascript is the primary reason why issues arise in the first place.
 
-So, those issues:
+So, about those issues:
 
 ## 1. Navigation and fast back
 
@@ -29,7 +29,7 @@ Browsers store history, meaning, these pages can load very quickly when the user
 
 > "In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes."
 
-Upon 'navigating', the application will need to a way of storing and retrieving 'pages' from a cache. Unless of course we want to slow down the speed of loading 'pages', which is *meant* to be a significant benefit of SPAs. Storage could be memory, local (or session) storage, client-side database or cookies.
+Upon 'navigating', the application will need a method of storing and retrieving 'pages' from a cache. Unless of course we want to slow down the speed of loading 'pages', which is *meant* to be a significant benefit of SPAs. Storage could be memory, local (or session) storage, client-side database and cookies.
 
 **Note: The words 'navigating' and 'pages' are in quotes because SPAs, by definition don't have the concept of navigation and pages in the traditional sense. Quotes will be discarded for brevity going forward.**
 
