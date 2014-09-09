@@ -5,17 +5,19 @@ date:   2014-01-02 09:00:59
 categories: forms dom js
 ---
 
-Douglas Crockford explains why inheritance is useful as a form of code reuse [[0](#ref0)]:
-    
-> It is very common to have a quantity of objects all implementing exactly the same methods. Classes make it possible to create them all from a single set of definitions. It is also common to have objects that are similar to some other objects, but differing only in the addition or modification of a small number of methods. Classical inheritance is useful for this but prototypal inheritance is even more useful.
+Javascript inheritance is useful with regard to code reuse. Douglas Crockford says it best [[0](#ref0)]. Unfortunately, ECMAScript doesn't provide an inherit function natively so we will need to create one. 
 
-In this article a simple but powerful implementation is discussed. ECMAScript doesn't provide an inherit function natively so we will need to create one.
+In this article a simple but powerful technique is documented. This article consists of two parts: Creating the inherit function and then utilising it to demonstrate one object inheriting the features of another.
 
 ## Creating an inherit function
 
-Firstly, a `lib` namespace is defined to contain library functions. Don't worry it only needs two small functions to enable Javascript inheritance in a simple way.
+This will consist of defining a namespace for the library (which we will call `lib`) containing two functions: `cloneObject` and `inherit` both taken from Jessie [[1](#ref1)]. The namespace bit is optional but good practice [[2](#ref2)].
 
     var lib = {};
+
+This will contain the two library functions.
+
+### Defining *cloneObject*
     
 Then we create a `cloneObject` function; this function is important, without it, we can't make copies of the same object.
     
@@ -37,7 +39,9 @@ Then we create a `cloneObject` function; this function is important, without it,
         })();
     }
     
-Then we define a `inherit` function. Under the hood, this uses the `cloneObject` function. See inline comments for further explanation.
+### Defining *inherit*
+
+Then we define an `inherit` function. Under the hood, this uses the `cloneObject` function. See inline comments for further explanation.
     
     lib.inherit = function(Sub, Super) {
         // Clone the parent's prototype object and assign to child's prototype object
@@ -50,11 +54,9 @@ Then we define a `inherit` function. Under the hood, this uses the `cloneObject`
         Sub.prototype.constructor = Sub;
     };
     
-That's it! Now we can show an example of one object inheriting the features of another.
+That's the first part complete. Now we can demonstrate its usage.
 
-**Note: code taken from Jessie library [[1](#ref1)]**
-
-## Javascript inheritance example
+## Example usage
     
 Let's start with an Animal constructor:
 
@@ -93,6 +95,9 @@ Creating an instance of a Dog is as follows:
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
 	<dd><a href="http://javascript.crockford.com/inheritance.html">Douglas Crockford on inheritance</a></dd>
-	<dt class="citation" id="ref1">[1]</dt>
-    	<dd><a href="http://www.github.com/rassie/jessie/">Jessie Javascript library</a></dd>
+    <dt class="citation" id="ref1">[1]</dt>
+        <dd><a href="http://www.github.com/rassie/jessie/">Jessie Javascript library</a></dd>
+    <dt class="citation" id="ref2">[2]</dt>
+        <dd><a href="/articles/javascript-namespacing/">Javascript namespacing</a></dd>
+	
 </dl>
