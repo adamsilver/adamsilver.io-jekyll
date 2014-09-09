@@ -235,6 +235,15 @@ a img {
 	color: #2c3e50;
 }
 
+.callout {
+    background-color: #BDF1E7;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+}
+
+
+
 /**********************************************************
 * Navigation
 **********************************************************/

@@ -5,6 +5,8 @@ date:   2014-08-11 09:00:01
 categories: js
 ---
 
+<p class="callout">For the fun, sarcastic and non-technical version of this article please read <a href="https://tommorris.org/posts/2547">Introducing awfulness.js by Tom Morris</a></p></div>
+
 Single page applications (SPA) have become extremely popular in the web development world, but often in this industry, popularity is not necessarily a good sign. SPAs are *supposed* to 'provide a more fluid user experience' [[0](#ref0)] but there are a number of technical issues to tackle when building them. Unfortunately, this can be detrimental to the user experience.
 
 Before we get into the issues, let's take this opportunity to briefly discuss what differentiates SPAs from traditional architectures.
