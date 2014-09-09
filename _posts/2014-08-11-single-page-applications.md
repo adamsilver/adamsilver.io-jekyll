@@ -5,8 +5,6 @@ date:   2014-08-11 09:00:01
 categories: js
 ---
 
-<p class="callout">For the fun, sarcastic and non-technical version of this article please read <a href="https://tommorris.org/posts/2547">Introducing awfulness.js by Tom Morris</a></p></div>
-
 Single page applications (SPA) have become extremely popular in the web development world, but often in this industry, popularity is not necessarily a good sign. SPAs are *supposed* to 'provide a more fluid user experience' [[0](#ref0)] but there are a number of technical issues to tackle when building them. Unfortunately, this can be detrimental to the user experience.
 
 Before we get into the issues, let's take this opportunity to briefly discuss what differentiates SPAs from traditional architectures.
@@ -78,6 +76,8 @@ Unfortunately, this leads to the requirement to load CSS and JS for certain page
 SPAs are meant to provide a better experience. It is therefore ironic that SPAs require significantly more development effort, with a result that is detrimental to the user experience. Javascript is never going to do it better than the browser! Websites can still have rich-user interfaces without cramming the entire site into one document.
 
 Furthermore, it is interesting to note that sites, such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)], realised the SPA architecture was a mistake and have since reverted their architectures. The issues described in this article are self-induced. Remember, **avoiding the SPA architecture avoids the issues**.
+
+<p class="callout">For the fun, sarcastic and non-technical version of this article please read <a href="https://tommorris.org/posts/2547">Introducing awfulness.js by Tom Morris</a></p>
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
