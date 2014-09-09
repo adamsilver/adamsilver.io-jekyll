@@ -1,25 +1,19 @@
 ---
 layout: post
 title:  "Javascript inheritance"
-date:   2014-01-02 09:00:59
+date:   2014-09-09 09:00:59
 categories: forms dom js
 ---
 
-Javascript inheritance is useful with regard to code reuse. Douglas Crockford says it best [[0](#ref0)]. Unfortunately, ECMAScript doesn't provide an inherit function natively so we will need to create one. 
+Javascript inheritance is useful with regard to code reuse [[0](#ref0)]. Unfortunately, ECMAScript doesn't provide an inherit function natively, so we will need to create one. This article documents a simple and powerful technique and consists of two parts: 1) creating the inherit function and 2) utilising it to demonstrate one object inheriting the features of another.
 
-In this article a simple but powerful technique is documented. This article consists of two parts: Creating the inherit function and then utilising it to demonstrate one object inheriting the features of another.
-
-## Creating an inherit function
+## Creating the inherit function
 
 This consists of defining a namespace for the library (which we will call `lib`) containing two functions: `cloneObject` and `inherit` both taken from Jessie [[1](#ref1)]. The namespace bit is optional but good practice [[2](#ref2)].
 
     var lib = {};
 
-This will contain the two library functions.
-
 ### Defining *cloneObject*
-    
-Then we create a `cloneObject` function; this function is important, without it, we can't make copies of the same object.
     
     // For browsers that have Object.create
     if(Object.create) {
@@ -41,7 +35,7 @@ Then we create a `cloneObject` function; this function is important, without it,
     
 ### Defining *inherit*
 
-Then we define an `inherit` function. Under the hood, this uses the `cloneObject` function. See inline comments for further explanation.
+You will notice this function utilises the `cloneObject` function.
     
     lib.inherit = function(Sub, Super) {
         // Clone the parent's prototype object and assign to child's prototype object
@@ -57,6 +51,8 @@ Then we define an `inherit` function. Under the hood, this uses the `cloneObject
 That's the first part complete. Now we can demonstrate its usage.
 
 ## Example usage
+
+The example will demonstrate Superheros inheriting the features of a normal Person. Superheros are people too, so we will demonstrate code reuse of a Person using the `inherit` function above.
     
 Let's start with a Person constructor:
 
@@ -73,11 +69,11 @@ Creating an instance of a Person is as follows:
     var bob = new Person('Bob');
     bob.getName(); // returns "Bob"
 
-Superheros just like people have names so we can define a Superhero constructor that inherits this feature from a person:
+Superheros just like people have names so we can define a Superhero constructor that inherits this feature from a person but additionally defining an alias; asking a *Superhero* for their name will actually return their *alias* instead.
 
     function Superhero(name, alias) {
-        // call super constructor so that Dog's also have names
-        Person.superConstructor.call(this, name);
+        // call super constructor so that Superheros also have names like a regular person
+        Superhero.superConstructor.call(this, name);
         this.alias = alias;
     }
     
@@ -85,13 +81,20 @@ Superheros just like people have names so we can define a Superhero constructor 
     
     // modify the super constructor getName method so that it's kept a secret
     Superhero.prototype.getName = function() {
-        return "Can't tell you that";
+        return "Can't tell you that but my superhero alias is: " + this.alias;
     }
 
 Creating an instance of a Superhero is as follows:
 
     var batman = new Superhero("Bruce Wayne", "Batman");
-    batman.getName(); // returns "Can't tell you that"
+    batman.getName(); // returns "Can't tell you that but my superhero alias is Batman"
+
+For completeness, calling a super constructors prototype method is straightforward:
+
+    Superhero.prototype.getName = function() {
+        // this uses the parent/super method
+        Superhero.superConstructor.prototype.getName();
+    };
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
