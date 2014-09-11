@@ -5,27 +5,40 @@ date:   2014-01-15 09:00:01
 categories: css html
 ---
 
-HTML contains the content of a web page. It wraps pieces of content within certain HTML elements such as `<h1>`s, or `<div>`s etc. *Semantic* HTML is all about using the correct element for the piece of content. It describes the intention of what this piece of information represents regardless of how it looks or how it behaves. This means not using inline styles and using the correct element for the job.
+<!--
 
-As a very simple example, a top level heading would be represented by doing this:
+- asume knowldge of HTML
+- describe unsemantic html
+- describe what semantic HTML is
+- explain the benefits
+  - browsers without CSS
+  - accessibility
+  - responsive web design
+  - Search engine optimisation
+  - Maintainability
+- conclusion 1) HTML is the foundation, ruining the foundation has fatal effects
 
-	<h1>Your heading</h1>
+-->
 
-Instead of doing this:
+Wikipedia has a decent definition of what *semantic* HTML is:
 
-	<div class="h1">Your heading</div>
+> Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, of the information in webpages rather than merely to define its presentation or look. Semantic HTML is processed by regular web browsers as well as by many other user agents.
 
-Where CSS contains a declration of `.h1` with the top level heading styles.
+But allow me to explain a bit more. *Semantic* HTML is about using the correct element for the piece of content. It describes the intention of what this piece of information represents regardless of how it looks or how it behaves. Furthermore, it means using semantic ids and class names. A few examples follow:
 
-Or this:
+## A paragraph
 
-	<div style="<!-- styles that make it look like a top level heading -->">Your heading</div>
+Imagine an article, much like this one, each paragraph would be represented as follows:
 
-Or even this:
+	<p>I am a paragraph</p>
 
-	<font size="7">Your heading</font>
+## An introductory paragraph
 
-## Why does it matter
+This is where using the correct id or class name comes in. There are benefits in this too, discussed later. See below:
+
+	<p class="introduction">This paragraph is an introductory one</p>
+
+## The benefits of Semantic HTML
 
 If all four methods above have the same end result then why does it matter? Actually, they don't have the same result. They may have the same result *visually* but thats where the similarity ends. HTML is accessed and interpreted by different user agents, assitive devices, search engine crawlers and of course, we developers. Semantic HTML provides a number benefits for each of the aformentioned interpreters.
 
@@ -45,4 +58,6 @@ Crawlers such as the Googlebot, are another type of user agent. They rank the pa
 
 ### Maintainability
 
-http://webdesignfromscratch.com/html-css/semantic-html/
+
+
+
