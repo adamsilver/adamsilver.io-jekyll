@@ -5,7 +5,7 @@ date:   2014-09-09 09:00:59
 categories: forms dom js
 ---
 
-Javascript inheritance is useful with regard to code reuse [[0](#ref0)]. Unfortunately, ECMAScript doesn't provide an inherit function natively, so we will need to create one. This article documents a simple and powerful technique and consists of two parts: 1) creating the inherit function and 2) utilising it to demonstrate one object inheriting the features of another.
+Javascript inheritance is useful with regard to code reuse [[0](#ref0)]. Unfortunately, ECMAScript doesn't provide an Inherit function natively, so we will need to create one. This article documents a simple and powerful technique and consists of two parts: 1) creating the inherit function and 2) utilising it to demonstrate one object inheriting the features of another.
 
 ## Creating the inherit function
 
@@ -52,49 +52,55 @@ That's the first part complete. Now we can demonstrate its usage.
 
 ## Example usage
 
-The example will demonstrate Superheros inheriting the features of a normal Person. Superheros are people too, so we will demonstrate code reuse of a Person using the `inherit` function above.
+Our example will demonstrate a Superhero inheriting the features of a normal Person.
     
-Let's start with a Person constructor:
+Let's start with the Person constructor:
 
     function Person(name) {
         this.name = name;
     }
     
-    Person.prototype.getName = function() {
-        return this.name;
+    Person.prototype.sayName = function() {
+        return "My name is:" + this.name;
     };
     
 Creating an instance of a Person is as follows:
 
     var bob = new Person('Bob');
-    bob.getName(); // returns "Bob"
+    bob.sayName(); // returns "My name is Bob"
 
-Superheros just like people have names so we can define a Superhero constructor that inherits this feature from a person but additionally defining an alias; asking a *Superhero* for their name will actually return their *alias* instead.
+Defining a Superhero is very similar to defining a Person. The difference being that a *Superhero* will not tell you his true identity. So we will define an alias property on the Superhero and when a *Superhero* says their name, they will instead say their alias:
 
     function Superhero(name, alias) {
-        // call super constructor so that Superheros also have names like a regular person
+        // call Parent constructor so that Superheros also have names like a regular Person
         Superhero.superConstructor.call(this, name);
         this.alias = alias;
     }
     
+    // Superhero inherits the features of a Person
     lib.inherit(Superhero, Person);
     
-    // modify the super constructor getName method so that it's kept a secret
-    Superhero.prototype.getName = function() {
-        return "Can't tell you that but my superhero alias is: " + this.alias;
+    // modify the Parent constructor sayName method so that Superheros keep their true identity a secret
+    Superhero.prototype.sayName = function() {
+        return "Can't tell you that but my alias is: " + this.alias;
     }
 
 Creating an instance of a Superhero is as follows:
 
     var batman = new Superhero("Bruce Wayne", "Batman");
-    batman.getName(); // returns "Can't tell you that but my superhero alias is Batman"
+    batman.getName(); // returns "Can't tell you that but my alias is Batman"
 
-For completeness, calling a super constructors prototype method is straightforward:
+In order to show another important aspect of the Inherit function let's create another scenario for our Superhero. The scenario entails a situation where the Superhero is forced to back down in order to save humanity, and in doing so must reveal his name to his enemy. We can define a method on the Superhero called backDownAndRevealTrueIdentity. This will reveal the Superhero's true identity.
 
-    Superhero.prototype.getName = function() {
-        // this uses the parent/super method
-        Superhero.superConstructor.prototype.getName();
+    Superhero.prototype.backDownAndRevealTrueIdentity = function() {
+        return Superhero.superConstructor.prototype.sayName();
     };
+
+Using the previousl defined `batman` instance above we run the scenario:
+
+    batman.backDownAndRevealTrueIdentity(); // returns "My name is Bruce Wayne"
+
+The takeaway from this scenario is that you can call, and *reuse* the Parent constructors methods.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
