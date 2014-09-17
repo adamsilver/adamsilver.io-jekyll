@@ -9,7 +9,7 @@ Unfortunatley, some websites choose to employ a select menu that will submit a f
 
 As shown below the difference visually is simply the (re)introduction of a submit button.
 
-Good:
+*Good*:
 
 <div class="ui">
 	<form>
@@ -25,7 +25,7 @@ Good:
 	</form>
 </div>
 
-Bad:
+*Bad*:
 
 <div class="ui">
 	<form>
@@ -54,7 +54,7 @@ That settles that but let's delve a little deeper...
 
 Not all users use a mouse. Keyboards and screen readers are also used. A keyboard user can tab to the select menu and use their keyboard to select a different option. Take [this example](http://html.cita.illinois.edu/script/onchange/onchange-example.php) - the *HTML4* option can't accessed because it is already selected as the default option.
 
-Also, in various browsers [[0]](#ref0), if the user presses *Down* just once, the form is submitted which means its very difficult to access the either options.
+Also, in [various browsers](http://pauljadam.com/blog/javascript/onchange-event-on-a-select-inputjump-menu-accessibility-problems/), if the user presses *Down* just once, the form is submitted which means its very difficult to access the either options.
 
 Vanessa Mosher and Steven Weintraub share Sarah Miller's usability test at the Open University with regard to screen readers:
 
@@ -73,8 +73,3 @@ Vanessa Mosher and Steven Weintraub share Larry Marinem's insight into usability
 ## Summary
 
 Select menus are *not* meant to be used for navigation. In doing so, the user experience is degraded for certain types of users and users using certain browsers. Avoiding this behaviour ensures it works well cross-browser and without Javascript, with the welcome side effect of providing an experience which is intuitive and consistent.
-
-<dl>
-	<dt class="citation" id="ref0">[0]</dt>
-	<dd><a href="http://pauljadam.com/blog/javascript/onchange-event-on-a-select-inputjump-menu-accessibility-problems/">Paul Adam on the select change issue</a></dd>
-</dl>
