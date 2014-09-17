@@ -17,13 +17,11 @@ That settles that but let's delve a little deeper...
 
 ## Accessibility considerations
 
-Not all users use a mouse; keyboards and screen readers are also used.
+Not all users use a mouse; keyboards and screen readers are also used. A keyboard user can tab to the select element and use their keyboard to select a different option. Take [this example](http://html.cita.illinois.edu/script/onchange/onchange-example.php) - the *HTML4* option can't accessed because it is already selected as the default option.
 
-A keyboard user can tab to the select element and use their keyboard to select a different option. Take [this example](http://html.cita.illinois.edu/script/onchange/onchange-example.php) - the *HTML4* option can't (easily be) accessed because it is already selected as the default option. Instead, I have to navigate to another option, wait for the page to load, hit the *Back* button and then select it; this only works because the browser history remembers my previous choice.
+Also, in various browsers [[0]](#ref0), if the user presses Down just once, the form is submitted meaning its very difficult for me to get to other items in the list.
 
-Furthermore, in various browsers [[0]](#ref0), if the user presses Down just once, the form is submitted meaning its very difficult for me to get to other items in the list.
-
-Vanessa Mosher and Steven Weintraub talk about Sarah Miller's test at the Open University with regard to screen readers:
+Vanessa Mosher and Steven Weintraub share Sarah Miller's test at the Open University with regard to screen readers:
 
  >Several people working with blind users commented on problems both with screen readers and for those using keyboards. For example, one cited a usability test by Sarah Miller at the Open University. Sarah found drop-down lists without Go buttons were confusing because while the user had to inspect every item in the list, the action of reading an item meant that it was selected. She added that the user chose to use the keyboard instead of a mouse to scroll through the options to view (or hear) them: the first option was automatically selected—the user never got past the first item in the list.
 
@@ -33,7 +31,7 @@ Vanessa Mosher and Steven Weintraub talk about Sarah Miller's test at the Open U
 
 Select menus are not meant to be used for navigation, therefore users don't intuitively expect to navigate on selection. This is learned behaviour due to the unfortunate misuse of select menus.
 
-Vanessa Mosher and Steven Weintraub talk about Larry Marinems insight into usability:
+Vanessa Mosher and Steven Weintraub share Larry Marinem's insight into usability:
 
  > One strong voice for using a Go button was Larry Marinem. Larry suggested that users do not expect the drop-down list to be a navigation device. He stated that there are certain things that users expect a control to do, and sometimes it is common for designers to over-automate a step of the task by changing the normal expected behavior of a control. Drop-down lists are expected to display the selected object, not go somewhere. With drop-down lists, it's not uncommon for users to mis-select something; the users are surprised when this type of control launches them off somewhere and more so when it launches them into a mis-selected area. Larry added that reducing the number of clicks does not make a site more usable; giving the users appropriate control of their navigation does.
 
