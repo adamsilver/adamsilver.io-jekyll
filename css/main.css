@@ -152,6 +152,11 @@ blockquote p {
     font-style: italic;
 }
 
+ .ui {
+    background-color: #ecf0f1;
+    padding: 10px;
+ }
+
 a {
 	color: #2c3e50;
 	-webkit-transition:color .1s;

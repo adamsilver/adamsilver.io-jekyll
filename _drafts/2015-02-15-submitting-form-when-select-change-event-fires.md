@@ -1,13 +1,48 @@
 ---
 layout: post
-title:  "Forms shouldn't submit on change of a select element"
+title:  "Don't submit a form when a select menu is changed"
 date:   2014-01-15 09:00:01
 categories: js
 ---
 
-Unfortunatley, some websites choose to employ a select menu that submits a form when the value is changed; and with the submit button omitted from the User Interface (UI). The rationale behind this decision is ironically to improve the User Experience (UX), but in reality it is the opposite. 
+Unfortunatley, some websites choose to employ a select menu that will submit a form when the value is changed; and with the submit button omitted from the User Interface (UI). The rationale behind this decision is ironically to improve the User Experience (UX), but in reality it is the opposite. 
 
-## What does WCAG think?
+As shown below the difference visually is simply the (re)introduction of a submit button.
+
+Good:
+
+<div class="ui">
+	<form>
+		<label for="sort2">Sort</label>
+		<select id="sort2" name="sort2">
+			<option value="0">Select sort option:</option>
+			<option value="1">Option 1</option>
+			<option value="2">Option 2</option>
+			<option value="3">Option 3</option>
+			<option value="4">Option 4</option>
+		</select>
+		<input type="submit" value="Submit">
+	</form>
+</div>
+
+Bad:
+
+<div class="ui">
+	<form>
+		<label for="sort">Sort</label>
+		<select id="sort" name="sort">
+			<option value="0">Select sort option:</option>
+			<option value="1">Option 1</option>
+			<option value="2">Option 2</option>
+			<option value="3">Option 3</option>
+			<option value="4">Option 4</option>
+		</select>
+	</form>
+</div>
+
+
+
+## What the standards say
 
 WCAG 2.0 On Input Success Criterion 3.2.2 states that:
 
@@ -17,11 +52,11 @@ That settles that but let's delve a little deeper...
 
 ## Accessibility considerations
 
-Not all users use a mouse; keyboards and screen readers are also used. A keyboard user can tab to the select element and use their keyboard to select a different option. Take [this example](http://html.cita.illinois.edu/script/onchange/onchange-example.php) - the *HTML4* option can't accessed because it is already selected as the default option.
+Not all users use a mouse. Keyboards and screen readers are also used. A keyboard user can tab to the select menu and use their keyboard to select a different option. Take [this example](http://html.cita.illinois.edu/script/onchange/onchange-example.php) - the *HTML4* option can't accessed because it is already selected as the default option.
 
-Also, in various browsers [[0]](#ref0), if the user presses Down just once, the form is submitted meaning its very difficult for me to get to other items in the list.
+Also, in various browsers [[0]](#ref0), if the user presses *Down* just once, the form is submitted which means its very difficult to access the either options.
 
-Vanessa Mosher and Steven Weintraub share Sarah Miller's test at the Open University with regard to screen readers:
+Vanessa Mosher and Steven Weintraub share Sarah Miller's usability test at the Open University with regard to screen readers:
 
  >Several people working with blind users commented on problems both with screen readers and for those using keyboards. For example, one cited a usability test by Sarah Miller at the Open University. Sarah found drop-down lists without Go buttons were confusing because while the user had to inspect every item in the list, the action of reading an item meant that it was selected. She added that the user chose to use the keyboard instead of a mouse to scroll through the options to view (or hear) them: the first option was automatically selected—the user never got past the first item in the list.
 
@@ -29,7 +64,7 @@ Vanessa Mosher and Steven Weintraub share Sarah Miller's test at the Open Univer
 
 ## Usability considerations
 
-Select menus are not meant to be used for navigation, therefore users don't intuitively expect to navigate on selection. This is learned behaviour due to the unfortunate misuse of select menus.
+Select menus are not meant to be used for navigation, therefore users don't intuitively expect to navigate on selection. This is learned behaviour due to this misuse of select menus.
 
 Vanessa Mosher and Steven Weintraub share Larry Marinem's insight into usability:
 
@@ -37,7 +72,7 @@ Vanessa Mosher and Steven Weintraub share Larry Marinem's insight into usability
 
 ## Summary
 
-Select menus are *not* meant to be used for navigation. In doing so, the user experience is degraded for certain types of users and users using certain browsers. Avoiding this behaviour ensures it will work cross-browser, without Javascript and behave intuitively and consistently.
+Select menus are *not* meant to be used for navigation. In doing so, the user experience is degraded for certain types of users and users using certain browsers. Avoiding this behaviour ensures it works well cross-browser and without Javascript, with the welcome side effect of providing an experience which is intuitive and consistent.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
