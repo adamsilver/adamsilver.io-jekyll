@@ -7,9 +7,6 @@ categories: css html
 
 <!--
 
-- asume knowldge of HTML
-- describe unsemantic html
-- describe what semantic HTML is
 - explain the benefits
   - browsers without CSS
   - accessibility
