@@ -17,21 +17,17 @@ categories: css html
 
 -->
 
-Wikipedia states:
-
-> Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, of the information in webpages rather than merely to define its presentation or look. Semantic HTML is processed by regular web browsers as well as by many other user agents.
-
-Semantic HTML describes the *intention* of the content, but not describing how it looks or how it behaves. It's not just the tags. It's also the use of semantic *IDs* and *Class* attributes.
-
-Imagine an article, much like this one, each paragraph would be represented as follows:
+Semantic HTML provides meaning and the *intention* of the content. *Not* describing how it looks or how it behaves. As well as using the the most appropriate element to describe the content, meaningful *IDs* and *Class* attributes should be used. Imagine an article, much like this one, each paragraph would be represented as follows:
 
 	<p>I am a paragraph</p>
 
-An *introductory* paragraph, might need to be styled differently. A semantic class name provides this hook.
+An *introductory* paragraph, might need to be styled differently. A semantic class name provides this hook:
 
 	<p class="introduction">This paragraph is an introductory one</p>
 
-It's important to note that the class name itself only provides the paragraphs intention and not the styling.
+It's important to note that the Class attribute only provides meaning to this paragraph, not the styling.
+
+There are several benefits as follows:
 
 ### Accessibility
 
