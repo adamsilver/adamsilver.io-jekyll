@@ -35,17 +35,19 @@ It's important to note that the class name itself only provides the paragraphs i
 
 ### Accessibility
 
-Screen readers read the text of page based on the HTML elements that are used.
+Some disabled users, utilise the functionality of a screen reader. When the page is semantic there is a much higher chance it will be read out loud meaningfully to the user.
 
 ### Print
 
 ### RWD
 
-### etc
+### Perf
+
+Page weight is likely to be smaller as not weighted down by the dreggs of HTML bloat and inline styles etc.
 
 ### SEO
 
-Crawlers such as the Googlebot, are another type of user agent. They rank the page based on the content. The content can only be understood if semantic HTML is used. Semantic HTML is clean and tends not to include inline styles, decorative images (tabless) etc and because of this the page is ranked better in search engines.
+Search engine crawlers rank the page based on the content. The content can only be understood if semantic HTML is used. Semantic HTML therefore improves search engine ranking.
 
 ### Maintainability
 
