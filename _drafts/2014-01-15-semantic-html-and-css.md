@@ -39,13 +39,11 @@ Some disabled users, utilise the functionality of a screen reader. When the page
 
 ### Print
 
+TBD
+
 ### RWD
 
-
-
-### Perf
-
-Page weight is likely to be smaller as not weighted down by the dreggs of HTML bloat and inline styles etc.
+TBD
 
 ### SEO
 
@@ -56,6 +54,10 @@ Search engine crawlers rank the page based on the content. The content can only 
 1. Code is easier to understand, onboarding developers is easier and their understanding should be much quicker of how a web page is structured.
 
 2. Easier to update a site look and feel requiring less effort to maintain the HTML i.e. a heading is always a heading no matter what the look and feel is.
+
+### Performance
+
+Page weight is likely to be smaller as not weighted down by the dreggs of HTML bloat and inline styles etc.
 
 
 
