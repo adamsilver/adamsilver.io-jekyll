@@ -46,9 +46,9 @@ WCAG 2.0 On Input Success Criterion 3.2.2 states that:
 
 ## Accessibility considerations
 
-Not all users use a mouse. Keyboards and screen readers are also used. A keyboard user can tab to the select menu and use their keyboard to select a different option. Take [this example](http://html.cita.illinois.edu/script/onchange/onchange-example.php) - the *HTML4* option can't accessed because it is already selected as the default option.
+Not all users use a mouse. Keyboards and screen readers are also used. A keyboard user can tab to the select menu and use their keyboard to select a different option. Take [this example](http://html.cita.illinois.edu/script/onchange/onchange-example.php) - the *HTML4* option isn't accessible because it is already selected as the default option.
 
-Also, in [various browsers](http://pauljadam.com/blog/javascript/onchange-event-on-a-select-inputjump-menu-accessibility-problems/), if the user presses *Down* just once, the form is submitted which means its very difficult to access the either options.
+Also, in [various browsers](http://pauljadam.com/blog/javascript/onchange-event-on-a-select-inputjump-menu-accessibility-problems/), if the user presses *Down* just once, the form is submitted which means its very difficult to access either option.
 
 Vanessa Mosher and Steven Weintraub share Sarah Miller's usability test at the Open University with regard to screen readers:
 
@@ -58,7 +58,7 @@ Vanessa Mosher and Steven Weintraub share Sarah Miller's usability test at the O
 
 ## Usability considerations
 
-Select menus are not meant to be used for navigation, therefore users don't intuitively expect to navigate on selection. This is learned behaviour due to this misuse of select menus.
+Select menus are not meant to be used for navigation, therefore users don't intuitively expect to navigate on selection. This is a *learned* behaviour due to this misuse of select menus.
 
 Vanessa Mosher and Steven Weintraub share Larry Marinem's insight into usability:
 
