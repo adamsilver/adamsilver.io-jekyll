@@ -432,6 +432,10 @@ p code {
 	line-height: 1em;
 }
 
+#article li {
+    line-height: 1.7em;
+}
+
 @media (min-width: 960px) {
 
 	#content,
