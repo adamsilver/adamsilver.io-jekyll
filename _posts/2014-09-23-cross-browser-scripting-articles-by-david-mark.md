@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "David Mark's cross-browser scripting articles"
+title:  "Cross-browser scripting articles by David Mark"
 date:   2015-02-01 09:00:01
 categories: css html
 ---
