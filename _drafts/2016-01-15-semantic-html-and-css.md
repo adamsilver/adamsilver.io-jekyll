@@ -45,7 +45,7 @@ RWD is responsible for styling a web page differently depending on the viewport 
 
 For example, it is quite common to find elements littered with a Class attribute value of *clearfix*. This ensures floated elements are cleared without the need for extra mark-up. In small screens the elements might stack below one another, meaning that *clearfix* has no meaning here; infact it becomes rather misleading and confusing in this context. Additionally the CSS rule would need overriding for small screens.
 
-This is tricky because if we take another component that also might be using the Clearfix technique; e.g. a row of icons might *not* stack in small screens because they are small enough to fit horizontally. This wouldn't be a problem if the component was semantically given a Class attribute value of *icons*.
+This is tricky because if another component that does require the *clearfix* in small screens (because they are small enough to fit) then the override becomes problematic. This wouldn't be a problem if the component was given a semantic Class attribute value because the styles can be applied based on what it is.
 
 ### SEO
 
@@ -57,12 +57,12 @@ Code is easier to understand, onboarding developers is easier as it should be qu
 
 ### Maintainability
 
-It is easier to update a site's look and feel requiring less effort to maintain the HTML i.e. a heading is always a heading no matter what it looks like; if we change the colour from red to black, the HTML will not need updating.
+It is easier to update a site's look and feel, requiring less effort to maintain the HTML i.e. a heading is always a heading no matter what it looks like; if we change the colour from red to black, the HTML will not need updating.
 
 ### Performance
 
-A minor benefit is that the page weight is likely to be smaller when using semantic HTML. Unsemantic HTML might use inline styles or stylistic tags such as `font`.
+A minor benefit is that the page weight is likely to be smaller when using semantic HTML. Unsemantic HTML might use inline styles or stylistic elements e.g. `<font>`.
 
 ## Summary
 
-HTML is the foundation of a web page and the foundations as with anything else are the most important. Always use semantic HTML in order to gain all of the beneifts described in this article because your client, your fellow developers and your users will thank you.
+HTML is the foundation of a web page and the foundations, just like anything else in this world are the *most* important. Is it strongly advisable to use semantic HTML in order to experience the benefits described in this article because your client, your fellow developers and your users will thank you.
