@@ -7,9 +7,7 @@ categories: css html
 
 <!--
 
-- explain the benefits
-  - browsers without CSS
-- conclusion 1) HTML is the foundation, ruining the foundation has fatal effects
+- conclusion 1) 
 
 -->
 
@@ -62,6 +60,6 @@ Search engine crawlers rank the page based on the content. The content can only 
 
 Page weight is likely to be smaller as not weighted down by the dreggs of HTML bloat and inline styles etc.
 
+## Summary
 
-
-
+HTML is the foundation of a web page and as with anything else in life, the foundations are the most important. Always use semantic HTML in order to gain all the benefits discussed in this article. Your client, your fellow team mates and your users will thank you.
