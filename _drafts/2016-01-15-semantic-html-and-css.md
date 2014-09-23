@@ -48,18 +48,18 @@ This is tricky because if we take another component, e.g. a row of icons, they m
 
 ### SEO
 
-Search engine crawlers rank the page based on the content. The content can only be understood if semantic HTML is used, therefore improving search engine ranking.
+Search engine crawlers rank the page based on the content. The content can only be understood if semantic HTML is used, therefore using semantic HTML improves search engine ranking.
 
 ### Maintainability
 
-1. Code is easier to understand, onboarding developers is easier and their understanding should be much quicker of how a web page is structured.
+1. Code is easier to understand, onboarding developers is easier as it should be quicker to understand the structure of the HTML document.
 
 2. Easier to update a site look and feel requiring less effort to maintain the HTML i.e. a heading is always a heading no matter what the look and feel is.
 
 ### Performance
 
-Page weight is likely to be smaller as not weighted down by the dreggs of HTML bloat and inline styles etc.
+A minor benefit is that the page weight is likely to be smaller when using semantic HTML. Unsemantic HTML might use inline styles or stylistic tags such as `font`.
 
 ## Summary
 
-HTML is the foundation of a web page and as with anything else in life, the foundations are the most important. Always use semantic HTML in order to gain all the benefits discussed in this article. Your client, your fellow team mates and your users will thank you.
+HTML is the foundation of a web page and the foundations as with anything else are the most important. Always use semantic HTML in order to gain all of the beneifts described in this article because your client, your fellow developers and your users will thank you.
