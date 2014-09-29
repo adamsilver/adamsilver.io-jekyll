@@ -26,13 +26,21 @@ The boring developer realises that different users have different abilities and 
 
 ## 4. UI design
 
-Forms, position fixed. Shows content instead of hiding it with fancy tabs and togglers. Doesn't get bored with paridgm of the web. Will make a website look like a website. Will embrace the native form elements. Will underline links so that users can spot and interact with them.
+The boring front-end developer embraces the constraints and limitations of the browser so that he doesn't find himself in a world of adaptive design and UA sniffing that only causes nightmares for the development team and users.
+
+He quickly advises the avoiding of position fixed knowing that it's notoriously got poor support that can't be detected without UA sniffing. Realising UA sniffing is the number 1 thing not to do he shreeks and cries.
+
+The boring front-end developer will use native form elements realising that browsers will enhance the experience where possible, particularly on mobile, and doesn't try to control the look and feel too much.
+
+The boring front-end developer that interactive websites are made of links (with underlines - accessibility, see above) and forms and doesn't mess with them and ensures these elements look as such making sites that feel intuitive to the user.
 
 ## 5. Third party script, libraries and frameworks
 
-Questions the use of [insert new shiny framework here]. Does due diligence on any third party code
+The boring front-end developer is constantly being bombarded with "Why invent the wheel" but in reality he is not reinventing the wheel. He is merely avoiding poorly made wheels. Questions the use of [insert new shiny framework here]. Does due diligence on any third party code
 
 ## 6. UI architecture
+
+The boring front-end developer or lead Javascript developer leans on Javascript minimally and avoids it until it is necessary....
 
 Let's the browser do its' thing. Navigation, caching etc. JS loading etc, HTML5 polyfills.
 
