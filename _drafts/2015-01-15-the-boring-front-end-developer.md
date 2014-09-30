@@ -35,9 +35,11 @@ The boring front-end developer carefully selects third party scripts by ensuring
 
 ## 6. UI architecture
 
-The boring front-end developer or lead Javascript developer leans on Javascript minimally and avoids it until it is necessary....
+The boring front-end developer will adhere to the following quote by James Norton:
 
-Let's the browser do its' thing. Navigation, caching etc. JS loading etc, HTML5 polyfills.
+> As a Lead Javascript engineer I try to write as little Javascript as possible
+
+He realises that Single Page Applications cause severe problems and that by avoiding them and leaning on the server appropriately provides a better experience and reach.
 
 ## 7. CV
 
