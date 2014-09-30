@@ -5,11 +5,11 @@ date:   2015-01-15 09:00:01
 categories: web
 ---
 
-*Cool* front-end developers are always *pushing the envelope*, jumping out of their seat to use the latest and greatest and shiniest of UI frameworks and libraries. *Cool* front-end developers are *bridging the gap* between native apps and web and so will strive to make the UI look and behave like an app. *Which app?* you may ask. *iPhone? Android? What version?* All good questions, alas another topic all together. Eerily, there is another kind of front-end developer, cannot always be found in the limelight, the *boring* front-end developer. Here is an ode to the *boring* front-end developer, *BFED* if you will.
+*Cool* front-end developers are always *pushing the envelope*, jumping out of their seat to use the latest and greatest and shiniest of UI frameworks and libraries. *Cool* front-end developers are *bridging the gap* between native apps and web and so will strive to make the UI look and behave like an app. *Which app?* you may ask. *iPhone? Android? What version?* All good questions, alas another topic all together. Eerily, there is another kind of front-end developer, they cannot always be found in the limelight, the *boring* front-end developer. Here is an ode to the *boring* front-end developer, *BFED* if you will.
 
 ## Preprocessors
 
-When given the choice to add the latest tooling, the BFED will ask two questions: 1) Will new developers need to learn another altered language beyond the language of the web (HTML, CSS, JS) and 2) Will developers be forced to work more slowly in their debugging technique? If the answer to any of these questions is *yes* then the boring front-end developer will say no to preprocessors.
+When given the choice to add preprocessor to the technology stack, the BFED will ask two questions: 1) Will new developers need to learn another altered language beyond the language of the web (HTML, CSS, JS) and 2) Will developers be forced to work more slowly in their debugging technique? If the answer to any of these questions is *yes* then the BFED will say *no* to preprocessors.
 
 ## Browser support
 
