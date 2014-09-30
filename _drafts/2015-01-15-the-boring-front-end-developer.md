@@ -43,14 +43,7 @@ He realises that Single Page Applications cause severe problems and that by avoi
 
 ## 7. CV
 
-The boring front-end developer will develop a site based on the context of the problem and provide a solution accordingly. He will not just use [insert buzz word here] to improve his chances of finding another job based on the current technology fad, just so he can increase his day rate.
-
-## 8. Misc
-
-- Avoids the use of JS and leans on the server where possible
-- Promotes simplicity to their product owner and UX experts
-- Listens to the least popular experts.
-- Script loading
+The boring front-end developer will develop a site based on the context of the problem and provide a solution accordingly. He will not just use [insert buzz word here] to improve his chances of finding another job based on the current technology fad in order to increase his day rate.
 
 Be a great developer. Be boring.
 
