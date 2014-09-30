@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The boring front end developer"
+title:  "The boring front-end developer"
 date:   2015-01-15 09:00:01
 categories: web
 ---
@@ -9,19 +9,15 @@ categories: web
 
 ## 1. Preprocessors
 
-When given the choice to add more tooling, the boring front-end developer will ask the two questions: 1) Will new developers need to learn a new language beyond the language of the web (HTML, CSS, JS) and 2) Will developers be slowed down in their debugging technique?
-
-If the answer to any of these questions is *yes* then the boring front-end developer will say no to preprocessors.
+When given the choice to add the latest tooling, the boring front-end developer will ask two questions: 1) Will new developers need to learn another altered language beyond the language of the web (HTML, CSS, JS) and 2) Will developers be forced to work more slowly in their debugging technique? If the answer to any of these questions is *yes* then the boring front-end developer will say no to preprocessors.
 
 ## 2. Browser support
 
-The boring developer realises that while not all experiences will be identical, all browsers can be used to consume a website, even IE6 and below.
+The boring developer realises that while not all experiences will be identical and that all browsers *can* be used to consume a website, even *gasp*, IE6 and below. He will promote Progressive Enhancement and Cross-browser (not Multi- Browser) scripting at any given opportunity.
 
 ## 3. Accessibility
 
-The boring developer realises that different users have different abilities and preferred ways of interacting with a computer, whether its a mouse, alternative pointing device, screen reader, keyboard or combination of all, websites should be able to be consumed no matter the screen size or capability of the browser.
-
-23inch thunderbolt screen with latest and greatest spec, with only a mouse plugged in, using chrome with js turned on etc.
+The boring developer realises that not every user is the same. Users have different abilities and preferred ways of using a computer, whether its a mouse, finger, thumb, screen reader, keyboard or a combination of all, websites should be consumable no matter the audience, screen size or capability of the browser.
 
 ## 4. UI design
 
