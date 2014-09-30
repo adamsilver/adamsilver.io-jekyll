@@ -5,8 +5,7 @@ date:   2015-01-15 09:00:01
 categories: web
 ---
 
-
-*Hip* front-end developers are always pushing the envelope, embracing the latest, greatest and shiniest of frameworks and libraries. Cool front-end developers are more than happy to be making websites look and behave like an app. "Which app?" you may ask. iPhone? Android? What version? All good questions, alas this is another topic all together. There is another breed of front-end developer. Not all are cool or hip. Some front-end developers are *boring* and here is an ode to the boring front-end developer.
+*Cool* front-end developers are always *pushing the envelope*, jumping out of their seat to use the latest and greatest and shiniest of UI frameworks and libraries. *Cool* front-end developers are *bridging the gap* between native apps and web and so will strive to make the UI look and behave like an app. *Which app?* you may ask. *iPhone? Android? What version?* All good questions, alas another topic all together. Eerily, there is another kind of front-end developer, cannot always be found in the limelight, the *boring* front-end developer. Here is an ode to the *boring* front-end developer.
 
 ## 1. Preprocessors
 
@@ -50,6 +49,9 @@ Let's the browser do its' thing. Navigation, caching etc. JS loading etc, HTML5 
 - Values users over buzzwords on their CV, or their own learning experience or command of day rate.
 - Promotes simplicity to their product owner and UX experts
 - Listens to the least popular experts.
+- Script loading
+- Native form and branding won't be harmed
+- even gasp
 
 Be a great developer. Be boring.
 
