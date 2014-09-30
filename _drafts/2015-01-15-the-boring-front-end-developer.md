@@ -23,7 +23,7 @@ The BFED realises that users have different abilities and preferred ways of usin
 
 The BFED embraces the constraints and limitations of the browser so that he doesn't find himself in a world of Adaptive Design and UA sniffing because that world is horrible, ill-advised and costly.
 
-It is best to include the BFED in the UX design process to save wasting time designing a UI that should be avoided or can be done more simply. See Position Fixed[0] and Abusing Select Menus[0] for more on that.
+It is best to include the BFED in the UX design process to save wasting time designing a UI that should be avoided or can be done more simply. See [Position Fixed](/) and [Abusing Select Menus](/) for more on that.
 
 The BFED will also suggest the use of native form controls realising that browsers will enhance the experience where possible, particularly on mobile, and doesn't try to control the look and feel too much as it is he/she knows that the brand will *not* suffer because of that decision.
 
