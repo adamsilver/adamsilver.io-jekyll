@@ -13,7 +13,7 @@ When given the choice to add the latest tooling, the boring front-end developer 
 
 ## 2. Browser support
 
-The boring developer realises that while not all experiences will be identical and that all browsers *can* be used to consume a website, even *gasp*, IE6 and below. He will promote Progressive Enhancement and Cross-browser (not Multi- Browser) scripting at any given opportunity.
+The boring developer realises that while not all experiences will be identical and that all browsers *can* be used to consume a website, even *gasp*, IE6 and below. He will promote Progressive Enhancement and Cross-browser (not Multi- Browser) scripting at any given opportunity. The boring front-end developer realises it is not a feat to drop support for a particular (set of) browser(s) and stop caring about those users.
 
 ## 3. Accessibility
 
