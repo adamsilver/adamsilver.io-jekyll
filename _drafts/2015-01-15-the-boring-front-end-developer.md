@@ -31,7 +31,7 @@ He will boringly suggest that links are styled (with underlines) as such so that
 
 ## Third party CSS and Javascript libraries and frameworks
 
-The boring front-end developer carefully selects third party code by ensuring he does due diligence on the code itself, *not* the popularity within the industry. He favours reliability over popularity every time.
+The boring front-end developer carefully selects third party code based on the quality of the code itself, *not* based on the popularity. He favours reliability over popularity every time.
 
 ## UI architecture
 
