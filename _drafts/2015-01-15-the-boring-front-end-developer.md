@@ -31,7 +31,7 @@ He will boringly suggest that links are styled (with underlines) as such so that
 
 ## 5. Third party script, libraries and frameworks
 
-The boring front-end developer is constantly being bombarded with "Why invent the wheel" but in reality he is not reinventing the wheel. He is merely avoiding poorly made wheels. Questions the use of [insert new shiny framework here]. Does due diligence on any third party code
+The boring front-end developer carefully selects third party scripts by ensuring he does due diligence on the code itself, *not* the popularity within the industry. He favours reliability over popularity every time.
 
 ## 6. UI architecture
 
@@ -39,15 +39,16 @@ The boring front-end developer or lead Javascript developer leans on Javascript 
 
 Let's the browser do its' thing. Navigation, caching etc. JS loading etc, HTML5 polyfills.
 
-## 7. Misc
+## 7. CV
+
+The boring front-end developer will develop a site based on the context of the problem and provide a solution accordingly. He will not just use [insert buzz word here] to improve his chances of finding another job based on the current technology fad, just so he can increase his day rate.
+
+## 8. Misc
 
 - Avoids the use of JS and leans on the server where possible
-- Values users over buzzwords on their CV, or their own learning experience or command of day rate.
 - Promotes simplicity to their product owner and UX experts
 - Listens to the least popular experts.
 - Script loading
-- Native form and branding won't be harmed
-- even gasp
 
 Be a great developer. Be boring.
 
