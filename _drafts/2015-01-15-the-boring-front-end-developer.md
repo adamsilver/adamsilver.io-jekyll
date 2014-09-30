@@ -29,9 +29,9 @@ The boring front-end developer will also suggest the use of native form controls
 
 He will boringly suggest that links are styled (with underlines) as such so that users can find them amongst normal copy.
 
-## 5. Third party script, libraries and frameworks
+## 5. Third party CSS and Javascript libraries and frameworks
 
-The boring front-end developer carefully selects third party scripts by ensuring he does due diligence on the code itself, *not* the popularity within the industry. He favours reliability over popularity every time.
+The boring front-end developer carefully selects third party code by ensuring he does due diligence on the code itself, *not* the popularity within the industry. He favours reliability over popularity every time.
 
 ## 6. UI architecture
 
