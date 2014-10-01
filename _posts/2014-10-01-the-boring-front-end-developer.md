@@ -48,3 +48,5 @@ The BFED will develop a site based on the context of the problem and provide a s
 ## Conclusion
 
 Be a great front-end developer. Be boring.
+
+Inspired by Cap Watkins article, [The Boring Designer](http://blog.capwatkins.com/the-boring-designer), thank you.
