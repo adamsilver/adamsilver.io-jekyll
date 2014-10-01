@@ -13,7 +13,7 @@ When given the choice to add a preprocessor (e.g. LESS, SASS, CoffeeScript etc) 
 
 ## Browser support
 
-The BFED realises that while not all experiences will be identical, all browsers *can* be used to consume a website, even *gasp*, IE6 and below. The BFED will promote Progressive Enhancement and Cross-browser (not Multi-browser) scripting at any given opportunity. The BFED also realises it is not a feat to drop support for a particular (set of) browser(s) and understands that forgetting about the existence of those users hurts them and the company's perception.
+The BFED realises that while not all experiences will be identical, all browsers *can* be used to consume a website, even *gasp*, IE6 and below. He/she will promote Progressive Enhancement and Cross-browser (not Multi-browser) scripting at any given opportunity. The BFED also realises it is not a feat to drop support for a particular (set of) browser(s) and understands that forgetting about the existence of those users hurts them and their perception of the company/product.
 
 ## Accessibility
 
@@ -21,9 +21,9 @@ The BFED realises that users have different abilities and preferred ways of usin
 
 ## UI design
 
-The BFED embraces the constraints and limitations of the browser so that he doesn't find himself in a world of Adaptive Design and UA sniffing because that world is horrible, ill-advised and costly.
+The BFED embraces the constraints and limitations of the browser so that he/she doesn't find him/herself in a world of Adaptive Design and UA sniffing because that world is horrible, ill-advised and costly.
 
-It is best to include the BFED early on in the UX design process to save wasting time designing a UI that should ultimately be avoided (see [Position Fixed](/) and [Abusing Select Menus](/) for more on that) and that can likely be designed more simply. .
+It is best to include the BFED early on in the UX design process to save wasting time designing a UI that should ultimately be avoided (see [Position Fixed](http://bradfrostweb.com/blog/mobile/fixed-position/) and [Select Menu Accessibility Issues](/articles/select-menu-accessibility-issues/) for more on that) and that can likely be designed more simply.
 
 The BFED will also suggest the use of native form controls realising that browsers will enhance the experience where possible, particularly on mobile, and doesn't try to control the look and feel too much as he/she knows that the brand will *not* suffer because of that decision.
 
@@ -31,15 +31,15 @@ The BFED will also suggest that links are styled as such, and with underlines, s
 
 ## Third party CSS and Javascript libraries and frameworks
 
-The BFED will carefully select third party code based on the quality of the code itself, *not* based on the popularity of said code. He/she favours reliability over popularity every time.
+The BFED will carefully select third party code based on the quality of the code itself by reviewing source code, *not* based on the popularity of said code. He/she favours reliability over popularity every time.
 
 ## UI architecture
 
-The BFED will adhere to the following quote by James Norton:
+The BFED will adhere to the following quote (by James Norton):
 
 > As a Lead Javascript Engineer I try to write as little Javascript as possible
 
-Furthermore the BFED realises that Single Page Applications cause severe problems and that by avoiding them and leaning on the server appropriately provides a better experience and reach.
+Furthermore the BFED realises that [Single Page Applications cause severe problems](/articles/single-page-applications/) and that by avoiding them and leaning on the server appropriately provides a better experience and reach.
 
 ## CV
 
@@ -48,5 +48,10 @@ The BFED will develop a site based on the context of the problem and provide a s
 ## Conclusion
 
 Be a great front-end developer. Be boring.
+
+## Todo
+
+1. ask mark about general tone and order of things, should the cv one be first and preprocessor later on 
+
 
 <!-- http://blog.capwatkins.com/the-boring-designer -->
