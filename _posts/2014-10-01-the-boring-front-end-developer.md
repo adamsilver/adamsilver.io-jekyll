@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The boring front-end developer"
-date:   2015-01-15 09:00:01
+date:   2014-10-01 09:00:01
 categories: web
 ---
 

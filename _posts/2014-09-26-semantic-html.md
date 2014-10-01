@@ -11,7 +11,6 @@ Take this article as an example. It mostly consists of headings and paragraphs:
 	
 	<div id="article">
 		<h1>Semantic HTML</h1>
-		<p class="wordCount">435 words</p>
 		<p>...</p>
 		<p>...</p>
 	</div>
@@ -20,7 +19,6 @@ The article is structured as follows:
 
 - A container div with an ID attribute value of *article*.
 - An h1 representing the primary heading of the article.
-- A paragraph with a Class attribute value of *wordCount*.
 - Further paragraphs for the main article content.
 
 It is important to not that reading the HTML above does *not* describe how it looks but it *does* provide the meaning and intent.
