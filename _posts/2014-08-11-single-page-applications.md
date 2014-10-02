@@ -5,19 +5,17 @@ date:   2014-08-11 09:00:01
 categories: js
 ---
 
-Single page applications (SPA) have become extremely popular in the web development world, but as is so often in the industry, popularity is not necessarily a good sign. SPAs are *supposed* to 'provide a more fluid user experience' [[0](#ref0)] but there are a number of technical issues to tackle when building them. Unfortunately, this can be detrimental to the user experience.
+Single page applications (SPA) have become extremely popular in the web development world, but often in this industry, popularity is not necessarily a good sign. SPAs are *supposed* to 'provide a more fluid user experience' [[0](#ref0)] but there are a number of technical issues to tackle when building them. Unfortunately, this can be detrimental to the user experience.
 
 Before we get into the issues, let's take this opportunity to briefly discuss what differentiates SPAs from traditional architectures.
 
-## MVC, MVVM, DOM manipulation, templating, XHR etc
+## MVC, MVVM, DOM manipulation, XHR etc
 
-It's common to relate the plethora of acronyms, design patterns and techniques with SPAs and whilst these techniques *might* be common in SPAs,	 they certainly aren't a requirement.
+It's common to associate these elements with SPAs, and whilst these techniques *might* be commonly found in SPAs, this article doesn't address these aspects. This is because they aren't necessarily detrimental to a website; a website could employ all of these elements without utilising a SPA architecture; it might even be sensible to do so!
 
-To be clear, it would be sensible to use architectural and design patterns to organise the Javascript code base. Additionally, when appropriate, DOM manipulation and XHR can enhance the user experience.
+What *really* defines an SPA is the fact that the **routing is handled by the client-side application using Javascript** instead of the server. Instead of letting the *browser* handle the browsing, the *application* will. Attempting to mimic the browser using Javascript is the primary reason why issues arise in the first place.
 
-However, what really defines an SPA is the fact that the **routing is handled by the client-side application using Javascript** instead of the server. Instead of letting the *browser* handle the browsing (read: navigation), the *application* will. Attempting to mimic the browser using Javascript is the primary reason why issues arise.
-
-Now we have SPAs cleared up, we can discuss the issues:
+So, about those issues:
 
 ## 1. Navigation and fast back
 
@@ -31,7 +29,7 @@ Browsers store history, meaning, these pages can load very quickly when the user
 
 > "In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes."
 
-Upon 'navigating', the application will need to a way of storing and retrieving 'pages' from a cache. Unless of course we want to slow down the speed of loading 'pages', which is *meant* to be a significant benefit of SPAs. Storage could be memory, local (or session) storage, client-side database or cookies.
+Upon 'navigating', the application will need a method of storing and retrieving 'pages' from a cache. Unless of course we want to slow down the speed of loading 'pages', which is *meant* to be a significant benefit of SPAs. Storage could be memory, local (or session) storage, client-side database and cookies.
 
 **Note: The words 'navigating' and 'pages' are in quotes because SPAs, by definition don't have the concept of navigation and pages in the traditional sense. Quotes will be discarded for brevity going forward.**
 
@@ -75,25 +73,25 @@ Unfortunately, this leads to the requirement to load CSS and JS for certain page
 
 ## Summary
 
-SPAs are meant to provide a better experience. It is therefore ironic that SPAs require significantly more development effort with a result that is detrimental to the user experience.
+SPAs are meant to provide a better experience. It is therefore ironic that SPAs require significantly more development effort, with a result that is detrimental to the user experience. Javascript is never going to do it better than the browser! Websites can still have rich-user interfaces without cramming the entire site into one document.
 
-Websites can still have rich-user interfaces without cramming the entire site into one document. All of the issues described in this article arise due to the choice of architecting a website as as an SPA.
+Furthermore, it is interesting to note that sites, such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)], realised the SPA architecture was a mistake and have since reverted their architectures. The issues described in this article are self-induced. Remember, **avoiding the SPA architecture avoids the issues**.
 
-Furthermore, it is interesting to note that sites, such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)], realised the SPA architecture was a mistake and have since reverted their architectures. Remember, **avoiding the SPA architecture avoids the pitfalls**.
+<p class="callout">For the fun, sarcastic and non-technical version of this article please read <a href="https://tommorris.org/posts/2547">Introducing awfulness.js by Tom Morris</a></p>
 
 <dl>
-	<dt><a name="ref0"></a>[0]</dt>
+	<dt class="citation" id="ref0">[0]</dt>
 	<dd><a href="http://en.wikipedia.org/wiki/Single-page_application">Wikipedia: SPAs</a></dd>
-	<dt><a name="ref1"></a>[1]</dt>
+	<dt class="citation" class="citation" id="ref1"><a name="ref1"></a>[1]</dt>
     <dd><a href="https://medium.com/joys-of-javascript/4353246f4480">Beyond pushState - building single page applications</a></dd>
-	<dt><a name="ref2"></a>[2]</dt>
+	<dt class="citation" class="citation" id="ref2"><a name="ref2"></a>[2]</dt>
 	<dd><a href="http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button">Stackoverflow: Detecting back button click</a></dd>
-	<dt><a name="ref3"></a>[3]</dt>
+	<dt class="citation" class="citation" id="ref3"><a name="ref3"></a>[3]</dt>
 	<dd><a href="http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo">Stackoverflow: SPAs and SEO</a></dd>
-	<dt><a name="ref4"></a>[4]</dt>
+	<dt class="citation" class="citation" id="ref4"><a name="ref4"></a>[4]</dt>
 	<dd><a href="http://blog.getify.com/labjs-script-loading-the-way-it-should-be/">Script loading hacks</a></dd>
-    <dt><a name="ref5"></a>[5]</dt>
+    <dt class="citation" class="citation" id="ref5"><a name="ref5"></a>[5]</dt>
     <dd><a href="https://blog.twitter.com/2012/improving-performance-on-twittercom">Improving performance on twitter</a></dd>
-    <dt><a name="ref6"></a>[6]</dt>
+    <dt class="citation" class="citation" id="ref6"><a name="ref6"></a>[6]</dt>
     <dd><a href="http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs">Lifehacker and the hash bang debarkle</a></dd>
 </dl>

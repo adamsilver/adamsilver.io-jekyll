@@ -2,7 +2,7 @@
 layout: post
 title:  "Forms with multiple submit buttons"
 date:   2014-03-20 09:00:01
-categories: forms
+categories: accessibility
 ---
 
 Forms with multiple submit buttons can cause issues. When using a pointing device (e.g a finger or a mouse) these problems don't surface. However, the user may also submit the form in other ways e.g. a keyboard. In this case the form will be submitted as if the user pressed the first button in the document tree. Let's take an example:

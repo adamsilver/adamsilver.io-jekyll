@@ -2,7 +2,7 @@
 layout: post
 title:  "DOM scripting forms"
 date:   2014-01-02 09:00:59
-categories: forms dom js
+categories: js
 ---
 
 The HTML DOM has dedicated APIs for retrieving and manipulating forms and controls. It’s always important to use the right API and in this case the DOM 0 API [[0](#ref0)] Forms collection is appropriate but unfortunately often forgotten.
@@ -38,6 +38,6 @@ Once we have a control we can interrogate its value:
 This is useful if you want to perform client side validation, for example.
 
 <dl>
-	<dt><a name="ref0"></a>[0]</dt>
+	<dt class="citation" id="ref0">[0]</dt>
 	<dd><a href="http://docs.oracle.com/cd/E19957-01/816-6408-10/">DOM 0 API</a></dd>
 </dl>

@@ -3,16 +3,16 @@
 <meta name="Author" content="Adam Silver">
 <meta property="og:locale" content="en_GB">
 <meta property="og:type" content="website">
-<meta property="og:title" content="{{ site.name }}">
-<meta property="og:description" content="Front-end web development articles">
-<meta property="og:url" content="http://adamsilver.github.io/">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %} {{ site.name }}">
+<meta property="og:description" content="{% if page.title %}{{ page.title }} - {% endif %}Front-end web development articles">
+<meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html',''}}">
 <meta property="og:site_name" content="Adam Silver">
 
 <link rel="stylesheet" href="/css/main.css" type="text/css" media="all">
 <!--[if IE 6]><link rel="stylesheet" href="/css/ie6.css" type="text/css" media="all"><![endif]-->
 
 <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
-<link rel="shortcut icon" href="favicon.ico" media="all">
+<link rel="shortcut icon" href="{{ site.url }}/favicon.png" media="all">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/adamsilver">
 <link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
 
@@ -24,6 +24,3 @@
     ga('create', 'UA-47311666-1', 'adamsilver.github.io');
     ga('send', 'pageview');
 </script>
-
-<!--<link rel="profile" href="http://gmpg.org/xfn/11">-->
-<!--<meta property="og:image" content="http://www.theluckystrike.co.uk/wp-content/uploads/2012/02/mark.png">-->
