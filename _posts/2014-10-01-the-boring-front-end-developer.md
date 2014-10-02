@@ -35,7 +35,7 @@ The BFED will carefully select third party code based on the quality of the code
 
 ## UI architecture
 
-The BFED will adhere to the following quote (by James Norton):
+The BFED will adhere to the following quote (by Anon):
 
 > As a Lead JavaScript Engineer, I try to get my team to write as little JavaScript as possible
 
