@@ -2,7 +2,7 @@
 layout: post
 title:  "Select menu accessibility issues"
 date:   2014-09-17 09:00:01
-categories: js
+categories: accessibility
 ---
 
 Unfortunatley, some websites choose to employ a select menu that will submit a form when the value is changed; and with the submit button omitted from the User Interface (UI). The rationale behind this decision is ironically to improve the User Experience (UX), but in reality it is the opposite. Visually...

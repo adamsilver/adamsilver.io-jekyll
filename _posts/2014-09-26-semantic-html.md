@@ -2,7 +2,7 @@
 layout: post
 title:  "Semantic HTML"
 date:   2014-09-26 09:00:01
-categories: css html
+categories: html
 ---
 
 Semantic HTML is the use of mark-up to reinforce the meaning and *intention* of the content. Semantic HTML does *not* describe how the content looks or how it behaves. As well as using the the most appropriate element to describe the content, meaningful *IDs* and *Class* attributes should be used where neccessary, to provide hooks that allow the components to be enhanced with style and behaviour. 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Cross-browser scripting articles by David Mark"
 date:   2014-09-23 09:00:01
-categories: css html
+categories: js
 ---
 
 David Mark is an expert in cross-browser scripting. Listed here for your convenience are David Mark's Tip of the Day articles which provide a superb foundation in writing cross-browser Javascript functions and libraries.

@@ -2,7 +2,7 @@
 layout: post
 title:  "Javascript inheritance"
 date:   2014-09-09 09:00:59
-categories: forms dom js
+categories: js
 ---
 
 Javascript inheritance is useful with regard to code reuse [[0](#ref0)]. Unfortunately, ECMAScript doesn't provide an Inherit function natively, so we will need to create one. This article documents a simple and powerful technique and consists of two parts: 1) creating the inherit function and 2) utilising it to demonstrate one object inheriting the features of another.
