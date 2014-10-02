@@ -3,9 +3,9 @@
 <meta name="Author" content="Adam Silver">
 <meta property="og:locale" content="en_GB">
 <meta property="og:type" content="website">
-<meta property="og:title" content="{{ site.name }}">
-<meta property="og:description" content="Front-end web development articles">
-<meta property="og:url" content="http://adamsilver.github.io/">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %} {{ site.name }}">
+<meta property="og:description" content="{% if page.title %}{{ page.title }} - {% endif %}Front-end web development articles">
+<meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html',''}}">
 <meta property="og:site_name" content="Adam Silver">
 
 <link rel="stylesheet" href="/css/main.css" type="text/css" media="all">
