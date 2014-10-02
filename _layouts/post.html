@@ -25,7 +25,8 @@
                 </p> -->
                 {{ content }}
 
-                <p class="share"><a href="https://twitter.com/share?source=tweetbutton&text={{page.title}}&via=adambsilver&url={{site.url}}{{page.url}}&hashtags=frontend">Share this article on Twitter</a></p>
+                <p class="share"><a href="https://twitter.com/share?source=tweetbutton&text={{page.title}}&via=adambsilver&url={{site.url}}{{page.url}}&hashtags=frontend,{{page.categories[0]}}">Share this article on Twitter</a></p>
+
             </div>
 
             {% include newsletterForm.html %}
