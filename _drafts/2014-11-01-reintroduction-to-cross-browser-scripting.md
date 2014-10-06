@@ -9,7 +9,7 @@ Have you heard of *isHostMethod*? Do you know the difference between Multi-brows
 
 ## Nothing new
 
-This article won't provide you with anything that hasn't already been shared by others but it is somewhat lost in the industry and I hope that merely reintroducing some of the information here may urge others to take a deeper interest.
+This article won't provide you with anything that hasn't already been shared by others[0] but it is somewhat lost in the industry and I hope that merely reintroducing some of the information here may urge others to take a deeper interest.
 
 ## Cient-side challenges
 
