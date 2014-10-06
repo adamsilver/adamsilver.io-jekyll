@@ -57,13 +57,11 @@ The application now needs to handle this browser functionality. This means expos
 
 ## 4. Navigation and data loss
 
-Browsers normally provide the `beforeunload` event which allows the application to warn against losing unsaved changes.
-
-The application would need to provide this functionality, before any routing takes place.
+Browsers normally provide the *beforeunload* event which allows the application to warn against losing unsaved changes. The application will need to provide this functionality, before any routing takes place.
 
 ## 5. Search engine optimisation
 
-Some SPAs don't require SEO. For those that do, whilst there are solutions, they aren't easy or effortless [[3](#ref3)].
+Some SPAs don't require SEO. For those that do, whilst there are solutions, they aren't simple [[3](#ref3)].
 
 ## 6. Navigation and loading CSS &amp; JS
 
