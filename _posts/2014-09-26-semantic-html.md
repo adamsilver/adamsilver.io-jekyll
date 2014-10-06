@@ -7,7 +7,7 @@ categories: html
 
 Semantic HTML is the use of mark-up to reinforce the meaning and *intention* of the content. Semantic HTML does *not* describe how the content looks or how it behaves.
 
-As well as using the the most appropriate element to describe the content, meaningful *IDs* and *Class* attributes should be used where neccessary, to provide hooks that allow the components to be enhanced with style and behaviour.
+As well as using the most appropriate element to describe the content, meaningful *IDs* and *Class* attributes should be used where neccessary, to provide hooks that allow the components to be enhanced with style and behaviour.
 
 Take this article as an example; it consists of 1) a container div with an ID attribute value of *article*, 2) an h1 representing the primary heading of the article and 3) further paragraphs for the main article content as follows:
 
