@@ -53,7 +53,7 @@ Pages in SPAs are likely to be retrieved via XHR, meaning several requests could
 
 Also, the same link could be clicked twice, meaning the page will be requested (and loaded) twice, which is not efficient and could also cause visual glitches.
 
-The application needs to reproduce the aforementioned browser functionality. This means exposing a custom cancel button, which is obviously not desirable, and the application needs to handle duplicate requests as well as cancelling out all previous requests that are still in progress.
+The application now needs to handle this browser functionality. This means exposing a custom cancel button, which is obviously not desirable, and the application needs to handle duplicate requests as well as cancelling out all previous requests that are still in progress.
 
 ## 4. Navigation and data loss
 
