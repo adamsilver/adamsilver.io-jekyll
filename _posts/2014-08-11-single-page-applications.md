@@ -29,11 +29,11 @@ Browsers store history, meaning pages load very quickly when the user presses th
 
 > "In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes."
 
-Upon 'navigating', the application will need a method of storing and retrieving 'pages' from a cache. Unless of course we want to slow down the speed of loading 'pages', which is *meant* to be a significant benefit of SPAs. Storage could be memory, local (or session) storage, client-side database and cookies.
+Upon 'navigating', the application will need a method of storing and retrieving 'pages' from a cache. Unless of course we want to slow down the speed of loading 'pages', which is meant to be a significant benefit of SPAs. Storage options could include memory, local (or session) storage, client-side database and cookies.
 
 **Note: The words 'navigating' and 'pages' are in quotes because SPAs, by definition don't have the concept of navigation and pages in the traditional sense. Quotes will be discarded for brevity going forward.**
 
-The application will also need to determine when to store and retrieve pages from it. Navigation typically utilises `pushState` or `hashchange` and the application will need to differentiate between the user changing the URL (via clicking a link or typing a URL in the location bar) or manually hitting back/forward, which is not trivial [[2](#ref2)].
+The application will also need to determine when to store and retrieve pages from it. Navigation typically utilises *pushState* or *hashchange* and the application will need to differentiate between the user changing the URL (via clicking a link or typing a URL in the location bar) or manually hitting back/forward, which is not trivial [[2](#ref2)].
 
 ## 2. Navigation and remembering scroll history position
 
@@ -41,7 +41,7 @@ Browsers remember the scroll position of the pages you have visited which is ver
 
 > "Lots of sites get this wrong and it’s really annoying. When the user navigates using the browser’s forward or back button the scroll position should be the same as it was last time they were on the page. This sometimes works correctly on Facebook but sometimes doesn’t. Google+ always seems to lose your scroll position."
 
-Clicking forward or back should remember the scroll position, but unfortunately, as SPAs rely on faux navigation this functionality is absent.
+Clicking forward or back should remember the scroll position, but unfortunately, as SPAs rely on faux navigation this functionality is lost.
 
 Upon navigation, the application will need to remember the scroll position so that it can be retrieved later. This is a topic heavily related to "Navigation and fast back" discussed previously.
 
