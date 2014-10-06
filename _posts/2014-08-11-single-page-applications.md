@@ -51,7 +51,7 @@ Browsers provide a cancel button, which when pressed, cancels the loading of the
 
 Pages in SPAs are likely to be retrieved via XHR, meaning several requests could be in progress at the same time; the first page request might be loaded last, even though it should have been cancelled out by the second page request.
 
-Also, the *same* link could be clicked twice, meaning the page will be requested (and loaded) twice, which is not efficient and could also cause visual glitches.
+Also, the same link could be clicked twice, meaning the page will be requested (and loaded) twice, which is not efficient and could also cause visual glitches.
 
 The application needs to reproduce the aforementioned browser functionality. This means exposing a custom cancel button, which is obviously not desirable, and the application needs to handle duplicate requests as well as cancelling out all previous requests that are still in progress.
 
