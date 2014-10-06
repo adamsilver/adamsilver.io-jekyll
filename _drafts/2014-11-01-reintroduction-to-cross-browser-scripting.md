@@ -14,15 +14,11 @@ This article won't provide you with anything that hasn't already been shared by 
 TODO:
 You won't find these guys with shiny [0] blogs [0] trying to sell [0] you something. However, what you *will* find is that the information and techniques stand the test of time and avoid common pitfalls that most developers have faced, yet failed to understand and therefore have implemented poor technial solutions that ultimately pain the end-users and force them to visit competitor sites.
 
-## Coding on the client
+## Cient-side challenges
 
-When server-side developers produce software they program against a known development environment. They are in complete control of the machine it runs on and what software it has running.
+When server-side developers produce software, they program against a single known and controlled development environment. Client-side developers don't have this luxury. There are so many different browsers and browser versions running on different operating systems and devices. Even in the early days there was more than one browser vendor installed on more than one type of desktop computer. 
 
-Client-side developers don't have this luxury. There are so many different browsers and browser versions running on different operating systems and devices. Even in the days of yore there was more than one browser vendor installed on more than one type of desktop computer.
-
-And now there are browsers on watches, car radios, games consoles, mobile phones, tablets, fridges, glasses, tvs and more.
-
-It appears to be quite a challenge, scrap that nigh on impossible to build a website that can be reliably consumed on all of the above - or *is* it?
+Now there are browsers on watches, car radios, games consoles, mobile phones, tablets, fridges, glasses, tvs and more. It appears to be quite a challenge, scrap that nigh on impossible to build a website that can be reliably consumed on all of the above - or *is* it?
 
 ## HTML and CSS naturally degrade gracefully
 
