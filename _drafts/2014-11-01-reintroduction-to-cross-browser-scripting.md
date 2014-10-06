@@ -20,19 +20,13 @@ When server-side developers produce software, they program against a single know
 
 Now there are browsers on watches, car radios, games consoles, mobile phones, tablets, fridges, glasses, tvs and more. It appears to be quite a challenge, scrap that nigh on impossible to build a website that can be reliably consumed on all of the above - or *is* it?
 
-## HTML and CSS naturally degrade gracefully
+## JS doesn't naturally degrade gracefully like HTML/CSS
 
-When a browser doesn't recognise an HTML element the worst thing that happens is the piece of content isn't shown, as would be the case with the *video* element. Even in this case, alternative content can be displayed such as text/images.
+When a browser doesn't recognise an HTML element the worst thing that happens is the piece of content isn't shown, as would be the case with the *video* element. Even in this case, alternative content can be displayed such as text/images. When a browser doesn't support a particular CSS ruleset, the element may end up without those styles but can still be consumed pretty comfortably.
 
-If a browser doesn't support a particular CSS ruleset the element may end up without those styles but can still be consumed pretty comfortably.
+JS on the other hand can leave a page broken. Imagine enhancing a form with script that prevents the default action and continues to execute script that the browser doesn't support. The user is left with an inability to submit the form. This *is* a deal breaker!
 
-## But what's different about script?
-
-HTML and CSS naturally degrade. If an HTML element is not understood the page won't fundamentally break and most often the content within the tag is still displayed for consumption. If CSS is not understood then the element loses that style - none of this is a deal breaker!
-
-Script on the other hand can leave a page broken. Imagine enhancing a form with script that prevents the default action and continues to execute script that the browser can't handle. The user is left with an inability to submit the form. This *is* a deal breaker!
-
-So what do we do instead?
+## So what do we do instead?
 
 Take the previous example and imagine if we could ask the browser a few questions before trying to execute our script, such as *Will you let me retrieve the form element? Will you let me react to the submit event? Will you let me prevent the default action? Will you let me check if the form field is valid? If it is valid can I submit the form?*
 
@@ -42,20 +36,15 @@ There is no value in asking what browser they are [link to something saying how 
 
 Once you have asked these questions correctly the script can stand the test of time and run safely on any browser no matter the device, no matter when it was released even in the future. If the browser cannot handle this then that feature reverts to a js-disabled equivalent where in this case the server will provide validation with a page refresh.
 
-Peter Michaux [4] demonstrates this technique in his article "Cross-browser widgets" [5].
+Peter Michaux demonstrates this technique in his article "Cross-browser widgets" [0].
 
-## The meaning of the word 'support'
+## Conclusion
 
-Developers often use the word support in-place of the 'care about' or 'test in'. Often their support is based on the foundation of another library and *their* 'support'.
+> You're only as good as your lowest level function
 
-If a developer says 'we support IE7 and up' what they are saying is 'we don't care about IE6, we don't test in IE6, our page may or may not break in IE6, our libraries may not support IE6'.
+If a developer says 'we support IE7 and up' what they are realling saying is 'we don't care about IE6, we don't test in IE6, our page may or may not break in IE6, our libraries may or may not support IE6'. Poor users. Often support is based on the foundation of another library and *their* 'support'. David Mark says "You're only as good as your lowest level function".
 
-Having now demonstrated cross-browser techniques the meaning of 'support' changes.
-
-YUI support matrix?
-
-Developers usually mean to say 'care about' as opposed to the word support. Let's take an example. If a developer says "we only support IE7+""
-
+After understanding and utilising Cross-browser scripting, the meaning of *support* changes all together. Support means an enhanced experienced and lack of support means the degraded experience. Happy users.
 
 ## TODO
 - P.E. Is Cross Browser Scripting
