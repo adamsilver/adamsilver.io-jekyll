@@ -5,10 +5,13 @@ date:   2014-11-01 09:00:01
 categories: js
 ---
 
-Have you heard of *isHostMethod*? Do you know the difference between Multi-browser and Cross-browser scripting? Understand the real reasons why Javascript frameworks need updating to keep up with new browsers? Bogged down by User Agent sniffing and Adaptive Design? If the answer to any of these questions is *no* then keep reading.
+Have you heard of *isHostMethod*? Do you know the difference between Multi-browser and Cross-browser scripting? Understand the real reasons why Javascript frameworks need updating to keep up with new browsers? Are you bogged down by User Agent sniffing and Adaptive Design? If this sounds like you, keep reading!
 
-The truth is this article won't provide you with anything that hasn't already been shared by the aformentioned people above but I hope that merely reintroducing some of it may urge other developers to take the red pill.
+## Nothing new
 
+This article won't provide you with anything that hasn't already been shared by others but it is somewhat lost in the industry and I hope that merely reintroducing some of the information here may urge others to take a deeper interest.
+
+TODO:
 You won't find these guys with shiny [0] blogs [0] trying to sell [0] you something. However, what you *will* find is that the information and techniques stand the test of time and avoid common pitfalls that most developers have faced, yet failed to understand and therefore have implemented poor technial solutions that ultimately pain the end-users and force them to visit competitor sites.
 
 ## Coding on the client
