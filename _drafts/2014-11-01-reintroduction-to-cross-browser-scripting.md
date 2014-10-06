@@ -22,11 +22,9 @@ Now there are browsers on watches, car radios, games consoles, mobile phones, ta
 
 ## HTML and CSS naturally degrade gracefully
 
-Af a browser doesn't recognise an HTML element the worst that happens is the piece of content isn't shown as would be the case with the video element. But even in this case you can provide alternative content that would be displayed - for example some text or images.
+When a browser doesn't recognise an HTML element the worst thing that happens is the piece of content isn't shown, as would be the case with the *video* element. Even in this case, alternative content can be displayed such as text/images.
 
-If a browser doesn't support a particular CSS ruleset the element may end up without styles.
-
-No deal-breakers so far...
+If a browser doesn't support a particular CSS ruleset the element may end up without those styles but can still be consumed pretty comfortably.
 
 ## But what's different about script?
 
