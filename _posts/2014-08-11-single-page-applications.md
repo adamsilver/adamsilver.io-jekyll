@@ -19,7 +19,7 @@ So, about those issues:
 
 ## 1. Navigation and fast back
 
-Browsers store history, meaning, these pages can load very quickly when the user presses the back button. SPAs need to recreate this functionality. As Daniel Puplus says in his article [[1](#ref1)]:
+Browsers store history, meaning pages load very quickly when the user presses the back button. SPAs need to recreate this functionality. As Daniel Puplus says in his article [[1](#ref1)]:
 
 > "Back should be quick; users don’t expect data to have changed much.
 
