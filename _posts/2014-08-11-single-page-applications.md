@@ -11,7 +11,7 @@ Before we get into the issues, let's take this opportunity to briefly discuss wh
 
 ## MVC, MVVM, DOM manipulation, XHR etc
 
-It's common to associate these elements with SPAs, and whilst these techniques *might* be commonly found in SPAs, this article doesn't address these aspects. This is because they aren't necessarily detrimental to a website; a website could employ all of these elements without utilising a SPA architecture; it might even be sensible to do so!
+It's common to associate these acroynyms with SPAs, and whilst they might be commonly found in SPAs, this article doesn't them specifically. This is because they aren't necessarily detrimental to a website; a website could employ all of these techniques without utilising a SPA architecture; it might even be sensible to do so.
 
 What *really* defines an SPA is the fact that the **routing is handled by the client-side application using Javascript** instead of the server. Instead of letting the *browser* handle the browsing, the *application* will. Attempting to mimic the browser using Javascript is the primary reason why issues arise in the first place.
 
