@@ -5,13 +5,7 @@ date:   2014-11-01 09:00:01
 categories: js
 ---
 
-* Heard of `isHostMethod`?
-* Know the difference between multi-browser and cross-browser scripting?
-* Truly understand why websites constantly need upgrading to keep up with new browsers?
-* Still 'optimising' for mobile?
-* Never taken note of professional javascript experts such as Richard Cornford, David Mark and Thomas Lahn?
-
-If the answer to any of the above is *no* then keep reading.
+Have you heard of *isHostMethod*? Do you know the difference between Multi-browser and Cross-browser scripting? Understand the real reasons why Javascript frameworks need updating to keep up with new browsers? Bogged down by User Agent sniffing and Adaptive Design? If the answer to any of these questions is *no* then keep reading.
 
 The truth is this article won't provide you with anything that hasn't already been shared by the aformentioned people above but I hope that merely reintroducing some of it may urge other developers to take the red pill.
 
@@ -70,3 +64,4 @@ Developers usually mean to say 'care about' as opposed to the word support. Let'
 - P.E. Is Cross Browser Scripting
 - 'Feature Detection: State of the Art Browser Scripting'
 - 'Browser Detection (and What to Do Instead'
+- Still 'optimising' for mobile?
