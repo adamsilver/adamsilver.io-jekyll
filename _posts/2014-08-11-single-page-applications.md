@@ -51,23 +51,21 @@ The application will need to handle this functionality too. This means exposing 
 
 ## Navigation and data loss
 
-Browsers normally provide the *beforeunload* event which allows the application to warn against losing unsaved changes. The application will need to provide this functionality, before any routing takes place.
+Browsers normally provide the *beforeunload* event which allows the application to warn against losing unsaved changes. The application router will need to provide a hook to repicate this functionality.
 
 ## Search engine optimisation
 
-Some SPAs don't require SEO. For those that do, whilst there are solutions, they aren't simple [[3](#ref3)].
+Some SPAs don't require SEO, but for those that do, the solutions aren't straightforward [[3](#ref3)].
 
 ## Navigation and loading CSS &amp; JS
 
-If an SPA grows to a significant size, loading the entire application on page load may be detrimental to the experience because it's akin to loading all pages of a website when only the home page was requested.
-
-Unfortunately, this leads to the requirement to load CSS and JS for certain pages. Script loading is notoriously difficult and contains unreliable hacks [[4](#ref4)]. This can be fatal to the reliability of the application. Reliability should obviously be valued highly.
+If an SPA grows to a significant size, loading the entire application on page load may be detrimental to the experience because it's akin to loading all pages of a website when only the home page was requested. Unfortunately, this leads to attempting to load CSS and JS for certain pages. Script loading is notoriously difficult and contains unreliable hacks [[4](#ref4)]. This can be fatal to the reliability of the application.
 
 ## Summary
 
-SPAs are meant to provide a better experience. It is therefore ironic that SPAs require significantly more development effort, with a result that is detrimental to the user experience. Javascript is never going to do it better than the browser! Websites can still have rich-user interfaces without cramming the entire site into one document.
+SPAs are meant to provide a better experience. It is therefore ironic that SPAs require significantly more development effort, with a result that is detrimental to the user experience. Javascript is never going to do it better than the browser! Websites can still have Rich User Interfaces without cramming the entire site into one document.
 
-Furthermore, it is interesting to note that sites, such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)], realised the SPA architecture was a mistake and have since reverted their architectures. The issues described in this article are self-induced. Remember, **avoiding the SPA architecture avoids the issues**.
+Furthermore, it is interesting to note that sites such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)] realised the SPA architecture was a mistake and have since reverted their architectures. The issues described in this article are self-induced. Remember, **avoiding the SPA architecture avoids the issues**.
 
 <p class="callout">For the fun, sarcastic and non-technical version of this article please read <a href="https://tommorris.org/posts/2547">Introducing awfulness.js by Tom Morris</a></p>
 
