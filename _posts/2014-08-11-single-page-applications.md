@@ -15,9 +15,9 @@ Whilst it's common to associate MVC, MVVM, XHR, DOM manipulation (and more) with
 
 So, about those issues:
 
-## 1. Navigation and fast back
+## Navigation and fast back
 
-Browsers store history, meaning pages load very quickly when the user presses the back button. SPAs need to recreate this functionality. As Daniel Puplus says in his article [[1](#ref1)]:
+Browsers store history, meaning pages load quickly when the user presses the *back* button. SPAs need to recreate this functionality. As Daniel Puplus says in his article [[1](#ref1)]:
 
 > "Back should be quick; users don’t expect data to have changed much.
 
@@ -29,39 +29,35 @@ Browsers store history, meaning pages load very quickly when the user presses th
 
 Upon 'navigating', the application will need a method of storing and retrieving 'pages' from a cache. Unless of course we want to slow down the speed of loading 'pages', which is meant to be a significant benefit of SPAs. Storage options could include memory, local (or session) storage, client-side database and cookies.
 
-**Note: The words 'navigating' and 'pages' are in quotes because SPAs, by definition don't have the concept of navigation and pages in the traditional sense. Quotes will be discarded for brevity going forward.**
+**Note: The words 'navigating' and 'pages' are in quotes because SPAs, by definition don't have the concept of navigation and pages in the traditional sense. Quotes will be discarded going forward for brevity.**
 
-The application will also need to determine when to store and retrieve pages from it. Navigation typically utilises *pushState* or *hashchange* and the application will need to differentiate between the user changing the URL (via clicking a link or typing a URL in the location bar) or manually hitting back/forward, which is not trivial [[2](#ref2)].
+The application will also need to determine *when* to store and retrieve pages from the cache. Navigation typically utilises *pushState* or *hashchange* and the application will need to differentiate between the user changing the URL (via clicking a link or typing a URL in the location bar) or manually hitting back/forward, which is not straightforward [[2](#ref2)].
 
-## 2. Navigation and remembering scroll history position
+## Navigation and remembering scroll history position
 
-Browsers remember the scroll position of the pages you have visited which is very convenient. As Daniel Puplus says in his article:
+Browsers conveniently remember the scroll position of the pages you have visited and as Daniel Puplus says in his article:
 
 > "Lots of sites get this wrong and it’s really annoying. When the user navigates using the browser’s forward or back button the scroll position should be the same as it was last time they were on the page. This sometimes works correctly on Facebook but sometimes doesn’t. Google+ always seems to lose your scroll position."
 
-Clicking forward or back should remember the scroll position, but unfortunately, as SPAs rely on faux navigation this functionality is lost.
+Clicking forward or back should remember the scroll position, but unfortunately, as SPAs rely on faux navigation this functionality is lost. Upon navigation, the application will need to remember the scroll position so that it can be retrieved later. This is a topic heavily related to "Navigation and fast back" discussed previously.
 
-Upon navigation, the application will need to remember the scroll position so that it can be retrieved later. This is a topic heavily related to "Navigation and fast back" discussed previously.
+## Cancelling navigation
 
-## 3. Cancelling navigation
+The browser provides a *cancel* button, which when pressed, cancels the loading of the requested page. If a user clicks another link, the browser will cancel the previous request if one is in progress. This is useful for performance and also ensures the user's internet data allowance isn't eaten up unnecessarily.
 
-Browsers provide a cancel button, which when pressed, cancels the loading of the requested page. Also, if a user clicks another link, the browser will cancel the previous request. This is useful for performance and also ensures the user's internet data allowance isn't eaten up unnecessarily.
+SPA pages are likely to be retrieved via XHR, meaning several requests could be in progress at the same time; the first page request might be loaded last, even though it should have been cancelled out by the second page request. Also, the same link could be clicked twice, meaning the page will be requested (and loaded) twice, which is not efficient and could also cause visual glitches.
 
-Pages in SPAs are likely to be retrieved via XHR, meaning several requests could be in progress at the same time; the first page request might be loaded last, even though it should have been cancelled out by the second page request.
+The application will need to handle this functionality too. This means exposing a custom *cancel* button (which is obviously not desirable), and the application needs to handle duplicate requests as well as cancelling all previous (in-progress) requests.
 
-Also, the same link could be clicked twice, meaning the page will be requested (and loaded) twice, which is not efficient and could also cause visual glitches.
-
-The application now needs to handle this browser functionality. This means exposing a custom cancel button, which is obviously not desirable, and the application needs to handle duplicate requests as well as cancelling out all previous requests that are still in progress.
-
-## 4. Navigation and data loss
+## Navigation and data loss
 
 Browsers normally provide the *beforeunload* event which allows the application to warn against losing unsaved changes. The application will need to provide this functionality, before any routing takes place.
 
-## 5. Search engine optimisation
+## Search engine optimisation
 
 Some SPAs don't require SEO. For those that do, whilst there are solutions, they aren't simple [[3](#ref3)].
 
-## 6. Navigation and loading CSS &amp; JS
+## Navigation and loading CSS &amp; JS
 
 If an SPA grows to a significant size, loading the entire application on page load may be detrimental to the experience because it's akin to loading all pages of a website when only the home page was requested.
 
