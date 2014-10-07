@@ -5,15 +5,13 @@ date:   2014-08-11 09:00:01
 categories: js
 ---
 
-Single page applications (SPA) have become extremely popular in the web development world, but often in this industry, popularity is not necessarily a good sign. SPAs are *supposed* to 'provide a more fluid user experience' [[0](#ref0)] but there are a number of technical issues to tackle when building them. Unfortunately, this can be detrimental to the user experience.
+Single page applications (SPAs) have become extremely popular on the web, because they are *supposed* to 'provide a more fluid user experience' [[0](#ref0)]. However, there are several technical issues which can be detrimental to the User Experience.
 
 Before we get into the issues, let's take this opportunity to briefly discuss what differentiates SPAs from traditional architectures.
 
-## MVC, MVVM, DOM manipulation, XHR etc
+## What differentiates SPAs from a traditional website?
 
-It's common to associate these acroynyms with SPAs, and whilst they might be commonly found in SPAs, this article doesn't them specifically. This is because they aren't necessarily detrimental to a website; a website could employ all of these techniques without utilising a SPA architecture; it might even be sensible to do so.
-
-What *really* defines an SPA is the fact that the **routing is handled by the client-side application using Javascript** instead of the server. Instead of letting the *browser* handle the browsing, the *application* will. Attempting to mimic the browser using Javascript is the primary reason why issues arise in the first place.
+Whilst it's common to associate MVC, MVVM, XHR, DOM manipulation (and more) with an SPA, this article doesn't address these aspects. This is because a website could incorporate all of these techniques without utilising an SPA architecture. What *really* defines an SPA is the fact that the **routing is handled by the client-side application using Javascript** instead of the server. Instead of letting the *browser* handle the browsing, the *application* does. Attempting to mimic the browser using Javascript is the primary reason why issues arise in the first place.
 
 So, about those issues:
 
