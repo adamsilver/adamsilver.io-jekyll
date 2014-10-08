@@ -5,11 +5,11 @@ date:   2014-08-11 09:00:01
 categories: js
 ---
 
-Single page applications (SPAs) have become extremely popular on the web, because they are *supposed* to 'provide a more fluid user experience' [[0](#ref0)]. However, there are several technical issues which can be detrimental to the User Experience. Before getting to the issues, let's first discuss the difference between SPAs and traditional multi-page websites (MPW).
+Single page applications (SPAs) have become extremely popular on the web, because they are *supposed* to 'provide a more fluid user experience' [[0](#ref0)]. However, there are several technical issues which can be detrimental to the User Experience. Before getting to the issues, let's first discuss the difference between an SPA and a traditional multi-page website (MPW).
 
 ## What differentiates SPAs from a traditional website?
 
-Whilst it's common to associate MVC, MVVM, XHR, DOM manipulation (and more) with an SPA, this article doesn't address them because they could be utilised in an MPW. What *really* defines an SPA is that the **routing is handled by the client-side application using Javascript instead of the server**. The application handles the browing instead of the browser. Attempting to mimic the browser using Javascript is the root cause of the self-induced problem.
+Whilst it's common to associate MVC, MVVM, XHR, DOM manipulation (and more) with an SPA, this article doesn't address them because they could *also* be utilised in an MPW. What *really* defines an SPA is that the **routing is handled by the client-side application using Javascript, instead of the server**. This means the application handles the browsing instead of the browser. Attempting to mimic the browser using Javascript is the root cause of the self-induced issues.
 
 ## Issues
 
