@@ -5,7 +5,7 @@ date:   2014-08-11 09:00:01
 categories: js
 ---
 
-Single page applications (SPAs) have become extremely popular on the web, because they are *supposed* to 'provide a more fluid user experience' [[0](#ref0)]. However, there are several technical issues which can be detrimental to the User Experience. Before getting to the issues, let's first discuss the difference between an SPA and a traditional multi-page website (MPW).
+Single Page Applications (SPAs) have become extremely popular on the web, because they are *supposed* to 'provide a more fluid user experience' [[0](#ref0)]. However, there are several technical issues which can be detrimental to the User Experience. Before getting to the issues, let's first discuss the difference between an SPA and a traditional multi-page website (MPW).
 
 ## What differentiates SPAs from a traditional website?
 
