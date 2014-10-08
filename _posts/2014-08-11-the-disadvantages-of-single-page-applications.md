@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Single page applications"
+title:  "The disadvantages of Single Page Applications"
 date:   2014-08-11 09:00:01
 categories: js
 ---

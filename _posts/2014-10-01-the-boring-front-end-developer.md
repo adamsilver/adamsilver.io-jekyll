@@ -39,7 +39,7 @@ The BFED will adhere to the following quote (by Anon):
 
 > As a Lead JavaScript Engineer, I try to get my team to write as little JavaScript as possible
 
-Furthermore the BFED realises that [Single Page Applications cause severe problems](/articles/single-page-applications/) and that by avoiding them and leaning on the server appropriately provides a better experience and reach.
+Furthermore the BFED realises that [Single Page Applications cause severe problems](/articles/the-disadvantages-of-single-page-applications/) and that by avoiding them and leaning on the server appropriately provides a better experience and reach.
 
 ## CV
 
