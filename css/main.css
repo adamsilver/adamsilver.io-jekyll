@@ -228,6 +228,7 @@ a img {
 #header h1 a {
     display: block;
     text-decoration: none;
+    color: #2c3e50;
 }
 
 #header h1 span {
