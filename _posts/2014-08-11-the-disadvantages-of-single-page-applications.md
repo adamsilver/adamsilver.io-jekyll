@@ -45,11 +45,11 @@ The browser provides a *cancel* button, which when pressed, cancels the loading 
 
 SPA pages are likely to be retrieved via XHR, meaning several requests could be in progress at the same time; the first page request might be loaded last, even though it should have been cancelled out by the second page request. Also, the same link could be clicked twice, meaning the page will be requested (and loaded) twice, which is not efficient and could also cause visual glitches.
 
-The application will need to handle this functionality too. This means exposing a custom *cancel* button (which is obviously not desirable), and the application needs to handle duplicate requests as well as cancelling all previous (in-progress) requests.
+The application will need to handle this functionality too. This means exposing a custom *cancel* button (which is obviously not desirable), and the duplicate requests need handling as well as cancelling all previous (in-progress) requests.
 
 ### Navigation and data loss
 
-Browsers normally provide the *beforeunload* event which allows the application to warn against losing unsaved changes. The application router will need to provide a hook to repicate this functionality.
+Browsers normally provide the *beforeunload* event which allows the application to warn against losing unsaved changes. The application router will need to provide a hook to repicate this functionality i.e. *beforeRouting*.
 
 ### Search engine optimisation
 
@@ -57,11 +57,11 @@ Some SPAs don't require SEO, but for those that do, the solutions aren't straigh
 
 ### Navigation and loading CSS &amp; JS
 
-If an SPA grows to a significant size, loading the entire application on page load may be detrimental to the experience because it's akin to loading all pages of a website when only the home page was requested. Unfortunately, this leads to attempting to load CSS and JS for certain pages. Script loading is notoriously difficult and contains unreliable hacks [[4](#ref4)]. This can be fatal to the reliability of the application.
+If an SPA grows to a significant size, loading the entire application on page load may be detrimental to the experience because it's akin to loading all pages of a website when only the home page was requested. Unfortunately, this leads to attempting to load CSS and JS for certain pages. Script loading is notoriously difficult and contains unreliable hacks [[4](#ref4)] which can can be fatal to the reliability of the application.
 
 ## Summary
 
-SPAs are meant to provide a better experience. It is therefore ironic that SPAs require significantly more development effort, with a result that is detrimental to the user experience. Javascript is never going to do it better than the browser! Websites can still have Rich User Interfaces without cramming the entire site into one document.
+SPAs are meant to provide a better experience. It is therefore ironic that SPAs require significantly more development effort, with a result that is detrimental to the user. Javascript is never going to do it better than the browser! Websites can still have Rich User Interfaces without cramming the entire site into one document.
 
 Furthermore, it is interesting to note that sites such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)] realised the SPA architecture was a mistake and have since reverted their architectures. The issues described in this article are self-induced. Remember, **avoiding the SPA architecture avoids the issues**.
 
