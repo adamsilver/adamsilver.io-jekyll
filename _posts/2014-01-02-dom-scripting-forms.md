@@ -5,19 +5,17 @@ date:   2014-01-02 09:00:59
 categories: js
 ---
 
-The HTML DOM has dedicated APIs for retrieving and manipulating forms and controls. It’s always important to use the right API and in this case the DOM 0 API [[0](#ref0)] Forms collection is appropriate but unfortunately often forgotten.
-
-There are just a few simple ways to script your forms. Let's dive in:
+The HTML DOM has dedicated APIs for retrieving and manipulating form controls. The DOM0 [[0](#ref0)] Forms Collection API is perfect for this but unfortunately often forgotten. This article describes how to use this API.
 
 ## Accessing a form
 
-Accessing a form with a name attribute 'login' is as follows:
+Accessing a form with a Name attribute value of *login* is as follows:
 
 	var loginForm = document.forms.login;
 
 ## Accessing form controls
 
-Once we have the form we can retrieve all the controls in a form:
+Accessing the controls within the form is as follows:
 
 	var loginControls = loginForm.elements;
 
@@ -25,7 +23,7 @@ Note: If the login form contained a username and password control then `loginCon
 
 ## Accessing a control by name
 
-There are several types of control: input, select, textarea, etc. Having retrieved the controls earlier we can loop over each control or retrieve a particular control by index or name. Retrieving a control by name is as follows:
+There are several types of control including input, select, textarea, etc. Having retrieved the controls earlier we can loop over each control or retrieve a particular control by index or name. Retrieving a control by name is as follows:
 
 	var usernameControl = loginControls.username;
 
