@@ -5,9 +5,13 @@ date:   2014-09-17 09:00:01
 categories: accessibility
 ---
 
-Unfortunatley, some websites choose to employ a select menu that will submit a form when the value is changed; and with the submit button omitted from the User Interface (UI). The rationale behind this decision is ironically to improve the User Experience (UX), but in reality it is the opposite. Visually...
+Unfortunately, some websites choose to employ a select menu that will submit a form when the value is changed; and with the submit button omitted from the User Interface (UI). The rationale behind this decision is ironically to improve the User Experience (UX), but in reality it is worse.
 
-...this is *Good*:
+## Visual differences
+
+It may be easier to understand the differences when displayed as follows:
+
+### Good
 
 <div class="ui">
 	<form>
@@ -23,7 +27,7 @@ Unfortunatley, some websites choose to employ a select menu that will submit a f
 	</form>
 </div>
 
-...and this is *Bad*:
+### Bad
 
 <div class="ui">
 	<form>
