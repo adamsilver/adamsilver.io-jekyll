@@ -13,7 +13,7 @@ Creating accessible forms is very simple. There are basic rules to follow:
 
 Labels provide information about each control. Visual users will see the label and visually impaired users may use a screen reader which will read out the label. Labels are only needed for controls that provide a vessel for input e.g. submit buttons are fine without.
 
-Additionally browsers may provide the ability to click a label which will either move focus to the control or even mark the control as checked in the case of a checkbox or radio control.
+Additionally, browsers may provide the ability to click a label which will either move focus to the control or even mark the control as checked in the case of a checkbox or radio control.
 
 Associating a control with a label as follows:
 
@@ -24,7 +24,7 @@ Note: the `for` attribute associates a label with another control explicitly by 
 
 ## Fieldsets and related controls
 
-Fieldsets provide information about a group of related controls. Typically this is useful for controls with a type attribute `radio` or `checkbox`.
+Fieldsets provide information about a group of related controls. Typically this is useful for controls with a type attribute *radio* or *checkbox*.
 
 Imagine a form control which allows the user to choose their favourite colour. The choices are represented as radios with associated labels: Red, Yellow and Blue.
 
@@ -39,9 +39,7 @@ Imagine a form control which allows the user to choose their favourite colour. T
 
 ## Optional radio group control
 
-Radio controls can not be toggled; once marked as checked they cannot be unchecked until a different radio control is checked. Therefore it is imperative that an additional radio control is added with a 'None selected' option so that the user may change their mind.
-
-An example follows:
+Radio controls can not be toggled; once marked as checked they cannot be unchecked until a different radio control is checked. Therefore it is imperative that an additional radio control is added with a 'None selected' option so that the user may change their mind. An example follows:
 
 	<fieldset>
 		<legend>Favourite colour</legend>
@@ -67,9 +65,7 @@ The optgroup element can improve accessibility of the options within a select co
 
 ## Don't abuse select controls
 
-The select control provides a list of options of which one can be selected for input. An accessibility issue can arise when script is used to submit the form when the select's change event fires.
-
-Keyboard users may struggle. If a user wants to select the 4th option this would then require 3 form submissions which would be a terribly frustrating experience.
+The select control provides a list of options of which one can be selected for input. An [accessibility/usability issue can arise when script is used to submit the form when the select's change event fires](/articles/select-menu-accessibility-issues/). Keyboard users may struggle. If a user wants to select the 4th option this would then require 3 form submissions which would be a terribly frustrating experience.
 
 ## Avoid multiple select controls
 
