@@ -15,7 +15,7 @@ This article won't provide you with anything that hasn't already been shared by 
 
 When server-side developers produce software, they program against a single known and controlled development environment. Client-side developers don't have this luxury. There are so many different browsers and browser versions running on different operating systems and devices. Even in the early days there was more than one browser vendor installed on more than one type of desktop computer. 
 
-Now there are browsers on watches, car radios, games consoles, mobile phones, tablets, fridges, glasses, tvs and more. It appears to be quite a challenge, scrap that nigh on impossible to build a website that can be reliably consumed on all of the above - or *is* it?
+Now there are browsers on watches, car radios, games consoles, mobile phones, tablets, fridges, glasses, tvs and more. It appears to be quite a challenge, scrap that nigh on impossible to build a website that can be reliably consumed on all of the above. Or *is* it?
 
 ## JS doesn't naturally degrade gracefully like HTML/CSS
 
