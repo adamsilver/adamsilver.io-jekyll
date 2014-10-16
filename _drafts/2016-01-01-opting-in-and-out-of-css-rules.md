@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Opting in and out of CSS rules"
-date:   2014-03-01 09:00:01
+date:   2016-01-01 09:00:01
 categories: css
 ---
 

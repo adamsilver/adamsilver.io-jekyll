@@ -27,7 +27,7 @@ JS on the other hand can leave a page broken. Imagine enhancing a form with scri
 
 Take the previous example and imagine if we could ask the browser a few questions before trying to execute our script, such as *Will you let me retrieve the form element? Will you let me react to the submit event? Will you let me prevent the default action? Will you let me check if the form field is valid? If it is valid can I submit the form?* 
 
-Guess what? You *can* ask the browser these questions. Notice, also that these questions can be asked to *any* browser. 
+Guess what? You *can*. And best of all, these questions can be asked to any browser.
 
 There is no value in asking what browser they are [link to something saying how crap browser detection is]. Imagine asking if they are Firefox on Android 2.3 and then having to infer what the answers are to the above questions and based on that executing the script? Imagine repeating that for every browser, imagine repeating that for every feature.
 
