@@ -5,7 +5,7 @@ date:   2014-10-01 09:00:01
 categories: bfed
 ---
 
-*Cool* front-end developers are always *pushing the envelope*, jumping out of their seat to use the latest and greatest and shiniest of UI frameworks and libraries. They are often found bridging the gap between native apps and web and so will strive to make the UI look and behave like an app. *Which app?* you may ask. *iPhone? Android? What version?* All good questions, alas another topic all together. However, there is another kind of front-end developer, the *boring* front-end developer. Here is an ode to the *boring* front-end developer, *BFED* if you will.
+*Cool* front-end developers are always *pushing the envelope*, jumping out of their seat to use the latest and greatest and shiniest of UI frameworks and libraries. They are often found bridging the gap between native apps and web and so will strive to make the UI look and behave like an app. *Which app?* you may ask. *iPhone? Android? What version?* All good questions, alas another topic altogether. However, there is another kind of front-end developer, the *boring* front-end developer. Here is an ode to the *boring* front-end developer, *BFED* if you will.
 
 ## Preprocessors
 
