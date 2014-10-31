@@ -13,7 +13,7 @@ This article won't provide you with anything that hasn't already been [shared](h
 
 ## Client-side challenges are unique
 
-When server-side developers produce software, they program against a single known and controlled development environment. Client-side developers don't have this luxury. There are so many different browsers and browser versions running on different operating systems and devices. Even when the Internet was young there was more than one browser.
+When server-side developers produce software, they program against a single known and controlled development environment. Client-side developers don't have this luxury. There are so many different browsers and browser versions running on different operating systems and devices. Even when the Internet was young there was more than one browser. This is the beauty of the web, not its downfall.
 
 Now there are browsers on watches, car radios, games consoles, mobile phones, tablets, fridges, glasses, tvs and more. It appears to be quite a challenge, scrap that, nigh on impossible to build a website that can be reliably consumed on all browsers. Or *is* it?
 
@@ -39,9 +39,9 @@ Peter Michaux demonstrates this in his article [[1](#ref1)] using the concept of
 
 ## Summary
 
-Traditionally, when writing Multi-browser scripts, dropping browser support means, no testing in that browser, and that it is likely broken, meaning of course, the user suffers.
+Traditionally, when writing Multi-browser scripts, dropping browser support means no testing in that browser, and that it is likely broken, meaning of course, the user suffers.
 
-With Cross-browser scripting, the meaning of support changes. The user is always supported, but may get the enhanced or degraded experience. That's okay. **This is the beauty of the web, *not* its downfall.**
+With Cross-browser scripting, the meaning of support changes. The user is always supported, but may get the enhanced or degraded experience. That's okay, they won't mind.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
