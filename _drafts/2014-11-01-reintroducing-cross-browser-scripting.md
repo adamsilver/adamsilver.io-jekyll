@@ -37,13 +37,11 @@ Guess what? You *can*.
 
 Peter Michaux demonstrates this in his article [[1](#ref1)] using the concept of Feature Detection and Feature Testing. Once you have asked these questions, the script can run safely on any browser, old, current or even in the future. If the browser answers *no* to (any of) these questions, the behaviour reverts to a js-disabled degraded equivalent. In this example, the server will validate the form. **This *is* Progressive Enhancement!**
 
-## The meaning of *support*
+## Summary
 
 Traditionally, when writing Multi-browser scripts, dropping browser support means, no testing in that browser, and that it is likely broken, meaning of course, the user suffers.
 
-With Cross-browser scripting, the meaning of support changes. It boils down to one thing: whether the user will get the enhanced experience or not. And if not, the degraded experience is just fine as the browser can't handle it anyway. This way users can use the site regardless of what browser, device or configuration.
-
-**This is the beauty of the web, *not* its downfall.**
+With Cross-browser scripting, the meaning of support changes. The user is always supported, but may get the enhanced or degraded experience. That's okay. **This is the beauty of the web, *not* its downfall.**
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
