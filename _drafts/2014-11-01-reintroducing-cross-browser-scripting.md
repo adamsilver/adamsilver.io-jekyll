@@ -9,7 +9,7 @@ Have you heard of *isHostMethod*? Do you know the difference between Multi-brows
 
 ## Nothing new
 
-This article won't provide you with anything that hasn't already been [shared](http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting) [previously](http://www.twitter.com/cinsoft) but it is somewhat forgotten about in the industry. I hope reintroducing some of the information urges others to take a deeper look.
+This article won't provide you with anything that hasn't already been [shared](http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting) [previously](http://www.twitter.com/cinsoft) but it is somewhat forgotten about in the industry. I hope reintroducing some of the information here urges others to be more inquisitive about how web UIs are developed.
 
 ## Client-side challenges are unique
 
