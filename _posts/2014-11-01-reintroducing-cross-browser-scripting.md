@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Reintroducing Cross-browser Scripting"
-date:   2014-11-01 09:00:01
+date:   2014-10-31 09:00:01
 categories: js
 ---
 
