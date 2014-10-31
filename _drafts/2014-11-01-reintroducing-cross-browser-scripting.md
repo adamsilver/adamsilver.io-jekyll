@@ -25,15 +25,15 @@ Script on the other hand can leave a page broken. Imagine enhancing a form with 
 
 ## UA sniffing is not the answer
 
-There is no value in reading the UA string [[0](#ref0)] besides identifying the browser and even then, it can be spoofed. It doesn't tell you what features the browser has, so they would need to be inferred. The browser could be without certain features, have plugins enabled or configured differently.
+There is no value in reading the UA string [[0](#ref0)] besides identifying the browser and even then, it can be spoofed. It doesn't tell you what features the browser has, so they would need to be inferred. The browser could be lacking features, have plugins enabled or configured differently, all of which affects the capability and behaviour of the browser.
 
-Even if you forget those things, imagine sniffing, then imagine mapping features to the sniff, then imagine doing that for every browser *and* every feature. It is quite obvious that this technique is fraught with errors and extremely time consuming (read: costly). Browsers and devices are released too frequently to even attempt to keep up with the mapping anyway.
+Even if you forget those things, imagine sniffing, then imagine mapping features to the sniff, then imagine doing that for every browser *and* every feature. It is quite obvious that this technique is fraught with errors and extremely time consuming (read expensive). Browsers and devices are released too frequently to even attempt to keep up with the mapping anyway.
 
 ## How to make Javascript degrade gracefully
 
 Take the previous example and imagine being able to ask the browser a few questions before trying to execute the script, such as *Will you let me retrieve the form element? Will you let me react to the submit event? Will you let me prevent the default action?* Guess what? You *can* and Peter Michaux demonstrates this in his article [[1](#ref1)] using the concept of Feature Detection and Feature Testing.
 
-Once you have asked these questions (written the feature detection/test code), the script can run safely on any browser, old, current or even in the future.If the browser answers *no* to (any of) these questions, the behaviour reverts to a js-disabled degraded equivalent. In this example, the server will validate the form. **This *is* Progressive Enhancement!**
+Once you have asked these questions (written the feature detection/test code), the script can run safely on any browser, old, current or even in the future. If the browser answers *no* to (any of) these questions, the behaviour reverts to a js-disabled degraded equivalent. In this example, the server will validate the form. **This *is* Progressive Enhancement!**
 
 ## Summary
 
