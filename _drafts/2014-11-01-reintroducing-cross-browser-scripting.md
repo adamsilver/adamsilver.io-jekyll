@@ -21,7 +21,7 @@ Now there are browsers on watches, car radios, games consoles, mobile phones, ta
 
 When a browser doesn't recognise an HTML element the worst thing that happens is the piece of content isn't shown, as would be the case with the *video* element. In this case, alternative content can be shown. Similary, when a browser doesn't support a particular CSS ruleset, the element is without those styles but content is still likely to be consumable.
 
-Script on the other hand can leave a page broken. Imagine enhancing a form with script that prevents the default action and continues to execute script that the browser doesn't support. The user is now unable to submit the form which is fatal to the experience.
+Script on the other hand can leave a page broken. As an example, imagine enhancing a form with script that prevents the default action and continues to execute script that the browser doesn't support. The user is now unable to submit the form which is fatal to the experience.
 
 ## UA sniffing is not the answer
 
