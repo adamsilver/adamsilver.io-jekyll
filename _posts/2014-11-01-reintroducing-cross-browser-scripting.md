@@ -35,7 +35,7 @@ Take the previous example and imagine being able to ask the browser a few questi
 
 Guess what? You *can*.
 
-Peter Michaux demonstrates this in his article [[1](#ref1)] using the concept of Feature Detection and Feature Testing. Once you have asked these questions, the script can run safely on any browser, old, current or even in the future. If the browser answers *no* to (any of) these questions, the behaviour reverts to a js-disabled degraded equivalent. In this example, the server will validate the form. **This *is* Progressive Enhancement!**
+Peter Michaux demonstrates this in his article [[1](#ref1)] using the concept of Feature Detection and Feature Testing. Once you have asked these questions, the script can run safely on any browser, old, current or even in the future. If the browser answers *no* to (any of) these questions, the behaviour reverts to a js-disabled, degraded equivalent - in this example, the server will validate the form. **This *is* Progressive Enhancement!**
 
 ## Summary
 
