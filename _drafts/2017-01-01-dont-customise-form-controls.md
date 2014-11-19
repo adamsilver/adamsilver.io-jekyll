@@ -22,3 +22,6 @@ categories: accessibility
 * Mention some of the problems and link off to other articles.
 
 * There are many ways to improve the usability of forms, and custom forms is definitely not one of those ways.
+
+http://www.456bereastreet.com/archive/200605/dont_customise_the_look_and_feel_of_form_fields/
+http://aaronmbushnell.com/lets-stop-customizing-form-fields/
