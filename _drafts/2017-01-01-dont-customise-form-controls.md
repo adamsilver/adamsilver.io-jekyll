@@ -5,25 +5,23 @@ date:   2017-01-01 09:00:01
 categories: accessibility
 ---
 
-Form controls, unlike most other HTML elements, are impossible to style Cross-browser. This is due to *these* elements being tied to both the Browser and Operating System (OS). Designers often want to control every aspect (read pixel) of the user interface (UI) to the extent that everything looks identical on all browsers. You will notice that form controls, in particular, look very different in different browsers [[0](#ref0)].
+Form controls, unlike most other HTML elements, are impossible to style Cross-browser. This is due to *these* elements being tied to both the Browser and Operating System (OS) and some Browsers will ignore certain CSS rules. Designers often want to control every aspect (read pixel) of the user interface (UI) to the extent that everything looks identical on all browsers. You will notice that form controls, in particular, look very different in different browsers [[0](#ref0)].
 
-## Should form controls look the same in every browser?
+## Users don't notice
 
 Should websites (read form controls) look the same in every browser? No [[1](#ref1)]. And Nicholas Zakas points out beautifully as to why in his presentation *Progresssive Enhancement 2.0* [[2](#ref2)].
 
-## Your users aren't noticing the differences
+Your users aren't noticing slight pixel differences, and they aren't noticing that form controls are slightly different on their iPhone (for example) compared to their favourite desktop browser, and, even if they are, they don't care. It's not going to stop them using your site; consuming content, purchasing items, etc.
 
-Your users aren't noticing slight pixel differences, and they aren't noticing that the form controls were slightly different on their iPhone compared to their desktop browser, and, even if they are, they don't care. It's not going to stop them using your site; consuming content, purchasing items, etc.
+Interestingly, it is arguably a good thing that browsers show these things differently as they match the native experience i.e. form controls look the same in the OS, and because a user uses the same browser, there is an inherent expectation of how form controls look and behave in that browser. The only people that look at websites in multiple browsers are Front-end Developers, not users.
 
-Interestingly, it is arguably a good thing that browsers show these things differently as they match the native experience i.e. form controls look the same in the OS, because a user uses the same browser and the user has an inherent expectation of how form controls look and behave in that browser. The only people that look at websites in multiple browsers are Front-end Developers, not users.
-
-## "Solutions" are problematic
+## The "Solutions" are problematic
 
 On certain devices, the browser will show a native control when the user activates a select box, to make it easier to select an option [[3](#ref3)]. Users forgo this behaviour if the control is customised with Javascript.
 
-One example can be seen with Select2 [[4](#ref4)], a script built for customising the look and feel of Select menus. View the example page on an iPhone (use Safari) or Android (use Chrome) and notice the browser doesn't show a native control which makes selecting an option harder for users. Furthermore, by admission, the component itself doesn't support all browsers. If this custom control resides in a checkout form, and the user is using an unsupported browser, then say goodbye to the sale. Such an unnecessary loss of income.
+One example can be seen with Select2 [[4](#ref4)], a script built for customising the look and feel of Select menus. View the example page on an iPhone (use Safari) or Android (use Chrome) and notice the browser doesn't show a native control, which makes selecting an option harder for users. The behaviour is now different to all other websites who utilise native select controls. By admission, Select2 states that it doesn't support all browsers; if a checkout form uses Select2 in one of these browsers then say goodbye to the sale. Such an unnecessary loss of custom.
 
-Attempting to tame them is a long process which results in code bloat and likely, a degraded experience for at least some users, in at least some browsers. Garrett Dimon says:
+Attempting to tame them is a long process which results in code bloat and as has been described earlier, a degraded experience for at least some users, in at least some browsers. Garrett Dimon says:
 
 > There are many things worth investing time to develop and implement. Customising the look and feel of form fields is absolutely not one of them. This is especially true if the method involves JavaScript to change the appearance. Browser form fields may not be the prettiest things in the world, but people are used to and comfortable with them. It’s not surprising that the sites I come across with custom-designed forms often have significant usability problems.
 
