@@ -37,11 +37,19 @@ Don't waste your time and your vistors time. Adding the code in order to customi
 
 There are many useful ways to improve the usability of forms and that is where design and development effort should be focused. As with any platform, the web (and it's constraints) need to embraced.
 
-[0]: http://www.456bereastreet.com/archive/200410/styling_even_more_form_controls/
-[1]: http://dowebsitesneedtolookexactlythesameineverybrowser.com/
-[2]: https://www.youtube.com/watch?v=hdTxeR90_1E
-[3]: http://www.smashingmagazine.com/2010/03/11/forms-on-mobile-devices-modern-solutions/
-[4]: http://ivaynberg.github.io/select2/
+<dl>
+	<dt class="citation" id="ref0">[0]</dt>
+	<dd><a href="http://www.456bereastreet.com/archive/200410/styling_even_more_form_controls/">Styling even more form controls</a></dd>
+	<dt class="citation" id="ref1">[1]</dt>
+	<dd><a href="http://dowebsitesneedtolookexactlythesameineverybrowser.com/">Do websites need to look exactly the same in every browser?</a></dd>
+	<dt class="citation" id="ref2">[2]</dt>
+	<dd><a href="https://www.youtube.com/watch?v=hdTxeR90_1E">Progressive Enhancement 2.0</a></dd>
+	<dt class="citation" id="ref3">[3]</dt>
+	<dd><a href="http://www.smashingmagazine.com/2010/03/11/forms-on-mobile-devices-modern-solutions/">Forms on mobile</a></dd>
+	<dt class="citation" id="ref4">[4]</dt>
+	<dd><a href="http://ivaynberg.github.io/select2/">Select2</a></dd>
+</dl>
 
-http://www.456bereastreet.com/archive/200605/dont_customise_the_look_and_feel_of_form_fields/
-http://aaronmbushnell.com/lets-stop-customizing-form-fields/
+Todo:
+* http://www.456bereastreet.com/archive/200605/dont_customise_the_look_and_feel_of_form_fields/
+* http://aaronmbushnell.com/lets-stop-customizing-form-fields/
