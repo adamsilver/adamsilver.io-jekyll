@@ -25,7 +25,7 @@ One example can be seen with Select2 [[4](#ref4)], a script built for customisin
 
 Attempting to tame them is a long process which results in code bloat and likely, a degraded experience for at least some users, in at least some browsers. Garrett Dimon says:
 
-	> There are many things worth investing time to develop and implement. Customising the look and feel of form fields is absolutely not one of them. This is especially true if the method involves JavaScript to change the appearance. Browser form fields may not be the prettiest things in the world, but people are used to and comfortable with them. It’s not surprising that the sites I come across with custom-designed forms often have significant usability problems.
+> There are many things worth investing time to develop and implement. Customising the look and feel of form fields is absolutely not one of them. This is especially true if the method involves JavaScript to change the appearance. Browser form fields may not be the prettiest things in the world, but people are used to and comfortable with them. It’s not surprising that the sites I come across with custom-designed forms often have significant usability problems.
 
 CSS is more reliable as it won't change the behaviour. However, the lack of CSS support for styling controls is exactly the reason why developers attempt the Javascript hackery in the first place.
 
