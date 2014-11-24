@@ -5,7 +5,7 @@ date:   2017-01-01 09:00:01
 categories: accessibility
 ---
 
-Form controls, unlike most other HTML elements, are nigh on impossible to style consistently Cross-browser. This is particular the case with Select controls. This is due to *these* elements being tied to both the browser and OS and some browsers will ignore certain CSS rules. Designers often want to control every aspect (read pixel) of the UI  to the extent that everything looks identical on all browsers. You will notice that form controls can look quite different in different browsers [[0](#ref0)].
+Form controls, unlike most other HTML elements, are nigh on impossible to style consistently Cross-browser. This is particular the case with Select controls. This is due to *these* elements being tied to both the browser and OS and some browsers will ignore certain CSS rules. Designers often want to control every aspect (read pixel) of the UI  to the extent that everything looks identical on all browsers. You will notice that form controls can look quite different in different browsers [[0](#ref0)]. Because of these facts custom form controls come up for discussion periodically.
 
 ## Users don't notice the difference
 
