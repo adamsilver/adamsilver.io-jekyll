@@ -7,7 +7,7 @@ categories: accessibility
 
 Form controls, unlike most other HTML elements, are impossible to style Cross-browser. This is due to *these* elements being tied to both the Browser and Operating System (OS) and some Browsers will ignore certain CSS rules. Designers often want to control every aspect (read pixel) of the user interface (UI) to the extent that everything looks identical on all browsers. You will notice that form controls, in particular, look very different in different browsers [[0](#ref0)].
 
-## Users don't notice
+## Users don't notice the difference
 
 Should websites (read form controls) look the same in every browser? No [[1](#ref1)]. And Nicholas Zakas points out beautifully as to why in his presentation *Progresssive Enhancement 2.0* [[2](#ref2)].
 
@@ -17,9 +17,9 @@ Interestingly, it is arguably a good thing that browsers show these things diffe
 
 ## The "Solutions" are problematic
 
-On certain devices, the browser will show a native control when the user activates a select box, to make it easier to select an option [[3](#ref3)]. Users forgo this behaviour if the control is customised with Javascript.
+On certain devices, the browser will show a native popup control [[3](#ref3)] when the user activates a select control, which make it easier to use. Users forgo this behaviour if the control is customised with Javascript.
 
-One example can be seen with Select2 [[4](#ref4)], a script built for customising the look and feel of Select menus. View the example page on an iPhone (use Safari) or Android (use Chrome) and notice the browser doesn't show a native control, which makes selecting an option harder for users. The behaviour is now different to all other websites who utilise native select controls. By admission, Select2 states that it doesn't support all browsers; if a checkout form uses Select2 in one of these browsers then say goodbye to the sale. Such an unnecessary loss of custom.
+There are examples of such scripts, just Google "select replacement javascript". Try running them on an iPhone or Android and notice the browser doesn't show a native control, which makes selecting an option harder for users. The behaviour is now different to all other websites who utilise native select controls. Typically these scripts don't support all browsers; if a checkout form uses a custom select control in an unsupported browser then say goodbye to the sale. Such an unnecessary loss of custom.
 
 Attempting to tame them is a long process which results in code bloat and as has been described earlier, a degraded experience for at least some users, in at least some browsers. Garrett Dimon says:
 
