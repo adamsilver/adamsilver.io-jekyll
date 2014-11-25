@@ -13,13 +13,13 @@ Form controls, unlike most other HTML elements, are nigh on impossible to style 
 
 And Nicholas Zakas beautifully points out why in *Progresssive Enhancement 2.0* [[2](#ref2)]. You can go straight to 16 minutes in to skip the history lesson, although that is also very informative.
 
-Message: Your users aren't noticing slight pixel differences, and they aren't noticing that form controls are slightly different on their iPhone (for example) compared to their favourite desktop browser, and, even if they are, they don't care. It's not going to stop them using your site, consuming content and purchasing items etc. Obviously, we shouldn't be uneccessarily sloppy.
+Your users aren't noticing slight pixel differences, and they aren't noticing that form controls are slightly different on their iPhone (for example) compared to their favourite desktop browser, and, even if they are, they don't care. It's not going to stop them using your site, consuming content and purchasing items etc. Obviously, we shouldn't be uneccessarily sloppy.
 
 It is arguably positive that browsers show these things differently as they match the native OS, and because a user uses the same browser repeatedly, there is an inherent expectation of how form controls look and behave in *that* browser. The only people that look at websites in multiple browsers are Front-end Developers, not users ([tweet that](https://twitter.com/share?source=tweetbutton&text=The only people that look at websites in multiple browsers are Front-end Developers, not users.&via=adambsilver&url={{site.url}}{{page.url}}&hashtags=frontend)).
 
 ## "Solutions" result in degraded experiences
 
-On certain devices, the browser will show a native popup [[3](#ref3)] when the user activates a Select control, which make it easier to use. However, users forgo this behaviour if the control is customised with Javascript.
+On some devices, when the user activates a Select control, the browser will show a native popup [[3](#ref3)]. This makes it easier to use. However, users forgo this behaviour if the control is customised with Javascript.
 
 There are examples of such scripts, just Google "select replacement javascript". Try running them on an iPhone for example and notice the browser doesn't show the popup leaving the user to pinch and zoom, making it harder to use. The behaviour is now different to all other websites who utilise native select controls. Typically these scripts don't support all browsers. Why would you want to even risk it just for a slight improvement in asthetics?
 
