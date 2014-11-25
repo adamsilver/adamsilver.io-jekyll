@@ -45,7 +45,3 @@ As an experienced Front-end Developer, it is important to know what works and wh
 	<dt class="citation" id="ref4">[4]</dt>
 	<dd><a href="http://ivaynberg.github.io/select2/">Select2</a></dd>
 </dl>
-
-Todo:
-* http://www.456bereastreet.com/archive/200605/dont_customise_the_look_and_feel_of_form_fields/
-* http://aaronmbushnell.com/lets-stop-customizing-form-fields/
