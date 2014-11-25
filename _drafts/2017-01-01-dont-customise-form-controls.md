@@ -5,11 +5,14 @@ date:   2017-01-01 09:00:01
 categories: accessibility
 ---
 
-Form controls, unlike most other HTML elements, are nigh on impossible to style consistently Cross-browser. This is particular the case with Select controls. This is due to *these* elements being tied to both the browser and OS and some browsers will ignore certain CSS rules. Designers often want to control every aspect (read pixel) of the UI  to the extent that everything looks identical on all browsers. You will notice that form controls can look quite different in different browsers [[0](#ref0)]. Because of these facts custom form controls come up for discussion periodically.
+Form controls, unlike most other HTML elements, are nigh on impossible to style consistently Cross-browser. This is particulary the case with Select controls. This is due to *these* elements being tied to both the browser and OS and some browsers will ignore certain CSS rules. Designers often want to control every aspect (read pixel) of the UI  to the extent that everything looks identical on all browsers. You will notice that form controls can look quite different in different browsers [[0](#ref0)]. Because of these facts *custom* form controls cause periodic discussions between developers and designers.
 
 ## Users don't notice the difference
 
-Q. Should websites (read form controls) look the same in every browser? A. No [[1](#ref1)]. And Nicholas Zakas beautifully points out why in *Progresssive Enhancement 2.0* [[2](#ref2)]. You can go straight to 16 minutes in to skip the history lesson.
+Question: Should websites (read form controls) look the same in every browser? 
+Answer: No [[1](#ref1)]. 
+
+And Nicholas Zakas beautifully points out why in *Progresssive Enhancement 2.0* [[2](#ref2)]. You can go straight to 16 minutes in to skip the history lesson.
 
 Message: Your users aren't noticing slight pixel differences, and they aren't noticing that form controls are slightly different on their iPhone (for example) compared to their favourite desktop browser, and, even if they are, they don't care. It's not going to stop them using your site, consuming content and purchasing items etc.
 
