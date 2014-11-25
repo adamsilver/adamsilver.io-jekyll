@@ -9,8 +9,7 @@ Form controls, unlike most other HTML elements, are nigh on impossible to style 
 
 ## Users don't notice the difference
 
-<p><strong>Question:</strong> Should websites (read form controls) look the same in every browser? 
-<br><strong>Answer:</strong> No [[1](#ref1)]. </p>
+**Question:** Should websites (read form controls) look the same in every browser? <br>**Answer:** No [[1](#ref1)].
 
 And Nicholas Zakas beautifully points out why in *Progresssive Enhancement 2.0* [[2](#ref2)]. You can go straight to 16 minutes in to skip the history lesson.
 
