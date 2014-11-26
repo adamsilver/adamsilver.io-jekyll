@@ -25,7 +25,7 @@ Script on the other hand can leave a page broken. As an example, imagine enhanci
 
 ## UA sniffing is not the answer
 
-There is no value in reading the UA string [[0](#ref0)] besides identifying the browser and even then, it can be spoofed. It doesn't tell you what features the browser has, so they would need to be inferred. The browser could be lacking features, have plugins enabled or configured differently, all of which affects the capability and behaviour of the browser.
+There is no value in reading the UA string [[0](#ref0)] besides identifying the browser and even then, it can be spoofed. It doesn't tell you what features the browser has, so they would need to be inferred. The browser could be lacking features, have plugins enabled such as script blockers or configured differently, all of which affects the capability and behaviour of the browser.
 
 Even if you forget those things, imagine sniffing, then imagine mapping features to the sniff, then imagine doing that for every browser *and* every feature. It is quite obvious that this technique is fraught with errors and extremely time consuming (read expensive). Browsers and devices are released too frequently to even attempt to keep up with the mapping anyway.
 
