@@ -35,7 +35,7 @@ CSS is more reliable as it won't change the behaviour. However, the lack of CSS 
 
 ## Summary
 
-As an experienced Front-end Developer, it is important to know what works and what doesn't, and styling form controls to this extent is categorised by the latter. Some browsers are more friendly than others, but if you can't completely control them in a reliable, consistent way, without hurting the experience, then there is no point, infact there is a very significant reason *not* too. There are much more pressing matters requiring development and design effort. The web (and its constraints) just like any other platform, must be embraced.
+As an experienced Front-end Developer, it is important to know what works and what doesn't, and styling form controls to this extent is categorised by the latter. Some browsers are more friendly than others, but if you can't control them in a reliable, consistent way, *without* hurting the user experience, then it is not compelling to try in the name of *aesthetics* or *branding*. On the other hand this article describes the reasons *not* to. There are much more pressing matters requiring development and design effort. The web (and its constraints) just like any other platform, must be embraced.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
