@@ -31,7 +31,7 @@ For example, on some devices, when the user activates a Select control, the brow
 
 There are examples of such scripts, just Google "select replacement javascript". Try running them on an iPhone for example and notice the browser doesn't show the popup, leaving the user to pinch and zoom, making it harder to use. The behaviour is now different to all other websites who utilise native select controls. Typically these scripts don't support all browsers. Why would you want to even risk it just for a slight improvement in asthetics?
 
-Attempting to tame form controls induces significant development effort which most certainly results in code bloat, bugs, and as has been described earlier, a degraded experience for at least some users, in at least some browsers. Garrett Dimon says:
+Attempting to tame form controls induces significant development effort which most certainly results in code bloat, bugs, and as has been described earlier, a degraded experience for at least some users, in at least some browsers. As Garrett Dimon says:
 
 > There are many things worth investing time to develop and implement. Customising the look and feel of form fields is absolutely not one of them. This is especially true if the method involves JavaScript to change the appearance. Browser form fields may not be the prettiest things in the world, but people are used to and comfortable with them. It’s not surprising that the sites I come across with custom-designed forms often have significant usability problems.
 
