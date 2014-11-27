@@ -19,7 +19,7 @@ And Nicholas Zakas beautifully points out why in *Progresssive Enhancement 2.0* 
 
 Your users aren't noticing pixel differences, and they aren't noticing that form controls are slightly different on their iPhone (for example) compared to their favourite desktop browser, and, even if they are, they don't care. It's not going to stop them using your site, consuming content and purchasing items etc.
 
-**Please don't take this article to mean we should be uneccessarily sloppy translating designs into living websites! We as developers should strive for quality, consistency in the visual design.**
+**Please don't take this article to mean we should be uneccessarily sloppy translating designs into living websites! We as developers should strive for quality and consistency when translating designs.**
 
 It is arguably positive that browsers show these things differently as they match the native OS, and because a user uses the same browser repeatedly, there is an inherent expectation of how form controls look and behave in *that* browser.
 
