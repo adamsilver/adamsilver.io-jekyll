@@ -37,7 +37,7 @@ Attempting to tame form controls induces significant development effort which mo
 
 ## Summary
 
-As an experienced Front-end Developer, it is important to know what works and what doesn't, and styling form controls to this extent is the latter. Some browsers are more friendly than others, but if you can't control them in a reliable, consistent way, *without* hurting the user experience, then it is not compelling to try in the name of *aesthetics* or *branding*. On the other hand this article scratches the surface demonstrating good reasons *not* to. There are much more pressing matters requiring development and design effort. The web (and its constraints) just like any other platform, must be embraced.
+As an experienced Front-end Developer, it is important to know what works and what doesn't, and styling form controls to this extent is the latter. Some browsers are more friendly than others, but if you can't control them in a reliable, consistent way, *without* hurting the user experience, then it is not compelling to try in the name of *aesthetics* or *branding*. On the other hand this article demonstrates (just some of the) good reasons *not* to. There are much more pressing matters requiring development and design effort. The web (and its constraints) just like any other platform, must be embraced.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
