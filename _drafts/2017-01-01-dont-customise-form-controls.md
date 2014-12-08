@@ -9,7 +9,7 @@ Designers often want to control every aspect (read pixel) of the UI to the exten
 
 > "...it shows that using CSS to style form controls to look exactly the same across browsers and platforms is impossible. It also shows that most browsers ignore many CSS properties when they are applied to form controls."
 
-Some elements are more problematic than others. When developers endeavour to tame these elements, user experience is often degraded, which is normally the reason for attempting this feat in the first place.
+Some elements are more problematic than others. When developers endeavour to tame these elements, user experience is often degraded, which ironically is normally the reason for attempting this feat in the first place.
 
 ## Users don't notice the difference
 
