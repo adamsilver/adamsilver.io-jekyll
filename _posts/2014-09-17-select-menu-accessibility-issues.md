@@ -44,9 +44,7 @@ This is bad:
 
 ## Accessibility considerations
 
-Not all users use a mouse. Keyboards and screen readers are also used. A keyboard user can tab to the select menu and use their keyboard to select a different option. Take [this example](http://html.cita.illinois.edu/script/onchange/onchange-example.php) - the *HTML4* option isn't accessible because it is already selected as the default option.
-
-Also, in various browsers, if the user presses *Down* just once, the form is submitted which means its very difficult to access either option.
+Not all users use a mouse. Keyboards and screen readers are also used. A keyboard user can tab to the select menu and use their keyboard to select a different option. Take [this example](http://html.cita.illinois.edu/script/onchange/onchange-example.php) - in some browsers, the *HTML4* option isn't accessible because it is already selected as the default option. Also, if the user presses *Down* just once, the form is submitted which means its very difficult to access other options.
 
 Vanessa Mosher and Steven Weintraub share Sarah Miller's usability test at the Open University with regard to screen readers:
 
