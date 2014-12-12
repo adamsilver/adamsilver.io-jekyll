@@ -5,13 +5,13 @@ date:   2014-09-17 09:00:01
 categories: accessibility
 ---
 
-Unfortunately, some websites choose to employ a select menu that will submit a form when the value is changed; and with the submit button omitted from the User Interface (UI). The rationale behind this decision is ironically to improve the User Experience (UX), but in reality it is worse.
+Unfortunately, some websites choose to employ a select menu that will submit a form when the value is changed; and with the submit button omitted from the User Interface. The rationale behind this decision is ironically to improve the User Experience (UX), typically in the name of a cleaner interface and/or reducing clicks. Unfortunately, this introduces a degradation in UX.
 
-## Visual differences
+## TL;DR
 
-It may be easier to understand the differences when displayed as follows:
+Every form, even a form with a single select menu must have a submit button.
 
-### Good
+This is good:
 
 <div class="ui">
 	<form>
@@ -27,7 +27,7 @@ It may be easier to understand the differences when displayed as follows:
 	</form>
 </div>
 
-### Bad
+This is bad:
 
 <div class="ui">
 	<form>
@@ -42,23 +42,37 @@ It may be easier to understand the differences when displayed as follows:
 	</form>
 </div>
 
-## What the standards say
-
-WCAG 2.0 On Input Success Criterion 3.2.2 states that:
-
-> Changing the setting of any user interface component does not automatically cause a change of context unless the user has been advised of the behavior before using the component. (Level A)
-
 ## Accessibility considerations
 
 Not all users use a mouse. Keyboards and screen readers are also used. A keyboard user can tab to the select menu and use their keyboard to select a different option. Take [this example](http://html.cita.illinois.edu/script/onchange/onchange-example.php) - the *HTML4* option isn't accessible because it is already selected as the default option.
 
-Also, in [various browsers](http://pauljadam.com/blog/javascript/onchange-event-on-a-select-inputjump-menu-accessibility-problems/), if the user presses *Down* just once, the form is submitted which means its very difficult to access either option.
+Also, in various browsers, if the user presses *Down* just once, the form is submitted which means its very difficult to access either option.
 
 Vanessa Mosher and Steven Weintraub share Sarah Miller's usability test at the Open University with regard to screen readers:
 
  >Several people working with blind users commented on problems both with screen readers and for those using keyboards. For example, one cited a usability test by Sarah Miller at the Open University. Sarah found drop-down lists without Go buttons were confusing because while the user had to inspect every item in the list, the action of reading an item meant that it was selected. She added that the user chose to use the keyboard instead of a mouse to scroll through the options to view (or hear) them: the first option was automatically selected—the user never got past the first item in the list.
 
 > A few respondents also commented that auto-submit drop-down menus may be counter productive when interpreted by screen reader software (often used by the visually impaired). It seems that the software automatically selects the first item in the menu when the user opens it using either a mouse or keyboard.
+
+## What browsers are affected?
+
+The affected browsers (to my knowledge) are Chrome (on Windows), Opera (on Windows), Internet Explorer 6, 7, 8 and 9. It is very likely there are others.
+
+## Debunking UX beliefs
+
+The point about a cleaner interface and less clicks is best addressed by Albert Einstein:
+
+> "Everything should be made as simple as it needs to be, and no simpler."
+
+Counting clicks to measure a successful UX is mindless. [Stop it](http://idyeah.com/blog/2012/06/stop-counting-clicks/).
+
+## What Web Standards say
+
+WCAG 2.0 On Input Success Criterion 3.2.2 states that:
+
+> Changing the setting of any user interface component does not automatically cause a change of context unless the user has been advised of the behavior before using the component. (Level A)
+
+That settles that. There is a clear difference between input/selection and *submission*; don't combine the two in a single control, especially if it breaks the functionality for some users.
 
 ## Usability considerations
 
@@ -70,4 +84,4 @@ Vanessa Mosher and Steven Weintraub share Larry Marinem's insight into usability
 
 ## Summary
 
-Select menus are *not* meant to be used for navigation. In doing so, the UX is degraded for certain users. Avoiding this behaviour ensures it works well cross-browser and without Javascript, with the welcome side effect of providing an experience which is intuitive and consistent.
+Select menus are *not* meant to be used for navigation; it is merely a learned behaviour. In doing so, the UX is degraded for certain users. Ensuring *all* forms have a submit button guarantees cross-browser compatibility for *all* users, which is the beautify of the web.
