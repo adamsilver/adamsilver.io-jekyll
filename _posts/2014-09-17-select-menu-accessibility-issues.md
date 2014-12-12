@@ -64,14 +64,6 @@ The point about a cleaner interface and less clicks is best addressed by Albert 
 
 Counting clicks to measure a successful UX is mindless. [Stop it](http://idyeah.com/blog/2012/06/stop-counting-clicks/).
 
-## What Web Standards say
-
-WCAG 2.0 On Input Success Criterion 3.2.2 states that:
-
-> Changing the setting of any user interface component does not automatically cause a change of context unless the user has been advised of the behavior before using the component. (Level A)
-
-That settles that. There is a clear difference between input/selection and *submission*; don't combine the two in a single control, especially if it breaks the functionality for some users.
-
 ## Usability considerations
 
 Select menus are not meant to be used for navigation, therefore users don't intuitively expect to navigate on selection. This is a *learned* behaviour due to this misuse of select menus.
@@ -79,6 +71,14 @@ Select menus are not meant to be used for navigation, therefore users don't intu
 Vanessa Mosher and Steven Weintraub share Larry Marinem's insight into usability:
 
  > One strong voice for using a Go button was Larry Marinem. Larry suggested that users do not expect the drop-down list to be a navigation device. He stated that there are certain things that users expect a control to do, and sometimes it is common for designers to over-automate a step of the task by changing the normal expected behavior of a control. Drop-down lists are expected to display the selected object, not go somewhere. With drop-down lists, it's not uncommon for users to mis-select something; the users are surprised when this type of control launches them off somewhere and more so when it launches them into a mis-selected area. Larry added that reducing the number of clicks does not make a site more usable; giving the users appropriate control of their navigation does.
+
+## What the Web Standards say
+
+WCAG 2.0 On Input Success Criterion 3.2.2 states that:
+
+> Changing the setting of any user interface component does not automatically cause a change of context unless the user has been advised of the behavior before using the component. (Level A)
+
+That settles that. There is a clear difference between input/selection and *submission*; don't combine the two in a single control, especially if it breaks the functionality for some users.
 
 ## Summary
 
