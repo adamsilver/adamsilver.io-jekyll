@@ -82,4 +82,4 @@ That settles that. There is a clear difference between input/selection and *subm
 
 ## Summary
 
-Select menus are *not* meant to be used for navigation; it is merely a learned behaviour. In doing so, the UX is degraded for certain users. Ensuring *all* forms have a submit button guarantees cross-browser compatibility for *all* users, which is the beautify of the web.
+Select menus are *not* meant to be used for navigation; it is merely a learned behaviour. Removing the submit button degrades the experience for some users. Ensuring every form has a submit button **guarantees** cross-browser compatibility for all.
