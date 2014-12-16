@@ -78,7 +78,7 @@ WCAG 2.0 On Input Success Criterion 3.2.2 states that:
 
 > Changing the setting of any user interface component does not automatically cause a change of context unless the user has been advised of the behavior before using the component. (Level A)
 
-That settles that. There is a clear difference between input/selection and *submission*; don't combine the two in a single control, especially if it breaks the functionality for some users.
+In other words there should be a clear difference between input/selection and *submission*; combining the two actions breaks the functionality for some users which is unsurprising given the  Web Standards guidelines.
 
 ## Summary
 
