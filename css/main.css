@@ -92,10 +92,11 @@ p {
 body {
 	font-family: 'droid serif', helvetica, arial;
 	-webkit-font-smoothing: antialiased;
+    font-size: 100%;
 }
 
 h1 {
-    font-size: 1.5em;
+    font-size: 2em;
     font-family: 'droid sans';
     margin-top: 0;
     margin-bottom: 0.2em;
@@ -104,14 +105,14 @@ h1 {
 
 h2 {
     font-family: 'droid sans';
-	font-size: 1.2em;
+	font-size: 1.6em;
 	margin-top: 1em;
 	margin-bottom: 1em;
     color: #2c3e50;
 }
 
 h3 {
-	font-size: 1em;
+	font-size: 1.2em;
 	margin-top: 1em;
     font-family: 'droid sans';
 	margin-bottom: 0.5em;
@@ -119,6 +120,7 @@ h3 {
 }
 
 p {
+    font-size: 1em;
 	margin-bottom: 1.5em;
 	margin-top: 1em;
 	color: #2c3e50;
