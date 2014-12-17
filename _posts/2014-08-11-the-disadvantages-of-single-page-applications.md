@@ -59,6 +59,14 @@ Some SPAs don't require SEO, but for those that do, the solutions aren't straigh
 
 If an SPA grows to a significant size, loading the entire application on page load may be detrimental to the experience because it's akin to loading all pages of a website when only the home page was requested. Unfortunately, this leads to attempting to load CSS and JS for certain pages. Script loading is notoriously difficult and contains unreliable hacks [[4](#ref4)] which can can be fatal to the reliability of the application.
 
+### Analytics
+
+Analytics tools will normally track page views and related tools without any extra effort but because in SPA page isn't really a page, this has to be handled with extra script which is triggered by the application router.
+
+### Automated functional testing
+
+Whilst you can use Selenium (and other equivalents) to test SPAs, extra effort is required to handle timeouts of XHR calls because there is no signal to Selenium that an XHR call has finished, like there is when a (real) page finishes loading. This leads to more questions and problems; *How long should the timeout be? What happens if it takes longer than normal?* The test execution will likely be slower too.
+
 ## Summary
 
 SPAs are meant to provide a better experience. It is therefore ironic that SPAs require significantly more development effort, with a result that is detrimental to the user. Javascript is never going to do it better than the browser! Websites can still have Rich User Interfaces without cramming the entire site into one document.
@@ -83,3 +91,9 @@ Furthermore, it is interesting to note that sites such as Twitter [[5](#ref5)] a
     <dt class="citation" class="citation" id="ref6"><a name="ref6"></a>[6]</dt>
     <dd><a href="http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs">Lifehacker and the hash bang debarkle</a></dd>
 </dl>
+
+<!--
+
+
+
+-->
