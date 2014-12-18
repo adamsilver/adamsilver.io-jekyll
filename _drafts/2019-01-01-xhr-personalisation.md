@@ -46,10 +46,7 @@ Scripts to write, error handling to cover, harder to automate and changes the wa
 
 ## Summary
 
-* None of these problems we have today
-* "AJAX should not break the web" 
-* Premature and unecessary optimisation
-* Pages that 
+Content-caching on a proxy server is very useful and if you have personalised content, just check for the presence of a cookie to determine whether the cached version should be served or not. There is no need to misue Javascript in this way as there are several negative side effects from doing this. AJAX should not break the web, it should enhance the experience where necessary. The example in this article seems like an innocent and quick win but as you add more personalisation to more parts of the page and website you end up doing several injections and mapped requests which degrades the front-end architecture, performance and UX to boot.
 
 ## Citations
 
