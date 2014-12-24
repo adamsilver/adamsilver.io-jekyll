@@ -5,7 +5,7 @@ date:   2019-01-01 09:00:01
 categories: 
 ---
 
-Sometimes, developers (usually server-side) are on a pursuit to reduce page-load time by utilising content caching. This is useful until a page contains personalised content, meaning this type of caching can't be used as provided as a user might receive the cached version of somebody elses personalised content. The problem arises with the suggestion that this can be solved using AJAX, to request (and render) the personalised content and this is problematic for several reasons.
+Sometimes, developers (usually server-side) are on a pursuit to reduce page-load time by utilising content caching [[0](#ref0)]. This is useful until a page contains personalised content, meaning this type of caching can't be used as provided as a user might receive the cached version of somebody elses personalised content. The problem arises with the suggestion that this can be solved using AJAX, to request (and render) the personalised content and this is problematic for several reasons.
 
 ## Personalised content?
 
@@ -25,7 +25,7 @@ And in the case of "logging out" this would be a poor decision. Furthermore, ext
 
 ## User Experience
 
-Christian Heilmann rightly says that *AJAX shouldn't break the web* [0] and using it in this way is doing just that. He also highlights that when AJAX is used, it is important to remember how much the browser does that subtly goes unnoticed including but not limited to displaying a loading indicator with  progress bar, handling page not found and timeout errors.
+Christian Heilmann rightly says that *AJAX shouldn't break the web* [1] and using it in this way is doing just that. He also highlights that when AJAX is used, it is important to remember how much the browser does that subtly goes unnoticed including but not limited to displaying a loading indicator with  progress bar, handling page not found and timeout errors.
 
 Utilising content-caching in this way means the page is only half loaded and half rendered at which point, sometime later the personalised content is injected. The experience is likely to be at least a little jarring as the page completes. Solutions may include loading spinners, hiding content and transitions but in reality they are far from perfect. Also, the user may not see the various updates as they are busy interacting further down the page. This is all exacabated on slower connections.
 
@@ -41,16 +41,22 @@ Extra design and development effort is required also. There is script to write a
 
 ## Summary
 
-Content-caching *is* a very useful technique when used responsibly and for pages that don't contain personalised content. For pages that *do* contain personalised content, a simple cookie check can determine whether the cached version should be served or not. There is no need to misue JS in this way as there are several negative side effects in doing so. AJAX should not break the web, it should enhance the experience where necessary. The example in this article seems like an innocent, quick win, but in reality it's problematic, encourages bad practice, and only gets worse as more personalised features are added.
+Content-caching *is* a very useful technique when used responsibly and for pages that don't contain personalised content. For pages that *do* contain personalised content, a simple cookie check can determine whether the cached version should be served or not [[2](#ref2)]. There is no need to misue JS in this way as there are several negative side effects in doing so. AJAX should not break the web, it should enhance the experience where necessary. The example in this article seems like an innocent, quick win, but in reality it's problematic, encourages bad practice, and only gets worse as more personalised features are added.
 
-## Citations
+<dl>
+	<dt class="citation" id="ref0">[0]</dt>
+	<dd><a href="https://developer.akamai.com/stuff/Caching/Content_Caching.html">Content caching</a></dd>
 
-[0]: https://developer.akamai.com/stuff/Caching/Content_Caching.html
-[0]: http://itamarst.org/writings/dynamiccaching.html
-[0]: http://www.smashingmagazine.com/2010/02/10/some-things-you-should-know-about-ajax/
-[0]: https://blogs.akamai.com/2014/05/and-you-thought-your-page-could-not-be-cached.html
+	<dt class="citation" id="ref1">[1]</dt>
+	<dd><a href="http://www.smashingmagazine.com/2010/02/10/some-things-you-should-know-about-ajax/">Some things you should know about AJAX</a></dd>
+
+	<dt class="citation" id="ref1">[2]</dt>
+	<dd><a href="https://blogs.akamai.com/2014/05/and-you-thought-your-page-could-not-be-cached.html">And you thought your page could not be cached</a></dd>
+</dl>
 
 <!--
+
+[0]: http://itamarst.org/writings/dynamiccaching.html
 
 ## For JE
 
