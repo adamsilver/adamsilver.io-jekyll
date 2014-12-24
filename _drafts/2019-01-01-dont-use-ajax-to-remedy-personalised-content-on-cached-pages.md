@@ -37,7 +37,7 @@ Runtime performance also degrades, particularly with sensitive battery-powered m
 
 ## Effort
 
-Let's not forget the extra development effort required for this to happen. More scripts to write and test, more error handling to cover, it's harder to automate and changes the way in which automated functional tests are written. Whereever script is added there is a significantly higher chance of failure for some browsers.
+Extra design and development effort is required also. There is script to write and test, and it's harder to automate and changes the way in which automated functional tests are written. Whenever a script is added there is a significantly higher chance of failure for some browsers.
 
 ## Summary
 
