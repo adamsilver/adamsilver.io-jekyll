@@ -9,13 +9,13 @@ Sometimes, developers (usually server-side) are on a pursuit to reduce page-load
 
 ## Personalised content?
 
-Before discussing the problems let's define personalised content. Personalised content is any content that is specific to a user. A "Logout" link in the page header is personalised because the page knows that *you* are logged in and that *you* may want to logout.
+Before discussing the problems, let's define personalised content. Personalised content is any content that is specific to a user. A "Logout" link in the page header is personalised because the page knows that *you* are logged in and that *you* may want to logout.
 
 So, about those problems...
 
 ## Multiple HTTP requests
 
-Instead of having a single HTTP request that contains the entire required response there will now be multiple. The first would be for the Document containing non-personalised content (which will be content-cached after the first request). The subsequent request will be via AJAX (and is obviously not content-cached). This means *this* request will be hitting your web server anyway with the same latency as always. Also, there might be a request for each encapsulated portion of content i.e. Personalised header might be one call, and personalised products might be another call. But this is a bit of an architecture rabbit-hole which won't be discuss further in this article.
+Instead of having a single HTTP request that contains the entire required response there will now be multiple. The first would be for the Document containing non-personalised content (which will be content-cached after the first request). The subsequent request will be via AJAX (and is obviously not content-cached). This means *this* request will be hitting your web server anyway with the same latency as always. Also, there might be a request for each encapsulated portion of content i.e. Personalised header might be one call, and personalised products might be another call. But this is a bit of an architecture rabbit-hole which won't be discussed further in this article.
 
 ## Accessibility
 
