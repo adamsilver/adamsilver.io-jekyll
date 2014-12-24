@@ -120,6 +120,8 @@ Ultimiately this is not the way to add decorative (or inline) images to a web pa
 [0]: https://www.youtube.com/watch?v=dfweWyVScaI (mentions css font block render)
 [0]: http://www.filamentgroup.com/lab/bulletproof_icon_fonts.html
 uses polyfills for ie.
+
 [0]: https://github.com/filamentgroup/a-font-garde
+[0]: http://modernwebaccessibility.com/en/blog/demystify-speak-none
 
 icon loader js - tablet shows nothing as cant render the icon
