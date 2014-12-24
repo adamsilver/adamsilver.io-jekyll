@@ -5,33 +5,33 @@ date:   2019-01-01 09:00:01
 categories: 
 ---
 
-Sometimes, developers (typically with a background in server-side development) are on a pursuit to reduce page-load time by utilising content caching [0]. This is useful until a page contains personalised content, meaning this type of caching can't be used. The problem arises with the suggestion that Javascript with XMLHttpRequest (XHR) also known as AJAX, to pull the personalised content in and this is problematic for several reasons.
+Sometimes, developers (usually server-side) are on a pursuit to reduce page-load time by utilising content caching. This is useful until a page contains personalised content, meaning this type of caching can't be used as provided as a user might receive the cached version of somebody elses personalised content. The problem arises with the suggestion that this can be solved using Javascript via XMLHttpRequest (XHR) also known as AJAX, to request (and render) the personalised content and this is problematic for several reasons.
 
 ## Personalised content?
 
-Before getting to the problem let's define personalised content. Personalised content is any content that is specific to a user. A "Logout" link in the page header is personalised because the page knows that *you* are logged in and that *you* may want to logout.
+Before discussing the problems let's define personalised content. Personalised content is any content that is specific to a user. A "Logout" link in the page header is personalised because the page knows that *you* are logged in and that *you* may want to logout.
 
-So let's get back to the problem...
+So, about those problems...
 
 ## Multiple HTTP requests
 
-Instead of having a single HTTP request that contains the entire required response there will now be multiple. The first would be for the Document containing non-personalised content (which will be content-cached after the first request). The subsequent request will be via XHR (and is obviously not content-cached). This means *this* request will be hitting your web server anyway with the same latency as always. The amount of XHR requests might increase for each bit of personalised content but that's a bit of an architecture rabbit-hole which we won't discuss here.
+Instead of having a single HTTP request that contains the entire required response there will now be multiple. The first would be for the Document containing non-personalised content (which will be content-cached after the first request). The subsequent request will be via XHR (and is obviously not content-cached). This means *this* request will be hitting your web server anyway with the same latency as always. Also, there might be a request for each encapsulated portion of content i.e. Personalised header might be one call, and personalised products might be another call. But this is a bit of an architecture rabbit-hole which won't be discuss further in this article.
 
 ## Accessibility
 
-If the user doesn't have Javascript, or they have Javascript but not the capability to make XHR calls, DOM traversal or DOM manipulation etc they will be unable to use this functionality. This goes against all the principles of Progressive Enhancement and is completely against the spirit of the web. 
+If the user doesn't have Javascript (or they have Javascript but not the capability to make XHR calls, DOM traversal or DOM manipulation etc) they will be unable to use this functionality. This goes against all the principles of Progressive Enhancement and is completely against the spirit of the web.
 
-And in the case of "logging out" this would be a poor decision. Furthermore, extra effort would be required to make the XHR injected content accessibile to screen readers.
+And in the case of "logging out" this would be a poor decision. Furthermore, extra effort would be required to ensure the XHR-injected content is accessibile to screen readers.
 
 ## User Experience
 
-The experience needs careful consideration considering the page has loaded and rendered and sometime later the personalised content response arrives and we need to inject it. There will be a jarring experience of sorts as the page fills in the gaps. Loading spinners, hiding content and transitions come to mind and they are still quite jarring and may not see the various updates as they are busy interacting further down the page. The slower the connection the more this is exacabated.
+The experience needs careful consideration considering the page has loaded and rendered and sometime later the personalised content response arrives and we need to inject it. There will be somewhat of a jarring experience, as the page fills in the gaps. Solutions may include loading spinners, hiding content and transitions but in reality they are far from perfect. Also, the user may not see the various updates as they are busy interacting further down the page. This is exacabated on slower connections.
 
 ## Performance
 
-Whilst the entire endeavour is based on speed the extra scripts required for implementation and library type functions (that may already be available on the page YMMV) need to be included on the page increasing page weight and slowing down the page load.
+Performance is somewhat negated due to the fact that extra Javascript (implementation as well as library functions for making requests, parsing JSON, injecting HTML etc) needs to be written and included on the page increasing page-weight, which slows down the page load times.
 
-Then you have the runtime performance which is particularly sensitive on battery powered mobile devices [0?]. Additionally when you inject new HTML you have the cost of reflows and repaints further slowing down performance. If you don't do this you have one request, one parse, one render.
+Then there is runtime performance, which is particularly sensitive on battery powered mobile devices [0?]. Additionally when you inject new HTML you have the cost of reflows and repaints further slowing down performance. If you don't do this it is as fast as it possibly can be i.e. a single request, parse and render.
 
 Also there is the extra CSS to handle the UX patches that must be in place to make the jarring experience...well...less jarring.
 
