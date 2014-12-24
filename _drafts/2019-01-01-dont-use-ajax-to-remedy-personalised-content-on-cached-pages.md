@@ -25,7 +25,7 @@ And in the case of "logging out" this would be a poor decision. Furthermore, ext
 
 ## User Experience
 
-Christian Heilmann rightly says that *AJAX shouldn't break the web* [1] and using it in this way is doing just that. He also highlights that when AJAX is used, it is important to remember how much the browser does that subtly goes unnoticed including but not limited to displaying a loading indicator with  progress bar, handling page not found and timeout errors.
+Christian Heilmann rightly says that *AJAX shouldn't break the web* [[1](#ref1)] and using it in this way is doing just that. He also highlights that when AJAX is used, it is important to remember how much the browser does that subtly goes unnoticed including but not limited to displaying a loading indicator with  progress bar, handling page not found and timeout errors.
 
 Utilising content-caching in this way means the page is only half loaded and half rendered at which point, sometime later the personalised content is injected. The experience is likely to be at least a little jarring as the page completes. Solutions may include loading spinners, hiding content and transitions but in reality they are far from perfect. Also, the user may not see the various updates as they are busy interacting further down the page. This is all exacabated on slower connections.
 
