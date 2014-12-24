@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Using AJAX to personalise the page"
+title:  "Don't use AJAX to remedy personalisated content on cached pages"
 date:   2019-01-01 09:00:01
 categories: 
 ---
@@ -53,7 +53,7 @@ Content-caching *is* a very useful technique when used responsibly and for pages
 [0]: http://www.smashingmagazine.com/2010/02/10/some-things-you-should-know-about-ajax/
 [0]: https://blogs.akamai.com/2014/05/and-you-thought-your-page-could-not-be-cached.html
 
-------------------------------------------------------------
+<!--
 
 ## For JE
 
@@ -84,3 +84,5 @@ Content-caching *is* a very useful technique when used responsibly and for pages
 Todo: 
 
 * cache invalidated means it goes to server anyway
+
+-->
