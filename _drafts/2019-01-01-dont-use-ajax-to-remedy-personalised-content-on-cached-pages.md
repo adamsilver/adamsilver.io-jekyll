@@ -25,18 +25,15 @@ And in the case of "logging out" this would be a poor decision. Furthermore, ext
 
 ## User Experience
 
-The experience needs careful consideration considering the page has loaded and rendered and sometime later the personalised content response arrives and we need to inject it. There will be somewhat of a jarring experience, as the page fills in the gaps. Solutions may include loading spinners, hiding content and transitions but in reality they are far from perfect. Also, the user may not see the various updates as they are busy interacting further down the page. This is exacabated on slower connections.
+Christian Heilmann rightly says that *AJAX shouldn't break the web* [0] and using it in this way is doing just that. He also highlights that when AJAX is used, it is important to remember how much the browser does that subtly goes unnoticed including but not limited to displaying a loading indicator with  progress bar, handling page not found and timeout errors.
+
+Utilising content-caching in this way means the page is only half loaded and half rendered at which point, sometime later the personalised content is injected. The experience is likely to be at least a little jarring as the page completes. Solutions may include loading spinners, hiding content and transitions but in reality they are far from perfect. Also, the user may not see the various updates as they are busy interacting further down the page. This is all exacabated on slower connections.
 
 ## Performance
 
 This entire endeavour is about decreasing page-load time. However, the performance benefit is somewhat negated by requiring extra JS which is likely to include implementation (which is likely to involve request, traverse and update Document based on response) and some library functions for making requests, parsing the (JSON) response, retrieving elements, traversing the Document and inject HTML. All of this code adds to the page-weight slowing down the load time. There is also extra CSS required to alleviate the potentially jarring UX.
 
 Runtime performance also degrades, particularly with sensitive battery-powered mobile devices. Also, when updating the Document there is the cost of reflows and repaints further slowing down performance. 
-
-## The AJAX problem
-
-* error handling and the indefinite spinner. 
-* look at article by heilmann.
 
 ## Effort
 
