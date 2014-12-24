@@ -29,9 +29,7 @@ Utilising content-caching in this way means the page is only half loaded and hal
 
 ## Performance
 
-This entire endeavour is about decreasing page-load time. However, the performance benefit is somewhat negated by requiring extra JS which is likely to include implementation (which is likely to involve request, traverse and update Document based on response) and some library functions for making requests, parsing the (JSON) response, retrieving elements, traversing the Document and inject HTML. All of this code adds to the page-weight slowing down the load time. There is also extra CSS required to alleviate the potentially jarring UX.
-
-Runtime performance also degrades, particularly with sensitive battery-powered mobile devices. Also, when updating the Document there is the cost of reflows and repaints further slowing down performance. 
+This entire endeavour is about decreasing page-load time. However, the performance benefit is somewhat negated by requiring extra JS which is likely to include implementation (which is likely to involve request, traverse and update Document based on response) and some library functions for making requests, parsing the (JSON) response, retrieving elements, traversing the Document and inject HTML. All of this code adds to the page-weight slowing down the load time. There is also extra CSS required to alleviate the potentially jarring UX. Runtime performance also degrades because injecting HTML causes reflows and repaints further degrading performance.
 
 ## Effort
 
@@ -53,6 +51,8 @@ Content-caching *is* a very useful technique when used responsibly and for pages
 </dl>
 
 <!--
+
+https://remysharp.com/2012/04/25/mobile-battery-performance
 
 [0]: http://itamarst.org/writings/dynamiccaching.html
 
