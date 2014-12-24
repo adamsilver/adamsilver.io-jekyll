@@ -44,7 +44,7 @@ Let's not forget the extra development effort required for this to happen. More 
 
 ## Summary
 
-Content-caching *is* a very useful technique when used responsibly and for pages that don't contain personalised content. For pages that *do* contain personalised content, a simple cookie check can determine whether the cached version should be served or not. There is no need to misue JS in this way as there are several negative side effects in doing so. AJAX should not break the web, it should enhance the experience where necessary. The example in this article seems like an innocent, quick win but as you can see it's problematic and encourages bad practice as more personalised features are added to the website.
+Content-caching *is* a very useful technique when used responsibly and for pages that don't contain personalised content. For pages that *do* contain personalised content, a simple cookie check can determine whether the cached version should be served or not. There is no need to misue JS in this way as there are several negative side effects in doing so. AJAX should not break the web, it should enhance the experience where necessary. The example in this article seems like an innocent, quick win, but in reality it's problematic, encourages bad practice, and only gets worse as more personalised features are added.
 
 ## Citations
 
