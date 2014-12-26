@@ -1,21 +1,21 @@
 ---
 layout: post
-title:  "Don't use AJAX to remedy personalisated content on cached pages"
+title:  "Don't use AJAX to remedy personalised content on cached pages"
 date:   2019-01-01 09:00:01
-categories: 
+categories:
 ---
 
 Sometimes, developers (usually server-side) are on a pursuit to reduce page-load time by utilising content caching [[0](#ref0)]. This is useful until a page contains personalised content, meaning this type of caching can't neccessarily be used, as a user might receive the cached version of somebody elses personalised content. The problem arises with the suggestion that this can be solved using AJAX, to request (and render) the personalised content and this is problematic for several reasons.
 
-## Personalised content?
-
-Before discussing the problems, let's define personalised content. Personalised content is any content that is specific to a user. A "Logout" link in the page header is personalised because the page knows that *you* are logged in and that *you* may want to logout.
-
-So, about those problems...
+Before discussing the problems, let's define personalised content. Personalised content is any content that is specific to a user. A "Logout" link in the page header is personalised because the page knows that *you* are logged in and that *you* may want to logout. So, about those problems...
 
 ## Multiple HTTP requests
 
-Instead of having a single HTTP request that contains the entire required response there will now be multiple. The first would be for the Document containing non-personalised content (which will be content-cached after the first request). The subsequent request will be via AJAX (and is obviously not content-cached). This means *this* request will be hitting your web server anyway with the same latency as always. Also, there might be a request for each encapsulated portion of content i.e. Personalised header might be one call, and personalised products might be another call. But this is a bit of an architecture rabbit-hole which won't be discussed further in this article.
+Instead of having a single HTTP request that contains the entire required response there will now be multiple. The first would be for the Document containing non-personalised content (which will be content-cached after the first request). The subsequent request will be via AJAX (and is obviously not content-cached). This means *this* request will be hitting your web server anyway with the same latency as always. Also, there might be a request for each encapsulated portion of content i.e. Personalised header might be one call, and personalised products might be another call. But this is a bit of an architecture rabbit-hole which leads nicely to...
+
+## Architecture
+
+The best way to describe the domino affect of a "quick-win" like this is just to ask a few questions which impacts development effort and performance. *Do you have one extra request for personalised content? Do you have multiple? Do you serve it as JSON and then parse that on the client? How do you organise your scripts for this? How do you organise the view partials for this on the server?*
 
 ## Accessibility
 
@@ -25,13 +25,13 @@ If the user doesn't have JS (or they have JS but not the capability to make AJAX
 
 Christian Heilmann rightly says that *AJAX shouldn't break the web* [[1](#ref1)] and using it in this way is doing just that. He also highlights that when AJAX is used, it is important to remember how much the browser does that subtly goes unnoticed including but not limited to displaying a loading indicator with  progress bar, handling page not found and timeout errors.
 
-Utilising content-caching in this way means the page is only half loaded and half rendered at which point, sometime later the personalised content is injected. The experience is likely to be at least a little jarring as the page completes. Solutions may include loading spinners, hiding content and transitions but in reality they are far from perfect. Also, the user may not see the various updates as they are busy interacting further down the page. This is all exacabated on slower connections.
+Utilising AJAX and content-caching like this, means the page is only half loaded and half rendered at which point, and sometime later, the personalised content is injected. The experience is likely to be at least a little jarring as the page fills in the gaps. Solutions may include loading spinners, hiding content and transitions but in reality they are far from perfect. Also, the user may not see the various updates as they are busy interacting further down the page. This is all exacabated on slower connections.
 
 ## Performance
 
 This entire endeavour is about decreasing page-load time. However, the performance benefit is somewhat negated by requiring extra JS which is likely to include implementation (which is likely to involve request, traverse and update Document based on response) and some library functions for making requests, parsing the (JSON) response, retrieving elements, traversing the Document and inject HTML. All of this code adds to the page-weight slowing down the load time. There is also extra CSS required to alleviate the potentially jarring UX. Runtime performance also degrades because injecting HTML causes reflows and repaints further degrading performance.
 
-## Effort
+## Development effort
 
 Extra design and development effort is required also. There is script to write and test, and it's harder to automate and changes the way in which automated functional tests are written. Whenever a script is added there is a significantly higher chance of failure for some browsers.
 
@@ -82,7 +82,7 @@ https://remysharp.com/2012/04/25/mobile-battery-performance
 * smush images
 * reduce page weight in assets, css, js
 
-Todo: 
+Todo:
 
 * cache invalidated means it goes to server anyway
 
