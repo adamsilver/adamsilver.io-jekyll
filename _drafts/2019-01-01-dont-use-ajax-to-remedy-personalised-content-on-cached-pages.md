@@ -31,7 +31,7 @@ The entire endeavour is about decreasing page-load time. However, the performanc
 
 ## Effort
 
-Extra design effort is required to cater for the aformnetioned degrading in experience. Extra development effort is required to write and test script. It's also harder to automate the functional testing and changes the way in which those tests are written.
+Extra design effort is required to cater for the aformentioned degrading in experience. Extra development effort is required to write and test script. It's also harder to automate the functional testing and changes the way in which those tests are written.
 
 ## Summary
 
