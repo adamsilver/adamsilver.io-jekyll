@@ -9,7 +9,7 @@ Sometimes, developers are on a pursuit to reduce page-load time by utilising con
 
 ## Architecture
 
-This seemingly harmless decision has a signifcant knock on effect on architecture. *Is there one extra request for personalised content or multiple? Do you serve it as JSON and then parse that on the client? How do you organise your scripts for this? How do you organise the view partials for this on the server? At what point is personalised content not essential to the user-experienced and how does that affect architecture?*
+*Is there one extra request for personalised content or multiple? Do you serve it as JSON and then parse that on the client? How do you organise your scripts for this? How do you organise the view partials for this on the server? At what point is personalised content not essential to the user-experienced and how does that affect architecture?* What seems like a simple use of AJAX has a significant effect on architecture and it doesn't stop there.
 
 ## Accessibility
 
