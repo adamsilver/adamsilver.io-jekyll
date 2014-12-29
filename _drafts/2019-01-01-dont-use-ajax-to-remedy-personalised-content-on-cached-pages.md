@@ -13,15 +13,15 @@ Instead of having a single HTTP request that contains the entire required respon
 
 ## Architecture
 
-The best way to describe the domino affect of a "quick-win" like this is just to ask a few questions which impacts development effort and performance. *Do you have one extra request for personalised content? Do you have multiple? Do you serve it as JSON and then parse that on the client? How do you organise your scripts for this? How do you organise the view partials for this on the server?*
+This seemingly harmless decision has quite the knock on effect on architecture. *Is there one extra request for personalised content or multiple? Do you serve it as JSON and then parse that on the client? How do you organise your scripts for this? How do you organise the view partials for this on the server? At what point is personalised content not essential to the user-experienced?*
 
 ## Accessibility
 
-If the user doesn't have JS (or they have JS but not the capability to make AJAX requests, traverse or manipulate the Document etc) they will be unable to use this functionality. This goes against all the principles of Progressive Enhancement and is completely against the spirit of the web. And in the case of "logging out" this would be a poor decision. Furthermore, extra effort would be required to ensure the XHR-injected content is accessibile to screen readers.
+If the user doesn't have JS (or they have JS but not the capability to make AJAX requests, traverse or manipulate the Document etc) they will be unable to use this functionality. This goes against all the principles of Progressive Enhancement [[1](#ref1)] and is completely against the spirit of the web. And in the case of "logging out" this would be a poor decision. Furthermore, extra effort would be required to ensure the XHR-injected content is accessibile to screen readers.
 
 ## User Experience
 
-Christian Heilmann rightly says that *AJAX shouldn't break the web* [[1](#ref1)] and using it in this way is doing just that. He also highlights that when AJAX is used, it is important to remember how much the browser does that subtly goes unnoticed including but not limited to displaying a loading indicator with  progress bar, handling page not found and timeout errors.
+Christian Heilmann rightly says that *AJAX shouldn't break the web* [[2](#ref2)] and using it in this way is doing just that. He also highlights that when AJAX is used, it is important to remember how much the browser does that subtly goes unnoticed including but not limited to displaying a loading indicator with  progress bar, handling page not found and timeout errors.
 
 Utilising AJAX and content-caching like this, means the page is only half loaded and half rendered at which point, and sometime later, the personalised content is injected. The experience is likely to be at least a little jarring as the page fills in the gaps. Solutions may include loading spinners, hiding content and transitions but in reality they are far from perfect. Also, the user may not see the various updates as they are busy interacting further down the page. This is all exacabated on slower connections.
 
@@ -35,16 +35,16 @@ Extra design and development effort is required also. There is script to write a
 
 ## Summary
 
-Content-caching *is* a very useful technique when used responsibly and for pages that don't contain personalised content. For pages that *do* contain personalised content, a simple cookie check can determine whether the cached version should be served or not [[2](#ref2)]. There is no need to misue JS in this way as there are several negative side effects in doing so. AJAX should not break the web, it should enhance the experience where necessary. The example in this article seems like an innocent, quick win, but in reality it's problematic, encourages bad practice, and only gets worse as more personalised features are added.
+Content-caching *is* a very useful technique when used responsibly and for pages that don't contain personalised content. For pages that *do* contain personalised content, a simple cookie check can determine whether the cached version should be served or not [[3](#ref3)]. There is no need to misue JS in this way as there are several negative side effects in doing so. AJAX should not break the web, it should enhance the experience where necessary. The example in this article seems like an innocent, quick win, but in reality it's problematic, encourages bad practice, and only gets worse as more personalised features are added.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
 	<dd><a href="https://developer.akamai.com/stuff/Caching/Content_Caching.html">Content caching</a></dd>
-
 	<dt class="citation" id="ref1">[1]</dt>
+	<dd><a href="http://jakearchibald.com/2013/progressive-enhancement-still-important/">Progressive Enhancement is still important</a></dd>
+	<dt class="citation" id="ref2">[2]</dt>
 	<dd><a href="http://www.smashingmagazine.com/2010/02/10/some-things-you-should-know-about-ajax/">Some things you should know about AJAX</a></dd>
-
-	<dt class="citation" id="ref1">[2]</dt>
+	<dt class="citation" id="ref3">[3]</dt>
 	<dd><a href="https://blogs.akamai.com/2014/05/and-you-thought-your-page-could-not-be-cached.html">And you thought your page could not be cached</a></dd>
 </dl>
 
