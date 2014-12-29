@@ -29,7 +29,7 @@ Instead of having a single HTTP request that contains the entire required respon
 
 ## Summary
 
-Content-caching *is* a very useful technique when used responsibly and for pages that don't contain personalised content. For pages that *do* contain personalised content, a simple cookie check can determine whether the cached version should be served or not [[3](#ref3)]. It is ill-advised to misue Javascript in this way as there are several negative side effects in doing so. AJAX should not break the web, it should enhance the experience where necessary. AJAX seems like an innocent and beneficial solution, but in reality it is a bad practice that creates several self-induced problems for users and the development team.
+Content-caching *is* a very useful technique when used responsibly and for pages that don't contain personalised content. For pages that *do* contain personalised content, a simple cookie check can determine whether the cached version should be served or not [[3](#ref3)]. It is ill-advised to misue Javascript in this way as there are several negative side effects in doing so. AJAX should not break the web, it should enhance the experience where necessary. AJAX seems like an innocent and beneficial solution, but in reality it encourages bad practice that creates several self-induced problems for users and the development team.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
