@@ -13,11 +13,11 @@ Instead of having a single HTTP request that contains the entire required respon
 
 ## Architecture
 
-This seemingly harmless decision has quite the knock on effect on architecture. *Is there one extra request for personalised content or multiple? Do you serve it as JSON and then parse that on the client? How do you organise your scripts for this? How do you organise the view partials for this on the server? At what point is personalised content not essential to the user-experienced?*
+This seemingly harmless decision has a signifcant knock on effect on architecture. *Is there one extra request for personalised content or multiple? Do you serve it as JSON and then parse that on the client? How do you organise your scripts for this? How do you organise the view partials for this on the server? At what point is personalised content not essential to the user-experienced?*
 
 ## Accessibility
 
-If the user doesn't have JS (or they have JS but not the capability to make AJAX requests, traverse or manipulate the Document etc) they will be unable to use this functionality. This goes against all the principles of Progressive Enhancement [[1](#ref1)] and is completely against the spirit of the web. And in the case of "logging out" this would be a poor decision. Furthermore, extra effort would be required to ensure the XHR-injected content is accessibile to screen readers.
+If the user doesn't have JS (or they have JS but not the capability to make AJAX requests, traverse or manipulate the Document etc) they will be unable to use this functionality. This goes against all the principles of Progressive Enhancement [[1](#ref1)] and is completely against the spirit of the web. And in the case of "logging out" this would obviously be a poor decision. Furthermore, extra effort would be required to ensure the XHR-injected content is accessibile to screen readers.
 
 ## User Experience
 
