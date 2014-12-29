@@ -29,9 +29,9 @@ Utilising AJAX and content-caching like this, means the page is only half loaded
 
 The entire endeavour is about decreasing page-load time. However, the performance benefit is somewhat negated by requiring extra JS which is likely to include implementation (which is likely to involve request, traverse and update Document based on response) and some library functions for making requests, parsing the (JSON) response, retrieving elements, traversing the Document and inject HTML. All of this code adds to the page-weight slowing down the load time. There is also extra CSS required to alleviate the self-induced jarring experience. Runtime performance also degrades because injecting HTML causes reflows and repaints further degrading performance.
 
-## Development effort
+## Effort
 
-Extra design and development effort is required also. There is script to write and test, and it's harder to automate and changes the way in which automated functional tests are written. Whenever a script is added there is a significantly higher chance of failure for some browsers.
+Extra design effort is required to cater for the aformnetioned degrading in experience. Extra development effort is required to write and test script. It's also harder to automate the functional testing and changes the way in which those tests are written.
 
 ## Summary
 
