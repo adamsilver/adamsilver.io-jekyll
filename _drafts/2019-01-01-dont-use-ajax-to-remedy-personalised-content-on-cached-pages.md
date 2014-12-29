@@ -13,7 +13,7 @@ Sometimes, developers are on a pursuit to reduce page-load time by utilising con
 
 ## Accessibility
 
-If the user doesn't have JS (or they have JS but not the capability to make AJAX requests, traverse or manipulate the Document etc) they will be unable to use this functionality. This goes against all the principles of Progressive Enhancement [[1](#ref1)] and is completely against the spirit of the web. And in the case of "logging out" this would obviously be a poor decision. Furthermore, extra effort would be required to ensure the XHR-injected content is accessibile to screen readers. This alone is reason enough to realise this is an unacceptable solution.
+If the user doesn't have Javascript (or they have it but not the capability to make AJAX requests, traverse or manipulate the Document etc) they will be unable to use this functionality. This goes against all the principles of Progressive Enhancement [[1](#ref1)] and is completely against the spirit of the web. And in the case of "logging out" this would obviously be a poor decision. Furthermore, extra effort would be required to ensure the XHR-injected content is accessibile to screen readers. This alone is reason enough to realise this is an unacceptable solution.
 
 ## Design
 
@@ -25,11 +25,11 @@ Extra design effort is required to cater for the aformentioned degrading in expe
 
 ## Performance
 
-Instead of having a single HTTP request that contains the entire required response there will now be multiple. The first would be for the Document containing non-personalised content. The subsequent request will be via AJAX and *will* hit your web server, therefore subject to the same latency as always. The potential performance benefit is somewhat negated by requiring extra JS including making and (parsing) the JSON request, finding elements, traversing and updating the Document. All of this code adds to the page-weight slowing down the load time. There is also extra CSS required to alleviate the self-induced jarring experience. Runtime performance also degrades because injecting HTML causes reflows and repaints.
+Instead of having a single HTTP request that contains the entire required response there will now be multiple. The first would be for the Document containing non-personalised content. The subsequent request will be via AJAX and *will* hit your web server, therefore subject to the same latency as always. The potential performance benefit is somewhat negated by requiring extra Javascript including making and (parsing) the JSON request, finding elements, traversing and updating the Document. All of this code adds to the page-weight slowing down the load time. There is also extra CSS required to alleviate the self-induced jarring experience. Runtime performance also degrades because injecting HTML causes reflows and repaints.
 
 ## Summary
 
-Content-caching *is* a very useful technique when used responsibly and for pages that don't contain personalised content. For pages that *do* contain personalised content, a simple cookie check can determine whether the cached version should be served or not [[3](#ref3)]. There is no need to misue JS in this way as there are several negative side effects in doing so. AJAX should not break the web, it should enhance the experience where necessary. AJAX seems like an innocent and beneficial solution, but in reality it is a bad practice that creates a host of self-induced problems for users and the development team.
+Content-caching *is* a very useful technique when used responsibly and for pages that don't contain personalised content. For pages that *do* contain personalised content, a simple cookie check can determine whether the cached version should be served or not [[3](#ref3)]. It is ill-advised to misue Javascript in this way as there are several negative side effects in doing so. AJAX should not break the web, it should enhance the experience where necessary. AJAX seems like an innocent and beneficial solution, but in reality it is a bad practice that creates several self-induced problems for users and the development team.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
