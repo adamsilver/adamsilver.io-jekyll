@@ -13,7 +13,7 @@ Sometimes, developers are on a pursuit to reduce page-load time by utilising con
 
 ## Accessibility
 
-If the user doesn't have JS (or they have JS but not the capability to make AJAX requests, traverse or manipulate the Document etc) they will be unable to use this functionality. This goes against all the principles of Progressive Enhancement [[1](#ref1)] and is completely against the spirit of the web. And in the case of "logging out" this would obviously be a poor decision. Furthermore, extra effort would be required to ensure the XHR-injected content is accessibile to screen readers.
+If the user doesn't have JS (or they have JS but not the capability to make AJAX requests, traverse or manipulate the Document etc) they will be unable to use this functionality. This goes against all the principles of Progressive Enhancement [[1](#ref1)] and is completely against the spirit of the web. And in the case of "logging out" this would obviously be a poor decision. Furthermore, extra effort would be required to ensure the XHR-injected content is accessibile to screen readers. This alone is reason enough to realise this is an unacceptable solution.
 
 ## Design
 
