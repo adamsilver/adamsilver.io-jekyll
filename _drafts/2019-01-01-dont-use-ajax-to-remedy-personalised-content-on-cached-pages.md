@@ -7,10 +7,6 @@ categories:
 
 Sometimes, developers are on a pursuit to reduce page-load time by utilising content caching [[0](#ref0)]. This is useful until a page contains personalised content, meaning this type of caching can't neccessarily be used. This is because a user might receive the cached version of somebody elses personalised content. The problem arises with the suggestion that this can be solved using AJAX to request the personalised content and this is problematic for several reasons. Before discussing the problems, let's define personalised content. Personalised content is any content that is specific to a user. The most basic example would be a "Logout" link because the page knows that *you* are logged in and that *you* may want to logout.
 
-## Multiple HTTP requests
-
-Instead of having a single HTTP request that contains the entire required response there will now be multiple. The first would be for the Document containing non-personalised content (which will be content-cached after the first request). The subsequent request will be via AJAX (and is obviously not content-cached); the request *will* be hitting your web server, therefore subject to the same latency as always. Also, there might be a request for each encapsulated portion of content i.e. Personalised header might be one request, and personalised products might be another; this is a bit of an architecture rabbit-hole...
-
 ## Architecture
 
 This seemingly harmless decision has a signifcant knock on effect on architecture. *Is there one extra request for personalised content or multiple? Do you serve it as JSON and then parse that on the client? How do you organise your scripts for this? How do you organise the view partials for this on the server? At what point is personalised content not essential to the user-experienced?*
@@ -25,13 +21,13 @@ Christian Heilmann rightly says that *AJAX shouldn't break the web* [[2](#ref2)]
 
 Utilising AJAX and content-caching like this, means the page is only half loaded and half rendered at which point, and sometime later, the personalised content is injected. The experience is likely to be at least a little jarring as the page fills in the gaps. Solutions may include loading spinners, hiding content and transitions but in reality they are far from perfect. Also, the user may not see the various updates as they are busy interacting further down the page. This is all exacabated on slower connections.
 
-## Performance
-
-The entire endeavour is about decreasing page-load time. However, the performance benefit is somewhat negated by requiring extra JS which is likely to include implementation (which is likely to involve request, traverse and update Document based on response) and some library functions for making requests, parsing the (JSON) response, retrieving elements, traversing the Document and inject HTML. All of this code adds to the page-weight slowing down the load time. There is also extra CSS required to alleviate the self-induced jarring experience. Runtime performance also degrades because injecting HTML causes reflows and repaints.
-
 ## Effort
 
 Extra design effort is required to cater for the aformentioned degrading in experience. Extra development effort is required to write and test script. It's also harder to automate the functional testing and changes the way in which those tests are written.
+
+## Performance
+
+Instead of having a single HTTP request that contains the entire required response there will now be multiple. The first would be for the Document containing non-personalised content. The subsequent request will be via AJAX and *will* hit your web server, therefore subject to the same latency as always. The potential performance benefit is somewhat negated by requiring extra JS including making and (parsing) the JSON request, finding elements, traversing and updating the Document. All of this code adds to the page-weight slowing down the load time. There is also extra CSS required to alleviate the self-induced jarring experience. Runtime performance also degrades because injecting HTML causes reflows and repaints.
 
 ## Summary
 
