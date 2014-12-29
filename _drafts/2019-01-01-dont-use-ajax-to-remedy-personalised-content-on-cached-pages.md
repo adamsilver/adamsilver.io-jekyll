@@ -5,13 +5,11 @@ date:   2019-01-01 09:00:01
 categories:
 ---
 
-Sometimes, developers (usually server-side) are on a pursuit to reduce page-load time by utilising content caching [[0](#ref0)]. This is useful until a page contains personalised content, meaning this type of caching can't neccessarily be used, as a user might receive the cached version of somebody elses personalised content. The problem arises with the suggestion that this can be solved using AJAX, to request (and render) the personalised content and this is problematic for several reasons.
-
-Before discussing the problems, let's define personalised content. Personalised content is any content that is specific to a user. A "Logout" link in the page header is personalised because the page knows that *you* are logged in and that *you* may want to logout. So, about those problems...
+Sometimes, developers (usually server-side) are on a pursuit to reduce page-load time by utilising content caching [[0](#ref0)]. This is useful until a page contains personalised content, meaning this type of caching can't neccessarily be used. This is because a user might receive the cached version of somebody elses personalised content. The problem arises with the suggestion that this can be solved using AJAX to request the personalised content and this is problematic for several reasons. Before discussing the problems, let's define personalised content. Personalised content is any content that is specific to a user. The most basic example would be a "Logout" link because the page knows that *you* are logged in and that *you* may want to logout.
 
 ## Multiple HTTP requests
 
-Instead of having a single HTTP request that contains the entire required response there will now be multiple. The first would be for the Document containing non-personalised content (which will be content-cached after the first request). The subsequent request will be via AJAX (and is obviously not content-cached). This means *this* request will be hitting your web server anyway with the same latency as always. Also, there might be a request for each encapsulated portion of content i.e. Personalised header might be one call, and personalised products might be another call. But this is a bit of an architecture rabbit-hole which leads nicely to...
+Instead of having a single HTTP request that contains the entire required response there will now be multiple. The first would be for the Document containing non-personalised content (which will be content-cached after the first request). The subsequent request will be via AJAX (and is obviously not content-cached); the request *will* be hitting your web server, therefore subject to the same latency as always. Also, there might be a request for each encapsulated portion of content i.e. Personalised header might be one request, and personalised products might be another; this is a bit of an architecture rabbit-hole...
 
 ## Architecture
 
