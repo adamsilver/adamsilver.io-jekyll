@@ -7,17 +7,25 @@ categories:
 
 ## User Experience
 
-Everyone is responsible for User Experience (UX) [0] and Front-end Developers play an essential role [1]. This is because due to the nature of their job they (should) understand the platform better than anyone else. 
+Everyone is responsible for User Experience (UX) [0] and Front-end Developers play an essential role [1]. This is because due to the nature of their job they are likely to have a very deep understanding of the the browser.
 
-Having to develop against an almost infinite amount of different browsers across different Operating Systems and devices with different configurations means a Front-end developer truly understands the constraints of the web and embraces them to the users advantages.
+Having to develop against an almost infinite amount of different browsers across different Operating Systems and devices, with different configurations means a Front-end developer truly understands the constraints of the web and embraces them to the users advantages.
 
 ## Front-end architecture
 
-Ensures that a suitable front-end architecture is ensured including but not limited to design patterns such as Constructors, architectural patterns such as MVC, bootstrapping strategy for Javascript, bundling and compression, modularity and semantics. Technical contracts should be in-place between the front-end and backend developers to discuss appropriate view models for the view template engine (which differs between server side tech stacks) and of course XHR responses.
+A front-end developer should design a suitable front-end architecture which considers many facets including but not limited to:
+
+* Design patterns
+* Architectural patterns
+* Bootstrapping strategy
+* Bundling and compression
+* Modularity and semantics
+* Technical contracts between back-end and front-end requests/responses.
+* Code style and convention
 
 ## Front-end features
 
-Will definitely include writing HTML, CSS and Javscript that pertains to existing or new features. Hopefully includes writing unit tests and (helping to) write functional tests to ensure code-qaulity is high  [X](look up a reasons to unit and functional test automation)
+Having a defined architecutre, that architecutre can now be used to define and create features. This will include writing HTML, CSS and Javscript that pertains to existing or new features. This should include writing unit tests and (helping to) write functional tests to ensure code-qaulity is high  [X](look up a reasons to unit and functional test automation)
 
 ## Accessibility
 
