@@ -5,11 +5,13 @@ date:   2017-01-01 09:00:01
 categories: accessibility
 ---
 
-Designers often want to control every aspect (read pixel) of the UI to the extent that everything looks identical on all browsers. You will notice that form controls look significantly different across browsers [[0](#ref0)] and because of this, *custom* form controls cause periodic discussions between developers and designers. Form controls, unlike most other HTML elements, are nigh on impossible to style consistently Cross-browser. Roger Johansson says:
+Designers often want to control every aspect (read pixel) of the UI to the extent that everything looks identical on all browsers. You will notice that form controls look significantly different between browsers [[0](#ref0)] and because of this, *custom* form controls cause periodic discussions between developers and designers. Unfortunately, form controls, unlike most other HTML elements, are nigh on impossible to style consistently Cross-browser. 
+
+Roger Johansson, a web professional from Sweden states:
 
 > "...it shows that using CSS to style form controls to look exactly the same across browsers and platforms is impossible. It also shows that most browsers ignore many CSS properties when they are applied to form controls."
 
-Some elements are more problematic than others. When developers endeavour to tame these elements, user experience is often degraded, which ironically is normally the reason for attempting this feat in the first place.
+Some elements are more problematic than others. When developers endeavour to tame these elements, user experience is often degraded, which is ironically, the reason for attempting this in the first place.
 
 ## Users don't notice the difference
 
