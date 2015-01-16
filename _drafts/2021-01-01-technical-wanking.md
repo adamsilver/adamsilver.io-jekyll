@@ -21,11 +21,14 @@ The problem with the industry is that most people are Technical Wankers; it's an
 
 If you're here reading this, and your head isn't stuck up your ass, you're very likely to know the stuff I am talking about, and with a bit of luck, the fad will pass. However, when one fad passes, a new one comes a long and the industry continues to waste a load of money on the next great rewrite.
 
+Needless, to say 
+
 <!--
 I suppose Technical Wanking is the arch-enemy of [The Boring Front-end Developer](/articles/the-boring-front-end-developer/) and I guess this is the "I call bullshit" version of that article, at least in terms of Front-end. There is nothing wrong with abstractions. Anyone who writes the same code more than once, abstracts and automates. You might call a group of abstractions a library. And that's just fine. You might call a set of conventions, configuration and style a framework. That's also fine.
 
 But, and it's a big but, there is a difference between abstractions in general, and abstractions that are failing on release due to poor code quality, complexity and in this industry specifically, browser support! Unfortunately, there is normally very little attempt to put the user first. A lot of these librarys are selling themselves to developers; write less, don't reinvent the wheel etc. It's rarely about the user, browser support and reach.
 
 Avoiding the shinier Front-end libraries and co, have given 
--->
+
 * the best thing to come out of all this was 1) realising technical wanking is a thing and 2) I was doing it.
+-->
