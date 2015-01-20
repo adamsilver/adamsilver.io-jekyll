@@ -5,7 +5,13 @@ date:   2015-01-01 09:00:01
 categories: web
 ---
 
-Technical Wanking is unfortunately not a term I coined myself. That has to be credited to James Norton, a fantastic Front-end Developer with a tendency to tell it how it is. A good number of years ago, I was building my first Single Page Application and I just felt so good. I was using the latest greatest libraries and frameworks and pushing the (read a) browser to it's limit. Up until this moment I just read lots of shiny blog posts and could only dream of using these things. I felt so clever, and I thought it was great for my CV.
+Technical Wanking is all about using shiny, new technology because well, it's shiny, new technology. Of course technology should be chosen on it's quality under the hood and based on how fit-for-purpose it is. Unfortunately, for me, I didn't coin the term myself. That has to be credited to James Norton, a fantastic Front-end Developer with a tendency to tell it how it is.
+
+I first heard the term a good few years back when I was building my first Single Page Application and it felt good. I was a using libraries; one general purpose DOM library, one UI component library and a templating library. We also rolled our own client-side router. We only tested in Chrome, it was a backend system and it didn't matter as much as a consumer facing site. It didn't need SEO. It was a CRUD applicaton with a few rich interactions. I couldn't wait to get my teeth into this, get the experience under my belt, add it to the CV and rocket my career accordingly. How could any client resist me with all my new CV buzzwords?
+
+* API yuckiness
+
+latest, greatest libraries and frameworks and pushing the (read a) browser to it's limit. Up until this moment I just read lots of shiny blog posts and could only dream of using these things. I felt so clever, and I thought it was great for my CV.
 
 Then, James joined the company, and he pointed out how amazing the app could have been if it was a normal thin client application. He pointed out so many problems that were all self-induced. When I am questioned like this, I tend think deeply about the feedback. I could totally see what he was saying, I didn't brush it off as such, but I was 6 months into the project and as I only had to support Chrome, it didn't bother me too much. At least I was learning and adding all these fantastic buzzwords to my CV.
 
