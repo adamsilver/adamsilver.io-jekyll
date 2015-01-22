@@ -11,15 +11,15 @@ I first heard the term a good few years back when I was building my first Single
 
 At about 6 months into the project, it was going pretty smoothly. James joined the team around this time. And I accompanied him on one his first fag breaks. He was a needy man, and required my company for the majority of his fag breaks. Besides the smoke itself, I was much obliged. In his usual blunt way, he questioned the SPA architecture. He explained that I was a Technical Wanker. I laughed as he went on to explain how all the not-so-good aspects of the code were self induced. To give *some* insight as to what he was getting at, this included:
 
-1. Writing a client-side router. Our backend was written in Rails, which Rails has a beautiful router. No need to recreate one on the client.
+1. Writing a client-side router. Our backend was written in Rails, which has a beautiful router. No need to recreate one on the client.
 
-2. Writing a view engine to on rebuild/render parts of the page that changed. Sounds simple but not. Will leave those details to a future post perhaps. Either way Rails views are just fine.
+2. Writing a view engine to rebuild/render parts of the page that changed. This might sound simple but it wasn't; take my word it for the moment. Either way Rails (like any other server-side framework) has you covered.
 
-3. Having to massage and work with generic REST APIs on the client. Rails has a lovely ORM and is used to exposing beautiful fit-for-purpose viewModels for consumption in a traditional server side view template.
+3. Having to massage and work with generic REST APIs on the client. Rails has a lovely ORM and is used to exposing beautiful fit-for-purpose viewModels for consumption in a traditional server-side view template.
 
 4. Cross domain issues and more.
 
-He went on to say that we could have had a very fast CRUD application using a traditional thin client without all the inherent floors in SPAs [xx](xx). Whilst I was still delighted at all the clever things I appeared to be doing, I couldn't help but realise he was right. There was just no need. I was solving self-induced problems and nothing else. The application would have been just as slick. Just as beautiful. Just as rich. And it would have taken half the time to build with a far nicer split of responsibilites between server and client. Not to mention it would have had a better performance, better accessibility and a better User Experience.
+He went on to say that we could have had a very fast CRUD application using a traditional thin client without all the inherent floors in SPAs [[0](#ref0)]. Whilst I was still delighted at all the clever things I appeared to be doing, I couldn't help but realise he was right. There was just no need. I was solving self-induced problems and nothing else. The application would have been just as slick. Just as beautiful. Just as rich. And it would have taken half the time to build, with a far nicer split of responsibilites between server and client. Not to mention it would have had better performance, better accessibility and a better User Experience.
 
 For the rest of my time building the project, every time I ran into a problem, I checked that it wasn't my fault. I dreamt at how much easier tis would have been if I decided to stop Technical Wanking. When did all this nonsense become the done thing? Everyone's building these things, everyones writing about these things! The problem I have found, in all walks of life may I add is that if everyone is doing it, it's usually stupid. Just a few examples of this in the wild:
 
