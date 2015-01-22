@@ -27,10 +27,12 @@ During the rest of the project, I kept a close eye on any problems that arose an
 * Most people drink too much Coke
 * Most people consume too much alcohol
 * Most people sunbathe for way too long
-* Most people get into ridiculous amounts of debt despote there high levels of income.
+* Most people get into ridiculous amounts of debt despite there high levels of income.
+* Most people don't get enough exercise
+* Most people don't persue their passions
 * and so on.
 
-The differnce of course is that when people do this they only affect themselves (and close family and friends). In professional web development, it is your duty not to do stupid things and to serve the client and end-user.
+The differnce of course is that when people do the above they normally affect themselves (and a perhaps minimal others). In the paid, professional world of web development, it is your duty not to do stupid things and to serve the client and end-user.
 
 Why rely on solid, guaranteed to work, with far less effort, server-side technology, when we can make our lives and our users life much more difficult if we push this stuff to a client-side only application? It's an epidemic in the industry and one of the side affects of the disease of Technical Wankery is that of Mortgage Driven Development. Watch out of that one. Fortunately most people don't do this on purpose but it happens. I have seen it.
 
