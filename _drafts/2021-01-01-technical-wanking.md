@@ -5,7 +5,7 @@ date:   2015-01-01 09:00:01
 categories: web
 ---
 
-Technical Wanking is all about using shiny, new technology because well, it's shiny, new technology. Of course technology should be chosen on it's quality under the hood and based on how fit-for-purpose it is. Unfortunately, for me, I didn't coin the term myself. That has to be credited to James Norton, a fantastic Front-end Developer with a tendency to tell it how it is.
+Technical Wanking is about using cool, new technology because well, it's cool, new technology. Of course technology should be chosen on its technical merit and technical merit alone. Unfortunately, I didn't coin the term myself. That has to be credited to James Norton, a talented Front-end Developer with a tendency to tell it how it is.
 
 I first heard the term a good few years back when I was building my first Single Page Application and it felt good. I was a using libraries; one general purpose DOM library, one UI component library and a templating library. We also rolled our own client-side router. We only tested in Chrome, it was a backend system and it didn't matter as much as a consumer facing site. It didn't need SEO. It was a CRUD applicaton with a few rich interactions. I couldn't wait to get my teeth into this, get the experience under my belt and propel my career accordingly. How could any client resist me with all the new buzzwords littering my CV?
 
