@@ -30,6 +30,8 @@ For the rest of my time building the project, every time I ran into a problem, I
 * Most people get into ridiculous amounts of debt despote there high levels of income.
 * and so on.
 
-It turns out the same craziness happens in web development. Why rely on solid, guaranteed to work, with far less effort, server-side technology, when we can make our lives and our users life much more difficult if we push this stuff to a client-side only application? It's an epidemic in the industry and one of the side affects of the disease of Technical Wankery is that of Mortgage Driven Development. Watch out of that one. Fortunately most people don't do this on purpose but it happens. I have seen it.
+The differnce of course is that when people do this they only affect themselves (and close family and friends). In professional web development, it is your duty not to do stupid things and to serve the client and end-user.
+
+Why rely on solid, guaranteed to work, with far less effort, server-side technology, when we can make our lives and our users life much more difficult if we push this stuff to a client-side only application? It's an epidemic in the industry and one of the side affects of the disease of Technical Wankery is that of Mortgage Driven Development. Watch out of that one. Fortunately most people don't do this on purpose but it happens. I have seen it.
 
 Anyway, having realised my mistakes and not wanting to be called a Technical Wanker again, I have since, always questioned silly, new shiny technology without deep analysis and critique. It has so far served me and my end-users very well indeed. I also get to call other developers Technical Wankers too, without being called a hypocrit. I usually get a good laugh and positive, inquisitive response.
