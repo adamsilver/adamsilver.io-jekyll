@@ -7,36 +7,29 @@ categories: web
 
 Technical Wanking is all about using shiny, new technology because well, it's shiny, new technology. Of course technology should be chosen on it's quality under the hood and based on how fit-for-purpose it is. Unfortunately, for me, I didn't coin the term myself. That has to be credited to James Norton, a fantastic Front-end Developer with a tendency to tell it how it is.
 
-I first heard the term a good few years back when I was building my first Single Page Application and it felt good. I was a using libraries; one general purpose DOM library, one UI component library and a templating library. We also rolled our own client-side router. We only tested in Chrome, it was a backend system and it didn't matter as much as a consumer facing site. It didn't need SEO. It was a CRUD applicaton with a few rich interactions. I couldn't wait to get my teeth into this, get the experience under my belt, add it to the CV and rocket my career accordingly. How could any client resist me with all my new CV buzzwords?
+I first heard the term a good few years back when I was building my first Single Page Application and it felt good. I was a using libraries; one general purpose DOM library, one UI component library and a templating library. We also rolled our own client-side router. We only tested in Chrome, it was a backend system and it didn't matter as much as a consumer facing site. It didn't need SEO. It was a CRUD applicaton with a few rich interactions. I couldn't wait to get my teeth into this, get the experience under my belt and propel my career accordingly. How could any client resist me with all the new buzzwords littering my CV?
 
-* API yuckiness
+About 6 months in and it was going quite smoothly.  The architecture ironed out, features being delivered frequently. Then James joined the team. And I accompanied him on one his first fag breaks. In his usual blunt fashion he questioned the architecure. He explained that I was a Technical Wanker. I laughed as he went on to explain how all the not-so-good aspects of the code was self induced. To give *some* insight as to what he was getting at this included:
 
-latest, greatest libraries and frameworks and pushing the (read a) browser to it's limit. Up until this moment I just read lots of shiny blog posts and could only dream of using these things. I felt so clever, and I thought it was great for my CV.
+1. Writing a client-side router. Our backend was written in Rails, which Rails has a beautiful router. No need to recreate one on the client.
 
-Then, James joined the company, and he pointed out how amazing the app could have been if it was a normal thin client application. He pointed out so many problems that were all self-induced. When I am questioned like this, I tend think deeply about the feedback. I could totally see what he was saying, I didn't brush it off as such, but I was 6 months into the project and as I only had to support Chrome, it didn't bother me too much. At least I was learning and adding all these fantastic buzzwords to my CV.
+2. Writing a view engine to on rebuild/render parts of the page that changed. Sounds simple but not. Will leave those details to a future post perhaps. Either way Rails views are just fine.
 
-It was also during this conversation, that James chose to tell me that I was Technical Wanking. I laughed and continued to listen. He told me that I was so focused on using all the latest greatest tech, which added tremendous effort to the build and that he was dubious of the benefits both in terms of performance and User Experience, not to mention Accessibility.
+3. Having to massage and work with generic REST APIs on the client. Rails has a lovely ORM and is used to exposing beautiful fit-for-purpose viewModels for consumption in a traditional server side view template.
 
-I analysed all this for ages, I thought about it **a lot**. I realisd he was so right. Over the course of the project I did my absolute best to deliver a quality product. I dreamt about how to deliver a very complex Single Page Application problem to do with view rendering. It was a beast, and I solved it. The problem was that I was solving a self-induced problem. Why did I do that? I was blind. But now I could see (again). Before the shiny shit came along, I always built robust, rich and far reaching websites. That was the purpose of my job. When did it change?
+4. Cross domain issues and more.
 
-I really learnt my lesson, and I began to look deeper at it all. I began to question it all. Afterall, I don't like to be called a Technical Wanker do I? Also if everyone's doing it then it's usually a sign it's no good. McDonalds is a good indicator. McDonalds is the best, everyone's doing it. But, it's terrible for you. In this industry the same applies, just exchange McDonalds for technology and architectural choices.
+He went on to say that we could have had a very fast CRUD application using a traditional thin client without all the inherent floors in SPAs [xx](xx). Whilst I was still delighted at all the clever things I appeared to be doing, I couldn't help but realise he was right. There was just no need. I was solving self-induced problems and nothing else. The application would have been just as slick. Just as beautiful. Just as rich. And it would have taken half the time to build with a far nicer split of responsibilites between server and client. Not to mention it would have had a better performance, better accessibility and a better User Experience.
 
-So two things have happened since this realisation; 1) I stopped Technical Wanking and 2) I have taken every opportunity to use this term as if I coined it myself. It always gets a good laugh and a positive, inquisitive response. Most people take kindly to it.
+For the rest of my time building the project, every time I ran into a problem, I checked that it wasn't my fault. I dreamt at how much easier tis would have been if I decided to stop Technical Wanking. When did all this nonsense become the done thing? Everyone's building these things, everyones writing about these things! The problem I have found, in all walks of life may I add is that if everyone is doing it, it's usually stupid. Just a few examples of this in the wild:
 
-The problem with the industry is that most people are Technical Wankers; it's an epidemic. I am doing my best here to not name the JS and CSS frameworks which promise the world but have fragile code under the hood and rarely serve the end user unless they have a particular browser, on the latest greatest device, with Javascript turned well and truly on, and on a standard Internet connection; definitely not a telco that might eat your script. And breath.
+* Most people eat McDonalds
+* Most people drink too much Coke
+* Most people consume too much alcohol
+* Most people sunbathe for way too long
+* Most people get into ridiculous amounts of debt despote there high levels of income.
+* and so on.
 
-If you're here reading this, and your head isn't stuck up your ass, you're very likely to know the stuff I am talking about, and with a bit of luck, the fad will pass. However, when one fad passes, a new one comes a long and the industry continues to waste a load of money on the next great rewrite.
+It turns out the same craziness happens in web development. Why rely on solid, guaranteed to work, with far less effort, server-side technology, when we can make our lives and our users life much more difficult if we push this stuff to a client-side only application? It's an epidemic in the industry and one of the side affects of the disease of Technical Wankery is that of Mortgage Driven Development. Watch out of that one. Fortunately most people don't do this on purpose but it happens. I have seen it.
 
-Needless, to say, your only as good as your lowest level function. Doesn't matter how much quality is built on top of it. That would be like polishing a turd.
-
-So what's the takeaway here. Start questioning everyone's technically choices, take responsibility for your choice, learn your profession and stop Technical Wanking. You and the rest of the world will appreciate it.
-
-<!--
-I suppose Technical Wanking is the arch-enemy of [The Boring Front-end Developer](/articles/the-boring-front-end-developer/) and I guess this is the "I call bullshit" version of that article, at least in terms of Front-end. There is nothing wrong with abstractions. Anyone who writes the same code more than once, abstracts and automates. You might call a group of abstractions a library. And that's just fine. You might call a set of conventions, configuration and style a framework. That's also fine.
-
-But, and it's a big but, there is a difference between abstractions in general, and abstractions that are failing on release due to poor code quality, complexity and in this industry specifically, browser support! Unfortunately, there is normally very little attempt to put the user first. A lot of these librarys are selling themselves to developers; write less, don't reinvent the wheel etc. It's rarely about the user, browser support and reach.
-
-Avoiding the shinier Front-end libraries and co, have given 
-
-* the best thing to come out of all this was 1) realising technical wanking is a thing and 2) I was doing it.
--->
+Anyway, having realised my mistakes and not wanting to be called a Technical Wanker again, I have since, always questioned silly, new shiny technology without deep analysis and critique. It has so far served me and my end-users very well indeed. I also get to call other developers Technical Wankers too, without being called a hypocrit. I usually get a good laugh and positive, inquisitive response.
