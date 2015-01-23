@@ -5,11 +5,11 @@ date:   2015-01-01 09:00:01
 categories: web
 ---
 
-Technical Wanking is about using cool, new technology because well, it's cool, new technology. Of course technology should be chosen on its technical merit and technical merit alone. Unfortunately, I didn't coin the term myself. That has to be credited to James Norton, a talented Front-end Developer with a tendency to tell it how it is.
+Technical Wanking is about using cool new technology because, well, it's cool new technology.  Unfortunately, I didn't coin the term myself - that has to be credited to James Norton, a talented Front-end Developer with a tendency to tell it how it is. Of course technology should be chosen on its technical merit and technical merit alone, let me explain.
 
 I first heard the term a good few years back when I was building my first Single Page Application (SPA) and I had that warm, fuzzy feeling. I was a using cool libraries; one general purpose DOM library, one UI component library and a templating library. We also rolled our own client-side router. We only tested in Chrome, it was a backend system and it didn't matter like a consumer facing site. It didn't need SEO. It was a CRUD applicaton with a few rich interactions. I couldn't wait to get my teeth into this, get the experience under my belt and propel my career accordingly. How could anyone  resist my talent, with all the new buzzwords littering my CV?
 
-At about 6 months into the project, it was going pretty smoothly. James joined the team around this time. And I accompanied him on one his first fag breaks. He was a needy man, and required my company for the majority of his fag breaks. Besides the smoke itself, I was much obliged. In his usual blunt way, he questioned the SPA architecture. He explained that I was a Technical Wanker. I laughed as he went on to explain how all the not-so-good aspects of the code were self induced. To give *some* insight as to what he was getting at, this included:
+At about 6 months into the project, it was going pretty smoothly. James joined the team around this time. And I accompanied him on one of his first fag breaks. He was a needy man, and required my company for the majority of his fag breaks. Besides the smoke itself, I was much obliged. In his usual blunt way, he questioned the SPA architecture. He explained that I was a Technical Wanker. I laughed as he went on to explain how all the not-so-good aspects of the code were self induced. To give *some* insight as to what he was getting at, this included:
 
 1. Writing a client-side router. Our backend was written in Rails, which has a beautiful router. No need to recreate one on the client.
 
