@@ -61,7 +61,7 @@ If an SPA grows to a significant size, loading the entire application on page lo
 
 ### Analytics
 
-Analytics tools will normally track page views and related tools without any extra effort but because in SPA page isn't really a page, this has to be handled with extra script which is triggered by the application router.
+Analytics tools will normally track page views and related tools without any extra effort but because an SPA page isn't really a page, this has to be handled with extra script which is triggered by the application router.
 
 ### Automated functional testing
 
