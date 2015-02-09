@@ -11,11 +11,11 @@ I first heard of it's existence in 2010 when I was building my first Single Page
 
 At about 6 months into the project, my friend James joined the team. I accompanied him on one of his first fag breaks. He was (and still is) a demanding man, and required my presence for the majority of his fag breaks. Besides the toxic fumes, I was much obliged. It didn't take long for us to get talking about the codebase. James was quite scathing and questioned the need and benefit of the architecture. It was right about this time that he chose to call me a Technical Wanker! Say *whatttt*? Fortunately, he didn't just abuse me. He went on to explain how all the not-so-good aspects of the code and User Experience (UX) were self-induced. To give *some* insight as to what he was getting at, this included:
 
-1. Writing a client-side router. Our backend was written in Rails, which has a beautiful and perfectly reliable router. Let the browser handle the navigation.
+1. **Writing a client-side router.** Our backend was written in Rails, which has a beautiful and perfectly reliable router. Let the browser handle the navigation.
 
-2. Writing a client-side view engine to rebuild/render parts of the page that changed on the client. Again Rails (as most server-side frameworks) has you covered. The browser is an expert at parsing and rendering HTML. Script will never do it better.
+2. **Writing a client-side view engine to rebuild/render parts of the page that changed on the client.** Again Rails (just like most server-side frameworks) has you covered. The browser is an expert at parsing and rendering HTML. Script will never do it better.
 
-3. Having to massage and work with generic REST APIs on the client. Rails has a beautiful ORM and it's standard practice to expose beautiful and fit-for-purpose view-models ready for consumption by server-side view templates.
+3. **Having to massage and work with generic REST APIs on the client.** Rails has a beautiful ORM and it's standard practice to expose beautiful and fit-for-purpose view-models ready for consumption by server-side view templates.
 
 There are many more examples but the gist should be getting clearer. James continued to explain the application could have been *better* had we used a traditional architecture, without all the inherent problems with SPAs [[0](#ref0)]. Whilst I was still quite chuffed with all the clever things I appeared to be doing, I couldn't help but realise he was *right*. There was just no need. I was solving self-induced problems and nothing else. The application would have been just as slick. Just as beautiful. Just as rich. And it would have taken half the time to build, with a far nicer split of responsibilites between the server and client. Not to mention it would have had better performance, better accessibility and a better UX.
 
