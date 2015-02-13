@@ -43,7 +43,7 @@ Traditionally, when writing Multi-browser scripts, dropping browser support mean
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
-	<dd><a href="https://gist.github.com/david-mark/06b9879f963ebb0eed62">Cross-browser vs. multi-browser scripting</a>a></dd>
+	<dd><a href="https://gist.github.com/david-mark/06b9879f963ebb0eed62">Cross-browser vs. multi-browser scripting</a></dd>
 	<dt class="citation" id="ref0">[1]</dt>
 	<dd><a href="http://pointedears.de/scripts/faq/cljs/notes/detect-browser/">Browser detection (and what to do instead)</a></dd>
 	<dt class="citation" class="citation" id="ref1"><a name="ref1"></a>[2]</dt>
