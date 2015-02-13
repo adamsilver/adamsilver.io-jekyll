@@ -5,7 +5,7 @@ date:   2014-10-31 09:00:01
 categories: js
 ---
 
-Have you heard of *isHostMethod*? Do you know the difference between Multi-browser and Cross-browser scripting? Do you understand the reasons why libraries need updating to keep up with new browsers? Are you bogged down by User Agent (UA) sniffing and Adaptive Design? Do any of these questions resonate with you? If so, read on.
+Have you heard of *isHostMethod*? Do you know the difference between Multi-browser and Cross-browser scripting? [[0](#ref0)] Do you understand the reasons why libraries need updating to keep up with new browsers? Are you bogged down by User Agent (UA) sniffing and Adaptive Design? Do any of these questions resonate with you? If so, read on.
 
 ## Nothing new
 
@@ -25,7 +25,7 @@ Script on the other hand can leave a page broken. As an example, imagine enhanci
 
 ## UA sniffing is not the answer
 
-There is no value in reading the UA string [[0](#ref0)] besides identifying the browser and even then, it can be spoofed. It doesn't tell you what features the browser has, so they would need to be inferred. The browser could be lacking features, have plugins enabled such as script blockers or configured differently, all of which affects the capability and behaviour of the browser.
+There is no value in reading the UA string [[1](#ref1)] besides identifying the browser and even then, it can be spoofed. It doesn't tell you what features the browser has, so they would need to be inferred. The browser could be lacking features, have plugins enabled such as script blockers or configured differently, all of which affects the capability and behaviour of the browser.
 
 Even if you forget those things, imagine sniffing, then imagine mapping features to the sniff, then imagine doing that for every browser *and* every feature. It is quite obvious that this technique is fraught with errors and extremely time consuming (read expensive). Browsers and devices are released too frequently to even attempt to keep up with the mapping anyway.
 
@@ -35,7 +35,7 @@ Take the previous example and imagine being able to ask the browser a few questi
 
 Guess what? You *can*.
 
-Peter Michaux demonstrates this in his article [[1](#ref1)] using the concept of Feature Detection and Feature Testing. Once you have asked these questions, the script can run safely on any browser, old, current or even in the future. If the browser answers *no* to (any of) these questions, the behaviour reverts to a js-disabled, degraded equivalent - in this example, the server will validate the form. **This *is* Progressive Enhancement!**
+Peter Michaux demonstrates this in his article [[2](#ref2)] using the concept of Feature Detection and Feature Testing. Once you have asked these questions, the script can run safely on any browser, old, current or even in the future. If the browser answers *no* to (any of) these questions, the behaviour reverts to a js-disabled, degraded equivalent - in this example, the server will validate the form. **This *is* Progressive Enhancement!**
 
 ## Summary
 
@@ -43,7 +43,9 @@ Traditionally, when writing Multi-browser scripts, dropping browser support mean
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
+	<dd><a href="https://gist.github.com/david-mark/06b9879f963ebb0eed62">Cross-browser vs. multi-browser scripting</a>a></dd>
+	<dt class="citation" id="ref0">[1]</dt>
 	<dd><a href="http://pointedears.de/scripts/faq/cljs/notes/detect-browser/">Browser detection (and what to do instead)</a></dd>
-	<dt class="citation" class="citation" id="ref1"><a name="ref1"></a>[1]</dt>
+	<dt class="citation" class="citation" id="ref1"><a name="ref1"></a>[2]</dt>
     <dd><a href="http://peter.michaux.ca/articles/cross-browser-widgets">Cross-browser widgets</a></dd>
 </dl>
