@@ -14,40 +14,40 @@ This consists of defining a namespace for the library (which we will call *lib*)
     var lib = {};
 
 ### Defining *cloneObject*
-    
+
     // For browsers that have Object.create
     if(Object.create) {
         lib.cloneObject = function(o) {
             return Object.create(o);
         };
-    
+
     // For browsers that don't have Object.create available
     } else {
         lib.cloneObject = (function() {
             var Fn = function() {};
-    
+
             return function(o) {
                 Fn.prototype = o;
                 return new Fn();
             };
         })();
     }
-    
+
 ### Defining *inherit*
 
 You will notice this function utilises the *cloneObject* function.
-    
+
     lib.inherit = function(Sub, Super) {
         // Clone the parent's prototype object and assign to child's prototype object
         Sub.prototype = lib.cloneObject(Super.prototype);
-        
+
         // Assign reference to super constructor onto the child constructor
         Sub.superConstructor = Super;
-        
+
         // Assign child as the child constructor
         Sub.prototype.constructor = Sub;
     };
-    
+
 That's the first part complete. Now we can demonstrate its usage.
 
 ## Example usage
@@ -57,11 +57,11 @@ The example will demonstrate a Superhero inheriting the features of a normal Per
     function Person(name) {
         this.name = name;
     }
-    
+
     Person.prototype.sayName = function() {
         return "My name is:" + this.name;
     };
-    
+
 Creating an instance of a Person is as follows:
 
     var bob = new Person('Bob');
@@ -74,11 +74,11 @@ Defining a Superhero is very similar to defining a Person. The difference being 
         Superhero.superConstructor.call(this, name);
         this.alias = alias;
     }
-    
+
     // Superhero inherits the features of a Person
     lib.inherit(Superhero, Person);
-    
-    // modify the Parent constructor sayName method so that Superheros keep their true identity a secret
+
+    // Override sayName method so that Superheros keep their true identity a secret
     Superhero.prototype.sayName = function() {
         return "Can't tell you that but my alias is: " + this.alias;
     }
@@ -86,7 +86,7 @@ Defining a Superhero is very similar to defining a Person. The difference being 
 Creating an instance of a Superhero is as follows:
 
     var batman = new Superhero("Bruce Wayne", "Batman");
-    batman.getName(); // returns "Can't tell you that but my alias is Batman"
+    batman.sayName(); // returns "Can't tell you that but my alias is Batman"
 
 In order to show another important aspect of the *inherit* function let's create another scenario for our Superhero. The scenario entails a situation where the Superhero is forced to back down in order to save humanity, and in doing so must reveal their name to their enemy. We can define a method on the Superhero called *backDownAndRevealTrueIdentity*.
 
@@ -107,5 +107,5 @@ The takeaway from this scenario is that you can call and reuse the Parent method
         <dd><a href="http://www.github.com/rassie/jessie/">Jessie Javascript library</a></dd>
     <dt class="citation" id="ref2">[2]</dt>
         <dd><a href="/articles/javascript-namespacing/">Javascript namespacing</a></dd>
-	
+
 </dl>
