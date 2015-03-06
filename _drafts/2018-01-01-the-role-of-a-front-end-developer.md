@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The role of a Front-end Developer"
+title:  "The role of the Front-end Developer"
 date:   2018-01-01 09:00:01
 categories:
 ---
