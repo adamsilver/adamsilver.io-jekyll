@@ -54,7 +54,7 @@ Whilst not specifically related to Front-end developers, it is very important to
 	<dt class="citation" id="ref1">[1]</dt>
 	<dd><a href="http://www.smashingmagazine.com/2014/11/21/why-you-should-include-your-developer-in-the-design-process/">Why You Should Include Your Developer In The Design Process</a></dd>
 	<dt class="citation" id="ref2">[2]</dt>
-	<dd><a href="http://www.smashingmagazine.com/2014/11/21/why-you-should-include-your-developer-in-the-design-process/">This is a mother fucking website</a></dd>
+	<dd><a href="http://www.motherfuckingwebsite.com">This is a mother fucking website</a></dd>
 	<dt class="citation" id="ref4">[4]</dt>
 	<dd><a href="/articles/dont-use-ajax-to-display-personalised-content-on-cached-pages/">Don't use AJAX to display personalised content on cached pages</a></dd>
 	<dt class="citation" id="ref5">[5]</dt>
