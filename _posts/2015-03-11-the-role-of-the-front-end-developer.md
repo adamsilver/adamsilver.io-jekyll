@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "The role of the Front-end Developer"
-date:   2018-01-01 09:00:01
-categories:
+date:   2015-03-11 09:00:01
+categories: web
 ---
 
 The role of the Front-end developer has changed significantly over the years and responsiblities extend far beyond translating visual designs into code. Recently, Front-end developers should be involved in many other aspects of the design and development process.
