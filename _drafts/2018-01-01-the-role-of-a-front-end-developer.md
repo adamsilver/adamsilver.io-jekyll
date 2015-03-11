@@ -5,32 +5,32 @@ date:   2018-01-01 09:00:01
 categories:
 ---
 
-The role of the Front-end developer has changed significantly over the years and responsiblities extend far beyond translating visual designs into code. Recently, the Front-end developer should be involved in many other aspects of the design and development process.
+The role of the Front-end developer has changed significantly over the years and responsiblities extend far beyond translating visual designs into code. Recently, Front-end developers should be involved in many other aspects of the design and development process.
 
 ## User Experience (UX)
 
-Everyone is responsible for UX [[0](#ref0)] and Front-end Developers play an essential role [[1](#ref1)]. Due to the nature of their job, they should understand the platform better than anyone else. Having to develop for a huge range of browsers, across different Operating Systems and devices with different configurations means a Front-end developer truly understands the constraints of the web and embraces them to the users' advantage. This input is vital for creating a positive UX.
+Everyone is responsible for UX [[0](#ref0)] and Front-end Developers play an essential role [[1](#ref1)]. Due to the nature of their job, they should understand the platform better than anyone else. Having to develop for a huge range of browsers, across different Operating Systems and devices with different configurations means the Front-end developer truly understands the constraints of the web and embraces them to the users' advantage. This input is vital for creating a positive UX.
 
 ## Front end architecture
 
-A Front-end developer should design a suitable front-end architecture which includes the folowing and more:
+An *experienced* Front-end developer should be able to design a suitable front-end architecture which includes the consideration of the following and more:
 
 * Design patterns
 * Architectural patterns
 * Bootstrapping strategies
 * Bundling and compression
 * Modularity and semantics
-* Technical contracts between back-end and front-end. Namely view models and AJAX APIs
+* Technical contracts between back-end and front-end. Namely view models and XmlHttpRequest end-points
 * Code style and convention
 * Testing and automation
 
 ## Accessibility
 
-The beauty of the web is one of reach; deploy once and run everywhere; there are just two requirements: a browser and an Internet connection. Front-end developers are responsible and should take pride in the fact that, the UIs they build are accessible to everyone, no matter their age, ability, user interaction preferences and, choice of device, Operating System and browser. Front-end developers are *normally* the only advocates of accessibility and as accessibility is intertwined with usability, it's vital to be experienced in it and to champion it readily.
+The beauty of the web is one of reach; deploy once and access everywhere; there are just two requirements: a browser and an Internet connection. Front-end developers are responsible and should take pride in the fact that, the UIs they build, are accessible to everyone, no matter their age, ability, user interaction preferences and, choice of device, Operating System and browser. Front-end developers are *normally* speaking, the only advocates of accessibility and as accessibility is intertwined with usability, it's vital to be knowledgeable in the practice and to champion it readily.
 
 ## Front-end feature writing
 
-Having defined a suitable Front-end architecture, adding new features and updating existing features will include the writing of HTML, CSS and Javscript. This should include writing unit tests and (helping to) write automated functional tests.
+Given a well defined and suitable front-end architecture, adding new features and updating existing features will include the writing of HTML, CSS and Javscript. This should include writing unit tests and (at least helping to write) automated functional tests.
 
 ## Search Engine Optimisation
 
@@ -43,6 +43,10 @@ It is important Front-end developers understand various facets of performance en
 ## Browser compatibility
 
 Front-end developers should endeavour to test in as many browsers as is reasonable when developing, but will understand there is a balance to be had, as testing all browsers, in all compatibilities, on all devices is a sisyphean task. The balance can only be struck through experience of knowing which spread of browsers should be tested and at which frequency. Leaning on cross-browser scripting [[3](#ref3)] minimises the worry behind a lack of manual browser testing coverage.
+
+## Development process and methodologies
+
+Whilst not specifically related to Front-end developers, it is very important to be able to work as part of a team in a given process. This means an understanding of various Agile methodologies. Better still, it's highly beneficial to you and your team to be able to spot friction and influence the process regularly to deliver software in a more efficient way.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
