@@ -13,7 +13,7 @@ Personalised content is any content that is specific to a user. The most basic e
 
 ## Architecture
 
-*Is there one extra request for personalised content or multiple? Do you serve it as JSON and then parse that on the client? How do you organise your scripts for this? How do you organise the view partials for this on the server? At what point is personalised content not essential to the user-experienced and how does that affect architecture?* 
+*Is there one extra request for personalised content or multiple? Do you serve it as JSON and then parse that on the client? How do you organise your scripts for this? How do you organise the view partials for this on the server? At what point is personalised content not essential to the User Experience (UX) and how does that affect architecture?* 
 
 What seems like a simple use of AJAX has a significant effect on architecture and it doesn't stop there.
 
@@ -23,13 +23,13 @@ If the user doesn't have Javascript (or they have it but not the capability to m
 
 ## Design
 
-Christian Heilmann rightly says that *AJAX shouldn't break the web* [[2](#ref2)] and using it in this way is doing just that. He also highlights that when AJAX is used, it is important to remember how much the browser does for free, that subtly goes unnoticed. This includes displaying a loading indicator with  progress bar as well as handling page not found and timeout errors. Utilising AJAX and content-caching like this, means the page is only half loaded and half rendered at which point, and sometime later, the personalised content is injected. The experience is likely to be at least a little jarring as the page fills in the gaps. 
+Christian Heilmann rightly says that *AJAX shouldn't break the web* [[2](#ref2)] and using it in this way is doing just that. He also highlights that when AJAX is used, it is important to remember how much the browser does for free, that subtly goes unnoticed. This includes displaying a loading indicator with  progress bar as well as handling page not found and timeout errors. Utilising AJAX and content-caching like this, means the page is only half loaded and half rendered at which point, and sometime later, the personalised content is injected. The UX is likely to be at least a little jarring as the page fills in the gaps. 
 
 Solutions may include loading spinners, hiding content and transitions but in reality they are far from perfect. Also, the user may not see the various updates as they are busy interacting further down the page. This is all exacabated on slower connections.
 
 ## Effort
 
-Extra design effort is required to cater for the aformentioned degrading in experience. Extra development effort is required to write and test script. It's also harder to automate the functional testing and changes the way in which those tests are written.
+Extra design effort is required to cater for the aformentioned degrading in UX. Extra development effort is required to write and test script. It's also harder to automate the functional testing and changes the way in which those tests are written.
 
 ## Performance
 
