@@ -54,17 +54,11 @@ Content-caching *is* a very useful technique when used responsibly and for pages
 
 <!--
 
-https://remysharp.com/2012/04/25/mobile-battery-performance
+## Todo:
 
-[0]: http://itamarst.org/writings/dynamiccaching.html
-
-## For JE
-
-* How are we going to measure success
-* Progressive enhance and phase 2 it
-* scope creeping story, not the aim
-* needs to be thought out for entire site strategy not just serp
-* affects front end architecture
+* https://remysharp.com/2012/04/25/mobile-battery-performance
+* http://itamarst.org/writings/dynamiccaching.html
+* cache invalidated means it goes to server anyway
 
 ## Comment from blog covers it off:
 
@@ -75,17 +69,5 @@ https://remysharp.com/2012/04/25/mobile-battery-performance
 > Sounds to me like this is going a little overboard on caching. Some pages are just not designed for caching. If that is the case then implement your application to use the “If-Modified-Since” header. That way the user can make their request but get back a small response in most cases.
 
 > I think this is premature optimization.
-
-## Other ways of getting siginifant perf benefits
-
-* group ajax calls on menu page - thats a LOT of calls.
-* keep page light weight
-* make search accurate
-* smush images
-* reduce page weight in assets, css, js
-
-Todo:
-
-* cache invalidated means it goes to server anyway
 
 -->
