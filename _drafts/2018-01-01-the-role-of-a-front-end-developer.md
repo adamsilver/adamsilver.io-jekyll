@@ -11,9 +11,9 @@ The role of the Front-end developer has changed significantly over the years and
 
 Everyone is responsible for UX [[0](#ref0)] and Front-end Developers play an essential role [[1](#ref1)]. Due to the nature of their job, they should understand the platform better than anyone else. Having to develop for a huge range of browsers, across different Operating Systems and devices with different configurations means the Front-end developer truly understands the constraints of the web and embraces them to the users' advantage. This input is vital for creating a positive UX.
 
-## Front end architecture
+## Front-end architecture
 
-An *experienced* Front-end developer should be able to design a suitable front-end architecture which includes the consideration of the following and more:
+An *experienced* Front-end developer should be able to design a suitable front-end architecture which includes the consideration of the following:
 
 * Design patterns
 * Architectural patterns
@@ -26,7 +26,7 @@ An *experienced* Front-end developer should be able to design a suitable front-e
 
 ## Accessibility
 
-The beauty of the web is one of reach; deploy once and access everywhere; there are just two requirements: a browser and an Internet connection. Front-end developers are responsible and should take pride in the fact that, the UIs they build, are accessible to everyone, no matter their age, ability, user interaction preferences and, choice of device, Operating System and browser. Front-end developers are *normally* speaking, the only advocates of accessibility and as accessibility is intertwined with usability, it's vital to be knowledgeable in the practice and to champion it readily.
+The beauty of the web is one of reach; deploy once and access everywhere; there are just two requirements: a browser and an Internet connection. Oh and of course a competent Front-end developer who won't fuck up your website [[2](#ref2)]. Front-end developers are responsible and should take pride in the fact that, the UIs they build, are accessible to everyone, no matter their age, ability, user interaction preferences and, choice of device, Operating System and browser. Front-end developers are *normally* speaking, the only advocates of accessibility and as accessibility is intertwined with usability, it's vital to be knowledgeable in the practice and to champion it readily.
 
 ## Front-end feature writing
 
@@ -38,11 +38,11 @@ Much like Accessibility, it is imperative Front-end developers understand how to
 
 ## Front-end performance
 
-It is important Front-end developers understand various facets of performance ensuring that web pages are served and run as fast as possible without degrading the UX [[2](#ref2)]. This includes a good knowledge of browser caching, compression, bundling and runtime performance on the client.
+It is important Front-end developers understand various facets of performance ensuring that web pages are served and run as fast as possible without degrading the UX [[4](#ref4)]. This includes a good knowledge of browser caching, compression, bundling and runtime performance on the client.
 
 ## Browser compatibility
 
-Front-end developers should endeavour to test in as many browsers as is reasonable when developing, but will understand there is a balance to be had, as testing all browsers, in all compatibilities, on all devices is a sisyphean task. The balance can only be struck through experience of knowing which spread of browsers should be tested and at which frequency. Leaning on cross-browser scripting [[3](#ref3)] minimises the worry behind a lack of manual browser testing coverage.
+Front-end developers should endeavour to test in as many browsers as is reasonable when developing, but will understand there is a balance to be had, as testing all browsers, in all compatibilities, on all devices is a sisyphean task. The balance can only be struck through experience of knowing which spread of browsers should be tested and at which frequency. Leaning on cross-browser scripting [[5](#ref5)] minimises the worry behind a lack of manual browser testing coverage.
 
 ## Development process and methodologies
 
@@ -54,7 +54,9 @@ Whilst not specifically related to Front-end developers, it is very important to
 	<dt class="citation" id="ref1">[1]</dt>
 	<dd><a href="http://www.smashingmagazine.com/2014/11/21/why-you-should-include-your-developer-in-the-design-process/">Why You Should Include Your Developer In The Design Process</a></dd>
 	<dt class="citation" id="ref2">[2]</dt>
+	<dd><a href="http://www.smashingmagazine.com/2014/11/21/why-you-should-include-your-developer-in-the-design-process/">This is a mother fucking website</a></dd>
+	<dt class="citation" id="ref4">[4]</dt>
 	<dd><a href="/articles/dont-use-ajax-to-display-personalised-content-on-cached-pages/">Don't use AJAX to display personalised content on cached pages</a></dd>
-	<dt class="citation" id="ref3">[3]</dt>
+	<dt class="citation" id="ref5">[5]</dt>
 	<dd><a href="/articles/reintroducing-cross-browser-scripting/">Reintroduction to Cross-browser scripting</a></dd>
 </dl>
