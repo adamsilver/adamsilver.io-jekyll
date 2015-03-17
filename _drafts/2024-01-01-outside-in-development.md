@@ -28,6 +28,8 @@ categories: UXDD
 * APIs are slave to the back-end
 * Etc
 
+And what is the only measurement of requirement - Acceptance Tests.
+
 ## Citations
 
 http://programmers.stackexchange.com
