@@ -5,11 +5,15 @@ date:   2015-01-01 09:00:01
 categories: UXDD
 ---
 
-As a front-end developer, in some respects I fit nicely in-between and across UX/Product and the backend developers. However the picture is slightly more complex; I tend to work very closely with UX in order to inform the UX about the web as a platform and to use both its constraints and its powers to full user advantage. But I also work super close with backend developers, signing off technical/API contracts between our remits and of course test automaters geting acceptance tests defined and passing etc. There's more but you can read more about my role specifically in The Role of the Front-end developer.
+As a front-end developer, in some respects I fit nicely in-between and across UX/Product and the backend developers. However the picture is slightly more complex; I tend to work very closely with UX in order to inform the UX about the web as a platform and to use both its constraints and its powers to the advantage of the user. But I also work super close with backend developers, signing off technical/API contracts between our remits and of course test automaters getting acceptance tests defined and passing etc. There's more but you can read more about my role specifically in The Role of the Front-end developer.
 
 But why am I telling you all of this? I am telling you all of this because I want to talk about outside-in software development in terms of people as well as code. People have different responsibilitis and remits but ultimately we all work towards one thing: **Pleasing the user**
 
-If the user is pleased, then they tend to love your product, consume it, buy the widget etc. And all software development should start from this perspective. The *outside* perspective. If you were to work the other way, you are likely to be tackling problems that don't even exist, let alone provide solutions to pleasing the user. So we agree at this point yes? Good. Let's continue.
+If the user is pleased, then they tend to love the product, consume it, buy the widget etc. And all software development should start from this perspective. The *outside* perspective. If you were to work the other way, you are likely to be tackling problems that don't even exist, let alone provide solutions that aim to please the user. So we agree at this point yes? Good. Let's continue.
+
+Starting from the outside equates to a user requirement for a particular feature. The output might just be a User Story which contains Acceptance Criteria. At this point the software development team (SDT), (you gotta love made up acryonyms) might also write Acceptance Tests. Ideally these tests are automated but let's put that to the side for a moment. The main point here is that the user defined a requirement, Product solidified that into a User Story ready for development and someone within the SDT started to write Acceptance Tests. Now the SDT work towards making those Acceptance Tests pass.
+
+Next we need to talk a little bit about the developers. The main split is backend development and front-end development. Front-end developers will be responsible for the view template upwards, that is structuring the HTML and developing the view templates. Again working from the outside you define what HTML you .
 
 * This means that I do what I do because the user requires the feature.
 
