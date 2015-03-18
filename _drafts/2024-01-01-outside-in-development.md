@@ -5,9 +5,11 @@ date:   2015-01-01 09:00:01
 categories: UXDD
 ---
 
-## Intro
+As a front-end developer, in some respects I fit nicely in-between and across UX/Product and the backend developers. However the picture is slightly more complex; I tend to work very closely with UX in order to inform the UX about the web as a platform and to use both its constraints and its powers to full user advantage. But I also work super close with backend developers, signing off technical/API contracts between our remits and of course test automaters geting acceptance tests defined and passing etc. There's more but you can read more about my role specifically in The Role of the Front-end developer.
 
-* As a front-end developer I sit in-between UX/product and back-end developers.
+But why am I telling you all of this? I am telling you all of this because I want to talk about outside-in software development in terms of people as well as code. People have different responsibilitis and remits but ultimately we all work towards one thing: **Pleasing the user**
+
+If the user is pleased, then they tend to love your product, consume it, buy the widget etc. And all software development should start from this perspective. The *outside* perspective. If you were to work the other way, you are likely to be tackling problems that don't even exist, let alone provide solutions to pleasing the user. So we agree at this point yes? Good. Let's continue.
 
 * This means that I do what I do because the user requires the feature.
 
