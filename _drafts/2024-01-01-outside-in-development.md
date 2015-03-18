@@ -5,35 +5,22 @@ date:   2015-01-01 09:00:01
 categories: UXDD
 ---
 
-As a front-end developer, in some respects I fit nicely in-between and across UX/Product and the backend developers. However the picture is slightly more complex; I tend to work very closely with UX in order to inform the UX about the web as a platform and to use both its constraints and its powers to the advantage of the user. But I also work super close with backend developers, signing off technical/API contracts between our remits and of course test automaters getting acceptance tests defined and passing etc. There's more but you can read more about my role specifically in The Role of the Front-end developer.
+As a front-end developer, in some respects I fit nicely in-between and across UX/Product and the backend developers. However, in reality, the full picture is slightly more complex; I tend to work very closely with UX in order to inform them about the web as a platform and to use both its constraints and its powers to the users advantage. But I also work very closely with backend developers, signing off technical/API contracts between our worlds and testing engineers getting acceptance tests defined and passing etc. There's more to all this as you can imagine, but you can read more about that elsewhere.
 
 But why am I telling you all of this? I am telling you all of this because I want to talk about outside-in software development in terms of people as well as code. People have different responsibilitis and remits but ultimately we all work towards one thing: **Pleasing the user**
 
-If the user is pleased, then they tend to love the product, consume it, buy the widget etc. And all software development should start from this perspective. The *outside* perspective. If you were to work the other way, you are likely to be tackling problems that don't even exist, let alone provide solutions that aim to please the user. So we agree at this point yes? Good. Let's continue.
+If the user is pleased, then they tend to love the product, consume it, buy the widget etc. And all software development should start from this perspective, the *outside* perspective. If you were to work the opposite way, the *inside-out* way, it is likely you and your team are solving problems that don't exist, let alone pleasing the end-user. So we agree at this point that outside-in is the right approach, yes? Good. Let's continue.
 
-Starting from the outside equates to a user requirement for a particular feature. The output might just be a User Story which contains Acceptance Criteria. At this point the software development team (SDT), (you gotta love made up acryonyms) might also write Acceptance Tests. Ideally these tests are automated but let's put that to the side for a moment. The main point here is that the user defined a requirement, Product solidified that into a User Story ready for development and someone within the SDT started to write Acceptance Tests. Now the SDT work towards making those Acceptance Tests pass.
+If we try and distill this down in terms of why we, the individuals within the SDT, do what we do it can be described as follows: Business is the slave to the user, Product (and UX) is slave to the Business, Test Automation is slave to the Product, Front-end is slave to the Test Automation (in the form of Acceptance tests), Back-end is slave to the front-end, APIs are slave to the back-end, etc and so on.
 
-Next we need to talk a little bit about the developers. The main split is backend development and front-end development. Front-end developers will be responsible for the view template upwards, that is structuring the HTML and developing the view templates. Again working from the outside you define what HTML you .
+The first technical discussion nicely takes place in my world, the front-end developer world. That's where the important stuff is! Just kidding. And so the front-end world starts with the HTML, which leads is very quickly to the view. What generates the view? The view template. What provides the view with the information it requires to render? The *view-model*. And here we can begin the outside-in approach to development. The view should not be concerned with how data is retrieved or where it comes from. Without going into too much detail here, you can see that the front-end developer must define the requirements of how the view model should be architected.  Not the other way around. I can't tell you the amount of times I have to struggle to work with view models that aren't fit for purpose and this just makes the template fugly and unmaintainable. The message has always been from backend developers don't wish to do the right thing as it's more effort. They would rather chuck a model at the view template and let us front-end devs struggle. You might argue whats the difference between putting the logic in the view directly or in another abstraction. It's hard to explain, but effectively, the view should be given what it needs and nothing more. Push the rest back a step. 
 
-* This means that I do what I do because the user requires the feature.
+Same goes from the backend perspective. Rather than make 3 separate API calls to help construct the appropriate view model to give to the view, the backend engineer can request the appropriate API itself combines the 3 separate calls into one as a facade around the 3 calls etc. Either way, it's the appropriate system component taking the right responsibility to do its job.
 
-* The backend developers do what they do because it is a requirement of the front-end developer, which in turn is because the user requires the feature. i.e. product defined the requirement. For example, the backend developer will provide the view template with an appropriate fit-for-purpose view model because that is how the page is designed.
 
-* Depending on architecture the backend developers will push their requirements back to a DB engineer or an API engineer and so forth.
 
-## Example
-
-* Take Amazon, with a shopping basket page. Elaborate on the requirement and how it drives the design.
 
 ## Summary
-
-* Business is the slave to the user
-* UX/Product is slave to the Business
-* Test Automation is slave to the UX/Product
-* Front-end is slave to the Test Automation (Acceptance tests)
-* Back-end is slave to the front-end
-* APIs are slave to the back-end
-* Etc
 
 Now obviously in reality, this all kinda happens at the same time. Excluding the lowest level system component (no dependences) e.g. the call to the database that goes and gets some data or whatever, everyone else relies on each other. For example, given you have a story and you have (automated) the acceptance tests, then I, as a front-end dev can't pass those tests, but then I can't pass those tests without all the other layers doing their thing. Point isn't about team work or process, it's about the approach and mindset of what it is we do and why we do it.
 
