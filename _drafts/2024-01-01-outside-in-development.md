@@ -13,26 +13,33 @@ If the user is pleased, then they tend to love the product, consume it, buy the 
 
 If we try and distill this down in terms of why we we do the things we do to deliver software it can kind of be summarised as follows: Business is the slave to the user; Product (and UX) is slave to the Business; Test Automation is slave to the Product; Front-end is slave to the Test Automation (in the form of Acceptance tests perhaps); Back-end is slave to the Front-end; APIs are slave to the back-end, and so it continues until you have struck the very center of the earth where you will find the lowest level code that is bearly recogniseable as even a thing.
 
-If we now apply the same outside-in logic to the technical application architecture we quickly arrive at where the front-end meets the backend. The view! We front-end developers own the view and the HTML it generates (and the JS and CSS in which the HTML references). Often we will need to provide the HTML with data in which to populate the HTML with lovely content.
+If we now apply the same outside-in logic to the technical application architecture, we quickly arrive at where the front-end meets the backend which is, of course the view. We front-end developers own the view and the HTML it generates (and the JS and CSS in which the HTML references). So we should be defining a fit-for-purpose view model in which to populate the view. In terms of HTML this is usally a straightforward task. You look at it from the outside, at the visual design, and make a note of the various pieces that you will need to make your view template logic as lean as possible. It doesn't matter to the view template, where this data comes from, be it APIs, databases, CMS entrys, static file, or cookies. The view template is not concerned by this. This is why logic-less templates have become all the rage. This Stackoverflow answer explains this well:
 
+> In the old JSP days, it was very common to have JSP files sprinkled with Java code, which made refactoring much harder, since you had your code scattered.
 
+> If you prevent logic in templates by design (like mustache does), you will be obliged to put the logic elsewhere, so your templates will end up uncluttered.
 
-What provides the view with the information it requires to render? The *view-model*. And here we can begin the outside-in approach to development. The view should not be concerned with how data is retrieved or where it comes from. Without going into too much detail here, you can see that the front-end developer must define the requirements of how the view model should be architected.  Not the other way around. I can't tell you the amount of times I have to struggle to work with view models that aren't fit for purpose and this just makes the template fugly and unmaintainable. The message has always been from backend developers don't wish to do the right thing as it's more effort. They would rather chuck a model at the view template and let us front-end devs struggle. You might argue whats the difference between putting the logic in the view directly or in another abstraction. It's hard to explain, but effectively, the view should be given what it needs and nothing more. Push the rest back a step. 
+> Another advantage is that you are forced to think in terms of separation of concerns: your controller or logic code will have to do the data massaging before sending data to the UI. If you later switch your template for another (let's say you start using a different templating engine), the transition would be easy because you only had to implement UI details (since there's no logic on the template, remember).
 
-Same goes from the backend perspective. Rather than make 3 separate API calls to help construct the appropriate view model to give to the view, the backend engineer can request the appropriate API itself combines the 3 separate calls into one as a facade around the 3 calls etc. Either way, it's the appropriate system component taking the right responsibility to do its job.
+Templates aren't designed to do complex things. You shouldn't have to, for example construct "You have 3 items in your basket" within the template via separate properties (psuedo code):
 
+	model.basketSummaryMessage = "You have {} items in your basket";
+	model.itemCount = 3;
 
+And then have to format the string in the template (again psuedo code):
+	
+	<p>{{Format(model.basketSummaryMessage, model.itemCount)}}</p>
 
+Instead this should really be:
 
-## Summary
+	model.basketSummaryMessage = "You have 3 items in your basket";
+
+And then a much simplified template:
+
+	<p>{{model.basketSummarymessage}}</p>
+
+Much better. But the seperation of concerns, outside-in development mentality doesn't stop here. The same can be done from the backend perspective. Rather than make 3 separate API calls to help construct the appropriate view model to give to the view, the backend developer can request a more appropriate API call that combines 3 separate calls into 1 as a facade around the 3 calls etc. Which simplifies the backend logic.
+
+## todo
 
 Now obviously in reality, this all kinda happens at the same time. Excluding the lowest level system component (no dependences) e.g. the call to the database that goes and gets some data or whatever, everyone else relies on each other. For example, given you have a story and you have (automated) the acceptance tests, then I, as a front-end dev can't pass those tests, but then I can't pass those tests without all the other layers doing their thing. Point isn't about team work or process, it's about the approach and mindset of what it is we do and why we do it.
-
-For example, I have found myself having to deal with god-awful view templates because backend developers aren't willing to provide beautiful, fit for purpose view models for me to integrate into. I have witnessed this also by backend developes having to do more massaging of API data than should be necessary. Instead they should have pushed the requirement down to API teams.
-
-Ultimately, the software development team includes everyone, even the user, when the Product Owner acts as such. Without the user we have nothing, and with the user we have a requirement, and with that requirement it drives the design of each layer of development. Etc
-
-## Citations
-
-http://programmers.stackexchange.com
-/questions/166409/tdd-outside-in-vs-inside-out
