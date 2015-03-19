@@ -43,3 +43,13 @@ Much better. But the seperation of concerns, outside-in development mentality do
 ## todo
 
 Now obviously in reality, this all kinda happens at the same time. Excluding the lowest level system component (no dependences) e.g. the call to the database that goes and gets some data or whatever, everyone else relies on each other. For example, given you have a story and you have (automated) the acceptance tests, then I, as a front-end dev can't pass those tests, but then I can't pass those tests without all the other layers doing their thing. Point isn't about team work or process, it's about the approach and mindset of what it is we do and why we do it.
+
+## advantages
+
+Moving into a presenter class means you can unit test.
+Templates are piss poor replacements for programming logic.
+Maintaince is a nightmare.
+
+## All answers here
+
+http://stackoverflow.com/questions/3896730/whats-the-advantage-of-logic-less-template-such-as-mustache
