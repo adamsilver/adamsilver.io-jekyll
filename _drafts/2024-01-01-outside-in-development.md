@@ -13,7 +13,9 @@ If the user is pleased, then they tend to love the product, consume it, buy the 
 
 In a distilled linear version of the development pipeline in terms of people, you could represent the relationship as follows: Business is the slave to the user; Product (and UX) is slave to the Business; Test Automation is slave to the Product; Front-end is slave to the Test Automation (in the form of Acceptance tests perhaps); Back-end is slave to the Front-end; APIs are slave to the back-end, and so it continues until you have struck the very center of the earth where you will find the lowest level code that is bearly recogniseable as even a thing.
 
-If we now apply the same outside-in logic to the technical application architecture, we quickly arrive at where the front-end meets the backend which is, of course the view. We front-end developers own the view and the HTML it generates (and the JS and CSS in which the HTML references). So we should be defining a fit-for-purpose view model in which to populate the view. In terms of HTML this is usally a straightforward task. You look at it from the outside, at the visual design, and make a note of the various pieces that you will need to make your view template logic as lean as possible. It doesn't matter to the view template, where this data comes from, be it APIs, databases, CMS entrys, static file, or cookies. The view template is not concerned by this. This is why logic-less templates have become all the rage. This Stackoverflow answer explains this well:
+Applying the same outside-in logic to the technical application architecture, we arrive instantly at the front-end-meets-back-end bridge, the view template. The view is obviously the remit of the front-end as it generate HTML. So the front-end should be defining a fit-for-purpose view model in which to populate the view. It is in this sense the backend developers are slave to the front-end. 
+
+To define the view-model is normally simple. You look at the content in the context of the visual design and make a note of the properties that will work well in the context of the HTML you will define for it. The template isn't concerned with where data comes from, be it APIs, databases, CMS, static JSON/XML, or cookies etc. This is why logic-less templates have become popular, as someone on Stackoverflow states:
 
 > In the old JSP days, it was very common to have JSP files sprinkled with Java code, which made refactoring much harder, since you had your code scattered.
 
@@ -21,20 +23,11 @@ If we now apply the same outside-in logic to the technical application architect
 
 > Another advantage is that you are forced to think in terms of separation of concerns: your controller or logic code will have to do the data massaging before sending data to the UI. If you later switch your template for another (let's say you start using a different templating engine), the transition would be easy because you only had to implement UI details (since there's no logic on the template, remember).
 
-Templates aren't designed to do complex things. You shouldn't have to, for example construct "You have 3 items in your basket" within the template via separate properties (psuedo code):
+In practical terms this is the result you end up with:
 
-	model.basketSummaryMessage = "You have {} items in your basket";
-	model.itemCount = 3;
-
-And then have to format the string in the template (again psuedo code):
-	
 	<p>{{Format(model.basketSummaryMessage, model.itemCount)}}</p>
 
-Instead this should really be:
-
-	model.basketSummaryMessage = "You have 3 items in your basket";
-
-And then a much simplified template:
+Vs.
 
 	<p>{{model.basketSummarymessage}}</p>
 
