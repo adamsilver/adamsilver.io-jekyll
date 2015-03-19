@@ -5,9 +5,9 @@ date:   2015-01-01 09:00:01
 categories: UXDD
 ---
 
-As a front-end developer, in some respects I fit nicely in-between and across UX/Product and the backend developers. However, in reality, the full picture is more complex; I tend to work very closely with UX in order to inform them about the web as a platform and to use both its constraints and its powers to the users advantage. But I also work very closely with backend developers, signing off technical/API contracts between our worlds and testing engineers getting acceptance tests defined and passing etc.
+As a front-end developer, in some respects I fit nicely in-between UX and the backend developers. However, in reality, the full picture is more complex; I tend to work very closely with UX in order to inform them about the web as a platform and to use both its constraints and its powers to the users advantage. But I also work very closely with backend developers, designing and implementing the technical contracts between our disciplines and automation engineers writing acceptance tests and making them go green.
 
-But why am I telling you all of this? I am telling you all of this because I want to talk about outside-in software development in terms of people as well as code. Members of the dev team have different responsibilitis and remits but ultimately we all work towards one thing: **Pleasing the user**
+But why am I telling you all of this? I am telling you all of this because I want to talk about outside-in software development in terms of *people* as well as code. Members of the dev team have different responsibilitis and remits but ultimately we all work towards one thing: **Pleasing the user**
 
 If the user is pleased, then they tend to love the product, consume it, buy the widget etc. And all software development should start from this perspective, the *outside-in* perspective. If you were to work the opposite way, the *inside-out* way, it is likely you and your team are solving problems that don't exist, let alone pleasing the end-user! So, we agree at this point that outside-in is the right approach, yes? Good. Let's continue.
 
