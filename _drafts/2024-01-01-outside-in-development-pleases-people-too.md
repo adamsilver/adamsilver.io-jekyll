@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "Outside-in software development"
+title:  "Outside-in development pleases people too"
 date:   2015-01-01 09:00:01
 categories: UXDD
 ---
 
-As a front-end developer, in some respects I fit nicely in-between UX and the backend developers. However, in reality, the full picture is more complex; I tend to work very closely with UX in order to inform them about the web as a platform and to use both its constraints and its powers to the users advantage. But I also work very closely with backend developers, designing and implementing the technical contracts between our disciplines and automation engineers writing acceptance tests and making them go green.
+As a front-end developer, in some respects I fit nicely in-between UX and the backend developers, though in reality, the full picture is more complex. I tend to work very closely with UX in order to inform them about the web as a platform and to use both its constraints and its powers to the users advantage. But I also work very closely with backend developers, designing and implementing the technical contracts between our disciplines and automation engineers writing acceptance tests and making them go green.
 
-But why am I telling you all of this? I am telling you all of this because I want to talk about outside-in software development in terms of *people* as well as code. Members of the dev team have different responsibilitis and remits but ultimately we all work towards one thing: **Pleasing the user**
+But why am I telling you all of this? I am telling you all of this because I want to talk about Outside-in Development in terms of *people* as well as code. Members of the dev team have different responsibilitis but ultimately we all work towards one thing: **Pleasing the user**
 
-If the user is pleased, then they tend to love the product, consume it, buy the widget etc. And all software development should start from this perspective, the *outside-in* perspective. If you were to work the opposite way around, the *inside-out* way, it is likely you and your team are solving problems that don't exist, let alone pleasing the end-user! So, we agree at this point that outside-in is the right approach, yes? Good. Let's continue.
+If the user is pleased, then they tend to love the product, consume it, buy the widget etc. And all software development should start from this perspective, the *outside-in* perspective. Consider the opposite approach: Inside-out software development. If your mind starts to solve problems buried in the underlying structures first, then it is *very* likely you and your team are solving problems, that don't exist, which most certainly means you're not pleasing the user or anyone else for that matter.
 
 In a distilled linear version of the development pipeline in terms of people, you could represent the relationship as follows: Business is the slave to the user; Product (and UX) is slave to the Business; Test Automation is slave to the Product; Front-end is slave to the Test Automation (in the form of Acceptance tests perhaps); Back-end is slave to the Front-end; APIs are slave to the back-end, and so it continues until you have struck the very center of the earth where you will find the lowest level code that is bearly recogniseable as even a thing.
 
