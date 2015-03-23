@@ -13,19 +13,19 @@ If the user is pleased, then they tend to love the product, consume it, buy the 
 
 In a totally unreleastic, distilled and linear version of the development pipeline you *could* represent the relationships as follows: Business is the slave to the user; Product (and UX) is slave to the Business; Test Automation is slave to the Product; Front-end is slave to the Test Automation (in the form of Acceptance tests perhaps); Back-end is slave to the Front-end; APIs are slave to the back-end, and so it continues until you have struck the very center of the earth where you will find the lowest level code that is bearly recogniseable as even a thing.
 
-## Front-end as the servants to the UX design
+As a Front-end developer, I am a servant to the User Experience. The output from UX might be a visual design and some behavioural requirements. Ultimately, I take these requirements and I start to write HTML, CSS and JS to achieve the design. However, there are other requirements, accessibility, search engine optimisation, performance etc. Interestingly these all relate to pleasing the user, and yet I could decide to ignore these things, because it *might* be more time consuming. But I slave on, because if you remember, we are all working to please the user.
 
-I am a servant to the User Experience. The output from UX might be a visual design and some behavioural requirements. Ultimately, I take these requirements and I start to write HTML, CSS and JS to achieve the design. However, there are other requirements, accessibility, search engine optimisation, performance etc. Interestingly these all relate to pleasing the user, and yet I could decide to ignore these things, because it *might* be more time consuming etc, but I don't, because I am working to please the user remember. So, I jump through the extra hoops, and produce something that is as good as possible for the user.
+Similarly, as I endeavour to please the user, and as we are one big team trying to help each other I expect the Backend developers to serve the Front-end developers. If we continue the previous example, for me to populate my beautiful, lean, accessible, performant HTML with real content, I need to get that from the Backend. I don't really care where this data comes from (CMS, database, file store, cookies etc). I just want something I can use to populate my view template. Industry lingo calls this a view model. A model that is appropriately designed to populate the view.
 
-## Back-end as the servants to the Front-end
-
-Similarly, as I have been jumping through all these hoops to please the user, I would expect Backend to serve the Front-end. *One* technical Front-end requirement is likely to be the view model. The model that is appropriate for the view, to populate the HTML for our end user. So I will define this because this makes my job easier and enforces a healthy separation of concerns and the single responsibility principle. As a Front-end developer I really shouldn't have to care where bits of data and content reside. I just know that I need it to populate the view template for our users. And because some templating engines *can* do silly non-view things (cough JSP, cough), you will find that development teams *do* silly things. Which is why Logicless templates have become popular as an answer on Stackoverflow states:
+I don't wish to have complex logic in my views, which is why Logicless template engines have become popular as an answer on Stackoverflow states:
 
 > In the old JSP days, it was very common to have JSP files sprinkled with Java code, which made refactoring much harder, since you had your code scattered.
 
 > If you prevent logic in templates by design (like mustache does), you will be obliged to put the logic elsewhere, so your templates will end up uncluttered.
 
 > Another advantage is that you are forced to think in terms of separation of concerns: your controller or logic code will have to do the data massaging before sending data to the UI. If you later switch your template for another (let's say you start using a different templating engine), the transition would be easy because you only had to implement UI details (since there's no logic on the template, remember).
+
+Now you don't have to put the massaging code in the controller, you might have another layer to do this. Presenter???
 
 In practical terms this is the result you end up with:
 
