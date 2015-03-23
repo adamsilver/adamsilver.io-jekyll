@@ -15,9 +15,7 @@ In a totally unreleastic, distilled and linear version of the development pipeli
 
 As a Front-end developer, I am a servant to the User Experience. The output from UX might be a visual design and some behavioural requirements. Ultimately, I take these requirements and I start to write HTML, CSS and JS to achieve the design. However, there are other requirements, accessibility, search engine optimisation, performance etc. Interestingly these all relate to pleasing the user, and yet I could decide to ignore these things, because it *might* be more time consuming. But I slave on, because if you remember, we are all working to please the user.
 
-Similarly, as I endeavour to please the user, and as we are one big team trying to help each other I expect the Backend developers to serve the Front-end developers. If we continue the previous example, for me to populate my beautiful, lean, accessible, performant HTML with real content, I need to get that from the Backend. I don't really care where this data comes from (CMS, database, file store, cookies etc). I just want something I can use to populate my view template. Industry lingo calls this a view model. A model that is appropriately designed to populate the view.
-
-I don't wish to have complex logic in my views, which is why Logicless template engines have become popular as an answer on Stackoverflow states:
+Similarly, as I endeavour to please the user, and as we are one big team trying to help each other I expect the Backend developers to serve the Front-end developers. If we continue the previous example, for me to populate my beautiful, lean, accessible, performant HTML with real content, I need to get that from the Backend. I don't really care where this data comes from (CMS, database, file store, cookies etc). I just want something I can use to populate my view template. Industry lingo calls this a view model. A model that is appropriately designed to populate the view. I don't wish to have complex logic in my views, which is why Logicless template engines have become popular as an answer on Stackoverflow indicates:
 
 > In the old JSP days, it was very common to have JSP files sprinkled with Java code, which made refactoring much harder, since you had your code scattered.
 
@@ -25,28 +23,10 @@ I don't wish to have complex logic in my views, which is why Logicless template 
 
 > Another advantage is that you are forced to think in terms of separation of concerns: your controller or logic code will have to do the data massaging before sending data to the UI. If you later switch your template for another (let's say you start using a different templating engine), the transition would be easy because you only had to implement UI details (since there's no logic on the template, remember).
 
-Now you don't have to put the massaging code in the controller, you might have another layer to do this. Presenter???
+Note: you *don't* have to put the massaging code in the controller, you might have another component to do this. But alas this could be another article all on it's own.
 
-In practical terms this is the result you end up with:
+This same pattern keeps on going. The API developers serve the Backend developers and so on. For example, there might be some very simplistic decoupled CRUD APIs. Rather than make 3 separate API calls to help construct the appropriate view model, the Backend developer can and should request a more appropriate API call that wraps up 3 separate calls into 1.
 
-	<p>{{Format(model.basketSummaryMessage, model.itemCount)}}</p>
-
-Vs.
-
-	<p>{{model.basketSummarymessage}}</p>
-
-Much better. But the seperation of concerns, outside-in development mentality doesn't stop here. The same can be done from the backend perspective. Rather than make 3 separate API calls to help construct the appropriate view model to give to the view, the backend developer can request a more appropriate API call that combines 3 separate calls into 1 as a facade around the 3 calls etc. Which simplifies the backend logic.
-
-## todo
+## Summary
 
 Now obviously in reality, this all kinda happens at the same time. Excluding the lowest level system component (no dependences) e.g. the call to the database that goes and gets some data or whatever, everyone else relies on each other. For example, given you have a story and you have (automated) the acceptance tests, then I, as a front-end dev can't pass those tests, but then I can't pass those tests without all the other layers doing their thing. Point isn't about team work or process, it's about the approach and mindset of what it is we do and why we do it.
-
-## advantages
-
-Moving into a presenter class means you can unit test.
-Templates are piss poor replacements for programming logic.
-Maintaince is a nightmare.
-
-## All answers here
-
-http://stackoverflow.com/questions/3896730/whats-the-advantage-of-logic-less-template-such-as-mustache
