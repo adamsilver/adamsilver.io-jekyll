@@ -5,7 +5,7 @@ date:   2015-01-01 09:00:01
 categories: UXDD
 ---
 
-As a front-end developer, in some respects I fit nicely in-between UX and the backend developers, though in reality, the full picture is more complex. I tend to work very closely with UX in order to inform them about the web as a platform and to use both its constraints and its powers to the users advantage. But I also work very closely with backend developers, designing and implementing the technical contracts between our disciplines and automation engineers writing acceptance tests and making them go green.
+As a front-end developer I tend to work very closely with UX in order to inform them about the web as a platform *and* to use both its constraints and its powers to the users advantage. But I also work very closely with Backend Developers, designing and implementing the technical contracts between our disciplines. I also work with Automation Engineers writing acceptance tests and making them pass.
 
 But why am I telling you all of this? I am telling you all of this because I want to talk about Outside-in Development in terms of *people* as well as code. Members of the dev team have different responsibilitis but ultimately we all work towards one thing: **Pleasing the user**
 
