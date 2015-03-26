@@ -5,9 +5,9 @@ date:   2015-01-01 09:00:01
 categories: UXDD
 ---
 
-As a Front-end developer I find myself cosily positioned between UX and Backend development, however, the wholistic picture is a little more complicated. In a dare I say it, Agile environment, the entire team are involved across several aspects of the project delivery process, which of course includes me. Why am I telling you this? Because I want to talk about Outside-in Development in terms of *people* as well as code. Whilst team members have different disciplines, we should all be working towards the single goal of **pleasing the user**.
+As a Front-end developer I find myself cosily positioned between UX design and Backend development, however, the wholistic picture is a little more complicated. In a dare I say it, Agile environment, the entire team are involved across several aspects of the project delivery process, which of course includes me. Why am I telling you this? Because I want to talk about Outside-in Development in terms of *people* as well as code. Whilst team members have different disciplines, we should all be working towards the single goal of *pleasing the user*.
 
-If the user is *pleased*, then they love the product, consume it, buy the widget etc. And all software development should for the most part, start with this perspective, the *Outside-in* perspective. Consider the opposite approach. If your solving problems buried in the underlying structures first, then it is *very* likely you and your team are solving problems that don't exist, which most certainly means you're not pleasing the user or anyone else for that matter.
+If the user is *pleased*, then they love the product, consume it, buy the widget etc. And all software development should, for the most part, start with this perspective; the *Outside-in* perspective. Consider the opposite approach. If your solving problems buried in the underlying structures first, then it is *very* likely you and your team are solving problems that don't exist, which most certainly means you're not pleasing the user or anyone else for that matter.
 
 In a totally unreleastic, distilled, Waterfall version of an example development process, you could summarise the relationship as follows:
 
@@ -20,7 +20,7 @@ In a totally unreleastic, distilled, Waterfall version of an example development
 
 ...and so it continues until you have struck the very center of the earth, where you will find the lowest level code that is bearly recogniseable as even a thing, and it has zero dependencies.
 
-From an application perspective, the most outer edge starts with Front-end. Every problem that should be solved can be either achieved on the Front-end or pushed back down to the level below. If your not building a static website, then your building a dynamic website. And if your building a dynamic website,  the HTML needs to contain content that resides elsewhere. This could be an API, database, file store, cookies, etc. I personally don't (need to) care too much where it comes from, it's not my concern. So we put this information in what industry lingo calls, a *view model* - a model that is appropriately designed to populate the view. I don't wish to have complex logic in my views, which is why Logic-less templating has become popular, as an answer on Stackoverflow indicates:
+From an application perspective, the most outer edge starts with Front-end. Every problem that needs solving can be either achieved on the Front-end or pushed back down to the level below. If your not building a static website, then your building a dynamic website. And if your building a dynamic website,  the HTML needs to contain content that resides elsewhere. This could be an API, database, file store, cookies, etc. I personally don't (need to) care too much where it comes from, it's not my concern. So we put this information in what industry lingo calls, a *view model* - a model that is appropriately designed to populate the view. I don't wish to have complex logic in my views, which is why Logic-less templating has become popular, as an answer on Stackoverflow indicates [[0](#ref0)]:
 
 > In the old JSP days, it was very common to have JSP files sprinkled with Java code, which made refactoring much harder, since you had your code scattered.
 
@@ -30,6 +30,13 @@ From an application perspective, the most outer edge starts with Front-end. Ever
 
 Without getting into the details of this particular topic, the point is the *design* of the solution has been driven from the Outside-in perspective. And if the view is not provided with an appropriate view model, it is the Front-end developer's job to request the right thing from the layer below, which in this case would be the Backend developers.
 
-But this doesn't (and shouldn't) just happen between the Front-end and Backend developers. For example, if the Backend gets data from an API, that API might just be a few micro services, or wrappers around CRUD database calls. In its most basic design it might need 3 separate API calls to aggregate the data to render a view to the user. Rather than make 3 separate API calls (which is expensive) to help construct the appropriate view model, the Backend developer can and should request a more appropriate API call that wraps up 3 into 1 from the layer below, which in this case is the API team.
+But this should be happening at all levels. For example, if the Backend consumes an API, then that API might just provide a few micro-services, or wrappers around CRUD database calls. However, the requirement might need to build up a View that contains data from 3 separate micro-services. In this scenario it would be wise to demand more from the layer below and request an API end-point that aggregates 3 seperate calls (expensive and complex) into 1 (cheap and easy). Again another topic in itself [[1](#ref1)].
 
-The point is, Outside-in development promotes a different mindset in which to solve the problem, whereby each layer of the system &amp; team serves the layer above it. This enforces the right separation of concerns. If the layer below is not serving you well, tell them and get that rectified together so that you can each do your job better and be happier for it.
+The point is, Outside-in Development promotes a different mindset in which to solve the problem, whereby each layer of the system &amp; team serves the layer above it. This enforces the right separation of concerns. If the layer below is not serving you well, tell them and get that rectified together, so that you can each do your job better and be happier for it.
+
+<dl>
+	<dt class="citation" id="ref0">[0]</dt>
+	<dd><a href="http://stackoverflow.com/questions/3896730/whats-the-advantage-of-logic-less-template-such-as-mustache">Logic-less templating discussion</a></dd>
+	<dt class="citation" id="ref1">[1]</dt>
+	<dd><a href="http://martinfowler.com/bliki/CQRS.html">CQRS</a></dd>
+</dl>
