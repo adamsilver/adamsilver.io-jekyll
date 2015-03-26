@@ -359,7 +359,7 @@ a img {
 **********************************************************/
 
 .newsletter {
-    
+
 }
 
 .newsletterInner {
@@ -495,12 +495,12 @@ p code {
     line-height: 1.7em;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 720px) {
 
 	#content,
 	#headerInner,
 	#footerInner{
-		width: 960px;
+		width: 720px;
 		margin: 0 auto;
 	}
 
