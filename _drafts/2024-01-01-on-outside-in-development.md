@@ -18,7 +18,7 @@ In a totally unreleastic, distilled, Waterfall version of an example development
 3. Test Automation is slave to the Product
 4. Front-end is slave to the Test Automation (in the form of Acceptance tests perhaps)
 5. Backend is slave to the Front-end
-6. APIs are slave to the back-end
+6. APIs are slave to the Backend
 
 ...and so it continues until you have struck the very center of the earth, where you will find the lowest level component that is bearly recogniseable as even a thing, and it has zero dependencies.
 
