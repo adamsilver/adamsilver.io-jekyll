@@ -9,7 +9,7 @@ As a Front-end developer I find myself cosily positioned between UX design and B
 
 If the user is *pleased*, then they love the product; consume it; buy the widget etc. And all software development should, for the most part, start with this perspective; the *Outside-in* perspective. Consider the opposite approach. If your solving problems buried in the underlying structures first, then it is *very* likely you and your team are solving problems that don't exist, which most certainly means you're not pleasing the user or anyone else for that matter.
 
-**Note:** there are times Inside-out Development is useful and necessary, but won't go into that here.
+**Note:** there are times Inside-out Development is useful and necessary, but I won't go into that here.
 
 In a totally unreleastic, distilled, Waterfall version of an example development process, you could summarise the relationship as follows:
 
@@ -22,7 +22,7 @@ In a totally unreleastic, distilled, Waterfall version of an example development
 
 ...and so it continues until you have struck the very center of the earth, where you will find the lowest level component that is bearly recogniseable as even a thing, and it has zero dependencies.
 
-From an application perspective, the most outer edge starts with Front-end. Every problem that needs solving can be either achieved on the Front-end or pushed back down to the level below. If your not building a static website, then your building a dynamic website. And if your building a dynamic website, the HTML needs to contain content that resides elsewhere. This could be an API, database, file store, cookies, etc. I personally don't (need to) care too much where it comes from, it's not my concern. So we put this information in what industry lingo calls, a *view model* - a model that is appropriately designed to populate the view. I don't wish to have complex logic in my views, which is why Logic-less templating has become popular, as an answer on Stackoverflow indicates [[0](#ref0)]:
+From an application perspective, the most outer edge starts with Front-end. Every problem that needs solving can be either achieved on the Front-end or pushed back down to the level below. If your not building a static website, then your building a dynamic website. And if your building a dynamic website, the HTML needs to contain content that resides elsewhere. This could be an API, database, file store, cookies, etc. I personally don't (need to) care too much where it comes from, it's not my concern. So we put this information in what industry lingo calls, a *view model* - a model that is appropriately designed to populate the view. I don't wish to have complex, business logic in my views, which is why Logic-less templating has become popular, as an answer on Stackoverflow indicates [[0](#ref0)]:
 
 > In the old JSP days, it was very common to have JSP files sprinkled with Java code, which made refactoring much harder, since you had your code scattered.
 
