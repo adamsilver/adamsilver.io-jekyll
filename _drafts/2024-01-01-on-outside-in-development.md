@@ -13,16 +13,18 @@ If the user is *pleased*, then they love the product; consume it; buy the widget
 
 In a totally unreleastic, distilled, Waterfall version of an example development process, you could summarise the relationship as follows:
 
-1. Business is the slave to the user
-2. Product (and UX design) is slave to the Business
-3. Test Automation is slave to the Product
-4. Front-end is slave to the Test Automation (in the form of Acceptance tests perhaps)
-5. Backend is slave to the Front-end
-6. APIs are slave to the Backend
+1. Business supports the User
+2. Product supports the Business
+3. Test Automation supports the Product
+4. Front-end supports the Test Automation (in the form of Acceptance tests perhaps)
+5. Backend supports the Front-end
+6. APIs support the Backend
 
-...and so it continues until you have struck the very center of the earth, where you will find the lowest level component that is bearly recogniseable as even a thing, and it has zero dependencies.
+...and so it continues until you have struck the very center of the earth, where you will find the lowest level component that is barely recogniseable as even a thing, and it has zero dependencies.
 
-From an application perspective, the most outer edge starts with Front-end. Every problem that needs solving can be either achieved on the Front-end or pushed back down to the level below. If you're not building a static website, then you're building a dynamic website. And if you're building a dynamic website, the HTML needs to contain content that resides elsewhere. This could be an API, database, file store, cookies, etc. I personally don't (need to) care too much where it comes from, it's not my concern. So we put this information in what industry lingo calls, a *View Model* - a Model that is appropriately designed to populate the View. I don't wish to have complex, business logic in my Views, which is why Logic-less templating has become popular, as an answer on Stackoverflow indicates [[0](#ref0)]:
+From an application perspective, the most outer edge starts with Front-end. Every problem that needs solving can be either achieved on the Front-end or pushed back down to the level below. If you're not building a static website, then you're building a dynamic website. And if you're building a dynamic website, the HTML needs to contain content that resides elsewhere. This could be an API, database, file store, cookies, etc. It is not a major concern about how these components work.
+
+So we put this information in what industry lingo calls, a *View Model* - a Model that is appropriately designed to populate the View. I don't wish to have complex, business logic in my Views, which is why Logic-less templating has become popular, as an answer on Stackoverflow indicates [[0](#ref0)]:
 
 > In the old JSP days, it was very common to have JSP files sprinkled with Java code, which made refactoring much harder, since you had your code scattered.
 
