@@ -5,6 +5,8 @@ date:   2015-01-01 09:00:01
 categories: UXDD
 ---
 
+This needs a lot of work
+
 As a Front-end developer I find myself cosily positioned between UX design and Backend development, however, the wholistic picture is a little more complicated. In a (dare I say it) Agile environment, the entire team are involved across several aspects of the project delivery process, which of course includes me. Why am I telling you this? Because I want to talk about Outside-in Development in terms of *people* as well as code. Whilst team members have different disciplines, we should all be working towards the single goal of *pleasing the user*.
 
 If the user is *pleased*, then they love the product; consume it; buy the widget etc. And all software development should, for the most part, start with this perspective; the *Outside-in* perspective. Consider the opposite approach. If you're solving problems buried in the underlying structures first, then it is *very* likely you and your team are solving problems that don't exist, which most certainly means you're not pleasing the user or anyone else for that matter.
