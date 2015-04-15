@@ -5,7 +5,7 @@ date:   2015-01-01 09:00:01
 categories: css
 ---
 
-Out of all the silly things that go on in relation to Frontend development CSS preprocessors are not too bad. But that won't stop me explaining all the disadvantages to CSS preprocessors. If you're lucky you might even get some tips as to how to survive, or should I say thrive without a CSS preprocessor.
+Out of all the silly things that go on in relation to Frontend development, CSS preprocessors are not too bad relatively speaking. But that won't stop me explaining all the disadvantages. If you're lucky you might even get some tips as to how to survive, or should I say thrive without a CSS preprocessor. So let's discuss the disadvantages below.
 
 ## Extra tooling is need
 
