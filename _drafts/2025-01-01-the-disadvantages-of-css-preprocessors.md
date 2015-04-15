@@ -7,7 +7,7 @@ categories: css
 
 * Extra (and specific) tooling is needed. Developers shouldn't have to be limited to a specific IDE.
 
-* Compile time. Every save might have an overhead for seconds to minutes. Not as good as save and refresh.
+* Compilation time. Every save might have an overhead for seconds to minutes. Not as good as save and refresh. CLI tends to be faster but can still take plenty of time.
 
 * Saving source files and generated files in source control. Do you save just .less or scss files or do you also save the generated CSS files. Remove the extra cognitive burden.
 
@@ -21,7 +21,7 @@ categories: css
 
 * Another tool to the tech stack. Every tool added is something that we now have to setup, work with, work around, upgrade, maintain, monitor and rely on, which slows us down
 
-* CSS linters (command line, htc or IDE) are commonly available. LESS specific either not readily available and that slows us down.
+* CSS linters (command line, htc or IDE) are commonly available. LESS specific either not readily available and that slows us down. Also highlighting tools. Even if they are available still got overhead in (yes i admit), one time setup but still. What if your favourite editor doesn't have it?
 
 * Sprinkling for example @brandRed all over the place is actually worse than the CSS forced equivalent. What if the colour changes from red to something else. Have to do a search and replace anyway. Might as well have been a hex code sprinkled or better yet, comma delimit a single selector. Only update in one place.
 
@@ -67,4 +67,6 @@ We can speed up drastically.
 []:http://jaketrent.com/post/cons-css-preprocessors/
 []:http://stackoverflow.com/questions/28570752/what-are-the-advantages-disadvantages-of-using-css-preprocessors-e-g-sass-less
 []:http://blog.millermedeiros.com/the-problem-with-css-pre-processors/
+[]:https://www.devbridge.com/articles/increasing-sass-compiling-performance-or-when-every-second-counts/
+[0]:http://stackoverflow.com/questions/12228745/twitter-bootstrap-less-compilation-taking-a-long-time
 
