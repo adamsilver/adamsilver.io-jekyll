@@ -5,35 +5,39 @@ date:   2015-01-01 09:00:01
 categories: css
 ---
 
-Out of all the silly things that go on in relation to Frontend development, CSS preprocessors are not too bad relatively speaking. But that won't stop me explaining all the disadvantages. If you're lucky you might even get some tips as to how to survive, or should I say thrive without a CSS preprocessor. So let's discuss the disadvantages below.
-
-## Extra tooling is need
-
-Sometimes you need command line tools, standard programs, or plugins for specific IDEs depending on how the project has been setup. Developers should not be limited in their choice of development environment or IDE.
-
-## Compilation time.
-
-I have experienced and heard many stories. Compilation times can be quick but they can also be very slow. And it's easy to make them slow. Without a CSS preprocessor, just save and refresh. CLI tends to be faster but it can still take plenty of time.
-
-## Question of saving generated files
-
-This has come up in the past and whilst I am firmly in belief that you shouldn't save generated files to source control I have experienced opinions to the contrary and you have to jump through the hoops of Concenus Driven Development. [](http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo)
-
-## Removing fine control
-
-Relying on Less means accepting what it spits out as we are abstracted from that. This could cause problems with performance (Mixins are an example) that we have to workaround which slows us down. There are other examples - see graham notes.
-
-## Cannot adhere to potential conventions.
-
-Conventions driven by technology :( e.g. unable to nest media queries meaning that they are decoupled from the element which goes against maintenance standards which slows us down.
-
-## Onboarding
-
-Not a biggie, but by requiring that knowledge we narrow the choice of candidates...Alternatively we don’t require the knowledge from candidates, meaning they learn on the job which slows us down.
+There are a lot of crazy things software engineers do, but whilst I don't think much of CSS preprocessors there are many worse things going on in the Frontend development industry. Regardless, I am going to point out all the  disadvantages with them in comparison to regular CSS, which ultimately increases (not decreases) the cost of development. I will also demonstate how to survive (or should I say thrive?) without one.
 
 ## Debugging
 
-As the source files aren’t interpreted by the browser there is a significant cognitive burden when debugging. Debugging is 90% of the job and this is a huge problem that slows us down.
+> Debugging is 90% of the job
+
+Or something like that. As source files aren't interpreted by the browser there is a significant cognitive burden when debugging. God forbid, you could check the line number and file name, open it up, edit and go. No you either need to use source maps which, need further effort to set them up and only work in a limited set of modern browsers (and developers who care for their users tend to develop any many browsers without support for source maps) or, you have to work out how to be Sherlock Holmes [0](check name spelling).
+
+## Extra tooling is needed
+
+Extra software is needed, which can be a mix of command line tools, standalone programs or plugins for particular IDEs. Developers should not be limited in their choice of development environment or IDE and with more moving parts to go wrong there is more risk for problems.
+
+## Compilation time.
+
+I have experienced and heard many stories, personal and otherwise, with regards to compilation. Compilation times can be quick but they can also be very slow. And it's easy to make them slow. CLI tends to be faster but it can still take plenty of time. And even when considered *quick enough* I have found myself *saving* and *refreshing* before compilation time finishes. YMMV.
+
+## Question of saving generated files
+
+Whilst I am firmly in the camp that you *shouldn't* save generated files to source control, I (and I am not the only one to) [0] have experienced opinions to the contrary and you have to jump through the hoops of Concenus Driven Development [0].
+
+## Removing fine control
+
+You have to accept, to a certain extent, that whatever is generated is out of your control. This can cause performance problems [0](Mixins/Nesting).
+
+Note: see Graham notes.
+
+## Adhering to agreed conventions
+
+For example, I have worked in teams that agreed it was far better to place media queries immediately next to the same rule [0](look up mcdonald name for this) so that you can see all the styling that related to the same selector. Due to the nesting (one of the good things about CSS preprocessors), you get this side effect where you can't do this. This makes it harder to maintain.
+
+## Onboarding and recruitment
+
+Whilst it's not a steep learning curve, it's still something you might want to consider. Onboarding for candidates that don't have knowledge of CSS preprocessors or the workflows around them, might be hindered. The recruitment net might be a little smaller for it too. It is minor, but AISB still worthy of consideration.
 
 ## Another tool to the tech stack
 
@@ -55,30 +59,31 @@ Elaborate
 
 ### Variables
 
-selector,
-anotherSelector {
-	color: red;
-}
+	selector,
+	anotherSelector {
+		color: red;
+	}
 
 ### Mixins
 
-selector,
-anotherSelector {
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-}
+	selector,
+	anotherSelector {
+		border-radius: 3px;
+		-webkit-border-radius: 3px;
+	}
 
 ## Nesting
 
-.someComponent {
-}
+	.someComponent {
+	}
 
-.someComponent .someChild {
-}
+	.someComponent .someChild {
+	}
 
 ## Summary
 
 Less might have attractive qualities but there are suitable alternatives without using a preprocessor.
+
 There are simple ways to reuse styles in a semantic and maintainable way.
 “Debugging is twice as hard as programming” - it’s our duty to make that as easy as possible.
 We can speed up drastically.
@@ -88,6 +93,7 @@ We can speed up drastically.
 	<dd><a href="http://stackoverflow.com/questions/3896730/whats-the-advantage-of-logic-less-template-such-as-mustache">Logic-less templating discussion</a></dd>
 </dl>
 
+[]:http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo
 []:http://jaketrent.com/post/cons-css-preprocessors/
 []:http://stackoverflow.com/questions/28570752/what-are-the-advantages-disadvantages-of-using-css-preprocessors-e-g-sass-less
 []:http://blog.millermedeiros.com/the-problem-with-css-pre-processors/
