@@ -9,13 +9,15 @@ There are a lot of crazy things software engineers do, but whilst I don't think 
 
 ## Debugging
 
-> Debugging is 90% of the job
+As source files aren't interpreted by the browser there is a significant cognitive burden when debugging. God forbid, you could check the line number and file name, open it up, edit and go. No you either need to use source maps which, need further effort to set them up and only work in a limited set of modern browsers (and developers who care for their users tend to develop any many browsers without support for source maps) or, you have to work out how to be Sherlock Holmes [[0](check name spelling)]. As Debugging is 90% of the job [[0](check name spelling)] which for me is a deal breaker.
 
-Or something like that. As source files aren't interpreted by the browser there is a significant cognitive burden when debugging. God forbid, you could check the line number and file name, open it up, edit and go. No you either need to use source maps which, need further effort to set them up and only work in a limited set of modern browsers (and developers who care for their users tend to develop any many browsers without support for source maps) or, you have to work out how to be Sherlock Holmes [0](check name spelling).
+## More tooling
 
-## Extra tooling is needed
+Extra software is needed, which can be a mix of command line tools, standalone programs or plugins for particular IDEs. Developers should not be limited in their choice of development environment or IDE and with more moving parts to go wrong there is more risk for problems. Every tool added, is something that we now have to setup, work with, work around, upgrade, maintain, monitor and rely on, which has a decent amount of risk in slowing development down.
 
-Extra software is needed, which can be a mix of command line tools, standalone programs or plugins for particular IDEs. Developers should not be limited in their choice of development environment or IDE and with more moving parts to go wrong there is more risk for problems.
+## Even more tooling
+
+CSS linters and text editor highlighting (command line or plugins) are commonly available. CSS preprocessors are not so readily available. When they are, they need setting up and, depending on the tech stack, this can really take some time and potentially this has to be multiplied out, somewhat to the rest of the development team. Your favourite editor may not have it.
 
 ## Compilation time.
 
@@ -27,9 +29,7 @@ Whilst I am firmly in the camp that you *shouldn't* save generated files to sour
 
 ## Removing fine control
 
-You have to accept, to a certain extent, that whatever is generated is out of your control. This can cause performance problems [0](Mixins/Nesting).
-
-Note: see Graham notes.
+You have to accept, to a certain extent, that whatever is generated is out of your control. This can cause performance problems [0](Mixins/Nesting/see graham notes). Also source file size can be deceiving [0] in that the generated file is much bigger. If you took control back you may well have avoided duplication and end up with more performant production file.
 
 ## Adhering to agreed conventions
 
@@ -39,23 +39,13 @@ For example, I have worked in teams that agreed it was far better to place media
 
 Whilst it's not a steep learning curve, it's still something you might want to consider. Onboarding for candidates that don't have knowledge of CSS preprocessors or the workflows around them, might be hindered. The recruitment net might be a little smaller for it too. It is minor, but AISB still worthy of consideration.
 
-## Another tool to the tech stack
-
-Every tool added is something that we now have to setup, work with, work around, upgrade, maintain, monitor and rely on, which slows us down
-
-## Even more tooling necessary
-
-CSS linters (command line, htc or IDE) are commonly available. LESS specific either not readily available and that slows us down. Also highlighting tools. Even if they are available still got overhead in (yes i admit), one time setup but still. What if your favourite editor doesn't have it?
-
 ## Maintainence issues
 
-Sprinkling for example @brandRed all over the place is actually worse than the CSS forced equivalent. What if the colour changes from red to something else. Have to do a search and replace anyway. Might as well have been a hex code sprinkled or better yet, comma delimit a single selector. Only update in one place.
+Taking an example I have seen recently, sprinkling a variable *brandRed*, instead of `#ff0000` all over various CSS files is not really advantageous. If the colour changes to something that isn't a red then you have to do a search and replace anyway, and quite honestly how difficult is that? Anyway, there are alternative ways which I will discuss later.
 
-## File size deceiving.
+## What about variables, mixins, nesting?
 
-Elaborate
-
-## But what about variables, mixins and nesting...
+What about them ha!
 
 ### Variables
 
