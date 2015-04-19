@@ -75,11 +75,7 @@ This can't be achieved as such, but prefixing your selectors with a common ances
 
 ## Summary
 
-Less might have attractive qualities but there are suitable alternatives without using a preprocessor.
-
-There are simple ways to reuse styles in a semantic and maintainable way.
-“Debugging is twice as hard as programming” - it’s our duty to make that as easy as possible.
-We can speed up drastically.
+Ultimately, plain CSS can't achieve some of the niceties of CSS preprocessors, but for me (and many others) the trade-offs are overpowering. And, as "debugging is twice as hard as programming", it's our duty to ensure this is as easy as possible. Keep things simple.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
