@@ -43,18 +43,19 @@ Whilst it's not a steep learning curve, it's still something you might want to c
 
 Taking an example I have seen recently, sprinkling a variable *brandRed*, instead of `#ff0000` all over various CSS files is not really advantageous. If the colour changes to something that isn't a red then you have to do a search and replace anyway, and quite honestly how difficult is that? Anyway, there are alternative ways which I will discuss later.
 
-## What about variables, mixins, nesting?
 
-What about them ha!
+## But what about variables?
 
-### Variables
+Variables can be achieved by using comma-delimited CSS selectors, as follows:
 
 	selector,
 	anotherSelector {
 		color: red;
 	}
 
-### Mixins
+## But what about mixins?
+
+Just like variables, mixins can be achieved by using comma-delimited CSS selectors, as follows:
 
 	selector,
 	anotherSelector {
@@ -62,7 +63,9 @@ What about them ha!
 		-webkit-border-radius: 3px;
 	}
 
-## Nesting
+## But what about nesting?
+
+This can't be achieved as such, but prefixing your selectors with a common ancestor selector is a satisfactory solution to modularising with a little bit of duplication as follows:
 
 	.someComponent {
 	}
