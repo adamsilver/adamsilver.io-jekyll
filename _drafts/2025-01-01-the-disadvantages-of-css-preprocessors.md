@@ -9,15 +9,15 @@ There are a lot of crazy things software engineers do, but whilst I don't think 
 
 ## Debugging
 
-As source files aren't interpreted by the browser there is a significant cognitive burden when debugging. God forbid, you could check the line number and file name, open it up, edit and go. No you either need to use source maps which, need further effort to set them up and only work in a limited set of modern browsers (and developers who care for their users tend to develop any many browsers without support for source maps) or, you have to work out how to be Sherlock Holmes [[0](check name spelling)]. As Debugging is 90% of the job [[0](check name spelling)] which for me is a deal breaker.
+As source files aren't interpreted by the browser there is a significant cognitive burden when debugging. God forbid, you could check the line number and file name, open it up, edit and go. No, you either need to use source maps which, need effort to set them up and only work in a limited set of modern browsers (and developers who care for their users tend to develop in many browsers without support for source maps) or, you have to work out how to be Sherlock Holmes [[0](check name spelling)]. As Debugging is 90% of the job [[0](check name spelling)] which for me is a deal breaker.
 
 ## More tooling
 
-Extra software is needed, which can be a mix of command line tools, standalone programs or plugins for particular IDEs. Developers should not be limited in their choice of development environment or IDE and with more moving parts to go wrong there is more risk for problems. Every tool added, is something that we now have to setup, work with, work around, upgrade, maintain, monitor and rely on, which has a decent amount of risk in slowing development down.
+Extra software is needed, which can be a mix of command line tools, standalone programs or plugins for particular IDEs. Developers shouldn't be limited in their choice of development environment or IDE, and with more moving parts, there is greater risk for problems. Every tool added is something that needs setting up, working with, working around, upgrading, maintaining, monitoring and ultimately relying on, which of course, has a good opportunity of slowing down development.
 
 ## Even more tooling
 
-CSS linters and text editor highlighting (command line or plugins) are commonly available. CSS preprocessors are not so readily available. When they are, they need setting up and, depending on the tech stack, this can really take some time and potentially this has to be multiplied out, somewhat to the rest of the development team. Your favourite editor may not have it.
+CSS linters and text editor highlighting (command line or plugins) are commonly available. CSS preprocessors are not so readily available. When they are, they need setting up and, depending on the tech stack, this can really take some time and potentially this has to be multiplied out to the rest of the development team. Your favourite editor may not have it.
 
 ## Compilation time.
 
@@ -25,15 +25,15 @@ I have experienced and heard many stories, personal and otherwise, with regards 
 
 ## Question of saving generated files
 
-Whilst I am firmly in the camp that you *shouldn't* save generated files to source control, I (and I am not the only one to) [0] have experienced opinions to the contrary and you have to jump through the hoops of Concenus Driven Development [0].
+Whilst I am firmly in the camp that you *shouldn't* save generated files to source control, I (and I am not the only one to) [[0]] have experienced opinions to the contrary and you have to jump through the hoops of Concenus Driven Development [[0]].
 
 ## Removing fine control
 
-You have to accept, to a certain extent, that whatever is generated is out of your control. This can cause performance problems [0](Mixins/Nesting/see graham notes). Also source file size can be deceiving [0] in that the generated file is much bigger. If you took control back you may well have avoided duplication and end up with more performant production file.
+It must be accepted that, to a certain extent whatever CSS is generated is out of your control. This can cause performance problems [[0](Mixins/Nesting/see graham notes)]. Also source file size can be deceiving [[0]] in that the generated file is much bigger. If you took control back, you may well have avoided duplication and end up with more performant production file.
 
 ## Adhering to agreed conventions
 
-For example, I have worked in teams that agreed it was far better to place media queries immediately next to the same rule [0](look up mcdonald name for this) so that you can see all the styling that related to the same selector. Due to the nesting (one of the good things about CSS preprocessors), you get this side effect where you can't do this. This makes it harder to maintain.
+For example, I have worked in teams that agreed it was far better to place media queries immediately next to the same rule [[0](look up mcdonald name for this)] so that you can see all the styling that related to the same selector. Due to the nesting (one of the good things about CSS preprocessors), you get this side effect where you can't do this. This makes it harder to maintain.
 
 ## Onboarding and recruitment
 
@@ -41,8 +41,7 @@ Whilst it's not a steep learning curve, it's still something you might want to c
 
 ## Maintainence issues
 
-Taking an example I have seen recently, sprinkling a variable *brandRed*, instead of `#ff0000` all over various CSS files is not really advantageous. If the colour changes to something that isn't a red then you have to do a search and replace anyway, and quite honestly how difficult is that? Anyway, there are alternative ways which I will discuss later.
-
+Taking an example I have seen recently, sprinkling a variable `@brandRed`, instead of `#ff0000` all over various CSS files is not really advantageous. If the colour changes to something that isn't a red then you have to do a search and replace anyway, and quite honestly how difficult is that, but there are better ways anyway...
 
 ## But what about variables?
 
@@ -81,7 +80,7 @@ Ultimately, plain CSS can't achieve some of the niceties of CSS preprocessors, b
 	<dt class="citation" id="ref0">[0]</dt>
 	<dd><a href="http://stackoverflow.com/questions/3896730/whats-the-advantage-of-logic-less-template-such-as-mustache">Logic-less templating discussion</a></dd>
 </dl>
-
+<!--
 []:http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo
 []:http://jaketrent.com/post/cons-css-preprocessors/
 []:http://stackoverflow.com/questions/28570752/what-are-the-advantages-disadvantages-of-using-css-preprocessors-e-g-sass-less
@@ -112,3 +111,5 @@ Look up source maps.
 [15/04/2015 11:12:12] Graham Veal: makes changes easier
 [15/04/2015 11:12:45] Graham Veal: I think if it's a simple setup it's good. start doing more and it gets more of an issue to setup and maintain
 [15/04/2015 11:13:16] Graham Veal: plus it's another dependency on the machine: ruby and then the gems
+
+-->
