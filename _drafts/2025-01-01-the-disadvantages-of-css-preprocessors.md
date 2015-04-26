@@ -29,7 +29,7 @@ Whilst I am firmly in the camp that you *shouldn't* save generated files to sour
 
 ## Removing fine control
 
-It must be accepted that, to a certain extent whatever CSS is generated is out of your control. This can cause performance problems [[2](#ref2)]. Also source file size can be deceiving in that the generated file is much bigger than the source file that developers work with all day. If control is taken back, duplication is likely avoided and performance doesn't become a problem.
+It must be accepted that, to a certain extent whatever CSS is generated is out of your control. This can cause performance problems [[2](#ref2)]. Also source file size can be deceiving [[3](#ref3)] in that the generated file is much bigger than the source file that developers work with all day. If control is taken back, duplication is likely avoided and performance doesn't become a problem.
 
 ## Adhering to agreed conventions
 
@@ -83,9 +83,10 @@ Ultimately, plain CSS can't achieve some of the niceties of CSS preprocessors, b
 	<dd><a href="http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/">Consencus Driven Development</a></dd>
 	<dt class="citation" id="ref2">[2]</dt>
 	<dd><a href="http://blog.millermedeiros.com/the-problem-with-css-pre-processors/">The problem with CSS preprocessors</a></dd>
+	<dt class="citation" id="ref3">[3]</dt>
+	<dd><a href="http://jaketrent.com/post/cons-css-preprocessors/">File size deceiving (CSS Preprocessors)</a></dd>
 </dl>
 <!--
-[]:http://jaketrent.com/post/cons-css-preprocessors/
 []:http://stackoverflow.com/questions/28570752/what-are-the-advantages-disadvantages-of-using-css-preprocessors-e-g-sass-less
 []:http://blog.millermedeiros.com/the-problem-with-css-pre-processors/
 []:https://www.devbridge.com/articles/increasing-sass-compiling-performance-or-when-every-second-counts/
