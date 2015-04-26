@@ -5,11 +5,11 @@ date:   2015-01-01 09:00:01
 categories: css
 ---
 
-There are a lot of crazy things software engineers do, but whilst I don't think much of CSS preprocessors there are many worse things going on in the Frontend development industry. Regardless, I am going to point out all the  disadvantages with them in comparison to regular CSS, which ultimately increases (not decreases) the cost of development. I will also demonstate how to survive (or should I say thrive?) without one.
+There are many things Frontend developers do that I don't advise, and whilst I don't think much of CSS preprocessors there are worse things in the industry. Regardless, there are disadvantages to using CSS preprocessors, disadvantages that actually reduce speed of development and maintainability, which were meant to be the advantages of using such tools.
 
 ## Debugging
 
-As source files aren't interpreted by the browser there is a significant cognitive burden when debugging. God forbid, you could check the line number and file name, open it up, edit and go. No, you either need to use source maps which, need effort to set them up and only work in a limited set of modern browsers (and developers who care for their users tend to develop in many browsers without support for source maps) or, you have to work out how to be Sherlock Holmes [[0](check name spelling)]. As Debugging is 90% of the job [[0](check name spelling)] which for me is a deal breaker.
+As source files aren't interpreted by the browser there is a significant cognitive burden when debugging. God forbid, you could check the line number and file name, open it up, edit and go. No, you either need to use source maps which, need effort to set them up and only work in a limited set of modern browsers (and developers who care for their users tend to develop in many browsers without support for source maps) or, you have to work out how to be Sherlock Holmes. As *debugging is twice as hard as programming*, this becomes a deal breaker all on its own.
 
 ## More tooling
 
@@ -21,19 +21,19 @@ CSS linters and text editor highlighting (command line or plugins) are commonly 
 
 ## Compilation time.
 
-I have experienced and heard many stories, personal and otherwise, with regards to compilation. Compilation times can be quick but they can also be very slow. And it's easy to make them slow. CLI tends to be faster but it can still take plenty of time. And even when considered *quick enough* I have found myself *saving* and *refreshing* before compilation time finishes. YMMV.
+I have experienced and heard many [?] stories [?], personal and otherwise, with regards to compilation. Compilation times can be quick but they can also be very slow. And it's easy to make them slow. CLI tends to be faster but it can still take plenty of time. And even when considered *quick enough* I have found myself *saving* and *refreshing* before compilation time finishes. YMMV.
 
 ## Question of saving generated files
 
-Whilst I am firmly in the camp that you *shouldn't* save generated files to source control, I (and I am not the only one to) [[0]] have experienced opinions to the contrary and you have to jump through the hoops of Concenus Driven Development [[0]].
+Whilst I am firmly in the camp that you *shouldn't* save generated files to source control, I (and I am not the only one to) [[0](#ref0)] have experienced opinions to the contrary and you have to jump through the hoops of Concenus Driven Development [[1](#ref1)].
 
 ## Removing fine control
 
-It must be accepted that, to a certain extent whatever CSS is generated is out of your control. This can cause performance problems [[0](Mixins/Nesting/see graham notes)]. Also source file size can be deceiving [[0]] in that the generated file is much bigger. If you took control back, you may well have avoided duplication and end up with more performant production file.
+It must be accepted that, to a certain extent whatever CSS is generated is out of your control. This can cause performance problems [[2](#ref2)]. Also source file size can be deceiving in that the generated file is much bigger than the source file that developers work with all day. If control is taken back, duplication is likely avoided and performance doesn't become a problem.
 
 ## Adhering to agreed conventions
 
-For example, I have worked in teams that agreed it was far better to place media queries immediately next to the same rule [[0](look up mcdonald name for this)] so that you can see all the styling that related to the same selector. Due to the nesting (one of the good things about CSS preprocessors), you get this side effect where you can't do this. This makes it harder to maintain.
+For example, I have worked in teams that agreed it was far better to place media queries immediately next to the same rule [[?](look up mcdonald name for this)] so that you can see all the styling that related to the same selector. Due to the nesting (one of the good things about CSS preprocessors), you get this side effect where you can't do this. This makes it harder to maintain.
 
 ## Onboarding and recruitment
 
@@ -78,26 +78,20 @@ Ultimately, plain CSS can't achieve some of the niceties of CSS preprocessors, b
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
-	<dd><a href="http://stackoverflow.com/questions/3896730/whats-the-advantage-of-logic-less-template-such-as-mustache">Logic-less templating discussion</a></dd>
+	<dd><a href="http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo">Generated files and version control</a></dd>
+	<dt class="citation" id="ref1">[1]</dt>
+	<dd><a href="http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/">Consencus Driven Development</a></dd>
+	<dt class="citation" id="ref2">[2]</dt>
+	<dd><a href="http://blog.millermedeiros.com/the-problem-with-css-pre-processors/">The problem with CSS preprocessors</a></dd>
 </dl>
 <!--
-[]:http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo
 []:http://jaketrent.com/post/cons-css-preprocessors/
 []:http://stackoverflow.com/questions/28570752/what-are-the-advantages-disadvantages-of-using-css-preprocessors-e-g-sass-less
 []:http://blog.millermedeiros.com/the-problem-with-css-pre-processors/
 []:https://www.devbridge.com/articles/increasing-sass-compiling-performance-or-when-every-second-counts/
 [0]:http://stackoverflow.com/questions/12228745/twitter-bootstrap-less-compilation-taking-a-long-time
-
-Look up source maps.
-
-...
-[15/04/2015 10:53:26] Graham Veal: so we have been running with grunt and recently gulp
-[15/04/2015 10:53:40] Graham Veal: mainly to create a watch task to run on save
-[15/04/2015 10:54:06] Graham Veal: then you need to create srcmaps to help debug, but I haven't got them running!
 [15/04/2015 10:55:51] Graham Veal:  think others in the team have
 [15/04/2015 10:56:08] Graham Veal: you need to serve up the sourcemaps file and then tell chrome or something
-[15/04/2015 10:56:17] Graham Veal: but I haven't had any issues
-[15/04/2015 10:59:58] Graham Veal: I think other browsers support it too, but obv only "modern" ones
 [15/04/2015 11:00:17] Graham Veal: the troubles come when you start using "gems" to add more, like compass
 [15/04/2015 11:01:23] Graham Veal: using it to automatically make sprite images etc
 [15/04/2015 11:01:35] Graham Veal: then doing retina support as well
@@ -111,5 +105,4 @@ Look up source maps.
 [15/04/2015 11:12:12] Graham Veal: makes changes easier
 [15/04/2015 11:12:45] Graham Veal: I think if it's a simple setup it's good. start doing more and it gets more of an issue to setup and maintain
 [15/04/2015 11:13:16] Graham Veal: plus it's another dependency on the machine: ruby and then the gems
-
 -->
