@@ -74,7 +74,7 @@ This can't be achieved as such, but prefixing your selectors with a common ances
 
 ## Summary
 
-Regulard CSS doesn't provide some of the features that CSS preprocessors provide. However, for me and many others, the disadvantages seriously outweight the advantages. And, as *debugging is twice as hard as programming*, it's our duty to ensure this is as easy as possible. Keep things simple.
+Even though CSS doesn't provide some of the features of CSS preprocessors, for me and many others, the disadvantages *seriously* outweigh the advantages. As I said previously, *debugging is twice as hard as programming*, and it's our duty to ensure this is as easy as possible. Keep things simple.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
