@@ -86,24 +86,3 @@ Even though CSS doesn't provide some of the features of CSS preprocessors, for m
 	<dt class="citation" id="ref3">[3]</dt>
 	<dd><a href="http://jaketrent.com/post/cons-css-preprocessors/">File size deceiving (CSS Preprocessors)</a></dd>
 </dl>
-<!--
-[]:http://stackoverflow.com/questions/28570752/what-are-the-advantages-disadvantages-of-using-css-preprocessors-e-g-sass-less
-[]:http://blog.millermedeiros.com/the-problem-with-css-pre-processors/
-[]:https://www.devbridge.com/articles/increasing-sass-compiling-performance-or-when-every-second-counts/
-[0]:http://stackoverflow.com/questions/12228745/twitter-bootstrap-less-compilation-taking-a-long-time
-[15/04/2015 10:55:51] Graham Veal:  think others in the team have
-[15/04/2015 10:56:08] Graham Veal: you need to serve up the sourcemaps file and then tell chrome or something
-[15/04/2015 11:00:17] Graham Veal: the troubles come when you start using "gems" to add more, like compass
-[15/04/2015 11:01:23] Graham Veal: using it to automatically make sprite images etc
-[15/04/2015 11:01:35] Graham Veal: then doing retina support as well
-[15/04/2015 11:01:59] Graham Veal: all these are "add ons" that mean you really need to understand SASS to set them up correctly
-[15/04/2015 11:02:31] Graham Veal: we fucked it up on the first project, each time the sprite was getting created loads of times making the SASS "compile" take up to 10-15 secs
-[15/04/2015 11:02:42] Graham Veal: then one guy who knew more sorted it out
-[15/04/2015 11:02:49] Graham Veal: set it up correctly
-[15/04/2015 11:02:54] Graham Veal: and got it back to 1s
-[15/04/2015 11:11:50] Graham Veal:  don't get the craze really! I do like that it does things for you, like having a pxtoem function
-[15/04/2015 11:11:57] Graham Veal: then you can easily see what you were trying to do
-[15/04/2015 11:12:12] Graham Veal: makes changes easier
-[15/04/2015 11:12:45] Graham Veal: I think if it's a simple setup it's good. start doing more and it gets more of an issue to setup and maintain
-[15/04/2015 11:13:16] Graham Veal: plus it's another dependency on the machine: ruby and then the gems
--->
