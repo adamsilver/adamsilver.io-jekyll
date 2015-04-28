@@ -495,7 +495,7 @@ p code {
     line-height: 1.7em;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 760px) {
 
 	#content,
 	#headerInner,

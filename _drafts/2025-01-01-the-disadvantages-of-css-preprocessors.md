@@ -11,7 +11,7 @@ There are many things Frontend developers do that I don't advise, and yet, whils
 
 ### Debugging
 
-As source files aren't interpreted by the browser there is a significant cognitive burden when debugging. God forbid, you could check the line number and file name, open it up, edit and go. No, you either need to use source maps which, need effort to set them up and only work in a limited set of modern browsers (and developers who care for their users tend to develop in many browsers without support for source maps) or, you have to work out how to be Sherlock Holmes. As *debugging is twice as hard as programming*, this becomes a deal breaker all on its own.
+As source files aren't interpreted by the browser there is a significant cognitive burden when debugging. Without a CSS preprocessor the line number in the console relates to the line number in the source file. However, this is *not* the case with CSS preprocessors. One option is to use source maps but these need effort to set them up and only work in a limited set of modern browsers. Obviously, developers who care for their end users tend to test in less modern browsers. The second option is to act like Sherlock Holmes and start hunting down portions of style rules and selectors - *not* fun. As *debugging is twice as hard as programming*, this is most certainly a deal breaker. If this isn't enough to convince you please read on.
 
 ### More tooling
 
@@ -23,19 +23,15 @@ CSS linters and text editor highlighting (command line or plugins) are commonly 
 
 ### Compilation time.
 
-I have experienced and heard many [?] stories [?], personal and otherwise, with regards to compilation. Compilation times can be quick but they can also be very slow. And it's easy to make them slow. CLI tends to be faster but it can still take plenty of time. And even when considered *quick enough* I have found myself *saving* and *refreshing* before compilation time finishes. YMMV.
+I have experienced and heard many [?] stories [?], with regards to compilation. Compilation times can be quick but they can also be very slow. And it's easy to make them slow. CLI tends to be faster but it can still take plenty of time. And even when considered *quick enough* I have found myself *saving* and *refreshing* before compilation time finishes. YMMV.
 
 ### Question of saving generated files
 
-Whilst I am firmly in the camp that you *shouldn't* save generated files to source control, I (and I am not the only one to) [[0](#ref0)] have experienced opinions to the contrary and you have to jump through the hoops of Concenus Driven Development [[1](#ref1)].
+Whilst I am firmly in the camp that you *shouldn't* save generated files to source control, I (and I am not the only one to) have experienced opinions to the contrary [[0](#ref0)] and you have to jump through the hoops of Concenus Driven Development [[1](#ref1)].
 
 ### Removing fine control
 
-It must be accepted that, to a certain extent whatever CSS is generated is out of your control. This can cause performance problems [[2](#ref2)]. Also source file size can be deceiving [[3](#ref3)] in that the generated file is much bigger than the source file that developers work with all day. If control is taken back, duplication is likely avoided and performance doesn't become a problem.
-
-### Adhering to agreed conventions
-
-For example, I have worked in teams that agreed it was far better to place media queries immediately next to the same rule [[?](look up mcdonald name for this)] so that you can see all the styling that related to the same selector. Due to the nesting (one of the good things about CSS preprocessors), you get this side effect where you can't do this. This makes it harder to maintain.
+It must be accepted that to a certain extent, the *generated* CSS is out of your control. This can cause performance problems [[2](#ref2)]. Also source file size can be deceiving [[3](#ref3)] in that the generated file could be significantly larger than the source file that developers work with all day. If control is taken back, duplication is likely avoided and performance doesn't become a problem.
 
 ### Onboarding and recruitment
 
@@ -68,7 +64,7 @@ Just like variables, mixins can be achieved by using comma-delimited CSS selecto
 
 ### Nesting
 
-This can't be achieved as such, but prefixing your selectors with a common ancestor selector is a satisfactory solution to modularising with a little bit of duplication as follows:
+This can't be achieved as such, but prefixing your selectors with a common ancestor is a satisfactory solution to modularising, with admittedly, a very small amount of duplication as follows:
 
 	.someComponent {
 	}
@@ -78,7 +74,7 @@ This can't be achieved as such, but prefixing your selectors with a common ances
 
 ## Summary
 
-Ultimately, plain CSS can't achieve some of the niceties of CSS preprocessors, but for me (and many others) the trade-offs are overpowering. And, as "debugging is twice as hard as programming", it's our duty to ensure this is as easy as possible. Keep things simple.
+Regulard CSS doesn't provide some of the features that CSS preprocessors provide. However, for me and many others, the disadvantages seriously outweight the advantages. And, as *debugging is twice as hard as programming*, it's our duty to ensure this is as easy as possible. Keep things simple.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
