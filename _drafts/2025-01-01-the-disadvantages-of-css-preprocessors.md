@@ -5,45 +5,49 @@ date:   2015-01-01 09:00:01
 categories: css
 ---
 
-There are many things Frontend developers do that I don't advise, and whilst I don't think much of CSS preprocessors there are worse things in the industry. Regardless, there are disadvantages to using CSS preprocessors, disadvantages that actually reduce speed of development and maintainability, which were meant to be the advantages of using such tools.
+There are many things Frontend developers do that I don't advise, and yet, whilst I don't think much of CSS preprocessors there are many worse things you can do. Regardless, there *are* disadvantages to using CSS preprocessors; disadvantages that actually reduce speed of development and maintainability, which are meant to be the advantages of using such tools.
 
-## Debugging
+## Issues
+
+### Debugging
 
 As source files aren't interpreted by the browser there is a significant cognitive burden when debugging. God forbid, you could check the line number and file name, open it up, edit and go. No, you either need to use source maps which, need effort to set them up and only work in a limited set of modern browsers (and developers who care for their users tend to develop in many browsers without support for source maps) or, you have to work out how to be Sherlock Holmes. As *debugging is twice as hard as programming*, this becomes a deal breaker all on its own.
 
-## More tooling
+### More tooling
 
 Extra software is needed, which can be a mix of command line tools, standalone programs or plugins for particular IDEs. Developers shouldn't be limited in their choice of development environment or IDE, and with more moving parts, there is greater risk for problems. Every tool added is something that needs setting up, working with, working around, upgrading, maintaining, monitoring and ultimately relying on, which of course, has a good opportunity of slowing down development.
 
-## Even more tooling
+### Even more tooling
 
 CSS linters and text editor highlighting (command line or plugins) are commonly available. CSS preprocessors are not so readily available. When they are, they need setting up and, depending on the tech stack, this can really take some time and potentially this has to be multiplied out to the rest of the development team. Your favourite editor may not have it.
 
-## Compilation time.
+### Compilation time.
 
 I have experienced and heard many [?] stories [?], personal and otherwise, with regards to compilation. Compilation times can be quick but they can also be very slow. And it's easy to make them slow. CLI tends to be faster but it can still take plenty of time. And even when considered *quick enough* I have found myself *saving* and *refreshing* before compilation time finishes. YMMV.
 
-## Question of saving generated files
+### Question of saving generated files
 
 Whilst I am firmly in the camp that you *shouldn't* save generated files to source control, I (and I am not the only one to) [[0](#ref0)] have experienced opinions to the contrary and you have to jump through the hoops of Concenus Driven Development [[1](#ref1)].
 
-## Removing fine control
+### Removing fine control
 
 It must be accepted that, to a certain extent whatever CSS is generated is out of your control. This can cause performance problems [[2](#ref2)]. Also source file size can be deceiving [[3](#ref3)] in that the generated file is much bigger than the source file that developers work with all day. If control is taken back, duplication is likely avoided and performance doesn't become a problem.
 
-## Adhering to agreed conventions
+### Adhering to agreed conventions
 
 For example, I have worked in teams that agreed it was far better to place media queries immediately next to the same rule [[?](look up mcdonald name for this)] so that you can see all the styling that related to the same selector. Due to the nesting (one of the good things about CSS preprocessors), you get this side effect where you can't do this. This makes it harder to maintain.
 
-## Onboarding and recruitment
+### Onboarding and recruitment
 
 Whilst it's not a steep learning curve, it's still something you might want to consider. Onboarding for candidates that don't have knowledge of CSS preprocessors or the workflows around them, might be hindered. The recruitment net might be a little smaller for it too. It is minor, but AISB still worthy of consideration.
 
-## Maintainence issues
+### Maintainence issues
 
 Taking an example I have seen recently, sprinkling a variable `@brandRed`, instead of `#ff0000` all over various CSS files is not really advantageous. If the colour changes to something that isn't a red then you have to do a search and replace anyway, and quite honestly how difficult is that, but there are better ways anyway...
 
-## But what about variables?
+## But what about variables, mixins, and nesting?
+
+### Variables
 
 Variables can be achieved by using comma-delimited CSS selectors, as follows:
 
@@ -52,7 +56,7 @@ Variables can be achieved by using comma-delimited CSS selectors, as follows:
 		color: red;
 	}
 
-## But what about mixins?
+### Mixins
 
 Just like variables, mixins can be achieved by using comma-delimited CSS selectors, as follows:
 
@@ -62,7 +66,7 @@ Just like variables, mixins can be achieved by using comma-delimited CSS selecto
 		-webkit-border-radius: 3px;
 	}
 
-## But what about nesting?
+### Nesting
 
 This can't be achieved as such, but prefixing your selectors with a common ancestor selector is a satisfactory solution to modularising with a little bit of duplication as follows:
 
