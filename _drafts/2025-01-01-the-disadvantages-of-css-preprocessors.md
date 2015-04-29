@@ -5,25 +5,25 @@ date:   2015-01-01 09:00:01
 categories: css
 ---
 
-CSS preprocessors are meant to make improve CSS development. However, there are many disadvantages to using CSS preprocessors, some of which actually hinder CSS development. This article discusses those disadvantages and suggests ways in which to survive, or should I say thrive without a CSS preprocessor.
+CSS preprocessors are meant to improve CSS development. However, there are many disadvantages to using CSS preprocessors, some of which actually hinder CSS development. This article discusses those disadvantages and suggests ways in which to survive, or should I say thrive without a CSS preprocessor.
 
 ## Issues
 
 ### Debugging
 
-Due to the necessary compilation step, source files aren't interpreted directly by the browser, which causes a significant cognitive burden when trying to debug styling. One option is to use source maps but that requires effort to setup and they only work in a limited set of "modern" browsers. Developers who care about the users typically test in "older" browsers. The second option is to hunt down portions of style rules and selectors which is certainly *not* fun. As *debugging is twice as hard as programming*, this is for me a deal breaker. If this isn't enough to convince you please read on.
+Due to the necessary compilation step, source files aren't interpreted directly by the browser, which causes a significant cognitive burden when trying to debug styling. One option is to use source maps but that requires effort to setup and they only work in a limited set of "modern" browsers. Developers who care about the users typically test in "older" browsers. The second option is to hunt down portions of style rules and selectors which is certainly *not* fun. As *debugging is twice as hard as programming*, this is a deal breaker for me. If this isn't enough to convince you please read on.
 
 ### More tooling
 
-Extra tooling is required, which might be made up of command line tools, standalone programs or plugins for particular IDEs. Developers shouldn't be limited in their choice of development environment or IDE, and with more moving parts, there is a greater risk for problems. Every tool added is something that needs setting up, working with and around, upgrading, maintaining, monitoring etc. This increases the chance of issues. Instead of developing your fixing tooling.
+Extra tooling is required, which might be made up of command line tools, standalone programs or plugins. Developers shouldn't be *too* limited in their choice of development setups and with every tool added, there is something that needs setting up, working with, upgrading, maintaining and monitoring; this increases the chance of issues that need attention.
 
 ### Even more tooling
 
-CSS linters and text editor highlighting (command line or plugins) are commonly available. CSS preprocessors are not *as* readily available. When they are, they need setting up and, depending on the tech stack, this can take some time to do and potentially this has to be multiplied out to the rest of the development team. Consider that your favourite editor may not have it.
+CSS linters and text editor highlighting (CLI or plugins) are commonly available. CSS preprocessors are not *as* readily available. Best case scenario is they are available, and in this case they need setting up and hopefully the rules can be shared acrossed different developers setups. Worst case scenario is your favourite editor doesn't have the tooling you require.
 
 ### Compilation time.
 
-I have experienced and heard many [?] stories [?], with regards to compilation. Compilation times can be quick but they can also be very slow. And it's easy to make them slow. CLI tends to be faster but it can still take plenty of time. And even when considered *quick enough* I have found myself *saving* and *refreshing* before compilation time finishes. Even on a well architected project on the latest Macbook Pro with a Solid State harddrive. Your mileage may vary.
+I have experienced and heard many [?] stories [?] with regards to compilation. Compilation times can be quick but they can also be very slow. And it's easy to make them slow. CLI tends to be faster but still not fast enough - I have found myself *saving* and *refreshing* before compilation time finishes. Even on a well architected project on the latest Macbook Pro with a Solid State harddrive. Your mileage may vary.
 
 ### Saving generated files or not
 
