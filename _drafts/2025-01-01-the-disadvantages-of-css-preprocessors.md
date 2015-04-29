@@ -5,41 +5,41 @@ date:   2015-01-01 09:00:01
 categories: css
 ---
 
-There are many things Frontend developers do that I don't advise, and yet, whilst I don't think much of CSS preprocessors there are many worse things you can do. Regardless, there *are* disadvantages to using CSS preprocessors; disadvantages that actually reduce speed of development and maintainability, which are meant to be the advantages of using such tools.
+CSS preprocessors are meant to make improve CSS development. However, there are many disadvantages to using CSS preprocessors, some of which actually hinder CSS development. This article discusses those disadvantages and suggests ways in which to survive, or should I say thrive without a CSS preprocessor.
 
 ## Issues
 
 ### Debugging
 
-As source files aren't interpreted by the browser there is a significant cognitive burden when debugging. Without a CSS preprocessor the line number in the console relates to the line number in the source file. However, this is *not* the case with CSS preprocessors. One option is to use source maps but these need effort to set them up and only work in a limited set of modern browsers. Obviously, developers who care for their end users tend to test in less modern browsers. The second option is to act like Sherlock Holmes and start hunting down portions of style rules and selectors - *not* fun. As *debugging is twice as hard as programming*, this is most certainly a deal breaker. If this isn't enough to convince you please read on.
+Due to the necessary compilation step, source files aren't interpreted directly by the browser, which causes a significant cognitive burden when trying to debug styling. One option is to use source maps but that requires effort to setup and they only work in a limited set of "modern" browsers. Developers who care about the users typically test in "older" browsers. The second option is to hunt down portions of style rules and selectors which is certainly *not* fun. As *debugging is twice as hard as programming*, this is for me a deal breaker. If this isn't enough to convince you please read on.
 
 ### More tooling
 
-Extra software is needed, which can be a mix of command line tools, standalone programs or plugins for particular IDEs. Developers shouldn't be limited in their choice of development environment or IDE, and with more moving parts, there is greater risk for problems. Every tool added is something that needs setting up, working with, working around, upgrading, maintaining, monitoring and ultimately relying on, which of course, has a good opportunity of slowing down development.
+Extra tooling is required, which might be made up of command line tools, standalone programs or plugins for particular IDEs. Developers shouldn't be limited in their choice of development environment or IDE, and with more moving parts, there is a greater risk for problems. Every tool added is something that needs setting up, working with and around, upgrading, maintaining, monitoring etc. This increases the chance of issues. Instead of developing your fixing tooling.
 
 ### Even more tooling
 
-CSS linters and text editor highlighting (command line or plugins) are commonly available. CSS preprocessors are not so readily available. When they are, they need setting up and, depending on the tech stack, this can really take some time and potentially this has to be multiplied out to the rest of the development team. Your favourite editor may not have it.
+CSS linters and text editor highlighting (command line or plugins) are commonly available. CSS preprocessors are not *as* readily available. When they are, they need setting up and, depending on the tech stack, this can take some time to do and potentially this has to be multiplied out to the rest of the development team. Consider that your favourite editor may not have it.
 
 ### Compilation time.
 
-I have experienced and heard many [?] stories [?], with regards to compilation. Compilation times can be quick but they can also be very slow. And it's easy to make them slow. CLI tends to be faster but it can still take plenty of time. And even when considered *quick enough* I have found myself *saving* and *refreshing* before compilation time finishes. YMMV.
+I have experienced and heard many [?] stories [?], with regards to compilation. Compilation times can be quick but they can also be very slow. And it's easy to make them slow. CLI tends to be faster but it can still take plenty of time. And even when considered *quick enough* I have found myself *saving* and *refreshing* before compilation time finishes. Even on a well architected project on the latest Macbook Pro with a Solid State harddrive. Your mileage may vary.
 
-### Question of saving generated files
+### Saving generated files or not
 
 Whilst I am firmly in the camp that you *shouldn't* save generated files to source control, I (and I am not the only one to) have experienced opinions to the contrary [[0](#ref0)] and you have to jump through the hoops of Concenus Driven Development [[1](#ref1)].
 
 ### Removing fine control
 
-It must be accepted that to a certain extent, the *generated* CSS is out of your control. This can cause performance problems [[2](#ref2)]. Also source file size can be deceiving [[3](#ref3)] in that the generated file could be significantly larger than the source file that developers work with all day. If control is taken back, duplication is likely avoided and performance doesn't become a problem.
+The *generated* CSS is out of your control. This can cause performance problems [[2](#ref2)]. Also source file size can be deceiving [[3](#ref3)] in that the generated file could be significantly larger than the source file. If control is taken back, duplication is likely avoided and performance doesn't become a problem.
 
 ### Onboarding and recruitment
 
-Whilst it's not a steep learning curve, it's still something you might want to consider. Onboarding for candidates that don't have knowledge of CSS preprocessors or the workflows around them, might be hindered. The recruitment net might be a little smaller for it too. It is minor, but AISB still worthy of consideration.
+Whilst it's not a steep learning curve, it's still something you might want to consider. Onboarding for candidates that don't have knowledge of CSS preprocessors (or the workflows around them) might be hindered. The recruitment net might be a little smaller for it too. It is minor, but as I said before it is still worthy of consideration.
 
 ### Maintainence issues
 
-Taking an example I have seen recently, sprinkling a variable `@brandRed`, instead of `#ff0000` all over various CSS files is not really advantageous. If the colour changes to something that isn't a red then you have to do a search and replace anyway, and quite honestly how difficult is that, but there are better ways anyway...
+Taking an example I have seen recently, sprinkling a variable `@brandRed` instead of `#ff0000` across various CSS files is not really advantageous. If the colour changes to something that isn't a red then you have to do a search and replace anyway, and quite honestly how difficult is that? Regardless, there are alternative ways baked into CSS.
 
 ## But what about variables, mixins, and nesting?
 
@@ -74,7 +74,7 @@ This can't be achieved as such, but prefixing your selectors with a common ances
 
 ## Summary
 
-Even though CSS doesn't provide some of the features of CSS preprocessors, for me and many others, the disadvantages *seriously* outweigh the advantages. As I said previously, *debugging is twice as hard as programming*, and it's our duty to ensure this is as easy as possible. Keep things simple.
+Even though CSS doesn't provide some of the features of CSS preprocessors, for many developers, the disadvantages *seriously* outweigh the advantages. As I said previously, *debugging is twice as hard as programming*, and it's our duty to ensure this is as easy as possible. It is advisable to keep things simple and be concious of the decision being made beyond just using the most popular technology of the moment.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
