@@ -15,15 +15,15 @@ Due to having a compilation step, source files aren't interpreted directly by th
 
 ### More tooling
 
-Extra tooling is required, which might be made up of CLI, GUI or plugins. Developers shouldn't be *too* limited in their choice of development setups and with every tool added, there is something that needs setting up, working with, upgrading, maintaining and monitoring; this increases the chance of issues that need attention.
+Extra tooling (CLI, GUI, plugins) is required. Developers shouldn't be *too* constrained in their choice of development setups and with every tool added, there is something that needs setting up, working with, upgrading and maintaining - this increases the chance of issues that need attention.
 
 ### Even more tooling
 
-CSS linters and text editor highlighting (CLI or plugins) are commonly available. CSS preprocessors are not *as* readily available. Best case scenario is they are available, and in this case they need setting up and hopefully the rules can be shared acrossed different developers setups. Worst case scenario is your favourite editor doesn't have the tooling you require.
+CSS linters and text editor highlighting (CLI or plugins) are commonly available. CSS preprocessors are not *as* readily available. The best case scenario is they are available, and in this case they need setting up and hopefully the rules can be shared acrossed different developers setups. Worst case scenario is your favourite editor doesn't have the tooling you require.
 
 ### Compilation time.
 
-I have experienced and heard many [?] stories [?] with regards to compilation. Compilation times can be quick but they can also be very slow. And it's easy to make them slow. CLI tends to be faster but still not fast enough - I have found myself *saving* and *refreshing* before compilation time finishes. Even on a well architected project on the latest Macbook Pro with a Solid State harddrive. Your mileage may vary.
+I have experienced and heard many [?] stories [?] with regards to compilation. Compilation times can be quick but they can also be *very* slow. And it's easy to make them slow. CLI tends to be faster but still not fast enough; I have frequently found myself *saving* and *refreshing* before compilation time finishes; even on a well architected project, using the latest Macbook Pro, with a Solid State HD. Your mileage may vary.
 
 ### Saving generated files or not
 
@@ -31,15 +31,15 @@ Whilst I am firmly in the camp that you *shouldn't* save generated files to sour
 
 ### Removing fine control
 
-The *generated* CSS is out of your control. This can cause performance problems [[2](#ref2)]. Also source file size can be deceiving [[3](#ref3)] in that the generated file could be significantly larger than the source file. If control is taken back, duplication is likely avoided and performance doesn't become a problem.
+The *generated* CSS is out of your control. This can cause performance problems [[2](#ref2)]. Also source file size can be deceiving [[3](#ref3)] in that the generated CSS could be significantly larger than the source file. If control is taken back, duplication is likely avoided and performance doesn't become a problem.
 
 ### Onboarding and recruitment
 
-Whilst it's not a steep learning curve, it's still something you might want to consider. Onboarding for candidates that don't have knowledge of CSS preprocessors (or the workflows around them) might be hindered. The recruitment net might be a little smaller for it too. It is minor, but as I said before it is still worthy of consideration.
+Onboarding for candidates that don't have knowledge of CSS preprocessors (or the workflows around them) might be slowed down and the recruitment net might be a little smaller for it too. Whilst it's not a steep learning curve, it's still something you might want to consider.
 
 ### Maintainence issues
 
-Taking an example I have seen recently, sprinkling a variable `@brandRed` instead of `#ff0000` across various CSS files is not really advantageous. If the colour changes to something that isn't a red then you have to do a search and replace anyway, and quite honestly how difficult is that? Regardless, there are alternative ways baked into CSS.
+As an example, I have seen `@brandRed` (instead of `#ff0000`) sprinkled across various CSS files which isn't really advantageous. If the colour changes to something that isn't a red, then you have to do a search and replace anyway, and search and replace isn't exactly difficult. Regardless, there are alternative ways baked right into CSS.
 
 ## But what about variables, mixins, and nesting?
 
