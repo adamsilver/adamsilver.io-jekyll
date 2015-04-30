@@ -5,17 +5,17 @@ date:   2015-01-01 09:00:01
 categories: css
 ---
 
-CSS preprocessors are meant to improve CSS development. However, there are many disadvantages to using CSS preprocessors, some of which actually hinder CSS development. This article discusses those disadvantages and suggests ways in which to survive, or should I say thrive without a CSS preprocessor.
+CSS preprocessors are meant to help the development of CSS. However, there are many disadvantages to using CSS preprocessors, some of which actually hinder CSS development. In this article, I talk about the disadavantages and suggest ways in which to survive (or should I say?) thrive without a CSS preprocessor.
 
 ## Issues
 
 ### Debugging
 
-Due to the necessary compilation step, source files aren't interpreted directly by the browser, which causes a significant cognitive burden when trying to debug styling. One option is to use source maps but that requires effort to setup and they only work in a limited set of "modern" browsers. Developers who care about the users typically test in "older" browsers. The second option is to hunt down portions of style rules and selectors which is certainly *not* fun. As *debugging is twice as hard as programming*, this is a deal breaker for me. If this isn't enough to convince you please read on.
+Due to having a compilation step, source files aren't interpreted directly by the browser, which causes a significant cognitive burden when trying to debug styling. One option is to use source maps but that requires effort to setup and they only work in a limited set of "modern" browsers. Developers who care about users typically test in "older" browsers. The second option is to hunt down portions of style rules and selectors which is certainly *not* fun. As *debugging is twice as hard as programming*, this is a deal breaker for me. If this isn't enough to convince you please read on.
 
 ### More tooling
 
-Extra tooling is required, which might be made up of command line tools, standalone programs or plugins. Developers shouldn't be *too* limited in their choice of development setups and with every tool added, there is something that needs setting up, working with, upgrading, maintaining and monitoring; this increases the chance of issues that need attention.
+Extra tooling is required, which might be made up of CLI, GUI or plugins. Developers shouldn't be *too* limited in their choice of development setups and with every tool added, there is something that needs setting up, working with, upgrading, maintaining and monitoring; this increases the chance of issues that need attention.
 
 ### Even more tooling
 
