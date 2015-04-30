@@ -5,13 +5,13 @@ date:   2015-01-01 09:00:01
 categories: css
 ---
 
-CSS preprocessors are meant to help the development of CSS. However, there are many disadvantages to using CSS preprocessors causing development issues. In this article, I talk about the issues and suggest ways in which to survive (or should I say thrive?) without a CSS preprocessor.
+CSS preprocessors are meant to help the development of CSS. However, there are many disadvantages when using CSS preprocessors. In this article, I talk about the issues and suggest ways in which to survive (or should I say thrive?) without a CSS preprocessor.
 
 ## Issues
 
 ### Debugging
 
-Due to having a compilation step, source files aren't interpreted directly by the browser, which causes significant cognitive burden when trying to debug. One solution is to use source maps but this requires setup and this only works in a limited set of *modern* browsers. Developers who care about users also test in *older* browsers. The second "solution" is to hunt down styles, perhaps by searching codebases for certain abstracts of rules/selectors; this is certainly not fun or easy. As *debugging is twice as hard as programming*, this is a deal breaker for me and, if at this point *you* aren't convinced, then please read on.
+Due to having a compilation step, source files aren't interpreted directly by the browser, which causes significant cognitive burden when trying to debug. One solution is to use source maps [[0](#ref0)] but this requires setup and this only works in a limited set of *modern* browsers. Developers who care about users also test in *older* browsers. The second "solution" is to hunt down styles, perhaps by searching for abstract portions of rules; this is certainly not fun or easy. As *debugging is twice as hard as programming*, this is a deal breaker for me and, if at this point *you* aren't convinced, then please read on.
 
 ### Tooling
 
@@ -27,11 +27,11 @@ Compilation times can be quick but they can also be *very* slow. CLI tends to be
 
 ### Saving generated files or not
 
-Whilst I am firmly believe that you *shouldn't* save generated files to source control, I (and I am not the only one to) have experienced opinions to the contrary [[0](#ref0)] and in this case Concenus Driven Development [[1](#ref1)] crops up.
+Whilst I am firmly believe that you *shouldn't* save generated files to source control, I (and I am not the only one to) have experienced opinions to the contrary [[1](#ref1)] and in this case Concenus Driven Development [[2](#ref2)] crops up.
 
 ### Removing control
 
-The *generated* CSS is out of your control. This can cause performance problems [[2](#ref2)]. Also source file size can be deceiving [[3](#ref3)] because the generated CSS is likely significantly larger than the source file, potentially causing performance problems.
+The *generated* CSS is out of your control. This can cause performance problems [[3](#ref3)]. Also source file size can be deceiving [[4](#ref4)] because the generated CSS is likely significantly larger than the source file, potentially causing performance problems.
 
 ### Onboarding and recruitment
 
@@ -74,15 +74,17 @@ Whilst not as DRY as I would like, prefixing your selectors with a common ancest
 
 ## Summary
 
-For many developers, including myself, the disadvantages of CSS preprocessors outweigh the advantages by quite a distance. The disadvantages are all self-induced issues due to choosing a technology which makes some things harder. There are also simple solutions to problems using regular CSS. It's worth noting for the second time that *debugging is twice as hard as programming*, and it's our duty to ensure this is as easy as possible. Keep things simple and be concious of any decisions that have a long term impact.
+For many developers, including myself, the disadvantages of CSS preprocessors outweigh the advantages by quite a distance. Remember that these disavantages are self-induced due to the choice of using such technologies. As described there *are* simple solutions to CSS reuse and modularisation. It's worth noting for the second time that *debugging is twice as hard as programming*, and it's our duty to ensure this is as easy as possible. Keep things simple and be concious of any decisions that have potential to cause development pain.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
-	<dd><a href="http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo">Generated files and version control</a></dd>
+	<dd><a href="http://thesassway.com/intermediate/using-source-maps-with-sass">Source Maps with SASS</a></dd>
 	<dt class="citation" id="ref1">[1]</dt>
-	<dd><a href="http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/">Consencus Driven Development</a></dd>
+	<dd><a href="http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo">Generated files and version control</a></dd>
 	<dt class="citation" id="ref2">[2]</dt>
-	<dd><a href="http://blog.millermedeiros.com/the-problem-with-css-pre-processors/">The problem with CSS preprocessors</a></dd>
+	<dd><a href="http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/">Consencus Driven Development</a></dd>
 	<dt class="citation" id="ref3">[3]</dt>
+	<dd><a href="http://blog.millermedeiros.com/the-problem-with-css-pre-processors/">The problem with CSS preprocessors</a></dd>
+	<dt class="citation" id="ref4">[4]</dt>
 	<dd><a href="http://jaketrent.com/post/cons-css-preprocessors/">File size deceiving (CSS Preprocessors)</a></dd>
 </dl>
