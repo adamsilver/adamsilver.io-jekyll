@@ -5,7 +5,7 @@ date:   2015-01-01 09:00:01
 categories: css
 ---
 
-CSS preprocessors are meant to help the development of CSS. However, there are many disadvantages when using CSS preprocessors. In this article, I talk about the issues and suggest ways in which to survive (or should I say thrive?) without a CSS preprocessor.
+CSS preprocessors add missing features to standard CSS which in theory aid in the development of CSS. However, there are several disadvantages to CSS preprocessors. In this article, I discuss these issues and suggest ways in which to survive (or should I say thrive?) without a CSS preprocessor.
 
 ## Issues
 
