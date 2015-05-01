@@ -21,21 +21,21 @@ Extra tooling (CLI, GUI, plugins) is required. Developers shouldn't be *too* con
 
 CSS linters and text editor highlighting (CLI or plugins) are commonly available. CSS preprocessors are not *as* readily available. If they *are* available, they need setting up (and and hopefully the linting rules can be shared across the team efficiently). If they aren't available then I don't know - find another editor, forget about linting, enjoy pain.
 
-### Compilation time.
+### Compilation time
 
 Compilation times can be quick but they can also be *very* slow. CLI tends to be faster but still not fast enough; I have frequently found myself *saving* and *refreshing* before compilation time finishes; even on a well architected project, using the latest Macbook Pro, with a Solid State HD. I am not the only one but *your* mileage may vary.
 
 ### Saving generated files or not
 
-Whilst I am firmly believe that you *shouldn't* save generated files to source control, I (and I am not the only one to) have experienced opinions to the contrary [[1](#ref1)] and in this case Concenus Driven Development [[2](#ref2)] crops up.
+Whilst I firmly believe that you *shouldn't* save generated files to source control, I (and I am not the only one to) have experienced opinions to the contrary [[1](#ref1)] and in this case Concenus Driven Development [[2](#ref2)] crops up.
 
 ### Removing control
 
-The *generated* CSS is out of your control. This can cause performance problems [[3](#ref3)]. Also source file size can be deceiving [[4](#ref4)] because the generated CSS is likely significantly larger than the source file, potentially causing performance problems.
+The *generated* CSS is out of your control. This can cause performance problems [[3](#ref3)]. Also, source file size can be deceiving [[4](#ref4)] because the generated CSS is likely significantly larger than the source file, potentially causing performance problems.
 
 ### Onboarding and recruitment
 
-Onboarding for candidates that don't have knowledge of CSS preprocessors (or the workflows around them) becomes more costly and the size of the recruitment netis reduced. Whilst it's not a steep learning curve, it's still something you might want to consider.
+Candidates that *don't* have knowledge of CSS preprocessors (or the workflows around them) become more costly and the size of the recruitment net is reduced. Whilst it's not a steep learning curve, it's still something you might want to consider.
 
 ### Maintainence issues
 
@@ -74,7 +74,7 @@ Whilst not as DRY as I would like, prefixing your selectors with a common ancest
 
 ## Summary
 
-For many developers, including myself, the disadvantages of CSS preprocessors outweigh the advantages by quite a distance. Remember that these disavantages are self-induced due to the choice of using such technologies. As described there *are* simple solutions to CSS reuse and modularisation. It's worth noting for the second time that *debugging is twice as hard as programming*, and it's our duty to ensure this is as easy as possible. Keep things simple and be concious of any decisions that have potential to cause development pain.
+CSS preprocessors clearly have several issue, some of which there are solutions to. For me and many other developers the disadvantages outweigh the advantages, especially given the alternative solutions found in regulard CSS. It's worth noting, for the second time that *debugging is twice as hard as programming*, and it's our duty to ensure this is as easy as possible. Keeping things simple is advisable and it is important to understand the impact of using a CSS preprocessor so that your team can make a concious decision as to whether to use one or not..
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
