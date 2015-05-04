@@ -119,6 +119,14 @@ h3 {
     color: #2c3e50;
 }
 
+h4 {
+	font-size: 1em;
+	margin-top: 1em;
+    font-family: 'droid sans';
+	margin-bottom: 0.5em;
+    color: #2c3e50;
+}
+
 p {
     font-size: 1em;
 	margin-bottom: 1.5em;
