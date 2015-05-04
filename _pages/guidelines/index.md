@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Code guidelines
+title: Frontend code guidelines
 id: guides
-permalink: /code-guidelines/
+permalink: /frontend-code-guidelines/
 ---
 
 # {{page.title}}
