@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The disadvantages of CSS preprocessors"
-date:   2015-01-01 09:00:01
+date:   2025-01-01 09:00:01
 categories: css
 ---
 
@@ -80,7 +80,7 @@ CSS preprocessors clearly have issues, some of which there *are* solutions to. F
 	<dt class="citation" id="ref0">[0]</dt>
 	<dd><a href="http://thesassway.com/intermediate/using-source-maps-with-sass">SASS Source Maps</a></dd>
 	<dt class="citation" id="ref1">[1]</dt>
-	<dd><a href="http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo">Stackoverflow question about CSS Preprocessors, generated files and version control</a></dd>
+	<dd><a href="http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo">Should generated CSS be included in source control?</a></dd>
 	<dt class="citation" id="ref2">[2]</dt>
 	<dd><a href="http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/">Consencus Driven Development</a></dd>
 	<dt class="citation" id="ref3">[3]</dt>
