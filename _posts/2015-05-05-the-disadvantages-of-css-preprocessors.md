@@ -5,13 +5,13 @@ date:   2015-05-05 09:00:01
 categories: css
 ---
 
-CSS preprocessors add missing features to CSS, which in theory help  the development of CSS. However, using a CSS processor has several issues. In this article, I discuss these issues and suggest ways in which to survive (or should I say thrive?) without a CSS preprocessor.
+CSS preprocessors are meant to help the development of CSS. However, using a CSS processor has several disadvantages, and I discuss them in this article, and I also suggest ways in which to survive (or should I say thrive?) without a CSS preprocessor.
 
 ## Issues
 
 ### Debugging
 
-Due to having a compilation step, the browser is not interpreting the source files meaning the CSS line numbers are now irrelevant, when trying to debug. This makes debugging a lot harder. Source maps [[0](#ref0)] is one solution but this requires setup and only works in a limited set of *modern* browsers. Developers who care about users also test in *older* browsers. Alternatively, you can hunt down styles via abstract portions of rules. Plain CSS doesn't have this problem.
+Due to having a compilation step, the browser is not interpreting the source files, meaning the CSS line numbers are now irrelevant when trying to debug. This makes debugging a lot harder. Source maps [[0](#ref0)] provide one solution but this requires setup and only works in a limited set of *modern* browsers. Developers who care about users also test in *older* browsers. Alternatively, you can hunt down styles via abstract portions of rules, which is horrid. Brian Kernighan said "debugging is twice as hard as programming" and it's our duty to ensure this is as easy as possible.
 
 ### Tooling
 
@@ -52,6 +52,8 @@ Variables can be achieved by using comma-delimited CSS selectors, as follows:
 		color: red;
 	}
 
+Note: you can't share the same colour for background-color and other CSS property names.
+
 ### Mixins
 
 Just like variables, mixins can be achieved by using comma-delimited CSS selectors, as follows:
@@ -74,7 +76,7 @@ Whilst not as DRY as I would like, prefixing your selectors with a common ancest
 
 ## Summary
 
-CSS preprocessors clearly have issues, some of which there *are* solutions to. For me and many other developers the disadvantages are overpowering, especially given the alternative solutions found in plain CSS. It's worth noting that *debugging is twice as hard as programming* and it's our duty to ensure this is as easy as possible. Keeping things simple is advisable and it is important to understand the impact of using a CSS preprocessor so that your team can make a concious decision as to whether to use one or not.
+CSS preprocessors clearly have issues, some of which there *are* solutions to. For me and many other developers, the disadvantages are overwhelming and cause too much friction in comparison to using plain CSS. At the very least be concious of the decision to use a CSS preprocessor and the impact that might have on the team.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
