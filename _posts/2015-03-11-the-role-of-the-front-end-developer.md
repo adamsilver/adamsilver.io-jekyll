@@ -13,14 +13,14 @@ Everyone is responsible for UX [[0](#ref0)] and Frontend Developers play an esse
 
 ## Frontend architecture
 
-An *experienced* Frontend developer should be able to design a suitable front-end architecture which includes the consideration of the following:
+An *experienced* Frontend developer should be able to design a suitable frontend architecture which includes the consideration of the following:
 
 * Design patterns
 * Architectural patterns
 * Bootstrapping strategies
 * Bundling and compression
 * Modularity and semantics
-* Technical contracts between back-end and front-end. Namely view models and XmlHttpRequest end-points
+* Technical contracts between backend and frontend. Namely view models and XmlHttpRequest end-points
 * Code style and convention
 * Testing and automation
 
@@ -30,7 +30,7 @@ The beauty of the web is one of reach; deploy once and access everywhere; there 
 
 ## Frontend feature writing
 
-Given a well defined and suitable front-end architecture, adding new features and updating existing features will include the writing of HTML, CSS and Javscript. This should include writing unit tests and (at least helping to write) automated functional tests.
+Given a well defined and suitable frontend architecture, adding new features and updating existing features will include the writing of HTML, CSS and Javscript. This should include writing unit tests and (at least helping to write) automated functional tests.
 
 ## Search Engine Optimisation
 
