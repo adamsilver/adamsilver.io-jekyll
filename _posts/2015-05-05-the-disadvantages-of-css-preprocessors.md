@@ -23,15 +23,15 @@ CSS linters and text editor highlighting (CLI or plugins) are commonly available
 
 ### Compilation time
 
-Compilation times can be quick but they can also be *very* slow. CLI tends to be faster but still not fast *enough*; I have frequently found myself *saving* and *refreshing* before compilation time finishes; even on a well architected project, using the latest Macbook Pro, with a Solid State HD. I am not the only one but *your* mileage may vary.
+Compilation can be quick but it can also be slow, *very* slow. I have frequently found myself *saving* and *refreshing* before compilation time finishes; even using CLI tooling on the latest Macbook Pro, with a Solid State HD. And I am not the only one but *your* mileage may vary.
 
 ### Saving generated files or not
 
 Whilst I firmly believe that you *shouldn't* save generated files to source control, I (and I am not the only one to) have experienced opinions to the contrary [[1](#ref1)] and in this case prepare for  Concenus Driven Development [[2](#ref2)].
 
-### Performance out of your control
+### Performance
 
-The *generated* CSS is out of your control which can cause performance problems [[3](#ref3)]. Also, source file size can be deceiving [[4](#ref4)] because the generated CSS is likely to be significantly larger than the source file, potentially causing performance problems.
+Source file size can be deceiving [[3](#ref3)] because the generated CSS is likely to be significantly larger than the source file, potentially causing performance problems [[4](#ref4)]. Ultimately, what is generated is out of your control and trust is handed over to your chosen CSS preprocessor.
 
 ### Onboarding and recruitment
 
@@ -86,7 +86,7 @@ CSS preprocessors clearly have issues, some of which there *are* solutions to. F
 	<dt class="citation" id="ref2">[2]</dt>
 	<dd><a href="http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/">Consencus Driven Development</a></dd>
 	<dt class="citation" id="ref3">[3]</dt>
-	<dd><a href="http://blog.millermedeiros.com/the-problem-with-css-pre-processors/">The problem with CSS preprocessors (Dumb code duplication is dumb)</a></dd>
-	<dt class="citation" id="ref4">[4]</dt>
 	<dd><a href="http://jaketrent.com/post/cons-css-preprocessors/">Cons of a CSS Preprocessor (File size deceiving)</a></dd>
+	<dt class="citation" id="ref4">[4]</dt>
+	<dd><a href="http://blog.millermedeiros.com/the-problem-with-css-pre-processors/">The problem with CSS preprocessors (Dumb code duplication is dumb)</a></dd>
 </dl>
