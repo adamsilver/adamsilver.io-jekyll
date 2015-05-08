@@ -3,7 +3,7 @@ layout: default
 id: home
 ---
 
-# Hello! My name is Adam Silver and I am a Front end developer, based in London.
+# Hello! My name is Adam Silver and I am a Front-end Developer, based in London.
 
 I am an *experienced* Agile front end web developer. What differentiates me, is that I write [test-driven](http://en.wikipedia.org/wiki/Test-driven_development), high quality and *reliable*, [object-oriented](http://en.wikipedia.org/wiki/Object-oriented_programming) Javascript.
 
