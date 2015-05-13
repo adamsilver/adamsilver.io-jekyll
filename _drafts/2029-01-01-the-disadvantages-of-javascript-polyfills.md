@@ -5,17 +5,20 @@ date:   2026-01-01 09:00:01
 categories: js
 ---
 
-A polyfill is, and I quote, "a piece code that provides the technology that you expect the browser to provide natively. Flattening the API landscape if you will". Whilst this *sounds* great it has its disadvantages which are best summarised by David Mark as follows:
+A polyfill, can be described as follows:
 
-> Use wrappers. Do *not* augment host objects. You don't own them and
-you certainly don't want to try to implement 100% of the standard
-functionality (just implement what you need). Besides host objects are allowed to throw exceptions just for *reading* their properties (and some do just that in IE).
+> "A polyfill, or polyfiller, is a piece of code (or plugin) that provides the technology that you, the developer, expect the browser to provide natively. Flattening the API landscape if you will."
 
-So let's pick this apart in order to understand what David is rightly saying.
+Whilst this *sounds* great it has its disadvantages which are best summarised by David Mark as follows:
 
-## Do not agument host objects
+> "Use wrappers. Do *not* augment host objects. You don't own them and you certainly don't want to try to implement 100% of the standard
+functionality (just implement what you need). Besides host objects are allowed to throw exceptions just for *reading* their properties (and some do just that in IE)."
 
-* Talk about why not. Point to Kangax article
+So let's break down what David is correctly saying.
+
+## Do not augment Host objects (and Native objects)
+
+It's been known for a *very* long time that messing with Host objects [[0](#ref0)] and to a slightly lesser extent Native objects [[1](#ref1)] is an ill-advised technique prone to error. Polyfills rely on this technique and so by their very nature they are error prone and problematic.
 
 ## Implementing entire functionality
 
@@ -29,5 +32,7 @@ So let's pick this apart in order to understand what David is rightly saying.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
-	<dd><a href="https://sites.google.com/site/adoromedia/javascript/polyfills">TBD</a></dd>
+	<dd><a href="http://perfectionkills.com/whats-wrong-with-extending-the-dom/">What's wrong with extending the DOM?</a></dd>
+	<dt class="citation" id="ref1">[1]</dt>
+	<dd><a href="http://perfectionkills.com/extending-native-builtins/">Extending native built-ins</a></dd>
 </dl>
