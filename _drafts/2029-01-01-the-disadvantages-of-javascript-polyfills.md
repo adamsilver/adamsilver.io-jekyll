@@ -9,7 +9,7 @@ A polyfill, can be described as follows:
 
 > "A polyfill, or polyfiller, is a piece of code (or plugin) that provides the technology that you, the developer, expect the browser to provide natively. Flattening the API landscape if you will."
 
-Whilst this *sounds* great it has its disadvantages which are best summarised by David Mark as follows:
+This sounds like a great idea because it means developers can assume that the the API is there and ready to use no matter the browser. However, this can be very problematic which David Mark summaries:
 
 > "Use wrappers. Do *not* augment host objects. You don't own them and you certainly don't want to try to implement 100% of the standard
 functionality (just implement what you need). Besides host objects are allowed to throw exceptions just for *reading* their properties (and some do just that in IE)."
