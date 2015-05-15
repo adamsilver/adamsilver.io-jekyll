@@ -31,7 +31,7 @@ Whilst I firmly believe that you *shouldn't* save generated files to source cont
 
 ### Performance
 
-Source file size can be deceiving [[3](#ref3)] because the generated CSS is likely to be significantly larger than the source file, potentially causing performance problems [[4](#ref4)]. Ultimately, what is generated is out of your control and trust is handed over to your chosen CSS preprocessor.
+Source file size can be deceiving [[3](#ref3)] because the generated CSS is likely to be significantly larger than the source file, potentially causing performance problems [[4](#ref4)]. Ultimately, what is generated is out of your control and *some* responsibility is handed over to your chosen CSS preprocessor.
 
 ### Onboarding and recruitment
 
