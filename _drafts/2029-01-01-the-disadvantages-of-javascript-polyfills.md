@@ -7,7 +7,7 @@ categories: js
 
 A polyfill, can be described as follows:
 
-> "A polyfill, or polyfiller, is a piece of code (or plugin) that provides the technology that you, the developer, expect the browser to provide natively. Flattening the API landscape if you will."
+> "A polyfill, [...] is a piece of code (or plugin) that provides the technology that you, the developer, expect the browser to provide natively. Flattening the API landscape [...]."
 
 This sounds like a great idea because it means developers can assume that the the API is there and ready to use no matter the browser. However, this can be very problematic which David Mark summaries:
 
@@ -22,7 +22,9 @@ It's been known for a *very* long time that messing with Host objects [[0](#ref0
 
 ## Implementing entire functionality
 
-* Implement entire standard, which is rarely needed, and requires larger effort and prone to error or impossible. Object.create anyone?
+When you chose the polyfill technique, you have painted yourself into a corner in having to recreate the entire standard. This has not only become a lot harder, but it's rarely needed.
+
+Easy for Array.prototype.map, not see easy for Object.create. Elaborate.
 
 * if you use the real object.create it does different things. i.e. the prototype object.
 

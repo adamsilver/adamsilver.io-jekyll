@@ -35,3 +35,5 @@ In summary, Outside-in Development promotes a different mindset in which to solv
 	<dt class="citation" id="ref2">[2]</dt>
 	<dd><a href="http://martinfowler.com/bliki/CQRS.html">CQRS</a></dd>
 </dl>
+
+https://lostechies.com/jimmybogard/2009/06/30/how-we-do-mvc-view-models/
