@@ -11,6 +11,24 @@ categories: ???
 
 I am big proponent of Outside-in Development [0] and when building a web application, the most outer edge starts with the View. Starting with the question of how we want View to look and behave, we can then construct the template and everything else that goes with it. However, many Front-end developers, including myself have had less than ideal experiences, having to work with overly complex templates, normally for very similar reasons. This article discusses the problems, why they are problems, and how to avoid those problems in the future.
 
+## Rule #1: Views are inextricably linked to View Models.
+
+* View Model is not some generic thing that can be used in multiple different views. You can have View Partials that have their own portion of a View Model.
+
+## Rule #2: The View dictates the design of the View Model
+
+* In close relation to role #1 the View Model is designed based on the design of the View and not the other way around.
+
+## Rule #3: The View Model contains only data and behavior related to the View
+
+* Formatting, concatenation etc
+
+## Rule #4: Condition View elements are determined based on presence
+
+* not on an ever present property value
+
+## Rule #5: Conditional View elements that are to be iterated should be a sub property
+
 As a Front-end developer, I am not too concerned about the finer details of those layers, so that complexity is abstracted away nicely, in what the industry calls a *View Model* - a Model that is appropriately designed to populate the View. I don't wish to have complex, business logic in my Views, which is why Logic-less templating has become popular, as an answer on Stackoverflow indicates [[0](#ref0)]:
 
 > In the old JSP days, it was very common to have JSP files sprinkled with Java code, which made refactoring much harder, since you had your code scattered.
