@@ -5,30 +5,30 @@ date:   2026-01-01 09:00:01
 categories: js
 ---
 
-A polyfill, can be described as follows:
+A polyfill can be described as follows:
 
 > "A polyfill, [...] is a piece of code (or plugin) that provides the technology that you, the developer, expect the browser to provide natively. Flattening the API landscape [...]."
 
-This sounds like a great idea because it means developers can assume that the the API is there and ready to use no matter the browser. However, this can be very problematic which David Mark summaries:
+This sounds like a great idea because it means developers can assume that the API is available to use for all browsers. However, this can be very problematic as David Mark states:
 
 > "Use wrappers. Do *not* augment host objects. You don't own them and you certainly don't want to try to implement 100% of the standard
 functionality (just implement what you need). Besides host objects are allowed to throw exceptions just for *reading* their properties (and some do just that in IE)."
 
 So let's break down what David is correctly saying.
 
-## Do not augment Host objects (and Native objects)
+## 1. Do not augment Host objects (and Native objects)
 
-It's been known for a *very* long time that messing with Host objects [[0](#ref0)] and to a slightly lesser extent Native objects [[1](#ref1)] is an ill-advised technique prone to error. Polyfills rely on this technique and so by their very nature they are error prone and problematic.
+It's well known that messing with Host objects [[0](#ref0)] and to a slightly lesser extent, Native objects [[1](#ref1)] is an ill-advised technique prone to error. Polyfills rely on this technique and so they are, by their very nature, prone to error.
 
-## Implementing entire functionality
+## 2. Having to implement entire standard
 
-When you chose the polyfill technique, you have painted yourself into a corner in having to recreate the entire standard. This has not only become a lot harder, but it's rarely needed.
+When you chose the polyfill technique, you have painted yourself into a corner in having to recreate the entire standard. This has made the job significantly harder (perhaps impossible) and is rarely needed to meet the feature requirements. This is why context is important.
 
-Easy for Array.prototype.map, not see easy for Object.create. Elaborate.
+* Easy for Array.prototype.map, not see easy for Object.create. Elaborate.
 
 * if you use the real object.create it does different things. i.e. the prototype object.
 
-## Use wrappers instead
+## 3. Use wrappers instead
 
 * if you use a wrapper, you won't expect the same outcome, don't have to implement the entire thing and can lean on feature detection, dynamic apis.
 
