@@ -22,7 +22,11 @@ It's well known that messing with Host objects [[0](#ref0)] and to a slightly le
 
 ## 2. Having to implement entire standard
 
-When you chose the polyfill technique, you have painted yourself into a corner in having to recreate the entire standard. This has made the job significantly harder (perhaps impossible) and is rarely needed to meet the feature requirements. This is why context is important. Lets' take an easy example such as `Array.prototype.forEach`
+When you chose the polyfill technique, you have painted yourself into a corner in having to recreate the entire standard. This has made the job significantly harder (perhaps impossible) and is rarely needed to meet the feature requirements. This is why context is important.
+
+### `Array.prototype.forEach`
+
+This one is pretty simple and doable. Not ideal as we will see later but doable.
 
 	// Check to see if we should try and define it and can define it
 	if(!Array.prototype.forEach && TypeError && !!Function.prototype.call) {
@@ -38,15 +42,85 @@ When you chose the polyfill technique, you have painted yourself into a corner i
 		}
 	}
 
-Now taking an example for `Object.create` which would seem straightforward but is infinitely harder (read impossible)
+### `Object.create`
 
-	if(!Object.create) {
-		Object.create = function() {
+This seemingly inconspicuous method is actually *impossible* to polyfill reliably. Let's take the example from MDN [[0](#ref0)]:
 
-		}
+	if (typeof Object.create != 'function') {
+	  // Production steps of ECMA-262, Edition 5, 15.2.3.5
+	  // Reference: http://es5.github.io/#x15.2.3.5
+	  Object.create = (function() {
+	    // To save on memory, use a shared constructor
+	    function Temp() {}
+
+	    // make a safe reference to Object.prototype.hasOwnProperty
+	    var hasOwn = Object.prototype.hasOwnProperty;
+
+	    return function (O) {
+	      // 1. If Type(O) is not Object or Null throw a TypeError exception.
+	      if (typeof O != 'object') {
+	        throw TypeError('Object prototype may only be an Object or null');
+	      }
+
+	      // 2. Let obj be the result of creating a new object as if by the
+	      //    expression new Object() where Object is the standard built-in
+	      //    constructor with that name
+	      // 3. Set the [[Prototype]] internal property of obj to O.
+	      Temp.prototype = O;
+	      var obj = new Temp();
+	      Temp.prototype = null; // Let's not keep a stray reference to O...
+
+	      // 4. If the argument Properties is present and not undefined, add
+	      //    own properties to obj as if by calling the standard built-in
+	      //    function Object.defineProperties with arguments obj and
+	      //    Properties.
+	      if (arguments.length > 1) {
+	        // Object.defineProperties does ToObject on its first argument.
+	        var Properties = Object(arguments[1]);
+	        for (var prop in Properties) {
+	          if (hasOwn.call(Properties, prop)) {
+	            obj[prop] = Properties[prop];
+	          }
+	        }
+	      }
+
+	      // 5. Return obj
+	      return obj;
+	    };
+	  })();
 	}
 
-* if you use the real object.create it does different things. i.e. the prototype object.
+So let's find an issue to demonstrate the point.
+
+1. Open your favourite browser, one that provides the real `Object.create`.
+2. In the console type `var myObj = Object.create(null, { a: 1})`.
+3. Note the error.
+
+This error happens because the properties argument isn't just key-value pairs. It actually gives you *more* power.
+
+4. Now, open your not so favourite browser, one that doesn't provide the real `Object.create`. You could also omit the feature detection from the polyfill and shove it in your favourite browser to override the real one.
+5. In the console type `var myObj = Object.create(null, { a: 1})`.
+6. Note, no error.
+
+This is just scratching the surface. There are many other issues that arise because you tried to polyfill which as we have noted means you have to provide the entire feature but was that really necessary? You might just want *some* of the functionality that `Object.create` provides. For example you may have just wanted the cloning aspect in which case you can start to use Object.create and a much easier fallback for that method as follows:
+
+	var cloneObject;
+	if(Object.create) {
+		cloneObject = function(o) {
+			return Object.create(o);
+		};
+	} else {
+		cloneObject = (function() {
+			var Fn = function() {};
+
+			return function(o) {
+				Fn.prototype = o;
+				return new Fn();
+			};
+		})();
+	}
+
+Guaranteed to provide the functionality you require in your context.
 
 ## 3. Use wrappers instead
 
