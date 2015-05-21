@@ -22,9 +22,29 @@ It's well known that messing with Host objects [[0](#ref0)] and to a slightly le
 
 ## 2. Having to implement entire standard
 
-When you chose the polyfill technique, you have painted yourself into a corner in having to recreate the entire standard. This has made the job significantly harder (perhaps impossible) and is rarely needed to meet the feature requirements. This is why context is important.
+When you chose the polyfill technique, you have painted yourself into a corner in having to recreate the entire standard. This has made the job significantly harder (perhaps impossible) and is rarely needed to meet the feature requirements. This is why context is important. Lets' take an easy example such as `Array.prototype.forEach`
 
-* Easy for Array.prototype.map, not see easy for Object.create. Elaborate.
+	// Check to see if we should try and define it and can define it
+	if(!Array.prototype.forEach && TypeError && !!Function.prototype.call) {
+
+		// Augment with forEach
+		Array.prototype.forEach = function(callback, thisArg) {
+		  if(typeof(callback) !== "function") {
+		    throw new TypeError(callback + " is not a function!");
+		  }
+		  for(var i = 0; i < this.length; i++) {
+		    callback.call(thisArg, this[i], i, this)
+		  }
+		}
+	}
+
+Now taking an example for `Object.create` which would seem straightforward but is infinitely harder (read impossible)
+
+	if(!Object.create) {
+		Object.create = function() {
+
+		}
+	}
 
 * if you use the real object.create it does different things. i.e. the prototype object.
 
