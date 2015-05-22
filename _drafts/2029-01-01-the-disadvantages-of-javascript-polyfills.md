@@ -16,11 +16,11 @@ functionality (just implement what you need). Besides host objects are allowed t
 
 So let's break down what David is correctly saying.
 
-## 1. Augmenting Host and Native objects
+## Augmenting Host and Native objects
 
 It's well known that messing with Host objects [[0](#ref0)] and to a slightly lesser extent, Native objects [[1](#ref1)] is an ill-advised technique prone to error. Polyfills rely on this technique and so they are, by their very nature, prone to error.
 
-## 2. Implementing entire standard
+## Implementing entire standard
 
 When you chose the polyfill technique, you have painted yourself into a corner in having to recreate the entire standard. This has made the job significantly harder (perhaps impossible) and is rarely needed to meet the feature requirements. This is why context is important.
 
@@ -143,8 +143,6 @@ Back to context. It might well be that you just wanted the ability to clone with
 * Summary
 
 * if you use a wrapper, you won't expect the same outcome, don't have to implement the entire thing and can lean on feature detection, dynamic apis.
-
-
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
