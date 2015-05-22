@@ -18,15 +18,15 @@ So let's break down what David is correctly saying.
 
 ## Augmenting Host and Native objects
 
-It's well known that messing with Host objects [[0](#ref0)] and to a slightly lesser extent, Native objects [[1](#ref1)] is an ill-advised technique prone to error. Polyfills rely on this technique and so they are, by their very nature, prone to error.
+It's well known that messing with host objects [[0](#ref0)] and to a slightly lesser extent, native objects [[1](#ref1)] is an ill-advised technique that's prone to error. Polyfills rely on this technique and so they are, by their very nature, prone to error.
 
 ## Implementing entire standard
 
-When you chose the polyfill technique, you have painted yourself into a corner in having to recreate the entire standard. This has made the job significantly harder (perhaps impossible) and is rarely needed to meet the feature requirements. This is why context is important.
+When you choose the polyfill technique, you paint yourself into a corner by having to recreate the entire standard. This has made the job significantly harder (perhaps impossible) and is rarely needed to meet the feature requirements. This is why context is important.
 
 ### Polyfill implementation for `Array.prototype.forEach`
 
-In short this works.
+In short, this works.
 
 	// If not already defined and function dependencies are available
 	if(!Array.prototype.forEach && TypeError && !!Function.prototype.call) {
@@ -92,13 +92,13 @@ This method is impossible to polyfill reliably, but let's take MDN's stab at it:
 	  })();
 	}
 
-So to demonstrate the problem open your favourite browser, one that provides `Object.create`. Type the following into the console:
+So to demonstrate the problem, open your favourite browser -- one that provides `Object.create`. Type the following into the console:
 
 	var myObj = Object.create(null, { a: 1 });
 
-Notice the error which occurs because the properties argument is *more* than just key-value pairs.
+Notice the error that occurs, which is because the properties argument is *more* than just key-value pairs.
 
-Now, either find a browser that doesn't provide `Object.create` or omit the feature detection and override the original. Type  the following again into the console:
+Now, either find a browser that doesn't provide `Object.create` or omit the feature detection and override the original. Type the following again into the console:
 
 	var myObj = Object.create(null, { a: 1 });
 
@@ -116,11 +116,11 @@ Notice there is no error because the polyfill allows this. This might be able to
 	// returns 1 when real, returns 2 when polyfilled
 	myObj.a;
 
-This is scratching the surface with the problems of polyfills but hopefully serves to show that not only are polyfills sisyphean in nature but they require a lot more effort.
+This is scratching the surface of the problems with polyfills but hopefully serves to show that not only are they sisyphean in nature but they require a lot more effort.
 
 ## Using wrappers
 
-Back to context. It might well be that you just wanted the ability to clone with `object.create` provides nicely. This would be much easier and perfectly reliable as follows:
+Back to context. It might well be that you just wanted the ability to clone with `Object.create` provides nicely. This would be much easier and perfectly reliable as follows:
 
 	var cloneObject;
 	if(Object.create) {
