@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Semantic HTML"
+title:  "The advantages of Semantic HTML"
 date:   2014-09-26 09:00:01
 categories: html
 ---
@@ -9,7 +9,7 @@ Semantic HTML is the use of mark-up to reinforce the meaning and *intention* of 
 
 As well as using the most appropriate element to describe the content, meaningful *ID* and *Class* attributes should be used where neccessary, to provide hooks that allow the components to be enhanced with style and behaviour.
 
-Take this article as an example; it consists of 1) a container div with an ID attribute value of *article*, 2) an h1 representing the primary heading of the article and 3) further paragraphs for the main article content as follows:
+Take this article as an example; it consists of 1) a container `div` with an ID attribute value of *article*, 2) an `h1` representing the primary heading of the article and 3) multiple `p` elements representing each paragraph within the article:
 
 	<div id="article">
 		<h1>Semantic HTML</h1>
@@ -19,15 +19,13 @@ Take this article as an example; it consists of 1) a container div with an ID at
 
 Note: reading the HTML above does *not* describe how it looks but it *does* provide the meaning and intention of the content.
 
-## Benefits of Semantic HTML
+So what are the benefits?
 
-There are many benefits to writing semantic HTML:
-
-### Accessibility
+## Accessibility
 
 Some disabled users utilise the functionality of a screen reader and when HTML is semantic, there is a much higher chance it will be read out meaningfully to the user.
 
-### Responsive Web Design (RWD)
+## Responsive Web Design (RWD)
 
 Wikipedia on RWD:
 
@@ -39,25 +37,25 @@ For example, it is quite common to find elements littered with a Class attribute
 
 This is tricky because if another component *does* require the *clearfix* in small screens, then the override becomes problematic. This wouldn't be a problem if the component was given a semantic Class attribute value, because the styles can be applied based on what it is.
 
-### SEO
+## SEO
 
 Search engine crawlers rank the page based on the content. The content is easier to understand if semantic HTML is used, therefore improving search engine ranking.
 
-### Developer understanding
+## Developer understanding
 
 When using semantic HTML, it is easier to read and understand; developer on-boarding is easier and quicker too.
 
-### Maintainability
+## Maintainability
 
 It is easier to update a site's look and feel, requiring less effort to maintain the HTML i.e. a *heading* is always a *heading* no matter what it looks like; if the colour is changed from red to black, the HTML will not need updating.
 
-### Automated functional testing
+## Automated functional testing
 
 Functional tests are easier to write because the hooks are mapped to features. For example, if the feature contained a continue button, and the automated test scenario was "Given I click the continue button" then there is a clear 1-2-1 mapping between the feature and the HTML element. Without the semantic hook, automation testing becomes difficult to impossible.
 
-### Performance
+## Performance
 
-The last and most minor benefit is that of performance, as the page weight is likely to be smaller when using semantic HTML. Unsemantic HTML might use inline styles or stylistic elements such as `<font>`.
+The last and most minor benefit is that of performance, as the page weight is likely to be smaller when using semantic HTML. Unsemantic HTML might use inline styles or stylistic elements such as `<font>`. It also increases the likeliness of elements having multiple class names, increasing bloat.
 
 ## Summary
 
