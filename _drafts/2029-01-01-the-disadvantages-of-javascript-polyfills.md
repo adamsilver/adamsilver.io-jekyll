@@ -124,15 +124,26 @@ This should be enough to demonstrate that polyfills are not a good cross-browser
 
 ## 3. Avoid polyfills. Use wrappers!
 
-Back to context. It might well be that you just wanted the ability to clone with `Object.create` provides nicely. This would be much easier and perfectly reliable as follows:
+So as we said before *context* is important. What does context mean? It means, to ask the question *what functionality do we require?* and *then* defining an appropriate *context-specific* solution.
 
-	var cloneObject;
+As an example, let's say you want the ability to clone an object. `Object.create` provides this for you. An implementation might be as follows:
+
+	var lib = {};
 	if(Object.create) {
-		cloneObject = function(o) {
+		lib.cloneObject = function(o) {
+			return Object.create(o);
+		};
+	}
+
+Any browser providing `Object.create` will reliably clone you an object. For completeness, if you wanted to provide the functionality to browsers that don't provide `Object.create` an implementation might be as follows:
+
+	var lib = {};
+	if(Object.create) {
+		lib.cloneObject = function(o) {
 			return Object.create(o);
 		};
 	} else {
-		cloneObject = (function() {
+		lib.cloneObject = (function() {
 			var Fn = function() {};
 
 			return function(o) {
