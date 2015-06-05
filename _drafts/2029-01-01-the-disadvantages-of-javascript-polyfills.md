@@ -43,7 +43,7 @@ When you choose the polyfill technique, you paint yourself into a corner by havi
 
 ### 2.2 Impossible example: `Object.create`
 
-This method is impossible to polyfill reliably. Taking MDN [[0](#ref)] as an example we can look deeper at the issue.
+This method is impossible to polyfill reliably. Taking MDN [[2](#ref2)] as an example we can look deeper at the issue.
 
 	// If not already defined
 	if (typeof Object.create != 'function') {
@@ -118,15 +118,11 @@ Finally, type the following into the console:
 	// returns 1 when real, returns 2 when polyfilled
 	myObj.a;
 
-We have defined a property that is *not* writeable. And yet, when `2` is assigned to `myObj.a` it is accepted. The real implementation does not accept the assignment.
-
-This should be enough to demonstrate that polyfills are not a good cross-browser [[0](#ref0)] solution.
+We have defined a property that is *not* writeable. And yet, when `2` is assigned to `myObj.a` it is accepted. The real implementation does not accept the assignment. This should be enough to demonstrate that polyfills are not a good cross-browser [[3](#ref3)] solution.
 
 ## 3. Avoid polyfills. Use wrappers!
 
-So as we said before *context* is important. What does context mean? It means, to ask the question *what functionality do we require?* and *then* defining an appropriate *context-specific* solution.
-
-As an example, let's say you want the ability to clone an object. `Object.create` provides this for you. An implementation might be as follows:
+So as we said before *context* is important. What does context mean? It means, to ask the question *what functionality do we require?* and *then* defining an appropriate *context-specific* solution. As an example, let's say you want the ability to clone an object. `Object.create` provides this for you. An implementation might be as follows:
 
 	var lib = {};
 	if(Object.create) {
@@ -153,15 +149,17 @@ Any browser providing `Object.create` will reliably clone you an object. For com
 		})();
 	}
 
-## TODO:
+## Summary
 
-* Summary
-
-* if you use a wrapper, you won't expect the same outcome, don't have to implement the entire thing and can lean on feature detection, dynamic apis.
+Polyfills *seem* like such a good idea, to use the APIs as they were intented. But we live in a world where there are a great many browsers and the accompanying host environments are unpredictable. At best, Polyfills are harder to implement than cherry picking *just* what you need based on your context. And, at worst, they are impossible to implement reliably making development much harder. Fortunately, wrappers provide the functionality you need without the pitfalls.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
 	<dd><a href="http://perfectionkills.com/whats-wrong-with-extending-the-dom/">What's wrong with extending the DOM?</a></dd>
 	<dt class="citation" id="ref1">[1]</dt>
 	<dd><a href="http://perfectionkills.com/extending-native-builtins/">Extending native built-ins</a></dd>
+	<dt class="citation" id="ref2">[2]</dt>
+	<dd><a href="http://perfectionkills.com/extending-native-builtins/">MDN polyfill</a></dd>
+	<dt class="citation" id="ref3">[3]</dt>
+	<dd><a href="/articles/reintroducing-cross-browser-scripting/">Reintroducing Cross-browser scripting</a></dd>
 </dl>
