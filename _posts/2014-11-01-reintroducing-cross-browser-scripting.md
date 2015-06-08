@@ -9,25 +9,35 @@ Have you heard of *isHostMethod*? Do you know the difference between Multi-brows
 
 ## Nothing new
 
-This article won't provide you with anything that hasn't already been [shared](http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting) [previously](http://www.twitter.com/cinsoft) but it is somewhat forgotten about in the industry. I hope reintroducing some of the information here urges others to be more inquisitive about how web UIs are developed, so that we develop better and users are happier.
+This article won't provide you with anything that hasn't already been [shared](http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting) [previously](http://www.twitter.com/cinsoft) but it is somewhat forgotten about in the industry. I hope reintroducing some of the information here urges others to be more inquisitive about how web UIs are developed, so that we develop better websites and web apps, and users are happier.
 
 ## Client-side challenges are unique
 
-When server-side developers produce software, they program against a single known and controlled development environment. Client-side developers don't have this luxury. There are so many different browsers and browser versions running on different operating systems and devices. Even when the Internet was young there was more than one browser. This is the beauty of the web, not its downfall.
+When server-side developers produce software, they program against a single known and controlled development environment. Client-side developers don't have this luxury. There are so many different browsers and browser versions running on different operating systems and devices. Even when the Internet was young there were multiple browsers. This is the beauty of the web, not its downfall.
 
 Now there are browsers on watches, car radios, games consoles, mobile phones, tablets, fridges, glasses, tvs and more. It appears to be quite a challenge, scrap that, nigh on impossible to build a website that can be reliably consumed on all browsers. Or *is* it?
 
 ## Unlike HTML and CSS, Javascript doesn't naturally degrade gracefully
 
-When a browser doesn't recognise an HTML element the worst thing that happens is the piece of content isn't shown, as would be the case with the *video* element. In this case, alternative content can be shown. Similary, when a browser doesn't support a particular CSS ruleset, the element is without those styles but content is still likely to be consumable.
+When a browser doesn't recognise an HTML element the worst thing that happens is the piece of content isn't shown, as would be the case with the *video* element. In this case, alternative content can be shown. Similary, when a browser doesn't support a particular CSS ruleset, the element is unstyled but content is still likely consumable.
 
-Script on the other hand can leave a page broken. As an example, imagine enhancing a form with script that prevents the default action and continues to execute script that the browser doesn't support. The user is now unable to submit the form which is fatal to the experience.
+Script on the other hand can leave a page broken. As an example, imagine enhancing a form with script that prevents the default action and continues to execute script that the browser doesn't support:
+
+	var form = document.forms[0];
+	lib.addEventListener(form, "submit", function(e) {
+		e.preventDefault();
+		// More code here that browser can't execute
+	});
+
+ The user is now unable to submit the form which is fatal to the experience.
 
 ## UA sniffing is not the answer
 
-There is no value in reading the UA string [[1](#ref1)] besides identifying the browser and even then, it can be spoofed. It doesn't tell you what features the browser has, so they would need to be inferred. The browser could be lacking features, have plugins enabled such as script blockers or configured differently, all of which affects the capability and behaviour of the browser.
+There is no value in reading the UA string [[1](#ref1)] besides identifying the browser and even then, it can be spoofed. It doesn't tell you what features the browser has, so they would need to be inferred. The browser could be lacking features, have plugins enabled such as script blockers or configured differently, all of which affect the capability and behaviour of the browser.
 
-Even if you forget those things, imagine sniffing, then imagine mapping features to the sniff, then imagine doing that for every browser *and* every feature. It is quite obvious that this technique is fraught with errors and extremely time consuming (read expensive). Browsers and devices are released too frequently to even attempt to keep up with the mapping anyway.
+Even if you forget those things, imagine sniffing, then imagine mapping features to the sniff, then imagine doing that for every browser *and* every feature. It is quite obvious that this technique is fraught with errors and extremely time consuming (read expensive). Browsers and devices are released too frequently to even attempt to keep up with the mapping anyway. As Brad Frost says:
+
+> Samsung shits out a different-sized black rectangle every 30 seconds.
 
 ## How to make Javascript degrade gracefully
 
