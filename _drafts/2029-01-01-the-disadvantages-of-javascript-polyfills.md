@@ -20,9 +20,9 @@ So let's break down what David is correctly saying.
 
 It's well known that messing with host objects [[0](#ref0)] and to a slightly lesser extent, native objects [[1](#ref1)] is an ill-advised technique that's prone to error. Polyfills rely on this technique and so they are, by their very nature, prone to error.
 
-## 2. Over exertion in having to implement entire standard
+## 2. Over exertion in implementing entire standard
 
-When you choose the polyfill technique, you paint yourself into a corner by having to recreate the entire standard. This has made the job significantly harder, perhaps impossible *and* is often unnecessary to build the feature you want. This is why context is so important. Let's explore this further with two examples...
+When choosing to polyfill, you paint yourself into a corner by having to recreate the entire standard. This makes the job significantly harder, perhaps impossible *and* is often unnecessary to build the feature you want. This is why context is so important. Let's explore this further with two examples...
 
 ### 2.1 Easy example: `Array.prototype.forEach`
 
@@ -32,7 +32,7 @@ When you choose the polyfill technique, you paint yourself into a corner by havi
 	if(!Array.prototype.forEach && TypeError && !!Function.prototype.call) {
 		// Augment with forEach
 		Array.prototype.forEach = function(callback, thisArg) {
-			if(typeof(callback) !== "function") {
+			if(typeof callback !== "function") {
 				throw new TypeError(callback + " is not a function!");
 			}
 			for(var i = 0; i < this.length; i++) {
@@ -43,7 +43,7 @@ When you choose the polyfill technique, you paint yourself into a corner by havi
 
 ### 2.2 Impossible example: `Object.create`
 
-This method is impossible to polyfill reliably. Taking MDN [[2](#ref2)] as an example we can look deeper at the issue.
+`Object.create` is impossible to polyfill reliably. Let's explore the issues by using the example on MDN [[2](#ref2)] as follows:
 
 	// If not already defined
 	if (typeof Object.create != 'function') {
@@ -102,7 +102,7 @@ Next, find a browser that doesn't provide `Object.create` or omit the feature de
 
 	var myObj = Object.create(null, { a: 1 });
 
-Notice there is no error because the polyfill allows this. You could probably guard against this so add this to your backlog because it's only a polyfill if it identically mimics the real thing.
+Incorrectly, there is no error because the polyfill isn't checking for the format of the second argument. You could probably guard against this so do add this to your technical backlog because it's only a polyfill if it identically mimics the real thing.
 
 Finally, type the following into the console:
 
@@ -118,11 +118,13 @@ Finally, type the following into the console:
 	// returns 1 when real, returns 2 when polyfilled
 	myObj.a;
 
-We have defined a property that is *not* writeable. And yet, when `2` is assigned to `myObj.a` it is accepted. The real implementation does not accept the assignment. This should be enough to demonstrate that polyfills are not a good cross-browser [[3](#ref3)] solution.
+We have defined a property, `a` that is *not* writeable; when we try to assign `2` to the property it is incorrectly allowed - the real implementation does not allow the assignment. This should be enough to demonstrate that polyfills are not a good cross-browser [[3](#ref3)] solution.
 
 ## 3. Avoid polyfills. Use wrappers!
 
-So as we said before *context* is important. What does context mean? It means, to ask the question *what functionality do we require?* and *then* defining an appropriate *context-specific* solution. As an example, let's say you want the ability to clone an object. `Object.create` provides this for you. An implementation might be as follows:
+So as we said before *context* is important but what exactly does context mean? It means, to ask the question of *what functionality do we require?* and *then* defining an appropriate *context-specific* solution.
+
+As an example, imagine you wanted a function to clone an object. In this case `Object.create` is a perfect candidate to help us with one rendition of this function as follows:
 
 	var lib = {};
 	if(Object.create) {
@@ -149,9 +151,11 @@ Any browser providing `Object.create` will reliably clone you an object. For com
 		})();
 	}
 
+Now if the browser lacks `Object.create` the rendition falls back to a more long winded method which works in a very broad range of browers. There is no need to recreate the entire standard and the function leans on feature detection to provide the most performant, up-to-date standards where possible.
+
 ## Summary
 
-Polyfills *seem* like such a good idea, to use the APIs as they were intented. But we live in a world where there are a great many browsers and the accompanying host environments are unpredictable. At best, Polyfills are harder to implement than cherry picking *just* what you need based on your context. And, at worst, they are impossible to implement reliably making development much harder. Fortunately, wrappers provide the functionality you need without the pitfalls.
+At first, polyfills *seem* like a good idea in order to use the APIs as they were intented. But we live in a world where there are a great many browsers and the accompanying host environments are unpredictable. At best, polyfills are harder to implement. At their worst, they are impossible to implement reliably, making development much harder. Fortunately, wrappers provide the functionality you need without the pitfalls.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
