@@ -5,16 +5,12 @@ date:   2026-01-01 09:00:01
 categories: js
 ---
 
-A polyfill can be described as follows:
-
-> "A polyfill, [...] is a piece of code [...] that provides the technology that you, the developer, expect the browser to provide natively. Flattening the API landscape [...]."
-
-This sounds like a great idea because it means developers can assume that the API is available to use for all browsers. However, this can be very problematic as David Mark states:
+A polyfill can be described as a piece of code that provides the technology that you expect the browser to provide natively, flattening the API landscape. This *sounds* wonderful - include polyfill, utilise API as if all browsers are the same. However, this can be very problematic as David Mark rightly states:
 
 > "Use wrappers. Do *not* augment host objects. You don't own them and you certainly don't want to try to implement 100% of the standard
 functionality (just implement what you need). Besides host objects are allowed to throw exceptions just for *reading* their properties (and some do just that in IE)."
 
-So let's break down what David is correctly saying.
+So let's break down the points David raises.
 
 ## 1. Augmenting Host and Native objects is a bad idea
 
