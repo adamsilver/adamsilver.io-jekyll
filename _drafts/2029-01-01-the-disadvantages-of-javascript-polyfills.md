@@ -120,7 +120,7 @@ We have defined `a` that is *not* writeable; when we try to assign `2` to the pr
 
 So as we said before *context* is important but what exactly does context mean? It means, to ask the question of *what functionality do we require?* and *then* defining an appropriate *context-specific* solution.
 
-As an example, imagine you wanted a function to clone an object. In this case `Object.create` is a perfect candidate to help us with one rendition of this function as follows:
+Imagine you wanted a function to clone an object. In this case `Object.create` is a useful API to create a `cloneObject` function:
 
 	var lib = {};
 	if(Object.create) {
@@ -129,7 +129,7 @@ As an example, imagine you wanted a function to clone an object. In this case `O
 		};
 	}
 
-Any browser providing `Object.create` will reliably clone you an object. For completeness, if you wanted to provide the functionality to browsers that don't provide `Object.create` an implementation might be as follows:
+Any browser providing `Object.create` will reliably clone you an object. For completeness and for browsers without `Object.create` the following implementation is suitable:
 
 	var lib = {};
 	if(Object.create) {
@@ -147,7 +147,7 @@ Any browser providing `Object.create` will reliably clone you an object. For com
 		})();
 	}
 
-Now if the browser lacks `Object.create` the rendition falls back to a more long winded method which works in a very broad range of browers. There is no need to recreate the entire standard and the function leans on feature detection to provide the most performant, up-to-date standards where possible.
+Now if the browser lacks `Object.create` the implementation falls back to a more long winded method which works in a very broad range of browers. There is no need to recreate the entire standard and the function leans on feature detection to provide the most performant, up-to-date standards where possible.
 
 ## Summary
 
