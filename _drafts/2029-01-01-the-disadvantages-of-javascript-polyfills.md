@@ -159,5 +159,5 @@ At first, polyfills *seem* like a good idea in order to use the APIs as they wer
 	<dt class="citation" id="ref1">[1]</dt>
 	<dd><a href="http://perfectionkills.com/extending-native-builtins/">Extending native built-ins</a></dd>
 	<dt class="citation" id="ref2">[2]</dt>
-	<dd><a href="http://perfectionkills.com/extending-native-builtins/">MDN polyfill</a></dd>
+	<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#Polyfill">MDN polyfill</a></dd>
 </dl>
