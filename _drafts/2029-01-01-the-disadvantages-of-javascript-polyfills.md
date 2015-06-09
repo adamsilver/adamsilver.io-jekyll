@@ -98,7 +98,7 @@ Next, find a browser that doesn't provide `Object.create` or omit the feature de
 
 	var myObj = Object.create(null, { a: 1 });
 
-Incorrectly, there is no error because the polyfill isn't checking for the format of the second argument. You could probably guard against this so do add this to your technical backlog because it's only a polyfill if it identically mimics the real thing.
+Unfortunately, the error is supressed because the polyfill isn't checking for the format of the second argument. You could guard against this so be sure to this to your technical backlog because it's only a polyfill if it identically mimics the real thing.
 
 Finally, type the following into the console:
 
