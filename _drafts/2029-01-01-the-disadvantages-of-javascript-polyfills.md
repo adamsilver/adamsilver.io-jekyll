@@ -37,7 +37,7 @@ When choosing to polyfill, you paint yourself into a corner by having to recreat
 		};
 	}
 
-### 2.2 Impossible example: `Object.create`
+### 2.2 Hard example: `Object.create`
 
 `Object.create` is impossible to polyfill reliably. Let's explore the issues by using the example on MDN [[2](#ref2)] as follows:
 
@@ -114,7 +114,7 @@ For the last demonstration, type the following into the console:
 	// returns 1 when real, returns 2 when polyfilled
 	myObj.a;
 
-We have defined a property, `a` that is *not* writeable; when we try to assign `2` to the property it is incorrectly allowed - the real implementation does not allow the assignment. This should be enough to demonstrate that polyfills are not a good cross-browser [[3](#ref3)] solution.
+We have defined `a` that is *not* writeable; when we try to assign `2` to the property it is incorrectly allowed - the real implementation does not allow the assignment. Remember there are other properties that need consideration: `configurable`, `enumerable`, `get` and `set`. This should be enough to demonstrate that polyfills are not a good cross-browser solution.
 
 ## 3. Avoid polyfills. Use wrappers!
 
@@ -160,6 +160,4 @@ At first, polyfills *seem* like a good idea in order to use the APIs as they wer
 	<dd><a href="http://perfectionkills.com/extending-native-builtins/">Extending native built-ins</a></dd>
 	<dt class="citation" id="ref2">[2]</dt>
 	<dd><a href="http://perfectionkills.com/extending-native-builtins/">MDN polyfill</a></dd>
-	<dt class="citation" id="ref3">[3]</dt>
-	<dd><a href="/articles/reintroducing-cross-browser-scripting/">Reintroducing Cross-browser scripting</a></dd>
 </dl>
