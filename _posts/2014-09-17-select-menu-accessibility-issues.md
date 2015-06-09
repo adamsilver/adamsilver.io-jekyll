@@ -44,11 +44,11 @@ This is bad:
 
 ## Accessibility considerations
 
-Not all users use a mouse. Keyboards and screen readers are also used. A keyboard user can tab to the select menu and use their keyboard to select a different option. Take [this example](http://html.cita.illinois.edu/script/onchange/onchange-example.php) - in some browsers, the *HTML4* option isn't accessible because it is already selected as the default option. Also, if the user presses *Down* just once, the form is submitted which means its very difficult to access other options.
+Not all users use a mouse. Keyboards and screen readers are also used. A keyboard user can tab to the select menu and use their keyboard to select a different option. Take [this example](http://html.cita.illinois.edu/script/onchange/onchange-example.php) - in some browsers, the *HTML4* option isn't accessible because it is already selected as the default option. Also, if the user presses *Down* just once, the form is submitted which means it's very difficult to access other options.
 
 Vanessa Mosher and Steven Weintraub share Sarah Miller's usability test at the Open University with regard to screen readers:
 
- >Several people working with blind users commented on problems both with screen readers and for those using keyboards. For example, one cited a usability test by Sarah Miller at the Open University. Sarah found drop-down lists without Go buttons were confusing because while the user had to inspect every item in the list, the action of reading an item meant that it was selected. She added that the user chose to use the keyboard instead of a mouse to scroll through the options to view (or hear) them: the first option was automatically selected—the user never got past the first item in the list.
+ > Several people working with blind users commented on problems both with screen readers and for those using keyboards. For example, one cited a usability test by Sarah Miller at the Open University. Sarah found drop-down lists without Go buttons were confusing because while the user had to inspect every item in the list, the action of reading an item meant that it was selected. She added that the user chose to use the keyboard instead of a mouse to scroll through the options to view (or hear) them: the first option was automatically selected—the user never got past the first item in the list.
 
 > A few respondents also commented that auto-submit drop-down menus may be counter productive when interpreted by screen reader software (often used by the visually impaired). It seems that the software automatically selects the first item in the menu when the user opens it using either a mouse or keyboard.
 
