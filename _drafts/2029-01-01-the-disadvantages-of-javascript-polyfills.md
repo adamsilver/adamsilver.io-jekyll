@@ -118,9 +118,11 @@ We have defined `a` that is *not* writeable; when we try to assign `2` to the pr
 
 ## 3. Avoid polyfills. Use wrappers!
 
-So as we said before *context* is important but what exactly does context mean? It means, to ask the question of *what functionality do we require?* and *then* defining an appropriate *context-specific* solution.
+So as we said before *context* is important but what exactly does context mean? It means, to ask the question of *what functionality do we need? and then defining an appropriate context-specific solution*.
 
-Imagine you wanted a function to clone an object. In this case `Object.create` is a useful API to create a `cloneObject` function:
+### 3.1 Clone an object
+
+Imagine you wanted a function to clone an object. In this case `Object.create` is a useful API to solve this specific problem:
 
 	var lib = {};
 	if(Object.create) {
@@ -149,6 +151,10 @@ Any browser providing `Object.create` will reliably clone you an object. For com
 
 Now if the browser lacks `Object.create` the implementation falls back to a more long winded method which works in a very broad range of browers. There is no need to recreate the entire standard and the function leans on feature detection to provide the most performant, up-to-date standards where possible.
 
+### 3.2 Creating an object
+
+TODO
+
 ## Summary
 
 At first, polyfills *seem* like a good idea in order to use the APIs as they were intented. But we live in a world where there are a great many browsers and the accompanying host environments are unpredictable. At best, polyfills are harder to implement. At their worst, they are impossible to implement reliably, making development much harder. Fortunately, wrappers provide the functionality you need without the pitfalls.
@@ -163,5 +169,9 @@ At first, polyfills *seem* like a good idea in order to use the APIs as they wer
 </dl>
 
 <!--
-	cache length for forEach
+	* cache length for forEach
+	* emphasise better/different that wrappers don't force you to expect the same functionality.
+	* talk about how the wrapper saves u as if somebody wanted to use the entire Object.create functionality. This leads to dynamic apis, progressive enhancement.
+	* Polyfills stop you from progressively enhancing
+	* I think make it more clear that the action trying to be completed was creating an object, so that is all the wrapper does. it does not support a second arg because that is not required
 -->
