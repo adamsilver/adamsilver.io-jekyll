@@ -98,7 +98,7 @@ Next, find a browser that doesn't provide `Object.create` or omit the feature de
 
 	var myObj = Object.create(null, { a: 1 });
 
-Unfortunately, the error is supressed because the polyfill isn't checking for the format of the second argument. You could guard against this so be sure to this to your technical backlog because it's only a polyfill if it identically mimics the real thing.
+Unfortunately, the error is supressed because the polyfill isn't checking for the format. You could guard against this scenario but do note it's more work, something that polyfills are meant to be saving you from.
 
 For the last demonstration, type the following into the console:
 
@@ -161,3 +161,7 @@ At first, polyfills *seem* like a good idea in order to use the APIs as they wer
 	<dt class="citation" id="ref2">[2]</dt>
 	<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#Polyfill">MDN polyfill</a></dd>
 </dl>
+
+<!--
+	cache length for forEach
+-->
