@@ -165,7 +165,10 @@ What if you wanted to create an object? This question is deeper than it first se
 	// and this
 	var myObj = Object.create();
 
-Each of these solves different problems. Now for the purposes of this demo, I am going to assume you wanted the ECMAScript 5 features that we discussed earlier. You wanted to ensure a property is not writeable.
+	// and this
+	var myObj = new Object();
+
+Each of these solves different problems. Now for the purposes of this demo, I am going to assume you wanted the ECMAScript 5 features that we discussed earlier (writeable, enumerable etc).
 
 	var lib = {};
 	if(Object.create) {
