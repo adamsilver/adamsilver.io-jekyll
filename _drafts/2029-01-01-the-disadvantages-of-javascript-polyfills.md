@@ -5,7 +5,7 @@ date:   2026-01-01 09:00:01
 categories: js
 ---
 
-A polyfill can be described as a piece of code that provides the technology that you expect the browser to provide natively, flattening the API landscape. This *sounds* wonderful - include polyfill, utilise API as if all browsers are the same. However, this can be very problematic as David Mark rightly states:
+A polyfill can be described as a piece of code that provides the technology that you expect the browser to provide natively, flattening the API landscape. This *sounds* wonderful. Just include polyfill, and assume all browsers are the same. However, this can be very problematic as David Mark rightly states:
 
 > "Use wrappers. Do *not* augment host objects. You don't own them and you certainly don't want to try to implement 100% of the standard
 functionality (just implement what you need). Besides host objects are allowed to throw exceptions just for *reading* their properties (and some do just that in IE)."
@@ -20,7 +20,7 @@ It's well known that messing with host objects [[0](#ref0)] and to a slightly le
 
 When choosing to polyfill, you paint yourself into a corner by having to recreate the entire standard. This makes the job significantly harder, perhaps impossible *and* is often unnecessary to build the feature you want. This is why context is so important. Let's explore this further with two examples...
 
-### 2.1 Easy example: `Array.prototype.forEach`
+### 2.1 A polyfill that works
 
 `Array.prototype.forEach` is one of the easier polyfills to write, and in short the following is a working a solution:
 
@@ -37,9 +37,9 @@ When choosing to polyfill, you paint yourself into a corner by having to recreat
 		};
 	}
 
-### 2.2 Hard example: `Object.create`
+### 2.2 A polyfill that doesn't work
 
-`Object.create` is impossible to polyfill reliably. Let's explore the issues by using the example on MDN [[2](#ref2)] as follows:
+`Object.create` is very difficult to polyfill reliably. Let's explore the issues by using the example on MDN [[2](#ref2)] as follows:
 
 	// If not already defined
 	if (typeof Object.create != 'function') {
@@ -92,13 +92,13 @@ To demonstrate the problem, open your favourite browser, one that provides `Obje
 
 	var myObj = Object.create(null, { a: 1 });
 
-Notice the error that occurs, which is because the properties argument is in an incorrect format; key-value pairs are not enough.
+Notice the error that occurs. This happens because the properties argument is incorrectly formatted.
 
-Next, find a browser that doesn't provide `Object.create` or omit the feature detection and override the original. Type the following again into the console:
+Next, find a browser that doesn't provide `Object.create` or omit the feature detection so the real API is overriden, and once again  type the following into the console:
 
 	var myObj = Object.create(null, { a: 1 });
 
-Unfortunately, the error is supressed because the polyfill isn't checking for the format. You could guard against this scenario but do note it's more work, something that polyfills are meant to be saving you from.
+Notice, the error is incorrectly supressed because the polyfill isn't checking for the format. You could argue that polyfill can be updated to handle this scenario. For now lets just note that the intelligent minds over at MDN didn't cover this and that more work needs to be done.
 
 For the last demonstration, type the following into the console:
 
@@ -114,15 +114,16 @@ For the last demonstration, type the following into the console:
 	// returns 1 when real, returns 2 when polyfilled
 	myObj.a;
 
-We have defined `a` that is *not* writeable; when we try to assign `2` to the property it is incorrectly allowed - the real implementation does not allow the assignment. Remember there are other properties that need consideration: `configurable`, `enumerable`, `get` and `set`. This should be enough to demonstrate that polyfills are not a good cross-browser solution.
+
+When attempting to assign `2` to the `a` property, this is incorrectly allowed. The real `Object.create` correctly disallows the assignment. This is just *one* of several properties that need careful consideration; `configurable`, `enumerable`, `get` and `set`. This should be enough to demonstrate that polyfills are not a reliable solution for developing Javascript.
 
 ## 3. Avoid polyfills. Use wrappers!
 
-So as we said before *context* is important but what exactly does context mean? It means, to ask the question of *what functionality do we need? and then defining an appropriate context-specific solution*.
+So as we said earlier, *context* is important but what exactly do we mean by *context*? It means to first define what problem we are trying to solve. Only then can an appropriate *context-specific* solution be designed and built. Let's explore by example.
 
 ### 3.1 Clone an object
 
-Imagine you wanted a function to clone an object. In this case `Object.create` is a useful API to solve this specific problem:
+If we want to clone an object, `Object.create` is actually a very useful API to solve this problem as follows:
 
 	var lib = {};
 	if(Object.create) {
@@ -149,7 +150,7 @@ Any browser providing `Object.create` will reliably clone you an object. For com
 		})();
 	}
 
-Now if the browser lacks `Object.create` the implementation falls back to a more long winded method which works in a very broad range of browers. There is no need to recreate the entire standard and the function leans on feature detection to provide the most performant, up-to-date standards where possible.
+If the browser lacks `Object.create`, the fallback is a slightly more complex, older implementation, which works in a much broader range of browsers. It is important to note, there is no need to recreate the entire standard and the function leans on feature detection to provide the most performant, up-to-date standards where possible.
 
 ### 3.2 Creating an object
 
