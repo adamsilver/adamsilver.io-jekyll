@@ -121,7 +121,7 @@ When attempting to assign `2` to the `a` property, this is incorrectly allowed. 
 
 So as we said earlier, *context* is important but what exactly do we mean by *context*? It means to first define what problem we are trying to solve. Only then can an appropriate *context-specific* solution be designed and built. Let's explore by example.
 
-### 3.1 Clone an object
+### 3.1 Problem: I want to clone an object
 
 If we want to clone an object, `Object.create` is actually a very useful API to solve this problem as follows:
 
@@ -152,9 +152,9 @@ Any browser providing `Object.create` will reliably clone you an object. For com
 
 If the browser lacks `Object.create`, the fallback is a slightly more complex, older implementation, which works in a much broader range of browsers. It is important to note, there is no need to recreate the entire standard and the function leans on feature detection to provide the most performant, up-to-date standards where possible.
 
-### 3.2 Creating an object
+### 3.2 Problem: I want to create an object
 
-What if you wanted to create an object? This question is deeper than it first seems.
+What if you wanted to create an object? This question is surprisingly more involved than it first appears.
 
 	// this creates you a new object
 	var myObj = {};
@@ -164,12 +164,14 @@ What if you wanted to create an object? This question is deeper than it first se
 	var myObj = new Blah();
 
 	// and this
-	var myObj = Object.create();
-
-	// and this
 	var myObj = new Object();
 
-Each of these solves different problems. Now for the purposes of this demo, I am going to assume you wanted the ECMAScript 5 features that we discussed earlier (writeable, enumerable etc).
+	// and this
+	var myObj = Object.create();
+
+Each of these will create a new object, but the choice will be very different depending on what functionality you *need*.
+
+For the purposes of this demo, I am going to assume the ECMAScript 5 features that we discussed earlier are desired.
 
 	var lib = {};
 	if(Object.create) {
@@ -178,15 +180,15 @@ Each of these solves different problems. Now for the purposes of this demo, I am
 		};
 	}
 
-What to do in browsers that don't have `Object.create` - nothing - it doesn't cut the mustard, it doesn't pass feature detection, it doesn't provide the JS enhanced experience. Nothing wrong with that, this *is* Progressive Enhancement. Oh you want to see the calling application?
+For browsers that have `Object.create`, you can utilise all the lovelies of ES5, if that is what you need. What about browsers that don't have `Object.create`? Nothing, it doesn't cut the mustard, because the feature detection doesn't pass. The user won't get the enhanced experience. This is Progressive Enhancement at its best. There is absolutely nothing wrong with that. For completeness the calling application might look something like:
 
 	if(lib.createObject) {
 		// enhanced experience
 		var myObj = lib.createObject(null, ...);
-		// continue with the beautifully enhanced experience
+		// etc
 	}
 
-But there are entire articles [[3](#ref3)] based on this context so we won't go deeper here on this.
+Don't worry if you are a little hazy on feature detection, testing and dynamic APIs - there are fantastic articles [[3](#ref3)] on this subject matter.
 
 ## Summary
 
@@ -199,6 +201,8 @@ At first, polyfills *seem* like a good idea in order to use the APIs as they wer
 	<dd><a href="http://perfectionkills.com/extending-native-builtins/">Extending native built-ins</a></dd>
 	<dt class="citation" id="ref2">[2]</dt>
 	<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#Polyfill">MDN polyfill</a></dd>
+	<dt class="citation" id="ref3">[3]</dt>
+	<dd><a href="http://peter.michaux.ca/articles/cross-browser-widgets">Cross-browser widgets</a></dd>
 </dl>
 
 <!--
