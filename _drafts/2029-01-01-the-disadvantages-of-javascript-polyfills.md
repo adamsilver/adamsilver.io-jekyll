@@ -174,7 +174,15 @@ Each of these solves different problems. Now for the purposes of this demo, I am
 		};
 	}
 
-What to do in browsers that don't have `Object.create` - nothing - it doesn't cut the mustard, it doesn't pass feature detection, it doesn't provide the JS enhanced experience. Nothing wrong with that, this *is* Progressive Enhancement. Next.
+What to do in browsers that don't have `Object.create` - nothing - it doesn't cut the mustard, it doesn't pass feature detection, it doesn't provide the JS enhanced experience. Nothing wrong with that, this *is* Progressive Enhancement. Oh you want to see the calling application?
+
+	if(lib.createObject) {
+		// enhanced experience
+		var myObj = lib.createObject(null, ...);
+		// continue with the beautifully enhanced experience
+	}
+
+But there are entire articles [[3](#ref3)] based on this context so we won't go deeper here on this.
 
 ## Summary
 
