@@ -153,7 +153,28 @@ Now if the browser lacks `Object.create` the implementation falls back to a more
 
 ### 3.2 Creating an object
 
-TODO
+What if you wanted to create an object? This question is deeper than it first seems.
+
+	// this creates you a new object
+	var myObj = {};
+
+	// so does this
+	function Blah() {};
+	var myObj = new Blah();
+
+	// and this
+	var myObj = Object.create();
+
+Each of these solves different problems. Now for the purposes of this demo, I am going to assume you wanted the ECMAScript 5 features that we discussed earlier. You wanted to ensure a property is not writeable.
+
+	var lib = {};
+	if(Object.create) {
+		lib.createObject = function(obj, props) {
+			return Object.create(obj, props);
+		};
+	}
+
+What to do in browsers that don't have `Object.create` - nothing - it doesn't cut the mustard, it doesn't pass feature detection, it doesn't provide the JS enhanced experience. Nothing wrong with that, this *is* Progressive Enhancement. Next.
 
 ## Summary
 
@@ -174,4 +195,5 @@ At first, polyfills *seem* like a good idea in order to use the APIs as they wer
 	* talk about how the wrapper saves u as if somebody wanted to use the entire Object.create functionality. This leads to dynamic apis, progressive enhancement.
 	* Polyfills stop you from progressively enhancing
 	* I think make it more clear that the action trying to be completed was creating an object, so that is all the wrapper does. it does not support a second arg because that is not required
+	* Polyfills are only problematic on the client, not the server
 -->
