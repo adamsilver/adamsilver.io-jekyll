@@ -117,7 +117,7 @@ For the last demonstration, type the following into the console:
 	myObj.a;
 
 
-When attempting to assign `2` to the `a` property, this is incorrectly allowed. The real `Object.create` correctly disallows the assignment. This is just *one* of several properties that need careful consideration; `configurable`, `enumerable`, `get` and `set`. This should be enough to demonstrate that polyfills are not a reliable solution for developing Javascript.
+When attempting to assign `2` to the `a` property, this is incorrectly allowed. The real `Object.create` correctly disallows the assignment. This is just *one* of several properties that need careful consideration; `configurable`, `enumerable`, `get` and `set`. This is not the only example of unreliable polyfills - there are many more [[3](#ref3)].
 
 ## 3. Avoid polyfills. Use wrappers!
 
@@ -190,11 +190,11 @@ For browsers that have `Object.create`, you can utilise all the lovelies of ES5,
 		// etc
 	}
 
-Don't worry if you are a little hazy on feature detection, feature testing and dynamic APIs - there are fantastic articles [[3](#ref3)] on this subject matter.
+Don't worry if you are a little hazy on feature detection, feature testing and dynamic APIs - there are fantastic articles [[4](#ref4)] on this subject matter.
 
 ## Summary
 
-At first, polyfills *seem* like a good idea in order to use the APIs as they were intented. But we live in a world where there are a great many browsers and the accompanying host environments are unpredictable. At best, polyfills are harder to implement. At their worst, they are impossible to implement reliably, making development much harder. Fortunately, wrappers provide the functionality you need without the pitfalls.
+The Host is a dynamic environment, and an unpredicatable one too. Polyfills try to bend the rules to create a static environment. At best, polyfills are harder to implement. At their worst, they are impossible to implement to spec. This increases development effort significantly but even worse results in unreliable software. The answer, is of course to use wrappers. You get the all the same functionality but without the pitfalls.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
@@ -204,10 +204,11 @@ At first, polyfills *seem* like a good idea in order to use the APIs as they wer
 	<dt class="citation" id="ref2">[2]</dt>
 	<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#Polyfill">MDN polyfill</a></dd>
 	<dt class="citation" id="ref3">[3]</dt>
+	<dd><a href="https://github.com/es-shims/es5-shim#shams">ES Shim (Shams and may fail)</a></dd>
+	<dt class="citation" id="ref4">[4]</dt>
 	<dd><a href="http://peter.michaux.ca/articles/cross-browser-widgets">Cross-browser widgets</a></dd>
 </dl>
 
 <!--
 	* emphasise better/different that wrappers don't force you to expect the same functionality.
-	* https://github.com/es-shims/es5-shim#shams
 -->
