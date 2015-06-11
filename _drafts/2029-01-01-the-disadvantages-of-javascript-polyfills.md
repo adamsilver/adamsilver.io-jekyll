@@ -5,7 +5,7 @@ date:   2026-01-01 09:00:01
 categories: js
 ---
 
-A polyfill can be described as a piece of code that provides the technology that you expect the browser to provide natively, flattening the API landscape. This *sounds* wonderful. Just include polyfill, and assume all browsers are the same. However, this can be very problematic as David Mark rightly states:
+A polyfill can be described as a piece of code that provides the technology that you expect the browser to provide natively, flattening the API landscape. This *sounds* wonderful. Just include polyfill, and assume all browsers are the same. However, this can be very problematic, particularly on the client-side, due to the frailty of the Host environment. As David Mark rightly states:
 
 > "Use wrappers. Do *not* augment host objects. You don't own them and you certainly don't want to try to implement 100% of the standard
 functionality (just implement what you need). Besides host objects are allowed to throw exceptions just for *reading* their properties (and some do just that in IE)."
@@ -31,7 +31,9 @@ When choosing to polyfill, you paint yourself into a corner by having to recreat
 			if(typeof callback !== "function") {
 				throw new TypeError(callback + " is not a function!");
 			}
-			for(var i = 0; i < this.length; i++) {
+			var i = 0;
+			var length = this.length;
+			for(; i < length; i++) {
 				callback.call(thisArg, this[i], i, this);
 			}
 		};
@@ -150,7 +152,7 @@ Any browser providing `Object.create` will reliably clone you an object. For com
 		})();
 	}
 
-If the browser lacks `Object.create`, the fallback is a slightly more complex, older implementation, which works in a much broader range of browsers. It is important to note, there is no need to recreate the entire standard and the function leans on feature detection to provide the most performant, up-to-date standards where possible.
+If the browser lacks `Object.create`, the fallback is a slightly more complex/older implementation, which many browsers support. It is important to note, there is no need to recreate the entire standard and the function leans on feature detection to provide the most performant, up-to-date standards where possible.
 
 ### 3.2 Problem: I want to create an object
 
@@ -188,7 +190,7 @@ For browsers that have `Object.create`, you can utilise all the lovelies of ES5,
 		// etc
 	}
 
-Don't worry if you are a little hazy on feature detection, testing and dynamic APIs - there are fantastic articles [[3](#ref3)] on this subject matter.
+Don't worry if you are a little hazy on feature detection, feature testing and dynamic APIs - there are fantastic articles [[3](#ref3)] on this subject matter.
 
 ## Summary
 
@@ -206,10 +208,6 @@ At first, polyfills *seem* like a good idea in order to use the APIs as they wer
 </dl>
 
 <!--
-	* cache length for forEach
 	* emphasise better/different that wrappers don't force you to expect the same functionality.
-	* talk about how the wrapper saves u as if somebody wanted to use the entire Object.create functionality. This leads to dynamic apis, progressive enhancement.
-	* Polyfills stop you from progressively enhancing
-	* I think make it more clear that the action trying to be completed was creating an object, so that is all the wrapper does. it does not support a second arg because that is not required
-	* Polyfills are only problematic on the client, not the server
+	* https://github.com/es-shims/es5-shim#shams
 -->
