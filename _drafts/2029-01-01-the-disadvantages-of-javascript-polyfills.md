@@ -5,20 +5,20 @@ date:   2026-01-01 09:00:01
 categories: js
 ---
 
-A polyfill can be described as a piece of code that provides the technology that you expect the browser to provide natively, flattening the API landscape. This *sounds* wonderful doesn't it? Just include the polyfill, and assume all browsers provide the API. However, this can be very problematic, particularly on the client-side, due to the frailty of the Host environment. As David Mark rightly states:
+A polyfill can be described as a piece of code that provides the technology that you expect the browser to provide natively, flattening the API landscape. I am a huge proponent of Outside-in Development, and so the idea of flattening or normalising the browsers appears to be a great idea. In reality however, this can be very problematic, particularly due to the frailty of the Host environment, the *browser*. David Mark sums up the problem:
 
 > "Use wrappers. Do *not* augment host objects. You don't own them and you certainly don't want to try to implement 100% of the standard
 functionality (just implement what you need). Besides host objects are allowed to throw exceptions just for *reading* their properties (and some do just that in IE)."
 
-So if the executive summary isn't enough, read on as I break down what David is saying.
+If David's executive summary isn't quite enough juice for you, then read on as I break down some of the points.
 
 ## 1. Augmenting Host and Native objects is a bad idea
 
 It's well known that messing with host objects [[0](#ref0)] and to a slightly lesser extent, native objects [[1](#ref1)] is an ill-advised technique that's prone to error. Polyfills rely on this technique and so they are, by their very nature, prone to error.
 
-## 2. Effort to implement full standard
+## 2. Implementing entire standard is very hard and sometimes unnecessary
 
-When choosing to polyfill, you paint yourself into a corner by having to recreate the entire standard. This makes the job significantly harder, perhaps impossible *and* is often unnecessary to build the feature you want. This is why context is so important. Let's explore this further with two examples...
+When choosing the polyfill technique, you unfortunately paint yourself into a corner &mdash; you now have to recreate all aspects of that API. This makes the job significantly harder, perhaps impossible *and* is often unnecessary to build the feature you want. This is why context is so important. Let's explore this further with two examples...
 
 ### 2.1 A polyfill that works
 
@@ -210,7 +210,3 @@ The Host is a dynamic (and unpredictable) environment, and polyfills try to bend
 	<dt class="citation" id="ref4">[4]</dt>
 	<dd><a href="http://peter.michaux.ca/articles/cross-browser-widgets">Cross-browser widgets</a></dd>
 </dl>
-
-<!--
-	* emphasise better/different that wrappers don't force you to expect the same functionality.
--->
