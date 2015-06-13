@@ -200,7 +200,7 @@ For completeness the calling application code is provided below. Don't worry if 
 
 ## Summary
 
-The Host is a dynamic (and unpredictable) environment, and polyfills try to bend the rules in order to create a static environment. At best, polyfills are harder to implement. At their worst, they are impossible to implement to standard. This increases development effort significantly but even worse results in unreliable software. The answer, is of course to use wrappers. You get the all the same functionality but without the pitfalls.
+The Host is a dynamic and unpredictable environment, and polyfills try to bend the rules in order to create a static environment. At best, polyfills are harder to implement. At their worst, they are impossible to implement to standard. This increases development effort significantly but even worse results in unreliable software. The answer, is of course to use wrappers. You get the all the same functionality but without the pitfalls.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
