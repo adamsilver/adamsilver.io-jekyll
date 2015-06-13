@@ -18,7 +18,7 @@ It's well known that messing with host objects [[0](#ref0)] and to a slightly le
 
 ## 2. Implementing entire standard is very hard and sometimes unnecessary
 
-When choosing the polyfill technique, you unfortunately paint yourself into a corner &mdash; you now have to recreate all aspects of that API. This makes the job significantly harder, perhaps impossible *and* is often unnecessary to build the feature you want. This is why context is so important. Let's explore this further with two examples...
+When choosing the polyfill technique, you unfortunately paint yourself into a corner &mdash; you now have to recreate all aspects of that API. This makes the job significantly harder, perhaps impossible *and* is often unnecessary to build the feature you want. This is why context is so important. Let's explore this further with two examples.
 
 ### 2.1 A polyfill that works
 
@@ -94,18 +94,21 @@ So far so good.
 
 To demonstrate the problem, open your favourite browser, one that provides `Object.create`. Type the following into the console:
 
+	// Correctly throws a error
 	var myObj = Object.create(null, { a: 1 });
 
 Notice the error that occurs. This happens because the properties argument is incorrectly formatted.
 
 Next, find a browser that doesn't provide `Object.create` or omit the feature detection so the real API is overriden, and once again  type the following into the console:
 
+	// Incorrectly does not throw an error
 	var myObj = Object.create(null, { a: 1 });
 
-Notice the error is incorrectly supressed because the polyfill isn't checking the format. You could argue that the polyfill could be updated to handle this scenario &mdash; for the moment let's note that the intelligent minds over at MDN didn't cover this and that more work needs to be done.
+Notice no error occurs. The error is incorrectly supressed because the polyfill isn't checking the format of the property description. You could argue that the polyfill could be edited to handle this scenario but for the moment let's note that the intelligent minds over at MDN didn't cover this and that more work needs to be done.
 
 For the last demonstration, type the following into the console:
 
+	// Create object defining an unwriteable `a` property
 	var myObj = Object.create(null, {
 		a: {
 			value: 1,
@@ -113,6 +116,7 @@ For the last demonstration, type the following into the console:
 		}
 	});
 
+	// Assign 2 to the a property
 	myObj.a = 2;
 
 	// returns 1 when real, returns 2 when polyfilled
@@ -127,7 +131,7 @@ Earlier, I briefly mentioned that *context* is important but what exactly do I m
 
 ### 3.1 Cloning an object (modern browsers)
 
-If we require the ability to clone an object, *and* it's only required to (progressively) enhance the UI for *modern* browsers, then `Object.create` is a perfect candidate to solve this specific problem. See an example implementation below:
+If we require the ability to clone an object, *and* it's only required to enhance the UI for *modern* browsers, then `Object.create` is a perfect candidate to solve this specific problem. See an example implementation below:
 
 	var lib = {};
 	if(Object.create) {
@@ -138,7 +142,7 @@ If we require the ability to clone an object, *and* it's only required to (progr
 
 ### 3.2 Cloning an object (all browsers)
 
-So this problem is slightly different to the previous one, in that the context is different. In this case we want the same functionality but we want to support the enhanced experience in a broader range of browsers. An implementation for this might be as follows:
+The context of this new problem is more involved. We want to support the (progressively) enhanced experience in a broader range of browsers. A possible solution might be as follows:
 
 	var lib = {};
 	if(Object.create) {
@@ -160,7 +164,7 @@ If the browser lacks `Object.create`, the fallback is a slightly more complex/ol
 
 ### 3.3 Creating a new object
 
-What if you wanted to create an object? This question is surprisingly more involved than it first appears. There are lots of options:
+What if you wanted to create an object? This question is surprisingly more involved than it first appears. There are lots of options at our disposal.
 
 	// this creates you a new object
 	var myObj = {};
@@ -184,7 +188,7 @@ Each of these will create a new object, but the choice will be very different de
 		};
 	}
 
-For browsers that provide `Object.create`, the ES5 features can be utilised. But, and here is the interesting bit, what about browsers that don't provide `Object.create`? Nothing, the browser doesn't cut the mustard, because the feature detection doesn't pass. The user won't get the enhanced experience. This is Progressive Enhancement at its best. There is absolutely nothing wrong with that.
+For browsers that provide `Object.create`, the ES5 features can be used reliably. But, and here is the interesting bit, what about browsers that don't provide `Object.create`? Nothing, the browser doesn't cut the mustard, because the feature detection doesn't pass. The user won't get the enhanced experience. This is Progressive Enhancement at its best. There is absolutely nothing wrong with that.
 
 For completeness the calling application code is provided below. Don't worry if you are a little hazy on feature detection, feature testing and dynamic APIs &mdash; there are fantastic articles [[4](#ref4)] on this subject.
 
