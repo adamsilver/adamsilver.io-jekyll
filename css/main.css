@@ -144,6 +144,11 @@ p.share a {
     color: #fff;
     background-color: #39d;
     border-radius: 4px;
+    text-decoration: none;
+}
+
+p.share a:hover {
+	background-color: #2C82BB;
 }
 
 dt {
@@ -457,6 +462,7 @@ a img {
     padding: 10px 20px;
     color: #fff;
     font-weight: normal;
+    text-decoration: none;
 }
 
 .readArticles:hover {
