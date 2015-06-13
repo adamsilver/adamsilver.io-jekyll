@@ -208,9 +208,9 @@ The Host is a dynamic (and unpredictable) environment, and polyfills try to bend
 	<dt class="citation" id="ref1">[1]</dt>
 	<dd><a href="http://perfectionkills.com/extending-native-builtins/">Extending native built-ins</a></dd>
 	<dt class="citation" id="ref2">[2]</dt>
-	<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#Polyfill">MDN polyfill</a></dd>
+	<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#Polyfill">MDN Object.create polyfill</a></dd>
 	<dt class="citation" id="ref3">[3]</dt>
-	<dd><a href="https://github.com/es-shims/es5-shim#shams">ES Shim (Shams and may fail)</a></dd>
+	<dd><a href="https://github.com/es-shims/es5-shim">ES Shim readme: see "Shams" and "May fail" sections</a></dd>
 	<dt class="citation" id="ref4">[4]</dt>
 	<dd><a href="http://peter.michaux.ca/articles/cross-browser-widgets">Cross-browser widgets</a></dd>
 </dl>
