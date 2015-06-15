@@ -5,18 +5,18 @@ date:   2026-01-01 09:00:01
 categories: js
 ---
 
-A polyfill can be described as a piece of code that provides the technology that you expect the browser to provide natively, flattening the API landscape. I am a huge proponent of the outside-in approach to designing APIs, and so normalising browsers in this way appears to be a great idea. In reality however, this can be very problematic, particularly due to the frailty of the Host environment. David Mark sums up the problem:
+A polyfill can be described as a piece of code that provides the technology that you expect the browser to provide natively, flattening the API landscape. I am a huge proponent of the outside-in approach to designing APIs, and so normalising browsers in this way appears to be a great idea. In reality however, this can be very problematic, particularly due to the frailty of the host environment. David Mark sums up the problem:
 
 > "Use wrappers. Do *not* augment host objects. You don't own them and you certainly don't want to try to implement 100% of the standard
 functionality (just implement what you need). Besides host objects are allowed to throw exceptions just for *reading* their properties (and some do just that in IE)."
 
 If David's executive summary isn't quite enough juice for you, then read on as I break down some of the points.
 
-## 1. Augmenting Host and Native objects is a bad idea
+## 1. Augmenting host and native objects is a bad idea
 
 It's well known that messing with host objects [[0](#ref0)] and to a slightly lesser extent, native objects [[1](#ref1)] is an ill-advised technique that's prone to error. Polyfills rely on this technique and so they are, by their very nature, prone to error.
 
-## 2. Implementing entire standard is very hard and sometimes unnecessary
+## 2. Implementing the entire standard is very hard and sometimes unnecessary
 
 When choosing the polyfill technique, you unfortunately paint yourself into a corner &mdash; you now have to recreate all aspects of that API. This makes the job significantly harder, perhaps impossible *and* is often unnecessary. This is why context is so important. Let's explore this further with two examples.
 
@@ -102,7 +102,7 @@ Next, find a browser that doesn't provide `Object.create` or omit the feature de
 	// Incorrectly does not throw an error
 	var myObj = Object.create(null, { a: 1 });
 
-Notice no error occurs. The error is incorrectly supressed because the polyfill isn't checking the format of the property description. You could argue that the polyfill could be edited to handle this scenario but for the moment let's note that the intelligent minds over at MDN didn't cover this and that more work needs to be done.
+Notice no error occurs. The error is incorrectly supressed because the polyfill isn't checking the format of the property description. You could argue that the polyfill could be edited to handle this scenario but for the moment let's note that the intelligent minds over at MDN didn't cover this, and that more work needs to be done.
 
 For the last demonstration, type the following into the console:
 
@@ -125,7 +125,7 @@ When attempting to assign `2` to the `a` property, this is incorrectly allowed. 
 
 ## 3. Avoid polyfills. Use wrappers!
 
-Earlier, I briefly mentioned that *context* is important but what exactly do I mean by *context*? *Context* is all about understanding the problem *first*. Only then can you work out the solution. Let's explore this with three examples.
+Earlier, I briefly mentioned that *context* is important but what exactly do I mean by *context*? It is all about understanding the problem *first*. Only then can you work out the solution. Let's explore this with three examples.
 
 ### 3.1 Cloning an object (modern browsers)
 
@@ -158,7 +158,7 @@ The context of this new problem is more involved. We want to support the (progre
 		})();
 	}
 
-If the browser lacks `Object.create`, the fallback is a slightly more complex (and older) implementation, which many more browsers support. Also take note that, there is no need to recreate the entire standard. So in context of the problem this works, and works *reliably*.
+If the browser lacks `Object.create`, the fallback is a slightly more complex (and older) implementation, which many more browsers support. Also take note that there is no need to recreate the entire standard. So in context of the problem this works, and works *reliably*.
 
 ### 3.3 Creating a new object
 
@@ -186,7 +186,7 @@ Each of these will create a new object, but the choice will be very different de
 		};
 	}
 
-For browsers that provide `Object.create`, the ES5 features can be used reliably. But, and here is the interesting bit, what about browsers that don't provide `Object.create`? Nothing, the browser doesn't cut the mustard, because the feature detection doesn't pass. The user won't get the enhanced experience. This is Progressive Enhancement at its best. There is absolutely nothing wrong with that.
+For browsers that provide `Object.create`, the ES5 features can be used reliably. But, and here is the interesting bit, what about browsers that don't provide `Object.create`? Nothing: the browser doesn't cut the mustard, because the feature detection doesn't pass. The user won't get the enhanced experience. This is Progressive Enhancement at its best. There is absolutely nothing wrong with that.
 For completeness the code for the calling application is provided below:
 
 	if(lib.createObject) {
@@ -199,7 +199,7 @@ Don't worry if you are a little hazy on feature detection, feature testing and d
 
 ## Summary
 
-The Host is a dynamic and unpredictable environment, and polyfills try to bend the rules in order to create a static environment. At best, polyfills are harder to implement. At their worst, they are impossible to implement to standard. This increases development effort significantly but even worse results in unreliable software. The answer, is of course to use wrappers. You get the all the same functionality but without the pitfalls.
+The host is a dynamic and unpredictable environment, and polyfills try to bend the rules in order to create a static environment. At best, polyfills are harder to implement. At their worst, they are impossible to implement to standard. This increases development effort significantly but even worse, results in unreliable software. The answer, is of course to use wrappers. You get all the same functionality but without the pitfalls.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
