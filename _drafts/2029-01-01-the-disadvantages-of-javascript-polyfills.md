@@ -5,7 +5,7 @@ date:   2026-01-01 09:00:01
 categories: js
 ---
 
-A polyfill can be described as a piece of code that provides the technology that you expect the browser to provide natively, flattening the API landscape. I am a huge proponent of Outside-in Development, and so the idea of flattening or normalising the browsers appears to be a great idea. In reality however, this can be very problematic, particularly due to the frailty of the Host environment, the *browser*. David Mark sums up the problem:
+A polyfill can be described as a piece of code that provides the technology that you expect the browser to provide natively, flattening the API landscape. I am a huge proponent of the outside-in approach to designing APIs, and so normalising browsers in this way appears to be a great idea. In reality however, this can be very problematic, particularly due to the frailty of the Host environment. David Mark sums up the problem:
 
 > "Use wrappers. Do *not* augment host objects. You don't own them and you certainly don't want to try to implement 100% of the standard
 functionality (just implement what you need). Besides host objects are allowed to throw exceptions just for *reading* their properties (and some do just that in IE)."
@@ -18,7 +18,7 @@ It's well known that messing with host objects [[0](#ref0)] and to a slightly le
 
 ## 2. Implementing entire standard is very hard and sometimes unnecessary
 
-When choosing the polyfill technique, you unfortunately paint yourself into a corner &mdash; you now have to recreate all aspects of that API. This makes the job significantly harder, perhaps impossible *and* is often unnecessary to build the feature you want. This is why context is so important. Let's explore this further with two examples.
+When choosing the polyfill technique, you unfortunately paint yourself into a corner &mdash; you now have to recreate all aspects of that API. This makes the job significantly harder, perhaps impossible *and* is often unnecessary. This is why context is so important. Let's explore this further with two examples.
 
 ### 2.1 A polyfill that works
 
@@ -39,11 +39,9 @@ When choosing the polyfill technique, you unfortunately paint yourself into a co
 		};
 	}
 
-So far so good.
-
 ### 2.2 A polyfill that doesn't work
 
-`Object.create` is very difficult to polyfill reliably. Let's explore the issues by using the example on MDN [[2](#ref2)] as follows:
+It is very difficult to implement a polyfill for `Object.create` that's reliable. Let's explore the issues by using the example on MDN [[2](#ref2)] as follows:
 
 	// If not already defined
 	if (typeof Object.create != 'function') {
@@ -92,7 +90,7 @@ So far so good.
 	  })();
 	}
 
-To demonstrate the problem, open your favourite browser, one that provides `Object.create`. Type the following into the console:
+To demonstrate the issue, open your favourite browser, one that provides `Object.create` and type the following into the console:
 
 	// Correctly throws a error
 	var myObj = Object.create(null, { a: 1 });
@@ -127,7 +125,7 @@ When attempting to assign `2` to the `a` property, this is incorrectly allowed. 
 
 ## 3. Avoid polyfills. Use wrappers!
 
-Earlier, I briefly mentioned that *context* is important but what exactly do I mean by *context*? *Context* is all about understanding the problem *first*. Only then can you work out the solution. Let's explore this with two examples.
+Earlier, I briefly mentioned that *context* is important but what exactly do I mean by *context*? *Context* is all about understanding the problem *first*. Only then can you work out the solution. Let's explore this with three examples.
 
 ### 3.1 Cloning an object (modern browsers)
 
@@ -160,11 +158,11 @@ The context of this new problem is more involved. We want to support the (progre
 		})();
 	}
 
-If the browser lacks `Object.create`, the fallback is a slightly more complex/older implementation, which many browsers support. It is important to note, there is no need to recreate the entire standard and the function leans on feature detection to provide the most performant, up-to-date standards where possible.
+If the browser lacks `Object.create`, the fallback is a slightly more complex (and older) implementation, which many more browsers support. Also take note that, there is no need to recreate the entire standard. So in context of the problem this works, and works *reliably*.
 
 ### 3.3 Creating a new object
 
-What if you wanted to create an object? This question is surprisingly more involved than it first appears. There are lots of options at our disposal.
+What if you wanted to create an object? This question is surprisingly more involved than it first appears. There are a lot of options at our disposal.
 
 	// this creates you a new object
 	var myObj = {};
@@ -179,7 +177,7 @@ What if you wanted to create an object? This question is surprisingly more invol
 	// and this
 	var myObj = Object.create();
 
-Each of these will create a new object, but the choice will be very different depending on what functionality you *need*. For the purposes of this demo, I am going to assume the ECMAScript 5 features that we discussed earlier are desired.
+Each of these will create a new object, but the choice will be very different depending on context. For the purposes of this demo, I am going to assume the ECMAScript 5 features that we discussed earlier are desired.
 
 	var lib = {};
 	if(Object.create) {
@@ -189,14 +187,15 @@ Each of these will create a new object, but the choice will be very different de
 	}
 
 For browsers that provide `Object.create`, the ES5 features can be used reliably. But, and here is the interesting bit, what about browsers that don't provide `Object.create`? Nothing, the browser doesn't cut the mustard, because the feature detection doesn't pass. The user won't get the enhanced experience. This is Progressive Enhancement at its best. There is absolutely nothing wrong with that.
-
-For completeness the calling application code is provided below. Don't worry if you are a little hazy on feature detection, feature testing and dynamic APIs &mdash; there are fantastic articles [[4](#ref4)] on this subject.
+For completeness the code for the calling application is provided below:
 
 	if(lib.createObject) {
 		// enhanced experience
 		var myObj = lib.createObject(null, ...);
 		// etc
 	}
+
+Don't worry if you are a little hazy on feature detection, feature testing and dynamic APIs &mdash; there are fantastic articles [[4](#ref4)] on this subject.
 
 ## Summary
 
