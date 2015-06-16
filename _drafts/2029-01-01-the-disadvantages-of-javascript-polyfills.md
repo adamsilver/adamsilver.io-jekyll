@@ -41,7 +41,7 @@ When choosing the polyfill technique, you unfortunately paint yourself into a co
 
 ### 2.2 A polyfill that doesn't work
 
-It is very difficult to implement a polyfill for `Object.create` that's reliable. Let's explore the issues by using the example on MDN [[2](#ref2)] as follows:
+It is very difficult to *reliably* implement a polyfill for `Object.create`. Let's explore the issues by using the example on MDN [[2](#ref2)] as follows:
 
 	// If not already defined
 	if (typeof Object.create != 'function') {
@@ -92,12 +92,12 @@ It is very difficult to implement a polyfill for `Object.create` that's reliable
 
 To demonstrate the issue, open your favourite browser, one that provides `Object.create` and type the following into the console:
 
-	// Correctly throws a error
+	// Correctly throws an error
 	var myObj = Object.create(null, { a: 1 });
 
 Notice the error that occurs. This happens because the properties argument is incorrectly formatted.
 
-Next, find a browser that doesn't provide `Object.create` or omit the feature detection so the real API is overriden, and once again  type the following into the console:
+Next, find a browser that doesn't provide `Object.create` or omit the feature detection so the real API is overridden, and once again  type the following into the console:
 
 	// Incorrectly does not throw an error
 	var myObj = Object.create(null, { a: 1 });
@@ -177,7 +177,7 @@ What if you wanted to create an object? This question is surprisingly more invol
 	// and this
 	var myObj = Object.create();
 
-Each of these will create a new object, but the choice will be very different depending on context. For the purposes of this demo, I am going to assume the ECMAScript 5 features that we discussed earlier are desired.
+Each of these will create a new object, but the choice will be very different depending on context. For the purposes of this demo, I am going to assume the ECMAScript 5 features that we discussed earlier are desired and necessary.
 
 	var lib = {};
 	if(Object.create) {
@@ -186,7 +186,7 @@ Each of these will create a new object, but the choice will be very different de
 		};
 	}
 
-For browsers that provide `Object.create`, the ES5 features can be used reliably. But, and here is the interesting bit, what about browsers that don't provide `Object.create`? Nothing: the browser doesn't cut the mustard, because the feature detection doesn't pass. The user won't get the enhanced experience. This is Progressive Enhancement at its best. There is absolutely nothing wrong with that.
+For browsers that provide `Object.create`, the ES5 features can be used reliably. But, and here is the interesting bit, what about browsers that don't provide `Object.create`? Nothing! The browser doesn't cut the mustard, because the feature detection doesn't pass. The user won't get the enhanced experience. This is Progressive Enhancement at its best. There is absolutely nothing wrong with that.
 For completeness the code for the calling application is provided below:
 
 	if(lib.createObject) {
