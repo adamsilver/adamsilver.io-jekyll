@@ -17,45 +17,59 @@ Polyfills by their very nature rely on host and native object augmentation which
 
 Furthermore, you may not need the entire API for the component that you're building; you may not even be *able* to implement a polyfill because there's just no way to do it. This is why context is important (something that David Mark express frequently). What exactly does David mean by context? As David's not writing this, you will just have to go by my personal view on this. Firstly, understand and define the problem and secondly, work out the leanest solution. With polyfills it's all or nothing, wherby you rarely need *all* of the API and the solution is anything but lean.
 
-## Case study: Polyfilling Object.create
+## Implementating an Object.create polyfill
 
-As an example, `Object.create` seems like a rather straightforward API to polyfill but it's uncessarily painful. Let me quote the ES5 shim readme.
+As an example, `Object.create` seems like a rather straightforward API to polyfill but it's uncessarily painful. The ES5 Shim project *readme* file is rather telling.
 
 > For the case of simply "begetting" an object that inherits prototypically from another, this should work fine across legacy engines.
 
-Notice *should*. I really like to build upon solid foundations. To quote David Mark - you're only as reliable as your lowest level function. Then the readme continues with a warning:
+Notice *should*. Personally, I like to build upon solid foundations, and to quote David Mark - you're only as reliable as your lowest level function; so in this case, not very. It continues...
 
 > The second argument is passed to Object.defineProperties which will probably fail either silently or with extreme prejudice.
 
 Does any of this sound like something you want to add to your technology stack? And this is just *one* example. There are many, many others.
 
-Polyfills just don't give you enough protection from underlying browser differences. Additionally, you really don't want your application logic having knowledge of browser implementations. This is why abstractions are a positive thing. Enter facades.
+Polyfills just don't give you enough protection from underlying browser differences. Additionally, you really don't want your application logic having knowledge of browser implementations. This is why myself, and many others laud the use of wrappers.
 
-## Facades. That's better.
+## Use a facade instead!
 
 A facade (a form of wrapper) is a design pattern that creates a different interface for a feature. The goal of a facade is to abstract away some underlying interface so that you don't need to access it directly. All interaction goes through the facade, which allows you to manipulate the operation of the underlying functionality as necessary.
 
-Using a facade allows you to completely abstract away the differences, with the flexibility to provide a solution relevant to the context of your problem with an alternative better, simpler method signature. Inside the facade there is nothing to stop you using portions of the API, and feature testing various implementations and acting accordingly based on the tests [0]. Acting accordingly might be bailing (not enhancing) or fixing.
+Using a facade allows you to completely abstract away the differences, with the flexibility to provide a solution relevant to the context of your problem with an alternative better, simpler method signature. Inside the facade there is nothing to stop you using portions of the API, and feature testing various implementations and acting accordingly [0]; this might mean be bailing (not enhancing) or fixing.
 
-## Case study: Facade for cloning an object
+Cloning an object is a pertinent example for this article because `Object.create` is a useful API to solve this problem. If you just wanted to support modern browsers, browsers that provide `Object.create` then an implementation is as simple as follows:
 
-If we require the ability to clone an object, *and* it's only required to enhance the UI for *modern* browsers, then `Object.create` is a perfect candidate to solve this specific problem. See an example implementation below:
-
+	// namespace
 	var lib = {};
+
+	// if the browser supports Object.create
 	if(Object.create) {
+
+		// define a cloneObject function
 		lib.cloneObject = function(o) {
+			// return cloned object
 			return Object.create(o);
 		};
 	}
 
-What if wee want to support the (progressively) enhanced experience in a broader range of browsers. A possible solution might be as follows:
+Note: No second argument is necessary and so the method signature and implementation is very lean. Just what we need in this context.
 
+What about older browsers, browsers that don't support `Object.create`. This is where the feature detection comes in. A possible implementation is as follows:
+
+	// namespace
 	var lib = {};
+
+	// this fork is the same as previous
 	if(Object.create) {
 		lib.cloneObject = function(o) {
 			return Object.create(o);
 		};
+
+	// for older browsers lacking Object.create
 	} else {
+
+		// lean on constructors and their prototype
+		// to clone an object
 		lib.cloneObject = (function() {
 			var Fn = function() {};
 
@@ -66,52 +80,23 @@ What if wee want to support the (progressively) enhanced experience in a broader
 		})();
 	}
 
-If the browser lacks `Object.create`, the fallback is a slightly more complex (and older) implementation, which many more browsers support. Also take note that there is no need to recreate the entire standard. So in context of the problem this works, and works *reliably*.
+So the context of the problem changed slightly, but the complexity is abstracted away and is still lean. And no need to implement the entirety of `Object.create`. Win.
 
+But what if you did really want to use the second argument that `Object.create` enables? An implementation might be as follows:
 
-
-===================
-
-TODO:
-
-* Change facade wording etc pla
-
-### 3.3 Creating a new object
-
-What if you wanted to create an object? This question is surprisingly more involved than it first appears. There are a lot of options at our disposal.
-
-	// this creates you a new object
-	var myObj = {};
-
-	// so does this
-	function Blah() {};
-	var myObj = new Blah();
-
-	// and this
-	var myObj = new Object();
-
-	// and this
-	var myObj = Object.create();
-
-Each of these will create a new object, but the choice will be very different depending on context. For the purposes of this demo, I am going to assume the ECMAScript 5 features that we discussed earlier are desired and necessary.
-
+	// namespace
 	var lib = {};
+
+	// if browser supports it
 	if(Object.create) {
+
+		// define a function that returns a new object
 		lib.createObject = function(obj, props) {
 			return Object.create(obj, props);
 		};
 	}
 
-For browsers that provide `Object.create`, the ES5 features can be used reliably. But, and here is the interesting bit, what about browsers that don't provide `Object.create`? Nothing! The browser doesn't cut the mustard, because the feature detection doesn't pass. The user won't get the enhanced experience. This is Progressive Enhancement at its best. There is absolutely nothing wrong with that.
-For completeness the code for the calling application is provided below:
-
-	if(lib.createObject) {
-		// enhanced experience
-		var myObj = lib.createObject(null, ...);
-		// etc
-	}
-
-
+But, and here is the interesting bit, what about browsers that don't provide `Object.create`? Nothing! The browser doesn't cut the mustard, because the feature detection doesn't pass. The user won't get the enhanced experience. This is Progressive Enhancement at its best.
 
 ## Summary
 
@@ -133,31 +118,25 @@ The host is a dynamic and unpredictable environment, and polyfills try to bend t
 
 <!--
 
-## What to do instead?
+TODO:
 
+* Change facade wording etc pla
 
+* checking existence of an API is not always enough
 
+* When you use native JavaScript APIs directly, you are placing a bet. That bet is that all browsers implement the API exactly the same. You're banking your future development time on it. And if a browser implements that API incorrectly, what is your course of action? How quickly can you roll out a fix to your users? You'll start writing workarounds and browser detection, and all of a sudden your code isn't as straightforward to maintain. And sometimes the differents in the browsers are so great that a simple workaround won't do.
 
+* Where there's a choice between facades and polyfills, I always choose the facade. The reason is that polyfills suffer from the same downsides as native APIs. They represent yet another implementation of the same functionality.
 
-	5. Break down the bad points
-		5.2 implementing entire standard
-		5.3 checking existence of an API is not always enough
+* The main takeaway is that you can't rely on native APIs, you can't rely on your implementation of a native API and sometimes a polyfill is impossible to implement using alternative methods. e.g. polyfill attachEvent or getElementById. And this doesn't just apply to old APIs, same goes for new ones like Zakas matchMedia.
 
-	When you use native JavaScript APIs directly, you are placing a bet. That bet is that all browsers implement the API exactly the same. You're banking your future development time on it. And if a browser implements that API incorrectly, what is your course of action? How quickly can you roll out a fix to your users? You'll start writing workarounds and browser detection, and all of a sudden your code isn't as straightforward to maintain. And sometimes the differents in the browsers are so great that a simple workaround won't do.
+* Then there is the question of consistency. Do you want to use some polyfills and some facades. Probably not. Just use a consistent abstraction, a facade.
 
-	Where there's a choice between facades and polyfills, I always choose the facade. The reason is that polyfills suffer from the same downsides as native APIs. They represent yet another implementation of the same functionality.
+* On the other hand, using a wrapper, or a facade,
 
-	The main takeaway is that you can't rely on native APIs, you can't rely on your implementation of a native API and sometimes a polyfill is impossible to implement using alternative methods. e.g. polyfill attachEvent or getElementById. And this doesn't just apply to old APIs, same goes for new ones like Zakas matchMedia.
+* So in short, don't stop abstracting these browser differences away. New APIs are great, make use of them, detect, test and write a facade, enhance from there. Don't exacabate the problem of browser bugs by increasing the chance of creating and working around more of them.
 
-	Then there is the question of consistency. Do you want to use some polyfills and some facades. Probably not. Just use a consistent abstraction, a facade.
-
-
-
-	On the other hand, using a wrapper, or a facade,
-
-	So in short, don't stop abstracting these browser differences away. New APIs are great, make use of them, detect, test and write a facade, enhance from there. Don't exacabate the problem of browser bugs by increasing the chance of creating and working around more of them.
-
-	Also, application logic shouldn't be aware of the browser. If you use polyfills then it has to be aware of browser problems and mitigate against new browsers being released which happens all the time. Abstract into a library, means your app logic never has to change.
+* Also, application logic shouldn't be aware of the browser. If you use polyfills then it has to be aware of browser problems and mitigate against new browsers being released which happens all the time. Abstract into a library, means your app logic never has to change.
 
 -->
 
