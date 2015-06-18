@@ -5,87 +5,39 @@ date:   2026-01-01 09:00:01
 categories: js
 ---
 
-A polyfill, also known as a shim, attempts to level the browser playing field, by implementing an API directly when it isn't natively provided by the browser. The popularity of polyfills seems to have arisen due to various proclamations such as "You don't even need a library anymore, you can just use the APIs directly". One reason for this is due to browsers providing APIs such as `document.getElementsByClassName()` (as well as many others) natively. Another reason is that older browsers are seeing less usage (shock) and so it appears some of the problems have gone away. Strangely, if old browsers are irrelevant (they are not) and new browsers have got everything we need (they don't), then why the need for polyfills at all?
+A polyfill, also known as a shim, attempts to level the browser playing field, by implementing an API directly when it isn't natively provided by the browser. The popularity of polyfills seems to have arisen due to various proclamations such as "You don't even need a library anymore, you can just use the APIs directly". One reason for this is due to browsers providing APIs such as `document.getElementsByClassName()` as well as many others. Another reason is that older browsers are seeing less usage (shock) and so it appears some of the problems have gone away. Strangely, if old browsers are irrelevant (they are not) and new browsers have got everything we need (they don't), then why the need for polyfills at all?
 
-The thing this, just because these APIs exist in the more modern browsers of today, it most certainly does *not* mean that polyfills are the way to go. Infact polyfills most certainly are **not** the way to go. Also, the point about older browsers is silly. Various different (versions of) browsers are released daily. And just because developers want to drop support for a browser doesn't mean your users want to (or are able to) upgrade their browser.
+The thing is, just because these APIs exist in the modern browsers of today, it most certainly does *not* mean that polyfills are the way to go. Infact polyfills most certainly are **not** the way to go. Also, the point about older browsers is silly. Various different (versions of) browsers are released daily. And just because developers want to drop support for a browser doesn't mean your users want to (or are able to) upgrade their browser.
 
 But why is *now* in particlular, a good time to use APIs directly? The answer is that it isn't. Old browsers were once modern and *they* had the latest and greatest APIs. In anycase, it was much easier to polyfill back then (when nobody did) because there were less browsers to keep tabs on. Today, there are many *more* browsers, so polyfilling is asking for more trouble than ever before and this is only getting *harder*.
 
-Browsers, just like web pages, just like any other software, contain bugs. Why? Because it's all written by humans. Just because it's a native API doesn't mean it can be relied upon. Sometimes, the spec is just misunderstood between browser vendors. Relying on a browser implementation is no better than relying on your own implementation, and most certainly can't forgo proper feature *testing*.
+Browsers, like websites, like all software, contain bugs. This is because it's written by your fellow human. Just because it's a native API doesn't mean it can be relied upon. Sometimes, the spec is just misunderstood and implemented differently across browser vendors. Relying on a browser implementation is no better than relying on your own implementation, and most certainly can't forgo proper feature *testing*.
 
-Polyfills by their very nature rely on host and native object augmentation which has been ill-advised for longer than I have been developing for the web (approx. 15 years). If you're still unaware at this point in time, make it a point to research (links cited at the end of this article).
+Polyfills by their very nature rely on host and native object augmentation which has been ill-advised for longer than I have been developing for the web (approx. 15 years). If you're unaware of this fact, please make it a point to read the links cited at the bottom of this article.
 
-Furthermore, you may not need the entire API for the component that you're building &mdash; you may not be *able* to implement a polyfill because there's just no way to do it. This is why context is important (something that David Mark frequently repeats). What exactly do I mean by context? First, understand and define the problem, then work out the leanest solution. With polyfills it's all or nothing, wherby you rarely need *all* of the API and the solution is anything but lean.
+Furthermore, you may not need the entire API for the component that you're building; you may not even be *able* to implement a polyfill because there's just no way to do it. This is why context is important (something that David Mark express frequently). What exactly does David mean by context? As David's not writing this, you will just have to go by my personal view on this. Firstly, understand and define the problem and secondly, work out the leanest solution. With polyfills it's all or nothing, wherby you rarely need *all* of the API and the solution is anything but lean.
 
 ## Case study: Polyfilling Object.create
 
-Taking the seemingly simple `Object.create` polyfill as just one of many examples we will see just how unecessarily painful the polyfill solution is. Let's assume that you *do* need the features of `Object.create` and so you use a seemingly thorough polyfill, like the one over at MDN. It's fraught with problems. Some problems that are perhaps possible to solve, some that aren't.
+As an example, `Object.create` seems like a rather straightforward API to polyfill but it's uncessarily painful. Let me quote the ES5 shim readme.
 
-The first issue is that the polyfill behaves differently to the native API. When using the polyfill implementation `Object.create(null, { a: 1 })` throws an error which is the expected and correct behavior. The polyfill implementation incorrectly supresses the error. Is this something you really want to be dealing with?
+> For the case of simply "begetting" an object that inherits prototypically from another, this should work fine across legacy engines.
 
-The second issue is that the native implementation allows you to have certain property descriptors: `writeable`, `get`, `set`, `configurable`, `enumerable`. The polyfill implementation effectively ignores these descriptors.
+Notice *should*. I really like to build upon solid foundations. To quote David Mark - you're only as reliable as your lowest level function. Then the readme continues with a warning:
 
-Polyfills just don't give you enough protection from underlying browser differences. Using polyfills
+> The second argument is passed to Object.defineProperties which will probably fail either silently or with extreme prejudice.
 
-This is something you most certainly don't want your application logic having to deal with, particularly with the array of newly released browsers. which is exactly what will happen if you use polyfills because there is now protective abstraction. Enter facades.
+Does any of this sound like something you want to add to your technology stack? And this is just *one* example. There are many, many others.
 
-## Facades to the rescue
+Polyfills just don't give you enough protection from underlying browser differences. Additionally, you really don't want your application logic having knowledge of browser implementations. This is why abstractions are a positive thing. Enter facades.
+
+## Facades. That's better.
 
 A facade (a form of wrapper) is a design pattern that creates a different interface for a feature. The goal of a facade is to abstract away some underlying interface so that you don't need to access it directly. All interaction goes through the facade, which allows you to manipulate the operation of the underlying functionality as necessary.
 
+Using a facade allows you to completely abstract away the differences, with the flexibility to provide a solution relevant to the context of your problem with an alternative better, simpler method signature. Inside the facade there is nothing to stop you using portions of the API, and feature testing various implementations and acting accordingly based on the tests [0]. Acting accordingly might be bailing (not enhancing) or fixing.
+
 ## Case study: Facade for cloning an object
-
-===================
-
-
-TODO:
-
-* Put MDN es5 shim in a gist and reference that
-* Put both Object.create examples into gists
-* Facades wrappers to the rescue
-* Change facade wording etc pla
-
-
-### 2.2 A polyfill that doesn't work
-
-To demonstrate the issue, open your favourite browser, one that provides `Object.create` and type the following into the console:
-
-	// Correctly throws an error
-	var myObj = Object.create(null, { a: 1 });
-
-Notice the error that occurs. This happens because the properties argument is incorrectly formatted.
-
-Next, find a browser that doesn't provide `Object.create` or omit the feature detection so the real API is overridden, and once again  type the following into the console:
-
-	// Incorrectly does not throw an error
-	var myObj = Object.create(null, { a: 1 });
-
-Notice no error occurs. The error is incorrectly supressed because the polyfill isn't checking the format of the property description. You could argue that the polyfill could be edited to handle this scenario but for the moment let's note that the intelligent minds over at MDN didn't cover this, and that more work needs to be done.
-
-For the last demonstration, type the following into the console:
-
-	// Create object defining an unwriteable `a` property
-	var myObj = Object.create(null, {
-		a: {
-			value: 1,
-			writeable: false
-		}
-	});
-
-	// Assign 2 to the a property
-	myObj.a = 2;
-
-	// returns 1 when real, returns 2 when polyfilled
-	myObj.a;
-
-
-When attempting to assign `2` to the `a` property, this is incorrectly allowed. The real `Object.create` correctly disallows the assignment. This is just *one* of several properties that need careful consideration &mdash; `configurable`, `enumerable`, `get` and `set` are the others. This is not the only example of unreliable polyfills &mdash; there are many more [[3](#ref3)].
-
-## 3. Avoid polyfills. Use wrappers!
-
-Earlier, I briefly mentioned that *context* is important but what exactly do I mean by *context*? It is all about understanding the problem *first*. Only then can you work out the solution. Let's explore this with three examples.
-
-### 3.1 Cloning an object (modern browsers)
 
 If we require the ability to clone an object, *and* it's only required to enhance the UI for *modern* browsers, then `Object.create` is a perfect candidate to solve this specific problem. See an example implementation below:
 
@@ -96,9 +48,7 @@ If we require the ability to clone an object, *and* it's only required to enhanc
 		};
 	}
 
-### 3.2 Cloning an object (all browsers)
-
-The context of this new problem is more involved. We want to support the (progressively) enhanced experience in a broader range of browsers. A possible solution might be as follows:
+What if wee want to support the (progressively) enhanced experience in a broader range of browsers. A possible solution might be as follows:
 
 	var lib = {};
 	if(Object.create) {
@@ -117,6 +67,14 @@ The context of this new problem is more involved. We want to support the (progre
 	}
 
 If the browser lacks `Object.create`, the fallback is a slightly more complex (and older) implementation, which many more browsers support. Also take note that there is no need to recreate the entire standard. So in context of the problem this works, and works *reliably*.
+
+
+
+===================
+
+TODO:
+
+* Change facade wording etc pla
 
 ### 3.3 Creating a new object
 
@@ -153,7 +111,7 @@ For completeness the code for the calling application is provided below:
 		// etc
 	}
 
-Don't worry if you are a little hazy on feature detection, feature testing and dynamic APIs &mdash; there are fantastic articles [[4](#ref4)] on this subject.
+
 
 ## Summary
 
@@ -195,7 +153,7 @@ The host is a dynamic and unpredictable environment, and polyfills try to bend t
 
 
 
-	On the other hand, using a wrapper, or a facade, allows you to completely abstract away the differences, with the flexibility to provide a solution relevant to the context of your problem with a alternative and better and simpler method signature etc.
+	On the other hand, using a wrapper, or a facade,
 
 	So in short, don't stop abstracting these browser differences away. New APIs are great, make use of them, detect, test and write a facade, enhance from there. Don't exacabate the problem of browser bugs by increasing the chance of creating and working around more of them.
 
