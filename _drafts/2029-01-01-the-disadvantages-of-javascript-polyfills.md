@@ -19,66 +19,36 @@ Polyfills by their very nature rely on host and native object augmentation which
 
 Furthermore, You may not need the entire standard to get the feature that you require. Also, you may not be able to polyfill the feature you require because there's just no way to do it. This is why context is important. What exactly do I mean by context? It's obvious really. First understand and define the problem, then work out the leanest solution. With polyfills it's all or nothing, wherby you rarely need *all* of the API.
 
-## Case study: Object.create
+## Case study: Polyfilling Object.create
 
-Taking the seemingly simple `Object.create` polyfill as just one of many examples we will see just how unecessarily painful the polyfill solution is. Let's assume that you do need the features of `Object.create` and so you use a seemingly thorough polyfill, like the one over at MDN. It's fraught with problems. Some problems that are perhaps possible to solve, some that aren't.
+Taking the seemingly simple `Object.create` polyfill as just one of many examples we will see just how unecessarily painful the polyfill solution is. Let's assume that you *do* need the features of `Object.create` and so you use a seemingly thorough polyfill, like the one over at MDN. It's fraught with problems. Some problems that are perhaps possible to solve, some that aren't.
 
-## Facades (wrappers) to the rescue
+The first issue is that the polyfill behaves differently to the native API. When using the polyfill implementation `Object.create(null, { a: 1 })` throws an error which is the expected and correct behavior. The polyfill implementation incorrectly supresses the error. Is this something you really want to be dealing with?
 
+The second issue is that the native implementation allows you to have certain property descriptors: `writeable`, `get`, `set`, `configurable`, `enumerable`. The polyfill implementation effectively ignores these descriptors.
+
+Polyfills just don't give you enough protection from underlying browser differences. Using polyfills
+
+This is something you most certainly don't want your application logic having to deal with, particularly with the array of newly released browsers. which is exactly what will happen if you use polyfills because there is now protective abstraction. Enter facades.
+
+## Facades to the rescue
+
+A facade (a form of wrapper) is a design pattern that creates a different interface for a feature. The goal of a facade is to abstract away some underlying interface so that you don't need to access it directly. All interaction goes through the facade, which allows you to manipulate the operation of the underlying functionality as necessary.
+
+## Case study: Facade for cloning an object
 
 ===================
 
 
+TODO:
+
+* Put MDN es5 shim in a gist and reference that
+* Put both Object.create examples into gists
+* Facades wrappers to the rescue
+* Change facade wording etc pla
+
+
 ### 2.2 A polyfill that doesn't work
-
-It is very difficult to *reliably* implement a polyfill for `Object.create`. Let's explore the issues by using the example on MDN [[2](#ref2)] as follows:
-
-	// If not already defined
-	if (typeof Object.create != 'function') {
-		// Production steps of ECMA-262, Edition 5, 15.2.3.5
-		// Reference: http://es5.github.io/#x15.2.3.5
-		Object.create = (function() {
-		    // To save on memory, use a shared constructor
-		    function Temp() {}
-
-		    // make a safe reference to Object.prototype.hasOwnProperty
-		    var hasOwn = Object.prototype.hasOwnProperty;
-
-			return function (O) {
-				// 1. If Type(O) is not Object or Null throw a TypeError exception.
-				if (typeof O != 'object') {
-					throw TypeError('Object prototype may only be an Object or null');
-				}
-
-				// 2. Let obj be the result of creating a new object as if by the
-				// expression new Object() where Object is the standard built-in
-				// constructor with that name
-				// 3. Set the [[Prototype]] internal property of obj to O.
-				Temp.prototype = O;
-
-	      		var obj = new Temp();
-
-	      		Temp.prototype = null; // Let's not keep a stray reference to O...
-
-				// 4. If the argument Properties is present and not undefined, add
-				// own properties to obj as if by calling the standard built-in
-				// function Object.defineProperties with arguments obj and
-				// Properties.
-				if (arguments.length > 1) {
-					// Object.defineProperties does ToObject on its first argument.
-					var Properties = Object(arguments[1]);
-					for (var prop in Properties) {
-				  		if (hasOwn.call(Properties, prop)) {
-				    		obj[prop] = Properties[prop];
-				  		}
-					}
-				}
-
-				// 5. Return obj
-				return obj;
-			};
-	  })();
-	}
 
 To demonstrate the issue, open your favourite browser, one that provides `Object.create` and type the following into the console:
 
@@ -209,7 +179,7 @@ The host is a dynamic and unpredictable environment, and polyfills try to bend t
 
 ## What to do instead?
 
-A facade (a form of wrapper) is a design pattern that creates a different interface for a feature. The goal of a facade is to abstract away some underlying interface so that you don't need to access it directly. All interaction goes through the facade, which allows you to manipulate the operation of the underlying functionality as necessary.
+
 
 
 
@@ -219,22 +189,19 @@ A facade (a form of wrapper) is a design pattern that creates a different interf
 
 	When you use native JavaScript APIs directly, you are placing a bet. That bet is that all browsers implement the API exactly the same. You're banking your future development time on it. And if a browser implements that API incorrectly, what is your course of action? How quickly can you roll out a fix to your users? You'll start writing workarounds and browser detection, and all of a sudden your code isn't as straightforward to maintain. And sometimes the differents in the browsers are so great that a simple workaround won't do.
 
-	Then Zakas goes onto talk about a matchMedia case study exposing these flaws. Read his book for more.
-
-
 	Where there's a choice between facades and polyfills, I always choose the facade. The reason is that polyfills suffer from the same downsides as native APIs. They represent yet another implementation of the same functionality.
 
 	The main takeaway is that you can't rely on native APIs, you can't rely on your implementation of a native API and sometimes a polyfill is impossible to implement using alternative methods. e.g. polyfill attachEvent or getElementById. And this doesn't just apply to old APIs, same goes for new ones like Zakas matchMedia.
 
-	In the example I give with Object.create we now have the Object.create way, and the MDN way. Sometimes errors are thrown, sometimes they fail silently. Why do you want to deal with this?
+	Then there is the question of consistency. Do you want to use some polyfills and some facades. Probably not. Just use a consistent abstraction, a facade.
 
-	Polyfills just don't give you enough protection from underlying browser differences.
+
 
 	On the other hand, using a wrapper, or a facade, allows you to completely abstract away the differences, with the flexibility to provide a solution relevant to the context of your problem with a alternative and better and simpler method signature etc.
 
 	So in short, don't stop abstracting these browser differences away. New APIs are great, make use of them, detect, test and write a facade, enhance from there. Don't exacabate the problem of browser bugs by increasing the chance of creating and working around more of them.
 
-	Also, application logic shouldn't be away of the browser. If you use polyfills then it has to be aware of browser problems and mitigate against new browsers being released which happens all the time. Abstract into a library, means your app logic never has to change.
+	Also, application logic shouldn't be aware of the browser. If you use polyfills then it has to be aware of browser problems and mitigate against new browsers being released which happens all the time. Abstract into a library, means your app logic never has to change.
 
 -->
 
