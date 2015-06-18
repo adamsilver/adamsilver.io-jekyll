@@ -5,39 +5,29 @@ date:   2026-01-01 09:00:01
 categories: js
 ---
 
-A polyfill can be described as a piece of code that provides the technology that you expect the browser to provide natively, flattening the API landscape. I am a huge proponent of the outside-in approach to designing APIs, and so normalising browsers in this way appears to be a great idea. In reality however, this can be very problematic, particularly due to the frailty of the host environment. David Mark sums up the problem:
+A polyfill (aka shim) tries to level the browser playing field, by implementing an API directly when it isn't natively provided by the browser. The popularity of polyfills seems to have come about due to proclamations such as "You don't even need a library anymore, you can just use the APIs directly". One reason for this is due to browsers making it easier to do certain things natively. An example of this would be `document.getElementsByClassName()` but there are many others. Another reason is that older (and perhaps more troublesome) browsers are being used less and less and so it appears some of the problems have gone away.
 
-> "Use wrappers. Do *not* augment host objects. You don't own them and you certainly don't want to try to implement 100% of the standard
-functionality (just implement what you need). Besides host objects are allowed to throw exceptions just for *reading* their properties (and some do just that in IE)."
+The thing this, just because these APIs exist in the more modern browsers of today, it most certainly does *not* mean that polyfills are the way to go. Infact polyfills most certainly are **not** the way to go. Just to be clear, these new APIs are useful, sometimes they are new features or sometimes they are simply just better ways of doing the same thing an older API does.
 
-If David's executive summary isn't quite enough juice for you, then read on as I break down some of the points.
+The point about older browsers is silly. All browsers these days are old 5 days after it's released. And just because developers want to drop support for a browser doesn't mean your users want to (or are able to) upgrade their browser.
 
-## 1. Augmenting host and native objects is a bad idea
+But why is *now* in particlular, a good time to use APIs directly? The answer is that it isn't. Old browsers were once cutting edge and they had new features and different implementations. If anything it was much easier to polyfill back then (when nobody did) because there were less browsers to keep an eye on. Today, there are many *more* browsers, so polyfilling is asking for more trouble than ever before and this is only going to get worse.
 
-It's well known that messing with host objects [[0](#ref0)] and to a slightly lesser extent, native objects [[1](#ref1)] is an ill-advised technique that's prone to error. Polyfills rely on this technique and so they are, by their very nature, prone to error.
+Browsers, just like web pages, just like any other software contain bugs. Why? Because it's all written by humans. Just because it's a native API doesn't mean it can be relied upon. Sometimes, the spec is just misunderstood between browser vendors. It's quite obvious that using APIs directly is the wrong way to go.
 
-## 2. Implementing the entire standard is very hard and sometimes unnecessary
+Polyfills by their very nature rely on host and native object augmentation which has been ill-advised for longer than I have been developing websites which is approximately 15 years. Why is it ill-advised? Better go and read the articles for more on that (referenced at the end).
 
-When choosing the polyfill technique, you unfortunately paint yourself into a corner &mdash; you now have to recreate all aspects of that API. This makes the job significantly harder, perhaps impossible *and* is often unnecessary. This is why context is so important. Let's explore this further with two examples.
+Furthermore, You may not need the entire standard to get the feature that you require. Also, you may not be able to polyfill the feature you require because there's just no way to do it. This is why context is important. What exactly do I mean by context? It's obvious really. First understand and define the problem, then work out the leanest solution. With polyfills it's all or nothing, wherby you rarely need *all* of the API.
 
-### 2.1 A polyfill that works
+## Case study: Object.create
 
-`Array.prototype.forEach` is one of the easier polyfills to implement, and in short the following works:
+Taking the seemingly simple `Object.create` polyfill as just one of many examples we will see just how unecessarily painful the polyfill solution is. Let's assume that you do need the features of `Object.create` and so you use a seemingly thorough polyfill, like the one over at MDN. It's fraught with problems. Some problems that are perhaps possible to solve, some that aren't.
 
-	// If not already defined and function dependencies are available
-	if(!Array.prototype.forEach && TypeError && !!Function.prototype.call) {
-		// Augment with forEach
-		Array.prototype.forEach = function(callback, thisArg) {
-			if(typeof callback !== "function") {
-				throw new TypeError(callback + " is not a function!");
-			}
-			var i = 0;
-			var length = this.length;
-			for(; i < length; i++) {
-				callback.call(thisArg, this[i], i, this);
-			}
-		};
-	}
+## Facades (wrappers) to the rescue
+
+
+===================
+
 
 ### 2.2 A polyfill that doesn't work
 
@@ -213,3 +203,45 @@ The host is a dynamic and unpredictable environment, and polyfills try to bend t
 	<dt class="citation" id="ref4">[4]</dt>
 	<dd><a href="http://peter.michaux.ca/articles/cross-browser-widgets">Cross-browser widgets</a></dd>
 </dl>
+
+
+<!--
+
+## What to do instead?
+
+A facade (a form of wrapper) is a design pattern that creates a different interface for a feature. The goal of a facade is to abstract away some underlying interface so that you don't need to access it directly. All interaction goes through the facade, which allows you to manipulate the operation of the underlying functionality as necessary.
+
+
+
+	5. Break down the bad points
+		5.2 implementing entire standard
+		5.3 checking existence of an API is not always enough
+
+	When you use native JavaScript APIs directly, you are placing a bet. That bet is that all browsers implement the API exactly the same. You're banking your future development time on it. And if a browser implements that API incorrectly, what is your course of action? How quickly can you roll out a fix to your users? You'll start writing workarounds and browser detection, and all of a sudden your code isn't as straightforward to maintain. And sometimes the differents in the browsers are so great that a simple workaround won't do.
+
+	Then Zakas goes onto talk about a matchMedia case study exposing these flaws. Read his book for more.
+
+
+	Where there's a choice between facades and polyfills, I always choose the facade. The reason is that polyfills suffer from the same downsides as native APIs. They represent yet another implementation of the same functionality.
+
+	The main takeaway is that you can't rely on native APIs, you can't rely on your implementation of a native API and sometimes a polyfill is impossible to implement using alternative methods. e.g. polyfill attachEvent or getElementById. And this doesn't just apply to old APIs, same goes for new ones like Zakas matchMedia.
+
+	In the example I give with Object.create we now have the Object.create way, and the MDN way. Sometimes errors are thrown, sometimes they fail silently. Why do you want to deal with this?
+
+	Polyfills just don't give you enough protection from underlying browser differences.
+
+	On the other hand, using a wrapper, or a facade, allows you to completely abstract away the differences, with the flexibility to provide a solution relevant to the context of your problem with a alternative and better and simpler method signature etc.
+
+	So in short, don't stop abstracting these browser differences away. New APIs are great, make use of them, detect, test and write a facade, enhance from there. Don't exacabate the problem of browser bugs by increasing the chance of creating and working around more of them.
+
+	Also, application logic shouldn't be away of the browser. If you use polyfills then it has to be aware of browser problems and mitigate against new browsers being released which happens all the time. Abstract into a library, means your app logic never has to change.
+
+-->
+
+
+
+
+
+
+
+
