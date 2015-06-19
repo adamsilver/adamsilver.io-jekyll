@@ -5,7 +5,7 @@ date:   2026-01-01 09:00:01
 categories: js
 ---
 
-A polyfill, also known as a shim, attempts to level the browser playing field, by implementing an API directly when it isn't natively provided by the browser. The popularity of polyfills seems to have arisen due to various proclamations such as "You don't even need a library anymore, you can just use the APIs directly". One reason for this is due to browsers providing APIs such as `document.getElementsByClassName()` as well as many others. Another reason is that older browsers are seeing less usage (shock) and so it appears some of the problems have gone away. Strangely, if old browsers are irrelevant (they are not) and new browsers have got everything we need (they don't), then why the need for polyfills at all?
+A polyfill, also known as a shim, attempts to level the browser playing field, by implementing an API directly when it isn't natively provided by the browser. The popularity of polyfills seems to have arisen due to various announcements such as "You don't even need a library anymore, you can just use APIs directly". One reason for this is due to browsers providing APIs such as `document.getElementsByClassName()` as well as many others. Another reason is that older browsers are seeing less usage (shock) and so it appears some of the problems have gone away. Strangely, if old browsers are irrelevant (they are not) and new browsers have got everything we need (they don't), then why the need for polyfills at all?
 
 The thing is, just because these APIs exist in the modern browsers of today, it most certainly does *not* mean that polyfills are the way to go. Infact polyfills most certainly are **not** the way to go. Also, the point about older browsers is silly. Various different (versions of) browsers are released daily. And just because developers want to drop support for a browser doesn't mean your users want to (or are able to) upgrade their browser.
 
@@ -27,9 +27,9 @@ Notice *should*. Personally, I like to build upon solid foundations, and to quot
 
 > The second argument is passed to Object.defineProperties which will probably fail either silently or with extreme prejudice.
 
-Does any of this sound like something you want to add to your technology stack? And this is just *one* example. There are many, many others.
+Does any of this sound like something you want to add to your technology stack? And this is just *one* example of which there are *many*. Simply put, polyfills not only don't help you, they specifically make your life harder. Also, you really don't want your application logic having knowledge of browser implementations. This is why myself, and many others laud the use of wrappers.
 
-Polyfills just don't give you enough protection from underlying browser differences. Additionally, you really don't want your application logic having knowledge of browser implementations. This is why myself, and many others laud the use of wrappers.
+Also, application logic shouldn't be aware of the browser. Using polyfills means the application interfaces to such issues. Something, you now have to be concerned about every time a new browser comes out. Abstracting into a library means your application code never has to change.
 
 ## Use a facade instead!
 
@@ -105,8 +105,6 @@ The host is a dynamic and unpredictable environment, and polyfills try to bend t
 	<dd><a href="http://perfectionkills.com/whats-wrong-with-extending-the-dom/">What's wrong with extending the DOM?</a></dd>
 	<dt class="citation" id="ref1">[1]</dt>
 	<dd><a href="http://perfectionkills.com/extending-native-builtins/">Extending native built-ins</a></dd>
-	<dt class="citation" id="ref2">[2]</dt>
-	<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#Polyfill">MDN Object.create polyfill</a></dd>
 	<dt class="citation" id="ref3">[3]</dt>
 	<dd><a href="https://github.com/es-shims/es5-shim">ES Shim readme: see "Shams" and "May fail" sections</a></dd>
 	<dt class="citation" id="ref4">[4]</dt>
@@ -132,7 +130,7 @@ TODO:
 
 * So in short, don't stop abstracting these browser differences away. New APIs are great, make use of them, detect, test and write a facade, enhance from there. Don't exacabate the problem of browser bugs by increasing the chance of creating and working around more of them.
 
-* Also, application logic shouldn't be aware of the browser. If you use polyfills then it has to be aware of browser problems and mitigate against new browsers being released which happens all the time. Abstract into a library, means your app logic never has to change.
+*
 
 -->
 
