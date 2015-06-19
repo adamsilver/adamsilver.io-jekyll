@@ -33,11 +33,9 @@ Polyfills just don't give you enough protection from underlying browser differen
 
 ## Use a facade instead!
 
-A facade (a form of wrapper) is a design pattern that creates a different interface for a feature. The goal of a facade is to abstract away some underlying interface so that you don't need to access it directly. All interaction goes through the facade, which allows you to manipulate the operation of the underlying functionality as necessary.
+A facade, a form of wrapper, is a design pattern that normally provides a simplified interface to something more complex. Using a facade allows you to completely abstract away the differences, with the flexibility to provide a solution relevant to the context of your problem with an alternative better and simpler method signature. Inside the facade there is nothing to stop you using portions of the API, and feature testing various implementations and acting accordingly enhancing the experience or not [0].
 
-Using a facade allows you to completely abstract away the differences, with the flexibility to provide a solution relevant to the context of your problem with an alternative better, simpler method signature. Inside the facade there is nothing to stop you using portions of the API, and feature testing various implementations and acting accordingly [0]; this might mean be bailing (not enhancing) or fixing.
-
-Cloning an object is a pertinent example for this article because `Object.create` is a useful API to solve this problem. If you just wanted to support modern browsers, browsers that provide `Object.create` then an implementation is as simple as follows:
+Cloning an object is a pertinent example for this article because `Object.create` is a useful API to solve this problem. If you just wanted to support modern browsers (i.e ones that provide `Object.create`) then an implementation might be as follows:
 
 	// namespace
 	var lib = {};
@@ -54,7 +52,7 @@ Cloning an object is a pertinent example for this article because `Object.create
 
 Note: No second argument is necessary and so the method signature and implementation is very lean. Just what we need in this context.
 
-What about older browsers, browsers that don't support `Object.create`. This is where the feature detection comes in. A possible implementation is as follows:
+What about older browsers (i.e. ones lacking `Object.create`)? This is where feature detection comes in. A possible implementation is as follows:
 
 	// namespace
 	var lib = {};
@@ -119,8 +117,6 @@ The host is a dynamic and unpredictable environment, and polyfills try to bend t
 <!--
 
 TODO:
-
-* Change facade wording etc pla
 
 * checking existence of an API is not always enough
 
