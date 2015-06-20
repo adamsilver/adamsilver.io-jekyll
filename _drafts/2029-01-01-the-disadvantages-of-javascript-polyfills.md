@@ -5,19 +5,25 @@ date:   2026-01-01 09:00:01
 categories: js
 ---
 
-A polyfill, also known as a shim, attempts to level the browser playing field, by implementing an API directly when it isn't natively provided by the browser. The popularity of polyfills seems to have arisen due to various "industry" announcements such as "You don't even need a library anymore, you can just use APIs directly". One reason for this is due to browsers providing APIs such as `document.getElementsByClassName()` as well as many others. Another reason is that older browsers are seeing less usage (unsurprisingly) and so it appears some of the problems have gone away. Strangely, if old browsers are irrelevant (they are not) and new browsers have got everything we need (they don't), then why the need for polyfills at all?
+A polyfill, also known as a shim, is a user defined implementation of an API that a developer expects a browser to provide natively, normalising the difference between browsers. As a huge proponent of the outside-in approach to development, I can see the lure to try develop web applications as if all browsers are the same. That said, attempting to tame browsers in this way is ill-advised as we'll explore in this article.
 
-The thing is, just because these APIs exist in today's modern browsers, it doesn't mean they are a good idea. In fact they are most certainly *not* a good idea. Also, the point about older browsers is silly. Browsers (or versions of) are released daily. And just because *developers* want to drop support for a browser doesn't mean your users take any interest in upgrading their browser or are event able to do so if they so desired. But I digress.
+## Augmenting host objects
 
-Why though, is *now* in particlular, a good time to use APIs directly? The answer is that it isn't. Old browsers were once modern and *they* had the latest and greatest APIs. In anycase, it was much easier to polyfill back then, when nobody did might I add, because there were less browsers to keep tabs on. Today, there are many *more* browsers, so polyfilling is asking for more trouble than ever before and this is only getting *harder*.
+Several experts for well over a decade have explained compelling reasons not to even attempt host object augmentation. Richard Cornford, David Mark and Thomas Lahn, amongst others, have all explained the pitfalls for well over a decade and Kangax published two flagship articles on the subject. This alone is reason enough to avoid using the polyfill technique.
 
-Browsers are written by us humans and so it follows that browsers contain bugs. Just because an API is implemented in a browser doesn't mean it's trustworthy. Sometimes, the spec is simply misunderstood and implemented differently across browser vendors. Adding a polyfill to the mix just adds complexity in the form of another user-defined implementation.
+## Feature detection is not enough
 
-Polyfills by their very nature rely on host and native object augmentation which has been ill-advised for longer than I have been developing for the web (approx. 15 years). If you're unaware of this fact, make it a point to read the links cited at the bottom of this article.
+As Peter Michaux explains in his article entitled X, the mere presence of an API is not necessarily enough to determine reliable usage. Browser software, just like web pages, just like any other software for that matter is written by humans and contain bugs. This is where feature testing comes in. Polyfills just detect the presence of an API, they do not iron out bugs in said APIs. This is why facades are advised as we will see a little later.
 
-Furthermore, you may not need the entire API for the component that you're building; you may not even be *able* to implement a polyfill because there's just no way to do it. This is why context is important (something that David Mark expresses frequently). What exactly does David mean by context? First understand the problem of exactly what you're trying to solve. Second, work out the leanest solution. With polyfills it's all or nothing, wherby you rarely need *all* of the API and the solution is anything but lean.
+## Decoupling browser and application logic
 
-## Implementating an Object.create polyfill
+Nicholas Zakas talks about decoupling browser logic from application logic in his maintainable javascript applications and it's compelling as a reason on it's own but actually there is an additional reason. If your application logic directly interfaces to the frail browser APIs then application logic will need updating when new bugs or new browsers are released.
+
+## Context
+
+You may not need the entire API for the component that you're building; you may not even be *able* to implement a polyfill because there's just no way to do it. This is why context is important (something that David Mark expresses frequently). What exactly does David mean by context? First understand the problem of exactly what you're trying to solve. Second, work out the leanest solution. With polyfills it's all or nothing, wherby you rarely need *all* of the API and the solution is anything but lean.
+
+## Case study: Object.create
 
 As an example, `Object.create` seems like a rather straightforward API to polyfill but it's uncessarily painful. The ES5 Shim project *readme* file is rather telling.
 
@@ -31,7 +37,7 @@ Does any of this sound like something you want to add to your codebase? And this
 
 Also, application logic shouldn't be concerned with different browser issues. Using polyfills goes against this sound principle and is now something to maintain each time a new browser is released. This is why myself, and many others laud the use of wrappers.
 
-## Use a facade instead!
+## Facades
 
 A facade, a form of wrapper, is a design pattern that normally provides a simplified interface to something more complex. Using a facade allows you to completely abstract away the differences, with the flexibility to provide a solution relevant to the context of your problem with an alternative better and simpler method signature. Inside the facade there is nothing to stop you using portions of the API, and feature testing various implementations and acting accordingly enhancing the experience or not [0].
 
@@ -109,9 +115,14 @@ The host is a dynamic and unpredictable environment, and polyfills try to bend t
 
 <!--
 
+* Why this article? The world has gone crazy for polyfills and I can see why. But the world goes crazy for McDonalds and it's bad for us. I want to explain why this seemingly popular technique to develope web applications, whilst popular, is actually a bad idea so that your software development is more reliable and in turn ensures happy users.
+
+* Browsers are written by us humans and so it follows that browsers contain bugs. Just because an API is implemented in a browser doesn't mean it's trustworthy. Sometimes, the spec is simply misunderstood and implemented differently across browser vendors. Adding a polyfill to the mix just adds complexity in the form of another user-defined implementation.
+
 * The main takeaway is that you can't rely on native APIs, you can't rely on your implementation of a native API and sometimes a polyfill is impossible to implement using alternative methods. e.g. polyfill attachEvent or getElementById. And this doesn't just apply to old APIs, same goes for new ones like Zakas matchMedia.
 
 * CONSISTENCY Then there is the question of consistency. Do you want to use some polyfills and some facades. Probably not. Just use a consistent abstraction, a facade.
 
+* The idea of browsers TODAY being okay to polyfill. Browsers come out all the time and then yesterdays modern browsers are screwed, u end up having to polyfill everything from getEBI to addListener.
 -->
 
