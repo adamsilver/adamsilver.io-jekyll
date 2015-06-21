@@ -41,60 +41,40 @@ A facade, a form of wrapper, is a design pattern that normally provides a simpli
 
 Cloning an object is a pertinent example for this article because `Object.create` is a useful API to solve this problem. If you just wanted to support modern browsers (i.e ones that provide `Object.create`) then an implementation might be as follows:
 
-	// namespace
 	var lib = {};
-
-	// if the browser supports Object.create
 	if(Object.create) {
-
-		// define a cloneObject function
-		lib.cloneObject = function(o) {
-			// return cloned object
-			return Object.create(o);
+		lib.cloneObject = function(obj) {
+			return Object.create(obj);
 		};
 	}
 
-Note: No second argument is necessary and so the method signature and implementation is lean. Just what we need in this context.
+Note there is only one argument. This facade uses a smaller part of an API, exposing a simpler method signature creating a lean solution to our problem in the process. What about browsers lacking `Object.create`? Simply add a second fork:
 
-What about older browsers (i.e. ones lacking `Object.create`)? This is where feature detection comes in. A possible implementation is as follows:
-
-	// namespace
 	var lib = {};
-
-	// this fork is the same as previous
 	if(Object.create) {
-		lib.cloneObject = function(o) {
-			return Object.create(o);
+		lib.cloneObject = function(obj) {
+			return Object.create(obj);
 		};
-	// for older browsers lacking Object.create
 	} else {
-		// lean on constructors and their prototype
-		// to clone an object
 		lib.cloneObject = (function() {
 			var Fn = function() {};
-			return function(o) {
-				Fn.prototype = o;
+			return function(obj) {
+				Fn.prototype = obj;
 				return new Fn();
 			};
 		})();
 	}
 
-So the context of the problem changed slightly, but the complexity is abstracted away and is still lean. And, there is no need to implement the entirety of `Object.create` either.
+The context of our problem grew a little harder. But the implementation is still lean and method signature still what we need. We certainly didn't need to worry about implementing the entirey of the `Object.create` API. But, what if you did need the full functionality this API can provide? Simply expand the method signature to expose the second argument as follows:
 
-But what if you did really want to use the second argument that `Object.create` enables? An implementation might be as follows:
-
-	// namespace
 	var lib = {};
-
-	// if browser supports it
 	if(Object.create) {
-		// define a function that returns a new object
 		lib.createObject = function(obj, props) {
 			return Object.create(obj, props);
 		};
 	}
 
-But, and here is the interesting bit, what about browsers that don't provide `Object.create`? Nothing! The browser doesn't cut the mustard, because the feature detection doesn't pass. The user won't get the enhanced experience. This is Progressive Enhancement at its best.
+But what about browsers lacking `Object.create`? Nothing happens. The user gets the degraded experience as the browser doesn't cut the mustard. This is the very essence of Progressive Enhancement.
 
 ## Summary
 
