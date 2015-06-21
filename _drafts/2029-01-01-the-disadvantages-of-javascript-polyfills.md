@@ -5,15 +5,15 @@ date:   2026-01-01 09:00:01
 categories: js
 ---
 
-A polyfill, also known as a shim, is a user defined implementation of an API that a developer expects a browser to provide natively, normalising the difference between browsers. As a huge proponent of the outside-in approach to development, I can see the lure to try develop web applications as if all browsers are the same. That said, attempting to tame browsers in this way is ill-advised as we'll explore in this article.
+A polyfill, also known as a shim, is a user defined implementation of an API that a developer expects a browser to provide natively, normalising browser differences. As a huge proponent of the outside-in approach to development, I can see the lure to try develop web applications as if all browsers are the same. That said, attempting to tame browsers in this way produces unreliable Javascript code which in turn results in unhappy *users*.
 
 ## Augmenting host objects
 
-Several experts for well over a decade have explained compelling reasons not to even attempt host object augmentation. Richard Cornford, David Mark and Thomas Lahn, amongst others, have all explained the pitfalls for well over a decade and Kangax published two flagship articles on the subject. This alone is reason enough to avoid using the polyfill technique.
+Several experts for well over a decade have explained compelling reasons not to even attempt host object augmentation. Richard Cornford, David Mark and Thomas Lahn, amongst others, have all explained the pitfalls for well over a decade and Kangax published two flagship articles on the subject. Unfortunately, polyfills augment host and native objects and so this alone is reason enough to avoid them.
 
 ## Feature detection is not enough
 
-As Peter Michaux explains in his article entitled X, the mere presence of an API is not necessarily enough to determine reliable usage. Browser software, just like web pages, just like any other software for that matter is written by humans and contain bugs. This is where feature testing comes in. Polyfills just detect the presence of an API, they do not iron out bugs in said APIs. This is why facades are advised as we will see a little later.
+As Peter Michaux explains in his article entitled X, the mere presence of an API is not necessarily enough to determine reliable usage. This is where feature testing comes in. Polyfills just detect the presence of an API, they do not iron out the bugs or inconsistencies. This is why facades are useful as we will see a little later.
 
 ## Decoupling browser and application logic
 
@@ -124,5 +124,7 @@ The host is a dynamic and unpredictable environment, and polyfills try to bend t
 * CONSISTENCY Then there is the question of consistency. Do you want to use some polyfills and some facades. Probably not. Just use a consistent abstraction, a facade.
 
 * The idea of browsers TODAY being okay to polyfill. Browsers come out all the time and then yesterdays modern browsers are screwed, u end up having to polyfill everything from getEBI to addListener.
+
+* Browser software, just like web pages or any other software for that matter contains bugs. Why? Because they are written by humans and *humans* are buggy.
 -->
 
