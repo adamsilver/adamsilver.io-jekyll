@@ -13,33 +13,31 @@ Several experts for well over a decade have explained compelling reasons not to 
 
 ## Feature detection is not enough
 
-As Peter Michaux explains in his article entitled X, the mere presence of an API is not necessarily enough to determine reliable usage. This is where feature testing comes in. Polyfills just detect the presence of an API, they do not iron out the bugs or inconsistencies. This is why facades are useful as we will see a little later.
+As Peter Michaux explains in *Feature Detection: State of the art browser scripting*, the mere presence of an API is not necessarily enough to determine reliable usage. This is where feature testing comes in. Polyfills just detect the presence of an API, they do not iron out the bugs or inconsistencies. This is why facades are useful as we will see later on.
 
 ## Decoupling browser and application logic
 
-Nicholas Zakas talks about decoupling browser logic from application logic in his maintainable javascript applications and it's compelling as a reason on it's own but actually there is an additional reason. If your application logic directly interfaces to the frail browser APIs then application logic will need updating when new bugs or new browsers are released.
+In Maintainable Javascript Applications by Nicholas Zakas, he talks about the importance of decoupling application and browser logic. Additionally, if you choose to ignore these wise words, then application logic needs to be updated when frail browser APIs cause problems, typically when new bugs arise as new browsers are released.
 
-## Context
+## Context context context
 
 You may not need the entire API for the component that you're building; you may not even be *able* to implement a polyfill because there's just no way to do it. This is why context is important (something that David Mark expresses frequently). What exactly does David mean by context? First understand the problem of exactly what you're trying to solve. Second, work out the leanest solution. With polyfills it's all or nothing, wherby you rarely need *all* of the API and the solution is anything but lean.
 
 ## Case study: Object.create
 
-As an example, `Object.create` seems like a rather straightforward API to polyfill but it's uncessarily painful. The ES5 Shim project *readme* file is rather telling.
+It doesn't take much effort to find real world examples of problematic polyfills. I did originally plan to delve into technical examples where polyfills are problematic but cut it out when I stumbled across the documentation in the ES5 Shim project &mdash; it's rather telling.
 
-> For the case of simply "begetting" an object that inherits prototypically from another, this should work fine across legacy engines.
+> For the case of simply "begetting" an object that inherits prototypically from another, this **should** work fine across legacy engines.
 
-Notice the *should* in that! Personally, I like to build upon solid foundations, and to quote David Mark - you're only as reliable as your lowest level function; so in this case, not very. It continues...
+The word "should" doesn't denote confidence does it? Personally, I like to build on top of reliable foundations. As David Mark says, you're only as reliable as your lowest level functions &mdash; and so it follows in the case of polyfills, not very. It gets worse...
 
-> The second argument is passed to Object.defineProperties which will probably fail either silently or with extreme prejudice.
+> The second argument is passed to Object.defineProperties which will **probably fail either silently or with extreme prejudice**.
 
-Does any of this sound like something you want to add to your codebase? And this is just *one* of many examples. Simply put, polyfills make your life harder, not better.
+Does any of this sound like something you want to add to your codebase? And this is just *one* of many examples. Simply put, polyfills make for unreliable foundations. Attempting to write beautiful reliable applications on top of such foundations is like trying to polish a turd.
 
-Also, application logic shouldn't be concerned with different browser issues. Using polyfills goes against this sound principle and is now something to maintain each time a new browser is released. This is why myself, and many others laud the use of wrappers.
+## Enter the facade pattern
 
-## Facades
-
-A facade, a form of wrapper, is a design pattern that normally provides a simplified interface to something more complex. Using a facade allows you to completely abstract away the differences, with the flexibility to provide a solution relevant to the context of your problem with an alternative better and simpler method signature. Inside the facade there is nothing to stop you using portions of the API, and feature testing various implementations and acting accordingly enhancing the experience or not [0].
+A facade, a form of wrapper, is a design pattern that normally provides a simplified interface to something more complex. This allows you to completely abstract away the differences, with the flexibility to provide a suitable solution and a simplified method signature. Inside the facade there is nothing to stop you using portions of the API, and feature testing various implementations and acting accordingly, much like Peter Michaux demonstrates in his article *Cross browser Widgets*.
 
 Cloning an object is a pertinent example for this article because `Object.create` is a useful API to solve this problem. If you just wanted to support modern browsers (i.e ones that provide `Object.create`) then an implementation might be as follows:
 
