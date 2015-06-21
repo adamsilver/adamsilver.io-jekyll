@@ -73,7 +73,7 @@ SPAs are meant to provide a better experience. It is therefore ironic that SPAs 
 
 Furthermore, it is interesting to note that sites such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)] realised the SPA architecture was a mistake and have since reverted their architectures. The issues described in this article are self-induced. Remember, **avoiding the SPA architecture avoids the issues**.
 
-<p class="callout">For the fun, sarcastic and non-technical version of this article please read <a href="https://tommorris.org/posts/2547">Introducing awfulness.js by Tom Morris</a></p>
+
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
@@ -91,9 +91,3 @@ Furthermore, it is interesting to note that sites such as Twitter [[5](#ref5)] a
     <dt class="citation" class="citation" id="ref6"><a name="ref6"></a>[6]</dt>
     <dd><a href="http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs">Lifehacker and the hash bang debarkle</a></dd>
 </dl>
-
-<!--
-
-
-
--->
