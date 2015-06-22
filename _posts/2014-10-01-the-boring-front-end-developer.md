@@ -7,13 +7,13 @@ categories: bfed
 
 *Cool* front-end developers are always *pushing the envelope*, jumping out of their seat to use the latest and greatest and shiniest of UI frameworks and libraries. They are often found bridging the gap between native apps and web and so will strive to make the UI look and behave like an app. *Which app?* you may ask. *iPhone? Android? What version?* All good questions, alas another topic altogether. However, there is another kind of front-end developer, the *boring* front-end developer. Here is an ode to the *boring* front-end developer, *BFED* if you will.
 
-## Preprocessors
-
-When given the choice to add a preprocessor (e.g. LESS, SASS, CoffeeScript etc) to the technology stack, the BFED realises there is a [deeper impact](/articles/the-disadvantages-of-css-preprocessors/) beyond just 'writing less code'. *Will developers need to learn a new language beyond the language of the web (i.e. HTML, CSS, JS)? Will debugging code be harder?* If the answer to any of these questions is *yes* then the BFED will say *no* to preprocessors.
-
 ## Browser support
 
 The BFED realises that while not all experiences will be identical, all browsers *can* be used to consume a website, even *gasp*, IE6 and below. He/she will promote Progressive Enhancement and Cross-browser (not Multi-browser) scripting at any given opportunity. The BFED also realises it is not a feat to drop support for a particular (set of) browser(s) and understands that forgetting about the existence of those users hurts them and their perception of the company/product.
+
+## Preprocessors
+
+When given the choice to add a preprocessor (e.g. LESS, SASS, CoffeeScript etc) to the technology stack, the BFED realises there is a [deeper impact](/articles/the-disadvantages-of-css-preprocessors/) beyond just "writing less code". *Will it be harder to onboard developers? Will debugging code be more difficult?* If the answer to any of these questions is *yes* then the BFED will say *no* to preprocessors.
 
 ## Accessibility
 
