@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The disadvantages of Javascript polyfills"
-date:   2026-01-01 09:00:01
+date:   2015-06-22 09:00:01
 categories: js
 ---
 
