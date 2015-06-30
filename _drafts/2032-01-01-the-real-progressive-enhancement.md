@@ -92,9 +92,13 @@ This is the Real Progressive Enhancement, something that you very *very* rarely 
 
 **Not sure.**
 
-Most people don't do it and so you end up with developers copying other developers. A lot of (read all of) the popular Javascript libraries don't do this and most developers use libraries as opposed to create libraries.
+*"Everyone loves McDonalds, but that doesn't make it good for you!"*
 
-But as it goes in all walks of life, popularity is rarely a sign of quality. The world loves McDonalds but we all know McDonalds is shit for you.
+Most devs don't do this and so you end up with developers copying other developers. A lot of (read all of) the popular Javascript libraries don't expose it's capabilities to the calling application. i.e. most libraries provide static APIs. Meaning there is no way for you to know if the underlying code will run successfully or not.
+
+And if you don't know, you can guarantee failure at some point or other. This is not just for old browsers, it's just as much for new browsers.
+
+Infact, if you wan't to use the most bleeding edge browser APIs, all you have to do is check first before enhancing. You could decide to *only* use the most cutting edge browsers and then degrading for all other browsers.
 
 <!--
 
