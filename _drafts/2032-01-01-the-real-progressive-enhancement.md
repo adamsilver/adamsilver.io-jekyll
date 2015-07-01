@@ -61,7 +61,7 @@ As you can see above, the web is dynamic. Dynamic in that your website is being 
 
 The APIs available to an application is therefore dynamic and need checking for presence and sometimes stability, *before* use.
 
-Every developer says they know all about *Feature detection* and *Feature testing* but, I never see it safely used in their applications. This might mean because they handed off responsibility to a 3rd party library, a library that doesn't give you this capability.
+Every developer says they know all about *Feature detection* and *Feature testing* but, I never see it safely used in their applications.
 
 **So what you need to do is fucking check your application can run before you fucking run it.**
 
@@ -90,9 +90,9 @@ Now in reality, it's a little more complicated than this and you would abstract 
 
 So, if the browser fails to provide one or more dependencies, the application doesn't enhance &mdash; it just degrades to a JS off equivalent.
 
-This is why it *is* important for the site to work without Javascript. Otherwise graceful degradation is useless. Might as well have a broken page that relies on Javascript like a Single Page Application, but this is just [stupid](/articles/the-disadvantages-of-single-page-applications/).
+This is why it *is* important for the site to work without Javascript. Otherwise graceful degradation is because your degrading to broken.
 
-This is the Real Progressive Enhancement, something that you very *very* rarely see in the industry. Why?
+This is the **Real** Progressive Enhancement, something that you *very* rarely see in the industry. Why?
 
 **Not sure.**
 
@@ -100,7 +100,7 @@ This is the Real Progressive Enhancement, something that you very *very* rarely 
 
 Most devs don't do this and so you end up with developers copying other developers. A lot of (read all of) the popular Javascript libraries don't expose it's capabilities to the calling application. i.e. most libraries provide static APIs. Meaning there is no way for you to know if the underlying code will run successfully or not.
 
-And if you don't know, you can guarantee failure at some point or other. This is not just for old browsers, it's just as much for new browsers.
+And if you don't know, you can guarantee failure at some point or other. This is not just for old browsers, it's even moreso for new and future browsers. It's one thing breaking old browsers, but breaking newly released browsers should just not be accepted so readily in this industry.
 
 Infact, if you wan't to use the most bleeding edge browser APIs, all you have to do is check first before enhancing. You could decide to *only* use the most cutting edge browsers and then degrading for all other browsers.
 
@@ -114,5 +114,17 @@ Infact, if you wan't to use the most bleeding edge browser APIs, all you have to
 
 * no op isn't good enough, its a black hole.
 
+* You might want to do a catch all cuts the mustard test - no problem, just abstract a one off list into one function and call that
+
+	function canRun() {
+		return lib.hasFeatures('a', 'b', 'c', ...);
+	}
+
+	if(canRun()) {
+		application.start();
+	}
+
+* This might mean because they handed off responsibility to a 3rd party library, a library that doesn't give you this capability.
+*
 -->
 
