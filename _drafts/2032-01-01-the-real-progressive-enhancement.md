@@ -5,21 +5,27 @@ date:   2032-01-01 09:00:01
 categories: js
 ---
 
-So everyone has already accepted Progressive Enhancement as a good approach to developing client-side web UIs. But Progressive Enhancement is not Unobtrusive Javascript! Nor is it making sure the site works when Javascript is turned off (although it is a part of it).
+> Samsung shits out a different-sized black rectangle every 30 seconds.
 
-Everyone knows that when it comes to HTML, the browser degrades an unknown element gracefully with no added effort. Take the `video` element for example. It just doesn't show the video, and allows you to nest fallback HTML e.g. an image which all browsers can use.
+Brad Frost is right. Samsung does do this. Lots of devices and browser vendors do this.
 
-Likewise, CSS has a similar behaviour &mdash; it just doesn't render the style.
+And so it follows that Progressive Enhancement is a good idea. But Progressive Enhancement is not Unobtrusive Javascript, nor is it handling the Javascript off scenario (although that is part of it).
+
+But let's reign this back a step for a moment.
+
+Everyone knows that when it comes to HTML, the browser degrades gracefully with little to no developer intervention &mdash; take the `video` element for example. It just doesn't show the video, and allows you to nest an image as a fallback. Lovely.
+
+Similarly, CSS has a similar mechanism &mdash; it just doesn't render the style.
 
 **No harm, no foul.**
 
-Then along comes our friend, Javascript. You then write an application that uses an API &mdash; one that is provided by the browser.
+Then along comes our friend, Javascript.
 
-What happens when your application tries to execute an API that a *particular* browser doesn't support?
+You write some code that uses some method provided to you by the browser. And then you run the code in a browser that doesn't support this method.
 
-**Boom. Javascript error.**
+**Boom. Error.**
 
-I am not just talking about cutting edge APIs. I am talking about `addEventListener` in IE6-IE8 inclusive, or *any* API for that matter.
+This isn't just with new APIs but older ones too. Any browser that is missing a particular method will break and sometimes break fatally.
 
 *"But as long as the site works without Javascript we are fine, that's progressive enhancement."*
 
@@ -39,29 +45,27 @@ Now, take a browser that supports `document.getElementById` (most since IE4), `e
 
 The script above will stop the link being handled by the browser but cause a Type Error when it gets to the geolocation shit.
 
-Now, considering the above, tell me this &mdash; does it matter if the user turns of Javascript and the site still works i.e. they can follow the link like normal?
+Now, considering the above, tell me this &mdash; does it matter if the user turns of Javascript and the site still works?
 
 **No.**
 
-I just demonstrated a completely common and valid scenario where the user has Javascript turned on (most users don't actively turn it off) &mdash; and some of the APIs are missing. Some of the APIs are missing in every browser.
+This demonstrates a very common scenario. Javascript is turned on (most don't turn it off). An API is missing (all browsers are missing some API). So what happens?
 
-No two browsers have identical capabilities so this scenario is not only common. It's 100% guaranteed.
-
-So, again, what happens in this scenario?
-
-**Boom. Broken page! JS errors! Broken page! User can't continue! You lose money!**
+**Boom. Error! Broken page! User can't continue! You lose money! Do not pass go. Go straight to jail.**
 
 ## So what to do instead?
 
-*"Okay you got me, show me the Real Progressive Enhancment then!"*
+So if you made it this far, I can assume you want to know the solution.
 
-As you can see above, the web is dynamic. Dynamic in that your website is being consumed on a million different browsers with a million different configs, each with different capabilities. The APIs available to an application is therefor dynamic and need checking for presencne and sometimes stability, *before* use.
+As you can see above, the web is dynamic. Dynamic in that your website is being consumed on a million different browsers with a million different configs, each with different capabilities.
+
+The APIs available to an application is therefore dynamic and need checking for presence and sometimes stability, *before* use.
 
 Every developer says they know all about *Feature detection* and *Feature testing* but, I never see it safely used in their applications. This might mean because they handed off responsibility to a 3rd party library, a library that doesn't give you this capability.
 
-**So what you need to do is fucking check your application can run before you fucking run it.** For the technical amongst us, the *calling* application needs to check the availability of it's dependencies, before excuting the application so that the application isn't left in limbo i.e. where some of the code executes but some errs.
+**So what you need to do is fucking check your application can run before you fucking run it.**
 
-That sounds complicated and jargony. Let's see how this actually manifests itself shall we?
+Let's see how this actually plays out shall we?
 
 Taking the previous example:
 
@@ -107,6 +111,8 @@ Infact, if you wan't to use the most bleeding edge browser APIs, all you have to
 * Devs are fucking it all up by using static APIs
 
 * Possible title: Progressive Enhancement the missing piece
+
+* no op isn't good enough, its a black hole.
 
 -->
 
