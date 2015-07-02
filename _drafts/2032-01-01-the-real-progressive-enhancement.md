@@ -47,22 +47,25 @@ So by now I should have convinced you that Javascript doesn't degrade nicely on 
 
 **But what do we do about this?**
 
-What do others do?
+* Animated gif la la la, fingers in the ears *
 
-* Drop support for browsers - the equivalent of lalalala (animated gif required). This can come in many forms. Say choosing a library that drops support for X browser or it could be that you just don't bother to test in certain browsers.
+Some **drop support** for a set of browsers. Sometimes this is inherent in the 3rd party library they support. Normally support is dropped for older browsers. That said it's important to note that often these libraries need upgrading for future browsers. More on that later.
 
-* Cuts the mustard - this gets close.
+*"It's okay though, the site works without Javascript turned on"*.
 
-* Progressive Enhancement - ensure the site works without Javascript turned on.
+Some think this covers it. But as demonstrated before, when Javascript is turned on (the majority do turn it on) that is not enough on it's own.
 
+*"Cutting the mustard"*
 
-===
+A relatively new term in the industry, this serves to provide a core experience and enhanced experience. This is most certainly the right philosophy but as already hinted this is not enough on it's own. Example anyone?
 
-This isn't just with new APIs but older ones too. Any browser that is missing a particular method will break and sometimes break fatally.
+	if(document.querySelector && window.addEventListener && window.localStorage) {
+		Breaks in browsers where these things work but Object.create doesnt
+		var el = document.querySelector('...');
+		Object.create(null, {});
+	}
 
-*"But as long as the site works without Javascript we are fine, that's progressive enhancement."*
-
-**Wrong.**
+=====================================================================
 
 To explain, I need an example.
 
