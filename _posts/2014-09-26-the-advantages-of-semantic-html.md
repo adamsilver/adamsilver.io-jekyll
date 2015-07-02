@@ -29,7 +29,7 @@ Some disabled users utilise the functionality of a screen reader and when HTML i
 
 Wikipedia on RWD:
 
-> Responsive web design (RWD) is a web design approach aimed at crafting sites to provide an optimal viewing experience—easy reading and navigation with a minimum of resizing, panning, and scrolling—across a wide range of devices (from mobile phones to desktop computer monitors).
+> &ldquo;Responsive web design (RWD) is a web design approach aimed at crafting sites to provide an optimal viewing experience—easy reading and navigation with a minimum of resizing, panning, and scrolling—across a wide range of devices (from mobile phones to desktop computer monitors).&rdquo;
 
 The relevance here is that something that is styled one way for *large* screens may look quite different on *small* screens, and so semantic HTML is advantageous.
 

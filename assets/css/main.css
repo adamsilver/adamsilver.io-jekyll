@@ -156,15 +156,18 @@ dt {
 }
 
 blockquote {
-    background-color: #ecf0f1;
-    padding: 1px 10px 1px 10px;
-    margin: 20px;
-    border-left: 5px solid #2c3e50;
+    /*background-color: #ecf0f1;*/
+    /*padding: 1px 10px 1px 10px;*/
+    margin: 20px 30px;
+    /*border-left: 5px solid #2c3e50;*/
 
 }
 
 blockquote p {
     font-style: italic;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    text-align: center;
 }
 
  .ui {

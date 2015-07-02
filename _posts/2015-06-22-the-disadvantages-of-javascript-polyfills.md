@@ -19,7 +19,7 @@ As Peter Michaux demonstrates in *Feature Detection: State of the art browser sc
 
 As Nicholas Zakas presents in *Scalable JavaScript Application Architecture* [[3](#ref3)], it is important to decouple application and browser logic. He states:
 
-> Application logic should be written one way for all browsers in order to keep the code maintainable. If you’re using native APIs in your application logic, you can’t help but know what browser is being used because you need to account for browser differences. That means your application logic will always need to be updated as new browsers and new browser versions are released. **That’s a recipe for disaster**.
+> &ldquo;Application logic should be written one way for all browsers in order to keep the code maintainable. If you’re using native APIs in your application logic, you can’t help but know what browser is being used because you need to account for browser differences. That means your application logic will always need to be updated as new browsers and new browser versions are released. **That’s a recipe for disaster**&rdquo;.
 
 ## Context context context
 
@@ -29,11 +29,11 @@ You may not need the full API to solve your problem; you may not even be *able* 
 
 It doesn't take much effort to find examples of problematic polyfills. I did originally plan to demonstrate some technical problems myself, but when I stumbled across the documentation in the *ES5 Shim* [[4](#ref4)] project, I found that to be very telling all by itself. In describing the `Object.create` polyfill it states:
 
-> For the case of simply "begetting" an object that inherits prototypically from another, this **should** work fine across legacy engines.
+> &ldquo;For the case of simply "begetting" an object that inherits prototypically from another, this **should** work fine across legacy engines.&rdquo;
 
 The word "should" doesn't denote confidence does it? Personally, I like to build on top of reliable foundations. As David Mark says, you're only as reliable as your lowest level function(s). So in the case of polyfills that would be, not very. Unfortunately, it continues:
 
-> The second argument is passed to Object.defineProperties which will **probably fail either silently or with extreme prejudice**.
+> &ldquo;The second argument is passed to Object.defineProperties which will **probably fail either silently or with extreme prejudice**.&rdquo;
 
 Does any of this sound like something you want to add to your codebase? I would hope not. Providing code for your team to use, whereby they can't reliably use the fully exposed API without severe recourse, can only be interpreted as a bad idea. And it should go without saying that it doesn't matter how good the application code is on top of these foundations, as the saying goes, you're simply polishing a turd.
 

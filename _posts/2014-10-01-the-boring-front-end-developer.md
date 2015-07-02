@@ -37,7 +37,7 @@ The BFED will carefully select third party code based on the quality of the code
 
 The BFED will adhere to the following quote (by Anon):
 
-> As a Lead JavaScript Engineer, I try to get my team to write as little JavaScript as possible
+> &ldquo;As a Lead JavaScript Engineer, I try to get my team to write as little JavaScript as possible.&rdquo;
 
 Furthermore, the BFED realises that [Single Page Applications cause severe problems](/articles/the-disadvantages-of-single-page-applications/) and that by avoiding them and leaning on the server appropriately provides a better experience and reach.
 
