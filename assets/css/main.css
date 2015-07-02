@@ -487,6 +487,11 @@ p code {
     line-height: 1.7em;
 }
 
+#article .image img {
+	display: block;
+	margin: 0 auto;
+}
+
 @media (min-width: 760px) {
 
 	#content,

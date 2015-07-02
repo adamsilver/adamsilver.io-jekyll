@@ -17,51 +17,59 @@ We know that HTML degrades gracefully with little (or *no*) developer interventi
 
 **Lovely.**
 
-Similarly, we know CSS is similar &mdash; it just doesn't render the style.
+Similarly, with CSS &mdash; it just doesn't render the style.
 
 **No harm, no foul.**
 
 Enter our friend, Javascript.
 
-You write some code that implements some Javascript in a browser that *doesn't* support it &mdash; could be anything.
+You write some script that works in some browsers and not in others. What happens in the latter?
 
 **Error!**
 
 You want an example don't you?
 
-	// IE8 doesn't support this
+	// Run this in IE8
 	document.getElementsByClassName('yo');
 
 How about another?
 
-	// IE9 doesn't support this
-	window.matchMedia("(min-width: 400px)");
+	// Run this in IE9
+	matchMedia("(min-width: 400px)");
 
-**But wait, there's more.**
+**But wait!**
 
-It's not just about the presence of an API. Sometimes it exists but has bugs in it. Just one of a thousand examples &mdash; caniuse.com states the following known issue:
+It's not just about the presence of an API. Sometimes the API is buggy. *Caniuse.com* states &mdash; and this is just one of a plethora of examples:
 
 > Safari 3.1 has a caching bug. If the class of an element changes it won't be available for getElementsByClassName.
 
-So by now I should have convinced you that Javascript doesn't degrade nicely on it's own.
+So there we have it &mdash; Javascript doesn't degrade gracefully.
 
-**But what do we do about this?**
+## What do we do about this?
 
-* Animated gif la la la, fingers in the ears *
+<!-- <div class="image">
+	<img src="/assets/img/fingersinear.gif" alt="La la la" width="337" height="225">
+</div>
+ -->
+In a nutshell developers use a combination of techniques:
 
-Some **drop support** for a set of browsers. Sometimes this is inherent in the 3rd party library they support. Normally support is dropped for older browsers. That said it's important to note that often these libraries need upgrading for future browsers. More on that later.
+a) Ignore this information &mdash; ignorance is bliss.
 
-*"It's okay though, the site works without Javascript turned on"*.
+b) Rely on third party software that comes with a select few supported browsers &mdash; Extension of the first one and just because it's third party doesn't make it reliable or advisable.
 
-Some think this covers it. But as demonstrated before, when Javascript is turned on (the majority do have it on) this is not enough.
+c) Keep an eye on upgrades to third party software &mdash; costly and mentally draining.
 
-*"Cutting the mustard"*
+d) Upgrade third party software regularly and perform costly egression testing &mdash; costly and mentally draining.
 
-A relatively new term in the industry, this serves to provide a core experience and enhanced experience. This is most certainly the right philosophy but as already hinted at this is not enough on it's own.
+e) Think everything is okay because "it works without Javascript" &mdash; this is plain wrong as demonstrated above.
 
-Taking the example from the cuts the mustard example let me attempt to break this. Honestly, this is not hard to do.
+Then there is the relatively new **Cutting the mustard** technique.
 
-	if(document.querySelector && window.addEventListener && window.localStorage) {
+This has the concept of a *core* experience and an *enhanced* experience. This is most certainly the right philosophy but it doesn't play out too well. Taking their own example let me attempt to break this (not hard btw).
+
+	if(	document.querySelector &&
+		window.addEventListener &&
+		window.localStorage) {
 
 		// bootstrap application
 		window.addEventListener('load', function(e) {
@@ -71,7 +79,7 @@ Taking the example from the cuts the mustard example let me attempt to break thi
 		});
 	}
 
-Firstly, as we said before, merely detecting a feature is not enough. APIs contain bugs. Caniuse.com states that querySelector has partial support in IE8. It just so happens by luck or judgement that the additional checks stops IE8 from enhancing anyway. But that's not all. Caniuse.com states:
+Firstly, as we said before, merely detecting a feature is not enough. APIs contain bugs. Caniuse.com states that `document.querySelector` has partial support in IE8. It just so happens (by luck or judgement) that the additional checks for `window.addEventListener` and `window.localStorage` means IE8 only gets the *core* experience. But it got lucky with IE8 &mdash; Caniuse.com states:
 
 > iOS 8.* contains a bug where selecting siblings of filtered id selections are no longer working (for example #a + p).
 
