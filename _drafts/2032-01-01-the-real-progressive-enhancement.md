@@ -11,7 +11,7 @@ Brad Frost is right. Samsung does do this. Lots of devices and browser vendors d
 
 And so it follows that Progressive Enhancement is a good idea. But Progressive Enhancement is not Unobtrusive Javascript, nor is it handling the Javascript off scenario (although that is part of it).
 
-But let's reign this back a step for a moment.
+But let's take a step back momentarily.
 
 We know that HTML degrades gracefully with little (or *no*) developer intervention &mdash; take the `video` element for example &mdash; it allows you to nest an image as a fallback.
 
@@ -105,27 +105,14 @@ How does this play out?
 		z();
 	}
 
-If the browser supports what the application uses, the user gets the enhanced Javascript experience, otherwise they get the core experience.
+This is why it *does* matter if the web page works without Javascript because the user gets the core, Javascript off experience when the browser doesn't cut the mustard.
 
-This is why it *does* matter if the web page works without Javascript because that's the experience the user will when the user has Javascript turned on but the browser doesn't support the required APIs.
+This is the **Real** Progressive Enhancement.
 
-This is the **Real** Progressive Enhancement, something that you *very* rarely see in the industry. Why?
-
-**Not sure.**
-
-*"Everyone loves McDonalds, but that doesn't make it good for you!"*
-
-Most devs don't do this and so you end up with developers copying other developers. A lot of (read all of) the popular Javascript libraries don't expose it's capabilities to the calling application. i.e. most libraries provide static APIs. Meaning there is no way for you to know if the underlying code will run successfully or not.
-
-And if you don't know, you can guarantee failure at some point or other. This is not just for old browsers, it's even moreso for new and future browsers. It's one thing breaking old browsers, but breaking newly released browsers should just not be accepted so readily in this industry.
-
-Infact, if you wan't to use the most bleeding edge browser APIs, all you have to do is check first before enhancing. You could decide to *only* use the most cutting edge browsers and then degrading for all other browsers.
 
 <!--
 
 *The problem of the web is actually the beauty of the web. Anyone with a browser and Internet connection can access your website.*
-
-* Devs are fucking it all up by using static APIs
 
 * Possible title: Progressive Enhancement the missing piece
 
@@ -141,9 +128,4 @@ Infact, if you wan't to use the most bleeding edge browser APIs, all you have to
 		application.start();
 	}
 
-* This might mean because they handed off responsibility to a 3rd party library, a library that doesn't give you this capability.
-
-
-* Cuts the Mustard
 -->
-
