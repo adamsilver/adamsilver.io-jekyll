@@ -13,17 +13,50 @@ And so it follows that Progressive Enhancement is a good idea. But Progressive E
 
 But let's reign this back a step for a moment.
 
-Everyone knows that when it comes to HTML, the browser degrades gracefully with little to no developer intervention &mdash; take the `video` element for example. It just doesn't show the video, and allows you to nest an image as a fallback. Lovely.
+We know that HTML degrades gracefully with little (or *no*) developer intervention &mdash; take the `video` element for example &mdash; it allows you to nest an image as a fallback.
 
-Similarly, CSS has a similar mechanism &mdash; it just doesn't render the style.
+**Lovely.**
+
+Similarly, we know CSS is similar &mdash; it just doesn't render the style.
 
 **No harm, no foul.**
 
-Then along comes our friend, Javascript.
+Enter our friend, Javascript.
 
-You write some code that uses some method provided to you by the browser. And then you run the code in a browser that doesn't support this method.
+You write some code that implements some Javascript in a browser that *doesn't* support it &mdash; could be anything.
 
-**Boom. Error.**
+**Error!**
+
+You want an example don't you?
+
+	// IE8 doesn't support this
+	document.getElementsByClassName('yo');
+
+How about another?
+
+	// IE9 doesn't support this
+	window.matchMedia("(min-width: 400px)");
+
+**But wait, there's more.**
+
+It's not just about the presence of an API. Sometimes it exists but has bugs in it. Just one of a thousand examples &mdash; caniuse.com states the following known issue:
+
+> Safari 3.1 has a caching bug. If the class of an element changes it won't be available for getElementsByClassName.
+
+So by now I should have convinced you that Javascript doesn't degrade nicely on it's own.
+
+**But what do we do about this?**
+
+What do others do?
+
+* Drop support for browsers - the equivalent of lalalala (animated gif required). This can come in many forms. Say choosing a library that drops support for X browser or it could be that you just don't bother to test in certain browsers.
+
+* Cuts the mustard - this gets close.
+
+* Progressive Enhancement - ensure the site works without Javascript turned on.
+
+
+===
 
 This isn't just with new APIs but older ones too. Any browser that is missing a particular method will break and sometimes break fatally.
 
@@ -48,6 +81,8 @@ The script above will stop the link being handled by the browser but cause a Typ
 Now, considering the above, tell me this &mdash; does it matter if the user turns of Javascript and the site still works?
 
 **No.**
+
+
 
 This demonstrates a very common scenario. Javascript is turned on (most don't turn it off). An API is missing (all browsers are missing some API). So what happens?
 
