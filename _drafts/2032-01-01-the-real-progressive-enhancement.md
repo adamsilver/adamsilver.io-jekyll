@@ -5,7 +5,7 @@ date:   2032-01-01 09:00:01
 categories: js
 ---
 
-> Samsung shits out a different-sized black rectangle every 30 seconds.
+> &ldquo;Samsung shits out a different-sized black rectangle every 30 seconds.&rdquo;
 
 Brad Frost is right. Samsung does do this. Lots of devices and browser vendors do this.
 
