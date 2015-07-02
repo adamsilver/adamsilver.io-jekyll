@@ -125,6 +125,8 @@ Infact, if you wan't to use the most bleeding edge browser APIs, all you have to
 	}
 
 * This might mean because they handed off responsibility to a 3rd party library, a library that doesn't give you this capability.
-*
+
+
+* Cuts the Mustard
 -->
 
