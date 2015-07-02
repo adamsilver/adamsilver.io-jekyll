@@ -53,7 +53,7 @@ Some **drop support** for a set of browsers. Sometimes this is inherent in the 3
 
 *"It's okay though, the site works without Javascript turned on"*.
 
-Some think this covers it. But as demonstrated before, when Javascript is turned on (the majority do turn it on) that is not enough on it's own.
+Some think this covers it. But as demonstrated before, when Javascript is turned on (the majority do have it on) this is not enough.
 
 *"Cutting the mustard"*
 
@@ -62,9 +62,13 @@ A relatively new term in the industry, this serves to provide a core experience 
 Taking the example from the cuts the mustard example let me attempt to break this. Honestly, this is not hard to do.
 
 	if(document.querySelector && window.addEventListener && window.localStorage) {
-		Breaks in browsers where these things work but Object.create doesnt
-		var el = document.querySelector('...');
-		window.matchmedia(...);
+
+		// bootstrap application
+		window.addEventListener('load', function(e) {
+			var el = document.querySelector('.someElement');
+			window.matchMedia('');
+			// more stuff but this is enough to demonstrate
+		});
 	}
 
 Firstly, as we said before, merely detecting a feature is not enough. APIs contain bugs. Caniuse.com states that querySelector has partial support in IE8. It just so happens by luck or judgement that the additional checks stops IE8 from enhancing anyway. But that's not all. Caniuse.com states:
@@ -77,72 +81,25 @@ This is one of infinite permutations and is a very real example. IE9 will enhanc
 
 Some implementations of the Cut the Mustard technique use polyfills to plug other gaps but it just so happens that polyfills are very unreliable. Who wants more fragility?
 
-Interestingly CTM gets close.
+Interestingly CTM gets close. But it's playing a game and it's little better than User Agent sniffing and needs constant monitoring and maintenance.
 
-=====================================================================
+*So what to do instead*
 
-To explain, I need an example.
+1. What ever the application uses must be in the cuts the mustard test.
 
-Imagine a simple task such as clicking a link retrieves your location. Something like:
+2. When appropriate test as well as detect to avoid bugs. Only way to do this is through facades, and a good library should do this for you so you don't have to repeat yourself.
 
-	var link = document.getElementById('someLink');
-	link.addEventListener('click', function(e) {
-		e.preventDefault();
-		// geolocation stuff
-	});
+How does this play out?
 
-Now, take a browser that supports `document.getElementById` (most since IE4), `el.addEventListener` (most since IE8), but can't handle the geolocation (a lot of browsers don't support this).
-
-The script above will stop the link being handled by the browser but cause a Type Error when it gets to the geolocation shit.
-
-Now, considering the above, tell me this &mdash; does it matter if the user turns of Javascript and the site still works?
-
-**No.**
-
-
-
-This demonstrates a very common scenario. Javascript is turned on (most don't turn it off). An API is missing (all browsers are missing some API). So what happens?
-
-**Boom. Error! Broken page! User can't continue! You lose money! Do not pass go. Go straight to jail.**
-
-## So what to do instead?
-
-So if you made it this far, I can assume you want to know the solution.
-
-As you can see above, the web is dynamic. Dynamic in that your website is being consumed on a million different browsers with a million different configs, each with different capabilities.
-
-The APIs available to an application is therefore dynamic and need checking for presence and sometimes stability, *before* use.
-
-Every developer says they know all about *Feature detection* and *Feature testing* but, I never see it safely used in their applications.
-
-**So what you need to do is fucking check your application can run before you fucking run it.**
-
-Let's see how this actually plays out shall we?
-
-Taking the previous example:
-
-	// check environment provides whatthe application needs
-	if(	document.getElementById &&
-		document.documentElement.addEventListener &&
-		navigator.geolocation) {
-
-		// Application can run. Progressively enhance now etc!
+	if(lib.hasFeatures('x', 'y', 'z')) {
+		x();
+		y();
+		z();
 	}
 
-Now in reality, it's a little more complicated than this and you would abstract this complexity into a library of functions that work this way. Something like:
+If the browser supports what the application uses, the user gets the enhanced Javascript experience, otherwise they get the core experience.
 
-	if(lib.hasFeatures('getElementById', 'addEventListener', 'getLocation')) {
-		var link = lib.getElementById(...);
-		lib.addEventListener('submit', function(e) {
-			lib.preventDefault(e);
-			var location = lib.getLocation();
-			// etc
-		});
-	}
-
-So, if the browser fails to provide one or more dependencies, the application doesn't enhance &mdash; it just degrades to a JS off equivalent.
-
-This is why it *is* important for the site to work without Javascript. Otherwise graceful degradation is because your degrading to broken.
+This is why it *does* matter if the web page works without Javascript because that's the experience the user will when the user has Javascript turned on but the browser doesn't support the required APIs.
 
 This is the **Real** Progressive Enhancement, something that you *very* rarely see in the industry. Why?
 
