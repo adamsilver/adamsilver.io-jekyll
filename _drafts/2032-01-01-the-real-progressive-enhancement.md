@@ -57,13 +57,27 @@ Some think this covers it. But as demonstrated before, when Javascript is turned
 
 *"Cutting the mustard"*
 
-A relatively new term in the industry, this serves to provide a core experience and enhanced experience. This is most certainly the right philosophy but as already hinted this is not enough on it's own. Example anyone?
+A relatively new term in the industry, this serves to provide a core experience and enhanced experience. This is most certainly the right philosophy but as already hinted at this is not enough on it's own.
+
+Taking the example from the cuts the mustard example let me attempt to break this. Honestly, this is not hard to do.
 
 	if(document.querySelector && window.addEventListener && window.localStorage) {
 		Breaks in browsers where these things work but Object.create doesnt
 		var el = document.querySelector('...');
-		Object.create(null, {});
+		window.matchmedia(...);
 	}
+
+Firstly, as we said before, merely detecting a feature is not enough. APIs contain bugs. Caniuse.com states that querySelector has partial support in IE8. It just so happens by luck or judgement that the additional checks stops IE8 from enhancing anyway. But that's not all. Caniuse.com states:
+
+> iOS 8.* contains a bug where selecting siblings of filtered id selections are no longer working (for example #a + p).
+
+Putting the bugs to one side just for a moment, the above code provides the enhanced experience for browsers cutting the mustard, but if one of those browsers can't handle matchMedia your screwed aren't you?
+
+This is one of infinite permutations and is a very real example. IE9 will enhance and break in the above example. Inferring enhanced support with a few choice APIs detected is fragile.
+
+Some implementations of the Cut the Mustard technique use polyfills to plug other gaps but it just so happens that polyfills are very unreliable. Who wants more fragility?
+
+Interestingly CTM gets close.
 
 =====================================================================
 
