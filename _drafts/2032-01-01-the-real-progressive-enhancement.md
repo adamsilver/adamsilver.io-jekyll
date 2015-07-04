@@ -59,7 +59,7 @@ b) Rely on third party software that comes with a select few supported browsers 
 
 c) Keep an eye on upgrades to third party software &mdash; costly and mentally draining.
 
-d) Upgrade third party software regularly and perform costly egression testing &mdash; costly and mentally draining.
+d) Upgrade third party software regularly and perform regression testing &mdash; costly and mentally draining.
 
 e) Think everything is okay because "it works without Javascript" &mdash; this is plain wrong as demonstrated above.
 
@@ -79,7 +79,9 @@ This has the concept of a *core* experience and an *enhanced* experience. This i
 		});
 	}
 
-Firstly, as we said before, merely detecting a feature is not enough. APIs contain bugs. Caniuse.com states that `document.querySelector` has partial support in IE8. It just so happens (by luck or judgement) that the additional checks for `window.addEventListener` and `window.localStorage` means IE8 only gets the *core* experience. But it got lucky with IE8 &mdash; Caniuse.com states:
+As I mentioned just before, merely detecting the presence of an API is not enough due to bugs. Therefore, CTM is fragile.
+
+Caniuse.com states that `document.querySelector` has partial support in IE8. It just so happens (by luck or judgement) that the additional checks for `window.addEventListener` and `window.localStorage` means IE8 only gets the *core* experience. But it got lucky with IE8 &mdash; not so much for iOS 8 as Caniuse.com states:
 
 > iOS 8.* contains a bug where selecting siblings of filtered id selections are no longer working (for example #a + p).
 
@@ -93,17 +95,19 @@ Interestingly CTM gets close. But it's playing a game and it's little better tha
 
 *So what to do instead*
 
-1. What ever the application uses must be in the cuts the mustard test.
+1. What ever the application uses must be detected as part of the CTM test.
 
-2. When appropriate test as well as detect to avoid bugs. Only way to do this is through facades, and a good library should do this for you so you don't have to repeat yourself.
+2. When required feature *test* as well as detect to avoid bugs. Only way to do this is through facades, and a good library should do this for you so you don't have to repeat yourself.
 
-How does this play out?
+What does this end up looking like?
 
 	if(lib.hasFeatures('x', 'y', 'z')) {
 		x();
 		y();
 		z();
 	}
+
+Notice it is remarkably similar to CTM, but abstracted away into a library so that you, the developer decouples application logic from browser APIs and browser *bugs*. For the above application to run, the libary has exposed to the application that not only are all the required APIs available to use but they are *bug* free. Essentially, Cuts the Mustard done right.
 
 This is why it *does* matter if the web page works without Javascript because the user gets the core, Javascript off experience when the browser doesn't cut the mustard.
 
@@ -127,5 +131,7 @@ This is the **Real** Progressive Enhancement.
 	if(canRun()) {
 		application.start();
 	}
+
+* Reference zakas booklet about the bugs around matchMedia.
 
 -->
