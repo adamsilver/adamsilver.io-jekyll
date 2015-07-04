@@ -3,12 +3,13 @@ layout: default
 id: home
 ---
 
-# Hello! I'm Adam, a UX-driven Front-end Developer from London.
+# Hello, my name is Adam. I’m a UX-driven Front-end Developer based in London, UK.
 
-I believe that websites should be readily accessible by people &mdash; *all* people &mdash; no matter their age, ability, user interaction preferences and, choice of device, Operating System and browser.
+Websites should be accessible by all people &mdash; no matter their location, age, ability or interaction preferences. Subsequently, their choice of browser and device should be largely irrelevant &mdash; embracing the conventions of the web leads to an intuitive and delightful User Experience.
 
-I *also* believe that the experience can be nice for everyone, but *exceptional* for some &mdash; much like how we can watch perfectly good movies on black and white televisions &mdash; but HD televisions are that bit *nicer*!
+My experience, in building responsive, cross-browser (not multi-browser), accessible, rich and progressively enhanced user interfaces means I know what works, what doesn't and what to avoid in the process from a technical and UX perspective.
 
-I like to solve problems, preferably ones that are worth solving, because otherwise they are *not* problems are they?
+Having previously acted as Scrum Master, I am adept at spotting friction and will actively and passionately endeavour to *"make the boat go faster"*. I strive to help your business focus on what is truly essential and to leave out the rest &mdash; *less, but better*.
 
 <a class="readArticles" href="/articles/">Read my articles</a>
+
