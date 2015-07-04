@@ -3,12 +3,13 @@ layout: default
 id: home
 ---
 
-# Hello! My name is Adam Silver and I am a Front-end Developer, based in London.
+# Hello, my name is Adam. I’m a UX-driven Front-end Developer based in London, UK.
 
-I am an *experienced* Agile front end web developer. What differentiates me, is that I write [test-driven](http://en.wikipedia.org/wiki/Test-driven_development), high quality and *reliable*, [object-oriented](http://en.wikipedia.org/wiki/Object-oriented_programming) Javascript.
+Websites should be accessible by all people &mdash; no matter their location, age, ability or interaction preferences. Subsequently, their choice of browser and device should be largely irrelevant &mdash; embracing the conventions of the web leads to an intuitive and delightful User Experience.
 
-My experience in building [cross-browser (not multi-browser)](http://en.wikipedia.org/wiki/Cross-browser#Cross-browser_vs._multi-browser), [accessible](http://www.w3.org/WAI/intro/accessibility.php), rich and [progressively enhanced](http://jakearchibald.com/2013/progressive-enhancement-still-important/) user interfaces means I know what works, what doesn't and what to avoid in the process from a technical and UX perspective.
+My experience, in building responsive, cross-browser (not multi-browser), accessible, rich and progressively enhanced user interfaces means I know what works, what doesn't and what to avoid in the process from a technical and UX perspective.
 
-Having previously acted as Scrum Master, I am adept at spotting friction within a team and will actively and passionately endeavour to *[Make the boat go faster](http://www.willitmaketheboatgofaster.com/)* by unifying and leading a team to success.
+Having previously acted as Scrum Master, I am adept at spotting friction and will actively and passionately endeavour to *"make the boat go faster"*. I strive to help your business focus on what is truly essential and to leave out the rest &mdash; *less, but better*.
 
 <a class="readArticles" href="/articles/">Read my articles</a>
+
