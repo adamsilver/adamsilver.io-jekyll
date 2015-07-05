@@ -451,21 +451,8 @@ a img {
 	margin: 0;
 }
 
-.readArticles,
-.readArticles:link,
-.readArticles:visited {
-    display: inline-block;
-    border-radius: 4px;
-    background-color: #1abc9c;
-    padding: 10px 20px;
-    color: #fff;
-    font-weight: normal;
-    text-decoration: none;
-}
-
-.readArticles:hover {
-    background-color: #1AAF8F;
-    color: #fff;
+.read {
+	font-size: 1.5em;
 }
 
 #pg-home #content {
