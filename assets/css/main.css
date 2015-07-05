@@ -378,6 +378,12 @@ a img {
 	overflow: hidden;
 }
 
+@media (max-width: 440px) {
+	.newsletter .field  {
+		width: auto;
+	}
+}
+
 .newsletter .email {
     border: 1px solid #ddd;
     padding: 10px;
