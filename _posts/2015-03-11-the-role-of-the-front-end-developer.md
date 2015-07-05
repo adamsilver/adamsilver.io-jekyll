@@ -48,6 +48,8 @@ Front-end developers should endeavour to test in as many browsers as is reasonab
 
 Whilst not specifically related to Front-end developers, it is very important to be able to work as part of a team in a given process. This means an understanding of various Agile methodologies. Better still, it's highly beneficial to you and your team to be able to spot friction and influence the process regularly to deliver software in a more efficient way.
 
+## Citations
+
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
 	<dd><a href="http://www.disambiguity.com/there-is-no-ux/">There is no UX, there is only UX</a></dd>

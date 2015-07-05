@@ -85,6 +85,8 @@ But what about browsers lacking `Object.create`? Nothing happens. The user gets 
 
 At first polyfills seem like a great idea. Having explored the intricacies of this technique, it's clear that at best, polyfills are harder to implement and cause application and browser logic to be tightly coupled &mdash; which is costly. At their worst they come with highly problematic caveats that cause pain for the developer &mdash; ultimately resulting in unreliable software and unhappy users. The answer is to use facades, enabling the abstracting away of complexity into reliable and lean software &mdash; every developers dream.
 
+## Citations
+
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
 	<dd><a href="http://perfectionkills.com/whats-wrong-with-extending-the-dom/">What's wrong with extending the DOM?</a></dd>
@@ -102,17 +104,8 @@ At first polyfills seem like a great idea. Having explored the intricacies of th
 
 <!--
 
-* Why this article? The world has gone crazy for polyfills and I can see why. But the world goes crazy for McDonalds and it's bad for us. I want to explain why this seemingly popular technique to develope web applications, whilst popular, is actually a bad idea so that your software development is more reliable and in turn ensures happy users.
-
-* Browsers are written by us humans and so it follows that browsers contain bugs. Just because an API is implemented in a browser doesn't mean it's trustworthy. Sometimes, the spec is simply misunderstood and implemented differently across browser vendors. Adding a polyfill to the mix just adds complexity in the form of another user-defined implementation.
-
-* The main takeaway is that you can't rely on native APIs, you can't rely on your implementation of a native API and sometimes a polyfill is impossible to implement using alternative methods. e.g. polyfill attachEvent or getElementById. And this doesn't just apply to old APIs, same goes for new ones like Zakas matchMedia.
+* ADDED IMPLEMENTATION Just because an API is implemented in a browser doesn't mean it's trustworthy. Sometimes, the spec is simply misunderstood and implemented differently across browser vendors. Adding a polyfill to the mix just adds complexity in the form of another user-defined implementation.
 
 * CONSISTENCY Then there is the question of consistency. Do you want to use some polyfills and some facades. Probably not. Just use a consistent abstraction, a facade.
 
-* The idea of browsers TODAY being okay to polyfill. Browsers come out all the time and then yesterdays modern browsers are screwed, u end up having to polyfill everything from getEBI to addListener.
-
-The host is a dynamic and unpredictable environment, and polyfills try to bend the rules in order to create a static environment. At best, polyfills are harder to implement. At their worst, they are impossible to implement to standard. This increases development effort significantly but even worse, results in unreliable software. The answer, is of course to use wrappers. You get all the same functionality but without the pitfalls.
-
 -->
-

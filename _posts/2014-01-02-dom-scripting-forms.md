@@ -35,6 +35,8 @@ Once we have a control we can interrogate its value:
 
 This is useful if you want to perform client side validation, for example.
 
+## Citations
+
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
 	<dd><a href="http://docs.oracle.com/cd/E19957-01/816-6408-10/">DOM 0 API</a></dd>

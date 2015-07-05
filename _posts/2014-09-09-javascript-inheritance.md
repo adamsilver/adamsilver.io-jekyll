@@ -100,6 +100,8 @@ Using the previously defined `batman` instance above we run the scenario:
 
 The takeaway from this scenario is that you can call and reuse the Parent methods.
 
+## Citations
+
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
 	<dd><a href="http://javascript.crockford.com/inheritance.html">Douglas Crockford on inheritance</a></dd>

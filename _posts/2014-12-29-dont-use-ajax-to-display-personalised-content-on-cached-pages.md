@@ -13,7 +13,7 @@ Personalised content is any content that is specific to a user. The most basic e
 
 ## Architecture
 
-*Is there one extra request for personalised content or multiple? Do you serve it as JSON and then parse that on the client? How do you organise your scripts for this? How do you organise the view partials for this on the server? At what point is personalised content not essential to the User Experience (UX) and how does that affect architecture?* 
+*Is there one extra request for personalised content or multiple? Do you serve it as JSON and then parse that on the client? How do you organise your scripts for this? How do you organise the view partials for this on the server? At what point is personalised content not essential to the User Experience (UX) and how does that affect architecture?*
 
 What seems like a simple use of AJAX has a significant effect on architecture and it doesn't stop there.
 
@@ -23,7 +23,7 @@ If the user doesn't have Javascript (or they have it but not the capability to m
 
 ## Design
 
-Christian Heilmann rightly says that *AJAX shouldn't break the web* [[2](#ref2)] and using it in this way is doing just that. He also highlights that when AJAX is used, it is important to remember how much the browser does for free, that subtly goes unnoticed. This includes displaying a loading indicator with  progress bar as well as handling page not found and timeout errors. Utilising AJAX and content-caching like this, means the page is only half loaded and half rendered at which point, and sometime later, the personalised content is injected. The UX is likely to be at least a little jarring as the page fills in the gaps. 
+Christian Heilmann rightly says that *AJAX shouldn't break the web* [[2](#ref2)] and using it in this way is doing just that. He also highlights that when AJAX is used, it is important to remember how much the browser does for free, that subtly goes unnoticed. This includes displaying a loading indicator with  progress bar as well as handling page not found and timeout errors. Utilising AJAX and content-caching like this, means the page is only half loaded and half rendered at which point, and sometime later, the personalised content is injected. The UX is likely to be at least a little jarring as the page fills in the gaps.
 
 Solutions may include loading spinners, hiding content and transitions but in reality they are far from perfect. Also, the user may not see the various updates as they are busy interacting further down the page. This is all exacabated on slower connections.
 
@@ -33,13 +33,15 @@ Extra design effort is required to cater for the aformentioned degrading in UX. 
 
 ## Performance
 
-Instead of having a single HTTP request that contains the entire required response there will now be multiple. The first would be for the Document containing non-personalised content. The subsequent request will be via AJAX and *will* hit your web server, therefore subject to the same latency as always. 
+Instead of having a single HTTP request that contains the entire required response there will now be multiple. The first would be for the Document containing non-personalised content. The subsequent request will be via AJAX and *will* hit your web server, therefore subject to the same latency as always.
 
 The potential performance benefit is somewhat negated by requiring extra Javascript including invoking and (parsing) the JSON request, finding elements, traversing and updating the Document. All of this code adds to the page-weight slowing down the load time. There is also extra CSS required to alleviate the self-induced jarring experience. Runtime performance also degrades because injecting HTML causes reflows and repaints.
 
 ## Summary
 
 Content-caching *is* a very useful technique when used responsibly and for pages that don't contain personalised content. For pages that *do* contain personalised content, a simple cookie check can determine whether the cached version should be served or not [[3](#ref3)]. It is ill-advised to misuse Javascript in this way as there are several negative side effects in doing so. AJAX should not break the web, it should enhance the experience where necessary. AJAX seems like an innocent and beneficial solution, but in reality it encourages bad practice that creates several self-induced problems for users and the development team.
+
+## Citations
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>

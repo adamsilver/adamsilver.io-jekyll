@@ -78,6 +78,8 @@ Whilst not as DRY as I would like, prefixing your selectors with a common ancest
 
 CSS preprocessors clearly have issues, some of which there *are* solutions to. For me and many other developers, the disadvantages are overwhelming and cause too much friction in comparison to using plain CSS. At the very least be concious of the decision to use a CSS preprocessor and the impact it might have on your team.
 
+## Citations
+
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
 	<dd><a href="http://thesassway.com/intermediate/using-source-maps-with-sass">SASS Source Maps</a></dd>

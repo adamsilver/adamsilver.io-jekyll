@@ -51,6 +51,8 @@ Peter Michaux demonstrates this in his article [[2](#ref2)] using the concept of
 
 Traditionally, when writing Multi-browser scripts, dropping browser support means no testing in that browser, and that it is likely broken, meaning of course, the user suffers. With Cross-browser scripting, the meaning of support changes. The user is always supported, but may get the enhanced or degraded experience. That's okay, they won't mind.
 
+## Citations
+
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
 	<dd><a href="https://gist.github.com/david-mark/06b9879f963ebb0eed62">Cross-browser vs. multi-browser scripting</a></dd>

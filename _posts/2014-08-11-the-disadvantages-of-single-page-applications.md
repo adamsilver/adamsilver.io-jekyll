@@ -73,6 +73,8 @@ SPAs are meant to provide a better experience. It is therefore ironic that SPAs 
 
 Furthermore, it is interesting to note that sites such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)] realised the SPA architecture was a mistake and have since reverted their architectures. The issues described in this article are self-induced. Remember, **avoiding the SPA architecture avoids the issues**.
 
+## Citations
+
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
 	<dd><a href="http://en.wikipedia.org/wiki/Single-page_application">Wikipedia: SPAs</a></dd>
