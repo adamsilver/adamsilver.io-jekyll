@@ -23,6 +23,8 @@ When did all this nonsense become standard practice? Everyone's building them. E
 
 In many ways I wish I hadn't participated in Technical Wankery back then, but then again, I wouldn't be where I am today having learnt all those useful lessons about what *not* to do. It's certainly a challenge convincing colleagues that "cool" and "new" technology isn't *cool* at all. But what's all this in aid of? The end-user of course! The *user* just wants to use *their* chosen browser to consume your content or buy your widget and get the hell back to living life. So now, I try to do for others what James did for me: hurl abuse at my fellow developers. Normally speaking, I get a good response, a little laugh, and the opportunity to explain myself.
 
+## Citations
+
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
 	<dd><a href="/articles/the-disadvantages-of-single-page-applications/">The disadvantages of Single Page Application</a></dd>

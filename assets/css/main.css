@@ -134,21 +134,17 @@ p {
 	color: #2c3e50;
 }
 
-p.share {
-    margin-top: 40px;
+.share {
+	border-top: 1px solid #eee;
+	padding-top: 30px;
+	margin-bottom: 30px;
 }
 
-p.share a {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #fff;
-    background-color: #39d;
-    border-radius: 4px;
-    text-decoration: none;
-}
-
-p.share a:hover {
-	background-color: #2C82BB;
+.share p {
+	text-align: center;
+	font-style: italic;
+	font-size: 1.5em;
+	margin: 0;
 }
 
 dt {
@@ -156,11 +152,7 @@ dt {
 }
 
 blockquote {
-    /*background-color: #ecf0f1;*/
-    /*padding: 1px 10px 1px 10px;*/
     margin: 20px 30px;
-    /*border-left: 5px solid #2c3e50;*/
-
 }
 
 blockquote p {

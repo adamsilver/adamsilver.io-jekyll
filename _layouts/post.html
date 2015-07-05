@@ -17,16 +17,19 @@
             </div>
 
             <div id="article">
-
                 <h1 class="title">{{ page.title }}</h1>
 				<p class="date">{{ page.date | date: "%-d %B %Y" }}</p>
                 <p class="wordCount">{{ page.content | number_of_words }} words</p>
 
                 {{ content }}
-
-                <p class="share"><a href="https://twitter.com/share?source=tweetbutton&text={{page.title}}&via=adambsilver&url={{site.url}}{{page.url}}&hashtags=frontend,{{page.categories[0]}}">Share this article on Twitter</a></p>
-
             </div>
+
+			<div class="share">
+            	<p>
+            		Like this article?
+            		<a href="https://twitter.com/share?source=tweetbutton&text={{page.title}}&via=adambsilver&url={{site.url}}{{page.url}}&hashtags=frontend,{{page.categories[0]}}">Share on Twitter</a>
+            	</p>
+			</div>
 
             {% include newsletterForm.html %}
         </div>
