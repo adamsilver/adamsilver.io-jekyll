@@ -372,11 +372,10 @@ a img {
     overflow: hidden;
 }
 
-@media (min-width: 450px) {
-	.newsletter .field {
-		width: 365px;
-		margin: 0 auto;
-	}
+.newsletter .field {
+	width: 365px;
+	margin: 0 auto;
+	overflow: hidden;
 }
 
 .newsletter .email {
@@ -384,12 +383,14 @@ a img {
     padding: 10px;
     font-size: inherit;
     width: 215px;
-    display: block;
+    float: left;
 }
 
-@media (min-width: 450px) {
+@media (max-width: 440px) {
 	.newsletter .email {
-		float: left;
+		float: none;
+		margin: 0 auto 10px;
+		display: block;
 	}
 }
 
@@ -400,22 +401,25 @@ a img {
     color: #fff;
     padding: 9px 10px 9px;
     font-family: arial;
-    width: 237px;
+    width: 120px;
     display: block;
     font-weight: bold;
     font-family: 'droid sans';
     text-transform: uppercase;
+	float: left;
+}
+
+@media (max-width: 440px) {
+	.newsletter .submit {
+		float: none;
+		margin: 0 auto;
+		display: block;
+		width: 235px;
+	}
 }
 
 .newsletter .submit:hover {
 	background-color: #253341;
-}
-
-@media (min-width: 450px) {
-	.newsletter .submit {
-		float: left;
-		width: 120px;
-	}
 }
 
 /**********************************************************
