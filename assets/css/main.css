@@ -372,24 +372,25 @@ a img {
 
 .newsletter h2 {
     margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .newslettter form {
     overflow: hidden;
 }
 
-.newsletter label {
-    float: left;
-    font-family: arial;
-    padding: 12px 16px 10px 0;
+.newsletter .email {
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: inherit;
+    width: 215px;
+    display: block;
 }
 
-.newsletter .email {
-    border: 1px solid #ccc;
-    padding: 10px;
-    float: left;
-    font-size: inherit;
-    margin-right: 20px;
+@media (min-width: 450px) {
+	.newsletter .email {
+		float: left;
+	}
 }
 
 .newsletter .submit {
@@ -397,10 +398,24 @@ a img {
     font-size: 1em;
     background-color: #2c3e50;
     color: #fff;
-    float: left;
-    padding: 10px;
-    border-radius: 4px;
+    padding: 9px 10px 9px;
     font-family: arial;
+    width: 237px;
+    display: block;
+    font-weight: bold;
+    font-family: 'droid sans';
+    text-transform: uppercase;
+}
+
+.newsletter .submit:hover {
+	background-color: #253341;
+}
+
+@media (min-width: 450px) {
+	.newsletter .submit {
+		float: left;
+		width: 120px;
+	}
 }
 
 /**********************************************************
