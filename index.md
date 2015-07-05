@@ -11,4 +11,4 @@ My experience, in building responsive, cross-browser (not multi-browser), access
 
 Having previously acted as Scrum Master, I am adept at spotting friction and will actively and passionately endeavour to *"make the boat go faster"*. I strive to help your business focus on what is truly essential and to leave out the rest &mdash; *less, but better*.
 
-<p class="read">Read one of my <a href="/articles">articles</a> or if you're not sure which, <a href="/articles/the-boring-front-end-developer/">start here</a>.</p>
+<p class="read">Read one of my <a href="/articles">articles</a>.</p>
