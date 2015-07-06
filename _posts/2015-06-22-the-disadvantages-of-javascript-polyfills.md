@@ -31,7 +31,7 @@ It doesn't take much effort to find examples of problematic polyfills. I did ori
 
 > &ldquo;For the case of simply "begetting" an object that inherits prototypically from another, this **should** work fine across legacy engines.&rdquo;
 
-The word "should" doesn't denote confidence does it? Personally, I like to build on top of reliable foundations. As David Mark says, you're only as reliable as your lowest level function(s). So in the case of polyfills that would be, not very. Unfortunately, it continues:
+The word "should" doesn't instill confidence does it? Personally, I like to build on top of reliable foundations. As David Mark says, you're only as reliable as your lowest level function(s). So in the case of polyfills that would be, not very. Unfortunately, it continues:
 
 > &ldquo;The second argument is passed to Object.defineProperties which will **probably fail either silently or with extreme prejudice**.&rdquo;
 
