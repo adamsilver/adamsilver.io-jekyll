@@ -23,7 +23,7 @@ As Nicholas Zakas presents in *Scalable JavaScript Application Architecture* [[3
 
 ## Context context context
 
-You may not need the full API to solve your problem; you may not even be *able* to implement a polyfill because there's just no way to do it. This is why context is important, which is something Javascript expert David Mark expresses frequently. What exactly does David mean by context? You would have to ask David to be completely sure but I will hazard a guess that, *first* it's vital to understand the problem of exactly what you're trying to solve. Then, *second*, implement an appropriate solution for said problem and specifically no more. This seems sensible doesn't it? That's because it is. With polyfills it's all or nothing, wherby you rarely need *all* of the API and the solution is anything but lean.
+You may not need the full API to solve your problem; you may not even be *able* to implement a polyfill because there's just no way to do it. This is why context is important, which is something Javascript expert David Mark expresses frequently. What exactly does David mean by context? You would have to ask David to be completely sure but I will hazard a guess that, *first* it's vital to understand the problem of exactly what you're trying to solve. Then, *second*, implement an appropriate solution for said problem &mdash; specifically don't do *more* than solve the problem (YAGNI). This seems sensible doesn't it? That's because it is. With polyfills it's all or nothing, wherby you rarely need *all* of the API and the solution is anything but lean.
 
 ## Caveats
 
