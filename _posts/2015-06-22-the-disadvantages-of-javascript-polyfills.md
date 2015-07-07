@@ -13,7 +13,7 @@ Polyfills *must* augment host and native objects in order to plug missing gaps. 
 
 ## Feature detection is not enough
 
-As Peter Michaux demonstrates in *Feature Detection: State of the art browser scripting* [[2](#ref2)], the mere presence of an API is not necessarily enough to determine reliable usage. This is where feature *testing* comes in. Polyfills just detect the presence of an API, they do not iron out the bugs or inconsistencies found across the breadth of browsers. This is why facades are useful as we will see later on.
+As Peter Michaux demonstrates in *Feature Detection: State of the art browser scripting* [[2](#ref2)], the mere presence of an API is not necessarily enough to determine reliable usage. This is where feature *testing* comes in. Polyfills *tend* to just detect the presence of an API; they do not iron out the bugs or inconsistencies found across the breadth of browsers; even if they did, they would have to override the original, whereby the override may contain a reference to the original &mdash; a dangerous and unnecessary way to go. This is why facades are useful as we will see later on.
 
 ## Decoupling browser and application logic
 
