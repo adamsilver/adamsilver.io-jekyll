@@ -55,7 +55,7 @@ In a nutshell developers use a combination of techniques:
 
 a) Ignore this information &mdash; ignorance is bliss.
 
-b) Rely on third party software that comes with a select few supported browsers &mdash; Extension of the first one and just because it's third party doesn't make it reliable or advisable.
+b) Rely on third party software that comes with a select few supported browsers (multi browser :( )&mdash; Extension of the first one and just because it's third party doesn't make it reliable or advisable.
 
 c) Keep an eye on upgrades to third party software &mdash; costly and mentally draining.
 
@@ -107,9 +107,9 @@ What does this end up looking like?
 		z();
 	}
 
-Notice it is remarkably similar to CTM, but abstracted away into a library so that you, the developer decouples application logic from browser APIs and browser *bugs*. For the above application to run, the libary has exposed to the application that not only are all the required APIs available to use but they are *bug* free. Essentially, Cuts the Mustard done right.
+Notice it is remarkably similar to CTM, but abstracted away into a library so that you, the developer decouples application logic from browser APIs and browser *bugs*. For the above application to run, the libary has exposed to the application that not only are all the required APIs available to use but they are *bug* free on this client. Essentially, Cuts the Mustard done right.
 
-This is why it *does* matter if the web page works without Javascript because the user gets the core, Javascript off experience when the browser doesn't cut the mustard.
+This is why it *does* matter if the web page works without Javascript because the user gets the core, js-off experience when the browser doesn't cut the mustard.
 
 This is the **Real** Progressive Enhancement.
 
