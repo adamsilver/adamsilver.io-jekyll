@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Why you don't understand Real Progressive Enhancement"
+title:  "The Real Progressive Enhancement"
 date:   2032-01-01 09:00:01
 categories: js
 ---
@@ -43,63 +43,74 @@ It's not just about the presence of an API. Sometimes the API is buggy. *Caniuse
 
 > Safari 3.1 has a caching bug. If the class of an element changes it won't be available for getElementsByClassName.
 
-So there we have it &mdash; Javascript doesn't degrade gracefully.
+So there we have it &mdash; Javascript *doesn't* degrade gracefully.
 
-## What do we do about this?
+## What some do?
 
-<!-- <div class="image">
-	<img src="/assets/img/fingersinear.gif" alt="La la la" width="337" height="225">
-</div>
- -->
-In a nutshell developers use a combination of techniques:
+### a) La-la driven-development
 
-a) Ignore this information &mdash; ignorance is bliss.
+<!-- TODO tree fall in the forest -->
 
-b) Rely on third party software that comes with a select few supported browsers (multi browser :( )&mdash; Extension of the first one and just because it's third party doesn't make it reliable or advisable.
+Like sticking your fingers in your ear and singing *"la la la"*. This methodology ignores the fact that Javascript doesn't naturally degrade gracefully. Ignorance is bliss, if I don't know it's failing for some users, then it's not happening. Also relevant is the school of thought that everything is okay because it "works without Javascript" but as we have seen above that is not the *only* case to worry about &mdash; Javascript is shades of grey.
 
-c) Keep an eye on upgrades to third party software &mdash; costly and mentally draining.
+### b) Outsource driven-development
 
-d) Upgrade third party software regularly and perform regression testing &mdash; costly and mentally draining.
+This is really an extension of *a)*. This one effectively abdicates responsibility by relying on an unsuitable 3rd party library or framework that has it's own caveats and (multi) browser support. If the library only supports browser X, that means your application can only ever support browser X. When library drops support for browser X, you guessed it, you just lost support for browser X too. With this one you have to keep an eye on upgrades and incur the cost of regression testing.
 
-e) Think everything is okay because "it works without Javascript" &mdash; this is plain wrong as demonstrated above.
+### c) Cuts the Mustard
 
-Then there is the relatively new **Cutting the mustard** technique.
+This is a relatively new technique which has the notion of two experiences; a *core* experience and an *enhanced* experience. The way it works is given Javascript APIs of `a`, `b` and `c`, and the browser can detect *all* of those features the Javascript application will kick in and provide the *enhanced* experience. Failing that, the Javascript application will not execute and the user will get the degraded, JS-off equivalent, *core* experience. This is definitely the *right* *philosphy* but that is where it ends. Let's take a little look:
 
-This has the concept of a *core* experience and an *enhanced* experience. This is most certainly the right philosophy but it doesn't play out too well. Taking their own example let me attempt to break this (not hard btw).
-
-	if(	document.querySelector &&
-		window.addEventListener &&
-		window.localStorage) {
-
+	// where a, b and c are browser API methods
+	if(a && b && c) {
 		// bootstrap application
-		window.addEventListener('load', function(e) {
-			var el = document.querySelector('.someElement');
-			window.matchMedia('');
-			// more stuff but this is enough to demonstrate
+	}
+
+And a real example:
+
+	if(	document.querySelector && window.addEventListener && window.localStorage) {
+		// bootstrap application
+	}
+
+This is fraught with problems.
+
+**First**, merely detecting the presence of an API is not enough (as I mention in *The disadvantages of Javascript polyfills*. If you want a little bit more juice, Nicholas Zakas provides a great case study for this in his ebook *The Problem with Native JavaScript APIs*.
+
+**Second**, it's only reliable if the application utilises the methods in the CTM if statement e.g. the following could easily break:
+
+	if(	document.querySelector && window.addEventListener && window.localStorage) {
+		// applicaiton that uses other APIs
+
+		window.addEventListener("load", function(e) {
+			var matches = window.matchMedia(...);
 		});
 	}
 
-As I mentioned just before, merely detecting the presence of an API is not enough due to bugs. Therefore, CTM is fragile.
+**Third**, it could rule out a perfectly capable browser from receiving the better *enhanced* experience. Let's say all my app does is perform js form validation, something that say IE6 is perfectly capable of. Cuts the Mustard will stop the user getting the enhanced experience and will have to resort to server round trips for posting a form. Providing an unnecessarily slow User Experience and costs more by putting more load on the server:
 
+	if(	document.querySelector && window.addEventListener && window.localStorage) {
+
+		// this code will never run in a perfectly *capable* browser
+		document.forms.someForm.attachEvent('submit', function() {
+			// perform validation on the form etc
+		});
+
+	}
+<!--
 Caniuse.com states that `document.querySelector` has partial support in IE8. It just so happens (by luck or judgement) that the additional checks for `window.addEventListener` and `window.localStorage` means IE8 only gets the *core* experience. But it got lucky with IE8 &mdash; not so much for iOS 8 as Caniuse.com states:
 
 > iOS 8.* contains a bug where selecting siblings of filtered id selections are no longer working (for example #a + p).
-
-Putting the bugs to one side just for a moment, the above code provides the enhanced experience for browsers cutting the mustard, but if one of those browsers can't handle matchMedia your screwed aren't you?
 
 This is one of infinite permutations and is a very real example. IE9 will enhance and break in the above example. Inferring enhanced support with a few choice APIs detected is fragile.
 
 Some implementations of the Cut the Mustard technique use polyfills to plug other gaps but it just so happens that polyfills are very unreliable. Who wants more fragility?
 
 Interestingly CTM gets close. But it's playing a game and it's little better than User Agent sniffing and needs constant monitoring and maintenance.
+-->
 
-*So what to do instead*
+## What should you do?
 
-1. What ever the application uses must be detected as part of the CTM test.
-
-2. When required feature *test* as well as detect to avoid bugs. Only way to do this is through facades, and a good library should do this for you so you don't have to repeat yourself.
-
-What does this end up looking like?
+*First*, detect only what your application requires to be detected and *second*, where necessary feature *test* an API to iron out bugs in APIs. The only way to do this reliably is through facades. A good library should abstract the complexity away for you with the added bonus of not repeating yourself. What does this end up looking like?
 
 	if(lib.hasFeatures('x', 'y', 'z')) {
 		x();
@@ -115,6 +126,10 @@ This is the **Real** Progressive Enhancement.
 
 
 <!--
+
+
+
+http://chimera.labs.oreilly.com/books/1234000001655/index.html
 
 *The problem of the web is actually the beauty of the web. Anyone with a browser and Internet connection can access your website.*
 
