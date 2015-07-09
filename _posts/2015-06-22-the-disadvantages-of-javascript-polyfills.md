@@ -83,7 +83,7 @@ But what about browsers lacking `Object.create`? Nothing happens. The user gets 
 
 ## Summary
 
-At first polyfills seem like a great idea. Having explored the intricacies of this technique, it's clear that at best, polyfills are harder to implement and cause application and browser logic to be tightly coupled &mdash; which is costly. At their worst they come with highly problematic caveats that cause pain for the developer &mdash; ultimately resulting in unreliable software and unhappy users. The answer is to use facades, enabling the abstracting away of complexity into reliable and lean software &mdash; every developers dream.
+At first polyfills seem like a great idea. Having explored the intricacies of this technique, it's clear that at best, polyfills are harder to implement and cause application and browser logic to be tightly coupled &mdash; which is costly. At their worst they come with highly problematic caveats that cause pain for the developer &mdash; ultimately resulting in unreliable software and unhappy users. The answer is to use facades, enabling the abstracting away of complexity into reliable and lean software &mdash; every developer's dream.
 
 ## Citations
 
