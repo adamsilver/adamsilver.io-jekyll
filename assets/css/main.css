@@ -492,10 +492,19 @@ pre {
 
 p code {
 	font-size: 1.3em;
+	background: #ecf0f1;
+	border: 1px solid #DBDEDF;
 }
 
 #article .title {
 	margin-bottom: 0;
+}
+
+#article .tagline {
+	margin: 0;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 1.2em;
 }
 
 #article li {

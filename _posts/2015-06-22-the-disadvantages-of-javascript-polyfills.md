@@ -9,7 +9,9 @@ A polyfill, also known as a shim, is a user defined implementation of an API tha
 
 ## Augmenting host objects
 
-Polyfills *must* augment host and native objects in order to plug missing gaps. The problem being that augmenting host objects and (to a slightly lesser extent) native objects is ill-advised and has been for well over a decade by experts including Richard Cornford, David Mark, Thomas Lahn and Kangax &mdash; the latter of which published two dedicated articles on the subject entitled *What's wrong with extending the DOM?* [[0](#ref0)] and *Extending native built-ins* [[1](#ref1)]. He raises many compelling issues in doing so which directly relate to the use of polyfills.
+Polyfills *must* augment host and native objects in order to plug missing gaps. The problem being that augmenting host objects and (to a slightly lesser extent) native objects is ill-advised and has been for well over a decade by experts including Richard Cornford, David Mark, Thomas Lahn and Kangax &mdash; the latter of which published two dedicated articles on the subject entitled *What's wrong with extending the DOM?* [[0](#ref0)] and *Extending native built-ins* [[1](#ref1)]. Here is a choice snippet below, but I highly advise reading the entire article:
+
+> &ldquo;In fact, DOM extension seemed so temptingly useful [...]. But what hides behind this seemingly innocuous practice is a huge load of trouble. [...] the downsides of this approach far outweigh any benefits.&rdquo;
 
 ## Feature detection is not enough
 

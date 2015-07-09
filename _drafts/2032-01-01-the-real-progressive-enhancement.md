@@ -2,48 +2,67 @@
 layout: post
 title:  "The Real Progressive Enhancement"
 date:   2032-01-01 09:00:01
+tagline: "The final piece of the puzzle"
 categories: js
 ---
 
-> &ldquo;Samsung shits out a different-sized black rectangle every 30 seconds.&rdquo;
+> Quote here.
+> <br>&mdash; <cite>Benjamin Franklin</cite>
 
-Brad Frost is right. Samsung does do this. Lots of devices and browser vendors do this.
+Everyone knows about Progressive Enhancement. But there is a missing piece to Progressive Enhancement that I just don't see people implement reliably out their in the industry. Before we get to that though, I need to just make two quick points: first, Unobtrusive Javascript is not Progressive Enhancement and second, handling the Javascript turned-off experience, is not Progressive Enhancement either, although that is part of it (as we will see later on).
 
-And so it follows that Progressive Enhancement is a good idea. But Progressive Enhancement is not Unobtrusive Javascript, nor is it handling the Javascript off scenario (although that is part of it).
+> Unlike HTML and CSS, Javascript does not degrade gracefully *without* developer intervention.
 
-But let's take a step back momentarily.
+Take the `<video>` element as an example. If the browser doesn't support the element, then it just won't render &mdash; nest an `<img>` element inside and the fallback is there for all other browsers. Similarly with CSS, the browser just ignores for example, `border-radius: 3px`.
 
-We know that HTML degrades gracefully with little (or *no*) developer intervention &mdash; take the `video` element for example &mdash; it allows you to nest an image as a fallback.
+The same cannot be said for Javascript. Run some code in an unsupporting browser and you will see errors in the console. For example, try running `document.getElementsByClassName('yo')` in Internet Explorer 8. It's very likely that your application does a lot more than simply retrieve elements by class name and store them in memory to do nothing with. And in this case, it is very *likely* to leave a page irrevocably broken, to the point where the site is *unusable*.
 
-**Lovely.**
+Let's look at an example where the developer got lucky and the IE8 user got lucky also.
 
-Similarly, with CSS &mdash; it just doesn't render the style.
+	// find all elements with a class of 'link'
+	// and override the link to do something
+	// other than the default behaviour
+	var links = document.getElementsByClassName('link');
+	for(var i = 0; i < links.length; i++) } {
+		links[i].onclick = function(e) {
+			e.preventDefault();
+			alert(1);
+		};
+	}
 
-**No harm, no foul.**
+In this particular case, IE8 will crap out on the very first line. Meaning that when the user clicks on the the anchor, the link will be followed like normal. But as I said before this is lucky. Thankfully the developer at least provided a core experience without Javascript. But as I said earlier this is not the whole story.
 
-Enter our friend, Javascript.
+What if I wrote the following code and ran it in IE8 again:
 
-You write some script that works in some browsers and not in others. What happens in the latter?
+	var link = document.getElementById('someLink');
+	link.onclick = function(e) {
+		e.preventDefault();
+		var widgets = document.getElementsByClassName('widget');
+		// etc
+	};
 
-**Error!**
+This time the page is left fatally broken for the end user. No longer can the user follow 'someLink' because the element was successfully retrieved by ID and then a listener was added successfully. Meeaning the user can never follow the link (core experience) and will fail when retrieving the widgets.
 
-You want an example don't you?
+This is what I want to talk about today.
 
-	// Run this in IE8
-	document.getElementsByClassName('yo');
+<!--
 
-How about another?
+Another example if ur thinking this is a stupid old browser example.
 
-	// Run this in IE9
-	matchMedia("(min-width: 400px)");
+// works
+form.onsubmit = function() {
+	doesnt
+	get location.
+}
 
-**But wait!**
 
-It's not just about the presence of an API. Sometimes the API is buggy. *Caniuse.com* states &mdash; and this is just one of a plethora of examples:
 
-> Safari 3.1 has a caching bug. If the class of an element changes it won't be available for getElementsByClassName.
+Enter Javascript. Try running `document.getElementsByClassName('yo');` in Internet Explorer 8 or `matchMedia("(min-width: 400px)");` in Internet Explorer 9. **Runtime error. Sad face.** Also, it's not just about the presence of an API &mdash; sometimes an API is buggy. *Caniuse.com* states &mdash; and this is just one of a plethora of examples. Safari 3.1 has a caching bug:
+
+> If the class of an element changes it won't be available for getElementsByClassName.
 
 So there we have it &mdash; Javascript *doesn't* degrade gracefully.
+-->
 
 ## What some do?
 
@@ -127,11 +146,7 @@ This is the **Real** Progressive Enhancement.
 
 <!--
 
-
-
 http://chimera.labs.oreilly.com/books/1234000001655/index.html
-
-*The problem of the web is actually the beauty of the web. Anyone with a browser and Internet connection can access your website.*
 
 * Possible title: Progressive Enhancement the missing piece
 
@@ -148,5 +163,7 @@ http://chimera.labs.oreilly.com/books/1234000001655/index.html
 	}
 
 * Reference zakas booklet about the bugs around matchMedia.
+
+https://youtu.be/li4Y0E_x8zE?t=23m11s
 
 -->
