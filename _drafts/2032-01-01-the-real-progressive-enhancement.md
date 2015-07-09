@@ -6,10 +6,10 @@ tagline: "The final piece of the puzzle"
 categories: js
 ---
 
-> Quote here.
-> <br>&mdash; <cite>Benjamin Franklin</cite>
+> &ldquo;I’ve always maintained that, given the choice between making something my problem, and making something the user’s problem, I’ll choose to make it my problem every time.&rdquo;
+> <br>&mdash; <cite>Jeremy Keith</cite>
 
-Everyone knows about Progressive Enhancement. But there is a missing piece to Progressive Enhancement that I just don't see people implement reliably out their in the industry. Before we get to that though, I need to just make two quick points: first, Unobtrusive Javascript is not Progressive Enhancement and second, handling the Javascript turned-off experience, is not Progressive Enhancement either, although that is part of it (as we will see later on).
+Everyone knows about Progressive Enhancement. But there is a missing piece to Progressive Enhancement that I just don't see people implement reliably out there in the industry. Before we get to that though, I need to just make two quick points: first, Unobtrusive Javascript is not Progressive Enhancement and second, handling the Javascript turned-off experience, is not Progressive Enhancement either, although that is part of it (as we will see later on).
 
 > Unlike HTML and CSS, Javascript does not degrade gracefully *without* developer intervention.
 
