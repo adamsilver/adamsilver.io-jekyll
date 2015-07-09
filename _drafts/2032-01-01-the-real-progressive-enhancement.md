@@ -9,13 +9,19 @@ categories: js
 > &ldquo;I’ve always maintained that, given the choice between making something my problem, and making something the user’s problem, I’ll choose to make it my problem every time.&rdquo;
 > <br>&mdash; <cite>Jeremy Keith</cite>
 
-Everyone knows about Progressive Enhancement. But there is a missing piece to Progressive Enhancement that I just don't see people implement reliably out there in the industry. Before we get to that though, I need to just make two quick points: first, Unobtrusive Javascript is not Progressive Enhancement and second, handling the Javascript turned-off experience, is not Progressive Enhancement either, although that is part of it (as we will see later on).
+It appears that everyone knows about Progressive Enhancement, but I know that after *I* knew what it was, actually *I* didn't quite *get it*. I promise to dish the dirt momentarily but I need to make two points clear:
 
-> Unlike HTML and CSS, Javascript does not degrade gracefully *without* developer intervention.
+1. Unobtrusive Javascript is *not* Progressive Enhancement and,
 
-Take the `<video>` element as an example. If the browser doesn't support the element, then it just won't render &mdash; nest an `<img>` element inside and the fallback is there for all other browsers. Similarly with CSS, the browser just ignores for example, `border-radius: 3px`.
+2. Ensuring your site works without Javascript *turned on* is *not* Progressive Enhancement either, although that is part of it as we will see later on.
 
-The same cannot be said for Javascript. Run some code in an unsupporting browser and you will see errors in the console. For example, try running `document.getElementsByClassName('yo')` in Internet Explorer 8. It's very likely that your application does a lot more than simply retrieve elements by class name and store them in memory to do nothing with. And in this case, it is very *likely* to leave a page irrevocably broken, to the point where the site is *unusable*.
+## Javascript does not degrade gracefully
+
+Unlike HTML and CSS, Javascript doesn't degrade gracefully without developer intervention. Take the `<video>` element as an example. If the browser doesn't support the element, then it just won't render &mdash; nest an `<img>` element inside and the fallback is there for all other browsers. Similarly with CSS, the browser just ignores for example, `border-radius: 3px`.
+
+Unfortunately Javascript is different. Run some code that the browser can't execute and you will get an error. For example, try running `document.getElementsByClassName('yo')` in Internet Explorer 8.
+
+Most applications do a lot more than simply "retrive elements by class name", therefore it is *very* likely to leave your website irrevocably broken, user is stuck in limbo.
 
 Let's look at an example where the developer got lucky and the IE8 user got lucky also.
 
