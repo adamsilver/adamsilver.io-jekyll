@@ -2,7 +2,7 @@ name: Adam Silver | UX-driven Front-end developer
 markdown: redcarpet
 highlighter: pygments
 permalink: /articles/:title/
-url: http://adamsilver.github.io
+url: http://adamsilver.io
 include: ['_pages']
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]

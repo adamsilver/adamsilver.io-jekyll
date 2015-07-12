@@ -9,11 +9,33 @@ categories: js
 > &ldquo;I’ve always maintained that, given the choice between making something my problem, and making something the user’s problem, I’ll choose to make it my problem every time.&rdquo;
 > <br>&mdash; <cite>Jeremy Keith</cite>
 
-It appears that everyone knows about Progressive Enhancement, but I know that after *I* knew what it was, actually *I* didn't quite *get it*. I promise to dish the dirt momentarily but I need to make two points clear:
+Progressive Enhancement is an engineering approach to developing the front-end of a website. Everyone thinks they *know* what it's all about and I used to think that too.
 
-1. Unobtrusive Javascript is *not* Progressive Enhancement and,
+Years after "practicing" the art of Progressive Enhancement I stumbled across these Javascript thingys known as "cross-browser scripting", feature detection, feature testing, isHostMethod and isHostObjectProperty.
 
-2. Ensuring your site works without Javascript *turned on* is *not* Progressive Enhancement either, although that is part of it as we will see later on.
+Dramatic alert: the world started crashing down around me. I thought I was developing right but actually, I was missing a **vital** piece of the puzzle which I will get too very shortly but first here is how Wikipedia describe Progresive Enhancement:
+
+> Progressive enhancement is a strategy for web design that emphasizes accessibility, semantic HTML markup, and *external stylesheet and scripting technologies*.
+> <br> &mdash; <cite>Wikipedia</cite>
+
+This is misleading and incorrect in part. Worse though is that developers tick off each of these things and think they are praciticing Progressive Enhancement and serving the end user.
+
+Browsers without developers fucking it up [0] allow access to websites to all users. If I was to define Progressive Enhancement I would do so as follows:
+
+> Progressive Enhancement is the philosophy of providing a satisfactory, baseline experience for everyone; and where possible, creating an even better experience for people who use a browser with advanced capability.
+> <br> &mdash; <cite>Me</cite>
+
+To set the scene let's just get the following two points out of the way:
+
+**A) Unobstrusive Javascript is not Progressive Enhancement**
+
+Just because you shove your script in an external files does not mean you are practicing Progressive Enhancement. It's just a simple way of keeping Javascript separate to CSS and HTML.
+
+**B) Handling the Javascript disabled scenario is not Progressive Enhancement either**
+
+Most people don't disable Javascript but it is most certainly a valid scenario and one that you do infact need to consider to practice the Real Progressive Enhancement properly as we will see later. Additionally, sometimes Javascript won't be loaded, or eaten by a firewall, or just ignored by certain browsers or disabled by browser extensions.
+
+But more important than any of this is that browsers have varying level of support for Javascript APIs so the support a browser has for Javascript is infinite.
 
 ## Javascript does not degrade gracefully
 
