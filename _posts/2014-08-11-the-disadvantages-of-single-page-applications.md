@@ -49,7 +49,7 @@ The application will need to handle this functionality too. This means exposing 
 
 ### Navigation and data loss
 
-Browsers normally provide the *beforeunload* event which allows the application to warn against losing unsaved changes. The application router will need to provide a hook to repicate this functionality i.e. *beforeRouting*.
+Browsers normally provide the *beforeunload* event which allows the application to warn against losing unsaved changes. The application router will need to provide a hook to replicate this functionality i.e. *beforeRouting*.
 
 ### Search engine optimisation
 
