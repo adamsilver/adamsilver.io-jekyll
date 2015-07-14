@@ -35,9 +35,10 @@ The BFED will carefully select third party code based on the quality of the code
 
 ## UI architecture
 
-The BFED will adhere to the following quote (by Anon):
+The BFED will adhere to the following quote:
 
 > &ldquo;As a Lead JavaScript Engineer, I try to get my team to write as little JavaScript as possible.&rdquo;
+> <br>&mdash; <cite>James Norton</cite>
 
 Furthermore, the BFED realises that [Single Page Applications cause severe problems](/articles/the-disadvantages-of-single-page-applications/) and that by avoiding them and leaning on the server appropriately provides a better experience and reach.
 
