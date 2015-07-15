@@ -9,18 +9,21 @@ categories: js
 > &ldquo;I’ve always maintained that, given the choice between making something my problem, and making something the user’s problem, I’ll choose to make it my problem every time.&rdquo;
 > <br>&mdash; <cite>Jeremy Keith</cite>
 
-Progressive Enhancement is an engineering approach to developing the front-end of a website. Everyone knows this don't they? The thing is there *really* *is* a lot of misunderstandings. And I am not talking about the philosophy although sometimes there is confusion there. I am talking about application. How the fuck you write shit in a progressive enhancement way. This article is my attempt.
+Progressive Enhancement is an engineering approach to developing the front-end of a website.
 
-But first, I will do the quickest recap I can as I think this background is important:
+Everyone knows this don't they? The thing are a *lot* of misunderstandings. And I am not talking about the philosophy although sometimes there is confusion there.
 
-> Progressive Enhancement is the philosophy of providing a *core* decent experience for everyone; and where possible, creating an even better, *enhanced* experience for people who use a more capable browser.
-> <br> &mdash; <cite>Me</cite>
+I am talking about application. As in, how the fuck you are *actually* meant to write *Javascript* in a progressive enhancement way.
 
-1. Unobtrusive Javascript is not Progress Enhancement. Shoving script in external files does next to fuck all to the user experience.
+> Progressive Enhancement is the philosophy of providing a **core** decent experience for everyone; and where possible, creating an even better, **enhanced** experience for people who use a more capable browser.
 
-2. Handling the Javascript disabled scenario is only half of the story. Most people don't disable Javascript. But some do. But that is not all. Maybe for some reason the Javascript doesn't come down the wire for some reason. Or the user has a browser extension. Or by far the most important reason. The browser doesn't understand the Javascript it's trying to parse and execute.
+But first, the quickest recap of essential points:
 
-3. Javascript (unlike HTML and CSS) does not degrade gracefully without developer intervention. For example `<input type="email">` naturally degrades/enhances based on browser capability. Same thing for `border-radius: 4px;` &mdash; the style just gets ignored. With Javascript you get an error, one which could easily be irrevocable. Let me show you the irrevocable one to get the point across quick:
+**Point #1.** Unobtrusive Javascript is not Progress Enhancement. Shoving script in external files does next to fuck all to the user experience.
+
+**Point #2.** Handling the Javascript disabled scenario is only half of the story. Most people don't disable Javascript. But some do. But that is not all. Maybe for some reason the Javascript doesn't come down the wire for some reason. Or the user has a browser extension. Or by far the most important reason is that the browser doesn't understand the Javascript it's trying to parse and execute.
+
+**Point #3.** Javascript (unlike HTML and CSS) does not degrade gracefully without developer intervention. For example `<input type="email">` naturally degrades/enhances based on browser capability. Same thing for `border-radius: 4px;` &mdash; the style just gets ignored. With Javascript you get an error, one which could easily be irrevocable. Let me show you the irrevocable one to get the point across quick:
 
 	var link = document.getElementById('someLink');
 	link.onclick = function(e) {
