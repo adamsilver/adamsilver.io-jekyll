@@ -9,69 +9,32 @@ categories: js
 > &ldquo;I’ve always maintained that, given the choice between making something my problem, and making something the user’s problem, I’ll choose to make it my problem every time.&rdquo;
 > <br>&mdash; <cite>Jeremy Keith</cite>
 
-Progressive Enhancement is an engineering approach to developing the front-end of a website. Everyone thinks they *know* what it's all about and I used to think that too.
+Progressive Enhancement is an engineering approach to developing the front-end of a website. Everyone knows this don't they? The thing is there *really* *is* a lot of misunderstandings. And I am not talking about the philosophy although sometimes there is confusion there. I am talking about application. How the fuck you write shit in a progressive enhancement way. This article is my attempt.
 
-Years after "practicing" the art of Progressive Enhancement I stumbled across these Javascript thingys known as "cross-browser scripting", feature detection, feature testing, isHostMethod and isHostObjectProperty.
+But first, I will do the quickest recap I can as I think this background is important:
 
-Dramatic alert: the world started crashing down around me. I thought I was developing right but actually, I was missing a **vital** piece of the puzzle which I will get too very shortly but first here is how Wikipedia describe Progresive Enhancement:
-
-> Progressive enhancement is a strategy for web design that emphasizes accessibility, semantic HTML markup, and *external stylesheet and scripting technologies*.
-> <br> &mdash; <cite>Wikipedia</cite>
-
-This is misleading and incorrect in part. Worse though is that developers tick off each of these things and think they are praciticing Progressive Enhancement and serving the end user.
-
-Browsers without developers fucking it up [0] allow access to websites to all users. If I was to define Progressive Enhancement I would do so as follows:
-
-> Progressive Enhancement is the philosophy of providing a satisfactory, baseline experience for everyone; and where possible, creating an even better experience for people who use a browser with advanced capability.
+> Progressive Enhancement is the philosophy of providing a *core* decent experience for everyone; and where possible, creating an even better, *enhanced* experience for people who use a more capable browser.
 > <br> &mdash; <cite>Me</cite>
 
-To set the scene let's just get the following two points out of the way:
+1. Unobtrusive Javascript is not Progress Enhancement. Shoving script in external files does next to fuck all to the user experience.
 
-**A) Unobstrusive Javascript is not Progressive Enhancement**
+2. Handling the Javascript disabled scenario is only half of the story. Most people don't disable Javascript. But some do. But that is not all. Maybe for some reason the Javascript doesn't come down the wire for some reason. Or the user has a browser extension. Or by far the most important reason. The browser doesn't understand the Javascript it's trying to parse and execute.
 
-Just because you shove your script in an external files does not mean you are practicing Progressive Enhancement. It's just a simple way of keeping Javascript separate to CSS and HTML.
-
-**B) Handling the Javascript disabled scenario is not Progressive Enhancement either**
-
-Most people don't disable Javascript but it is most certainly a valid scenario and one that you do infact need to consider to practice the Real Progressive Enhancement properly as we will see later. Additionally, sometimes Javascript won't be loaded, or eaten by a firewall, or just ignored by certain browsers or disabled by browser extensions.
-
-But more important than any of this is that browsers have varying level of support for Javascript APIs so the support a browser has for Javascript is infinite.
-
-## Javascript does not degrade gracefully
-
-Unlike HTML and CSS, Javascript doesn't degrade gracefully without developer intervention. Take the `<video>` element as an example. If the browser doesn't support the element, then it just won't render &mdash; nest an `<img>` element inside and the fallback is there for all other browsers. Similarly with CSS, the browser just ignores for example, `border-radius: 3px`.
-
-Unfortunately Javascript is different. Run some code that the browser can't execute and you will get an error. For example, try running `document.getElementsByClassName('yo')` in Internet Explorer 8.
-
-Most applications do a lot more than simply "retrive elements by class name", therefore it is *very* likely to leave your website irrevocably broken, user is stuck in limbo.
-
-Let's look at an example where the developer got lucky and the IE8 user got lucky also.
-
-	// find all elements with a class of 'link'
-	// and override the link to do something
-	// other than the default behaviour
-	var links = document.getElementsByClassName('link');
-	for(var i = 0; i < links.length; i++) } {
-		links[i].onclick = function(e) {
-			e.preventDefault();
-			alert(1);
-		};
-	}
-
-In this particular case, IE8 will crap out on the very first line. Meaning that when the user clicks on the the anchor, the link will be followed like normal. But as I said before this is lucky. Thankfully the developer at least provided a core experience without Javascript. But as I said earlier this is not the whole story.
-
-What if I wrote the following code and ran it in IE8 again:
+3. Javascript (unlike HTML and CSS) does not degrade gracefully without developer intervention. For example `<input type="email">` naturally degrades/enhances based on browser capability. Same thing for `border-radius: 4px;` &mdash; the style just gets ignored. With Javascript you get an error, one which could easily be irrevocable. Let me show you the irrevocable one to get the point across quick:
 
 	var link = document.getElementById('someLink');
 	link.onclick = function(e) {
 		e.preventDefault();
+		// fails on the line below.
 		var widgets = document.getElementsByClassName('widget');
 		// etc
 	};
 
-This time the page is left fatally broken for the end user. No longer can the user follow 'someLink' because the element was successfully retrieved by ID and then a listener was added successfully. Meeaning the user can never follow the link (core experience) and will fail when retrieving the widgets.
+This is a huge problem because the code half worked. Half working is worse than not working at all, because if it hadn't worked at all the user would have got the perfectly acceptable degraded, *core* experience. The equivalent of JS turned off.
 
-This is what I want to talk about today.
+This problem applies to any browser old or bleeding edge that runs Javascript. There is a very real and high potential for failure. The only difference between browsers is that the failing API will be different. That's not important.
+
+That's the end of the recap.
 
 <!--
 
