@@ -64,62 +64,51 @@ So there we have it &mdash; Javascript *doesn't* degrade gracefully.
 
 <!-- TODO tree fall in the forest -->
 
-Like sticking your fingers in your ear and singing *"la la la"*. This methodology ignores the fact that Javascript doesn't naturally degrade gracefully. Ignorance is bliss, if I don't know it's failing for some users, then it's not happening. Also relevant is the school of thought that everything is okay because it "works without Javascript" but as we have seen above that is not the *only* case to worry about &mdash; Javascript is shades of grey.
+Like sticking your fingers in your ear and singing *"la la la"*. This methodology ignores the fact that Javascript doesn't naturally degrade gracefully. Ignorance is bliss, if I don't know it's failing for some users, then it's not happening. Also relevant is the school of thought that everything is okay because it "works without Javascript" but as we have seen above that is only *one* scenario and half the solution as we will see later.
+
+**This is not Progressive Enhancement**.
 
 ### b) Outsource driven-development
 
 This is really an extension of *a)*. This one effectively abdicates responsibility by relying on an unsuitable 3rd party library or framework that has it's own caveats and (multi) browser support. If the library only supports browser X, that means your application can only ever support browser X. When library drops support for browser X, you guessed it, you just lost support for browser X too. With this one you have to keep an eye on upgrades and incur the cost of regression testing.
 
-### c) Cuts the Mustard
+**Needless to say this is not Progressive Enhancement either**.
 
-This is a relatively new technique which has the notion of two experiences; a *core* experience and an *enhanced* experience. The way it works is given Javascript APIs of `a`, `b` and `c`, and the browser can detect *all* of those features the Javascript application will kick in and provide the *enhanced* experience. Failing that, the Javascript application will not execute and the user will get the degraded, JS-off equivalent, *core* experience. This is definitely the *right* *philosphy* but that is where it ends. Let's take a little look:
+### c) Cuts the Mustard (CTM)
 
-	// where a, b and c are browser API methods
-	if(a && b && c) {
-		// bootstrap application
-	}
-
-And a real example:
+This is a relatively new *approach* which has the *right* philosophy (a core and enhanced experience) but not the right application of that philosophy. Here it is:
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// bootstrap application
 	}
 
-This is fraught with problems.
+#### Detecting the present of the API is not enough
 
-**First**, merely detecting the presence of an API is not enough (as I mention in *The disadvantages of Javascript polyfills*. If you want a little bit more juice, Nicholas Zakas provides a great case study for this in his ebook *The Problem with Native JavaScript APIs*.
+As I mention in *The disadvantages of Javascript polyfills* merely API detection is not always enough. Nicholas Zakas has a dedicated e-book entitled *The Problem with Native JavaScript APIs* [0] which I highly recommend to bring the point home. This is why feature *testing* (not detecting) is very important.
 
-**Second**, it's only reliable if the application utilises the methods in the CTM if statement e.g. the following could easily break:
+#### Degrading the experience unnecessarily
+
+CTM could easily rule out a perfectly capable browser from receiving the *enhanced* experience. Let's say you want your app to do client-side form validation, something that say IE8 is perfectly capable of, CTM will unnecessarily stop the user from receiving the enhanced experience, resorting to server round trips and the disadvantages that come with that.
+
+#### Polyfills
+
+*Some* implementations of CTM rely on polyfills to plug the missing gaps which has two major problems. One is that polyfills have a load of major disadvantages (another frail thing to do) and two, it is weird to enhance the experience, based on a modern CTM test and then straight away provide arbitrary support for old browsers that dont cut the mustard via polyfills.
+
+#### Needs constant updating
+
+Again it's the same old problem &mdash; when do I drop support for a browser. If so how do I drop *enhanced* support for it. The idea being that when you **somehow** decide you then need to change the test. Perfectly capable browsers today are then soon to be deemed incapable years down the line. ES6 anyone.
+
+#### It's unreliable
+
+It's only reliable if the application utilises the methods in the CTM condition e.g. the following could easily break:
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
-		// applicaiton that uses other APIs
+		// application that uses other APIs
 
 		window.addEventListener("load", function(e) {
 			var matches = window.matchMedia(...);
 		});
 	}
-
-**Third**, it could rule out a perfectly capable browser from receiving the better *enhanced* experience. Let's say all my app does is perform js form validation, something that say IE6 is perfectly capable of. Cuts the Mustard will stop the user getting the enhanced experience and will have to resort to server round trips for posting a form. Providing an unnecessarily slow User Experience and costs more by putting more load on the server:
-
-	if(	document.querySelector && window.addEventListener && window.localStorage) {
-
-		// this code will never run in a perfectly *capable* browser
-		document.forms.someForm.attachEvent('submit', function() {
-			// perform validation on the form etc
-		});
-
-	}
-<!--
-Caniuse.com states that `document.querySelector` has partial support in IE8. It just so happens (by luck or judgement) that the additional checks for `window.addEventListener` and `window.localStorage` means IE8 only gets the *core* experience. But it got lucky with IE8 &mdash; not so much for iOS 8 as Caniuse.com states:
-
-> iOS 8.* contains a bug where selecting siblings of filtered id selections are no longer working (for example #a + p).
-
-This is one of infinite permutations and is a very real example. IE9 will enhance and break in the above example. Inferring enhanced support with a few choice APIs detected is fragile.
-
-Some implementations of the Cut the Mustard technique use polyfills to plug other gaps but it just so happens that polyfills are very unreliable. Who wants more fragility?
-
-Interestingly CTM gets close. But it's playing a game and it's little better than User Agent sniffing and needs constant monitoring and maintenance.
--->
 
 ## What should you do?
 
