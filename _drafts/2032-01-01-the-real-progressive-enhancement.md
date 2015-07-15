@@ -6,23 +6,30 @@ tagline: "The final piece of the puzzle"
 categories: js
 ---
 
-> &ldquo;Progressive Enhancement is the philosophy of providing a **core** decent experience for everyone; and where possible, creating an even better, **enhanced** experience for people who use a more capable browser.&rdquo;
+> &ldquo;Progressive Enhancement is the philosophy of providing a baseline **core** experience for everyone; and creating an even better, **enhanced** experience for people who use a more capable browser.&rdquo;
+> <br> &mdash; <cite>Me</cite>
 
-Progressive Enhancement is an engineering approach to developing the front-end of a website. Everyone knows this *don't* they?
+Progressive Enhancement (PE) is one of those things that "everybody" knows but in truth, I have found there to be significant misunderstandings, particularly around the application of it, when it comes to Javascript. Why Javascript? I will get to that in a bit, but in essence don't we all just want to be able to answer the following question?
 
-The thing is, there are a lot of misunderstandings when it comes to Progressive Enhancement. I am not so much talking about the philosophy or theory, though that is a part of it. *No*, I am talking about the *application* of this philosphy or in other words...
+> How the fuck am I meant to write Javascript in a Progressive Enhancement type way?
 
-> &ldquo;How the fuck am I meant to write Javascript in a Progressive Enhancement way?&rdquo;
+Before I get to this, I want to quickly run through a few important points that set the scene.
 
-Why do most people hone in on Javascript when it equally applies to HTML and CSS? That's covered shortly. But first, an important, super-quick recap of essential points:
+## Important background notes
 
-## Progressive Enhancement myths and points
+### #1 Unobtrusive Javascript is not Progress Enhancement.
 
-**Point #1.** Unobtrusive Javascript is not Progress Enhancement. Shoving script in external files does next to fuck all to the user experience.
+Shoving script in external files does not affect the concept of a core or enhanced experience!
 
-**Point #2.** Handling the Javascript disabled scenario is only half of the story. Most people don't disable Javascript. But some do. But that is not all. Maybe the Javascript doesn't come down the wire for some reason. Or the user has a browser extension that fucks with your script. Or, and by far the most important reason, is that the browser doesn't understand the code it's trying to parse and execute.
+### #2 Handling the Javascript disabled scenario is only half of the story.
 
-**Point #3.** Javascript (unlike HTML and CSS) does not degrade gracefully without developer intervention. For example `<input type="email">` naturally degrades/enhances based on browser capability. Same thing for `border-radius: 4px;` as the style just gets ignored. With Javascript you get an error, one which could easily be irrevocable. Let me show you the irrevocable one to get the point across quickly:
+Most people don't disable Javascript. But some do. But that is not all. Maybe the Javascript doesn't come down the wire for some reason. Or the user has a browser extension that fucks with your script.
+
+Or, and by far the most important reason of all, is that the browser doesn't understand the code it's trying to parse and execute.
+
+### #3 Javascript (unlike HTML and CSS) does not degrade gracefully without developer intervention.
+
+For example `<input type="email">` naturally degrades/enhances based on browser capability. Same goes for `border-radius: 4px;` as the style just gets ignored. When script is unsupported you get an error and sometimes an irrevocable one.
 
 	// Note: basic code for brevity
 	var someForm = document.forms[0];
@@ -139,5 +146,9 @@ https://youtu.be/li4Y0E_x8zE?t=23m11s
 
 > &ldquo;I’ve always maintained that, given the choice between making something my problem, and making something the user’s problem, I’ll choose to make it my problem every time.&rdquo;
 > <br>&mdash; <cite>Jeremy Keith</cite>
+
+Eg: add event, event listenr fucks
+
+Eg: loop through elements hide them but cant add event listener which shows them again, hidden content forever.
 
 -->
