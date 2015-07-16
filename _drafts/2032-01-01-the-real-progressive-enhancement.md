@@ -46,27 +46,25 @@ For example `<input type="email">` naturally degrades. The same goes for `border
 
 This fails at point #4 as IE8 doesn't understand it. The problem we have here is that the user doesn't get the enhanced experience, nor the degraded experience.
 
-No, instead they get the *fuck you* experience. And, this problem applies to any browser, old or new, that runs Javascript. It's a continuum of new browsers, new APIs each with their own points of failure.
+No, instead they get the *fuck you* experience. And, this problem applies to any browser, old or new, that runs Javascript. It's a continuum of new browsers and new APIs, each with their varying level of (reliable) support.
 
-## What some do?
+Okay the scene is set. What are others doing to solve this problem?
 
-### 1. La-la driven-development
+## What are others doing to solve this problem?
 
-<!-- TODO tree fall in the forest -->
+For one, people are talking about this a lot, and infact I have noticed the industry talks about this in waves for which we are riding one, right now (at the time of writing). Jeremy Keith is one of the few "names" in the industry that talk sense whilst being brushed aside by others.
 
-Like sticking your fingers in your ear and singing *"la la la"*. This methodology ignores the fact that Javascript doesn't naturally degrade gracefully. Ignorance is bliss, if I don't know it's failing for some users, then it's not happening. Also relevant is the school of thought that everything is okay because it "works without Javascript" but as we have seen above that is only *one* scenario and half the solution as we will see later.
+> If a tree falls in the forest...
 
-**This is not Progressive Enhancement**.
+Some practice the are of ignoring this is a problem. They shove their Javascript in external files, make sure their site works somewhat when Javascript is disabled, and abdicate responsiblity to 3rd party popular libraries without peeping under the hood or checking what happens in various "unsupported" browsers.
 
-### 2. Outsource driven-development
+These libraries often mark support for a subset of browsers that they feel is important at the current moment in time. The unlucky people who use *other* browsers get the *fuck you* experience, often when it would have been rather easy to give them the core experience.
 
-This is really an extension of *a)*. This one effectively abdicates responsibility by relying on an unsuitable 3rd party library or framework that has it's own caveats and (multi) browser support. If the library only supports browser X, that means your application can only ever support browser X. When library drops support for browser X, you guessed it, you just lost support for browser X too. With this one you have to keep an eye on upgrades and incur the cost of regression testing.
+Obviously you incur issues when a library drops support for a particular (set of) browser(s), in the way of upgrade and regression testing costs. If you don't want the lack of browser support but do want the bug fixes you're screwed!
 
-**Needless to say this is not Progressive Enhancement either**.
+> Cuts the mustard falls short
 
-### 3. Cuts the Mustard is so close and yet so far
-
-This is a relatively new *approach* which gets agonisingly close; it has the *right* philosophy (a core and enhanced experience) &mdash; but it does not play out well in code. Here it is:
+This relatively new approach is bang on in philosophy; it has the notion of a core and an enhanced experience and attempts to avoid the *fuck you* experience. However, it turns out that in its implementation it is rather frail.
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// bootstrap application
@@ -117,6 +115,8 @@ This is why it *does* matter if the web page works without Javascript because th
 This is the **Real** Progressive Enhancement and something that has been talked about years and years before I wrote this article.
 
 <!--
+
+Do i want to show how the world is failing at this?
 
 https://jsfiddle.net/adamsilver/pa9ge39x/3/embedded/result/
 
