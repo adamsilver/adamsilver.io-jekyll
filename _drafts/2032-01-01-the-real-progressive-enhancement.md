@@ -43,7 +43,7 @@ Or, and by far the most important reason of all, is that the browser doesn't und
 		// 5. Etc
 	});
 
-If you run this code in IE8, it will fail when you get to part #4 as the browser doesn't support this code. That means the user can't even submit the form with a server round trip and receive the degraded *core* experience. They are in limbo.
+If you run this code in IE8, it will fail when you get to part #4 as the browser doesn't support this code. The user doesn't get neither the core experience or the enhanced experience. They get the fucked experience.
 
 This problem applies to any browser old or new that runs Javascript. Its a continuum of new browsers, new features with different points of failures all the time.
 
