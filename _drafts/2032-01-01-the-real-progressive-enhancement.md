@@ -90,7 +90,7 @@ What *it* does, much like popular library vendors, is to *detect* (not test!) a 
 		});
 	}
 
-## What should you do?
+## What's the solution?
 
 *First*, detect only what your application requires to be detected and *second*, where necessary feature *test* an API to iron out bugs in APIs. The only way to do this reliably is through facades. A good library should abstract the complexity away for you with the added bonus of not repeating yourself. What does this end up looking like?
 
