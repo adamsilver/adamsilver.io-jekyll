@@ -9,40 +9,43 @@ categories: js
 > &ldquo;Progressive Enhancement is the philosophy of providing a baseline **core** experience for everyone; and creating an even better, **enhanced** experience for people who use a more capable browser.&rdquo;
 > <br> &mdash; <cite>Me</cite>
 
-Progressive Enhancement (PE) is one of those things that "everybody" knows but in truth, I have found there to be significant misunderstandings, particularly around the application of it, when it comes to Javascript. Why Javascript? I will get to that in a bit, but in essence don't we all just want to be able to answer the following question?
+Progressive Enhancement (PE) is one of those things that "everybody" knows don't they? In reality there are significant misunderstandings about it both from a philosophical stand point and more importantly the application of via code.
 
-> How the fuck am I meant to write Javascript in a Progressive Enhancement type way?
+Javascript isn't the only relevant technology here (patience I will cover that off shortly!) but it's basically the bit that developers struggle with. We all just want to be able to answer the following question:
 
-Before I get to this, I want to quickly run through a few important points that set the scene.
+> How the fuck am I meant to write Javascript in a Progressive Enhancement way?
 
-## Important background notes
+Before I answer this question, I want to state 3 quick important points:
 
-### #1 Unobtrusive Javascript is not Progress Enhancement.
+## Progressive Enhancement pointers
 
+**Point #1 Unobtrusive Javascript is not Progress Enhancement.**
 Shoving script in external files does not affect the concept of a core or enhanced experience!
 
-### #2 Handling the Javascript disabled scenario is only half of the story.
-
-Most people don't disable Javascript. But some do. But that is not all. Maybe the Javascript doesn't come down the wire for some reason. Or the user has a browser extension that fucks with your script.
+**Point #2 Handling the Javascript disabled scenario is only half of the story.** Most people don't disable Javascript. But some do. But that is not all. Maybe the Javascript doesn't come down the wire for some reason. Or the user has a browser extension that fucks with your script.
 
 Or, and by far the most important reason of all, is that the browser doesn't understand the code it's trying to parse and execute.
 
-### #3 Javascript (unlike HTML and CSS) does not degrade gracefully without developer intervention.
+**Point #3 Javascript (unlike HTML and CSS) does not degrade gracefully without developer intervention.** For example `<input type="email">` naturally degrades/enhances based on browser capability. Same goes for `border-radius: 4px;` as the style just gets ignored. When script is unsupported you get an error and sometimes an irrevocable one.
 
-For example `<input type="email">` naturally degrades/enhances based on browser capability. Same goes for `border-radius: 4px;` as the style just gets ignored. When script is unsupported you get an error and sometimes an irrevocable one.
+	// 1. retrieve form
+	var form = document.forms[0];
 
-	// Note: basic code for brevity
-	var someForm = document.forms[0];
-	someForm.onsubmit = function(e) {
-		e.preventDefault();
-		// fails on the line below
-		// for browsers without getElementsByClassName
-		var widgets = document.getElementsByClassName('widget');
-	};
+	// 2. attach event listen for submit event
+	lib.on(form, 'submit', function(e) {
 
-This is a huge problem because the code half worked. Half working is worse than not working at all, because if it hadn't worked at all the user would have got the perfectly acceptable degraded, *core* experience. The equivalent of JS turned off.
+		// 3. Stop the form from submitting
+		lib.preventDefault(e);
 
-This problem applies to any browser old or bleeding edge that runs Javascript. There is a very real and high potential for failure. The only difference between browsers is that the failing API will be different. That's not important.
+		// 4. Find widget by class name
+		var widget = document.getElementsByClassName('widget');
+
+		// 5. Etc
+	});
+
+If you run this code in IE8, it will fail when you get to part #4 as the browser doesn't support this code. That means the user can't even submit the form with a server round trip and receive the degraded *core* experience. They are in limbo.
+
+This problem applies to any browser old or new that runs Javascript. Its a continuum of new browsers, new features with different points of failures all the time.
 
 ## What some do?
 
@@ -82,7 +85,6 @@ CTM could easily rule out a perfectly capable browser from receiving the *enhanc
 
 #### 3.4 Needs constant updating
 
-
 Again it's the same old problem &mdash; when do I drop support for a browser. If so how do I drop *enhanced* support for it. The idea being that when you **somehow** decide you then need to change the test. Perfectly capable browsers today are then soon to be deemed incapable years down the line. ES6 anyone.
 
 #### 3.5 It's unreliable
@@ -114,6 +116,8 @@ This is why it *does* matter if the web page works without Javascript because th
 This is the **Real** Progressive Enhancement and something that has been talked about years and years before I wrote this article.
 
 <!--
+
+https://jsfiddle.net/adamsilver/pa9ge39x/3/embedded/result/
 
 Enter Javascript. Try running `document.getElementsByClassName('yo');` in Internet Explorer 8 or `matchMedia("(min-width: 400px)");` in Internet Explorer 9. **Runtime error. Sad face.** Also, it's not just about the presence of an API &mdash; sometimes an API is buggy. *Caniuse.com* states &mdash; and this is just one of a plethora of examples. Safari 3.1 has a caching bug:
 
