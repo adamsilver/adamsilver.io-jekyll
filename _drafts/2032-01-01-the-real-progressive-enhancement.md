@@ -56,7 +56,7 @@ For one, people are talking about this a lot, and infact I have noticed the indu
 
 > If a tree falls in the forest...
 
-Some practice the are of ignoring this is a problem. They shove their Javascript in external files, make sure their site works somewhat when Javascript is disabled, and abdicate responsiblity to 3rd party popular libraries without peeping under the hood or checking what happens in various "unsupported" browsers.
+Some practice the art of ignoring this is a problem. They shove their Javascript in external files, make sure their site works somewhat when Javascript is disabled, and abdicate responsiblity to popular 3rd party libraries without peeping under the hood or checking what happens in various "unsupported" browsers.
 
 These libraries often mark support for a subset of browsers that they feel is important at the current moment in time. The unlucky people who use *other* browsers get the *fuck you* experience, often when it would have been rather easy to give them the core experience.
 
