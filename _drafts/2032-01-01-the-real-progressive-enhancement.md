@@ -60,11 +60,13 @@ Some practice the are of ignoring this is a problem. They shove their Javascript
 
 These libraries often mark support for a subset of browsers that they feel is important at the current moment in time. The unlucky people who use *other* browsers get the *fuck you* experience, often when it would have been rather easy to give them the core experience.
 
-Obviously you incur issues when a library drops support for a particular (set of) browser(s), in the way of upgrade and regression testing costs. If you don't want the lack of browser support but do want the bug fixes you're screwed!
+Obviously you incur issues when a library drops support for a particular (set of) browser(s), in the way of upgrade and regression testing costs. If you don't want the lack of browser support but do want the bug fixes, you're *without a paddle*.
 
 > Cuts the mustard falls short
 
 This relatively new approach is bang on in philosophy; it has the notion of a core and an enhanced experience and attempts to avoid the *fuck you* experience. However, it turns out that in its implementation it is rather frail.
+
+What *it* does, much like popular library vendors, is to *detect* (not test!) a few choice browser APIs in order to *infer* whether a browser can deliver the enhanced experience. However, this doesn't guarantee the enhanced experience, it just gives the enhanced experience a slightly better chance of success.
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// bootstrap application
