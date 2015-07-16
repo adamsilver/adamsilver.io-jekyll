@@ -2,7 +2,7 @@
 layout: post
 title:  "The Real Progressive Enhancement"
 date:   2032-01-01 09:00:01
-tagline: "The final piece of the puzzle"
+tagline: "How to avoid the fuck you experience"
 categories: js
 ---
 
