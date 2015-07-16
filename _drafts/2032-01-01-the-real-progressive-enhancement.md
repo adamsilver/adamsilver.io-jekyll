@@ -17,7 +17,7 @@ Whilst Javascript isn't the *only* relevant technology (patience I will cover th
 
 Before answering this question, I think it would be highly beneficial to take a moment and set the scene...
 
-> Unobtrusive Javascript is not Progress Enhancement!
+> Unobtrusive Javascript is not Progressive Enhancement!
 
 Shoving script in external files does not affect the concept of a core or enhanced experience!
 
