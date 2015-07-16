@@ -9,24 +9,25 @@ categories: js
 > &ldquo;Progressive Enhancement is the philosophy of providing a baseline **core** experience for everyone; and creating an even better, **enhanced** experience for people who use a more capable browser.&rdquo;
 > <br> &mdash; <cite>Me</cite>
 
-Progressive Enhancement (PE) is one of those things that "everybody" knows don't they? In reality there are significant misunderstandings about it both from a philosophical stand point and more importantly the application of via code.
+Progressive Enhancement (PE) is one of those things that "everybody" knows don't they? In reality there are significant misunderstandings about it both from a philosophical stand point and more importantly the application of it in written code.
 
-Javascript isn't the only relevant technology here (patience I will cover that off shortly!) but it's basically the bit that developers struggle with. We all just want to be able to answer the following question:
+Whilst Javascript isn't the *only* relevant technology (patience I will cover this off in a minute), the thing we developers struggle with is how to answer the following question:
 
-> How the fuck am I meant to write Javascript in a Progressive Enhancement way?
+> &ldquo;How the fuck am I meant to write Javascript in a Progressive Enhancement way?&rdquo;
 
-Before I answer this question, I want to state 3 quick important points:
+Before answering this question, I think it would be highly beneficial to take a moment and set the scene...
 
-## Progressive Enhancement pointers
+> Unobtrusive Javascript is not Progress Enhancement!
 
-**Point #1 Unobtrusive Javascript is not Progress Enhancement.**
 Shoving script in external files does not affect the concept of a core or enhanced experience!
 
-**Point #2 Handling the Javascript disabled scenario is only half of the story.** Most people don't disable Javascript. But some do. But that is not all. Maybe the Javascript doesn't come down the wire for some reason. Or the user has a browser extension that fucks with your script.
+> Handling the Javascript disabled scenario is only half of the story!
 
-Or, and by far the most important reason of all, is that the browser doesn't understand the code it's trying to parse and execute.
+Yes, some people turn off Javascript, but most of us don't. Maybe, for whatever reason (some of) the Javascript doesn't make it down the wire. Perhaps a particular browser extension fucks with your Javascript. But more importantly and more common than this is that the browser doesn't understand the code it has been given.
 
-**Point #3 Javascript (unlike HTML and CSS) does not degrade gracefully without developer intervention.** For example `<input type="email">` naturally degrades/enhances based on browser capability. Same goes for `border-radius: 4px;` as the style just gets ignored. When script is unsupported you get an error and sometimes an irrevocable one.
+> JS (unlike HTML and CSS) does not degrade gracefully without developer intervention.
+
+For example `<input type="email">` naturally degrades. The same goes for `border-radius: 4px;`. When script is unsupported you get an error and sometimes an irrevocable one. For example try running the code below in IE8.
 
 	// 1. retrieve form
 	var form = document.forms[0];
@@ -43,9 +44,9 @@ Or, and by far the most important reason of all, is that the browser doesn't und
 		// 5. Etc
 	});
 
-If you run this code in IE8, it will fail when you get to part #4 as the browser doesn't support this code. The user doesn't get neither the core experience or the enhanced experience. They get the fucked experience.
+This fails at point #4 as IE8 doesn't understand it. The problem we have here is that the user doesn't get the enhanced experience, nor the degraded experience.
 
-This problem applies to any browser old or new that runs Javascript. Its a continuum of new browsers, new features with different points of failures all the time.
+No, instead they get the *fuck you* experience. And, this problem applies to any browser, old or new, that runs Javascript. It's a continuum of new browsers, new APIs each with their own points of failure.
 
 ## What some do?
 
