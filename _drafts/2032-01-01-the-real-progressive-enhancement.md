@@ -66,31 +66,21 @@ Obviously you incur issues when a library drops support for a particular (set of
 
 This relatively new approach is bang on in philosophy; it has the notion of a core and an enhanced experience and attempts to avoid the *fuck you* experience. However, it turns out that in its implementation it is rather frail.
 
-What *it* does, much like popular library vendors, is to *detect* (not test!) a few choice browser APIs in order to *infer* whether a browser can deliver the enhanced experience. However, this doesn't guarantee the enhanced experience, it just gives the enhanced experience a slightly better chance of success.
+What *it* does, much like popular library vendors, is to *detect* (not test!) a few choice browser APIs in order to *infer* whether a browser can deliver the enhanced experience. However, this doesn't guarantee the enhanced experience, it just gives the enhanced experience a slightly better chance of success as we will see shortly. Here is it what it looks like:
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// bootstrap application
 	}
 
-#### 3.1 Detecting the present of the API is not enough
+**Detecting the presence of the API is not enough**. As I mention in *The disadvantages of Javascript polyfills*, merely detecting APIsis not always enough. Nicholas Zakas has a dedicated e-book entitled *The Problem with Native JavaScript APIs* [0] which I highly recommend to bring the point home. This is why feature *testing* (not detecting) is very important.
 
-As I mention in *The disadvantages of Javascript polyfills* merely API detection is not always enough. Nicholas Zakas has a dedicated e-book entitled *The Problem with Native JavaScript APIs* [0] which I highly recommend to bring the point home. This is why feature *testing* (not detecting) is very important.
+**CTM degrades the experience unnecessarily**. CTM could easily rule out a perfectly capable browser from receiving the *enhanced* experience. Let's say you want your app to perform client-side form validation, something that say IE8 is perfectly capable of. CTM will unnecessarily stop the user from receiving the enhanced experience, resorting to server round trips and the disadvantages that come with that.
 
-#### 3.2 Degrading the experience unnecessarily
+**Some implementations of CTM rely on polyfills to plug missing gaps**. This is what I mean by better chance of success. Not a guaranteed one. In order to plug the missing gaps which has two major problems. One is that polyfills have a load of major disadvantages (another frail thing to do) and two, it is weird to enhance the experience based on a modern CTM test, and then immediately provide arbitrary support for old browsers that dont cut the mustard.
 
-CTM could easily rule out a perfectly capable browser from receiving the *enhanced* experience. Let's say you want your app to perform client-side form validation, something that say IE8 is perfectly capable of. CTM will unnecessarily stop the user from receiving the enhanced experience, resorting to server round trips and the disadvantages that come with that.
+**The CTM condition needs constant maintainance along the continuum of new browsers**. Again it's the same old problem &mdash; when do I drop support for a browser. If so how do I drop *enhanced* support for it. The idea being that when you **somehow** decide you then need to change the test. Perfectly capable browsers today are then soon to be deemed incapable years down the line. ES6 anyone.
 
-#### 3.3 Polyfills
-
-*Some* implementations of CTM rely on polyfills to plug the missing gaps which has two major problems. One is that polyfills have a load of major disadvantages (another frail thing to do) and two, it is weird to enhance the experience based on a modern CTM test, and then immediately provide arbitrary support for old browsers that dont cut the mustard.
-
-#### 3.4 Needs constant updating
-
-Again it's the same old problem &mdash; when do I drop support for a browser. If so how do I drop *enhanced* support for it. The idea being that when you **somehow** decide you then need to change the test. Perfectly capable browsers today are then soon to be deemed incapable years down the line. ES6 anyone.
-
-#### 3.5 It's unreliable
-
-It's only reliable if the application utilises the methods in the CTM condition e.g. the following could easily break:
+**Worst of all it's unreliable**. It's only reliable if the application utilises the methods in the CTM condition e.g. the following could easily break:
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// application that uses other APIs
@@ -117,6 +107,8 @@ This is why it *does* matter if the web page works without Javascript because th
 This is the **Real** Progressive Enhancement and something that has been talked about years and years before I wrote this article.
 
 <!--
+
+Infer is bad! link to an article and state that it is bad.
 
 Do i want to show how the world is failing at this?
 
