@@ -15,7 +15,7 @@ Whilst Javascript isn't the *only* relevant technology (patience I will cover th
 
 > &ldquo;How the fuck am I meant to write Javascript in a Progressive Enhancement way?&rdquo;
 
-Before answering this question, I think it would be highly beneficial to take a moment and set the scene...
+Before answering this question, I think it would be highly beneficial to take a moment and set the scene&hellip;
 
 > Unobtrusive Javascript is not Progressive Enhancement!
 
@@ -108,7 +108,19 @@ This is the **Real** Progressive Enhancement and something that has been talked 
 
 <!--
 
-Infer is bad! link to an article and state that it is bad.
+from both > both from
+
+1. ctm host object detection, dont just read properties isHostMethod
+
+2. hasFeatures() >> cutsTheMustard()
+
+3. Infer is bad! link to an article and state that it is bad.
+
+4. and also if one errors and doesn't provide the globally scoped thing you are relying on (like when I block access to tracking scripts - half the sites break)
+
+5. I feel like you should give more reasons to really make people think that it's not just about JS off but there are loads of things that can happen
+
+6. Mixing lib.on with vanilla
 
 Do i want to show how the world is failing at this?
 
