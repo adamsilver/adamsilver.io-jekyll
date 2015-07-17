@@ -13,7 +13,7 @@ Progressive Enhancement (PE) is one of those things that "everybody" knows don't
 
 Whilst Javascript isn't the *only* relevant technology (patience I will cover this off in a minute), the thing we developers struggle with is how to answer the following question:
 
-> &ldquo;How the fuck am I meant to write Javascript in a Progressive Enhancement way?&rdquo;
+> &ldquo;How the hell am I meant to write Javascript in a Progressive Enhancement way?&rdquo;
 
 Before answering this question, I think it would be highly beneficial to take a moment and set the scene&hellip;
 
@@ -23,7 +23,7 @@ Putting script in external files does not affect the concept of a core or enhanc
 
 > Handling the Javascript disabled scenario is only half of the story!
 
-Yes, some people turn off Javascript, but most of us don't. Maybe, for whatever reason (some of) the Javascript doesn't make it down the wire. Perhaps a particular browser extension fucks with your Javascript. But **most importantly** and *more common* than any of that, is that the **browser doesn't understand the code** it has been given.
+Yes, some people turn off Javascript, but most of us don't. Maybe, for whatever reason (some of) the Javascript doesn't make it down the wire. Perhaps a particular browser extension messes with your Javascript. But **most importantly** and *more common* than any of that, is that the **browser doesn't understand the code** it has been given.
 
 > JS does not degrade gracefully without developer intervention (unlike HTML and CSS).
 
@@ -33,18 +33,18 @@ For example `<input type="email">` naturally degrades. The same goes for `border
 	var form = document.forms[0];
 
 	// 2. attach event listen for submit event
-	lib.on(form, 'submit', function(e) {
+	form.attachEvent('submit', function() {
 
 		// 3. Stop the form from submitting
-		lib.preventDefault(e);
+		window.event.returnValue = false;
 
-		// 4. Find widget by class name
-		var widget = document.getElementsByClassName('widget');
+		// 4.
+		var widgets = document.getElementsByClassName('widget');
 
-		// 5. Etc
+		// 5. etc
 	});
 
-This fails at point #4 as IE8 doesn't understand it. The problem we have here is that the user doesn't get the enhanced experience, nor the degraded experience.
+This fails at point #4 as IE8 doesn't understand it. The problem here is that the user doesn't get the enhanced experience, nor the degraded experience.
 
 *No*, instead they get the **fuck you** experience. And, this problem applies to any browser, old or new, that runs Javascript. It's a continuum of new browsers and new APIs, each with their varying level of (reliable) support.
 
@@ -158,7 +158,6 @@ https://youtu.be/li4Y0E_x8zE?t=23m11s
 > &ldquo;I’ve always maintained that, given the choice between making something my problem, and making something the user’s problem, I’ll choose to make it my problem every time.&rdquo;
 > <br>&mdash; <cite>Jeremy Keith</cite>
 
-Eg: add event, event listenr fucks
 
 Eg: loop through elements hide them but cant add event listener which shows them again, hidden content forever.
 
