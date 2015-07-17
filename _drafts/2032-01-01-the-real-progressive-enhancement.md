@@ -66,7 +66,7 @@ Obviously you incur issues when a library drops support for a particular (set of
 
 This relatively new approach is 100% correct in its philosophy &mdash; it has the notion of a core and an enhanced experience and attempts to avoid the *fuck you* experience. However, it turns out that its implementation is frail.
 
-What *it* does, much like popular library vendors, is to *detect* (not test!) a few choice browser APIs in order to *infer* whether a browser can deliver the enhanced experience. However, this doesn't guarantee the enhanced experience, it just gives the enhanced experience a slightly better chance of success as we will see shortly. Here is it what it looks like:
+What *it* does, much like popular library vendors, is to *detect* (not test!) a few choice browser APIs in order to *infer* (which is *bad!*) whether a browser can deliver the enhanced experience. However, this doesn't guarantee the enhanced experience, it just gives the enhanced experience a slightly better chance of success as we will see shortly. Here is it what it looks like:
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// bootstrap application
@@ -74,11 +74,11 @@ What *it* does, much like popular library vendors, is to *detect* (not test!) a 
 
 **Detecting host objects like this is dangerous**. *H is for Host* explains everything you need to know and why `isHostMethod` is what you need to avoid the danger.
 
-**Detecting the presence of the API is not enough**. As I mention in *The disadvantages of Javascript polyfills*, merely detecting an API is not always enough. Nicholas Zakas has a dedicated e-book entitled *The Problem with Native JavaScript APIs* [0] which I highly recommend to bring the point home. This is why feature *testing* (not detecting) is very important.
+**Detecting the presence of the API is not enough**. CTM only *detects* host object methods. As I mention in *The disadvantages of Javascript polyfills*, merely detecting an API is not always enough. Sometimes an API is detected but it contains bugs. Nicholas Zakas has an entire e-book on the subject entitled *The Problem with Native JavaScript APIs* for information on that subject. Not sure of the difference between detection and testing? Read Peter Michauxs article on the subject.
 
 **CTM degrades the experience unnecessarily**. CTM could easily rule out a perfectly capable browser from receiving the *enhanced* experience. Let's say you want your app to perform client-side form validation, something that say IE8 is perfectly capable of. CTM will unnecessarily stop the user from receiving the enhanced experience, resorting to server round trips and the disadvantages that come with that (those are out of scope for this article).
 
-**Some implementations of CTM rely on polyfills to plug missing gaps**. This is what I mean by better chance of success. Not a guaranteed one. In order to plug the missing gaps which has two major problems. One is that polyfills have a load of major disadvantages (another frail thing to do) and two, it is weird to enhance the experience based on a modern CTM test, and then immediately provide arbitrary support for old browsers that dont *cut the mustard*.
+**Some CTM implementations rely on Javascript polyfills to plug missing gaps**. Putting to one side that polyfills are ill-advised due to their own array of disadvantages, the fact that the CTM detection isn't enough on it's own to determine whether the user will gain the enhanced or core experience is what I mean when I say: CTM only gives you a slightly better chance of success at the point in time at which you implement. The more time goes on the more it becomes even less reliable. Doesn't it seem weird that when the CTM passes that you then have to help those browsers with polyfills or what have you to provide the enhanced experience. When polyfills are to make new shit work in old browsers. Urgh it's just all wrong.
 
 **The CTM condition needs constant maintainance along the continuum of new browsers**. Again it's the same old problem &mdash; when do I drop support for a browser? If so how do I drop *enhanced* support for it. The idea being that when you **somehow** decide you then need to change the test. Perfectly capable browsers today are then soon to be deemed incapable years down the line. ES6 anyone.
 
@@ -108,6 +108,13 @@ This is why it *does* matter if the web page works without Javascript because th
 
 This is the **Real** Progressive Enhancement and something that has been talked about years and years before I wrote this article.
 
+## Citations
+
+<dl>
+	<dt class="citation" id="ref0">[0]</dt>
+	<dd><a href="#">Soon</a></dd>
+</dl>
+
 <!--
 
 2. hasFeatures() >> cutsTheMustard()
@@ -118,40 +125,16 @@ This is the **Real** Progressive Enhancement and something that has been talked 
 
 5. I feel like you should give more reasons to really make people think that it's not just about JS off but there are loads of things that can happen
 
-https://jsfiddle.net/adamsilver/pa9ge39x/3/embedded/result/
-
-Enter Javascript. Try running `document.getElementsByClassName('yo');` in Internet Explorer 8 or `matchMedia("(min-width: 400px)");` in Internet Explorer 9. **Runtime error. Sad face.** Also, it's not just about the presence of an API &mdash; sometimes an API is buggy. *Caniuse.com* states &mdash; and this is just one of a plethora of examples. Safari 3.1 has a caching bug:
-
-> If the class of an element changes it won't be available for getElementsByClassName.
-
-So there we have it &mdash; Javascript *doesn't* degrade gracefully.
--->
-
-<!--
+`matchMedia("(min-width: 400px)");` in Internet Explorer 9.
 
 http://chimera.labs.oreilly.com/books/1234000001655/index.html
 
-* Possible title: Progressive Enhancement the missing piece
-
 * no op isn't good enough, its a black hole.
-
-* You might want to do a catch all cuts the mustard test - no problem, just abstract a one off list into one function and call that
-
-	function canRun() {
-		return lib.hasFeatures('a', 'b', 'c', ...);
-	}
-
-	if(canRun()) {
-		application.start();
-	}
-
-* Reference zakas booklet about the bugs around matchMedia.
 
 https://youtu.be/li4Y0E_x8zE?t=23m11s
 
 > &ldquo;I’ve always maintained that, given the choice between making something my problem, and making something the user’s problem, I’ll choose to make it my problem every time.&rdquo;
 > <br>&mdash; <cite>Jeremy Keith</cite>
-
 
 Eg: loop through elements hide them but cant add event listener which shows them again, hidden content forever.
 
