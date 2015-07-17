@@ -80,9 +80,9 @@ What *it* does, much like popular library vendors, is to *detect* (not test!) a 
 
 **Some CTM implementations rely on Javascript polyfills to plug missing gaps**. Putting to one side that polyfills are ill-advised due to their own array of disadvantages, the fact that the CTM detection isn't enough on it's own to determine whether the user will gain the enhanced or core experience is what I mean when I say: CTM only gives you a slightly better chance of success at the point in time at which you implement. The more time goes on the more it becomes even less reliable. Doesn't it seem weird that when the CTM passes that you then have to help those browsers with polyfills or what have you to provide the enhanced experience. When polyfills are to make new shit work in old browsers. Urgh it's just all wrong.
 
-**The CTM condition needs constant maintainance along the continuum of new browsers**. Again it's the same old problem &mdash; when do I drop support for a browser? If so how do I drop *enhanced* support for it. The idea being that when you **somehow** decide you then need to change the test. Perfectly capable browsers today are then soon to be deemed incapable years down the line. ES6 anyone.
+**The CTM condition needs constant maintainance along the continuum of new browsers**. Again it's the same old problem &mdash; when do I drop support for a browser? This question doesn't really need to ever be asked. Either the browser is capable or not. Again go back to the philosophy of Progressive Enhancement for a moment. The point of CTM is that you don't ever provide the *fuck you* experience; the *core* experience at worst is just fine.
 
-**Worst of all it's unreliable**. It's only reliable if the application utilises the methods in the CTM condition e.g. the following could easily break:
+**It's unreliable**. It's only reliable if the application utilises the methods in the CTM condition e.g. the following could easily break:
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// application that uses other APIs
@@ -116,6 +116,9 @@ This is the **Real** Progressive Enhancement and something that has been talked 
 </dl>
 
 <!--
+
+Perfectly capable browsers of yesteryear are deemed old today, browsers that support ES6 today will be deemed old in 2 years from now. It just doesn't have to be that way. Think in terms of features, not browsers. You only need browsers to verify that your detection and tests work in the largest range of browsers you can get your hands on.
+
 
 2. hasFeatures() >> cutsTheMustard()
 
