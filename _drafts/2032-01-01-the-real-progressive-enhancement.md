@@ -9,7 +9,7 @@ categories: js
 > &ldquo;Progressive Enhancement is the philosophy of providing a baseline **core** experience for everyone; and creating an even better, **enhanced** experience for people who use a more capable browser.&rdquo;
 > <br> &mdash; <cite>Me</cite>
 
-Progressive Enhancement (PE) is one of those things that "everybody" knows don't they? In reality there are significant misunderstandings about it both from a philosophical stand point and more importantly the application of it in code.
+Progressive Enhancement (PE) is one of those things that "everybody" knows don't they? In reality there are significant misunderstandings about it from both a philosophical stand point and more importantly the application of it in code.
 
 Whilst Javascript isn't the *only* relevant technology (patience I will cover this off in a minute), the thing we developers struggle with is how to answer the following question:
 
@@ -72,6 +72,8 @@ What *it* does, much like popular library vendors, is to *detect* (not test!) a 
 		// bootstrap application
 	}
 
+**Detecting host objects like this is dangerous**. *H is for Host* explains everything you need to know and why `isHostMethod` is what you need to avoid the danger.
+
 **Detecting the presence of the API is not enough**. As I mention in *The disadvantages of Javascript polyfills*, merely detecting an API is not always enough. Nicholas Zakas has a dedicated e-book entitled *The Problem with Native JavaScript APIs* [0] which I highly recommend to bring the point home. This is why feature *testing* (not detecting) is very important.
 
 **CTM degrades the experience unnecessarily**. CTM could easily rule out a perfectly capable browser from receiving the *enhanced* experience. Let's say you want your app to perform client-side form validation, something that say IE8 is perfectly capable of. CTM will unnecessarily stop the user from receiving the enhanced experience, resorting to server round trips and the disadvantages that come with that (those are out of scope for this article).
@@ -108,10 +110,6 @@ This is the **Real** Progressive Enhancement and something that has been talked 
 
 <!--
 
-from both > both from
-
-1. ctm host object detection, dont just read properties isHostMethod
-
 2. hasFeatures() >> cutsTheMustard()
 
 3. Infer is bad! link to an article and state that it is bad.
@@ -119,10 +117,6 @@ from both > both from
 4. and also if one errors and doesn't provide the globally scoped thing you are relying on (like when I block access to tracking scripts - half the sites break)
 
 5. I feel like you should give more reasons to really make people think that it's not just about JS off but there are loads of things that can happen
-
-6. Mixing lib.on with vanilla
-
-Do i want to show how the world is failing at this?
 
 https://jsfiddle.net/adamsilver/pa9ge39x/3/embedded/result/
 
