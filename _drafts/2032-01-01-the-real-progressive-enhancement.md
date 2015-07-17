@@ -52,19 +52,19 @@ Okay the scene is set. What are others doing to solve this problem?
 
 ## What are others doing to solve this problem?
 
-For one, people are talking about this a lot, and infact I have noticed the industry talks about this in waves for which we are riding one, right now (at the time of writing). Jeremy Keith is one of the few "names" in the industry that talk sense whilst being brushed aside by others.
+For one, people are talking about this a lot, and infact I have noticed the industry talks about this in waves, one of which we are riding now (at least at the time of writing). I have noticed, Jeremy Keith has tried to make these points clear but is *quiet* and overpowered against *louder* evangelists in the industry.
 
 > If a tree falls in the forest...
 
-Some practice the art of ignoring this is a problem. They shove their Javascript in external files, make sure their site works somewhat when Javascript is disabled, and abdicate responsiblity to popular 3rd party libraries without peeping under the hood or checking what happens in various "unsupported" browsers.
+Some practice the art of ignoring this is a problem. They shove their Javascript in external files, make sure their site works somewhat when Javascript is disabled, and very often, abdicate responsiblity to popular 3rd party libraries without peeping under the hood (to check for quality) or at least checking what happens in various "unsupported" browsers. The very fact that browsers are unsupported tells you these libraries don't advocate Progressive Enhancement &mdash; at least not the *Real* Progressive Enhancement.
 
 These libraries often mark support for a subset of browsers that they feel is important at the current moment in time. The unlucky people who use *other* browsers get the *fuck you* experience, often when it would have been rather easy to give them the core experience.
 
-Obviously you incur issues when a library drops support for a particular (set of) browser(s), in the way of upgrade and regression testing costs. If you don't want the lack of browser support but do want the bug fixes, you're *without a paddle*.
+Obviously you incur issues when a library drops support for a particular (set of) browser(s), in the way of upgrade and regression testing costs. If you don't want the lack of browser support but do want the bug fixes, you're *without a paddle*, so to speak.
 
 > Cuts the mustard falls short
 
-This relatively new approach is bang on in philosophy; it has the notion of a core and an enhanced experience and attempts to avoid the *fuck you* experience. However, it turns out that in its implementation it is rather frail.
+This relatively new approach is 100% correct in its philosophy &mdash; it has the notion of a core and an enhanced experience and attempts to avoid the *fuck you* experience. However, it turns out that its implementation is frail.
 
 What *it* does, much like popular library vendors, is to *detect* (not test!) a few choice browser APIs in order to *infer* whether a browser can deliver the enhanced experience. However, this doesn't guarantee the enhanced experience, it just gives the enhanced experience a slightly better chance of success as we will see shortly. Here is it what it looks like:
 
@@ -72,13 +72,13 @@ What *it* does, much like popular library vendors, is to *detect* (not test!) a 
 		// bootstrap application
 	}
 
-**Detecting the presence of the API is not enough**. As I mention in *The disadvantages of Javascript polyfills*, merely detecting APIsis not always enough. Nicholas Zakas has a dedicated e-book entitled *The Problem with Native JavaScript APIs* [0] which I highly recommend to bring the point home. This is why feature *testing* (not detecting) is very important.
+**Detecting the presence of the API is not enough**. As I mention in *The disadvantages of Javascript polyfills*, merely detecting an API is not always enough. Nicholas Zakas has a dedicated e-book entitled *The Problem with Native JavaScript APIs* [0] which I highly recommend to bring the point home. This is why feature *testing* (not detecting) is very important.
 
-**CTM degrades the experience unnecessarily**. CTM could easily rule out a perfectly capable browser from receiving the *enhanced* experience. Let's say you want your app to perform client-side form validation, something that say IE8 is perfectly capable of. CTM will unnecessarily stop the user from receiving the enhanced experience, resorting to server round trips and the disadvantages that come with that.
+**CTM degrades the experience unnecessarily**. CTM could easily rule out a perfectly capable browser from receiving the *enhanced* experience. Let's say you want your app to perform client-side form validation, something that say IE8 is perfectly capable of. CTM will unnecessarily stop the user from receiving the enhanced experience, resorting to server round trips and the disadvantages that come with that (those are out of scope for this article).
 
-**Some implementations of CTM rely on polyfills to plug missing gaps**. This is what I mean by better chance of success. Not a guaranteed one. In order to plug the missing gaps which has two major problems. One is that polyfills have a load of major disadvantages (another frail thing to do) and two, it is weird to enhance the experience based on a modern CTM test, and then immediately provide arbitrary support for old browsers that dont cut the mustard.
+**Some implementations of CTM rely on polyfills to plug missing gaps**. This is what I mean by better chance of success. Not a guaranteed one. In order to plug the missing gaps which has two major problems. One is that polyfills have a load of major disadvantages (another frail thing to do) and two, it is weird to enhance the experience based on a modern CTM test, and then immediately provide arbitrary support for old browsers that dont *cut the mustard*.
 
-**The CTM condition needs constant maintainance along the continuum of new browsers**. Again it's the same old problem &mdash; when do I drop support for a browser. If so how do I drop *enhanced* support for it. The idea being that when you **somehow** decide you then need to change the test. Perfectly capable browsers today are then soon to be deemed incapable years down the line. ES6 anyone.
+**The CTM condition needs constant maintainance along the continuum of new browsers**. Again it's the same old problem &mdash; when do I drop support for a browser? If so how do I drop *enhanced* support for it. The idea being that when you **somehow** decide you then need to change the test. Perfectly capable browsers today are then soon to be deemed incapable years down the line. ES6 anyone.
 
 **Worst of all it's unreliable**. It's only reliable if the application utilises the methods in the CTM condition e.g. the following could easily break:
 
