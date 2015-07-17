@@ -9,7 +9,7 @@ categories: js
 > &ldquo;Progressive Enhancement is the philosophy of providing a baseline **core** experience for everyone; and creating an even better, **enhanced** experience for people who use a more capable browser.&rdquo;
 > <br> &mdash; <cite>Me</cite>
 
-Progressive Enhancement (PE) is one of those things that "everybody" knows don't they? In reality there are significant misunderstandings about it both from a philosophical stand point and more importantly the application of it in written code.
+Progressive Enhancement (PE) is one of those things that "everybody" knows don't they? In reality there are significant misunderstandings about it both from a philosophical stand point and more importantly the application of it in code.
 
 Whilst Javascript isn't the *only* relevant technology (patience I will cover this off in a minute), the thing we developers struggle with is how to answer the following question:
 
@@ -19,15 +19,15 @@ Before answering this question, I think it would be highly beneficial to take a 
 
 > Unobtrusive Javascript is not Progressive Enhancement!
 
-Shoving script in external files does not affect the concept of a core or enhanced experience!
+Putting script in external files does not affect the concept of a core or enhanced experience. *Ahem!*
 
 > Handling the Javascript disabled scenario is only half of the story!
 
-Yes, some people turn off Javascript, but most of us don't. Maybe, for whatever reason (some of) the Javascript doesn't make it down the wire. Perhaps a particular browser extension fucks with your Javascript. But more importantly and more common than this is that the browser doesn't understand the code it has been given.
+Yes, some people turn off Javascript, but most of us don't. Maybe, for whatever reason (some of) the Javascript doesn't make it down the wire. Perhaps a particular browser extension fucks with your Javascript. But **most importantly** and *more common* than any of that, is that the **browser doesn't understand the code** it has been given.
 
-> JS (unlike HTML and CSS) does not degrade gracefully without developer intervention.
+> JS does not degrade gracefully without developer intervention (unlike HTML and CSS).
 
-For example `<input type="email">` naturally degrades. The same goes for `border-radius: 4px;`. When script is unsupported you get an error and sometimes an irrevocable one. For example try running the code below in IE8.
+For example `<input type="email">` naturally degrades. The same goes for `border-radius: 4px;`. However, when script is unsupported you get an error and sometimes an irrevocable one. For example try running the code below in IE8.
 
 	// 1. retrieve form
 	var form = document.forms[0];
@@ -46,7 +46,7 @@ For example `<input type="email">` naturally degrades. The same goes for `border
 
 This fails at point #4 as IE8 doesn't understand it. The problem we have here is that the user doesn't get the enhanced experience, nor the degraded experience.
 
-No, instead they get the *fuck you* experience. And, this problem applies to any browser, old or new, that runs Javascript. It's a continuum of new browsers and new APIs, each with their varying level of (reliable) support.
+*No*, instead they get the **fuck you** experience. And, this problem applies to any browser, old or new, that runs Javascript. It's a continuum of new browsers and new APIs, each with their varying level of (reliable) support.
 
 Okay the scene is set. What are others doing to solve this problem?
 
