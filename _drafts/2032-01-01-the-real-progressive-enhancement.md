@@ -74,7 +74,7 @@ What *it* does is *detect* (not *test*) a few choice browser APIs in order to *i
 
 **Detecting host objects like this is dangerous**. *H is for Host* explains everything you need to know and why `isHostMethod` is what you need to avoid the danger.
 
-**Detecting the presence of an API is not enough**. CTM only *detects* host object methods. As I mention in *The disadvantages of Javascript polyfills*, merely detecting an API is not always enough. Sometimes an API contains bugs too. Nicholas Zakas has an entire e-book on the subject entitled *The Problem with Native JavaScript APIs* for information on that subject. And if your not sure of the difference between feature detection and feature testing, Peter Michaux's article entitled *Feature Detection: State of the Art Browser Scripting* is a must-read.
+**Detecting the presence of an API is not enough**. CTM only *detects* host object methods but often an API can contain bugs. Nicholas Zakas has an *entire* e-book on the subject entitled *The Problem with Native JavaScript APIs* that is an important read. And if your not sure of the difference between feature detection and feature testing, Peter Michaux's article entitled *Feature Detection: State of the Art Browser Scripting* is a must-read.
 
 **CTM degrades the experience unnecessarily**. CTM could easily rule out a perfectly capable browser from receiving the *enhanced* experience. Let's say you want your app to perform client-side form validation, something that say IE8 is perfectly capable of. CTM will unnecessarily stop the user from receiving the enhanced experience, resorting to server round trips and the disadvantages that come with that (those are out of scope for this article).
 
