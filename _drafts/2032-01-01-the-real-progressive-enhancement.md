@@ -56,17 +56,17 @@ For one, people are talking about this a lot, and infact I have noticed the indu
 
 > If a tree falls in the forest...
 
-Some practice the art of ignoring this is a problem. They shove their Javascript in external files, make sure their site works somewhat when Javascript is disabled, and very often, abdicate responsiblity to popular 3rd party libraries without peeping under the hood (to check for quality) or at least checking what happens in various "unsupported" browsers. The very fact that browsers are unsupported tells you these libraries don't advocate Progressive Enhancement &mdash; at least not the *Real* Progressive Enhancement.
+Some practice the art of ignoring there *is* a problem &mdash; putting their Javascript in external files, making sure their site works when Javascript is disabled, and very often, abdicate responsiblity to popular 3rd party libraries without peeping under the hood (to check for quality) or at least checking what happens in various "unsupported" browsers. The very fact that browsers are unsupported tells you these libraries don't practice the *Real* Progressive Enhancement!
 
-These libraries often mark support for a subset of browsers that they feel is important at the current moment in time. The unlucky people who use *other* browsers get the *fuck you* experience, often when it would have been rather easy to give them the core experience.
+These libraries often mark support for a subset of browsers that they feel are worthy at *that* current moment. The unlucky people who use *other* browsers get the *fuck you* experience, often when it would have been rather easy to give them the core experience.
 
 Obviously you incur issues when a library drops support for a particular (set of) browser(s), in the way of upgrade and regression testing costs. If you don't want the lack of browser support but do want the bug fixes, you're *without a paddle*, so to speak.
 
 > Cuts the mustard falls short
 
-This relatively new approach is 100% correct in its philosophy &mdash; it has the notion of a core and an enhanced experience and attempts to avoid the *fuck you* experience. However, it turns out that its implementation is frail.
+This relatively new approach is 100% correct in its philosophy &mdash; it has the notion of a core and an enhanced experience and attempts to avoid the *fuck you* experience. However, it turns out that its implementation falls short.
 
-What *it* does, much like popular library vendors, is to *detect* (not test!) a few choice browser APIs in order to *infer* (which is *bad!*) whether a browser can deliver the enhanced experience. However, this doesn't guarantee the enhanced experience, it just gives the enhanced experience a slightly better chance of success as we will see shortly. Here is it what it looks like:
+What *it* does is *detect* (not *test*) a few choice browser APIs in order to *infer* (read *guess*) whether a browser can deliver the enhanced experience. However, this doesn't guarantee the enhanced experience, it just gives the enhanced experience a slightly better chance of success as we will see shortly. Here is it what it looks like:
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// bootstrap application
@@ -74,7 +74,7 @@ What *it* does, much like popular library vendors, is to *detect* (not test!) a 
 
 **Detecting host objects like this is dangerous**. *H is for Host* explains everything you need to know and why `isHostMethod` is what you need to avoid the danger.
 
-**Detecting the presence of the API is not enough**. CTM only *detects* host object methods. As I mention in *The disadvantages of Javascript polyfills*, merely detecting an API is not always enough. Sometimes an API is detected but it contains bugs. Nicholas Zakas has an entire e-book on the subject entitled *The Problem with Native JavaScript APIs* for information on that subject. Not sure of the difference between detection and testing? Read Peter Michauxs article on the subject.
+**Detecting the presence of an API is not enough**. CTM only *detects* host object methods. As I mention in *The disadvantages of Javascript polyfills*, merely detecting an API is not always enough. Sometimes an API contains bugs too. Nicholas Zakas has an entire e-book on the subject entitled *The Problem with Native JavaScript APIs* for information on that subject. And if your not sure of the difference between feature detection and feature testing, Peter Michaux's article entitled *Feature Detection: State of the Art Browser Scripting* is a must-read.
 
 **CTM degrades the experience unnecessarily**. CTM could easily rule out a perfectly capable browser from receiving the *enhanced* experience. Let's say you want your app to perform client-side form validation, something that say IE8 is perfectly capable of. CTM will unnecessarily stop the user from receiving the enhanced experience, resorting to server round trips and the disadvantages that come with that (those are out of scope for this article).
 
@@ -82,7 +82,7 @@ What *it* does, much like popular library vendors, is to *detect* (not test!) a 
 
 **The CTM condition needs constant maintainance along the continuum of new browsers**. Again it's the same old problem &mdash; when do I drop support for a browser? This question doesn't really need to ever be asked. Either the browser is capable or not. Again go back to the philosophy of Progressive Enhancement for a moment. The point of CTM is that you don't ever provide the *fuck you* experience; the *core* experience at worst is just fine.
 
-**It's unreliable**. It's only reliable if the application utilises the methods in the CTM condition e.g. the following could easily break:
+**It's unreliable**. It's only reliable if the application utilises the methods in the CTM condition e.g. the following could easily break, due to the use of `matchMedia` without first detecting in the CTM condition.
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// application that uses other APIs
