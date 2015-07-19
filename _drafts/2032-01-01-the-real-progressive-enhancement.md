@@ -23,7 +23,11 @@ Putting script in external files does not affect the concept of a core or enhanc
 
 > Handling the Javascript disabled scenario is only half of the story!
 
-Yes, some people turn off Javascript, but most of us don't. Maybe, for whatever reason (some of) the Javascript doesn't make it down the wire. Perhaps a particular browser extension messes with your Javascript. But **most importantly** and *more common* than any of that, is that the **browser doesn't understand the code** it has been given.
+Granted, the majority of users have Javascript enabled. But, some do actually turn it off. Some use browsers that don't support Javascript. Sometimes a plug-in, such as one that disables tracking cause all scripts to break i.e. one script referenced objects in the blocked script.
+
+Sometimes a firewall, plug-in or proxy at the script &mdash; this actually happened to me when I was working at a telecom company. The network decided it knew better. As we worked within the teleco we could request this to be fixed but this was *extremely* fortunate.
+
+But, by far the most common and most *important* scenario is one where the browser lacks support to execute the code it's been given which leads perfectly on to&hellip;
 
 > JS does not degrade gracefully without developer intervention (unlike HTML and CSS).
 
@@ -119,14 +123,9 @@ This is the **Real** Progressive Enhancement and something that has been talked 
 
 Perfectly capable browsers of yesteryear are deemed old today, browsers that support ES6 today will be deemed old in 2 years from now. It just doesn't have to be that way. Think in terms of features, not browsers. You only need browsers to verify that your detection and tests work in the largest range of browsers you can get your hands on.
 
+* hasFeatures() >> cutsTheMustard()
 
-2. hasFeatures() >> cutsTheMustard()
-
-3. Infer is bad! link to an article and state that it is bad.
-
-4. and also if one errors and doesn't provide the globally scoped thing you are relying on (like when I block access to tracking scripts - half the sites break)
-
-5. I feel like you should give more reasons to really make people think that it's not just about JS off but there are loads of things that can happen
+* Infer is bad! link to an article and state that it is bad.
 
 `matchMedia("(min-width: 400px)");` in Internet Explorer 9.
 
@@ -134,11 +133,13 @@ http://chimera.labs.oreilly.com/books/1234000001655/index.html
 
 * no op isn't good enough, its a black hole.
 
-https://youtu.be/li4Y0E_x8zE?t=23m11s
+* https://youtu.be/li4Y0E_x8zE?t=23m11s
 
 > &ldquo;I’ve always maintained that, given the choice between making something my problem, and making something the user’s problem, I’ll choose to make it my problem every time.&rdquo;
 > <br>&mdash; <cite>Jeremy Keith</cite>
 
 Eg: loop through elements hide them but cant add event listener which shows them again, hidden content forever.
+
+Cornford: The combination of the facts that it is impossible to determine which browser is executing the script, and that it is impossible to be familiar with all browser DOMs can be rendered insignificant by using feature detection to match code execution with any browser's ability to support it. But there is still going to be a diversity of outcomes, ranging from total failure to execute any scripts (on browsers that do not support javascript, or have it disabled) to full successful execution on the most capable javascript enabled browsers.
 
 -->
