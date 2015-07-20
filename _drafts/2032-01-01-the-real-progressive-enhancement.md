@@ -100,7 +100,15 @@ What *it* does is *detect* (not *test*) a few choice browser APIs in order to *i
 
 ## What's the solution?
 
-*First*, detect only what your application requires to be detected and *second*, where necessary feature *test* an API to iron out bugs in APIs. The only way to do this reliably is through facades. A good library should abstract the complexity away for you with the added bonus of not repeating yourself. What does this end up looking like?
+It should be becoming increasingly obvious what we need to do to answer the question of &ldquo;How the hell am I meant to write Javascript in a Progressive Enhancement way?&rdquo;
+
+We need something that ensures the user never gets the *fuck you* experience but receives the much more reasonable *core* experience, or depending on the browser, network, browser extensions etc, the *enhanced* experience.
+
+In order to do that you need to detect and, where necessary *test* the APIs in which the application implements. You need to detect in order to see if the browser says it can do something and you need to test for bugs in those APIs.
+
+The only way to reliably do this is through facades. A library that practices the Real Progressive Enhancement will provide a (dynamic) API that lets you ask questions of it, abstracting the complexity away from the calling application.
+
+In practice this might look like this:
 
 	if(lib.hasFeatures('x', 'y', 'z')) {
 		x();
@@ -108,11 +116,13 @@ What *it* does is *detect* (not *test*) a few choice browser APIs in order to *i
 		z();
 	}
 
-Notice it is remarkably similar to CTM, but abstracted away into a library so that you, the developer can easily decouple application logic from browser APIs (and *bugs!*). For the above application to run, the libary has exposed to the application that not only are all the required APIs available to use but they are *bug* free in this browser. You could easily change `hasFeatures` to `cutsTheMustard` and then `cutsTheMustard` will totally inform you that this browser does infact *cut the mustard*.
+You could have replaced `hasFeatures` for `actuallyCutsTheMustard` or `canEnhanceBasedOn`.
 
-This is why it *does* matter if the web page works without Javascript because the user gets the core, js-off experience when the browser doesn't cut the mustard.
+Notice it is remarkably similar to CTM, but abstracted away into a library so that you, the developer can easily decouple application logic from browser APIs (and *bugs!*). For the above application to run, the libary has exposed to the application that not only are all the required APIs available to use but they are *bug* free in this browser.
 
-This is the **Real** Progressive Enhancement and something that has been talked about years and years before I wrote this article.
+And, when the application knows it can't cut the mustard it can bale out safely. The user gets the degraded, js-disabled equivalent &mdash; the core experience.
+
+This is the **Real** Progressive Enhancement.
 
 ## Citations
 
@@ -145,5 +155,7 @@ Eg: loop through elements hide them but cant add event listener which shows them
 Cornford: The combination of the facts that it is impossible to determine which browser is executing the script, and that it is impossible to be familiar with all browser DOMs can be rendered insignificant by using feature detection to match code execution with any browser's ability to support it. But there is still going to be a diversity of outcomes, ranging from total failure to execute any scripts (on browsers that do not support javascript, or have it disabled) to full successful execution on the most capable javascript enabled browsers.
 
 CTM: The more time goes on the more it becomes even less reliable.
+
+Some say this is too much effort, but libraries and websites, software should be written once, and used many times.
 
 -->
