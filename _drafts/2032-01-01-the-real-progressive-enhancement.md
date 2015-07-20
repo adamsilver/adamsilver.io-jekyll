@@ -7,11 +7,11 @@ categories: js
 ---
 
 > &ldquo;Progressive Enhancement is the philosophy of providing a baseline **core** experience for everyone; and creating an even better, **enhanced** experience for people who use a more capable browser.&rdquo;
-> <br> &mdash; <cite>Me</cite>
+> <br> &mdash; <cite>Adam Silver (Me!)</cite>
 
-Progressive Enhancement (PE) is one of those things that "everybody" knows don't they? In reality there are significant misunderstandings about it from both a philosophical stand point and more importantly the application of it in code.
+Progressive Enhancement is one of those things that "everybody" knows don't they? However, there are a lo of significant misunderstandings about it &mdash; from both a philosophical stand point and more importantly the technical implementation.
 
-Whilst Javascript isn't the *only* relevant technology (patience, I will get to this), the thing we, as developers struggle with the most, is how to answer the following question:
+Whilst it doesn't just pertain to Javascript, it is the aspect that we developers tend to struggle with the most &mdash; we just don't seem to be able to answer the following question:
 
 > &ldquo;How the hell am I meant to write Javascript in a Progressive Enhancement way?&rdquo;
 
@@ -19,19 +19,19 @@ Before answering this question, I think it would be highly beneficial to take a 
 
 > Unobtrusive Javascript is not Progressive Enhancement!
 
-Putting script in external files does not affect the concept of a core or enhanced experience. *Ahem!*
+Placing script in external files does not, in anyway affect the ability to provide a *core* or *enhanced* experience to your users. *Ahem!*
 
 > Handling the Javascript disabled scenario is only half of the story!
 
-Granted, the majority of users have Javascript enabled. But, some do actually turn it off. Some use browsers that don't support Javascript. Sometimes a plug-in, such as one that disables tracking, causes all scripts to break i.e. one script references objects in another (blocked) script.
+Granted, the majority of users have Javascript enabled. But, some do actually turn it off. Some use browsers that don't support Javascript. Sometimes a plug-in, perhaps one that disables tracking, causes all scripts to break &mdash; that is, one script references an object in another (blocked) script.
 
-Sometimes a firewall, plug-in or proxy at the script &mdash; this actually happened to me when I worked at Deutsche Telekom. The network decided to mess with a script it thought it recognised. As we worked for DT this eventually got fixed, but an "outsider" would likely not have got the same result.
+Sometimes a firewall, plug-in or proxy ate the script &mdash; this actually happened to me when I worked at Deutsche Telekom. The network decided to mess with a script it thought it recognised. As we worked for DT this eventually got fixed, but an "outsider" would likely not have got the same result.
 
 But, and by far the **most common** and **most important** scenario is one where the browser lacks support to execute the code it's been given.
 
 > JS does not degrade gracefully without developer intervention (unlike HTML and CSS).
 
-For example `<input type="email">` and `border-radius: 4px;` naturally degrade &mdash; thanks HTML, thanks CSS. However, when script is unsupported you get an error and sometimes an irrevocable one at that. For example try running the code below in IE8.
+For example `<input type="email">` and `border-radius` naturally degrade. However, when a browser tries to execute script it doesn't recognise, then you get an error &mdash; sometimes an irrevocable one. For example try running the code below in IE8.
 
 	// 1. retrieve form
 	var form = document.forms[0];
@@ -48,7 +48,7 @@ For example `<input type="email">` and `border-radius: 4px;` naturally degrade &
 		// 5. etc
 	});
 
-This fails at point #4 as IE8 doesn't understand it. The problem here is that the user doesn't get the enhanced experience, nor the degraded experience.
+This fails at point #4 as IE8 doesn't understand it. The problem here is that the user doesn't get the enhanced experience *nor* the degraded experience.
 
 > The Fuck You experience
 
@@ -56,23 +56,29 @@ This fails at point #4 as IE8 doesn't understand it. The problem here is that th
 
 ## What are others doing to solve this problem?
 
-It seems that the industry talks about Progressive Enhancement in waves, one of which we are riding now (at least at the time of writing). For the few that talk sense, there are many others that drown these people out.
+It seems that the industry talks about Progressive Enhancement in waves, one of which we are riding right now (at the time of writing). For the few that talk sense, there are many others that drown these people out.
 
 > If a tree falls in the forest...
 
-Some practice the art of ignoring there *is* a problem period; putting their Javascript in external files, making sure their site works when Javascript is disabled, and very often, abdicating responsiblity over to popular 3rd party libraries, without peeping under the hood &mdash; the only way you can be sure of quality &mdash; or at the very least checking what happens in various "unsupported" browsers. The very fact that browsers are unsupported tells you these libraries don't practice Progressive Enhancement!
+Some practice the art of ignoring there *is* a problem period; putting their Javascript in external files, making sure their site works when Javascript is disabled, and very often, abdicating responsiblity over to popular 3rd party libraries, without peeping under the hood to check for quality &mdash; which is the only way you can be sure of quality &mdash; or at the very least checking what happens in various unsupported browsers. Also, the fact that browsers are unsupported is a clear tell that these libraries don't practice Progressive Enhancement!
 
-These libraries often mark support for a subset of browsers that they feel are worthy at *that* current moment. The unlucky people who use *other* browsers get the *fuck you* experience, often when it would have been rather easy to give them the core experience.
+These libraries often mark support for a subset of browsers that they feel are worthy at *that* current moment. The unlucky people who use *other* browsers get the *fuck you* experience, &mdash; often at times when it would be pretty straightforward to have given these users the degraded *core* experience.
 
 > Pull the rug out from under...
 
-Additionally, you are on the end of it when a library drops support for a particular (set of) browser(s), in the way of upgrade and regression testing costs. If you don't want the lack of browser support but do want the bug fixes, you're *without a paddle*, so to speak.
+Additionally, you are on the end of it when a library drops support for a particular browser, in the way of upgrade and regression testing costs. If you don't want the lack of browser support but do want the bug fixes, you're *without a paddle*, so to speak.
 
 > Cuts the mustard falls short
 
-This relatively new approach is 100% correct in its philosophy &mdash; it has the notion of a core and an enhanced experience and attempts to avoid the *fuck you* experience &mdash; *great!* However, it turns out the implementation falls short.
+This approach is relatively new and has the *correct* philosophy &mdash; it has the notion of a core and an enhanced experience and *attempts* to avoid the *fuck you* experience. *Great*, however, it turns out the technical implementation falls short.
 
-What *it* does is *detect* (not *test*) a few choice browser APIs in order to *infer* (read *guess*) whether a browser can deliver the enhanced experience. However, this doesn't guarantee the enhanced experience. And if there is no guarantee of it, then you might well get the *fuck you* experience. For reference, this is it what it looks like:
+CTM works by detecting (not testing) a few select modern browser APIs in order to *infer* that the browser is modern. CTM then decides to provide an enhanced experience for these modern browsers.
+
+Inference is a bad idea in and of itself. Then notice the emphasis on browsers instead of features. This is little better than User Agent sniffing and we all know this is something you definitely shouldn't do.
+
+And because CTM can't guarantee an enhanced (or core) experience, the user may well get the *fuck you* experience.
+
+For reference, this is it what it looks like:
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// bootstrap application
