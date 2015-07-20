@@ -11,7 +11,7 @@ categories: js
 
 Progressive Enhancement (PE) is one of those things that "everybody" knows don't they? In reality there are significant misunderstandings about it from both a philosophical stand point and more importantly the application of it in code.
 
-Whilst Javascript isn't the *only* relevant technology (patience I will cover this off in a minute), the thing we developers struggle with is how to answer the following question:
+Whilst Javascript isn't the *only* relevant technology (patience, I will get to this), the thing we, as developers struggle with the most, is how to answer the following question:
 
 > &ldquo;How the hell am I meant to write Javascript in a Progressive Enhancement way?&rdquo;
 
@@ -23,15 +23,15 @@ Putting script in external files does not affect the concept of a core or enhanc
 
 > Handling the Javascript disabled scenario is only half of the story!
 
-Granted, the majority of users have Javascript enabled. But, some do actually turn it off. Some use browsers that don't support Javascript. Sometimes a plug-in, such as one that disables tracking cause all scripts to break i.e. one script references objects in another (blocked) script.
+Granted, the majority of users have Javascript enabled. But, some do actually turn it off. Some use browsers that don't support Javascript. Sometimes a plug-in, such as one that disables tracking, causes all scripts to break i.e. one script references objects in another (blocked) script.
 
-Sometimes a firewall, plug-in or proxy at the script &mdash; this actually happened to me when I was working at a telecom company. The network decided it knew better. As we worked within the teleco we could request this to be fixed but this was *extremely* fortunate.
+Sometimes a firewall, plug-in or proxy at the script &mdash; this actually happened to me when I worked at Deutsche Telekom. The network decided to mess with a script it thought it recognised. As we worked for DT this eventually got fixed, but an "outsider" would likely not have got the same result.
 
-But, by far the most common and most *important* scenario is one where the browser lacks support to execute the code it's been given which leads perfectly on to&hellip;
+But, and by far the **most common** and **most important** scenario is one where the browser lacks support to execute the code it's been given.
 
 > JS does not degrade gracefully without developer intervention (unlike HTML and CSS).
 
-For example `<input type="email">` naturally degrades. The same goes for `border-radius: 4px;`. However, when script is unsupported you get an error and sometimes an irrevocable one. For example try running the code below in IE8.
+For example `<input type="email">` and `border-radius: 4px;` naturally degrade &mdash; thanks HTML, thanks CSS. However, when script is unsupported you get an error and sometimes an irrevocable one at that. For example try running the code below in IE8.
 
 	// 1. retrieve form
 	var form = document.forms[0];
@@ -50,11 +50,13 @@ For example `<input type="email">` naturally degrades. The same goes for `border
 
 This fails at point #4 as IE8 doesn't understand it. The problem here is that the user doesn't get the enhanced experience, nor the degraded experience.
 
-*No*, instead they get the **fuck you** experience. And, this problem applies to any browser, old or new, that runs Javascript. It's a continuum of new browsers and new APIs, each with their varying level of (reliable) support.
+> The Fuck You experience
+
+*No*, instead they get the **fuck you** experience. And, this problem applies to pretty much any browser. It's a continuum of new browsers and new APIs, each with their varying level of (reliable) support.
 
 ## What are others doing to solve this problem?
 
-It seems that the industry talks about Progressive Enhancement in waves, one of which we are riding now (at least at the time of writing). For the few that talk sense there are many others that drown these people out.
+It seems that the industry talks about Progressive Enhancement in waves, one of which we are riding now (at least at the time of writing). For the few that talk sense, there are many others that drown these people out.
 
 > If a tree falls in the forest...
 
@@ -68,7 +70,7 @@ Additionally, you are on the end of it when a library drops support for a partic
 
 > Cuts the mustard falls short
 
-This relatively new approach is 100% correct in its philosophy &mdash; it has the notion of a core and an enhanced experience and attempts to avoid the *fuck you* experience. However, it turns out that its implementation falls short.
+This relatively new approach is 100% correct in its philosophy &mdash; it has the notion of a core and an enhanced experience and attempts to avoid the *fuck you* experience &mdash; *great!* However, it turns out the implementation falls short.
 
 What *it* does is *detect* (not *test*) a few choice browser APIs in order to *infer* (read *guess*) whether a browser can deliver the enhanced experience. However, this doesn't guarantee the enhanced experience. And if there is no guarantee of it, then you might well get the *fuck you* experience. For reference, this is it what it looks like:
 
