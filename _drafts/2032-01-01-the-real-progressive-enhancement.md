@@ -70,9 +70,9 @@ Additionally, you are on the end of it when a library drops support for a partic
 
 > Cuts the mustard falls short
 
-This approach is relatively new and has the *correct* philosophy &mdash; it has the notion of a core and an enhanced experience and *attempts* to avoid the *fuck you* experience. *Great*, however, it turns out the technical implementation falls short.
+This approach is relatively new and has the *correct* philosophy &mdash; it has the notion of a core and an enhanced experience. Unfortunately, it turns out the technical implementation is frail.
 
-CTM works by detecting (not testing) a few select modern browser APIs in order to *infer* that the browser is modern. CTM then decides to provide an enhanced experience for these modern browsers.
+CTM works by detecting (not testing) a few select modern browser APIs in order to *infer* that the browser is modern (how the developer decides what is and what is *not* modern is most certainly a head scratcher). CTM then decides to provide an enhanced experience for these modern browsers.
 
 Inference is a bad idea in and of itself. Then notice the emphasis on browsers instead of features. This is little better than User Agent sniffing and we all know this is something you definitely shouldn't do.
 
