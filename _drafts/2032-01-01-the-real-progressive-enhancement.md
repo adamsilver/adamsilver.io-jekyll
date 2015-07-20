@@ -108,7 +108,7 @@ What *it* does is *detect* (not *test*) a few choice browser APIs in order to *i
 		z();
 	}
 
-Notice it is remarkably similar to CTM, but abstracted away into a library so that you, the developer can easily decouple application logic from browser APIs (and *bugs!*). For the above application to run, the libary has exposed to the application that not only are all the required APIs available to use but they are *bug* free on this client. Essentially, Cuts the Mustard done right.
+Notice it is remarkably similar to CTM, but abstracted away into a library so that you, the developer can easily decouple application logic from browser APIs (and *bugs!*). For the above application to run, the libary has exposed to the application that not only are all the required APIs available to use but they are *bug* free in this browser. You could easily change `hasFeatures` to `cutsTheMustard` and then `cutsTheMustard` will totally inform you that this browser does infact *cut the mustard*.
 
 This is why it *does* matter if the web page works without Javascript because the user gets the core, js-off experience when the browser doesn't cut the mustard.
 
