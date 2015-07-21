@@ -97,7 +97,7 @@ The emphasis on *browsers* as opposed to *features* suggests this technique is d
 
 		window.addEventListener("load", function(e) {
 			var matches = window.matchMedia(...);
-		});
+		}, false);
 	}
 
 Essentially, CTM as a concept is onto something but it falls short by quite some way.
@@ -128,7 +128,14 @@ And, when the browser doesn't cut the mustard, the application can bail out safe
 
 This is the **Real** Progressive Enhancement.
 
+> &ldquo;I’ve always maintained that, given the choice between making something my problem, and making something the user’s problem, I’ll choose to make it my problem every time.&rdquo;
+> <br>&mdash; <cite>Jeremy Keith</cite>
+
 Explaining the intricacies of how to build a library like this really is out of scope for this article, and in anycase Peter Michaux does a far better job than I could ever do in *Cross-browser widgets*.
+
+That said, you need a slight mindshift in how to write Javascript for the general web, and at first this change might seem daunting &mdash; but it's actually a lot easier than trying to keep up and remember what different browsers do, what is and what is not modern, and what your polyfills are doing etc.
+
+Generally speaking a function, or group of functions (library), should be written once, and used by many. But like Jeremy we should choose to make this our problem.
 
 ## Citations
 
@@ -139,22 +146,13 @@ Explaining the intricacies of how to build a library like this really is out of 
 
 <!--
 
+Ultimately, a function, a group of functions (a lib) that is built with Progressive Enhancement in-mind should be basically written once and used many times so the concern that this takes effort is a false one. I mean take a look at the popular libraries out there. How many releases and bug fixes they have had over the years. How many times they have added support, dropped support etc and so on.
+
 Perfectly capable browsers of yesteryear are deemed old today, browsers that support ES6 today will be deemed old in 2 years from now. It just doesn't have to be that way. Think in terms of features, not browsers. You only need browsers to verify that your detection and tests work in the largest range of browsers you can get your hands on.
-
-* hasFeatures() >> cutsTheMustard()
-
-* Infer is bad! link to an article and state that it is bad.
-
-`matchMedia("(min-width: 400px)");` in Internet Explorer 9.
 
 http://chimera.labs.oreilly.com/books/1234000001655/index.html
 
-* no op isn't good enough, its a black hole.
 
-* https://youtu.be/li4Y0E_x8zE?t=23m11s
-
-> &ldquo;I’ve always maintained that, given the choice between making something my problem, and making something the user’s problem, I’ll choose to make it my problem every time.&rdquo;
-> <br>&mdash; <cite>Jeremy Keith</cite>
 
 Eg: loop through elements hide them but cant add event listener which shows them again, hidden content forever.
 
