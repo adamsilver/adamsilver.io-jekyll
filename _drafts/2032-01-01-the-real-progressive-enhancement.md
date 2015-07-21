@@ -80,17 +80,17 @@ CTM works by detecting (not testing) a few select modern browser APIs in order t
 
 The emphasis on *browsers* as opposed to *features* suggests this technique is doomed from the start, then of course inference is little better than User Agent sniffing, and we all know how frail UA sniffing is when it comes to developing for the general web. Furthermore, there are a lot of technical issues with CTM documented as follows:
 
-**1. Detecting host objects like this is dangerous**. *H is for Host* explains everything you need to know and why `isHostMethod` is what you need to avoid the danger.
+**1. Detecting host objects like this is dangerous**. *H is for Host* explains why this is dangerous and how `isHostMethod` is your lifeline.
 
-**2. Detecting the presence of an API is not enough**. CTM only *detects* host object methods but often an API can contain bugs. Nicholas Zakas has an *entire* e-book on the subject entitled *The Problem with Native JavaScript APIs* that is an important read. And if your not sure of the difference between feature detection and feature testing, Peter Michaux's article entitled *Feature Detection: State of the Art Browser Scripting* is a must-read.
+**2. Detecting the presence of an API is not enough**. CTM only *detects* host object methods but often an API can contain bugs. Nicholas Zakas explains this in detail in his e-book *The Problem with Native JavaScript APIs*. And, Peter Michaux's article *Feature Detection: State of the Art Browser Scripting*, explains everything you need to know about feature detection and feature testing &mdash; two must reads.
 
-**3. CTM degrades the experience unnecessarily**. CTM could easily rule out a perfectly capable browser from receiving the *enhanced* experience. Let's say you want your app to perform client-side form validation, something that say IE8 is perfectly capable of. CTM will unnecessarily suppress the enhanced experience &mdash; resorting to server round trips and the disadvantages that come with that (those are out of scope for this article).
+**3. CTM degrades the experience unnecessarily**. CTM could easily suppress a perfectly capable browser from giving their user the *enhanced* experience. For example, if you wanted client-side form validation, something that say Internet Explorer 8 (or 6 for that matter) is perfectly capable of, CTM disregards IE8 and will only give those users the *core* experience &mdash; resorting to server round trips &mdash; an unnecessarily poor customer experience.
 
-**4. Some CTM implementations rely on Javascript polyfills to plug missing gaps**. Putting to one side that polyfills are ill-advised [0], the fact remains that CTM is not enough to determine whether you get the enhanced experience. CTM simply *suggests* that this browser is *somewhat* modern *at the time* it was written. It's like "hey, I am a modern browser, now load some polyfills for the older browsers". Weird.
+**4. Some CTM implementations rely on Javascript polyfills to plug missing gaps**. Putting to one side that polyfills are ill-advised [0], the fact remains that CTM is not enough to determine whether you get the enhanced experience. CTM simply *suggests* that this browser is *somewhat* modern *at the time* it was written. It's like "hey, I am a modern browser, now load some polyfills for older browsers". Weird.
 
-**5. The CTM condition needs constant maintainance along the continuum of new browsers**. Again it's the same old problem &mdash; when do I drop support for a browser? This question doesn't really need to ever be asked. Either the browser is capable or not. Again go back to the philosophy of Progressive Enhancement for a moment. The point of CTM is that you don't ever provide the *fuck you* experience; worst-case, the *core* experience is fine.
+**5. The CTM condition needs constant maintainance along the continuum of new browsers**. Again it's that same old problem &mdash; when do I drop support for a browser? However, this question doesn't really have to be asked. Either the browser is capable or not. Again go back to the philosophy of Progressive Enhancement for a moment. The point of CTM is that you don't ever provide the *fuck you* experience.
 
-**6. It's unreliable**. If the application uses any method beyond the ones in the CTM test, you likely provide a broken experience. Take the following example, it will break in browsers where `matchMedia` isn't provided. And, that's ignoring the aformentioned bugs with `matchmedia`. Whilst we are on the topic of bugs, `querySelector` also has bugs, so detection again in this context is *unreliable*.
+**6. It's unreliable**. If the application uses any method beyond the ones in the CTM test, you likely provide a broken experience. Take the following example, it will break in browsers where `matchMedia` isn't provided, or even in browsers where it is provided but it's buggy. Whilst we are on the topic of bugs, `querySelector` also has bugs, so detection again in this context is *unreliable*.
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// application that uses other APIs
@@ -100,15 +100,13 @@ The emphasis on *browsers* as opposed to *features* suggests this technique is d
 		});
 	}
 
-Affectively, CTM is on to something, it's a good first step but leaves a lot to be desired.
+Essentially, CTM as a concept is onto something but it falls short by quite some way.
 
 ## What's the solution?
 
-*Disclaimer: this technique has been around for a long time and none of these ideas are my own.*
-
 It should be becoming increasingly obvious what we need to do to answer the question of &ldquo;How the hell am I meant to write Javascript in a Progressive Enhancement way?&rdquo;
 
-We need something that ensures the user never gets the *fuck you* experience but receives the much more reasonable *core* experience, or depending on the browser, network, browser extensions etc, the *enhanced* experience.
+We need something that ensures the user never gets the *fuck you* experience but receives the much more reasonable *core* experience, or depending on the environment (browser, network, extensions etc), the *enhanced* experience.
 
 In order to do that you need to detect and, where necessary *test* any API the application utilises. The reason to detect is so that you can first determine the functionality exists and the reason to test is to ensure the API is bug free.
 
@@ -120,9 +118,11 @@ The only way to reliably do this is through facades. A library that practices th
 		z();
 	}
 
-You could have replaced `hasFeatures` for `actuallyCutsTheMustard` or `canEnhanceBasedOn`.
+You could have replaced `hasFeatures` for `actuallyCutsTheMustard` or `canEnhanceBasedOn` but this is just semantics.
 
-Notice it is remarkably similar to CTM, but abstracted away into a library so that you, the developer can easily decouple application logic from browser APIs (and *bugs!*). For the above application to run, the libary has exposed to the application that not only are all the required APIs available to use but they are *bug* free in this browser. There is no need for polyfills, user agent sniffing or inferences. There is a 1-to-1 mapping between what you check and what you use. Simple.
+Notice it is remarkably similar to CTM, but abstracted away into a library so that you, the developer can easily decouple application logic from browser APIs (and *bugs!*). For the above application to run, the libary has exposed to the application that not only are all the required APIs available to use but they are *bug* free in this browser. There is no need for polyfills, user agent sniffing or inferences.
+
+It's also **very important** to notice there is a one-to-one mapping between what you check for and what your application uses.
 
 And, when the browser doesn't cut the mustard, the application can bail out safely. The user gets the degraded, js-disabled equivalent &mdash; the core experience. The user won't mind [0](zakas vid), if their browser can't provide the enhanced experience on this website, it can't provide that same experience on another website. You lose nothing in providing the core experience.
 
@@ -163,5 +163,9 @@ Cornford: The combination of the facts that it is impossible to determine which 
 CTM: The more time goes on the more it becomes even less reliable.
 
 Some say this is too much effort, but libraries and websites, software should be written once, and used many times.
+
+Possible titles:
+* The Real Progressive Enhancement
+* The state of Progressive Enhancement (in 2015)
 
 -->
