@@ -152,15 +152,9 @@ Perfectly capable browsers of yesteryear are deemed old today, browsers that sup
 
 http://chimera.labs.oreilly.com/books/1234000001655/index.html
 
-
-
-Eg: loop through elements hide them but cant add event listener which shows them again, hidden content forever.
-
 Cornford: The combination of the facts that it is impossible to determine which browser is executing the script, and that it is impossible to be familiar with all browser DOMs can be rendered insignificant by using feature detection to match code execution with any browser's ability to support it. But there is still going to be a diversity of outcomes, ranging from total failure to execute any scripts (on browsers that do not support javascript, or have it disabled) to full successful execution on the most capable javascript enabled browsers.
 
 CTM: The more time goes on the more it becomes even less reliable.
-
-Some say this is too much effort, but libraries and websites, software should be written once, and used many times.
 
 Possible titles:
 * The Real Progressive Enhancement
