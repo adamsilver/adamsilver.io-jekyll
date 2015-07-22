@@ -6,7 +6,7 @@ tagline: "How to avoid the fuck you experience"
 categories: js
 ---
 
-Progressive Enhancement is one of those things that "everybody" knows don't they? However, there are a lot of significant misunderstandings about the subject, from both a philosophical stand point, but also and more importantly the technical implementation.
+Progressive Enhancement is one of those things that "everybody" knows don't they? However, there are significant misunderstandings about the subject, from both a philosophical stand point, but also and more importantly the technical implementation.
 
 > &ldquo;Progressive Enhancement is the philosophy of providing a baseline **core** experience for everyone; and creating an even better, **enhanced** experience for people who use a more capable browser.&rdquo;
 > <br> &mdash; <cite>Adam Silver (Me!)</cite>
@@ -15,21 +15,23 @@ Whilst it doesn't just pertain to Javascript, it is the aspect that we developer
 
 > &ldquo;How the hell am I meant to write Javascript in a Progressive Enhancement way?&rdquo;
 
-But before answering this question, I think we need to clarify a few points&hellip;
+This question is certainly not *straightforward* to answer, but it is most certainly does have answers which I promise to address later. But first, a few points require clarification.
 
 > Unobtrusive Javascript is not Progressive Enhancement!
 
-Placing script in external files does not, in anyway affect the ability to provide an enhanced (or core) experience. *Ahem!*
+Placing script in external files does not, in anyway affect the ability to provide an enhanced (or core) experience.
 
 > Handling the Javascript disabled scenario is only half of the story!
 
-Granted, the majority of people don't even know how to disable Javascript. But, some do actually turn it off. Some use browsers that don't support Javascript. Sometimes a plug-in, perhaps one that disables tracking, causes all scripts to break &mdash; that is, one script references an object in another (blocked) script.
+The majority of people have Javascript *enabled* as they don't even know what Javascript is, but even if you ignored the very valid use case of people disabling it, that does not ensure the user can reliably enjoy an enhanced experience, whatever that is in your context &mdash; clue: it's different for every site.
 
-Sometimes a firewall, plug-in or proxy ate the script &mdash; this actually happened to me when I worked at Deutsche Telekom. The network decided to mess with a script it thought it recognised. As we worked for DT this eventually got fixed, but an "outsider" would likely not have got the same result.
+Some browsers don't support Javascript, some people install plugins, such as those that disable tracking &mdash; these can cause all script to break i.e. when one script references another object in a *blocked* script.
 
-But, and by far the **most common** and **most important** scenario is one where the browser lacks support to execute the code it's been given.
+Sometimes a firewall or proxy ate the script &mdash; this actually happened to me when I was building apps to be consumed on device over a mobile network. The network decided to mess with a script it thought it recognised causing Javascript problems. Using the latest iPhone with Javascript turned had no affect on this problem. As I worked for the mobile network we got this fixed but sometimes this is well out of your control so it pays to write Javascript in a Progressive Enhanced way.
 
-It *is* very important to handle the Javascript turned off scenario, because when Progressive Enhancement is implemented correctly, the *core* experience is *equivalent* to the Javascript-off experience.
+But more importantly than any of that, the most common scenario is one where the browser simply lacks support for a given set of APIs that your trying to implement &mdash; I will provide examples later in this article.
+
+The only real reason to worry about the Javascript disabled scenario is because if you build your site the "right" way then when shit happens your users will get the core experience &mdash; the one that is equivalent to the Javascript off scenario.
 
 > JS does not degrade gracefully without developer intervention (unlike HTML and CSS).
 
