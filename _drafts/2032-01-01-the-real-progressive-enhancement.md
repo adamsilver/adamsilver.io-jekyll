@@ -31,8 +31,6 @@ Sometimes a firewall or proxy ate the script &mdash; this actually happened to m
 
 But more importantly than any of that, the most common scenario is one where the browser simply lacks support for a given set of APIs that your trying to implement &mdash; I will provide examples later in this article.
 
-The only real reason to worry about the Javascript disabled scenario is because if you build your site the "right" way then when shit happens your users will get the core experience &mdash; the one that is equivalent to the Javascript off scenario.
-
 > JS does not degrade gracefully without developer intervention (unlike HTML and CSS).
 
 For example `<input type="email">` and `border-radius` naturally degrade. However, when a browser tries to execute script it doesn't recognise, an error is thrown (sometimes an irrevocable one). For example try running the code below in IE8.
@@ -58,13 +56,13 @@ This fails at point #4 as IE8 doesn't understand it. The problem here is that th
 
 *No*, instead they get the **fuck you** experience. And, this problem applies to pretty much any browser. It's a continuum of new browsers and new APIs, each with their varying level of support.
 
-## What are others doing to solve this problem?
+## How do others solve this?
 
 It seems that the industry talks about Progressive Enhancement in waves, one of which we are riding right now (at the time of writing). For the few that talk sense, there are many others that drown these people out.
 
 > If a tree falls in the forest...
 
-Some practice the art of ignoring the existance of a problem. Typically, they are the ones putting Javascript in external files, making sure their site works when Javascript is disabled, and very often, abdicating responsiblity over to popular 3rd party libraries, without peeping under the hood to check for quality &mdash; which is the only way you can be sure of quality &mdash; or at the very least checking what happens in various unsupported browsers.
+Some practice the art of ignoring the existence of a problem. Typically, they are the ones putting Javascript in external files, making sure their site works when Javascript is disabled, and very often, abdicating responsiblity over to popular 3rd party libraries, without peeping under the hood to check for quality &mdash; which is the only way you can be sure of quality &mdash; or at the very least checking what happens in various unsupported browsers.
 
 Also, the fact that browsers are unsupported is a trademark of not practicing Progressive Enhancement! These libraries often mark support for a subset of browsers that they feel are worthy at *that* current moment. The unlucky people who use *other* browsers get the *fuck you* experience, often at times when it would be pretty straightforward to have given these users the *core* experience.
 
@@ -82,7 +80,7 @@ This approach is relatively new and has the *right* philosophy in that it has th
 
 CTM works by detecting (not testing) a few select modern browser APIs in order to *infer* that the browser is modern (how the developer decides what is and what is *not* modern is most certainly a head scratcher). Then if the browser is "modern" then it will enhance the experience for those users by bootstrapping the application.
 
-The emphasis on *browsers* as opposed to *features* suggests this technique is doomed from the start, and of course inference is little better than User Agent sniffing. Furthermore, there are a lot of technical issues with CTM documented as follows:
+The emphasis on *browsers* as opposed to *features* suggests this technique is doomed from the start, and of course inference is little better than User Agent sniffing. Also, CTM comes supplied with a host of technical issues:
 
 **1. Detecting host objects like this is dangerous**. *H is for Host* explains why this is dangerous and how `isHostMethod` is your lifeline.
 
@@ -92,9 +90,9 @@ The emphasis on *browsers* as opposed to *features* suggests this technique is d
 
 **4. Some CTM implementations rely on Javascript polyfills to plug missing gaps**. Putting to one side that polyfills are ill-advised [0], the fact remains that CTM is not enough to determine whether you get the enhanced experience. CTM simply *suggests* that this browser is *somewhat* modern *at the time* it was written. It's like "hey, I am a modern browser, now load some polyfills for older browsers".
 
-**5. The CTM condition needs constant maintainance along the continuum of new browsers**. Again it's that same old problem &mdash; when do I drop support for a browser? However, this question doesn't really have to be asked. Either the browser is capable or not. Again go back to the philosophy of Progressive Enhancement for a moment. The point of CTM is that you don't ever provide the *fuck you* experience.
+**5. The CTM condition needs constant maintainance along the continuum of new browsers**. Again it's that same old problem &mdash; when do I drop support for a browser? This question doesn't really ever have to be asked. Either the browser is capable of running the enhanced experience or it isn't.
 
-**6. It's unreliable**. If the application uses any method beyond the ones in the CTM test, you likely provide a broken experience. Take the following example, it will break in browsers where `matchMedia` isn't provided, or even in browsers where it is provided but it's buggy. Whilst we are on the topic of bugs, `querySelector` also has bugs, so detection again in this context is *unreliable*.
+**6. It's unreliable**. If the application uses any method beyond the ones in the CTM test, you likely provide a broken experience. Take the following example, it will break in browsers where `matchMedia` isn't provided, or even in browsers where it is provided but it's buggy &mdash; `querySelector` also has bugs further reducing the quality of such a test.
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// application that uses other APIs
@@ -104,17 +102,13 @@ The emphasis on *browsers* as opposed to *features* suggests this technique is d
 		}, false);
 	}
 
-Essentially, CTM as a concept is onto something but it falls short by quite some way.
+## What *is* the solution?
 
-## What's the solution?
-
-It should be becoming increasingly obvious what we need to do, in order to answer the question of &ldquo;How the hell am I meant to write Javascript in a Progressive Enhancement way?&rdquo;
-
-We need something that ensures the user never gets the *fuck you* experience; the *core* experience is always acceptable; or depending on the environment (browser, network, extensions etc), the person gets the *enhanced* experience.
+It should be becoming increasingly obvious what we need to do, in order to provide a reliable solution. It needs to ensure the user never gets the *fuck you* experience; the *core* experience is always acceptable; or depending on the environment (browser, network, extensions etc), the person gets the *enhanced* experience.
 
 In order to do that you need to detect and, where necessary *test* any API the application utilises. The reason to *detect* is so that you can first determine the functionality exists, and the reason to *test* is to ensure the API is bug free.
 
-The only way to reliably do this is through facades. A library that employs Progressive Enhancement must provide a (dynamic) API that lets you ask questions of it, abstracting the complexity away from the calling application in the process. It looks something like this:
+The only way to reliably do this is through facades. A library that employs Progressive Enhancement must provide a (dynamic) API that lets you ask questions of it, abstracting the complexity away from the calling application in the process. It should look something like:
 
 	// find - retrive element by selector
 	// addListener - add an event listener
@@ -129,11 +123,13 @@ The only way to reliably do this is through facades. A library that employs Prog
 
 You could have replaced `hasFeatures` for `cutsTheMustard` or `canEnhance` but this is just semantics.
 
-Notice it is remarkably similar to CTM, but abstracted away into a library so that you, the developer can easily decouple application logic from browser APIs (and *bugs!*). For the above application to run, the libary has exposed to the application that not only are all the required APIs available to use but they are *bug* free in this browser. There is no need for polyfills, user agent sniffing or inferences.
+Notice it is remarkably similar to CTM, but abstracted away into a library so that you, the developer can easily decouple application logic from browser APIs (and *bugs!*).
 
-It's also **very important** to notice there is a one-to-one mapping between what you check for and what your application uses.
+For the above application to run, the libary has exposed to the application that not only are all required methods available but that also they are free from bugs. There is no need for polyfills, User Agent sniffing or object inferences.
 
-And, when the browser doesn't cut the mustard, the application can bail out safely. The user gets the degraded, js-disabled equivalent &mdash; the core experience. The user won't mind if their browser can't provide the enhanced experience [[0](zakas vid)].
+*One subtle but important point to make note of is this*: there is a one-to-one mapping between what you check for and what your application uses.
+
+This is why the site must provide a core experience when Javascript is turned off &mdash; the user well receive this experience when it doesn't *cut the mustard*. And don't worry about the user getting upset &mdash; they won't mind [0].
 
 This is the **Real** Progressive Enhancement.
 
