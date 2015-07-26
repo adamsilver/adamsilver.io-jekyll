@@ -74,17 +74,15 @@ Also, when a library decides to drop support for a browser, what does that mean 
 
 > Cuts the mustard falls short
 
-This approach is relatively new and has the *right* philosophy in that it has the notion of a core and an enhanced experience. Unfortunately, it turns out the technical implementation (as shown below) leaves a lot to be desired.
+*Cuts The Mustard* (CTM) is a relatively new approach to Progressive Enhancement, one which has the premise of a reliable solution and is based on the concept of a core and an enhanced experience. However, it's technical implementation shown below leaves a lot to be desired.
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// bootstrap application
 	}
 
-CTM works by detecting (not testing) a few select modern browser APIs in order to *infer* that the browser is "modern" (how the developer decides what is and what is *not* modern is most certainly a head scratcher). Then if modern, the JS runs providing the enhanced experience.
+It works by *detecting* a few *choice* browser APIs in order to *infer* that the browser is "modern". This is something impossible to determine, considering the sheer amount of new browsers being released and the fact that new does not necessarily mean it is the most capable browser etc. Anyway, once CTM determines its modern, the JS applicaiton executes providing the enhanced experience. The emphasis on *browsers* as opposed to *features* more than suggests this technique is doomed from the start. And, inference is little better than User Agent sniffing.
 
-The emphasis on *browsers* as opposed to *features* more than suggests this technique is doomed from the start. And, inference is little better than User Agent sniffing.
-
-For completeness, CTM has the following significant pitfalls:
+More specifically, CTM has the following significant issues:
 
 **1. Detecting host objects like this is dangerous**. *H is for Host* explains why this is dangerous and how `isHostMethod` is your lifeline.
 
