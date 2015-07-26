@@ -157,18 +157,8 @@ Generally speaking a function, or group of functions (library), should be writte
 
 <!--
 
-Ultimately, a function, a group of functions (a lib) that is built with Progressive Enhancement in-mind should be basically written once and used many times so the concern that this takes effort is a false one. I mean take a look at the popular libraries out there. How many releases and bug fixes they have had over the years. How many times they have added support, dropped support etc and so on.
-
-Perfectly capable browsers of yesteryear are deemed old today, browsers that support ES6 today will be deemed old in 2 years from now. It just doesn't have to be that way. Think in terms of features, not browsers. You only need browsers to verify that your detection and tests work in the largest range of browsers you can get your hands on.
-
 http://chimera.labs.oreilly.com/books/1234000001655/index.html
 
 Cornford: The combination of the facts that it is impossible to determine which browser is executing the script, and that it is impossible to be familiar with all browser DOMs can be rendered insignificant by using feature detection to match code execution with any browser's ability to support it. But there is still going to be a diversity of outcomes, ranging from total failure to execute any scripts (on browsers that do not support javascript, or have it disabled) to full successful execution on the most capable javascript enabled browsers.
-
-CTM: The more time goes on the more it becomes even less reliable.
-
-Possible titles:
-* The Real Progressive Enhancement
-* The state of Progressive Enhancement (in 2015)
 
 -->
