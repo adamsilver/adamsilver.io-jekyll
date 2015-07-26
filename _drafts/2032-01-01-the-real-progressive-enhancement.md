@@ -111,11 +111,11 @@ More specifically, CTM has the following significant issues:
 
 If you have made it this far, it is clear that you believe in users first and that Progressive Enhancement is the way to enable that belief.
 
-In order to provide a core experience, it is vital that the site works without Javascript because that is the experience a user will get when the Javascript *is* enabled but incapable of running for various reasons (as discussed earlier).
+In order to provide a core experience, it is vital that the site works without Javascript because that is the experience a user will get when Javascript *is* enabled but incapable of running for whatever reason.
 
 Then, in order to determine that the browser can provide the enhanced experience you must detect and where necessary test *all of the features* used by your application *before* your application  uses them. This is vital in ensuring the page is not irrevocably broken.
 
-The only way to reliably do this is through facades. A library that employs Progressive Enhancement *must* provide a dynamic API that lets you ask questions of it, abstracting the complexity away from the calling application in the process. It should look something like:
+The only way to reliably do this is through facades. A library that employs Progressive Enhancement *must* provide a dynamic API. Dynamic in that it adapts and changes based on the environment. This is how it basically looks in code form:
 
 	if(lib.hasFeatures('find', 'addListener', 'storeValue')) {
 		var el = lib.find('.whatever');
@@ -124,19 +124,25 @@ The only way to reliably do this is through facades. A library that employs Prog
 		});
 	}
 
-**1. CTM looks remarkably similar to the above.** The difference is that the methods are hidden behind facades something of which provides many benefits that also enable Progressive Enhancement in a reliable way.
+**1. CTM looks remarkably similar to this solution.** The difference being that you use facades which provide many benefits, that also enable Progressive Enhancement in a reliable way.
 
-**2. There is a 1-to-1 mapping between what is checked in the condition and what is used by the application.** This is *vital*.
+**2. There is a 1-to-1 mapping between what is checked in the condition and what is used by the application.** This is *vital*. You break this rule and you are guaranteeing problems.
 
 **3. There is no need for polyfills.** The library either provides the method or it doesn't, no halfway houses, no caveats.
 
-**4. Application logic is completely decoupled from browser logic.** Something that you may have heard Nicholas Zakas talk about in many of his articles and books. If a browser updates, the application logic doesn't need updating.
+**4. Application logic is completely decoupled from browser logic.** Something that you may have heard Nicholas Zakas talk about in many of his articles and books. Basically this is good for sanity and maintainability.
 
 **5. In the event that Javascript is enabled and that the condition does *not* pass the user gets the degraded (Javascript disabled) equivalent.** Effectively the browser didn't "Cut the mustard".
 
-Explaining the intricacies of how to build a library like this really is out of scope for this article, and in anycase Peter Michaux does a far better job than I could ever do in *Cross-browser widgets*.
+Front-end developers tend to put themselves into two categories: a library developer and an application developer. Typically, the application developer isn't interested in building a library of any kind, let alone one that ensures Progressive Enhancement and feature detection as a cornerstone. Problem being you're only as good as the foundations of your software.
 
-This is the **Real** Progressive Enhancement and it's always been this way, it's just not well understood or promoted in the industry.
+Unfortunately, you need some level of ability to spot a bad script, one that at least attempts to degrade gracefully otherwise your application is going to suffer.
+
+Explaining the intricacies of how to build a library is not something I can put down in a few paragraphs. Fortunately, Peter Michaux with the contribution from David Mark has done an excellent job in explaining just how you build a library of functions that enable Progressive Enhancement.
+
+Lastly, I really want to emphasis that whilst I write about this now, Peter's articles were written in 2008 and even then he talks about the fact that this practice has been known for a long time.
+
+My hope is that the industry stops trying to produce the next shiny framework and can pull together to build a library of functions that enable the Real Progressive Enhancement to provide a core experience for all, and where possible an even better experience.
 
 ## Citations
 
