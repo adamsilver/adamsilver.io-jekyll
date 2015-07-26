@@ -106,11 +106,16 @@ More specifically, CTM has the following significant issues:
 
 ## What *is* the solution?
 
-It should be becoming increasingly obvious what we need to do, in order to provide a reliable solution. It needs to ensure the user never gets the *fuck you* experience; the *core* experience is always acceptable; or depending on the environment (browser, network, extensions etc), the person gets the *enhanced* experience.
+> &ldquo;I’ve always maintained that, given the choice between making something my problem, and making something the user’s problem, I’ll choose to make it my problem every time.&rdquo;
+> <br>&mdash; <cite>Jeremy Keith</cite>
 
-In order to do that you need to detect and, where necessary *test* any API the application utilises. The reason to *detect* is so that you can first determine the functionality exists, and the reason to *test* is to ensure the API is bug free.
+If you have made it this far, it is clear that you believe in users first and that Progressive Enhancement is the way to enable that belief.
 
-The only way to reliably do this is through facades. A library that employs Progressive Enhancement must provide a (dynamic) API that lets you ask questions of it, abstracting the complexity away from the calling application in the process. It should look something like:
+In order to provide a core experience, it is vital that the site works without Javascript because that is the experience a user will get when the Javascript *is* enabled but incapable of running for various reasons (as discussed earlier).
+
+Then, in order to determine that the browser can provide the enhanced experience you must detect and where necessary test *all of the features* used by your application *before* your application  uses them. This is vital in ensuring the page is not irrevocably broken.
+
+The only way to reliably do this is through facades. A library that employs Progressive Enhancement *must* provide a dynamic API that lets you ask questions of it, abstracting the complexity away from the calling application in the process. It should look something like:
 
 	// find - retrive element by selector
 	// addListener - add an event listener
@@ -135,8 +140,7 @@ This is why the site must provide a core experience when Javascript is turned of
 
 This is the **Real** Progressive Enhancement.
 
-> &ldquo;I’ve always maintained that, given the choice between making something my problem, and making something the user’s problem, I’ll choose to make it my problem every time.&rdquo;
-> <br>&mdash; <cite>Jeremy Keith</cite>
+
 
 Explaining the intricacies of how to build a library like this really is out of scope for this article, and in anycase Peter Michaux does a far better job than I could ever do in *Cross-browser widgets*. Just don't let the date and new lingo distract you from the educational aspects.
 
