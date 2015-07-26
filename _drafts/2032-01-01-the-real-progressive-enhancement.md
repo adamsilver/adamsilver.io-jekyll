@@ -6,16 +6,16 @@ tagline: "How to avoid the fuck you experience"
 categories: js
 ---
 
-Progressive Enhancement is one of those things that "everybody" knows don't they? However, there are significant misunderstandings about the subject in the industry, and this article aims to address all of them.
+Progressive Enhancement is one of those things that everyone knows right? However, there are significant misunderstandings about the subject, particularly in relation to Javascript, all of which I address in this article.
 
 > &ldquo;The problems we have with websites are ones we create ourselves&rdquo;
 <br>&mdash; <cite>Motherfuckingwebsite.com</cite>
 
 The beauty of the web is that by default, it is accessible to *everyone*. It's us developers that come along and ruin it. So with that in-mind what is the best way to describe Progressive Enhancement?
 
-> Progressive Enhancement is the approach of providing a baseline **core** experience for everyone; and creating an even better, **enhanced** experience for people who use a more capable browser.
+> Progressive Enhancement is the approach of providing a baseline **core** experience for everyone; and creating a better **enhanced** experience for people who use a more capable browser.
 
-Whilst it doesn't just pertain to Javascript, it is the aspect that we developers tend to struggle with the most &mdash; we just don't seem to be able to answer the following question:
+Whilst Progressive Enhanceent doesn't just pertain to Javascript, it is the aspect that developers tend to struggle with the most. We just don't seem to be able to answer:
 
 > &ldquo;How am I meant to write Javascript in a Progressive Enhancement way?&rdquo;
 
@@ -41,40 +41,31 @@ This is a very important point. Consider `<input type="email">` and `border-radi
 
 On the other hand, when a browser tries to execute script it doesn't recognise, an error is thrown (sometimes an irrevocable one). For example try running the code below in IE8.
 
-	// 1. retrieve form
 	var form = document.forms[0];
-
-	// 2. attach event listen for submit event
 	form.attachEvent('submit', function() {
-
-		// 3. Stop the form from submitting
 		window.event.returnValue = false;
-
-		// 4.
 		var widgets = document.getElementsByClassName('widget');
-
-		// 5. etc
 	});
 
-This fails at point #4 as IE8 doesn't understand it. The problem here is that the user doesn't get the enhanced experience *nor* the degraded experience.
+This errors at line #4 because IE8 doesn't understand how to retrieve elements this way. The problem isn't that IE8 can't do this. The problem is that it breaks fatally. The user doesn't receive the enhanced experience and they user doesn't receive the core experience either.
 
-> The Fuck You experience
+*No*, instead they get the *fuck you* experience.
 
-*No*, instead they get the **fuck you** experience. And, this problem applies to pretty much any browser. Browsers are constantly coming out each with varying levels of support and bugs in the APIs they provide for use.
+The example itself doesn't matter. The same can apply for any method in any browser. Browsers are released frequently each with their own varying level of APIs on offer, many of which contain bugs etc.
 
 ## What are others doing to solve this problem?
 
-Some ignore the problem even exists. Typically, these developers religiously place script placed in external files in the name of Progressive Enhancement and we know this has no affect on the matter.
+Some ignore the problem even exists. Typically, these developers religiously put script in external files in the name of Progressive Enhancement and we know this has no affect on the matter.
 
 Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often these libraries support a subset of browsers i.e. it's multi-browser &mdash; a sure sign that these libraries don't practice Progressive Enhancement at all.
 
 The unfortunate people who use *other* browsers get the *fuck you* experience, often at times when it would be straightforward to provide the *core* experience.
 
-Also, when a library decides to drop support for a browser, what does that mean for your users? Clue: not the core or enhanced experience.
+And, when a library decides to drop support for a browser, it's those users that suffer.
 
 > Cuts the mustard falls short
 
-*Cuts The Mustard* (CTM) is a relatively new approach to Progressive Enhancement, one which has the premise of a reliable solution and is based on the concept of a core and an enhanced experience. However, it's technical implementation shown below leaves a lot to be desired.
+*Cuts The Mustard* (CTM) is a relatively new approach to Progressive Enhancement, one which has the premise of a reliable solution and is based on the concept of a core and an enhanced experience. However, it's technical implementation (shown below) leaves a lot to be desired.
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// bootstrap application
