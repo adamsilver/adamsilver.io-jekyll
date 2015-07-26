@@ -117,10 +117,6 @@ Then, in order to determine that the browser can provide the enhanced experience
 
 The only way to reliably do this is through facades. A library that employs Progressive Enhancement *must* provide a dynamic API that lets you ask questions of it, abstracting the complexity away from the calling application in the process. It should look something like:
 
-	// find - retrive element by selector
-	// addListener - add an event listener
-	// storeValue - persist a value to local storage
-
 	if(lib.hasFeatures('find', 'addListener', 'storeValue')) {
 		var el = lib.find('.whatever');
 		lib.addListener(el, "click", function() {
@@ -128,25 +124,19 @@ The only way to reliably do this is through facades. A library that employs Prog
 		});
 	}
 
-	// Perhaps `hasFeatures` could be renamed to `cutsTheMustard` if you find that more understandable but this is just semantics.
+**1. CTM looks remarkably similar to the above.** The difference is that the methods are hidden behind facades something of which provides many benefits that also enable Progressive Enhancement in a reliable way.
 
-Notice it is remarkably similar to CTM, but abstracted away into a library so that you, the developer can easily decouple application logic from browser APIs (and *bugs!*).
+**2. There is a 1-to-1 mapping between what is checked in the condition and what is used by the application.** This is *vital*.
 
-For the above application to run, the libary has exposed to the application that not only are all required methods available but that they are free from bugs. There is no need for polyfills, User Agent sniffing or object inferences.
+**3. There is no need for polyfills.** The library either provides the method or it doesn't, no halfway houses, no caveats.
 
-*One subtle but important point to make note of is this*: there is a one-to-one mapping between what you check for and what your application uses.
+**4. Application logic is completely decoupled from browser logic.** Something that you may have heard Nicholas Zakas talk about in many of his articles and books. If a browser updates, the application logic doesn't need updating.
 
-This is why the site must provide a core experience when Javascript is turned off &mdash; the user well receive this experience when it doesn't *cut the mustard*. And don't worry about the user getting upset &mdash; they won't mind [0].
+**5. In the event that Javascript is enabled and that the condition does *not* pass the user gets the degraded (Javascript disabled) equivalent.** Effectively the browser didn't "Cut the mustard".
 
-This is the **Real** Progressive Enhancement.
+Explaining the intricacies of how to build a library like this really is out of scope for this article, and in anycase Peter Michaux does a far better job than I could ever do in *Cross-browser widgets*.
 
-
-
-Explaining the intricacies of how to build a library like this really is out of scope for this article, and in anycase Peter Michaux does a far better job than I could ever do in *Cross-browser widgets*. Just don't let the date and new lingo distract you from the educational aspects.
-
-That said, you need a slight mindshift in how to write Javascript for the general web, and this change (like any other change in life) might seem daunting at first &mdash; but it's actually a lot easier than trying to keep up and remember what different browsers do, what is and what is not modern, and what your polyfills are doing etc.
-
-Generally speaking a function, or group of functions (library), should be written once, and used by many. But like Jeremy we should choose to make this our problem.
+This is the **Real** Progressive Enhancement and it's always been this way, it's just not well understood or promoted in the industry.
 
 ## Citations
 
