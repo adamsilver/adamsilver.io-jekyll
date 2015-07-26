@@ -62,31 +62,29 @@ This fails at point #4 as IE8 doesn't understand it. The problem here is that th
 
 *No*, instead they get the **fuck you** experience. And, this problem applies to pretty much any browser. Browsers are constantly coming out each with varying levels of support and bugs in the APIs they provide for use.
 
-## How do others solve this?
+## What are others doing to solve this problem?
 
-It seems that the industry talks about Progressive Enhancement in waves, one of which we are at the moment (at least at the time of writing anyway). For the few that talk sense, there are many others that drown these people out.
+Some ignore the problem even exists. Typically, these developers religiously place script placed in external files in the name of Progressive Enhancement and we know this has no affect on the matter.
 
-> If a tree falls in the forest...
+Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often these libraries support a subset of browsers i.e. it's multi-browser &mdash; a sure sign that these libraries don't practice Progressive Enhancement at all.
 
-Some practice the art of ignoring the existence of the problem. Typically, they are the ones religiously putting Javascript in external files, ensuring their site works when Javascript is disabled, and very often, abdicating responsiblity over to popular 3rd party libraries, without peeping under the hood to check for quality &mdash; which is the only way you can be sure of quality &mdash; or at the very least checking what happens in various unsupported browsers.
+The unfortunate people who use *other* browsers get the *fuck you* experience, often at times when it would be straightforward to provide the *core* experience.
 
-Also, the fact that browsers are unsupported is a trademark of not practicing Progressive Enhancement! These libraries often mark support for a subset of browsers that they feel are worthy at *that* current moment. The unlucky people who use *other* browsers get the *fuck you* experience, often at times when it would be pretty straightforward to have given these users the *core* experience.
-
-> Pull the rug out from under...
-
-Additionally, you are on the end of it when a library drops support for a particular browser, in the way of upgrade and regression testing costs. If you don't want the lack of browser support but do want the bug fixes, you're *without a paddle*, so to speak.
+Also, when a library decides to drop support for a browser, what does that mean for your users? Clue: not the core or enhanced experience.
 
 > Cuts the mustard falls short
 
-This approach is relatively new and has the *right* philosophy in that it has the notion of a core and an enhanced experience. Unfortunately, it turns out the technical implementation (as shown below) is frail.
+This approach is relatively new and has the *right* philosophy in that it has the notion of a core and an enhanced experience. Unfortunately, it turns out the technical implementation (as shown below) leaves a lot to be desired.
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// bootstrap application
 	}
 
-CTM works by detecting (not testing) a few select modern browser APIs in order to *infer* that the browser is modern (how the developer decides what is and what is *not* modern is most certainly a head scratcher). Then if the browser is "modern" then it will enhance the experience for those users by bootstrapping the application.
+CTM works by detecting (not testing) a few select modern browser APIs in order to *infer* that the browser is "modern" (how the developer decides what is and what is *not* modern is most certainly a head scratcher). Then if modern, the JS runs providing the enhanced experience.
 
-The emphasis on *browsers* as opposed to *features* suggests this technique is doomed from the start, and of course inference is little better than User Agent sniffing. Also, CTM comes supplied with a host of technical issues:
+The emphasis on *browsers* as opposed to *features* more than suggests this technique is doomed from the start. And, inference is little better than User Agent sniffing.
+
+For completeness, CTM has the following significant pitfalls:
 
 **1. Detecting host objects like this is dangerous**. *H is for Host* explains why this is dangerous and how `isHostMethod` is your lifeline.
 
@@ -156,6 +154,8 @@ Generally speaking a function, or group of functions (library), should be writte
 </dl>
 
 <!--
+
+* With a dynamic API such as this you get to drop support for browsers without giving those usrs the fuck you experience.
 
 http://chimera.labs.oreilly.com/books/1234000001655/index.html
 
