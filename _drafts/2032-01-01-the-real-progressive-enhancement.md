@@ -13,11 +13,11 @@ Progressive Enhancement is one of those things that everyone knows right? Howeve
 
 The beauty of the web is that by default, it is accessible to *everyone*. It's us developers that come along and ruin it. Websites such as the one I quote above are not alone either, demonstrating that there are several people who have the right intention, but even then some are missing the right execution.
 
-Before continuing, it would be a good idea to define what Progressive Enhancement *really* is, for people that haven't come across it or for those developers who have misunderstandings about the meaning.
+At this point I am going to take this opportunity to define what Progressive Enhancement *really* is:
 
 > Progressive Enhancement is the approach of providing a baseline **core** experience for everyone; and creating a better **enhanced** experience for people who use a more capable browser.
 
-Whilst Progressive Enhanceent doesn't just pertain to Javascript, it is the aspect that developers tend to struggle with the most. We just don't seem to be able to answer the following question:
+Whilst Progressive Enhancement doesn't just pertain to Javascript, it is definitely the technology that developers tend to suffer with the most. We just can't seem to answer the following question:
 
 > &ldquo;How am I meant to write Javascript in a Progressive Enhancement way?&rdquo;
 
@@ -25,7 +25,7 @@ Whilst this question is not the easiest one to answer, I promise there are answe
 
 ## 1. Unobtrusive Javascript is not Progressive Enhancement
 
-Simply placing your Javascript code in external Javascript files, does not, in anyway, impact the user receiving a core or enhanced experience.
+Simply placing your Javascript code in external Javascript files, does not, in anyway, impact positively or negatively user receiving a core or enhanced experience.
 
 ## 2. Handling the Javascript disabled scenario is only half of the story
 
