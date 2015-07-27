@@ -6,34 +6,36 @@ tagline: "How to avoid the fuck you experience"
 categories: js
 ---
 
-Progressive Enhancement is one of those things that everyone knows right? However, there are significant misunderstandings about the subject, particularly in relation to Javascript, all of which I address in this article.
+Progressive Enhancement is one of those things that everyone knows right? However, throughout my entire career which is now over a decade, the industry still talks about it, still struggles with it and demonstrates several significant misunderstandings about the subject, particularly when it comes to Javascript. This article addresses the misunderstandings and provides long forgotten, reliable solutions. Some might call these solutions cutting edge regardless of how old they are. Some might not. This is possibly the most important and misunderstood subject in regard to front-end Javascript development for the general web.
 
 > &ldquo;The problems we have with websites are ones we create ourselves&rdquo;
 <br>&mdash; <cite>Motherfuckingwebsite.com</cite>
 
-The beauty of the web is that by default, it is accessible to *everyone*. It's us developers that come along and ruin it. So with that in-mind what is the best way to describe Progressive Enhancement?
+The beauty of the web is that by default, it is accessible to *everyone*. It's us developers that come along and ruin it. Websites such as the one I quote above are not alone either, demonstrating that there are several people who have the right intention, but even then some are missing the right execution.
+
+Before continuing, it would be a good idea to define what Progressive Enhancement *really* is, for people that haven't come across it or for those developers who have misunderstandings about the meaning.
 
 > Progressive Enhancement is the approach of providing a baseline **core** experience for everyone; and creating a better **enhanced** experience for people who use a more capable browser.
 
-Whilst Progressive Enhanceent doesn't just pertain to Javascript, it is the aspect that developers tend to struggle with the most. We just don't seem to be able to answer:
+Whilst Progressive Enhanceent doesn't just pertain to Javascript, it is the aspect that developers tend to struggle with the most. We just don't seem to be able to answer the following question:
 
 > &ldquo;How am I meant to write Javascript in a Progressive Enhancement way?&rdquo;
 
-This question is not *straightforward* to answer, but there are answers. Before getting to that I need to address a few important points.
+Whilst this question is not the easiest one to answer, I promise there are answers, many of which are quite simple when you take the time to understand them. Before getting to that though a few important points need to be made.
 
 ## 1. Unobtrusive Javascript is not Progressive Enhancement
 
-Placing script in external files does not, in anyway affect the ability to provide an enhanced (or core) experience.
+Simply placing your Javascript code in external Javascript files, does not, in anyway, impact the user receiving a core or enhanced experience.
 
 ## 2. Handling the Javascript disabled scenario is only half of the story
 
-The majority of people have Javascript *enabled* as they don't even know what Javascript is, but even if you ignored the very valid use case of people disabling it, that does not ensure the user can reliably enjoy the enhanced experience &mdash; that experience is different for every website because every website is unique.
+Yes, Javascript disabled is a scenario that needs consideration but not necessarily for the reason you may think. It is pretty rare that people turn off Javascript in their browser even though some do. Most of the general public don't know or care what Javascript is.
 
-Some browsers don't support Javascript, some people install plugins, such as those that disable tracking &mdash; these can cause script to break i.e. when one script references another object in a *blocked* script.
+Some browsers don't support Javascript so relying on it for the core experience is ill-advised. Some people install plugins, such as those that disable tracking, these can cause script to break i.e. when one script references another object in a *blocked* script.
 
-Sometimes a firewall or proxy ate the script &mdash; this actually happened to me when I was building apps to be consumed on device over a mobile network. The network decided to mess with a script it thought it recognised causing Javascript problems. Using the latest iPhone with Javascript enabled had no affect on this problem. As I worked for the mobile network we got this fixed but sometimes this is out of your control, and so it pays to write Javascript in a Progressive Enhanced way.
+Sometimes a firewall or proxy ate the script &mdash; this actually happened to me when I was building websites for a telecom company.The network decided to mess with a script it thought it recognised causing Javascript problems. Using the latest iPhone, with Javascript enabled, had no affect in avoiding this problem. Fortunately this could be fixed as I worked for the network but it's not always in your control. So it pays to not trust the browser or network.
 
-But more importantly than any of that, the most common scenario is one where the browser simply lacks support for a given set of APIs that you wish to use (examples later on).
+But more importantly than any of the above, the most common scenario is one where the browser simply lacks support for a given set of APIs that your application tries to use (examples later).
 
 ## 3. JS does not degrade gracefully without developer intervention (unlike HTML and CSS).
 
