@@ -39,9 +39,9 @@ But more importantly than any of the above, the most common scenario is one wher
 
 ## 3. JS does not degrade gracefully without developer intervention (unlike HTML and CSS).
 
-This is a very important point. Consider `<input type="email">` and `border-radius` as examples whereby HTML and CSS naturally degrade with no developer intervention.
+HTML and CSS degrade or enhance (depending on the way you see things) without any extra effort. Consider `<input type="email">` and `border-radius`. When unsupported, the input reverts to a text input and the element just doesn't have a curved border. No harm, no foul.
 
-On the other hand, when a browser tries to execute script it doesn't recognise, an error is thrown (sometimes an irrevocable one). For example try running the following code in IE8.
+When it comes to Javascript the same cannot be said. If the browser tries to execute code it can't handle an error occurs, sometimes an irrevocable one. As an example try running the following in Internet Explorer 8.
 
 	var form = document.forms[0];
 	form.attachEvent('submit', function() {
@@ -49,21 +49,19 @@ On the other hand, when a browser tries to execute script it doesn't recognise, 
 		var widgets = document.getElementsByClassName('widget');
 	});
 
-This errors at line #4 because IE8 doesn't understand how to retrieve elements this way. The problem isn't that IE8 can't do this. The problem is that it breaks fatally. The user doesn't receive the enhanced experience and the user doesn't receive the core experience either.
+The code above errors because IE8 doesn't support retrieving elements by class name. The problem here is that the page didn't *fully* enhance. The user didn't get the enhanced experience. Nor did they get the core experience. *No*, instead they got the *fuck you* experience.
 
-*No*, instead they get the *fuck you* experience.
-
-The example itself doesn't matter. The same can apply for any method in any browser. Browsers are released frequently each with their own varying level of APIs on offer, many of which contain bugs etc.
+The browser and feature in this example is not the relevant point here. It could be any browser any any feature. It makes no difference how new a browser is or what cutting-edge features it claims to support.
 
 ## What are others doing to solve this problem?
 
-Some ignore the problem even exists. Typically, these developers religiously put script in external files in the name of Progressive Enhancement and we know this has no affect on the matter.
+Looking at what others do in the industry serves as a good indicator as to what not to do.
 
-Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often these libraries support a subset of browsers i.e. it's multi-browser &mdash; a sure sign that these libraries don't practice Progressive Enhancement at all.
+Some ignore the problem even exists. Typically, these developers religiously put script in external files in the name of Progressive Enhancement and we know how irrelevant this is.
 
-The unfortunate people who use *other* browsers get the *fuck you* experience, often at times when it would be straightforward to provide the *core* experience.
+Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often these libraries support a subset of browsers, that is it's multi-browser, not cross-browser. This being a sure sign that Progressive Enhancement is not a consideration.
 
-And, when a library decides to drop support for a browser, it's those users that suffer.
+The people who use *other* browsers get the aformentioned *fuck you* experience, often at times when it would be straightforward to provide the *core* experience. And by now I don't need to tell you what happens when a library drops support for additional browsers.
 
 > Cuts the mustard falls short
 
