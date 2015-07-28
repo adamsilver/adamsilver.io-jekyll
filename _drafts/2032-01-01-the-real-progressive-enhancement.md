@@ -191,6 +191,8 @@ You just added support for older browsers without changing your application code
 
 ## Conclusion
 
+The Real Progressive Enhancement is something that puts users first. The misunderstandings of Progressive Enhancement when broken down piece by piece are easy to understand but if just one of those pieces falls down, technical implementations fall short. There is the philosophy and there is the execution. Both must be perfectly understood in order to do it right.
+
 ## Citations
 
 <dl>
