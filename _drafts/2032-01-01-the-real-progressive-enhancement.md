@@ -191,7 +191,11 @@ You just added support for older browsers without changing your application code
 
 ## Conclusion
 
-The Real Progressive Enhancement is something that puts users first. The misunderstandings of Progressive Enhancement when broken down piece by piece are easy to understand but if just one of those pieces falls down, technical implementations fall short. There is the philosophy and there is the execution. Both must be perfectly understood in order to do it right.
+The Real Progressive Enhancement is something that puts users first. The misunderstandings of Progressive Enhancement, when broken down piece by piece are easy to understand, but if just one of those pieces falls down, technical implementations tend to fall short of the mark.
+
+Unfortunately this is quite common in the industry and it's the people that suffer the most, the same people that are interested in your business or content. It's just not good enough to let them endure the *fuck you* experience, they don't deserve it.
+
+Fortunately, when the real meaning of Progressive Enhancement is understood, the execution can be implemented correctly. This allows for robust, future-friendly, backwards-compatible Javascript code. Your users and your business will appreciate it.
 
 ## Citations
 
