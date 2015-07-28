@@ -43,7 +43,7 @@ But more importantly than any of the above, the most common scenario is one wher
 
 ## 3. JS does not degrade gracefully without developer intervention (unlike HTML and CSS).
 
-HTML and CSS degrade (or enhance depending on the way you see things) without any extra effort. Consider `<input type="email">` and `border-radius`. When unsupported, the input reverts to a text input and the element doesn't have a curved border. No harm, no foul.
+HTML and CSS degrade (or enhance depending on the way you see things) without any extra effort. Consider `<input type="email">` and `border-radius`. When unsupported, the input reverts to a standard text control and the element doesn't have a curved border. No harm, no foul.
 
 When it comes to Javascript the same cannot be said. If the browser tries to execute code it can't handle an error occurs, sometimes an irrevocable one. As an example try running the following in Internet Explorer 8.
 
@@ -75,11 +75,11 @@ The people who use *other* browsers get the aformentioned *fuck you* experience,
 		// bootstrap application
 	}
 
-It works by *detecting* a few *choice* browser APIs in order to *infer* that the browser is "modern", something that is impossible to determine, considering the sheer amount of new browsers being released and the fact that *new* does not necessarily mean it is the most capable browser.
+It works by *detecting* a few *choice* browser APIs in order to *infer* that the browser is "modern", something that is impossible to determine, considering the sheer amount of new browsers being released and the fact that *new* does not necessarily mean it is the most capable browser. Besides, every browser was "modern" once.
 
 Anyway, once CTM determines its modern, the JS application starts and (attempts to) provide the enhanced experience. The emphasis on *browsers* as opposed to *features* more than suggests this technique is doomed from the start. And, inference is little better than User Agent sniffing.
 
-More specifically, CTM has the following important problems:
+More specifically, CTM has the following problems of note:
 
 **1. Detecting host objects like this is dangerous**. *H is for Host* explains why this is dangerous and how `isHostMethod` is your lifeline.
 
@@ -133,7 +133,7 @@ The only way to reliably do this is through wrappers (AKA facades). A library th
 
 At this point some might say things like: "I don't want to know about all these browser problems, that's what libraries are for aren't they? I am an application developer, not a library developer".
 
-The idea of abstractions are good, the idea of several abstractions AKA a library is also good. But if that library is monolithic in nature, context-less, lacks feature detection and feature testing, leans on polyfills and doesn **not** expose a dynamic API, then ultimately you are unable to Progressively Enhance the Javascript portion of your application and your users will suffer for it.
+The idea of abstractions are good, the idea of several abstractions AKA a library is also good. But if that library is monolithic in nature, context-less, lacks feature detection and feature testing, leans on polyfills and does **not** expose a dynamic API, then ultimately you are unable to Progressively Enhance the Javascript portion of your application and your users will suffer for it.
 
 At the very least, it is beneficial to be able to spot a bad script (or library), one that doesn't even attempt to degrade gracefully in the face of danger.
 
