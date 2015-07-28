@@ -108,11 +108,11 @@ More specifically, CTM has the following important problems:
 
 If you have made it this far, it is clear that you believe in users first and that Progressive Enhancement is the way to enable that belief.
 
-In order to provide a core experience, it is vital that the site works without Javascript because that is the experience a user will get when Javascript *is* enabled but incapable of running for whatever reason.
+In order to provide a core experience, it is imperative your site works without Javascript because that is the experience a user will get when Javascript *is* enabled but incapable of running (for whatever reason).
 
-Then, in order to determine that the browser can provide the enhanced experience you must detect and where necessary test *all of the features* used by your application *before* your application  uses them. This is vital in ensuring the page is not irrevocably broken.
+Then, in order to determine that the browser can provide the enhanced experience you must detect and where necessary test **all of the features** used by your application *before* your application  uses them. This will ensure the page doesn't end up irrevocably broken, something that will make your users not hate you.
 
-The only way to reliably do this is through facades. A library that employs Progressive Enhancement *must* provide a dynamic API. Dynamic in that it adapts and changes based on the environment. This is how it basically looks in code form:
+The only way to reliably do this is through wrappers (AKA facades). A library that employs Progressive Enhancement *must* provide a dynamic API. Dynamic in that it adapts and changes based on the environment. This is how it basically looks in code form:
 
 	if(lib.hasFeatures('find', 'addListener', 'storeValue')) {
 		var el = lib.find('.whatever');
@@ -121,25 +121,47 @@ The only way to reliably do this is through facades. A library that employs Prog
 		});
 	}
 
-**1. CTM looks remarkably similar to this solution.** The difference being that you use facades which provide many benefits, that also enable Progressive Enhancement in a reliable way.
+**1. Notice how remarkably similar CTM is to this solution.** The difference is that you the application doesn't directly interface with browser APIs. Facades provide a leaner, context-specific API that allows you to iron out bugs to enable Progressive Enhancement reliably.
 
-**2. There is a 1-to-1 mapping between what is checked in the condition and what is used by the application.** This is *vital*. You break this rule and you are guaranteeing problems.
+**2. Also note, the one-to-one mapping between what is *checked* in the condition and what is *used* by the application.** This is *vital*. If you break this rule, you are asking for trouble.
 
 **3. There is no need for polyfills.** The library either provides the method or it doesn't, no halfway houses, no caveats.
 
 **4. Application logic is completely decoupled from browser logic.** Something that you may have heard Nicholas Zakas talk about in many of his articles and books. Basically this is good for sanity and maintainability.
 
-**5. In the event that Javascript is enabled and that the condition does *not* pass, the user gets the degraded experience.** Effectively the browser didn't "Cut the mustard".
+**5. In the event that Javascript is enabled and that the condition does *not* pass, the user gets the degraded experience.** In Cut The Mustard lingo, it simply doesn't cut it.
 
-Front-end developers tend to put themselves into two categories: app developers and library developers. Typically, the application developer isn't interested in building a library of any kind, let alone one that ensures Progressive Enhancement and feature detection as a cornerstone. Problem being you're only as good as the foundations of your software.
+At this point some might say things like: "I don't want to know about all these browser problems, that's what libraries are for aren't they? I am an application developer, not a library developer".
 
-Unfortunately, you need some level of ability to spot a bad script, one that at least attempts to degrade gracefully otherwise your application is going to suffer.
+The idea of abstractions are good, the idea of several abstractions AKA a library is also good. But if that library is monolithic in nature, context-less, lacks feature detection and feature testing, leans on polyfills and doesn **not** expose a dynamic API, then ultimately you are unable to Progressively Enhance the Javascript portion of your application and your users will suffer for it.
 
-Explaining the intricacies of how to build a library is not something I can put down in a few paragraphs. Fortunately, Peter Michaux with the contribution from David Mark has done an excellent job in explaining just how you build a library of functions that enable Progressive Enhancement.
+At the very least, it is beneficial to be able to spot a bad script or library, one that doesn't even attempt to degrade gracefully in the face of danger.
 
-Lastly, I really want to emphasise that whilst I write about this now, Peter's articles were written in 2008 and even then he talks about the fact that this practice has been known for a long time.
+## How do I build a library like this?
 
-My hope is that the industry stops trying to produce the next shiny framework and can pull together to build a library of functions that enable the Real Progressive Enhancement to provide a core experience for all, and where possible an even better experience.
+Explaining the details of how to build a library that conforms to the above rules is worthy of an article in it's own right, something that Peter Michaux did, in 2008 no less.
+
+Whilst I don't wish to repeat that article it might be worth a quick example, one that shows that this technique is not a drag on new browsers and cutting edge development. Quite the opposite, Progressive Enhancement actually makes it easy to "drop support" for say IE6 without actually dropping support &mdash; they just get the degraded experience.
+
+	// library namespace
+	var lib = {};
+
+	// short form - see Peter's article for isHostMethod etc
+	if(document.documentElement.classList.add) {
+		lib.addClass = function(el, className) {
+			return el.classList.add(className);
+		};
+	}
+
+And then usage of it:
+
+	if(lib.addClass) {
+
+		// some application that must provide the ability to add a class to an element in order to provide the enhanced experience
+
+	}
+
+Notice, that this application only enhances where browsers support `classList` which generally speaking are cutting edge browsers, don't bother with IE6, give those guys the degraded experience.
 
 ## Citations
 
@@ -149,6 +171,8 @@ My hope is that the industry stops trying to produce the next shiny framework an
 </dl>
 
 <!--
+
+My hope is that the industry stops trying to produce the next shiny framework and can pull together to build a library of functions that enable the Real Progressive Enhancement to provide a core experience for all, and where possible an even better experience.
 
 * With a dynamic API such as this you get to drop support for browsers without giving those usrs the fuck you experience.
 
