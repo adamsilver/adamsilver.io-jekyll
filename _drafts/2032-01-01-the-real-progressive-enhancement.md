@@ -6,16 +6,16 @@ tagline: "How to avoid the fuck you experience"
 categories: js
 ---
 
-Progressive Enhancement is one of those things that everyone knows right? However, throughout my career, it has always been a hot topic, and one that developers have struggled with in one form or other, demonstrating signficant misundestandings about the subject, particularly when it comes to Javascript.
+Progressive Enhancement is one of those things that everyone knows right? However, throughout my career, it has always been a hot topic, and one that developers have struggled with in one form or other, and demonstrating signficant misundestandings about the subject, particularly when it comes to Javascript.
 
-This article addresses these misunderstandings and provides long forgotten but reliable solutions. Solutions that have stood the test of time and can still, today be considered cutting-edge. The fact is that this subject is quite possibly the most important and misunderstood aspect of front-end web development.
+This article addresses these misunderstandings and provides long forgotten but reliable solutions, that have stood the test of time and can still, today be considered cutting-edge. The fact is that this subject is quite possibly the most important and misunderstood aspect of front-end web development, period.
 
 > &ldquo;The problems we have with websites are ones we create ourselves&rdquo;
 <br>&mdash; <cite>Motherfuckingwebsite.com</cite>
 
-The beauty of the web is that by default, it is accessible to *everyone*. It's us developers that come along and ruin it. Websites such as the one I quote above are not alone either, demonstrating there are many that have the right intention, to serve the user first. Often, even the best intentions fall short in their execution as we will see shortly.
+The beauty of the web is that by default, it is accessible to *everyone*. It's us developers that come along and ruin it. Websites such as the one I quote above are not alone either, demonstrating there are many of us that have the right intention &mdash; to serve the user first. Often, even the best intentions fall short in their execution as we will see shortly.
 
-So what is the best way to define what Progressive Enhancement *really* is?
+So what is the best way to define what Progressive Enhancement *really* is? I think the following statement says it best:
 
 > Progressive Enhancement is the approach of providing a baseline **core** experience for everyone; and creating a better **enhanced** experience for people who use a more capable browser.
 
@@ -23,13 +23,13 @@ Whilst Progressive Enhancement doesn't just pertain to Javascript, it is definit
 
 > &ldquo;How am I meant to write Javascript in a Progressive Enhancement way?&rdquo;
 
-Whilst this question is not the easiest one to answer, answers exist, and they are not *that* difficult once taking the time to truly understand them.
+Whilst this question is not the easiest one to answer, answers do exist, and they are not *that* difficult once you have taken the time to truly understand them.
 
-Firstly, though, 3 key points must be addressed...
+But first, there are three important points to make:
 
 ## 1. Unobtrusive Javascript is not Progressive Enhancement
 
-Simply placing your Javascript code in external Javascript files, does not, in anyway, address the problem of Progressive Enhancement. Code that is inline or external has equal chance of success of failure.
+Simply placing your Javascript code in external files, does not, in anyway, address the problem of Progressive Enhancement. Code that is inline or external has equal chance of success of failure.
 
 ## 2. Handling the Javascript disabled scenario is only half of the story
 
@@ -37,7 +37,7 @@ Yes, Javascript disabled is a scenario that needs consideration but not necessar
 
 Some browsers don't support Javascript so relying on it for the core experience is ill-advised. Some people install plugins, such as those that disable tracking, these can cause script to break i.e. when one script references another object in a *blocked* script.
 
-Sometimes a firewall or proxy ate the script &mdash; this actually happened to me when I was building websites for a telecom company.The network decided to mess with a script it thought it recognised causing Javascript problems. Using the latest iPhone, with Javascript enabled, had no affect in avoiding this problem. Fortunately this could be fixed as I worked for the network but it's not always in your control. So it pays to not trust the browser or network.
+Sometimes a firewall or proxy ate the script &mdash; this actually happened to me when I was building websites for a telecom company. The network decided to mess with a script it thought it recognised causing Javascript problems. Using the latest iPhone, with Javascript enabled, had no affect in avoiding this problem. Fortunately this could be fixed as I worked for the network but it's not always in your control. So it pays to not trust the browser or network.
 
 But more importantly than any of the above, the most common scenario is one where the browser simply lacks support for a given set of APIs that your application tries to use (examples later).
 
@@ -61,9 +61,9 @@ The browser and feature in this example is not the relevant point here. It could
 
 As is true with everything in life, looking at what most people do, provides a guide as to what not to do.
 
-Some ignore the problem even exists. If they haven't seen the network fail, or a particular device or browser fail they don't really care and even then they might just say "they don't care about those browsers" which is obviously unlucky for those users.
+Some ignore the problem even exists. If they haven't seen the network fail, or a particular device or browser fail they don't really care and even then they might just say "they don't care about those browsers" which is obviously unfortunate for the unbeknownst users.
 
-Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often these libraries support a subset of browsers, that is it's multi-browser, not cross-browser; a sure sign that the library vendor does not practice Progressive Enhancement and in-turn doesn't care about people very much.
+Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often these libraries support a subset of browsers, that is, it's multi-browser, not cross-browser; a sure sign that the library vendor does not practice Progressive Enhancement and in-turn doesn't care about people very much.
 
 The people who use *other* browsers get the aformentioned *fuck you* experience, often at times when it would be straightforward to provide the *core* experience. Much the same happens for those browsers that have been dropped by the library.
 
@@ -110,7 +110,7 @@ If you have made it this far, it is clear that you believe in users first and th
 
 In order to provide a core experience, it is imperative your site works without Javascript because that is the experience a user will get when Javascript *is* enabled but incapable of running (for whatever reason).
 
-Then, in order to determine that the browser can provide the enhanced experience you must detect and where necessary test **all of the features** used by your application *before* your application  uses them. This will ensure the page doesn't end up irrevocably broken, something that will make your users not hate you.
+Then, in order to determine that the browser can provide the enhanced experience you must detect and where necessary test **all of the features** used by your application *before* your application  uses them. This will ensure the page doesn't end up irrevocably broken, something that will ensure that your users don't hate you.
 
 The only way to reliably do this is through wrappers (AKA facades). A library that employs Progressive Enhancement *must* provide a dynamic API. Dynamic in that it adapts and changes based on the environment. This is how it basically looks in code form:
 
