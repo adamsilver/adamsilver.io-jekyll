@@ -121,7 +121,7 @@ The only way to reliably do this is through wrappers (AKA facades). A library th
 		});
 	}
 
-**1. Notice how remarkably similar CTM is to this solution.** The difference is that you the application doesn't directly interface with browser APIs. Facades provide a leaner, context-specific API that allows you to iron out bugs to enable Progressive Enhancement reliably.
+**1. Notice how remarkably similar CTM is to this solution.** The difference is that the application doesn't directly interface with browser APIs. Facades provide a leaner, context-specific API that allows you to iron out bugs to enable Progressive Enhancement reliably.
 
 **2. Also note, the one-to-one mapping between what is *checked* in the condition and what is *used* by the application.** This is *vital*. If you break this rule, you are asking for trouble.
 
@@ -135,33 +135,59 @@ At this point some might say things like: "I don't want to know about all these 
 
 The idea of abstractions are good, the idea of several abstractions AKA a library is also good. But if that library is monolithic in nature, context-less, lacks feature detection and feature testing, leans on polyfills and doesn **not** expose a dynamic API, then ultimately you are unable to Progressively Enhance the Javascript portion of your application and your users will suffer for it.
 
-At the very least, it is beneficial to be able to spot a bad script or library, one that doesn't even attempt to degrade gracefully in the face of danger.
+At the very least, it is beneficial to be able to spot a bad script (or library), one that doesn't even attempt to degrade gracefully in the face of danger.
 
 ## How do I build a library like this?
 
-Explaining the details of how to build a library that conforms to the above rules is worthy of an article in it's own right, something that Peter Michaux did, in 2008 no less.
+Explaining the details of how to build a library that conforms to the above rules is worthy of an article in it's own right, something that Peter Michaux did in 2008, no less.
 
-Whilst I don't wish to repeat that article it might be worth a quick example, one that shows that this technique is not a drag on new browsers and cutting edge development. Quite the opposite, Progressive Enhancement actually makes it easy to "drop support" for say IE6 without actually dropping support &mdash; they just get the degraded experience.
+I don't wish to repeat Peter's article, but it might be worth providing a little taster in how to go about doing this.
 
-	// library namespace
+This example will also demonstrate that Progressive Enhancement is not a drag in the way of "having to support old irrelevant browsers", quite the opposite in-fact. The meaning of "dropping support for..." changes to "degrades gracefully in..." and you get the appropriate cut off for your project.
+
+	// library.js
 	var lib = {};
 
-	// short form - see Peter's article for isHostMethod etc
+	// Note: use isHostMethod - Peter's article covers this
 	if(document.documentElement.classList.add) {
 		lib.addClass = function(el, className) {
 			return el.classList.add(className);
 		};
 	}
 
-And then usage of it:
+And then the calling application code looks like:
 
+	// app.js
 	if(lib.addClass) {
-
 		// some application that must provide the ability to add a class to an element in order to provide the enhanced experience
 
 	}
 
-Notice, that this application only enhances where browsers support `classList` which generally speaking are cutting edge browsers, don't bother with IE6, give those guys the degraded experience.
+Notice, that this application only enhances where the browser supports `classList` which generally speaking are cutting edge browsers, meaning that this application will degrade in IE6, IE7, IE8 and IE9. That's not a problem though, they will just get the degraded *core* experience. If you wanted to support those browsers, something completely doable then you would add another fork:
+
+	// library.js
+	var lib = {};
+
+	// Note: use isHostMethod - Peter's article covers this
+	if(document.documentElement.classList.add) {
+		lib.addClass = function(el, className) {
+			return el.classList.add(className);
+		};
+	} else if(typeof html.className === "string") {
+		lib.addClass = function(el, className) {
+			var re;
+			if (!el.className) {
+				el.className = className;
+			} else {
+				re = new RegExp('(^|\\s)' + className + '(\\s|$)');
+				if (!re.test(el.className)) {
+					el.className += ' ' + className;
+				}
+			}
+		}
+	}
+
+You just added support for older browsers without changing your application code which is very useful. You can equally drop support in the future by deleting that fork, or even both forks if some new even better way of adding a class comes out. This way you get the benefit of a faster leaner function or library.
 
 ## Conclusion
 
