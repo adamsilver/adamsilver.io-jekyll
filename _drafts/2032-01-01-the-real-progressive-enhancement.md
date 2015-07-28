@@ -6,26 +6,30 @@ tagline: "How to avoid the fuck you experience"
 categories: js
 ---
 
-Progressive Enhancement is one of those things that everyone knows right? However, throughout my entire career which is now over a decade, the industry still talks about it, still struggles with it and demonstrates several significant misunderstandings about the subject, particularly when it comes to Javascript. This article addresses the misunderstandings and provides long forgotten, reliable solutions. Some might call these solutions cutting edge regardless of how old they are. Some might not. This is possibly the most important and misunderstood subject in regard to front-end Javascript development for the general web.
+Progressive Enhancement is one of those things that everyone knows right? However, throughout my career, it has always been a hot topic, and one that developers have struggled with in one form or other, demonstrating signficant misundestandings about the subject, particularly when it comes to Javascript.
+
+This article addresses these misunderstandings and provides long forgotten but reliable solutions. Solutions that have stood the test of time and can still, today be considered cutting-edge. The fact is that this subject is quite possibly the most important and misunderstood aspect of front-end web development.
 
 > &ldquo;The problems we have with websites are ones we create ourselves&rdquo;
 <br>&mdash; <cite>Motherfuckingwebsite.com</cite>
 
-The beauty of the web is that by default, it is accessible to *everyone*. It's us developers that come along and ruin it. Websites such as the one I quote above are not alone either, demonstrating that there are several people who have the right intention, but even then some are missing the right execution.
+The beauty of the web is that by default, it is accessible to *everyone*. It's us developers that come along and ruin it. Websites such as the one I quote above are not alone either, demonstrating there are many that have the right intention, to serve the user first. Often, even the best intentions fall short in their execution as we will see shortly.
 
-At this point I am going to take this opportunity to define what Progressive Enhancement *really* is:
+So what is the best way to define what Progressive Enhancement *really* is?
 
 > Progressive Enhancement is the approach of providing a baseline **core** experience for everyone; and creating a better **enhanced** experience for people who use a more capable browser.
 
-Whilst Progressive Enhancement doesn't just pertain to Javascript, it is definitely the technology that developers tend to suffer with the most. We just can't seem to answer the following question:
+Whilst Progressive Enhancement doesn't just pertain to Javascript, it is definitely the technology that developers tend to suffer with the most. We just can't seem to answer the following question with aplomb:
 
 > &ldquo;How am I meant to write Javascript in a Progressive Enhancement way?&rdquo;
 
-Whilst this question is not the easiest one to answer, I promise there are answers, many of which are quite simple when you take the time to understand them. Before getting to that though a few important points need to be made.
+Whilst this question is not the easiest one to answer, answers exist, and they are not *that* difficult once taking the time to truly understand them.
+
+Firstly, though, 3 key points must be addressed...
 
 ## 1. Unobtrusive Javascript is not Progressive Enhancement
 
-Simply placing your Javascript code in external Javascript files, does not, in anyway, impact positively or negatively user receiving a core or enhanced experience.
+Simply placing your Javascript code in external Javascript files, does not, in anyway, address the problem of Progressive Enhancement. Code that is inline or external has equal chance of success of failure.
 
 ## 2. Handling the Javascript disabled scenario is only half of the story
 
@@ -39,7 +43,7 @@ But more importantly than any of the above, the most common scenario is one wher
 
 ## 3. JS does not degrade gracefully without developer intervention (unlike HTML and CSS).
 
-HTML and CSS degrade or enhance (depending on the way you see things) without any extra effort. Consider `<input type="email">` and `border-radius`. When unsupported, the input reverts to a text input and the element just doesn't have a curved border. No harm, no foul.
+HTML and CSS degrade (or enhance depending on the way you see things) without any extra effort. Consider `<input type="email">` and `border-radius`. When unsupported, the input reverts to a text input and the element doesn't have a curved border. No harm, no foul.
 
 When it comes to Javascript the same cannot be said. If the browser tries to execute code it can't handle an error occurs, sometimes an irrevocable one. As an example try running the following in Internet Explorer 8.
 
@@ -51,21 +55,21 @@ When it comes to Javascript the same cannot be said. If the browser tries to exe
 
 The code above errors because IE8 doesn't support retrieving elements by class name. The problem here is that the page didn't *fully* enhance. The user didn't get the enhanced experience. Nor did they get the core experience. *No*, instead they got the *fuck you* experience.
 
-The browser and feature in this example is not the relevant point here. It could be any browser any any feature. It makes no difference how new a browser is or what cutting-edge features it claims to support.
+The browser and feature in this example is not the relevant point here. It could be any browser and any feature. It makes no difference how new a browser is or what cutting-edge features it claims to support.
 
-## What are others doing to solve this problem?
+## What shouldn't you do?
 
-Looking at what others do in the industry serves as a good indicator as to what not to do.
+As is true with everything in life, looking at what most people do, provides a guide as to what not to do.
 
-Some ignore the problem even exists. Typically, these developers religiously put script in external files in the name of Progressive Enhancement and we know how irrelevant this is.
+Some ignore the problem even exists. If they haven't seen the network fail, or a particular device or browser fail they don't really care and even then they might just say "they don't care about those browsers" which is obviously unlucky for those users.
 
-Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often these libraries support a subset of browsers, that is it's multi-browser, not cross-browser. This being a sure sign that Progressive Enhancement is not a consideration.
+Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often these libraries support a subset of browsers, that is it's multi-browser, not cross-browser; a sure sign that the library vendor does not practice Progressive Enhancement and in-turn doesn't care about people very much.
 
-The people who use *other* browsers get the aformentioned *fuck you* experience, often at times when it would be straightforward to provide the *core* experience. And by now I don't need to tell you what happens when a library drops support for additional browsers.
+The people who use *other* browsers get the aformentioned *fuck you* experience, often at times when it would be straightforward to provide the *core* experience. Much the same happens for those browsers that have been dropped by the library.
 
 > Cuts the mustard falls short
 
-*Cuts The Mustard* (CTM) is a relatively new approach to Progressive Enhancement, one which has the premise of a reliable solution and is based on the concept of a core and an enhanced experience. However, it's technical implementation (shown below) leaves a lot to be desired.
+*Cuts The Mustard* (CTM) is a relatively new approach to Progressive Enhancement, one which has the premise of a reliable solution and is based on the concept of a core and an enhanced experience. However, it's technical implementation (shown below) falls short.
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// bootstrap application
@@ -75,7 +79,7 @@ It works by *detecting* a few *choice* browser APIs in order to *infer* that the
 
 Anyway, once CTM determines its modern, the JS application starts and (attempts to) provide the enhanced experience. The emphasis on *browsers* as opposed to *features* more than suggests this technique is doomed from the start. And, inference is little better than User Agent sniffing.
 
-More specifically, CTM has the following significant issues:
+More specifically, CTM has the following important problems:
 
 **1. Detecting host objects like this is dangerous**. *H is for Host* explains why this is dangerous and how `isHostMethod` is your lifeline.
 

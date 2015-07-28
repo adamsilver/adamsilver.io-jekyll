@@ -5,7 +5,7 @@ id: home
 
 # Hello, my name is Adam. I’m a UX-driven Front-end Developer based in London, UK.
 
-Websites should be accessible by all people &mdash; no matter their location, age, ability or interaction preferences. Subsequently, their choice of browser and device should be largely irrelevant &mdash; embracing the conventions of the web leads to an intuitive and delightful User Experience.
+Websites should be accessible by all people &mdash; no matter their location, age, ability or interaction preferences. Subsequently, their choice of browser and device should be largely irrelevant &mdash; embracing the conventions of the web leads to an intuitive and delightful experience.
 
 My experience, in building responsive, cross-browser (not multi-browser), accessible, rich and progressively enhanced user interfaces means I know what works, what doesn't and what to avoid in the process from a technical and UX perspective.
 
