@@ -163,6 +163,8 @@ And then usage of it:
 
 Notice, that this application only enhances where browsers support `classList` which generally speaking are cutting edge browsers, don't bother with IE6, give those guys the degraded experience.
 
+## Conclusion
+
 ## Citations
 
 <dl>
