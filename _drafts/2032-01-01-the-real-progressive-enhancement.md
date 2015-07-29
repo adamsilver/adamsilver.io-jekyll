@@ -8,18 +8,18 @@ categories: js
 
 Progressive Enhancement is one of those things that everyone knows right? However, throughout my career, it has always been a hot topic, and one that developers have struggled with in one form or other, and demonstrating signficant misundestandings about the subject, particularly when it comes to Javascript.
 
-This article addresses these misunderstandings and provides long forgotten but reliable solutions, that have stood the test of time and can still, today be considered cutting-edge. The fact is that this subject is quite possibly the most important and misunderstood aspect of front-end web development, period.
+This article addresses these misunderstandings and provides long forgotten but reliable solutions, that have stood the test of time and can still, today be considered cutting-edge. The fact is that this subject is quite possibly the most important and misunderstood aspect of Javascript development, period.
 
 > &ldquo;The problems we have with websites are ones we create ourselves&rdquo;
 <br>&mdash; <cite>Motherfuckingwebsite.com</cite>
 
 The beauty of the web is that by default, it is accessible to *everyone*. It's us developers that come along and ruin it. Websites such as the one I quote above are not alone either, demonstrating there are many of us that have the right intention &mdash; to serve the user first. Often, even the best intentions fall short in their execution as we will see shortly.
 
-So what is the best way to define what Progressive Enhancement *really* is? I think the following statement says it best:
+So what is the best way to define what Progressive Enhancement *really* is? I think the following description does it justice:
 
 > Progressive Enhancement is the approach of providing a baseline **core** experience for everyone; and creating a better **enhanced** experience for people who use a more capable browser.
 
-Whilst Progressive Enhancement doesn't just pertain to Javascript, it is definitely the technology that developers tend to suffer with the most. We just can't seem to answer the following question with aplomb:
+Whilst Progressive Enhancement doesn't just pertain to Javascript, it is definitely the technology that developers tend to struggle with the most. We just can't seem to answer the following question with aplomb:
 
 > &ldquo;How am I meant to write Javascript in a Progressive Enhancement way?&rdquo;
 
@@ -29,7 +29,7 @@ But first, there are three important points to make:
 
 ## 1. Unobtrusive Javascript is not Progressive Enhancement
 
-Simply placing your Javascript code in external files, does not, in anyway, address the problem of Progressive Enhancement. Code that is inline or external has equal chance of success of failure.
+Simply placing your Javascript code in external files, does not, in anyway, address the problem of Progressive Enhancement.
 
 ## 2. Handling the Javascript disabled scenario is only half of the story
 
@@ -37,15 +37,17 @@ Yes, Javascript disabled is a scenario that needs consideration but not necessar
 
 Some browsers don't support Javascript so relying on it for the core experience is ill-advised. Some people install plugins, such as those that disable tracking, these can cause script to break i.e. when one script references another object in a *blocked* script.
 
-Sometimes a firewall or proxy ate the script &mdash; this actually happened to me when I was building websites for a telecom company. The network decided to mess with a script it thought it recognised causing Javascript problems. Using the latest iPhone, with Javascript enabled, had no affect in avoiding this problem. Fortunately this could be fixed as I worked for the network but it's not always in your control. So it pays to not trust the browser or network.
+Sometimes times the network is at fault. Only some of the script makes it down the wire. Perhaps a firewall or proxy messed with it. This actually happened to me when I worked at Deutsche Telekom. The network had the audacity to strip what it thought was a comment inside a well-known library, but it was actually a regex. Mobile networks can often do these things in the name of performance but it actually broke several sites fatally.
 
-But more importantly than any of the above, the most common scenario is one where the browser simply lacks support for a given set of APIs that your application tries to use (examples later).
+*Note: having the latest iPhone with Javascript enabled made no difference.*
+
+More importantly than any of the above, the most common scenario is one where the browser simply lacks support for a given set of APIs that your application tries to use (examples later).
 
 ## 3. JS does not degrade gracefully without developer intervention (unlike HTML and CSS).
 
-HTML and CSS degrade (or enhance depending on the way you see things) without any extra effort. Consider `<input type="email">` and `border-radius`. When unsupported, the input reverts to a standard text control and the element doesn't have a curved border. No harm, no foul.
+HTML and CSS degrade (or enhance depending on the way you see things) without any extra effort. Consider `<input type="email">` and `border-radius`. When unsupported, the input reverts to a standard text control and forgoes curved borders. No harm, no foul.
 
-When it comes to Javascript the same cannot be said. If the browser tries to execute code it can't handle an error occurs, sometimes an irrevocable one. As an example try running the following in Internet Explorer 8.
+When it comes to Javascript the same cannot be said. If the browser tries to execute code it can't handle, an error occurs, sometimes an irrevocable one. As an example try running the following in Internet Explorer 8.
 
 	var form = document.forms[0];
 	form.attachEvent('submit', function() {
@@ -53,7 +55,7 @@ When it comes to Javascript the same cannot be said. If the browser tries to exe
 		var widgets = document.getElementsByClassName('widget');
 	});
 
-The code above errors because IE8 doesn't support retrieving elements by class name. The problem here is that the page didn't *fully* enhance. The user didn't get the enhanced experience. Nor did they get the core experience. *No*, instead they got the *fuck you* experience.
+The code above errors because IE8 doesn't support the retrieving of elements by class name. The problem here is that the page didn't *fully* enhance. The user didn't get the enhanced experience. Nor did they get the core experience. *No*, instead they got the *fuck you* experience.
 
 The browser and feature in this example is not the relevant point here. It could be any browser and any feature. It makes no difference how new a browser is or what cutting-edge features it claims to support.
 
