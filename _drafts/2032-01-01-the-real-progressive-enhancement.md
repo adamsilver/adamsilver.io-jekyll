@@ -85,7 +85,7 @@ More specifically, CTM has the following problems of note:
 
 **1. Detecting host objects like this is dangerous**. *H is for Host* explains why this is dangerous and how `isHostMethod` is your lifeline.
 
-**2. Detecting the presence of an API is not enough**. CTM only *detects* host object methods but often an API can contain bugs. Nicholas Zakas explains this in detail in his e-book *The Problem with Native JavaScript APIs*. And, Peter Michaux's article *Feature Detection: State of the Art Browser Scripting*, explains everything you need to know about feature detection and feature testing &mdash; two must reads.
+**2. Detecting the presence of an API is not enough**. CTM only *detects* host object methods but often an API can contain bugs which if you're looking for a good case study, look no further than Nicholas Zakas' ebook *The Problem with Native JavaScript APIs*. In anycase when an API has a bug you have to feature *test* before usage. For further reading, Peter Michaux's article *Feature Detection: State of the Art Browser Scripting*, explains everything you need to know.
 
 **3. CTM degrades the experience unnecessarily**. CTM can easily suppress a perfectly capable browser from providing the enhanced experience. For example, if you wanted client-side form validation, something that say Internet Explorer 8 (or 6 for that matter) is perfectly capable of, CTM disregards IE8 and will only give those users the *core* experience &mdash; resorting to server round trips  which is an *unnecessarily* poor experience.
 
