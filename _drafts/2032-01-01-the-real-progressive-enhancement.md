@@ -83,22 +83,23 @@ Anyway, once CTM determines its modern, the JS application starts and (attempts 
 
 More specifically, CTM has the following problems of note:
 
-**1. Detecting host objects like this is dangerous**. *H is for Host* explains why this is dangerous and how `isHostMethod` is your lifeline.
+**1. Detecting host objects like this is dangerous**. *H is for Host* explains why this is dangerous and what the solution is to detecting host objects.
 
-**2. Detecting the presence of an API is not enough**. CTM only *detects* host object methods but often an API can contain bugs which if you're looking for a good case study, look no further than Nicholas Zakas' ebook *The Problem with Native JavaScript APIs*. In anycase when an API has a bug you have to feature *test* before usage. For further reading, Peter Michaux's article *Feature Detection: State of the Art Browser Scripting*, explains everything you need to know.
+**2. Detecting the presence of an API is not enough**. CTM only *detects* host methods but APIs contain bugs. And so where necessary you must also *test* these methods before use. Nicholas Zakas' provides an excellent case study in his dedicated ebook *The Problem with Native JavaScript APIs*. And I must take this opportunity to read Peter Michaux's article *Feature Detection: State of the Art Browser Scripting*, which explains everything you need to know about detection and testing.
 
-**3. CTM degrades the experience unnecessarily**. CTM can easily suppress a perfectly capable browser from providing the enhanced experience. For example, if you wanted client-side form validation, something that say Internet Explorer 8 (or 6 for that matter) is perfectly capable of, CTM disregards IE8 and will only give those users the *core* experience &mdash; resorting to server round trips  which is an *unnecessarily* poor experience.
+**3. CTM degrades the experience unnecessarily**. CTM easily suppresses a perfectly capable browser from providing the enhanced experience. For example, if you wanted client-side form validation, something that say Internet Explorer 8 (or 6 for that matter) is perfectly capable of, CTM disregards IE8 and will only give those users the *core* experience &mdash; resorting to server round trips  which is an *unnecessarily* poor experience.
 
 **4. Some CTM implementations rely on Javascript polyfills to plug missing gaps**. Putting to one side that polyfills are ill-advised [0], the fact remains that CTM is not enough to determine whether you get the enhanced experience. CTM simply *suggests* that this browser is *somewhat* modern *at the time* it was written. It's like "hey, I am a modern browser, now load some polyfills for older browsers, you know right? The ones we don't care about".
 
 **5. The CTM condition needs constant maintainance as new browsers are released**. Again it's that same old problem &mdash; when do I drop support for a browser? This question doesn't really ever have to be asked. Either the browser is capable of running the enhanced experience or it isn't.
 
-**6. It's unreliable**. If the application uses any API that is not covered off by CTM, the likelyhood of providing a broken experience is high. Take the following example, it will break in browsers where `matchMedia` isn't provided, or even in browsers where it is provided but it's buggy. Also, `querySelector` has bugs which further reduces the quality of the test.
+**6. It's unreliable**. If the application uses any API that is not covered off by CTM, the likelyhood of providing a broken experience is high. Take the following example, it will break in browsers where `matchMedia` isn't provided, or even in browsers where it is provided but it's buggy. Furthermore, `querySelector` itself is known to be rather buggy, further reducing the quality of CTM.
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// application that uses other APIs
 
 		window.addEventListener("load", function(e) {
+			// FAIL = ANOTHER FUCK YOU
 			var matches = window.matchMedia(...);
 		}, false);
 	}
@@ -123,7 +124,7 @@ The only way to reliably do this is through wrappers (AKA facades). A library th
 		});
 	}
 
-**1. Notice how remarkably similar CTM is to this solution.** The difference is that the application doesn't directly interface with browser APIs. Facades provide a leaner, context-specific API that allows you to iron out bugs to enable Progressive Enhancement reliably.
+**1. Notice how remarkably similar CTM *looks* in comparison.** The difference is that the application doesn't directly interface with browser APIs. Facades provide a leaner, context-specific API that allows you to iron out bugs to enable Progressive Enhancement reliably.
 
 **2. Also note, the one-to-one mapping between what is *checked* in the condition and what is *used* by the application.** This is *vital*. If you break this rule, you are asking for trouble.
 
@@ -133,11 +134,11 @@ The only way to reliably do this is through wrappers (AKA facades). A library th
 
 **5. In the event that Javascript is enabled and that the condition does *not* pass, the user gets the degraded experience.** In Cut The Mustard lingo, it simply doesn't cut it.
 
-At this point some might say things like: "I don't want to know about all these browser problems, that's what libraries are for aren't they? I am an application developer, not a library developer".
+At this point some might say "I don't want to know about all these browser problems, that's what libraries are for aren't they? I am an application developer, not a library developer".
 
 The idea of abstractions are good, the idea of several abstractions AKA a library is also good. But if that library is monolithic in nature, context-less, lacks feature detection and feature testing, leans on polyfills and does **not** expose a dynamic API, then ultimately you are unable to Progressively Enhance the Javascript portion of your application and your users will suffer for it.
 
-At the very least, it is beneficial to be able to spot a bad script (or library), one that doesn't even attempt to degrade gracefully in the face of danger.
+At the very least, it is beneficial to be able to spot a bad script (or library), one that doesn't even attempt to degrade gracefully in the face of danger, so that you can steer clear or be conscious of these non-ideal decisions.
 
 ## How do I build a library like this?
 
