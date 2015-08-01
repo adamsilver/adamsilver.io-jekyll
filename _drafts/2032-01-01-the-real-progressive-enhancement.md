@@ -25,7 +25,7 @@ Whilst Progressive Enhancement doesn't just pertain to Javascript, it is definit
 
 Whilst this question is not the easiest one to answer, answers do exist, and they are not *that* difficult once you have taken the time to truly understand them.
 
-There are many myths about Progressive Enhancement which I won't list here, but the following 3 points are relevant (CHECK MYTH ARTICLE):
+Whilst there are many myths about Progressive Enhancement, I want to highlight 3 especially important points as follows:
 
 ## 1. Unobtrusive Javascript is not Progressive Enhancement
 
@@ -43,7 +43,7 @@ Sometimes the network is at fault. Only some of the script makes it down the wir
 
 More importantly than any of the above, the most common scenario is one where the browser simply lacks support for a given set of APIs that your application tries to use (examples later).
 
-## 3. JS does not degrade gracefully without developer intervention (unlike HTML and CSS).
+## 3. Javascript does not degrade gracefully without developer intervention (unlike HTML and CSS).
 
 HTML and CSS degrade (or enhance depending on the way you see things) without any extra effort. Consider `<input type="email">` and `border-radius`. When unsupported, the input reverts to a standard text control and forgoes curved borders. No harm, no foul.
 
@@ -79,21 +79,21 @@ People who use *other* browsers get the aformentioned *fuck you* experience, oft
 
 It works by *detecting* a few *choice* browser APIs in order to *infer* that the browser is "modern", something that is impossible to determine, considering the sheer amount of new browsers being released and the fact that *new* does not necessarily mean it is the most capable browser. Besides, every browser was "modern" once.
 
-Anyway, once CTM determines its modern, the JS application starts and (attempts to) provide the enhanced experience. The emphasis on *browsers* as opposed to *features* more than suggests this technique is doomed from the start. And, inference is little better than User Agent sniffing.
+Anyway, once CTM determines it's "modern", the Javascript application starts and (attempts to) provide the enhanced experience. The emphasis on *browsers* as opposed to *features* more than suggests this technique is doomed from the start. And, inference is little better than User Agent sniffing.
 
 More specifically, CTM has the following problems of note:
 
-**1. Detecting host objects like this is dangerous**. *H is for Host* explains why this is dangerous and what the solution is to detecting host objects.
+**1. Detecting host objects like this is dangerous**. *H is for Host* explains why this is dangerous and provides a viable solution.
 
-**2. Detecting the presence of an API is not enough**. CTM only *detects* host methods but APIs contain bugs. And so where necessary you must also *test* these methods before use. Nicholas Zakas' provides an excellent case study in his dedicated ebook *The Problem with Native JavaScript APIs*. And I must take this opportunity to read Peter Michaux's article *Feature Detection: State of the Art Browser Scripting*, which explains everything you need to know about detection and testing.
+**2. Detecting the presence of an API is not enough**. CTM only *detects* host methods but often APIs are buggy. This is why feature *testing* is important. Nicholas Zakas provides an excellent case study in his short ebook *The Problem with Native JavaScript APIs*. Additionally, Peter Michaux's article *Feature Detection: State of the Art Browser Scripting* explains everything you need to know about feature detection and feature testing.
 
-**3. CTM degrades the experience unnecessarily**. CTM easily suppresses a perfectly capable browser from providing the enhanced experience. For example, if you wanted client-side form validation, something that say Internet Explorer 8 (or 6 for that matter) is perfectly capable of, CTM disregards IE8 and will only give those users the *core* experience &mdash; resorting to server round trips  which is an *unnecessarily* poor experience.
+**3. CTM degrades the experience unnecessarily**. CTM can easily suppress a perfectly capable browser from providing the enhanced experience. For example, if you wanted client-side form validation, something that say Internet Explorer 8 (or 6 for that matter) is perfectly capable of, CTM disregards IE8 and will only give those users the *core* experience &mdash; resorting to server round trips  which is an *unnecessarily* poor experience.
 
-**4. Some CTM implementations rely on Javascript polyfills to plug missing gaps**. Putting to one side that polyfills are ill-advised [0], the fact remains that CTM is not enough to determine whether you get the enhanced experience. CTM simply *suggests* that this browser is *somewhat* modern *at the time* it was written. It's like "hey, I am a modern browser, now load some polyfills for older browsers, you know right? The ones we don't care about".
+**4. Some CTM implementations rely on Javascript polyfills to plug missing gaps**. Ignoring the fact that polyfills are full of problems, it is clear that if developers are mixing them in with CTM, this more than indicates CTM is not enough on its own to determine whether the browser is capable of delivery an enhanced experience (or not).
 
-**5. The CTM condition needs constant maintainance as new browsers are released**. Again it's that same old problem &mdash; when do I drop support for a browser? This question doesn't really ever have to be asked. Either the browser is capable of running the enhanced experience or it isn't.
+**5. The CTM condition needs constant maintainance as new browsers are released**. Again it's that same old problem &mdash; when can you drop support for a browser? This question doesn't really ever have to be asked. Either the browser has the required working features or it doesn't &mdash; that is, it's about features, not browsers.
 
-**6. It's unreliable**. If the application uses any API that is not covered off by CTM, the likelyhood of providing a broken experience is high. Take the following example, it will break in browsers where `matchMedia` isn't provided, or even in browsers where it is provided but it's buggy. Furthermore, `querySelector` itself is known to be rather buggy, further reducing the quality of CTM.
+**6. It's unreliable**. If the application uses any API that is not within the CTM test, the chance of a *fuck you* experience is high. As an  example, it will break in browsers where `matchMedia` isn't provided, or even in browsers where it is provided but it's buggy. Furthermore, `querySelector` itself is known to be rather buggy, further reducing the quality of CTM.
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// application that uses other APIs
