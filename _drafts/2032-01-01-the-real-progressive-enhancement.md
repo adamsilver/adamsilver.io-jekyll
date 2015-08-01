@@ -109,13 +109,13 @@ More specifically, CTM has the following problems of note:
 > &ldquo;I’ve always maintained that, given the choice between making something my problem, and making something the user’s problem, I’ll choose to make it my problem every time.&rdquo;
 > <br>&mdash; <cite>Jeremy Keith</cite>
 
-If you have made it this far, it is clear that you believe in users first and that Progressive Enhancement is the way to enable that belief.
+If you have made it this far, you probably believe in people first whether it's the users or the client. And, that Progressive Enhancement is the way to enable that belief.
 
 In order to provide a core experience, it is imperative your site works without Javascript because that is the experience a user will get when Javascript *is* enabled but incapable of running (for whatever reason).
 
 Then, in order to determine that the browser can provide the enhanced experience you must detect and where necessary test **all of the features** used by your application *before* your application  uses them. This will ensure the page doesn't end up irrevocably broken, something that will ensure that your users don't hate you.
 
-The only way to reliably do this is through wrappers (AKA facades). A library that employs Progressive Enhancement *must* provide a dynamic API. Dynamic in that it adapts and changes based on the environment. This is how it basically looks in code form:
+The only way to reliably do this is through wrappers (AKA facades). A library that employs Progressive Enhancement *must* provide a dynamic API. Dynamic in that it adapts and changes based on the host environment (a browser). This is how it basically looks in code form:
 
 	if(lib.hasFeatures('find', 'addListener', 'storeValue')) {
 		var el = lib.find('.whatever');
@@ -124,7 +124,7 @@ The only way to reliably do this is through wrappers (AKA facades). A library th
 		});
 	}
 
-**1. Notice how remarkably similar CTM *looks* in comparison.** The difference is that the application doesn't directly interface with browser APIs. Facades provide a leaner, context-specific API that allows you to iron out bugs to enable Progressive Enhancement reliably.
+**1. Notice how remarkably similar CTM *looks* in comparison.** The difference is that the application doesn't directly interface with browser APIs. Facades provide a leaner, context-specific API that allows you to iron out bugs, all of which reliably enables Progressive Enhancement.
 
 **2. Also note, the one-to-one mapping between what is *checked* in the condition and what is *used* by the application.** This is *vital*. If you break this rule, you are asking for trouble.
 
@@ -134,11 +134,11 @@ The only way to reliably do this is through wrappers (AKA facades). A library th
 
 **5. In the event that Javascript is enabled and that the condition does *not* pass, the user gets the degraded experience.** In Cut The Mustard lingo, it simply doesn't cut it.
 
-At this point some might say "I don't want to know about all these browser problems, that's what libraries are for aren't they? I am an application developer, not a library developer".
+At this point some might say they don't want to know about all these browser problems, as libraries take care of this for them. They might even portray themselves as application developers, but just because responsibility is abdicated, doesn't mean the problem isn't there.
 
-The idea of abstractions are good, the idea of several abstractions AKA a library is also good. But if that library is monolithic in nature, context-less, lacks feature detection and feature testing, leans on polyfills and does **not** expose a dynamic API, then ultimately you are unable to Progressively Enhance the Javascript portion of your application and your users will suffer for it.
+The idea of abstractions are good, the idea of several abstractions i.e. a library, is also good. But if that library is monolithic in nature, context-less, lacks feature detection and feature testing, leans on polyfills and does **not** expose a dynamic API, then ultimately you are unable to Progressively Enhance your application and your users and the business you work for will suffer for it.
 
-At the very least, it is beneficial to be able to spot a bad script (or library), one that doesn't even attempt to degrade gracefully in the face of danger, so that you can steer clear or be conscious of these non-ideal decisions.
+At the very least, it is beneficial to be able to spot bad Javascript. Particulary the kind that doesn't even attempt to degrade gracefully in the face of danger. This way you can steer clear or at the very least be conscious of making such a decision.
 
 ## How do I build a library like this?
 
