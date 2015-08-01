@@ -6,7 +6,7 @@ tagline: "How to avoid the fuck you experience"
 categories: js
 ---
 
-Progressive Enhancement is one of those things that everyone knows right? However, throughout my career, it has always been a hot topic, and one that developers have struggled with in one form or other, and demonstrating signficant misundestandings about the subject, particularly when it comes to Javascript.
+Progressive Enhancement is one of those things that everyone knows right? However, throughout my career, it has always been a hot topic, and one that developers have struggled with in one form or other, demonstrating signficant misundestandings about the subject, particularly when it comes to Javascript.
 
 This article addresses these misunderstandings and provides long forgotten but reliable solutions, that have stood the test of time and can still, today be considered cutting-edge. The fact is that this subject is quite possibly the most important and misunderstood aspect of Javascript development, period.
 
@@ -25,7 +25,7 @@ Whilst Progressive Enhancement doesn't just pertain to Javascript, it is definit
 
 Whilst this question is not the easiest one to answer, answers do exist, and they are not *that* difficult once you have taken the time to truly understand them.
 
-But first, there are three important points to make:
+There are many myths about Progressive Enhancement which I won't list here, but the following 3 points are relevant (CHECK MYTH ARTICLE):
 
 ## 1. Unobtrusive Javascript is not Progressive Enhancement
 
@@ -37,7 +37,7 @@ Yes, Javascript disabled is a scenario that needs consideration but not necessar
 
 Some browsers don't support Javascript so relying on it for the core experience is ill-advised. Some people install plugins, such as those that disable tracking, these can cause script to break i.e. when one script references another object in a *blocked* script.
 
-Sometimes times the network is at fault. Only some of the script makes it down the wire. Perhaps a firewall or proxy messed with it. This actually happened to me when I worked at Deutsche Telekom. The network had the audacity to strip what it thought was a comment inside a well-known library, but it was actually a regex. Mobile networks can often do these things in the name of performance but it actually broke several sites fatally.
+Sometimes the network is at fault. Only some of the script makes it down the wire. Perhaps a firewall or proxy messed with it. This actually happened to me when I worked at Deutsche Telekom. The network had the audacity to strip what it thought was a comment inside a well-known library, but it was actually a regex. Mobile networks can often do these things in the name of performance but it actually broke several sites fatally.
 
 *Note: having the latest iPhone with Javascript enabled made no difference.*
 
@@ -63,11 +63,11 @@ The browser and feature in this example is not the relevant point here. It could
 
 As is true with everything in life, looking at what most people do, provides a guide as to what not to do.
 
-Some ignore the problem even exists. If they haven't seen the network fail, or a particular device or browser fail they don't really care and even then they might just say "they don't care about those browsers" which is obviously unfortunate for the unbeknownst users.
+Some ignore the problem even exists. If they haven't seen the network fail, or a particular browser fail they don't really care and even then they might just say they don't care about those browsers or edge cases etc, which is obviously unfortunate for the unbeknownst users.
 
 Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often these libraries support a subset of browsers, that is, it's multi-browser, not cross-browser; a sure sign that the library vendor does not practice Progressive Enhancement and in-turn doesn't care about people very much.
 
-The people who use *other* browsers get the aformentioned *fuck you* experience, often at times when it would be straightforward to provide the *core* experience. Much the same happens for those browsers that have been dropped by the library.
+The people who use *other* browsers get the aformentioned *fuck you* experience, often at times when it would be straightforward to provide the *core* experience. Much the same happens for those browsers that have been dropped by the library in a new release.
 
 > Cuts the mustard falls short
 
