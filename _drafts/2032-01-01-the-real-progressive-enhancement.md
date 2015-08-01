@@ -61,13 +61,13 @@ The browser and feature in this example is not the relevant point here. It could
 
 ## What shouldn't you do?
 
-As is true with everything in life, looking at what most people do, provides a guide as to what not to do.
+Often, looking at what others do can serve as a useful guide in what *not* to do.
 
-Some ignore the problem even exists. If they haven't seen the network fail, or a particular browser fail they don't really care and even then they might just say they don't care about those browsers or edge cases etc, which is obviously unfortunate for the unbeknownst users.
+Some ignore the problem even exists. If they haven't experienced a problem then they often think one does not exist. Or worse they believe it to be an edge case. Regardless, this is unfortunate to the people using the website and the potential loss to the business.
 
-Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often these libraries support a subset of browsers, that is, it's multi-browser, not cross-browser; a sure sign that the library vendor does not practice Progressive Enhancement and in-turn doesn't care about people very much.
+Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often these libraries support a subset of browsers i.e. it's multi-browser as opposed to cross-browser &mdash; a sure sign that the library does not practice Progressive Enhancement and in-turn doesn't care about people very much.
 
-The people who use *other* browsers get the aformentioned *fuck you* experience, often at times when it would be straightforward to provide the *core* experience. Much the same happens for those browsers that have been dropped by the library in a new release.
+People who use *other* browsers get the aformentioned *fuck you* experience, often at times when it would be straightforward to provide a *core* experience. The same thing happens when a library releases a new version and happens to drop support for more browsers and this is a never ending cycle.
 
 > Cuts the mustard falls short
 
