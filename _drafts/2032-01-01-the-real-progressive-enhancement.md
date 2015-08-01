@@ -142,11 +142,9 @@ At the very least, it is beneficial to be able to spot bad Javascript. Particula
 
 ## How do I build a library like this?
 
-Explaining the details of how to build a library that conforms to the above rules is worthy of an article in it's own right, something that Peter Michaux did in 2008, no less.
+Explaining how to build a library that conforms to the Real Progressive Enhancement is worthy of an article (or articles) in it's own right, something that Peter Michaux did in 2008, no less. I don't wish to repeat Peter's article, but it's worth providing an example that gives you a taster.
 
-I don't wish to repeat Peter's article, but it might be worth providing a little taster in how to go about doing this.
-
-This example will also demonstrate that Progressive Enhancement is not a drag in the way of "having to support old irrelevant browsers", quite the opposite in-fact. The meaning of "dropping support for..." changes to "degrades gracefully in..." and you get the appropriate cut off for your project.
+This example will also demonstrate that Progressive Enhancement is not a drag in the way of "having to support old irrelevant browsers", quite the opposite in-fact. The meaning of "dropping support for..." changes to "degrades gracefully in...". You also get to determine an appropriate degradation point suitable for your project.
 
 	// library.js
 	var lib = {};
@@ -190,7 +188,7 @@ Notice, that this application only enhances where the browser supports `classLis
 		}
 	}
 
-You just added support for older browsers without changing your application code which is very useful. You can equally drop support in the future by deleting that fork, or even both forks if some new even better way of adding a class comes out. This way you get the benefit of a faster leaner function or library.
+You just added support for older browsers without changing your application code which is very useful. You can equally drop support in the future by deleting that fork, or even both forks if some new even better way of adding a class comes out. This way you get the benefit of a faster leaner function or library. This proves that a library never has to drop support for a set of browsers.
 
 ## Conclusion
 
@@ -198,7 +196,11 @@ The Real Progressive Enhancement is something that puts users first. The misunde
 
 Unfortunately this is quite common in the industry and it's the people that suffer the most, the same people that are interested in your business or content. It's just not good enough to let them endure the *fuck you* experience, they don't deserve it.
 
-Fortunately, when the real meaning of Progressive Enhancement is understood, the execution can be implemented correctly. This allows for robust, future-friendly, backwards-compatible Javascript code. Your users and your business will appreciate it.
+Fortunately, when the real meaning of Progressive Enhancement is understood, the execution can be implemented correctly. This allows for robust, future-friendly, backwards-compatible Javascript code.
+
+The Real Progressive Enhancement also allows you to *responsibly* use the most cutting edge browser APIs leaving the majority of other browsers to degrade to the core experience.
+
+Your users and your business will appreciate it.
 
 ## Citations
 
