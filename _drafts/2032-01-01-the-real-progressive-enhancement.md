@@ -6,9 +6,9 @@ tagline: "How to avoid the fuck you experience"
 categories: js
 ---
 
-Progressive Enhancement is one of those things that everyone knows right? However, throughout my career, it has always been a hot topic, and one that developers have struggled with in one form or other, demonstrating signficant misundestandings about the subject, particularly when it comes to Javascript.
+Progressive Enhancement is one of those things that everyone knows right? However, throughout my career, it has always been a hot topic, and one that developers have struggled with, in one form or other, demonstrating signficant misundestandings about the subject, particularly when it comes to Javascript.
 
-This article addresses these misunderstandings and provides long forgotten but reliable solutions, that have stood the test of time and can still, today be considered cutting-edge. The fact is that this subject is quite possibly the most important and misunderstood aspect of Javascript development, period.
+This article addresses these misunderstandings and provides long forgotten but reliable solutions, that have stood the test of time and can still, today be considered cutting-edge. The fact is, this subject is quite possibly the most important and misunderstood aspect of client-side Javascript development, period.
 
 > &ldquo;The problems we have with websites are ones we create ourselves&rdquo;
 <br>&mdash; <cite>Motherfuckingwebsite.com</cite>
@@ -25,7 +25,7 @@ Whilst Progressive Enhancement doesn't just pertain to Javascript, it is definit
 
 Whilst this question is not the easiest one to answer, answers do exist, and they are not *that* difficult once you have taken the time to truly understand them.
 
-Whilst there are many myths about Progressive Enhancement, I want to highlight 3 especially important points as follows:
+There are many myths [0] about Progressive Enhancement and I want to draw your attention to three important points:
 
 ## 1. Unobtrusive Javascript is not Progressive Enhancement
 
@@ -33,7 +33,7 @@ Simply placing your Javascript code in external files, does not, in anyway, addr
 
 ## 2. Handling the Javascript disabled scenario is only half of the story
 
-Yes, Javascript disabled is a scenario that needs consideration but not necessarily for the reason you may think. It is pretty rare that people turn off Javascript in their browser even though some do. Most of the general public don't know or care what Javascript is.
+It is true that some people do disable Javascript and so for that reason it needs *some* consideration. However, if that was the only consideration it would be significantly easier to not care about this scenario. However, this is not the case and there are many more reasons to care about this scenario.
 
 Some browsers don't support Javascript so relying on it for the core experience is ill-advised. Some people install plugins, such as those that disable tracking, these can cause script to break i.e. when one script references another object in a *blocked* script.
 
@@ -206,17 +206,15 @@ Your users and your business will appreciate it.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
-	<dd><a href="#">Soon</a></dd>
+	<dd><a href="">Myths</a></dd>
+	<dt class="citation" id="ref1">[1]</dt>
+	<dd><a href="http://chimera.labs.oreilly.com/books/1234000001655/index.html">Zakas</a></dd>
 </dl>
 
 <!--
 
-My hope is that the industry stops trying to produce the next shiny framework and can pull together to build a library of functions that enable the Real Progressive Enhancement to provide a core experience for all, and where possible an even better experience.
+1. Graham explanation
 
-* With a dynamic API such as this you get to drop support for browsers without giving those usrs the fuck you experience.
-
-http://chimera.labs.oreilly.com/books/1234000001655/index.html
-
-Cornford: The combination of the facts that it is impossible to determine which browser is executing the script, and that it is impossible to be familiar with all browser DOMs can be rendered insignificant by using feature detection to match code execution with any browser's ability to support it. But there is still going to be a diversity of outcomes, ranging from total failure to execute any scripts (on browsers that do not support javascript, or have it disabled) to full successful execution on the most capable javascript enabled browsers.
+2. Cornford: The combination of the facts that it is impossible to determine which browser is executing the script, and that it is impossible to be familiar with all browser DOMs can be rendered insignificant by using feature detection to match code execution with any browser's ability to support it. But there is still going to be a diversity of outcomes, ranging from total failure to execute any scripts (on browsers that do not support javascript, or have it disabled) to full successful execution on the most capable javascript enabled browsers.
 
 -->
