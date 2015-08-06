@@ -69,9 +69,9 @@ Some also abdicate responsibility by using 3rd party libraries without checking 
 
 People who use *other* browsers get the aformentioned *fuck you* experience, often at times when it would be straightforward to provide a *core* experience. The same thing happens when a library releases a new version and happens to drop support for more browsers and this is a never ending cycle.
 
-> Cuts the mustard falls short
+> Cutting The Mustard falls short
 
-*Cuts The Mustard* (CTM) is a relatively new approach [[2](#ref2)] to Progressive Enhancement, one which has the premise of a reliable solution and is based on the concept of a core and an enhanced experience. However, it's technical implementation (shown below) falls short.
+*Cutting The Mustard* (CTM) is a relatively new approach [[2](#ref2)] to Progressive Enhancement, one which has the premise of a reliable solution and is based on the concept of a core and an enhanced experience. However, it's technical implementation (shown below) falls short.
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// bootstrap application
@@ -89,11 +89,11 @@ More specifically, CTM has the following problems of note:
 
 **3. CTM degrades the experience unnecessarily**. CTM can easily suppress a perfectly capable browser from providing the enhanced experience. For example, if you wanted client-side form validation, something that say Internet Explorer 8 (or 6 for that matter) is perfectly capable of, CTM disregards IE8 and will only give those users the *core* experience &mdash; resorting to server round trips  which is an *unnecessarily* poor experience.
 
-**4. Some CTM implementations rely on Javascript polyfills to plug missing gaps**. Ignoring the fact that polyfills are full of problems, it is clear that if developers are mixing them in with CTM, this more than indicates CTM is not enough on its own to determine whether the browser is capable of delivery an enhanced experience (or not).
+**4. Some CTM implementations rely on Javascript polyfills to plug missing gaps**. Ignoring the fact that polyfills are full of problems [[7](#ref7)], it is clear that if developers are mixing them in with CTM, this more than indicates CTM is not enough on its own to determine whether the browser is capable of delivery an enhanced experience (or not).
 
 **5. The CTM condition needs constant maintainance as new browsers are released**. Again it's that same old problem &mdash; when can you drop support for a browser? This question doesn't really ever have to be asked. Either the browser has the required working features or it doesn't &mdash; that is, it's about features, not browsers.
 
-**6. It's unreliable**. If the application uses any API that is not within the CTM test, the chance of a *fuck you* experience is high. As an  example, it will break in browsers where `matchMedia` isn't provided, or even in browsers where it is provided but it's buggy. Furthermore, `querySelector` itself is known to be rather buggy, further reducing the quality of CTM.
+**6. It's unreliable**. If the application uses any API that is not within the CTM test, the chance of a *fuck you* experience is high. As an  example, it will break in browsers where `matchMedia` isn't provided, or even in browsers where it is provided but it's buggy. Furthermore, `querySelector` itself has many bugs depending on context and arguments supplied, further reducing the reliability of CTM.
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// application that uses other APIs
@@ -115,7 +115,7 @@ In order to provide a core experience, it is imperative your site works without 
 
 Then, in order to determine that the browser can provide the enhanced experience you must detect and where necessary test **all of the features** used by your application *before* your application  uses them. This will ensure the page doesn't end up irrevocably broken, something that will ensure that your users don't hate you.
 
-The only way to reliably do this is through wrappers (AKA facades). A library that employs Progressive Enhancement *must* provide a dynamic API. Dynamic in that it adapts and changes based on the host environment (a browser). This is how it basically looks in code form:
+The only way to reliably do this is through wrappers, or *facades* if jargon is your thing. A library that employs Progressive Enhancement *must* provide a dynamic API. Dynamic in that it adapts and changes based on the host environment i.e. the browser. This is what it basically looks like:
 
 	if(lib.hasFeatures('find', 'addListener', 'storeValue')) {
 		var el = lib.find('.whatever');
@@ -132,7 +132,7 @@ The only way to reliably do this is through wrappers (AKA facades). A library th
 
 **4. Application logic is completely decoupled from browser logic.** Something that you may have heard Nicholas Zakas talk about in many of his articles and books. Basically this is good for sanity and maintainability.
 
-**5. In the event that Javascript is enabled and that the condition does *not* pass, the user gets the degraded experience.** In Cut The Mustard lingo, it simply doesn't cut it.
+**5. In the event that Javascript is enabled and that the condition does *not* pass, the user gets the degraded experience.** In Cutting The Mustard lingo, it simply doesn't cut it.
 
 At this point some might say they don't want to know about all these browser problems, as libraries take care of this for them. They might even portray themselves as application developers, but just because responsibility is abdicated, doesn't mean the problem isn't there.
 
