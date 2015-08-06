@@ -142,9 +142,9 @@ At the very least, it is beneficial to be able to spot bad Javascript. Particula
 
 ## How do I build a library like this?
 
-Explaining how to build a library that conforms to the Real Progressive Enhancement is worthy of an article (or articles) in it's own right, something that Peter Michaux did in 2008, no less. I don't wish to repeat Peter's article, but it's worth providing an example that gives you a taster.
+To explain how to build a library that conforms to the Real Progressive Enhancement would likely require a book of its own. Fortunately, Peter Michaux explains *how* superbly in *Cross-Browser Widgets* [[7](#ref7)]. However, this article wouldn't be complete without a short example.
 
-This example will also demonstrate that Progressive Enhancement is not a drag in the way of "having to support old irrelevant browsers", quite the opposite in-fact. The meaning of "dropping support for..." changes to "degrades gracefully in...". You also get to determine an appropriate degradation point suitable for your project.
+This example will also demonstrate that Progressive Enhancement is not a drag in the way of "having to support old irrelevant browsers". Quite the opposite in-fact. The meaning of "dropping support for..." changes to "degrades gracefully in...". You also get to determine an appropriate degradation point suitable for your project.
 
 	// library.js
 	var lib = {};
@@ -219,6 +219,8 @@ Your users and your business will appreciate it.
 	<dd><a href="http://chimera.labs.oreilly.com/books/1234000001655/index.html">The Problem with Native JavaScript APIs</a></dd>
 	<dt class="citation" id="ref6">[6]</dt>
 	<dd><a href="http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting">Feature Detection: State of the Art Browser Scripting</a></dd>
+	<dt class="citation" id="ref7">[7]</dt>
+	<dd><a href="http://peter.michaux.ca/articles/cross-browser-widgets">Cross-browser Widgets</a></dd>
 </dl>
 
 <!--
