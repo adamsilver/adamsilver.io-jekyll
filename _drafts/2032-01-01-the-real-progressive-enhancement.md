@@ -15,17 +15,17 @@ This article addresses these misunderstandings and provides long forgotten but r
 
 The beauty of the web is that by default, it is accessible to *everyone*. It's us developers that come along and ruin it. Websites such as the one I quote above are not alone either, demonstrating there are many of us that have the right intention &mdash; to serve the user first. Often, even the best intentions fall short in their execution as we will see shortly.
 
-So what is the best way to define what Progressive Enhancement *really* is? I think the following description does it justice:
+So, what is the best way to define what Progressive Enhancement *really* is? I think the following description does it justice:
 
 > Progressive Enhancement is the approach of providing a baseline **core** experience for everyone; and creating a better **enhanced** experience for people who use a more capable browser.
 
-Whilst Progressive Enhancement doesn't just pertain to Javascript, it is definitely the technology that developers tend to struggle with the most. We just can't seem to answer the following question with aplomb:
+Whilst Progressive Enhancement doesn't just pertain to Javascript, it is definitely the technology that developers tend to struggle with the most. We just can't seem to answer the following question with sophistication:
 
 > &ldquo;How am I meant to write Javascript in a Progressive Enhancement way?&rdquo;
 
 Whilst this question is not the easiest one to answer, answers do exist, and they are not *that* difficult once you have taken the time to truly understand them.
 
-There are many myths [0] about Progressive Enhancement and I want to draw your attention to three important points:
+There are many myths [[0](#ref0)] about Progressive Enhancement. I want to point out 3 in particular:
 
 ## 1. Unobtrusive Javascript is not Progressive Enhancement
 
@@ -37,11 +37,11 @@ It is true that some people do disable Javascript and so for that reason it need
 
 Some browsers don't support Javascript so relying on it for the core experience is ill-advised. Some people install plugins, such as those that disable tracking, these can cause script to break i.e. when one script references another object in a *blocked* script.
 
-Sometimes the network is at fault. Only some of the script makes it down the wire. Perhaps a firewall or proxy messed with it. This actually happened to me when I worked at Deutsche Telekom. The network had the audacity to strip what it thought was a comment inside a well-known library, but it was actually a regex. Mobile networks can often do these things in the name of performance but it actually broke several sites fatally.
+Sometimes the network is at fault. Only some of the script makes it down the wire. Perhaps a firewall or proxy messed with it. This actually happened to me when I worked at Deutsche Telekom. The network had the audacity to strip what it thought was a comment inside a well-known library, but it was actually a regex. Mobile networks can often do these things in the name of performance but it actually broke several sites.
 
 *Note: having the latest iPhone with Javascript enabled made no difference.*
 
-More importantly than any of the above, the most common scenario is one where the browser simply lacks support for a given set of APIs that your application tries to use (examples later).
+**But, more commonly and most importantly is when browsers lack support for one or more APIs that your application tries to use (examples later).**
 
 ## 3. Javascript does not degrade gracefully without developer intervention (unlike HTML and CSS).
 
@@ -65,27 +65,27 @@ Often, looking at what others do can serve as a useful guide in what *not* to do
 
 Some ignore the problem even exists. If they haven't experienced a problem then they often think one does not exist. Or worse they believe it to be an edge case. Regardless, this is unfortunate to the people using the website and the potential loss to the business.
 
-Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often these libraries support a subset of browsers i.e. it's multi-browser as opposed to cross-browser &mdash; a sure sign that the library does not practice Progressive Enhancement and in-turn doesn't care about people very much.
+Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often these libraries support a subset of browsers i.e. it's multi-browser as opposed to cross-browser [[1](#ref1)] &mdash; a sure sign that the library does not practice Progressive Enhancement and in-turn doesn't care about people very much.
 
 People who use *other* browsers get the aformentioned *fuck you* experience, often at times when it would be straightforward to provide a *core* experience. The same thing happens when a library releases a new version and happens to drop support for more browsers and this is a never ending cycle.
 
 > Cuts the mustard falls short
 
-*Cuts The Mustard* (CTM) is a relatively new approach to Progressive Enhancement, one which has the premise of a reliable solution and is based on the concept of a core and an enhanced experience. However, it's technical implementation (shown below) falls short.
+*Cuts The Mustard* (CTM) is a relatively new approach [[2](#ref2)] to Progressive Enhancement, one which has the premise of a reliable solution and is based on the concept of a core and an enhanced experience. However, it's technical implementation (shown below) falls short.
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// bootstrap application
 	}
 
-It works by *detecting* a few *choice* browser APIs in order to *infer* that the browser is "modern", something that is impossible to determine, considering the sheer amount of new browsers being released and the fact that *new* does not necessarily mean it is the most capable browser. Besides, every browser was "modern" once.
+It works by *detecting* a few *choice* browser APIs in order to *infer* that the browser is "modern", something that is impossible to determine, considering the sheer amount of new browsers being released and the fact that *new* does not necessarily mean it is the most capable browser. Besides, every browser was "modern" once so it's quite obvious an inference for modernity is basically useless.
 
-Anyway, once CTM determines it's "modern", the Javascript application starts and (attempts to) provide the enhanced experience. The emphasis on *browsers* as opposed to *features* more than suggests this technique is doomed from the start. And, inference is little better than User Agent sniffing.
+Anyway, once CTM determines it's "modern", the Javascript application starts and (attempts to) provide the enhanced experience. The emphasis on *browsers* as opposed to *features* more than suggests this technique is doomed from the start. And, inference is little better than User Agent sniffing, which is something that Richard Cornford explains superbly in *Browser Detection (and What To Do Instead)* [[3](#ref3)].
 
 More specifically, CTM has the following problems of note:
 
-**1. Detecting host objects like this is dangerous**. *H is for Host* explains why this is dangerous and provides a viable solution.
+**1. Detecting host objects like this is dangerous**. *H is for Host* [[4](#ref4)] explains why this is dangerous and provides a viable solution.
 
-**2. Detecting the presence of an API is not enough**. CTM only *detects* host methods but often APIs are buggy. This is why feature *testing* is important. Nicholas Zakas provides an excellent case study in his short ebook *The Problem with Native JavaScript APIs*. Additionally, Peter Michaux's article *Feature Detection: State of the Art Browser Scripting* explains everything you need to know about feature detection and feature testing.
+**2. Detecting the presence of an API is not enough**. CTM only *detects* host methods but often APIs are buggy. This is why feature *testing* is important. Nicholas Zakas provides an excellent case study in his short ebook *The Problem with Native JavaScript APIs* [[5](#ref5)]. Additionally, Peter Michaux's article *Feature Detection: State of the Art Browser Scripting* [[6](#ref6)] explains everything you need to know about feature detection and feature testing.
 
 **3. CTM degrades the experience unnecessarily**. CTM can easily suppress a perfectly capable browser from providing the enhanced experience. For example, if you wanted client-side form validation, something that say Internet Explorer 8 (or 6 for that matter) is perfectly capable of, CTM disregards IE8 and will only give those users the *core* experience &mdash; resorting to server round trips  which is an *unnecessarily* poor experience.
 
@@ -208,13 +208,25 @@ Your users and your business will appreciate it.
 	<dt class="citation" id="ref0">[0]</dt>
 	<dd><a href="">Myths</a></dd>
 	<dt class="citation" id="ref1">[1]</dt>
-	<dd><a href="http://chimera.labs.oreilly.com/books/1234000001655/index.html">Zakas</a></dd>
+	<dd><a href="https://gist.github.com/david-mark/06b9879f963ebb0eed62">Multi-browser vs cross-browser scripting</a></dd>
+	<dt class="citation" id="ref2">[2]</dt>
+	<dd><a href="http://responsivenews.co.uk/post/18948466399/cutting-the-mustard">Cutting the mustard</a></dd>
+	<dt class="citation" id="ref3">[3]</dt>
+	<dd><a href="http://jibbering.com/faq/notes/detect-browser/">Browser Detection (and What to Do Instead)</a></dd>
+	<dt class="citation" id="ref4">[4]</dt>
+	<dd><a href="http://www.cinsoft.net/host.html">H is for Host</a></dd>
+	<dt class="citation" id="ref5">[5]</dt>
+	<dd><a href="http://chimera.labs.oreilly.com/books/1234000001655/index.html">The Problem with Native JavaScript APIs</a></dd>
+	<dt class="citation" id="ref6">[6]</dt>
+	<dd><a href="http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting">Feature Detection: State of the Art Browser Scripting</a></dd>
 </dl>
 
 <!--
 
-1. Graham explanation
-
 2. Cornford: The combination of the facts that it is impossible to determine which browser is executing the script, and that it is impossible to be familiar with all browser DOMs can be rendered insignificant by using feature detection to match code execution with any browser's ability to support it. But there is still going to be a diversity of outcomes, ranging from total failure to execute any scripts (on browsers that do not support javascript, or have it disabled) to full successful execution on the most capable javascript enabled browsers.
+
+[06/08/2015 17:12:43] Graham Veal: I would add - and with a mobile connection you have no choice but to use the proxy because that is the way the network is configured
+[06/08/2015 17:13:05] Graham Veal: They are not as open as your home broadband
+[06/08/2015 17:13:27] Graham Veal: and companies often employ a proxy to save bandwidth, and again you cannot avoid this
 
 -->
