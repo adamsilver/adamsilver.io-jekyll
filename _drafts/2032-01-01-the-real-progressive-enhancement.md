@@ -136,13 +136,13 @@ The only way to reliably do this is through wrappers, or *facades* if jargon is 
 
 At this point some might say they don't want to know about all these browser problems, as libraries take care of this for them. They might even portray themselves as application developers, but just because responsibility is abdicated, doesn't mean the problem isn't there.
 
-The idea of abstractions are good, the idea of several abstractions i.e. a library, is also good. But if that library is monolithic in nature, context-less, lacks feature detection and feature testing, leans on polyfills and does **not** expose a dynamic API, then ultimately you are unable to Progressively Enhance your application and your users and the business you work for will suffer for it.
+The idea of abstractions are good, the idea of several abstractions i.e. a library, is also good. But if that library is monolithic in nature, context-less, lacks feature detection and feature testing, leans on polyfills (or browser sniffing or object inferences etc) and does **not** expose a dynamic API, then ultimately you are unable to Progressively Enhance your application and your users and the business you work for will suffer for it.
 
-At the very least, it is beneficial to be able to spot bad Javascript. Particulary the kind that doesn't even attempt to degrade gracefully in the face of danger. This way you can steer clear or at the very least be conscious of making such a decision.
+At the very least, it is beneficial to be able to spot code that does not conform to the principles of Progressive Enhancement. Particulary, the kind that doesn't even attempt to degrade gracefully in the face of danger.
 
 ## How do I build a library like this?
 
-To explain how to build a library that conforms to the Real Progressive Enhancement would likely require a book of its own. Fortunately, Peter Michaux explains *how* superbly in *Cross-Browser Widgets* [[7](#ref7)]. However, this article wouldn't be complete without a short example.
+To explain how to build a library that conforms to the Real Progressive Enhancement would likely require a book of its own. Fortunately, Peter Michaux's article *Cross-Browser Widgets* [[7](#ref7)] provides a walkthrough by example. However, *this* article wouldn't be complete without a short example of its own.
 
 This example will also demonstrate that Progressive Enhancement is not a drag in the way of "having to support old irrelevant browsers". Quite the opposite in-fact. The meaning of "dropping support for..." changes to "degrades gracefully in...". You also get to determine an appropriate degradation point suitable for your project.
 
