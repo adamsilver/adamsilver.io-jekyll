@@ -164,7 +164,7 @@ And then the calling application code looks like:
 
 	}
 
-Notice, that this application only enhances where the browser supports `classList` which generally speaking are cutting edge browsers, meaning that this application will degrade in IE6, IE7, IE8 and IE9. That's not a problem though, they will just get the degraded *core* experience. If you wanted to support those browsers, something completely doable then you would add another fork:
+Notice, that this application only enhances where the browser supports `classList` which generally speaking are cutting edge browsers, meaning that this application will degrade in IE9 (and below) as well as a bunch of other browsers. That's not a problem though, they will just get the *core* experience. If you wanted to support those browsers, something which in this case is easy to achieve, then you could add another fork:
 
 	// library.js
 	var lib = {};
@@ -188,7 +188,7 @@ Notice, that this application only enhances where the browser supports `classLis
 		}
 	}
 
-You just added support for older browsers without changing your application code which is very useful. You can equally drop support in the future by deleting that fork, or even both forks if some new even better way of adding a class comes out. This way you get the benefit of a faster leaner function or library. This proves that a library never has to drop support for a set of browsers.
+Now this function supports many more browsers and your application code didn't change at all. Equally, you could remove this fork again in the future when you think it's more acceptable to give those browsers the *core* experience. A library never has to drop support, in the traditional sense, it can simply drop *enhanced* support.
 
 ## Conclusion
 
