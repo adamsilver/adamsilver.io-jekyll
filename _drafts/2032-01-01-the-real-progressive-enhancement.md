@@ -6,7 +6,7 @@ tagline: "How to avoid the fuck you experience"
 categories: js
 ---
 
-Progressive Enhancement is one of those things that everyone knows right? However, throughout my career, it has always been a hot topic, and one that developers have struggled with, in one form or other, demonstrating signficant misundestandings about the subject, particularly when it comes to Javascript.
+Progressive Enhancement is one of those things that everyone knows right? However, throughout my career, it has always been a hot topic, and one that developers have struggled with, in one form or other, demonstrating significant misundestandings about the subject, particularly when it comes to Javascript.
 
 This article addresses these misunderstandings and provides long forgotten but reliable solutions, that have stood the test of time and can still, today be considered cutting-edge. The fact is, this subject is quite possibly the most important and misunderstood aspect of client-side Javascript development, period.
 
@@ -33,7 +33,7 @@ Simply placing your Javascript code in external files, does not, in anyway, addr
 
 ## 2. Handling the Javascript disabled scenario is only half of the story
 
-It is true that some people do disable Javascript and so for that reason it needs *some* consideration. However, if that was the only consideration it would be significantly easier to not care about this scenario. However, this is not the case and there are many more reasons to care about this scenario.
+It is true that some people do disable Javascript and so for that reason it needs *some* consideration. However, if that was the only consideration, it would be significantly easier, not to care for this scenario. However, this is not the only consideration &hellip;
 
 Some browsers don't support Javascript so relying on it for the core experience is ill-advised. Some people install plugins, such as those that disable tracking, these can cause script to break i.e. when one script references another object in a *blocked* script.
 
@@ -41,13 +41,13 @@ Sometimes the network is at fault. Only some of the script makes it down the wir
 
 *Note: having the latest iPhone with Javascript enabled made no difference.*
 
-**But, more commonly and most importantly is when browsers lack support for one or more APIs that your application tries to use (examples later).**
+But, more *commonly* and most *importantly*, is when browsers lack support for one or more APIs that your application tries to use (examples later).
 
 ## 3. Javascript does not degrade gracefully without developer intervention (unlike HTML and CSS).
 
 HTML and CSS degrade (or enhance depending on the way you see things) without any extra effort. Consider `<input type="email">` and `border-radius`. When unsupported, the input reverts to a standard text control and forgoes curved borders. No harm, no foul.
 
-When it comes to Javascript the same cannot be said. If the browser tries to execute code it can't handle, an error occurs, sometimes an irrevocable one. As an example try running the following in Internet Explorer 8.
+When it comes to Javascript the same cannot be said. If the browser tries to execute code it can't handle, an error occurs &mdash; sometimes an irrevocable one. As an example, try running the following in IE8:
 
 	var form = document.forms[0];
 	form.attachEvent('submit', function() {
@@ -57,7 +57,7 @@ When it comes to Javascript the same cannot be said. If the browser tries to exe
 
 The code above errors because IE8 doesn't support the retrieving of elements by class name. The problem here is that the page didn't *fully* enhance. The user didn't get the enhanced experience. Nor did they get the core experience. *No*, instead they got the *fuck you* experience.
 
-The browser and feature in this example is not the relevant point here. It could be any browser and any feature. It makes no difference how new a browser is or what cutting-edge features it claims to support.
+The browser and feature in this example is not the relevant point here. It could be *any* browser and *any* feature. It makes no difference how new a browser is or what cutting-edge features it claims to support.
 
 ## What shouldn't you do?
 
@@ -142,7 +142,7 @@ At the very least, it is beneficial to be able to spot code that does not confor
 
 ## How do I build a library like this?
 
-To explain how to build a library that conforms to the Real Progressive Enhancement would likely require a book of its own. Fortunately, Peter Michaux's article *Cross-Browser Widgets* [[7](#ref7)] provides a walkthrough by example. However, *this* article wouldn't be complete without a short example of its own.
+To explain how to build a library that conforms to the Real Progressive Enhancement would likely require a book of its own. Fortunately, Peter Michaux's article *Cross-Browser Widgets* [[7](#ref7)] provides a walkthrough. However, *this* article wouldn't be complete without a short example of its own.
 
 This example will also demonstrate that Progressive Enhancement is not a drag in the way of "having to support old irrelevant browsers". Quite the opposite in-fact. The meaning of "dropping support for..." changes to "degrades gracefully in...". You also get to determine an appropriate degradation point suitable for your project.
 
@@ -206,7 +206,7 @@ Your users and your business will appreciate it.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
-	<dd><a href="">Myths</a></dd>
+	<dd><a href="http://www.sitepoint.com/javascript-dependency-backlash-myth-busting-progressive-enhancement/">Myth-Busting Progressive Enhancement</a></dd>
 	<dt class="citation" id="ref1">[1]</dt>
 	<dd><a href="https://gist.github.com/david-mark/06b9879f963ebb0eed62">Multi-browser vs cross-browser scripting</a></dd>
 	<dt class="citation" id="ref2">[2]</dt>
