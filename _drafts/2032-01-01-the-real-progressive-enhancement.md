@@ -79,12 +79,9 @@ People who use *other* browsers get the aformentioned *fuck you* experience, oft
 
 It works by *detecting* a few *choice* browser APIs, in order to *infer* that the browser is "modern" &mdash; something that is impossible to determine and irrelevant anyway.
 
-> Samsung shits out a different-sized black rectangle every 30 seconds.
-<br>&mdash; <cite>Brad Frost</cite>
+*Impossible*, considering the sheer amount of new browsers being released and *irrelevant*, because release date does not determine capability. Besides, every browser was new once, so it's quite obvious that an inference for modernity, is basically useless.
 
-Impossible, considering the sheer amount of new browsers being released and the fact that date of release does not determine capability. Besides, every browser was "modern" once so it's quite obvious an inference for modernity is basically useless.
-
-Once CTM determines it's "modern", the Javascript application starts and (attempts to) provide the enhanced experience. The emphasis on *browsers* as opposed to *features* more than suggests this technique is doomed from the start. And, inference is little better than User Agent sniffing, which is something that Richard Cornford explains superbly in *Browser Detection (and What To Do Instead)* [[3](#ref3)].
+Anyway, once CTM determines it's "modern", the Javascript application starts and (attempts to) provide the enhanced experience. The emphasis on *browsers* as opposed to *features*, more than suggests this technique is doomed from the start. And, inference is little better than User Agent sniffing, which is something that Richard Cornford explains superbly in *Browser Detection (and What To Do Instead)* [[3](#ref3)].
 
 More specifically, CTM has the following problems of note:
 
@@ -115,13 +112,13 @@ More specifically, CTM has the following problems of note:
 > &ldquo;I’ve always maintained that, given the choice between making something my problem, and making something the user’s problem, I’ll choose to make it my problem every time.&rdquo;
 > <br>&mdash; <cite>Jeremy Keith</cite>
 
-If you have made it this far, you probably believe in people first whether it's the users or the client. And, that Progressive Enhancement is the way to enable that belief.
+If you have made it this far, you probably believe in people *first*, whether it's the users or the client. And, that Progressive Enhancement is the way to enable that belief.
 
-In order to provide a core experience, it is imperative your site works without Javascript, because that is the experience a user will get when Javascript *is* enabled, but incapable of running (for whatever reason).
+In order to provide a core experience, the site *must* work without Javascript. Why? Because that is the experience a user will get, when Javascript *is* enabled, but incapable of running (for whatever reason).
 
-Then, in order to determine that the browser can provide the enhanced experience, you must detect and where necessary, test **all of the features** used by your application *before* your application  uses them. This will ensure the page doesn't end up irrevocably broken, something that will ensure that your users don't hate you.
+Then, in order to determine that the browser can provide the enhanced experience, you must detect and where necessary, test *all* of the features used by your application *before* your application  uses them. This will ensure the page doesn't end up irrevocably broken, which is something your users will thank you for.
 
-The only way to reliably do this is through wrappers, or *facades* if jargon is your thing. A library that employs Progressive Enhancement *must* provide a dynamic API. Dynamic in that it adapts and changes based on the host environment i.e. the browser. This is what it basically looks like:
+The only way to reliably do this is through wrappers, or *facades* if jargon is your thing. A library that employs Progressive Enhancement *must* provide a dynamic API. Dynamic, in that it adapts and changes based on the host environment i.e. the browser. This is what it basically looks like:
 
 	if(lib.hasFeatures('find', 'addListener', 'storeValue')) {
 		var el = lib.find('.whatever');
@@ -132,7 +129,7 @@ The only way to reliably do this is through wrappers, or *facades* if jargon is 
 
 **1. Notice how remarkably similar CTM *looks* in comparison.** The difference is that the application doesn't directly interface with browser APIs. Facades provide a leaner, context-specific API, that allows you to iron out bugs, all of which reliably enables Progressive Enhancement.
 
-**2. Also note, the one-to-one mapping between what is *checked* in the condition and what is *used* by the application.** This is *vital*. If you break this rule, you open up a (significant) chance of *fuck you*.
+**2. Also note, the one-to-one mapping between what is *checked* in the condition and what is *used* by the application.** This is *vital*. If you break this rule, you significantly increase the chance of providing the *fuck you* experience.
 
 **3. There is no need for polyfills.** The library either provides the method or it doesn't, no halfway houses, no caveats.
 
@@ -140,9 +137,10 @@ The only way to reliably do this is through wrappers, or *facades* if jargon is 
 
 **5. In the event that Javascript is enabled and that the condition does *not* pass, the user gets the degraded experience.** In Cutting The Mustard lingo, it simply doesn't cut it.
 
-At this point some might say they don't want to know about all these browser problems, as libraries take care of this for them (the majority don't). They might even portray themselves as application developers, but just because responsibility is abdicated, doesn't mean the problem isn't there.
+At this point, some might say they don't concern themselves with browser problems, as libraries take care of them (the majority unfortunately don't). They might even portray themselves as application developers, but just because responsibility is abdicated, doesn't mean the problem isn't there.
 
-The idea of abstractions are good, the idea of several abstractions i.e. a library, is also good. But if that library is monolithic in nature, context-less, lacks feature detection and feature testing, leans on polyfills (or browser sniffing or object inferences etc) and does **not** expose a dynamic API, then ultimately you are unable to Progressively Enhance your application and your users and the business you work for will suffer for it.
+
+The idea of abstractions are good, the idea of several abstractions i.e. a library, is also good. But if that library is monolithic in nature, context-less, lacks feature detection and feature testing, leans on polyfills (or browser sniffing or object inferences etc) and does **not** expose a dynamic API, then ultimately you are unable to Progressively Enhance your application and your users and the business you work for, will suffer for it.
 
 At the very least, it is beneficial to be able to spot code that does not conform to the principles of Progressive Enhancement. Particulary, the kind that doesn't even attempt to degrade gracefully in the face of danger.
 
@@ -150,7 +148,7 @@ At the very least, it is beneficial to be able to spot code that does not confor
 
 To explain how to build a library that conforms to the Real Progressive Enhancement would likely require a book of its own. Fortunately, Peter Michaux's article *Cross-Browser Widgets* [[7](#ref7)] provides a detailed walkthrough. However, *this* article wouldn't be complete without a short example of its own would it?
 
-This example will also demonstrate that Progressive Enhancement is not a drag in the way of "having to support old irrelevant browsers". Quite the opposite in-fact. The meaning of "dropping support for &hellip;" changes to "degrades gracefully in &hellip;". You also get to determine an appropriate degradation point suitable for your project.
+This example will also demonstrate that Progressive Enhancement is not a drag in the way of "having to support old irrelevant browsers". Quite the opposite in-fact. The words "drops support for" changes to "degrades gracefully in". You also get to determine an appropriate degradation point suitable for your project.
 
 	// library.js
 	var lib = {};
@@ -166,11 +164,11 @@ And then the calling application code looks like:
 
 	// app.js
 	if(lib.addClass) {
-		// some application that must provide the ability to add a class to an element in order to provide the enhanced experience
+		// some application that must provide the ability to add a class to an element, in order to provide the enhanced experience
 
 	}
 
-Notice, that this application only enhances where the browser supports `classList` which generally speaking are cutting edge browsers, meaning that this application will degrade in IE9 (and below) as well as a bunch of other browsers. That's not a problem though, they will just get the *core* experience. If you wanted to support those browsers, something which in this case is easy to achieve, then you could add another fork:
+Notice, that this application only enhances where the browser supports `classList`, which generally speaking are cutting edge browsers (at time of writing), meaning that this application will degrade in IE9 (and below) as well as a bunch of other browsers. That's not a problem though, they will just get the *core* experience. If you wanted to support those browsers, something which in this case is easy to achieve, then you could add another fork:
 
 	// library.js
 	var lib = {};
@@ -194,7 +192,9 @@ Notice, that this application only enhances where the browser supports `classLis
 		}
 	}
 
-Now this function supports many more browsers and your application code didn't change at all. Equally, you could remove this fork again in the future when you think it's more acceptable to give those browsers the *core* experience, hopefully for good reason. A library never *has* to drop support, in the traditional sense, it can simply drop *enhanced* support.
+This method now supports more browsers and your application code didn't change. Equally, you could remove this fork again in the future, when you think it's more acceptable to give those browsers the *core* experience. Perhaps the number of visitors naturally dropped for a particular set of browsers. Or maybe, it's not worth the development effort to write a second fork etc.
+
+Regardless, a library never *has* to drop support in the traditional sense &mdash; it can simply drop *enhanced* support.
 
 ## Conclusion
 
@@ -202,11 +202,7 @@ The Real Progressive Enhancement is something that puts users first. The misunde
 
 Unfortunately, this is quite common in the industry and it's the people that suffer the most, the same people that are interested in your business or content. It's just not good enough to let them endure the *fuck you* experience, they don't deserve it and it's circumventable.
 
-Fortunately, when the real meaning of Progressive Enhancement is understood, the execution can be implemented correctly. This allows for robust, future-friendly, backwards-compatible Javascript code and of course website experiences.
-
-The Real Progressive Enhancement also allows you to *responsibly* use the most cutting edge browser APIs leaving the majority of other browsers to degrade to the core experience.
-
-Your users and your business will appreciate it.
+Fortunately, when the real meaning of Progressive Enhancement is understood, the execution can be implemented correctly. This allows for robust, future-friendly, backwards-compatible Javascript code. The Real Progressive Enhancement allows you to *responsibly* use cutting edge browser APIs, leaving the majority of other browsers to degrade to the core experience. Your users and your business will appreciate it.
 
 ## Citations
 
