@@ -63,23 +63,28 @@ The browser and feature in this example is not the relevant point here. It could
 
 Often, looking at what others do can serve as a useful guide in what *not* to do.
 
-Some ignore the problem even exists. If they haven't experienced a problem then they often think one does not exist. Or worse they believe it to be an edge case. Regardless, this is unfortunate to the people using the website and the potential loss to the business.
+Some ignore the problem exists. If they haven't experienced a problem, then they often think one does not exist. Or worse, they believe it to be an edge case. Regardless, this is unfortunate to the people using the website and the potential loss to the business.
 
-Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often these libraries support a subset of browsers i.e. it's multi-browser as opposed to cross-browser [[1](#ref1)] &mdash; a sure sign that the library does not practice Progressive Enhancement and in-turn doesn't care about people very much.
+Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often, these libraries support a subset of browsers i.e. it's multi-browser as opposed to cross-browser [[1](#ref1)] &mdash; a sure sign that the library does not practice Progressive Enhancement and in-turn doesn't care about people very much.
 
 People who use *other* browsers get the aformentioned *fuck you* experience, often at times when it would be straightforward to provide a *core* experience. The same thing happens when a library releases a new version and happens to drop support for more browsers and this is a never ending cycle.
 
 > Cutting The Mustard falls short
 
-*Cutting The Mustard* (CTM) is a relatively new approach [[2](#ref2)] to Progressive Enhancement, one which has the premise of a reliable solution and is based on the concept of a core and an enhanced experience. However, it's technical implementation (shown below) falls short.
+*Cutting The Mustard* (CTM) is a relatively new approach [[2](#ref2)] to Progressive Enhancement, one which has the premise of a reliable solution and is based on the concept of a core and an enhanced experience. However, it's implementation (shown below) falls short, *very* short.
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// bootstrap application
 	}
 
-It works by *detecting* a few *choice* browser APIs in order to *infer* that the browser is "modern", something that is impossible to determine, considering the sheer amount of new browsers being released and the fact that *new* does not necessarily mean it is the most capable browser. Besides, every browser was "modern" once so it's quite obvious an inference for modernity is basically useless.
+It works by *detecting* a few *choice* browser APIs, in order to *infer* that the browser is "modern" &mdash; something that is impossible to determine and irrelevant anyway.
 
-Anyway, once CTM determines it's "modern", the Javascript application starts and (attempts to) provide the enhanced experience. The emphasis on *browsers* as opposed to *features* more than suggests this technique is doomed from the start. And, inference is little better than User Agent sniffing, which is something that Richard Cornford explains superbly in *Browser Detection (and What To Do Instead)* [[3](#ref3)].
+> Samsung shits out a different-sized black rectangle every 30 seconds.
+<br>&mdash; <cite>Brad Frost</cite>
+
+Impossible, considering the sheer amount of new browsers being released and the fact that date of release does not determine capability. Besides, every browser was "modern" once so it's quite obvious an inference for modernity is basically useless.
+
+Once CTM determines it's "modern", the Javascript application starts and (attempts to) provide the enhanced experience. The emphasis on *browsers* as opposed to *features* more than suggests this technique is doomed from the start. And, inference is little better than User Agent sniffing, which is something that Richard Cornford explains superbly in *Browser Detection (and What To Do Instead)* [[3](#ref3)].
 
 More specifically, CTM has the following problems of note:
 
@@ -87,13 +92,13 @@ More specifically, CTM has the following problems of note:
 
 **2. Detecting the presence of an API is not enough**. CTM only *detects* host methods but often APIs are buggy. This is why feature *testing* is important. Nicholas Zakas provides an excellent case study in his short ebook *The Problem with Native JavaScript APIs* [[5](#ref5)]. Additionally, Peter Michaux's article *Feature Detection: State of the Art Browser Scripting* [[6](#ref6)] explains everything you need to know about feature detection and feature testing.
 
-**3. CTM degrades the experience unnecessarily**. CTM can easily suppress a perfectly capable browser from providing the enhanced experience. For example, if you wanted client-side form validation, something that say Internet Explorer 8 (or 6 for that matter) is perfectly capable of, CTM disregards IE8 and will only give those users the *core* experience &mdash; resorting to server round trips  which is an *unnecessarily* poor experience.
+**3. CTM degrades the experience unnecessarily**. CTM can easily suppress a perfectly capable browser from providing the enhanced experience. For example, if you wanted client-side form validation, something that say IE8 (or 6 for that matter) is perfectly capable of, CTM disregards IE8 and will only give those users the *core* experience &mdash; resorting to server round trips  which is an *unnecessarily* poor experience.
 
-**4. Some CTM implementations rely on Javascript polyfills to plug missing gaps**. Ignoring the fact that polyfills are full of problems [[7](#ref7)], it is clear that if developers are mixing them in with CTM, this more than indicates CTM is not enough on its own to determine whether the browser is capable of delivery an enhanced experience (or not).
+**4. Some CTM implementations rely on Javascript polyfills to plug missing gaps**. Ignoring the fact that polyfills are full of problems [[7](#ref7)], it is clear that if developers are mixing them in with CTM, this more than indicates CTM is not enough on its own to determine whether the browser is capable of delivering an enhanced experience (or not).
 
 **5. The CTM condition needs constant maintainance as new browsers are released**. Again it's that same old problem &mdash; when can you drop support for a browser? This question doesn't really ever have to be asked. Either the browser has the required working features or it doesn't &mdash; that is, it's about features, not browsers.
 
-**6. It's unreliable**. If the application uses any API that is not within the CTM test, the chance of a *fuck you* experience is high. As an  example, it will break in browsers where `matchMedia` isn't provided, or even in browsers where it is provided but it's buggy. Furthermore, `querySelector` itself has many bugs depending on context and arguments supplied, further reducing the reliability of CTM.
+**6. It's unreliable**. If the application uses any API that is not within the CTM test, the chance of a *fuck you* experience is high. As an  example, it will break in browsers where `matchMedia` isn't provided, or even in browsers where it is provided but it's buggy. Furthermore, `querySelector` itself has many bugs depending on context and arguments supplied, further reducing the reliability of CTM. An example follows:
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// application that uses other APIs
@@ -101,6 +106,7 @@ More specifically, CTM has the following problems of note:
 		window.addEventListener("load", function(e) {
 			// FAIL = ANOTHER FUCK YOU
 			var matches = window.matchMedia(...);
+			// ...other stuff...
 		}, false);
 	}
 
@@ -111,9 +117,9 @@ More specifically, CTM has the following problems of note:
 
 If you have made it this far, you probably believe in people first whether it's the users or the client. And, that Progressive Enhancement is the way to enable that belief.
 
-In order to provide a core experience, it is imperative your site works without Javascript because that is the experience a user will get when Javascript *is* enabled but incapable of running (for whatever reason).
+In order to provide a core experience, it is imperative your site works without Javascript, because that is the experience a user will get when Javascript *is* enabled, but incapable of running (for whatever reason).
 
-Then, in order to determine that the browser can provide the enhanced experience you must detect and where necessary test **all of the features** used by your application *before* your application  uses them. This will ensure the page doesn't end up irrevocably broken, something that will ensure that your users don't hate you.
+Then, in order to determine that the browser can provide the enhanced experience, you must detect and where necessary, test **all of the features** used by your application *before* your application  uses them. This will ensure the page doesn't end up irrevocably broken, something that will ensure that your users don't hate you.
 
 The only way to reliably do this is through wrappers, or *facades* if jargon is your thing. A library that employs Progressive Enhancement *must* provide a dynamic API. Dynamic in that it adapts and changes based on the host environment i.e. the browser. This is what it basically looks like:
 
@@ -124,17 +130,17 @@ The only way to reliably do this is through wrappers, or *facades* if jargon is 
 		});
 	}
 
-**1. Notice how remarkably similar CTM *looks* in comparison.** The difference is that the application doesn't directly interface with browser APIs. Facades provide a leaner, context-specific API that allows you to iron out bugs, all of which reliably enables Progressive Enhancement.
+**1. Notice how remarkably similar CTM *looks* in comparison.** The difference is that the application doesn't directly interface with browser APIs. Facades provide a leaner, context-specific API, that allows you to iron out bugs, all of which reliably enables Progressive Enhancement.
 
-**2. Also note, the one-to-one mapping between what is *checked* in the condition and what is *used* by the application.** This is *vital*. If you break this rule, you are asking for trouble.
+**2. Also note, the one-to-one mapping between what is *checked* in the condition and what is *used* by the application.** This is *vital*. If you break this rule, you open up a (significant) chance of *fuck you*.
 
 **3. There is no need for polyfills.** The library either provides the method or it doesn't, no halfway houses, no caveats.
 
-**4. Application logic is completely decoupled from browser logic.** Something that you may have heard Nicholas Zakas talk about in many of his articles and books. Basically this is good for sanity and maintainability.
+**4. Application logic is completely decoupled from browser logic.** This is something Nicholas Zakas writes about in many of his articles and books. Basically this is good for sanity and maintainability.
 
 **5. In the event that Javascript is enabled and that the condition does *not* pass, the user gets the degraded experience.** In Cutting The Mustard lingo, it simply doesn't cut it.
 
-At this point some might say they don't want to know about all these browser problems, as libraries take care of this for them. They might even portray themselves as application developers, but just because responsibility is abdicated, doesn't mean the problem isn't there.
+At this point some might say they don't want to know about all these browser problems, as libraries take care of this for them (the majority don't). They might even portray themselves as application developers, but just because responsibility is abdicated, doesn't mean the problem isn't there.
 
 The idea of abstractions are good, the idea of several abstractions i.e. a library, is also good. But if that library is monolithic in nature, context-less, lacks feature detection and feature testing, leans on polyfills (or browser sniffing or object inferences etc) and does **not** expose a dynamic API, then ultimately you are unable to Progressively Enhance your application and your users and the business you work for will suffer for it.
 
