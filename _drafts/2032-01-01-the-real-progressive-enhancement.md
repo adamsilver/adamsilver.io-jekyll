@@ -148,14 +148,14 @@ At the very least, it is beneficial to be able to spot code that does not confor
 
 ## How do I build a library like this?
 
-To explain how to build a library that conforms to the Real Progressive Enhancement would likely require a book of its own. Fortunately, Peter Michaux's article *Cross-Browser Widgets* [[7](#ref7)] provides a walkthrough. However, *this* article wouldn't be complete without a short example of its own.
+To explain how to build a library that conforms to the Real Progressive Enhancement would likely require a book of its own. Fortunately, Peter Michaux's article *Cross-Browser Widgets* [[7](#ref7)] provides a detailed walkthrough. However, *this* article wouldn't be complete without a short example of its own would it?
 
-This example will also demonstrate that Progressive Enhancement is not a drag in the way of "having to support old irrelevant browsers". Quite the opposite in-fact. The meaning of "dropping support for..." changes to "degrades gracefully in...". You also get to determine an appropriate degradation point suitable for your project.
+This example will also demonstrate that Progressive Enhancement is not a drag in the way of "having to support old irrelevant browsers". Quite the opposite in-fact. The meaning of "dropping support for &hellip;" changes to "degrades gracefully in &hellip;". You also get to determine an appropriate degradation point suitable for your project.
 
 	// library.js
 	var lib = {};
 
-	// Note: use isHostMethod - Peter's article covers this
+	// Note: use isHostMethod (Citations cover this)
 	if(document.documentElement.classList.add) {
 		lib.addClass = function(el, className) {
 			return el.classList.add(className);
@@ -194,15 +194,15 @@ Notice, that this application only enhances where the browser supports `classLis
 		}
 	}
 
-Now this function supports many more browsers and your application code didn't change at all. Equally, you could remove this fork again in the future when you think it's more acceptable to give those browsers the *core* experience. A library never has to drop support, in the traditional sense, it can simply drop *enhanced* support.
+Now this function supports many more browsers and your application code didn't change at all. Equally, you could remove this fork again in the future when you think it's more acceptable to give those browsers the *core* experience, hopefully for good reason. A library never *has* to drop support, in the traditional sense, it can simply drop *enhanced* support.
 
 ## Conclusion
 
 The Real Progressive Enhancement is something that puts users first. The misunderstandings of Progressive Enhancement, when broken down piece by piece are easy to understand, but if just one of those pieces falls down, technical implementations tend to fall short of the mark.
 
-Unfortunately this is quite common in the industry and it's the people that suffer the most, the same people that are interested in your business or content. It's just not good enough to let them endure the *fuck you* experience, they don't deserve it.
+Unfortunately, this is quite common in the industry and it's the people that suffer the most, the same people that are interested in your business or content. It's just not good enough to let them endure the *fuck you* experience, they don't deserve it and it's circumventable.
 
-Fortunately, when the real meaning of Progressive Enhancement is understood, the execution can be implemented correctly. This allows for robust, future-friendly, backwards-compatible Javascript code.
+Fortunately, when the real meaning of Progressive Enhancement is understood, the execution can be implemented correctly. This allows for robust, future-friendly, backwards-compatible Javascript code and of course website experiences.
 
 The Real Progressive Enhancement also allows you to *responsibly* use the most cutting edge browser APIs leaving the majority of other browsers to degrade to the core experience.
 
