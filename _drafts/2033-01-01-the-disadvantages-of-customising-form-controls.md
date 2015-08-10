@@ -5,7 +5,7 @@ date:   2017-01-01 09:00:01
 categories: accessibility
 ---
 
-Designers often want to control every aspect of the UI which of course extends to form controls. By default, form controls look very different across browsers [0] because this is heavily influenced by the OS and device. The problem is, doing so comes with several disadvantages.
+Designers often want to control every aspect of the UI which of course extends to form controls. By default, form controls look very different across browsers [0] because they are integrated deeply into the Operating System and Device. When designers try to tame the design of form controls too much, can cause several disadvantages.
 
 ## 1. It's hard to impossible to achieve
 
