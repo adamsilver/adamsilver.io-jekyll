@@ -42,6 +42,8 @@ Attempting to tame form controls induces significant development effort which mo
 
 <!--
 
+Graham: Should include something about the maintenance nightmare as well, just to highlight that it is an ongoing cost to anyone trying to implement it.
+
 As an experienced Front-end Developer, it is important to know what works and what doesn't, and styling form controls to this extent is the latter. Some browsers are more friendly than others, but if you can't control them in a reliable, consistent way, *without* hurting the user experience, then it is not compelling to try in the name of *aesthetics* or *branding*. On the other hand this article demonstrates (just some of the) good reasons *not* to. There are much more pressing matters requiring development and design effort. The web (and its constraints) just like any other platform, must be embraced.
 
 And Nicholas Zakas beautifully points out why in *Progresssive Enhancement 2.0* [[2](#ref2)]. You can go straight to 16 minutes in to skip the history lesson, although that is also very informative.
