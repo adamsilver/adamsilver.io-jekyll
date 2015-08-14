@@ -11,23 +11,21 @@ On this page I recommend the very best and timeless articles, books and videos r
 
 ## People / Process / Thinking / Attitude / Team / Business
 
-* Essentialism
+* [Essentialism: The Disciplined Pursuit of Less](http://gregmckeown.com/essentialism-the-disciplined-pursuit-of-less/)
 
-* Start With Why
+* [Start With Why](https://www.startwithwhy.com/)
 
 ## User Experience
 
-* The Hamburger doesn't work
+* [The Hamburger doesn't work](http://deep.design/the-hamburger-menu/)
 
-* Triage
-
-* Chaos
+* [Triage](https://medium.com/@tyrale/ux-triage-what-i-have-learned-performing-ux-audits-around-the-globe-250266ac95a5)
 
 * [4 Invisible User Experiences You Never Knew About](https://medium.com/hackerpreneur-magazine/4-invisible-user-experiences-you-d13cc9c3c7ab)
 
-* Don't Make Me Think
+* [Don't Make Me Think](http://www.amazon.com/gp/product/0321965515/ref=as_li_qf_sp_asin_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=0321965515&linkCode=as2&tag=advancedcommonse)
 
-* Fixed positioning is a nightmare
+* [Fixed positioning is a nightmare](http://bradfrost.com/blog/mobile/fixed-position/)
 
 ## Front-end development
 
@@ -44,5 +42,3 @@ On this page I recommend the very best and timeless articles, books and videos r
 * [Extending native built-ins by Kangax](http://perfectionkills.com/extending-native-builtins/)
 
 * [What's wrong with extending the DOM? by Kangax](http://perfectionkills.com/whats-wrong-with-extending-the-dom/)
-
-* Todo - look through Pocket for the absolute best articles
