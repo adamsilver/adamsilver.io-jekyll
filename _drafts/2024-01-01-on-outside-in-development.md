@@ -2,7 +2,7 @@
 layout: post
 title:  "On Outside-in Development"
 date:   2015-01-01 09:00:01
-categories: UXDD
+categories: todo
 ---
 
 This needs a lot of work
