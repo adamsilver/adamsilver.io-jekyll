@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Real Progressive Enhancement"
-date:   2032-01-01 09:00:01
+date:   2015-08-16 09:00:01
 tagline: "How to avoid the fuck you experience"
 categories: js
 ---
@@ -227,10 +227,10 @@ Fortunately, when the real meaning of Progressive Enhancement is understood, the
 
 <!--
 
-2. Cornford: The combination of the facts that it is impossible to determine which browser is executing the script, and that it is impossible to be familiar with all browser DOMs can be rendered insignificant by using feature detection to match code execution with any browser's ability to support it. But there is still going to be a diversity of outcomes, ranging from total failure to execute any scripts (on browsers that do not support javascript, or have it disabled) to full successful execution on the most capable javascript enabled browsers.
+Cornford:
+The combination of the facts that it is impossible to determine which browser is executing the script, and that it is impossible to be familiar with all browser DOMs can be rendered insignificant by using feature detection to match code execution with any browser's ability to support it. But there is still going to be a diversity of outcomes, ranging from total failure to execute any scripts (on browsers that do not support javascript, or have it disabled) to full successful execution on the most capable javascript enabled browsers.
 
-[06/08/2015 17:12:43] Graham Veal: I would add - and with a mobile connection you have no choice but to use the proxy because that is the way the network is configured
-[06/08/2015 17:13:05] Graham Veal: They are not as open as your home broadband
-[06/08/2015 17:13:27] Graham Veal: and companies often employ a proxy to save bandwidth, and again you cannot avoid this
+Veal:
+I would add - and with a mobile connection you have no choice but to use the proxy because that is the way the network is configured. They are not as open as your home broadband and companies often employ a proxy to save bandwidth, and again you cannot avoid this
 
 -->
