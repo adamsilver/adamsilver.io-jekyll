@@ -33,7 +33,6 @@ Simply placing your Javascript code in external files, does not, in anyway, addr
 
 ## 2. Handling the Javascript disabled scenario is only half of the story
 
-
 It's true &mdash; some people disable Javascript. *If* this was the only scenario to consider, it might be *easier* to disregard it. However, this is not the case&hellip;
 
 Some browsers don't support Javascript, so relying on it for the core experience is ill-advised. Some people install plugins, such as those that disable tracking, these can cause script to break i.e. when one script references another object in a *blocked* script.
