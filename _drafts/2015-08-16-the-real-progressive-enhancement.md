@@ -33,15 +33,16 @@ Simply placing your Javascript code in external files, does not, in anyway, addr
 
 ## 2. Handling the Javascript disabled scenario is only half of the story
 
-It is true that some people do disable Javascript and so for that reason it needs *some* consideration. However, if that was the only consideration, it would be significantly easier, not to care for this scenario. However, this is not the only consideration &hellip;
 
-Some browsers don't support Javascript so relying on it for the core experience is ill-advised. Some people install plugins, such as those that disable tracking, these can cause script to break i.e. when one script references another object in a *blocked* script.
+It's true &mdash; some people disable Javascript. *If* this was the only scenario to consider, it might be *easier* to disgard it. However, this is not the case&hellip;
 
-Sometimes the network is at fault. Only some of the script makes it down the wire. Perhaps a firewall or proxy messed with it. This actually happened to me when I worked at Deutsche Telekom. The network had the audacity to strip what it thought was a comment inside a well-known library, but it was actually a regex. Mobile networks can often do these things in the name of performance but it actually broke several sites.
+Some browsers don't support Javascript, so relying on it for the core experience is ill-advised. Some people install plugins, such as those that disable tracking, these can cause script to break i.e. when one script references another object in a *blocked* script.
+
+Sometimes the network is at fault. Only some of the script makes it down the wire. Perhaps a firewall or proxy messed with it. This actually happened to me when I worked at Deutsche Telekom. The network stripped out what it thought was a comment inside a well-known library, but it was actually a regex. Mobile networks can often do these things in the name of performance but it actually broke several sites.
 
 *Note: having the latest iPhone with Javascript enabled made no difference.*
 
-But, more *commonly* and most *importantly*, is when browsers lack support for one or more APIs that your application tries to use (examples later).
+But, more *commonly* and most *importantly*, is when a browser lacks support for one or more APIs that your app tries to implement. This point is well worth labouring over and I will demonstrate this shortly.
 
 ## 3. Javascript does not degrade gracefully without developer intervention (unlike HTML and CSS).
 
@@ -67,7 +68,7 @@ Some ignore the problem exists. If they haven't experienced a problem, then they
 
 Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often, these libraries support a subset of browsers i.e. it's multi-browser as opposed to cross-browser [[1](#ref1)] &mdash; a sure sign that the library does not practice Progressive Enhancement and in-turn doesn't care about people very much.
 
-People who use *other* browsers get the aformentioned *fuck you* experience, often at times when it would be straightforward to provide a *core* experience. The same thing happens when a library releases a new version and happens to drop support for more browsers and this is a never ending cycle.
+People who use *other* browsers get the aformentioned *fuck you* experience, often at times when it would be straightforward to provide a *core* experience. The same thing happens when a library releases a new version and happens to drop support for more browsers &mdash; this of course is a never ending cycle.
 
 > Cutting The Mustard falls short
 
