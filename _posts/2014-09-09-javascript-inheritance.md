@@ -108,6 +108,5 @@ The takeaway from this scenario is that you can call and reuse the Parent method
     <dt class="citation" id="ref1">[1]</dt>
         <dd><a href="http://www.github.com/rassie/jessie/">Jessie Javascript library</a></dd>
     <dt class="citation" id="ref2">[2]</dt>
-        <dd><a href="/articles/javascript-namespacing/">Javascript namespacing</a></dd>
-
+    <dd><a href="{% post_url 2014-07-11-javascript-namespacing %}">Javascript namespacing</a></dd>
 </dl>
