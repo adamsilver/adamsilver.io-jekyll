@@ -13,7 +13,7 @@ The BFED realises that while not all experiences will be identical, all browsers
 
 ## Preprocessors
 
-When given the choice to add a preprocessor (e.g. LESS, SASS, CoffeeScript etc) to the technology stack, the BFED realises there is a deeper impact beyond just "writing less code". *Will it be harder to onboard developers? Will debugging code be more difficult?* If the answer to any of these ([and many other]({% post_url 2015-05-05-the-disadvantages-of-css-preprocessors %})) questions is *yes* then the BFED will say *no* to preprocessors.
+When given the choice to add a preprocessor (e.g. LESS, SASS, CoffeeScript etc) to the technology stack, the BFED realises there is a deeper impact beyond just "writing less code". *Will it be harder to onboard developers? Will debugging code be more difficult?* If the answer to any of these ([and many other](/articles/the-disadvantages-of-css-preprocessors/)) questions is *yes* then the BFED will say *no* to preprocessors.
 
 ## Accessibility
 
@@ -23,7 +23,7 @@ The BFED realises that users have different abilities and preferred ways of usin
 
 The BFED embraces the constraints and limitations of the browser so that he/she doesn't find him/herself in a world of Adaptive Design and UA sniffing because that world is horrible, ill-advised and costly.
 
-It is best to include the BFED early on in the UX design process to save wasting time designing a UI that should ultimately be avoided (see [Position Fixed](http://bradfrostweb.com/blog/mobile/fixed-position/) and [Select Menu Accessibility Issues]({% post_url 2014-09-17-select-menu-accessibility-issues %}) for more on that) and that can likely be designed more simply.
+It is best to include the BFED early on in the UX design process to save wasting time designing a UI that should ultimately be avoided (see [Position Fixed](http://bradfrostweb.com/blog/mobile/fixed-position/) and [Select Menu Accessibility Issues](/articles/select-menu-accessibility-issues/) for more on that) and that can likely be designed more simply.
 
 The BFED will also suggest the use of native form controls realising that browsers will enhance the experience where possible, particularly on mobile, and doesn't try to control the look and feel too much as he/she knows that the brand will *not* suffer because of that decision.
 

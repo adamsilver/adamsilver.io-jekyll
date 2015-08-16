@@ -58,7 +58,7 @@ Whilst not specifically related to Front-end developers, it is very important to
 	<dt class="citation" id="ref2">[2]</dt>
 	<dd><a href="http://www.motherfuckingwebsite.com">This is a mother fucking website</a></dd>
 	<dt class="citation" id="ref4">[4]</dt>
-	<dd><a href="{% post_url 2014-12-29-dont-use-ajax-to-display-personalised-content-on-cached-pages %}">Don't use AJAX to display personalised content on cached pages</a></dd>
+	<dd><a href="/articles/dont-use-ajax-to-display-personalised-content-on-cached-pages/">Don't use AJAX to display personalised content on cached pages</a></dd>
 	<dt class="citation" id="ref5">[5]</dt>
-	<dd><a href="{% post_url 2014-11-01-reintroducing-cross-browser-scripting %}">Reintroduction to Cross-browser scripting</a></dd>
+	<dd><a href="/articles/reintroducing-cross-browser-scripting/">Reintroduction to Cross-browser scripting</a></dd>
 </dl>

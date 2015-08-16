@@ -27,7 +27,7 @@ In many ways I wish I hadn't participated in Technical Wankery back then, but th
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
-	<dd><a href="{% post_url 2014-08-11-the-disadvantages-of-single-page-applications %}">The disadvantages of Single Page Application</a></dd>
+	<dd><a href="/articles/the-disadvantages-of-single-page-applications/">The disadvantages of Single Page Application</a></dd>
 	<dt class="citation" id="ref1">[1]</dt>
 	<dd><a href="http://codemanship.co.uk/parlezuml/blog/?postid=147">Mortgage Driven Development</a></dd>
 </dl>

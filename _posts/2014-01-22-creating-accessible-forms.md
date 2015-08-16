@@ -65,7 +65,7 @@ The optgroup element can improve accessibility of the options within a select co
 
 ## Don't abuse select controls
 
-The select control provides a list of options of which one can be selected for input. An [accessibility/usability issue can arise when script is used to submit the form when the select's change event fires]({% post_url 2014-09-17-select-menu-accessibility-issues %}). Keyboard users may struggle. If a user wants to select the 4th option this would then require 3 form submissions which would be a terribly frustrating experience.
+The select control provides a list of options of which one can be selected for input. An [accessibility/usability issue can arise when script is used to submit the form when the select's change event fires](/articles/select-menu-accessibility-issues/). Keyboard users may struggle. If a user wants to select the 4th option this would then require 3 form submissions which would be a terribly frustrating experience.
 
 ## Avoid multiple select controls
 
