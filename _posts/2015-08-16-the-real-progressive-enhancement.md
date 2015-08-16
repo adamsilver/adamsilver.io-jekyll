@@ -34,11 +34,11 @@ Simply placing your Javascript code in external files, does not, in anyway, addr
 ## 2. Handling the Javascript disabled scenario is only half of the story
 
 
-It's true &mdash; some people disable Javascript. *If* this was the only scenario to consider, it might be *easier* to disgard it. However, this is not the case&hellip;
+It's true &mdash; some people disable Javascript. *If* this was the only scenario to consider, it might be *easier* to disregard it. However, this is not the case&hellip;
 
 Some browsers don't support Javascript, so relying on it for the core experience is ill-advised. Some people install plugins, such as those that disable tracking, these can cause script to break i.e. when one script references another object in a *blocked* script.
 
-Sometimes the network is at fault. Only some of the script makes it down the wire. Perhaps a firewall or proxy messed with it. This actually happened to me when I worked at Deutsche Telekom. The network stripped out what it thought was a comment inside a well-known library, but it was actually a regex. Mobile networks can often do these things in the name of performance but it actually broke several sites.
+Sometimes the network is at fault. Only some of the script makes it down the wire. Perhaps a firewall or proxy messed with it. This actually happened to me when I worked at a large mobile network provider. The network stripped out what it thought was a comment inside a well-known library, but it was actually a regex. Mobile networks can often do these things in the name of performance but it actually broke several sites.
 
 *Note: having the latest iPhone with Javascript enabled made no difference.*
 
