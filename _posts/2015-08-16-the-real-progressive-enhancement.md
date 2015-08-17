@@ -107,6 +107,8 @@ More specifically, CTM has the following problems of note:
 		}, false);
 	}
 
+Jeremy Keith says that whilst *some* people implement CTM with a few choice APIs, it doesn't mean you have to. Jeremy suggests you detect what you use. He is most definitely right. My point was that this is how the technique is advertised, and often implemented. Regardless, as I mention above, there are many more points of failure anyway.
+
 ## What *is* the solution?
 
 > &ldquo;I’ve always maintained that, given the choice between making something my problem, and making something the user’s problem, I’ll choose to make it my problem every time.&rdquo;
