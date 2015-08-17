@@ -67,7 +67,7 @@ Some ignore the problem exists. If they haven't experienced a problem, then they
 
 Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often, these libraries support a subset of browsers i.e. it's multi-browser as opposed to cross-browser [[1](#ref1)] &mdash; a sure sign that the library does not practice Progressive Enhancement and in-turn doesn't care about people very much.
 
-People who use *other* browsers get the aformentioned *fuck you* experience, often at times when it would be straightforward to provide a *core* experience. The same thing happens when a library releases a new version and happens to drop support for more browsers &mdash; this of course is a never ending cycle.
+People who use *other* browsers get the aforementioned *fuck you* experience, often at times when it would be straightforward to provide a *core* experience. The same thing happens when a library releases a new version and happens to drop support for more browsers &mdash; this of course is a never ending cycle.
 
 > Cutting The Mustard falls short
 
@@ -93,7 +93,7 @@ More specifically, CTM has the following problems of note:
 
 **4. Some CTM implementations rely on Javascript polyfills to plug missing gaps**. Ignoring the fact that polyfills are full of problems [[7](#ref7)], it is clear that if developers are mixing them in with CTM, this more than indicates CTM is not enough on its own to determine whether the browser is capable of delivering an enhanced experience (or not).
 
-**5. The CTM condition needs constant maintainance as new browsers are released**. Again it's that same old problem &mdash; when can you drop support for a browser? This question doesn't really ever have to be asked. Either the browser has the required working features or it doesn't &mdash; that is, it's about features, not browsers.
+**5. The CTM condition needs constant maintenance as new browsers are released**. Again it's that same old problem &mdash; when can you drop support for a browser? This question doesn't really ever have to be asked. Either the browser has the required working features or it doesn't &mdash; that is, it's about features, not browsers.
 
 **6. It's unreliable**. If the application uses any API that is not within the CTM test, the chance of a *fuck you* experience is high. As an  example, it will break in browsers where `matchMedia` isn't provided, or even in browsers where it is provided but it's buggy. Furthermore, `querySelector` itself has many bugs depending on context and arguments supplied, further reducing the reliability of CTM. An example follows:
 
@@ -144,7 +144,7 @@ At this point, some might say they don't concern themselves with browser problem
 
 The idea of abstractions are good, the idea of several abstractions i.e. a library, is also good. But if that library is monolithic in nature, context-less, lacks feature detection and feature testing, leans on polyfills (or browser sniffing or object inferences etc) and does **not** expose a dynamic API, then ultimately you are unable to Progressively Enhance your application and your users and the business you work for, will suffer for it.
 
-At the very least, it is beneficial to be able to spot code that does not conform to the principles of Progressive Enhancement. Particulary, the kind that doesn't even attempt to degrade gracefully in the face of danger.
+At the very least, it is beneficial to be able to spot code that does not conform to the principles of Progressive Enhancement. Particularly, the kind that doesn't even attempt to degrade gracefully in the face of danger.
 
 ## How do I build a library like this?
 
