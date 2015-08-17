@@ -148,7 +148,7 @@ At the very least, it is beneficial to be able to spot code that does not confor
 
 ## How do I build a library like this?
 
-To explain how to build a library that conforms to the Real Progressive Enhancement would likely require a book of its own. Fortunately, Peter Michaux's article *Cross-Browser Widgets* [[7](#ref7)] provides a detailed walkthrough all in one article. However, *this* article wouldn't be complete without a short example of its own would it?
+To explain how to build a library that conforms to the Real Progressive Enhancement would likely require a book of its own. Fortunately, Peter Michaux's article *Cross-Browser Widgets* [[8](#ref8)] provides a detailed walkthrough all in one article. However, *this* article wouldn't be complete without a short example of its own would it?
 
 This example will also demonstrate that Progressive Enhancement is not a drag in the way of "having to support old irrelevant browsers". Quite the opposite in-fact. The words "drops support for" changes to "degrades gracefully in". You also get to determine an appropriate degradation point suitable for your project.
 
@@ -224,6 +224,8 @@ Fortunately, when the real meaning of Progressive Enhancement is understood, the
 	<dt class="citation" id="ref6">[6]</dt>
 	<dd><a href="http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting">Feature Detection: State of the Art Browser Scripting</a></dd>
 	<dt class="citation" id="ref7">[7]</dt>
+	<dd><a href="/articles/the-disadvantages-of-javascript-polyfills/">The disadvantages of Javascript polyfills</a></dd>
+	<dt class="citation" id="ref8">[8]</dt>
 	<dd><a href="http://peter.michaux.ca/articles/cross-browser-widgets">Cross-browser Widgets</a></dd>
 </dl>
 
