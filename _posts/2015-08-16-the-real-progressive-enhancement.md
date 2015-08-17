@@ -85,7 +85,7 @@ Anyway, once CTM determines it's "modern", the Javascript application starts and
 
 More specifically, CTM has the following problems of note:
 
-**1. Detecting host objects like this is dangerous**. *H is for Host* [[4](#ref4)] explains why this is dangerous and provides a viable solution.
+**1. Detecting host objects like this is dangerous**. *H is for Host* [[4](#ref4)] explains why this is dangerous and provides a simple solution to the problem.
 
 **2. Detecting the presence of an API is not enough**. CTM only *detects* host methods but often APIs are buggy. This is why feature *testing* is important. Nicholas Zakas provides an excellent case study in his short ebook *The Problem with Native JavaScript APIs* [[5](#ref5)]. Additionally, Peter Michaux's article *Feature Detection: State of the Art Browser Scripting* [[6](#ref6)] explains everything you need to know about feature detection and feature testing.
 
@@ -146,7 +146,7 @@ At the very least, it is beneficial to be able to spot code that does not confor
 
 ## How do I build a library like this?
 
-To explain how to build a library that conforms to the Real Progressive Enhancement would likely require a book of its own. Fortunately, Peter Michaux's article *Cross-Browser Widgets* [[7](#ref7)] provides a detailed walkthrough. However, *this* article wouldn't be complete without a short example of its own would it?
+To explain how to build a library that conforms to the Real Progressive Enhancement would likely require a book of its own. Fortunately, Peter Michaux's article *Cross-Browser Widgets* [[7](#ref7)] provides a detailed walkthrough all in one article. However, *this* article wouldn't be complete without a short example of its own would it?
 
 This example will also demonstrate that Progressive Enhancement is not a drag in the way of "having to support old irrelevant browsers". Quite the opposite in-fact. The words "drops support for" changes to "degrades gracefully in". You also get to determine an appropriate degradation point suitable for your project.
 
