@@ -6,7 +6,7 @@ tagline: "How to avoid the fuck you experience"
 categories: js
 ---
 
-Progressive Enhancement is one of those things that everyone knows right? However, throughout my career, it has always been a hot topic, and one that developers have struggled with, in one form or other, demonstrating significant misundestandings about the subject, particularly when it comes to Javascript.
+Progressive Enhancement is one of those things that everyone knows right? However, throughout my career, it has always been a hot topic, and one that developers (including myself) have struggled with, in one form or other, demonstrating significant misundestandings about the subject, particularly when it comes to Javascript.
 
 This article addresses these misunderstandings and provides long forgotten but reliable solutions, that have stood the test of time and can still, today be considered cutting-edge. The fact is, this subject is quite possibly the most important and misunderstood aspect of client-side Javascript development, period.
 
