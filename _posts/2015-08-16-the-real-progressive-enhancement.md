@@ -81,7 +81,7 @@ It works by *detecting* a few *choice* browser APIs, in order to *infer* that th
 
 *Impossible*, considering the sheer amount of new browsers being released and *irrelevant*, because release date does not determine capability. Besides, every browser was new once, so it's quite obvious that an inference for modernity, is basically useless.
 
-Anyway, once CTM determines it's "modern", the Javascript application starts and (attempts to) provide the enhanced experience. The emphasis on *browsers* as opposed to *features*, more than suggests this technique is doomed from the start. And, inference is little better than User Agent sniffing, which is something that Richard Cornford explains superbly in *Browser Detection (and What To Do Instead)* [[3](#ref3)].
+Anyway, once CTM determines it's "modern", the Javascript application starts and (attempts to) provide the enhanced experience. The emphasis on *browsers* as opposed to *features*, suggests this technique is frail. And, inference is little better than User Agent sniffing, which is something that Richard Cornford explains superbly in *Browser Detection (and What To Do Instead)* [[3](#ref3)].
 
 More specifically, CTM has the following problems of note:
 
