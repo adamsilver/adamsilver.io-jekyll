@@ -29,7 +29,7 @@ There are many myths [[0](#ref0)] about Progressive Enhancement. I want to point
 
 ## 1. Unobtrusive Javascript is not Progressive Enhancement
 
-Simply placing your Javascript code in external files, does not, in anyway, address the problem of Progressive Enhancement.
+Simply placing your Javascript code in external files, does not, in any way, address the problem of Progressive Enhancement.
 
 ## 2. Handling the Javascript disabled scenario is only half of the story
 
