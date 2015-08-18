@@ -29,16 +29,18 @@ On this page I recommend the very best and timeless articles, books and videos r
 
 ## Front-end development
 
-* [Introducing awfulness.js by Tom Morris](https://tommorris.org/posts/2547")
+* [Introducing awfulness.js](https://tommorris.org/posts/2547") by Tom Morris
 
-* [Cross browser widgets by Peter Michaux](http://peter.michaux.ca/articles/cross-browser-widgets)
+* [Cross browser widgets](http://peter.michaux.ca/articles/cross-browser-widgets) by Peter Michaux
 
-* [Feature Detection: State of the art browser scripting by Peter Michaux](http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting)
+* [Feature Detection: State of the art browser scripting](http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting)
 
-* [Development by decree by Matt McDonald](http://articles.fortybelow.ca/Development_by_Decree/)
+* [Development by decree](http://articles.fortybelow.ca/Development_by_Decree/) by Matt McDonald
 
-* [Substance and Style by Matt McDonald](http://articles.fortybelow.ca/Substance_and_Style/0/)
+* [Substance and Style](http://articles.fortybelow.ca/Substance_and_Style/0/) by Matt McDonald
 
-* [Extending native built-ins by Kangax](http://perfectionkills.com/extending-native-builtins/)
+* [Extending native built-ins](http://perfectionkills.com/extending-native-builtins/) by Kangax
 
-* [What's wrong with extending the DOM? by Kangax](http://perfectionkills.com/whats-wrong-with-extending-the-dom/)
+* [What's wrong with extending the DOM?](http://perfectionkills.com/whats-wrong-with-extending-the-dom/) by Kangax
+
+* [Everyone has Javascript right?](http://kryogenix.org/code/browser/everyonehasjs.html)
