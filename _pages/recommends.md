@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Recommends
+title: Recommendations
 id: recommends
 permalink: /recommends/
 ---
 
-# {{page.title}}
+# Recommendations
 
 On this page I recommend the very best and timeless articles, books and videos related to User Experience, Business and Front-end Web development.
 
