@@ -1,50 +1,60 @@
 ---
 layout: post
-title:  "The disadvantages of customising form controls"
+title:  "The disadvantages of customising form control design"
 date:   2017-01-01 09:00:01
 categories: accessibility
 ---
 
-Designers often want to control every aspect of the UI which of course extends to form controls. By default, form controls look very different across browsers [0] because they are integrated deeply into the Operating System and Device. When designers try to tame the design of form controls too much, can cause several disadvantages.
+Designers often want to control every aspect of the UI, for which form controls are not exempt. By default, form controls look very different across browsers [0] because they are integrated deeply into the Operating System and Device. Attempting to tame the design of form controls comes with several disadvantages.
 
-## 1. It's hard to impossible to achieve
+## 1. It causes problems for the user (negative value add)
 
-Unlike most HTML elements, form controls are nigh on impossible to style consistently Cross-browser.
+Some form controls are more problematic than others. When developers endeavour to tame these elements, user experience is often degraded. Ironically, this is why visual designers *think* they must tame the design of these things.
 
-> "It shows that using CSS to style form controls to look exactly the same across browsers and platforms is impossible. It also shows that most browsers ignore many CSS properties when they are applied to form controls."
+It is arguably beneficial, that browsers display form controls differently as they match the native OS, and because a user uses the same browser repeatedly, there is an inherent expectation of how form controls look and behave in *that* browser. Don't underestimate the importance of consistency in user experience.
+
+For example, when the user activates a Select menu, on some devices, the browser will show a native popup [[3](#ref3)]. This makes it easier to use.
+
+The only way to truly tame a select element is to recreate it with Javascript. The problem is what you "gain" in the *look*, you lose in functionality.
+
+For example, the native popup is destroyed when you use select menu replacement script. You are now required to pinch and zoom. Not to mention the Javascript can be problematic itself and is another point of failure.
+
+Users favour behaviour over pixel-perfect shine and colour, every time.
+
+And, don't get me wrong, you can make form controls look suitably beautiful without going overboard. Designers must embrace the web and it's constraints. Use them to the users advantage.
+
+## 2. It is a sisyphean task
+
+> "Using CSS to style form controls to look exactly the same across browsers and platforms is impossible."
 <br> &mdash; Roger Johansson
 
-Some elements are more problematic than others. When developers endeavour to tame these elements, user experience is often degraded, which is ironically, the reason for attempting this in the first place.
+Unlike most HTML elements, form controls are nigh on impossible to style consistently Cross-browser because these components are deeply embedded in to the Operating System and Device. This means browsers ignore some CSS rules that you try and throw at it.
 
-## 2. It adds little to no value
+It takes a grand effort to do so, which is costly to the business.
 
-## 3. Users don't notice anyway
+## 3. It adds little to no value
 
-This is an extension to #2. If your users don't care why are you bothering?
+Whilst it's understandable that a designer wants to control the look and feel of *everything* in the name of design asthetics and/or branding, this is a problem in the designers mind, not in the mind of the person using the form.
 
-Your users aren't noticing pixel differences, and they aren't noticing that form controls are slightly different on their iPhone (for example) compared to their favourite desktop browser, and, even if they are, they don't care. It's not going to stop them using your site, consuming content and purchasing items etc.
+Branding and design asthetics can be applied elsewhere. There is a significant chance that your design and development effort belongs elsewhere.
 
-## 4. Introduces user experience problems
+## 4. Users don't notice anyway
 
-It is arguably positive that browsers show these things differently as they match the native OS, and because a user uses the same browser repeatedly, there is an inherent expectation of how form controls look and behave in *that* browser.
+As an extension to point #3, if you're users don't care, and it doesn't hurt the user experience, why bother?
 
-For example, on some devices, when the user activates a Select control, the browser will show a native popup [[3](#ref3)]. This makes it easier to use. However, users forgo this behaviour if the control is customised with Javascript.
+Your users aren't noticing pixel differences, and they aren't noticing that form controls are slightly different on their iPhone (for example) compared to their favourite desktop browser.
 
-There are examples of such scripts, just Google "select replacement javascript". Try running them on an iPhone for example and notice the browser doesn't show the popup, leaving the user to pinch and zoom, making it harder to use. The behaviour is now different to all other websites who utilise native select controls. Typically these scripts don't support all browsers. Why would you want to even risk it just for a slight improvement in asthetics?
+Even *if* they did notice, they *really* don't care. It's not going to stop them using your site, consuming content and purchasing items etc &mdash; where is there are many reasons worth putting effort into that will!
 
 ## Conclusion
 
-The only people who look at websites in multiple browsers are Front-end Developers, not users. ([tweet that](https://twitter.com/share?source=tweetbutton&text=The only people that look at websites in multiple browsers are Front-end Developers, not users.&via=adambsilver&url={{site.url}}{{page.url}}&hashtags=frontend))
+Attempting to tame form controls induces significant development effort, which most certainly results in code bloat, bugs, and as has been described earlier, a degraded experience for at least some users. As Garrett Dimon says:
 
-Attempting to tame form controls induces significant development effort which most certainly results in code bloat, bugs, and as has been described earlier, a degraded experience for at least some users, in at least some browsers. As Garrett Dimon says:
+> &ldquo;There are many things worth investing time to develop and implement. Customising the look and feel of form fields is absolutely not one of them.&rdquo;
 
-> There are many things worth investing time to develop and implement. Customising the look and feel of form fields is absolutely not one of them. This is especially true if the method involves JavaScript to change the appearance. Browser form fields may not be the prettiest things in the world, but people are used to and comfortable with them. It’s not surprising that the sites I come across with custom-designed forms often have significant usability problems.
+Users are comfortable with forms and their appearance. Avoid any potential problems by letting go of overzealous design control is win for the business and a win for users.
 
 <!--
-
-Graham: Should include something about the maintenance nightmare as well, just to highlight that it is an ongoing cost to anyone trying to implement it.
-
-As an experienced Front-end Developer, it is important to know what works and what doesn't, and styling form controls to this extent is the latter. Some browsers are more friendly than others, but if you can't control them in a reliable, consistent way, *without* hurting the user experience, then it is not compelling to try in the name of *aesthetics* or *branding*. On the other hand this article demonstrates (just some of the) good reasons *not* to. There are much more pressing matters requiring development and design effort. The web (and its constraints) just like any other platform, must be embraced.
 
 And Nicholas Zakas beautifully points out why in *Progresssive Enhancement 2.0* [[2](#ref2)]. You can go straight to 16 minutes in to skip the history lesson, although that is also very informative.
 
