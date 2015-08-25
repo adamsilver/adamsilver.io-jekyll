@@ -23,6 +23,14 @@
                 {% endif %}
                 <div class="meta">
                 	<span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
+                	<span class="readingTime" title="Estimated read time">
+					  {% assign words = content | number_of_words %}
+					  {% if words < 360 %}
+					    1 minute read
+					  {% else %}
+					    {{ words | divided_by:180 }} minute read
+					  {% endif %}
+					</span>
                 </div>
 
 				<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=adamsilverio" id="_carbonads_js"></script>
