@@ -207,9 +207,9 @@ a img {
     overflow: hidden;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
 	#headerInner {
-		padding: 14px 0px;
+		padding: 14px 0px 0;
 	}
 }
 
@@ -217,7 +217,7 @@ a img {
     float: left;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
     #logo {
 		float: none;
 		overflow: hidden;
@@ -367,12 +367,14 @@ a img {
     margin-top: 6px;
 }
 
-@media(max-width: 500px) {
+@media(max-width: 450px) {
 	#nav {
 		float: none;
 		margin: 0;
 		padding-top: 15px;
 		padding-left: 20px;
+		background-color: #fafafa;
+		padding-bottom: 15px;
 	}
 }
 
@@ -408,6 +410,10 @@ a img {
     	margin-left: 0;
         margin-right: 20px;
     }
+}
+
+#nav li.contact {
+	margin-right: 0;
 }
 
 /**********************************************************
