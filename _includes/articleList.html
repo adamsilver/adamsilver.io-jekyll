@@ -5,8 +5,6 @@
 				<h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
 				<div class="meta">
 					{% include date.html date=post.date %}
-					<span class="divider">&#183;</span>
-					{% include readingTime.html content=post.content %}
 				</div>
 			</li>
 		{% endfor %}
