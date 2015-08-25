@@ -5,21 +5,17 @@ date:   2017-01-01 09:00:01
 categories: accessibility
 ---
 
-Designers often want to control every aspect of the UI, for which form controls are not exempt. By default, form controls look very different across browsers [0] because they are integrated deeply into the Operating System and Device. Attempting to tame the design of form controls has disadvantages.
+Designers often want to control every aspect of the UI, and of course, form controls are not exempt. By default, form controls look very different across browsers [0] because they are integrated deeply into the OS. Attempting to control the design of form controls *too much* is where several problems stem from.
 
-## 1. UX degradation
+## 1. It degrades the experience
 
-Some form controls are more problematic than others. When developers endeavour to tame these elements, user experience is often degraded. Ironically, this is why visual designers *think* they must tame the design of them in the first place.
+Some form controls are more problematic than others. When developers endeavour to tame these elements, user experience is often degraded. Ironically, this is why visual designers *believe* they must tame them in the first place.
 
-It is arguably *beneficial* that browsers display form controls differently matching the OS. Because a user uses the same browser repeatedly, there is an inherent expectation of how form controls look and behave. It is wise not to underestimate the importance of consistency in user experience.
+It is arguably *beneficial* that browsers display form controls differently, matching the OS in the process. Because a user uses the same browser repeatedly, there is an inherent expectation of how form controls look and behave. It is wise not to underestimate the importance of consistency in user experience.
 
-For example, when the user activates a `select` menu, on some devices the browser will display a popup [[3](#ref3)] which signficantly makes the control easier to interact with. Something you can't mimic as it's baked into the native OS.
+For example, when the user activates a `select` menu, on some devices the browser will display a popup [[3](#ref3)] which signficantly makes the control easier to interact with. Something you can't mimic with code, as it's baked into the native OS.
 
-The problem is, the only way to truly tame the appearance of select control, is to recreate it with Javascript. The problem is what you "gain" in *look*, you lose in functionality.
-
-For example, you lose the popup behaviour; requiring the user to pinch and zoom.
-
-Users favour behaviour over pixel-perfect shine and colour, every time.
+The problem is, the only way to truly control the *appearance* of a select control, is to recreate it with Javascript. Unfortunately, what you "gain" in *look*, you lose in functionality. For example, you lose the popup behaviour; requiring the user to pinch and zoom.
 
 And, don't get me wrong, you can make form controls look suitably beautiful without going overboard. Designers must embrace the web and it's constraints. Use them to the users advantage.
 
@@ -56,7 +52,7 @@ Attempting to tame form controls induces significant development effort, which m
 
 > &ldquo;There are many things worth investing time to develop and implement. Customising the look and feel of form fields is absolutely not one of them.&rdquo;
 
-Users are comfortable with forms and their appearance. Avoid any potential problems by letting go of overzealous design control is win for the business and a win for users.
+Users favour behaviour over pixel-perfect shine and colour every time. Users are comfortable with forms and their natural appearance. It's important to give away *some* control to the natural web. The business and their users will benefit from this.
 
 <!--
 
