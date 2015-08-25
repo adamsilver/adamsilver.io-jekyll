@@ -12,3 +12,5 @@ I love to work in-tandem with design, from inception to production, in order to 
 I will endeavour to help your business focus on what is truly essential and to leave out all the rest &mdash; *less, but better*.
 
 <p class="read">Read one of my <a href="/articles">articles</a> or <a href="http://www.twitter.com/adambsilver/">follow me</a> on twitter.</p>
+
+<!-- est -->
