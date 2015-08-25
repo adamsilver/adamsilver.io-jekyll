@@ -21,8 +21,8 @@
                 {% if page.tagline %}
                 	<h2 class="tagline">{{ page.tagline }}</h2>
                 {% endif %}
-				<p class="date">{{ page.date | date: "%-d %B %Y" }}</p>
-                <p class="wordCount">{{ page.content | number_of_words }} words</p>
+
+				{% include articleMeta.html date=page.date content=page.content %}
 
 				<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=adamsilverio" id="_carbonads_js"></script>
                	{{ content }}
