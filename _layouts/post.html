@@ -23,6 +23,7 @@
                 {% endif %}
                 <div class="meta">
                 	<span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
+                	<span class="divider">&#183;</span>
                 	<span class="readingTime" title="Estimated read time">
 					  {% assign words = content | number_of_words %}
 					  {% if words < 360 %}
