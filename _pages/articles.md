@@ -7,4 +7,13 @@ permalink: /articles/
 
 # Articles
 
-{% include articleList.html %}
+<div id="articleList">
+	<ol class="articles">
+		{% for post in site.posts %}
+			<li class="article">
+				<h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+				{% include articleMeta.html date=post.date cont=post.content %}
+			</li>
+		{% endfor %}
+	</ol>
+</div>

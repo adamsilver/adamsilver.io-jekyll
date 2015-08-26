@@ -21,18 +21,8 @@
                 {% if page.tagline %}
                 	<h2 class="tagline">{{ page.tagline }}</h2>
                 {% endif %}
-                <div class="meta">
-                	<span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
-                	<span class="divider">&#183;</span>
-                	<span class="readingTime" title="Estimated read time">
-					  {% assign words = content | number_of_words %}
-					  {% if words < 360 %}
-					    1 minute read
-					  {% else %}
-					    {{ words | divided_by:180 }} minute read
-					  {% endif %}
-					</span>
-                </div>
+
+                {% include articleMeta.html date=page.date cont=content %}
 
 				<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=adamsilverio" id="_carbonads_js"></script>
                	{{ content }}
