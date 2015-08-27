@@ -27,6 +27,8 @@ On this page I recommend the very best and timeless articles, books and videos r
 
 * [Fixed positioning is a nightmare](http://bradfrost.com/blog/mobile/fixed-position/)
 
+* [Death to bullshit](http://deathtobullshit.com)
+
 ## Front-end development
 
 * [Introducing awfulness.js](https://tommorris.org/posts/2547") by Tom Morris
