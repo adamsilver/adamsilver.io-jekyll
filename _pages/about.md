@@ -24,5 +24,3 @@ For me it's not just about working with *design*. It's about working with all el
 This is why I am a massive fan of Agile principles. I believe in choosing the essential things to build, in the right order and improving the process regularly, so that the team can deliver quickly and with high quality. It also enables frequent learning and iteration.
 
 In a nutshell, I love building great experiences on the web. I think beauty is simplicity.
-
-Anyway, I am now starting to waffle. If you want to find out more you know what to do.
