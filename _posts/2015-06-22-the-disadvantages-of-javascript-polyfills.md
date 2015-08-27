@@ -43,7 +43,7 @@ Does any of this sound like something you want to add to your codebase? I would 
 
 A facade, a form of wrapper, is a design pattern that normally provides a simplified interface to something more complex. This allows you to completely abstract away the differing browser implementations and bugs, with the flexibility to provide a suitable solution and a simplified method signature. Inside the facade there is nothing to stop you using portions of the API, and feature testing various implementations and acting accordingly, much like Peter Michaux demonstrates in his other brilliant article *Cross browser Widgets* [[5](#ref5)].
 
-Cloning an object is pertinent to this article because `Object.create` is a useful API to solve this problem. If you just wanted to support modern browsers i.e ones that provide `Object.create`, then an implementation might be as follows:
+Cloning an object is pertinent to this article because `Object.create` is a useful API to solve this problem. If you just wanted to support "modern" browsers i.e ones that provide `Object.create`, then an implementation might be as follows:
 
 	var lib = {};
 	if(Object.create) {
@@ -70,7 +70,7 @@ Note there is only one argument. This facade uses a smaller part of an API, expo
 		})();
 	}
 
-The context of the problem changed; it got a little harder &mdash;  but the implementation is still lean and method signature still what we need. What we most certainly didn't need to do, was to worry about recreating `Object.create` in its entirey.
+The context of the problem changed; it got a little harder &mdash;  but the implementation is still lean and method signature still what we need. What we most certainly didn't need to do, was to worry about recreating `Object.create` in its entirety.
 
 With that said, what if you did need the full functionality this API can provide? Well you would only need two simple edits: change the name of the function to be appropriate and expand the method signature to allow for property descriptors:
 
