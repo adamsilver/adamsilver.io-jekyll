@@ -58,3 +58,7 @@ Front-end developers should endeavour to test in as many browsers as is reasonab
 ## Development process and methodologies
 
 Whilst not specifically related to Front-end developers, it is very important to be able to work as part of a team in a given process. This means an understanding of various Agile methodologies. Better still, it's highly beneficial to you and your team to be able to spot friction and influence the process regularly to deliver software in a more efficient way.
+
+## Summary
+
+So we have come a long, *long* way from where we began as front-end developers. The bad news is, you may have more responsibilities than you once thought you did. The good news is that all of these things are complimentary, fun and important to the team you work with, the client you work for and the people that use the website you have built.
