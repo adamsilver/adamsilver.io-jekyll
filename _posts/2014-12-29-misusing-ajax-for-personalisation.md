@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Don't use AJAX to display personalised content on cached pages"
+title: "Misusing AJAX for personalisation"
 date:   2014-12-29 09:00:01
 categories: js
 ---
@@ -47,7 +47,7 @@ Content-caching *is* a very useful technique when used responsibly and for pages
 	<dt class="citation" id="ref0">[0]</dt>
 	<dd><a href="https://developer.akamai.com/stuff/Caching/Content_Caching.html">Content caching</a></dd>
 	<dt class="citation" id="ref1">[1]</dt>
-	<dd><a href="http://jakearchibald.com/2013/progressive-enhancement-still-important/">Progressive Enhancement is still important</a></dd>
+	<dd><a href="/articles/the-real-progressive-enhancement">The Real Progressive Enhancement</a></dd>
 	<dt class="citation" id="ref2">[2]</dt>
 	<dd><a href="http://www.smashingmagazine.com/2010/02/10/some-things-you-should-know-about-ajax/">Some things you should know about AJAX</a></dd>
 	<dt class="citation" id="ref3">[3]</dt>
