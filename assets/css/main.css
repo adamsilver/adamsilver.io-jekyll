@@ -163,6 +163,30 @@ p {
 	margin-right: 3px;
 }
 
+.nowRead {
+	border-top: 1px solid #ebebeb;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.nowReadInner {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.nowRead .now {
+	text-transform: uppercase;
+	font-family: 'droid sans';
+	margin-bottom: 0;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+.nowRead h2 {
+	margin-top: 0;
+	font-size: 1.4em;
+}
+
 blockquote {
     margin: 20px 30px;
 }
@@ -633,7 +657,8 @@ p code {
 
 	#content,
 	#headerInner,
-	#footerInner{
+	#footerInner,
+	.nowReadInner {
 		width: 720px;
 		margin: 0 auto;
 	}
