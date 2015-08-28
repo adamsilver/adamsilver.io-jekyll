@@ -3,6 +3,11 @@ layout: post
 title:  "Javascript namespacing"
 date:   2014-07-11 09:00:01
 categories: js
+citations:
+ - title: Global Domination
+   link: http://www.yuiblog.com/blog/2006/06/01/global-domination/
+ - title: Over-engineered namespacing solutions on Stackoverflow
+   link: http://stackoverflow.com/questions/3410984/javascript-namespace
 ---
 
 Namespaces provide organisation which leads to discoverability, and in the context of Javascript, the minimisation of global variables [[0](#ref0)]. Javascript doesn't (currently) have a dedicated construct for namespacing but it can be imitated. Typically over-engineered solutions [[1](#ref1)] are used but they are unnecessary and potentially problematic.
@@ -94,12 +99,3 @@ and
 	};
 
 **Note**: Do not be concerned about having too many files; overly complex namespace hiearchies should be avoided and separate files should be concatenated into one for performance.
-
-## Citations
-
-<dl>
-	<dt class="citation" id="ref0">[0]</dt>
-	<dd><a href="http://www.yuiblog.com/blog/2006/06/01/global-domination/">Global Domination</a></dd>
-	<dt class="citation" id="ref1">[1]</dt>
-	<dd><a href="http://stackoverflow.com/questions/3410984/javascript-namespace">Over-engineered namespacing solutions on Stackoverflow</a></dd>
-</dl>

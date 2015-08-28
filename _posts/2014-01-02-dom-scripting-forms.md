@@ -3,6 +3,9 @@ layout: post
 title:  "DOM scripting forms"
 date:   2014-01-02 09:00:59
 categories: js
+citations:
+ - title: "DOM 0 API"
+   link: "http://docs.oracle.com/cd/E19957-01/816-6408-10/"
 ---
 
 The HTML DOM has dedicated APIs for retrieving and manipulating form controls. The DOM0 [[0](#ref0)] Forms Collection API is perfect for this but unfortunately often forgotten. This article describes how to use this API.
@@ -34,10 +37,3 @@ Once we have a control we can interrogate its value:
 	var usernameValue = usernameControl.value;
 
 This is useful if you want to perform client side validation, for example.
-
-## Citations
-
-<dl>
-	<dt class="citation" id="ref0">[0]</dt>
-	<dd><a href="http://docs.oracle.com/cd/E19957-01/816-6408-10/">DOM 0 API</a></dd>
-</dl>

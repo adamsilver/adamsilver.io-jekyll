@@ -1,9 +1,28 @@
 ---
 layout: post
-title:  "The Real Progressive Enhancement"
+title: "The Real Progressive Enhancement"
 date:   2015-08-16 09:00:01
 tagline: "How to avoid the fuck you experience"
 categories: js
+citations:
+ - title: "Myth-Busting Progressive Enhancement"
+   link: "http://www.sitepoint.com/javascript-dependency-backlash-myth-busting-progressive-enhancement/"
+ - title: "Multi-browser vs cross-browser scripting"
+   link: "https://gist.github.com/david-mark/06b9879f963ebb0eed62"
+ - title: "Cutting the mustard"
+   link: "http://responsivenews.co.uk/post/18948466399/cutting-the-mustard"
+ - title: "Browser Detection (and What to Do Instead)"
+   link: "http://jibbering.com/faq/notes/detect-browser/"
+ - title: "H is for Host"
+   link: "http://www.cinsoft.net/host.html"
+ - title: "The Problem with Native JavaScript APIs"
+   link: "http://chimera.labs.oreilly.com/books/1234000001655/index.html"
+ - title: "Feature Detection: State of the Art Browser Scripting"
+   link: "http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting"
+ - title: "The disadvantages of Javascript polyfills"
+   link: "/articles/the-disadvantages-of-javascript-polyfills/"
+ - title: "Cross-browser Widgets"
+   link: "http://peter.michaux.ca/articles/cross-browser-widgets"
 ---
 
 Progressive Enhancement is one of those things that everyone knows right? However, throughout my career, it has always been a hot topic, and one that developers (including myself) have struggled with, in one form or other, demonstrating significant misunderstandings about the subject, particularly when it comes to Javascript.
@@ -205,29 +224,6 @@ The Real Progressive Enhancement is something that puts users first. The misunde
 Unfortunately, this is quite common in the industry and it's the people that suffer the most, the same people that are interested in your business or content. It's just not good enough to let them endure the *fuck you* experience, they don't deserve it and it's circumventable.
 
 Fortunately, when the real meaning of Progressive Enhancement is understood, the execution can be implemented correctly. This allows for robust, future-friendly, backwards-compatible Javascript code. The Real Progressive Enhancement allows you to *responsibly* use cutting edge browser APIs, leaving the majority of other browsers to degrade to the core experience. Your users and your business will appreciate it.
-
-## Citations
-
-<dl>
-	<dt class="citation" id="ref0">[0]</dt>
-	<dd><a href="http://www.sitepoint.com/javascript-dependency-backlash-myth-busting-progressive-enhancement/">Myth-Busting Progressive Enhancement</a></dd>
-	<dt class="citation" id="ref1">[1]</dt>
-	<dd><a href="https://gist.github.com/david-mark/06b9879f963ebb0eed62">Multi-browser vs cross-browser scripting</a></dd>
-	<dt class="citation" id="ref2">[2]</dt>
-	<dd><a href="http://responsivenews.co.uk/post/18948466399/cutting-the-mustard">Cutting the mustard</a></dd>
-	<dt class="citation" id="ref3">[3]</dt>
-	<dd><a href="http://jibbering.com/faq/notes/detect-browser/">Browser Detection (and What to Do Instead)</a></dd>
-	<dt class="citation" id="ref4">[4]</dt>
-	<dd><a href="http://www.cinsoft.net/host.html">H is for Host</a></dd>
-	<dt class="citation" id="ref5">[5]</dt>
-	<dd><a href="http://chimera.labs.oreilly.com/books/1234000001655/index.html">The Problem with Native JavaScript APIs</a></dd>
-	<dt class="citation" id="ref6">[6]</dt>
-	<dd><a href="http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting">Feature Detection: State of the Art Browser Scripting</a></dd>
-	<dt class="citation" id="ref7">[7]</dt>
-	<dd><a href="/articles/the-disadvantages-of-javascript-polyfills/">The disadvantages of Javascript polyfills</a></dd>
-	<dt class="citation" id="ref8">[8]</dt>
-	<dd><a href="http://peter.michaux.ca/articles/cross-browser-widgets">Cross-browser Widgets</a></dd>
-</dl>
 
 <!--
 

@@ -3,6 +3,15 @@ layout: post
 title: "Misusing AJAX for personalisation"
 date:   2014-12-29 09:00:01
 categories: js
+citations:
+ - title: Content caching
+   link: https://developer.akamai.com/stuff/Caching/Content_Caching.html
+ - title: The Real Progressive Enhancement
+   link: /articles/the-real-progressive-enhancement
+ - title: Some things you should know about AJAX
+   link: http://www.smashingmagazine.com/2010/02/10/some-things-you-should-know-about-ajax/
+ - title: And you thought your page could not be cached
+   link: https://blogs.akamai.com/2014/05/and-you-thought-your-page-could-not-be-cached.html
 ---
 
 Sometimes, developers are on a pursuit to reduce page-load time by utilising content caching [[0](#ref0)]. This is useful until a page contains personalised content, meaning this type of caching can't neccessarily be used. This is because a user might receive the cached version of somebody elses personalised content. The problem arises with the suggestion that this can be solved using AJAX to request the personalised content and this is problematic for several reasons. Before discussing the problems, let's define personalised content.
@@ -40,19 +49,6 @@ The potential performance benefit is somewhat negated by requiring extra Javascr
 ## Summary
 
 Content-caching *is* a very useful technique when used responsibly and for pages that don't contain personalised content. For pages that *do* contain personalised content, a simple cookie check can determine whether the cached version should be served or not [[3](#ref3)]. It is ill-advised to misuse Javascript in this way as there are several negative side effects in doing so. AJAX should not break the web, it should enhance the experience where necessary. AJAX seems like an innocent and beneficial solution, but in reality it encourages bad practice that creates several self-induced problems for users and the development team.
-
-## Citations
-
-<dl>
-	<dt class="citation" id="ref0">[0]</dt>
-	<dd><a href="https://developer.akamai.com/stuff/Caching/Content_Caching.html">Content caching</a></dd>
-	<dt class="citation" id="ref1">[1]</dt>
-	<dd><a href="/articles/the-real-progressive-enhancement">The Real Progressive Enhancement</a></dd>
-	<dt class="citation" id="ref2">[2]</dt>
-	<dd><a href="http://www.smashingmagazine.com/2010/02/10/some-things-you-should-know-about-ajax/">Some things you should know about AJAX</a></dd>
-	<dt class="citation" id="ref3">[3]</dt>
-	<dd><a href="https://blogs.akamai.com/2014/05/and-you-thought-your-page-could-not-be-cached.html">And you thought your page could not be cached</a></dd>
-</dl>
 
 <!--
 

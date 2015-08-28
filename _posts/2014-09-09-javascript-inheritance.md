@@ -3,6 +3,13 @@ layout: post
 title:  "Javascript inheritance"
 date:   2014-09-09 09:00:59
 categories: js
+citations:
+ - title: Douglas Crockford on inheritance
+   link: http://javascript.crockford.com/inheritance.html
+ - title: Jessie Javascript library
+   link: http://www.github.com/cinsoft/jessie/
+ - title: Javascript namespacing
+   link: /articles/javascript-namespacing/
 ---
 
 Javascript inheritance is useful with regard to code reuse [[0](#ref0)]. Unfortunately, ECMAScript doesn't provide an *inherit* function natively, so we will need to create one. This article documents a simple and powerful technique and consists of two parts: 1) creating the inherit function and 2) utilising it to demonstrate one object inheriting the features of another.
@@ -99,14 +106,3 @@ Using the previously defined `batman` instance above we run the scenario:
     batman.backDownAndRevealTrueIdentity(); // returns "My name is Bruce Wayne"
 
 The takeaway from this scenario is that you can call and reuse the Parent methods.
-
-## Citations
-
-<dl>
-	<dt class="citation" id="ref0">[0]</dt>
-	<dd><a href="http://javascript.crockford.com/inheritance.html">Douglas Crockford on inheritance</a></dd>
-    <dt class="citation" id="ref1">[1]</dt>
-        <dd><a href="http://www.github.com/rassie/jessie/">Jessie Javascript library</a></dd>
-    <dt class="citation" id="ref2">[2]</dt>
-    <dd><a href="/articles/javascript-namespacing/">Javascript namespacing</a></dd>
-</dl>

@@ -1,0 +1,11 @@
+{% if page.citations %}
+	<div class="citations">
+		<h2>Citations</h2>
+
+		<dl>
+			{% for citation in page.citations %}
+				<dt class="citation" id="ref{{forloop.index0}}">[{{forloop.index0}}]</dt>
+				<dd><a href="{{citation.link}}">{{citation.title}}</a></dd>
+			{% endfor %}
+		</dl>
+{% endif %}

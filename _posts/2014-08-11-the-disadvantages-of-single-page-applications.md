@@ -3,6 +3,21 @@ layout: post
 title:  "The disadvantages of Single Page Applications"
 date:   2014-08-11 09:00:01
 categories: js
+citations:
+ - title: Wikipedia on SPAs
+   link: http://en.wikipedia.org/wiki/Single-page_application
+ - title: Beyond pushState - building single page applications
+   link: https://medium.com/joys-of-javascript/4353246f4480
+ - title: Stackoverflow on Detecting back button click
+   link: http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button
+ - title: Stackoverflow on SPAs and SEO
+   link: http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo
+ - title: Script loading hacks
+   link: http://blog.getify.com/labjs-script-loading-the-way-it-should-be/
+ - title: Improving performance on twitter
+   link: https://blog.twitter.com/2012/improving-performance-on-twittercom
+ - title: Lifehacker and the hash bang debarkle
+   link: http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs
 ---
 
 Single Page Applications (SPAs) have become extremely popular on the web, because they are *supposed* to 'provide a more fluid user experience' [[0](#ref0)]. However, there are several technical issues which can be detrimental to the User Experience. Before getting to the issues, let's first discuss the difference between an SPA and a traditional multi-page website (MPW).
@@ -72,22 +87,3 @@ Whilst you can use Selenium (and other equivalents) to test SPAs, extra effort i
 SPAs are meant to provide a better experience. It is therefore ironic that SPAs require significantly more development effort, with a result that is detrimental to the user. Javascript is never going to do it better than the browser! Websites can still have Rich User Interfaces without cramming the entire site into one document.
 
 Furthermore, it is interesting to note that sites such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)] realised the SPA architecture was a mistake and have since reverted their architectures. The issues described in this article are self-induced. Remember, **avoiding the SPA architecture avoids the issues**.
-
-## Citations
-
-<dl>
-	<dt class="citation" id="ref0">[0]</dt>
-	<dd><a href="http://en.wikipedia.org/wiki/Single-page_application">Wikipedia: SPAs</a></dd>
-	<dt class="citation" class="citation" id="ref1"><a name="ref1"></a>[1]</dt>
-    <dd><a href="https://medium.com/joys-of-javascript/4353246f4480">Beyond pushState - building single page applications</a></dd>
-	<dt class="citation" class="citation" id="ref2"><a name="ref2"></a>[2]</dt>
-	<dd><a href="http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button">Stackoverflow: Detecting back button click</a></dd>
-	<dt class="citation" class="citation" id="ref3"><a name="ref3"></a>[3]</dt>
-	<dd><a href="http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo">Stackoverflow: SPAs and SEO</a></dd>
-	<dt class="citation" class="citation" id="ref4"><a name="ref4"></a>[4]</dt>
-	<dd><a href="http://blog.getify.com/labjs-script-loading-the-way-it-should-be/">Script loading hacks</a></dd>
-    <dt class="citation" class="citation" id="ref5"><a name="ref5"></a>[5]</dt>
-    <dd><a href="https://blog.twitter.com/2012/improving-performance-on-twittercom">Improving performance on twitter</a></dd>
-    <dt class="citation" class="citation" id="ref6"><a name="ref6"></a>[6]</dt>
-    <dd><a href="http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs">Lifehacker and the hash bang debarkle</a></dd>
-</dl>
