@@ -135,20 +135,32 @@ p {
 }
 
 .share {
-	border-top: 1px solid #eee;
-	padding-top: 30px;
 	margin-bottom: 30px;
 }
 
 .share p {
-	text-align: center;
 	font-style: italic;
-	font-size: 1.5em;
+	font-size: 1.3em;
 	margin: 0;
 }
 
-dt {
-    color: #2c3e50;
+.citations {
+
+}
+
+.citations ol {
+	list-style: none;
+	padding-left: 0;
+}
+
+.citations li {
+	margin-left: 0;
+	font-size: 0.75em;
+	margin-bottom: 8px;
+}
+
+.citations .ref {
+	margin-right: 3px;
 }
 
 blockquote {
@@ -190,7 +202,7 @@ a img {
 }
 
 #content {
-	padding: 0px 20px 30px;
+	padding: 0px 20px 20px;
 }
 
 #content p {
@@ -473,78 +485,55 @@ a img {
 }
 
 /**********************************************************
-* Newsletter
+* Forms
 **********************************************************/
 
-.newsletterInner {
-    padding: 20px;
-    overflow: hidden;
-}
-
-.newsletter h2 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.newslettter form {
-    overflow: hidden;
-}
-
-.newsletter .field {
-	width: 365px;
+form {
 	margin: 0 auto;
-	overflow: hidden;
 }
 
-@media (max-width: 440px) {
-	.newsletter .field  {
-		width: auto;
-	}
+.field {
+	margin-bottom: 15px;
 }
 
-.newsletter .email {
+.field label {
+	display: block;
+	margin-bottom: 10px;
+	font-family: 'droid sans';
+	color: #2c3e50;
+	text-transform: uppercase;
+	font-size: 0.9em;
+}
+
+.field input {
+	padding: 10px;
+	font-family: 'droid sans';
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.email {
     border: 1px solid #ddd;
     padding: 10px;
     font-size: inherit;
-    width: 215px;
-    float: left;
 }
 
-@media (max-width: 440px) {
-	.newsletter .email {
-		float: none;
-		margin: 0 auto 10px;
-		display: block;
-	}
-}
-
-.newsletter .submit {
+.submit {
     border: none;
     font-size: 1em;
     background-color: #536271;
     color: #fff;
-    padding: 9px 10px 9px;
+    padding: 15px 10px;
     font-family: arial;
-    width: 120px;
     display: block;
-    font-weight: bold;
     font-family: 'droid sans';
     text-transform: uppercase;
-	float: left;
 	transition: background-color .2s ease-out;
+	box-sizing: border-box;
+	width: 100%;
 }
 
-@media (max-width: 440px) {
-	.newsletter .submit {
-		float: none;
-		margin: 0 auto;
-		display: block;
-		width: 235px;
-	}
-}
-
-.newsletter .submit:hover {
+.submit:hover {
 	background-color: #253341;
 }
 

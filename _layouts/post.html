@@ -28,17 +28,10 @@
 
                	{{ content }}
 
+               	{% include share.html %}
+
                	{% include citations.html %}
             </div>
-
-			<div class="share">
-            	<p>
-            		Like this article?
-            		<a href="https://twitter.com/share?source=tweetbutton&text={{page.title}}&via=adambsilver&url={{site.url}}{{page.url}}&hashtags=frontend,{{page.categories[0]}}">Share on Twitter</a>
-            	</p>
-			</div>
-
-
         </div>
         {% include footer.html %}
     </div>
