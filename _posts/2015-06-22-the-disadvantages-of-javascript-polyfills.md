@@ -3,6 +3,19 @@ layout: post
 title:  "The disadvantages of Javascript polyfills"
 date:   2015-06-22 09:00:01
 categories: js
+citations:
+ - title: What's wrong with extending the DOM?
+   link: http://perfectionkills.com/whats-wrong-with-extending-the-dom/
+ - title: Extending native built-ins
+   link: http://perfectionkills.com/extending-native-builtins/
+ - title: Feature Detection - State of the art browser scripting
+   link: http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting
+ - title: Scalable JavaScript Application Architecture
+   link: https://www.youtube.com/watch?v=vXjVFPosQHw
+ - title: ES Shim readme - see "Shams" and "May fail" sections
+   link: https://github.com/es-shims/es5-shim
+ - title: Cross-browser widgets
+   link: http://peter.michaux.ca/articles/cross-browser-widgets
 ---
 
 A polyfill, also known as a shim, is a user defined implementation of an API that a developer expects a browser to provide natively, normalising browser differences. As a huge proponent of the outside-in approach to development, I can see the lure to try to develop web applications as if all browsers are the same. That said, this article discusses the problems you face when attempting to tame browsers in this way, which ultimately results in unreliable Javascript, unreliable web pages and of course, unhappy *users*.
@@ -86,23 +99,6 @@ But what about browsers lacking `Object.create`? Nothing happens. The user gets 
 ## Summary
 
 At first polyfills seem like a great idea. Having explored the intricacies of this technique, it's clear that at best, polyfills are harder to implement and cause application and browser logic to be tightly coupled &mdash; which is costly. At their worst they come with highly problematic caveats that cause pain for the developer &mdash; ultimately resulting in unreliable software and unhappy users. The answer is to use facades, enabling the abstracting away of complexity into reliable and lean software &mdash; every developers dream.
-
-## Citations
-
-<dl>
-	<dt class="citation" id="ref0">[0]</dt>
-	<dd><a href="http://perfectionkills.com/whats-wrong-with-extending-the-dom/">What's wrong with extending the DOM?</a></dd>
-	<dt class="citation" id="ref1">[1]</dt>
-	<dd><a href="http://perfectionkills.com/extending-native-builtins/">Extending native built-ins</a></dd>
-	<dt class="citation" id="ref2">[2]</dt>
-	<dd><a href="http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting">Feature Detection: State of the art browser scripting</a></dd>
-	<dt class="citation" id="ref3">[3]</dt>
-	<dd><a href="https://www.youtube.com/watch?v=vXjVFPosQHw">Scalable JavaScript Application Architecture</a></dd>
-	<dt class="citation" id="ref4">[4]</dt>
-	<dd><a href="https://github.com/es-shims/es5-shim">ES Shim readme: see "Shams" and "May fail" sections</a></dd>
-	<dt class="citation" id="ref5">[5]</dt>
-	<dd><a href="http://peter.michaux.ca/articles/cross-browser-widgets">Cross-browser widgets</a></dd>
-</dl>
 
 <!--
 

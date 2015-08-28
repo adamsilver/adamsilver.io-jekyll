@@ -3,6 +3,11 @@ layout: post
 title:  "Technical wanking"
 date:   2015-02-09 09:00:01
 categories: web
+citations:
+ - title: The disadvantages of Single Page Application
+   link: /articles/the-disadvantages-of-single-page-applications/
+ - title: Mortgage Driven Development
+   link: http://codemanship.co.uk/parlezuml/blog/?postid=147
 ---
 
 I have a secret. It's embarassing. I did something that I am ashamed of. I participated in the art of Technical Wanking. For those unaware, Technical Wanking is the practice of using "cool" and "new" technology because, well, it's "cool" and "new", but of course, technology should be chosen on its technical merit and technical merit alone. Let me tell you about how I came across this phenomena.
@@ -22,12 +27,3 @@ There are many more examples but the gist should be getting clearer. James conti
 When did all this nonsense become standard practice? Everyone's building them. Everyone writes about them. The problem is, when everyone is doing it, it's usually stupid. This follows in all walks of life. Most people eat McDonalds, but it doesn't make it good for you. In a paid profession, it is your *duty* not to do stupid things and to serve the client and end-user to the very best of your ability. It's an epidemic in the industry and I know *many* developers scattered across the industry, who are in the trenches having to use cool new technology that just causes various problems. It's most certainly a close relative of Mortgage Driven Development [[1](#ref1)] but we won't go into that in this article.
 
 In many ways I wish I hadn't participated in Technical Wankery back then, but then again, I wouldn't be where I am today having learnt all those useful lessons about what *not* to do. It's certainly a challenge convincing colleagues that "cool" and "new" technology isn't *cool* at all. But what's all this in aid of? The end-user of course! The *user* just wants to use *their* chosen browser to consume your content or buy your widget and get the hell back to living life. So now, I try to do for others what James did for me: hurl abuse at my fellow developers. Normally speaking, I get a good response, a little laugh, and the opportunity to explain myself.
-
-## Citations
-
-<dl>
-	<dt class="citation" id="ref0">[0]</dt>
-	<dd><a href="/articles/the-disadvantages-of-single-page-applications/">The disadvantages of Single Page Application</a></dd>
-	<dt class="citation" id="ref1">[1]</dt>
-	<dd><a href="http://codemanship.co.uk/parlezuml/blog/?postid=147">Mortgage Driven Development</a></dd>
-</dl>

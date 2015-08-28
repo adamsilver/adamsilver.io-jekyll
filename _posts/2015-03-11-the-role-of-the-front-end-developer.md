@@ -3,6 +3,17 @@ layout: post
 title:  "The role of the Front-end Developer"
 date:   2015-03-11 09:00:01
 categories: web
+citations:
+ - title: There is no UX, there is only UX
+   link: http://www.disambiguity.com/there-is-no-ux/"
+ - title: Why You Should Include Your Developer In The Design Process
+   link: http://www.smashingmagazine.com/2014/11/21/why-you-should-include-your-developer-in-the-design-process/"
+ - title: This is a mother fucking website
+   link: http://www.motherfuckingwebsite.com"
+ - title: Don't use AJAX to display personalised content on cached pages
+   link: /articles/dont-use-ajax-to-display-personalised-content-on-cached-pages/"
+ - title: Reintroduction to Cross-browser scripting
+   link: /articles/reintroducing-cross-browser-scripting/"
 ---
 
 The role of the Front-end developer has changed significantly over the years and responsiblities extend far beyond translating visual designs into code. Recently, Front-end developers should be involved in many other aspects of the design and development process.
@@ -47,18 +58,3 @@ Front-end developers should endeavour to test in as many browsers as is reasonab
 ## Development process and methodologies
 
 Whilst not specifically related to Front-end developers, it is very important to be able to work as part of a team in a given process. This means an understanding of various Agile methodologies. Better still, it's highly beneficial to you and your team to be able to spot friction and influence the process regularly to deliver software in a more efficient way.
-
-## Citations
-
-<dl>
-	<dt class="citation" id="ref0">[0]</dt>
-	<dd><a href="http://www.disambiguity.com/there-is-no-ux/">There is no UX, there is only UX</a></dd>
-	<dt class="citation" id="ref1">[1]</dt>
-	<dd><a href="http://www.smashingmagazine.com/2014/11/21/why-you-should-include-your-developer-in-the-design-process/">Why You Should Include Your Developer In The Design Process</a></dd>
-	<dt class="citation" id="ref2">[2]</dt>
-	<dd><a href="http://www.motherfuckingwebsite.com">This is a mother fucking website</a></dd>
-	<dt class="citation" id="ref4">[4]</dt>
-	<dd><a href="/articles/dont-use-ajax-to-display-personalised-content-on-cached-pages/">Don't use AJAX to display personalised content on cached pages</a></dd>
-	<dt class="citation" id="ref5">[5]</dt>
-	<dd><a href="/articles/reintroducing-cross-browser-scripting/">Reintroduction to Cross-browser scripting</a></dd>
-</dl>

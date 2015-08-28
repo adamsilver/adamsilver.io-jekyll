@@ -3,6 +3,17 @@ layout: post
 title:  "The disadvantages of CSS preprocessors"
 date:   2015-05-05 09:00:01
 categories: css
+citations:
+ - title: SASS Source Maps
+   link: http://thesassway.com/intermediate/using-source-maps-with-sass
+ - title: Should generated CSS be included in source control?
+   link: http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo
+ - title: Consencus Driven Development
+   link: http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/
+ - title: Cons of a CSS Preprocessor (File size deceiving)
+   link: http://jaketrent.com/post/cons-css-preprocessors/
+ - title: The problem with CSS preprocessors (Dumb code duplication is dumb)
+   link: http://blog.millermedeiros.com/the-problem-with-css-pre-processors/
 ---
 
 CSS preprocessors have many advantages providing helpful methods for writing and reusing styles. However, CSS processors have several *disadvantages*, which I discuss in this article. It would be wise to at least be conscious of these issues before making the decision to use one on your project.
@@ -77,18 +88,3 @@ Whilst not as DRY as I would like, prefixing your selectors with a common ancest
 ## Summary
 
 CSS preprocessors clearly have issues, some of which there *are* solutions to. For me and many other developers, the disadvantages are overwhelming and cause too much friction in comparison to using plain CSS. At the very least be concious of the decision to use a CSS preprocessor and the impact it might have on your team.
-
-## Citations
-
-<dl>
-	<dt class="citation" id="ref0">[0]</dt>
-	<dd><a href="http://thesassway.com/intermediate/using-source-maps-with-sass">SASS Source Maps</a></dd>
-	<dt class="citation" id="ref1">[1]</dt>
-	<dd><a href="http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo">Should generated CSS be included in source control?</a></dd>
-	<dt class="citation" id="ref2">[2]</dt>
-	<dd><a href="http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/">Consencus Driven Development</a></dd>
-	<dt class="citation" id="ref3">[3]</dt>
-	<dd><a href="http://jaketrent.com/post/cons-css-preprocessors/">Cons of a CSS Preprocessor (File size deceiving)</a></dd>
-	<dt class="citation" id="ref4">[4]</dt>
-	<dd><a href="http://blog.millermedeiros.com/the-problem-with-css-pre-processors/">The problem with CSS preprocessors (Dumb code duplication is dumb)</a></dd>
-</dl>
