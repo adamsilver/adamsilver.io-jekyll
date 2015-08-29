@@ -182,9 +182,13 @@ p {
 	font-size: 0.8em;
 }
 
-.nowRead h2 {
-	margin-top: 0;
-	font-size: 1.4em;
+.nowRead .articleTitle {
+	font-family: 'droid sans';
+	font-weight: bold;
+	font-size: 1.6em;
+	margin-bottom: 1em;
+    color: #2c3e50;
+    margin-top: 0;
 }
 
 blockquote {
