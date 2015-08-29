@@ -457,25 +457,24 @@ a img {
 }
 
 /**********************************************************
-* Secondary navigation
+* Breadcrumb
 **********************************************************/
 
-#secondaryNavigation {
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-
 #breadcrumb {
-    float: left;
-    margin-top: 10px;
+    padding-top: 10px;
     font-family: 'droid sans';
     font-size: 0.9em;
+    padding-bottom: 20px;
 }
 
 #breadcrumb span {
     font-weight: bold;
     color: #2c3e50;
 }
+
+/**********************************************************
+* Citation
+**********************************************************/
 
 .citation:target {
     background: #FFFF00;

@@ -1,6 +1,7 @@
 #headerInner,
 #content,
-#footerInner {
+#footerInner,
+.nowReadInner {
 	width: 720px;
 	margin: 0 auto;
 }

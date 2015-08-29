@@ -9,12 +9,9 @@
             {% include header.html %}
 			<div id="content">
                 {% if page.id != "home" %}
-                    <div id="secondaryNavigation">
-
-                        <div id="breadcrumb">
-                            <a href="/">Home</a> >
-                            <span>{{ page.title }}</span>
-                        </div>
+                    <div id="breadcrumb">
+                        <a href="/">Home</a> >
+                        <span>{{ page.title }}</span>
                     </div>
                 {% endif %}
                 <div id="page">
