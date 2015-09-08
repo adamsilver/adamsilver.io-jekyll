@@ -14,33 +14,43 @@ citations:
    link: https://blogs.akamai.com/2014/05/and-you-thought-your-page-could-not-be-cached.html
 ---
 
-Sometimes, developers are on a pursuit to reduce page-load time by utilising content caching [[0](#ref0)]. This is useful until a page contains personalised content, meaning this type of caching can't neccessarily be used. This is because a user might receive the cached version of somebody elses personalised content. The problem arises with the suggestion that this can be solved using AJAX to request the personalised content and this is problematic for several reasons. Before discussing the problems, let's define personalised content.
+Sometimes developers are on a pursuit to reduce page-load time by utilising content caching [[0](#ref0)]. This is beneficial to the user experience because the page response times are *much* quicker.
 
-## Personalised content
+When the page contains personalised content, this type of caching can't neccessarily be used because a user might receive the cached version of somebody elses personalised content.
+
+The problem arises with the suggestion that you can use AJAX to request the personalised content. This article discusses these problems.
+
+## What is personalised content?
 
 Personalised content is any content that is specific to a user. The most basic example would be a "Logout" link because the page knows that *you* are logged in and that *you* may want to logout.
 
-## Architecture
+With that said, these can be cached because you can have two types of cached pages. As in a whole bunch of logged out users can get the logged out cached page and a whole bunch of logged in users can get the logged in cached page etc.
+
+An example that doesn't scale and makes content-caching redundant is when personalised content includes something specific to a user. A good example would be their name e.g. a 'Welcome Bob' message.
+
+## What are the problems with this?
+
+### Architecture
 
 *Is there one extra request for personalised content or multiple? Do you serve it as JSON and then parse that on the client? How do you organise your scripts for this? How do you organise the view partials for this on the server? At what point is personalised content not essential to the User Experience (UX) and how does that affect architecture?*
 
 What seems like a simple use of AJAX has a significant effect on architecture and it doesn't stop there.
 
-## Accessibility
+### Accessibility
 
 If the user doesn't have Javascript (or they have it but not the capability to make AJAX requests, traverse or manipulate the Document etc) they will be unable to use this functionality. This goes against the principle of Progressive Enhancement [[1](#ref1)] and is completely against the spirit of the web. And in the case of "logging out" this would obviously be a poor decision. Furthermore, extra effort would be required to ensure the injected content is accessibile to screen readers. This alone is reason enough to realise this is an unacceptable technical solution.
 
-## Design
+### Design
 
 Christian Heilmann rightly says that *AJAX shouldn't break the web* [[2](#ref2)] and using it in this way is doing just that. He also highlights that when AJAX is used, it is important to remember how much the browser does for free, that subtly goes unnoticed. This includes displaying a loading indicator with  progress bar as well as handling page not found and timeout errors. Utilising AJAX and content-caching like this, means the page is only half loaded and half rendered at which point, and sometime later, the personalised content is injected. The UX is likely to be at least a little jarring as the page fills in the gaps.
 
 Solutions may include loading spinners, hiding content and transitions but in reality they are far from perfect. Also, the user may not see the various updates as they are busy interacting further down the page. This is all exacabated on slower connections.
 
-## Effort
+### Effort
 
 Extra design effort is required to cater for the aformentioned degrading in UX. Extra development effort is required to write and test script. It's also harder to automate the functional testing and changes the way in which those tests are written.
 
-## Performance
+### Performance
 
 Instead of having a single HTTP request that contains the entire required response there will now be multiple. The first would be for the Document containing non-personalised content. The subsequent request will be via AJAX and *will* hit your web server, therefore subject to the same latency as always.
 
