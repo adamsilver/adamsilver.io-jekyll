@@ -2,7 +2,7 @@
 layout: post
 title:  "Technical wanking"
 date:   2015-02-09 09:00:01
-categories: web
+categories: js spas
 citations:
  - title: The disadvantages of Single Page Application
    link: /articles/the-disadvantages-of-single-page-applications/

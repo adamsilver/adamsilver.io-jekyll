@@ -3,7 +3,7 @@ layout: post
 title: "The Real Progressive Enhancement"
 date:   2015-08-16 09:00:01
 tagline: "How to avoid the fuck you experience"
-categories: js
+categories: progressiveenhancement js
 citations:
  - title: "Myth-Busting Progressive Enhancement"
    link: "http://www.sitepoint.com/javascript-dependency-backlash-myth-busting-progressive-enhancement/"

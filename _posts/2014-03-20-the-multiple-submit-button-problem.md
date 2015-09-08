@@ -3,7 +3,7 @@ layout: post
 title:  "The multiple submit button problem"
 tagline: "And how to solve it"
 date:   2014-03-20 09:00:01
-categories: accessibility
+categories: forms a11y ux
 ---
 
 Every now and then a form is designed to be multi purpose &mdash; for example, you may have an address form that has a post code look up facility; one button saves the address, one button looks up the address via post code. Forms such as this can cause problems for users that submit the form via keyboard.

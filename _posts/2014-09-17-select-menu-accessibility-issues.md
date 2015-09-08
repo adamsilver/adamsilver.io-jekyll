@@ -2,7 +2,7 @@
 layout: post
 title:  "Select menu accessibility issues"
 date:   2014-09-17 09:00:01
-categories: accessibility
+categories: forms ux a11y
 ---
 
 Unfortunately, some websites choose to employ a select menu that will submit a form when the value is changed; and with the submit button omitted from the User Interface. The rationale behind this decision is ironically to improve the User Experience (UX), typically in the name of a cleaner interface and/or reducing clicks. Unfortunately, this introduces a degradation in UX.

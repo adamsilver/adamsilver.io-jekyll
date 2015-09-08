@@ -2,7 +2,7 @@
 layout: post
 title:  "The role of the Front-end Developer"
 date:   2015-03-11 09:00:01
-categories: web
+categories: js frontenddevelopment
 citations:
  - title: There is no UX, there is only UX
    link: http://www.disambiguity.com/there-is-no-ux/"

@@ -2,7 +2,7 @@
 layout: post
 title:  "The disadvantages of Single Page Applications"
 date:   2014-08-11 09:00:01
-categories: js
+categories: js spas
 citations:
  - title: Wikipedia on SPAs
    link: http://en.wikipedia.org/wiki/Single-page_application

@@ -2,7 +2,7 @@
 layout: post
 title:  "DOM scripting forms"
 date:   2014-01-02 09:00:59
-categories: js
+categories: forms js
 citations:
  - title: "DOM 0 API"
    link: "http://docs.oracle.com/cd/E19957-01/816-6408-10/"

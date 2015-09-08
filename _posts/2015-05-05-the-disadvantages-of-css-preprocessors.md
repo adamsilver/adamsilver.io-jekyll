@@ -2,7 +2,7 @@
 layout: post
 title:  "The disadvantages of CSS preprocessors"
 date:   2015-05-05 09:00:01
-categories: css
+categories: css sass less
 citations:
  - title: SASS Source Maps
    link: http://thesassway.com/intermediate/using-source-maps-with-sass

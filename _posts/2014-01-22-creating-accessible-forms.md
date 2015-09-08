@@ -2,7 +2,7 @@
 layout: post
 title:  "Creating accessible forms"
 date:   2014-01-22 09:00:01
-categories: accessibility
+categories: forms a11y ux
 ---
 
 <!-- none option on radios -->
