@@ -25,9 +25,9 @@ citations:
    link: "http://peter.michaux.ca/articles/cross-browser-widgets"
 ---
 
-Progressive Enhancement is one of those things that everyone knows right? However, throughout my career, it has always been a hot topic, and one that developers (including myself) have struggled with, in one form or other, demonstrating significant misunderstandings about the subject, particularly when it comes to Javascript.
+The Javascript element of Progressive Enhancement, is quite possibly the most important and misunderstood aspect of client-side Javascript development, period.
 
-This article addresses these misunderstandings and provides long forgotten but reliable solutions, that have stood the test of time and can still, today be considered cutting-edge. The fact is, this subject is quite possibly the most important and misunderstood aspect of client-side Javascript development, period.
+This article addresses these common misunderstandings and provides what should be considered cutting-edge, even though these methods have been around for a very, *very* long time and have simply been forgotten or ignored in the industry.
 
 > &ldquo;The problems we have with websites are ones we create ourselves&rdquo;
 <br>&mdash; <cite>Motherfuckingwebsite.com</cite>
