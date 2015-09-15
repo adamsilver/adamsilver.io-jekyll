@@ -18,15 +18,15 @@ Sometimes developers are on a pursuit to reduce page-load time by utilising cont
 
 When the page contains personalised content, this type of caching can't neccessarily be used because a user might receive the cached version of somebody elses personalised content.
 
-The problem arises with the suggestion that you can use AJAX to request the personalised content. This article discusses these problems.
+The problem arises with the suggestion that you can use AJAX to request the personalised content. This article discusses this problem. But first, what is personalised content?
 
 ## What is personalised content?
 
 Personalised content is any content that is specific to a user. The most basic example would be a "Logout" link because the page knows that *you* are logged in and that *you* may want to logout.
 
-With that said, these can be cached because you can have two types of cached pages. As in a whole bunch of logged out users can get the logged out cached page and a whole bunch of logged in users can get the logged in cached page etc.
+With that said, this can be cached because you can create two types of cached pages. As in a whole bunch of anonymous users can receive the *logged-out* cached page and a whole bunch of logged-in users can get the *logged-in* cached page.
 
-An example that doesn't scale and makes content-caching redundant is when personalised content includes something specific to a user. A good example would be their name e.g. a 'Welcome Bob' message.
+An example that doesn't scale and makes content-caching redundant is when personalised content includes something specific to a user. A good example would be their name such as a 'Welcome Bob' message.
 
 ## What are the problems with this?
 
