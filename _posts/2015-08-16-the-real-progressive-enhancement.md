@@ -27,7 +27,7 @@ citations:
 
 The Javascript element of Progressive Enhancement, is quite possibly the most important and misunderstood aspect of client-side Javascript development, period.
 
-This article addresses these common misunderstandings and provides what should be considered cutting-edge, even though these methods have been around for a very, *very* long time and have simply been forgotten or ignored in the industry.
+This article addresses these common misunderstandings and provides techniques that can still, today be considered cutting-edge, even though they have been around for a very long time and seem to have been forgotten.
 
 > &ldquo;The problems we have with websites are ones we create ourselves&rdquo;
 <br>&mdash; <cite>Motherfuckingwebsite.com</cite>
@@ -80,17 +80,17 @@ The browser and feature in this example is not the relevant point here. It could
 
 ## What shouldn't you do?
 
-Often, looking at what others do can serve as a useful guide in what *not* to do.
+Sometimes, it can be helpeful to explore how others are tackling the problem, because when you find flaws, you can avoid them and explore a more successful path.
 
-Some ignore the problem exists. If they haven't experienced a problem, then they often think one does not exist. Or worse, they believe it to be an edge case. Regardless, this is unfortunate to the people using the website and the potential loss to the business.
+Some ignore the problem exists. If they haven't experienced a problem, then they often think one does not exist. Or perhaps, they believe it to be an edge case. Regardless, this is unfortunate to the people using the website and the potential loss to the business.
 
-Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often, these libraries support a subset of browsers i.e. it's multi-browser as opposed to cross-browser [[1](#ref1)] &mdash; a sure sign that the library does not practice Progressive Enhancement and in-turn doesn't care about people very much.
+Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often, these libraries support a subset of browsers i.e. it's multi-browser as opposed to cross-browser [[1](#ref1)] &mdash; a sure sign that the library does not practice Progressive Enhancement.
 
 People who use *other* browsers get the aforementioned *fuck you* experience, often at times when it would be straightforward to provide a *core* experience. The same thing happens when a library releases a new version and happens to drop support for more browsers &mdash; this of course is a never ending cycle.
 
 > Cutting The Mustard falls short
 
-*Cutting The Mustard* (CTM) is a relatively new approach [[2](#ref2)] to Progressive Enhancement, one which has the premise of a reliable solution and is based on the concept of a core and an enhanced experience. However, it's implementation (shown below) falls short, *very* short.
+*Cutting The Mustard* (CTM) is a relatively new approach [[2](#ref2)] to Progressive Enhancement, one which has the premise of a reliable solution and is based on the concept of a core and an enhanced experience. However, it's implementation (shown below) falls short.
 
 	if(	document.querySelector && window.addEventListener && window.localStorage) {
 		// bootstrap application
@@ -98,9 +98,9 @@ People who use *other* browsers get the aforementioned *fuck you* experience, of
 
 It works by *detecting* a few *choice* browser APIs, in order to *infer* that the browser is "modern" &mdash; something that is impossible to determine and irrelevant anyway.
 
-*Impossible*, considering the sheer amount of new browsers being released and *irrelevant*, because release date does not determine capability. Besides, every browser was new once, so it's quite obvious that an inference for modernity, is basically useless.
+*Impossible*, considering the sheer amount of new browsers being released and *irrelevant*, because release date does not determine capability. Besides, every browser was new once, so it's quite obvious that an inference for modernity provides little value.
 
-Anyway, once CTM determines it's "modern", the Javascript application starts and (attempts to) provide the enhanced experience. The emphasis on *browsers* as opposed to *features*, suggests this technique is frail. And, inference is little better than User Agent sniffing, which is something that Richard Cornford explains superbly in *Browser Detection (and What To Do Instead)* [[3](#ref3)].
+Once CTM determines it's "modern", the Javascript application starts and (attempts to) provide the enhanced experience. The emphasis on *browsers* as opposed to *features*, suggests this technique is frail. And, inference is little better than User Agent sniffing, which is something that Richard Cornford explains superbly in *Browser Detection (and What To Do Instead)* [[3](#ref3)].
 
 More specifically, CTM has the following problems of note:
 
@@ -126,7 +126,9 @@ More specifically, CTM has the following problems of note:
 		}, false);
 	}
 
-Jeremy Keith says that whilst *some* people implement CTM with a few choice APIs, it doesn't mean you have to. Jeremy suggests you detect what you use. He is most definitely right. My point was that this is how the technique is advertised, and often implemented. Regardless, as I mention above, there are many more points of failure anyway.
+I had a little chat with Jeremy Keith about this and he rightly says that you can use CTM better by detecting all the APIs. He is definitely right of course.
+
+My point is that this is how the technique is advertised and often implemented, and that in addition to this there are several other points of failure to consider anyway.
 
 ## What *is* the solution?
 
@@ -159,7 +161,6 @@ The only way to reliably do this is through wrappers, or *facades* if jargon is 
 **5. In the event that Javascript is enabled and that the condition does *not* pass, the user gets the degraded experience.** In Cutting The Mustard lingo, it simply doesn't cut it.
 
 At this point, some might say they don't concern themselves with browser problems, as libraries take care of them (the majority unfortunately don't). They might even portray themselves as application developers, but just because responsibility is abdicated, doesn't mean the problem isn't there.
-
 
 The idea of abstractions are good, the idea of several abstractions i.e. a library, is also good. But if that library is monolithic in nature, context-less, lacks feature detection and feature testing, leans on polyfills (or browser sniffing or object inferences etc) and does **not** expose a dynamic API, then ultimately you are unable to Progressively Enhance your application and your users and the business you work for, will suffer for it.
 
