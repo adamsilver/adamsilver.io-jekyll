@@ -10,11 +10,9 @@ citations:
    link: http://stackoverflow.com/questions/3410984/javascript-namespace
 ---
 
-Namespaces provide organisation which leads to discoverability, and in the context of Javascript, the minimisation of global variables [[0](#ref0)]. Javascript doesn't (currently) have a dedicated construct for namespacing but it can be imitated. Typically over-engineered solutions [[1](#ref1)] are used but they are unnecessary and potentially problematic.
+Namespaces are used to help with code organisation and discoverability, and in the context of Javascript, the minimisation of global variables [[0](#ref0)]. Javascript doesn't (at the time of writing) have a dedicated construct for namespacing, but it can be imitated using object literals. This article discusses a simple and lean method of utilising namespaces in your application.
 
-For demonstration purposes let's define an example application that we are going to sketch out using a simple, DRY, reliable and performant namespacing solution.
-
-Our application will be a zoo and it will have animals and staff members. It will have two types of animal and two types of staff member. Additionally, some basic information about the zoo will be stored in the codebase.
+For demonstration purposes let's define an example application. Our application will be a zoo and just like *real* zoos it will have animals. Additionally, some basic information about the zoo will be stored in the codebase.
 
 ## Directory structure
 
@@ -28,12 +26,8 @@ It's helpful to visualise the directory structure as follows:
 				zoo.animals.js
 				zoo.animals.Penguin.js
 				zoo.animals.Tiger.js
-			staff/
-				zoo.staff.js
-				zoo.staff.Keeper.js
-				zoo.staff.SalesAssistant.js
 
-Namespaces will be defined in zoo.js, zoo.animals.js and zoo.staff.js. All other files define components of the zoo. Each folder represents a namespace. Each namespace file simply assigns an empty object to a variable or property.
+Namespaces will be defined in `zoo.js` and `zoo.animals.js`. All other files define components of the zoo. Each folder represents a namespace. Each namespace file simply assigns an empty object to a variable or property.
 
 ## Namespace setup
 
@@ -44,17 +38,12 @@ Namespaces will be defined in zoo.js, zoo.animals.js and zoo.staff.js. All other
 
 ### Sub level namespace
 
-For our example app we don't need a deep hierarchy. Add levels as you need them.
+For our example app we don't need a deep hierarchy. Add levels as you need them. For us we just need to group animals.
 
 	// zoo.animals.js
 	zoo.animals = {};
 
-and
-
-	// zoo.staff.js
-	zoo.staff = {};
-
-**Note**: The namespace matches the file name ensuring the namespaces are discoverable.
+*Note: The namespace matches the file name which aids discoverability.*
 
 ## Animal component definitions
 
@@ -72,25 +61,9 @@ and
 		// constructor and not relevant to this
 	};
 
-## Staff component definitions
-
-### Keeper component
-
-	// zoo.staff.Keeper.js
-	zoo.staff.Keeper = function() {
-		// constructor and not relevant to this
-	};
-
-### Sales assistant component
-
-	// zoo.staff.SalesAssistant.js
-	zoo.staff.SalesAssistant = function() {
-		// constructor and not relevant to this
-	};
-
-**Note**: The component definition matches the file name ensuring the components are discoverable.
-
 ### Zoo information
+
+When it comes to static information you can simply assign an object to your chosen namespace.
 
 	// zoo.information.js
 	zoo.information = {
@@ -98,4 +71,8 @@ and
 		address: "52 Zoo Lane, ZA1 2AP"
 	};
 
-**Note**: Do not be concerned about having too many files; overly complex namespace hiearchies should be avoided and separate files should be concatenated into one for performance.
+*Note: Do not be concerned about having too many files; overly complex namespace hiearchies should be avoided and separate files should be concatenated into one for performance.*
+
+## Summary
+
+Every component should be assigned to a namespace. Every namespace should be defined in its own file. File names and component names should match and static information can be assigned directly without the need for a separate namespace file as per `zoo.information`. Following these rules leads to an intuitive, well organised and simple codebase.
