@@ -656,6 +656,12 @@ p code {
 	margin: 0 auto;
 }
 
+@media (max-width: 760px) {
+	#article .image img {
+		max-width: 320px;
+	}
+}
+
 @media (min-width: 760px) {
 
 	#content,
