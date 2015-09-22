@@ -5,11 +5,11 @@ date:   2014-09-17 09:00:01
 categories: forms ux a11y
 ---
 
-We've all seen it. A select menu without a submit button. They use script to submit the form when the selected value is changed. The thinking behind this is normally to declutter the UI and reduce clicks. However, UX is not about decluttering the UI or reducing clicks. It's about making human-friendly experiences. And unfortunately, this particular UI causes unfriendly experiences.
+We've all seen it. A select menu without a submit button. In this case, a script is used to submit the form when the selected value is changed. The thinking behind this is normally to declutter the UI and reduce clicks. However, UX is not about decluttering the UI or reducing clicks. It's about making human-friendly experiences. And unfortunately, this particular UI causes unfriendly experiences. This article discusses this unfriendliness.
 
 ## TL;DR
 
-If you really don't want to understand what the problems are feel free to ensure *every* form must have a submit button, even if it only has a single control.
+If you want the answer without the theory, here it is: *every* form must have a submit button, even if it only has a single control.
 
 ## Debunking a cleaner UI and reducing clicks
 
