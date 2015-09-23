@@ -15,11 +15,13 @@ The reasoning behind this is normally to declutter the UI and reduce clicks. How
 
 Unfortunately, when you remove the submit button, and change the native browser behaviour, it leads to an *unfriendly* human experience.
 
-If you want the conclusion without the *why*, here it is: **Every form must have a submit button, even if it only has a single control.** If you do want the *why*, keep reading.
+If you want the conclusion without the *why*, here it is: **every form must have a submit button, even if it only has a single control.**
 
-Select controls are meant to be used to to help users input data. They are *not* meant to be used for navigation; that's what links are for. People don't intuitively expect to navigate on selection.
+If you do want the *why*, keep reading.
 
-This is a *learned* behaviour and one that has become commonplace, due to the misuse of the select control. And now, others have and continue to adopt this anti-pattern to the detriment of their users.
+Select controls are meant to be used to help users fill in data. They are *not* meant to be used for navigation; that's what links are for.
+
+People don't intuitively expect to navigate on selection. This is a *learned* behaviour and one that has become commonplace, due to the misuse of the select control. And now, others have and continue to adopt this anti-pattern to the detriment of their users.
 
 This is what the Web Content Accessibility Guidelines have to say on the matter:
 
@@ -36,7 +38,7 @@ Not all people use a mouse; some use keyboards and screen readers etc. A keyboar
 
 Here is a [demonstration of the problem](http://html.cita.illinois.edu/script/onchange/onchange-example.php). In some browsers, the first option isn't accessible because it is already selected as the default option.
 
-People don't just use the mouse, they use keyboards and screen readers etc. In the same demo, if the user presses *down* just once, the form is submitted immediately (in the affected browsers) meaning it becomes *very* difficult to access the other options.
+Also, people don't *just* use the mouse, they use keyboards and screen readers. In the same demo, if the user presses *down* just once, the form is submitted immediately (in the affected browsers) meaning it becomes *very* difficult to access the other options.
 
 Vanessa Mosher and Steven Weintraub share Sarah Miller's usability test at the Open University with regard to screen readers:
 
