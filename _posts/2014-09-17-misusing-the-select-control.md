@@ -11,9 +11,7 @@ You have most likely seen or used a select menu without a submit button. The mos
 	<img src="/assets/img/sortby.png" alt="Sort by select">
 </div>
 
-The reasoning behind this is normally to declutter the UI and reduce clicks. However, UX is not about decluttering the UI or reducing clicks. It's about making human-friendly experiences.
-
-Unfortunately, when you remove the submit button, and change the native browser behaviour, it leads to an *unfriendly* human experience.
+The reasoning behind this is normally to declutter the UI and reduce clicks. Unfortunately, when you remove the submit button, and change the native browser behaviour, it leads to an *unfriendly* human experience.
 
 If you want the conclusion without the *why*, here it is: **every form must have a submit button, even if it only has a single control.**
 
@@ -23,12 +21,10 @@ Select controls are meant to be used to help users fill in data. They are *not* 
 
 People don't intuitively expect to navigate on selection. This is a *learned* behaviour and one that has become commonplace, due to the misuse of the select control. And now, others have and continue to adopt this anti-pattern to the detriment of their users.
 
-This is what the Web Content Accessibility Guidelines have to say on the matter:
+Basically, there should be a difference between selection and *submission*. Combining the two into a single interaction causes usability issues as I show later. Don't take my word for it &mdash; listen to what Web Content Accessibility Guidelines have to say on this:
 
 > &ldquo;Changing the setting of any user interface component does not automatically cause a change of context&rdquo;
 > <br>&mdash; WCAG 2.0 On Input Success Criterion 3.2.2
-
-Basically, there should be a difference between selection and *submission*. Combining the two into a single interaction causes usability issues as I demonstrate a little later.
 
 Vanessa Mosher and Steven Weintraub share Larry Marinem's insight into usability:
 
@@ -36,9 +32,11 @@ Vanessa Mosher and Steven Weintraub share Larry Marinem's insight into usability
 
 Not all people use a mouse; some use keyboards and screen readers etc. A keyboard user can tab to the select menu and press *up* and *down* to select an option.
 
-Here is a [demonstration of the problem](http://html.cita.illinois.edu/script/onchange/onchange-example.php). In some browsers, the first option isn't accessible because it is already selected as the default option.
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/rnKDDSo9Omk" frameborder="0" allowfullscreen></iframe>
 
-Also, people don't *just* use the mouse, they use keyboards and screen readers. In the same demo, if the user presses *down* just once, the form is submitted immediately (in the affected browsers) meaning it becomes *very* difficult to access the other options.
+In the above video, you will see that when I press *down* on the keyboard, I am taken to the selected page, but I was trying to get to the 3rd or 4th option in the select control and was unable to do so.
+
+*Note: if you want to have a play yourself, visit [this example](http://html.cita.illinois.edu/script/onchange/onchange-example.php) in an offending browser, such as Chrome (Windows), Opera (Windows), IE6, IE7, IE8 and IE9 &mdash; there are likely other browsers that do this, so if you come across one, please let me know.*
 
 Vanessa Mosher and Steven Weintraub share Sarah Miller's usability test at the Open University with regard to screen readers:
 
@@ -46,11 +44,9 @@ Vanessa Mosher and Steven Weintraub share Sarah Miller's usability test at the O
 
 > &ldquo;A few respondents also commented that auto-submit drop-down menus may be counter productive when interpreted by screen reader software (often used by the visually impaired). It seems that the software automatically selects the first item in the menu when the user opens it using either a mouse or keyboard.&rdquo;
 
-The affected browsers (to my knowledge) are Chrome (on Windows), Opera (on Windows), Internet Explorer 6, 7, 8 and 9 and of course various screen readers. It is likely there are others too.
+UX is about creating human-friendly experiences. It is *not* about [reducing clicks](http://idyeah.com/blog/2012/06/stop-counting-clicks/) or cleaning up the UI. Reducing clicks and having a cleaner interface might be part of the *result*, but they shouldn't be considered objectives, in and of themselves. The aim is to make something as simple as possible, but no simpler. And in this case, this rule has been broken.
 
 > &ldquo;Everything should be made as simple as it needs to be, and no simpler.&rdquo;
 > <br>&mdash; Albert Einstein
-
-UX is about creating human-friendly experiences. It is *not* about [reducing clicks](http://idyeah.com/blog/2012/06/stop-counting-clicks/) or cleaning up the UI. Reducing clicks and having a cleaner interface might be part of the outcome of solving a problem, but they are *not* objectives in and of themselves. The aim is to make something as simple as possible, but no simpler. And in this case, this rule has been broken.
 
 Select menus are *not* meant to be used for navigation; it is merely a learned behaviour. Removing the submit button significantly degrades the experience for your users. The good news is that, if you simply put the submit button back, you don't have to think about any of these problems or the affected browsers anymore.

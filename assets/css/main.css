@@ -134,6 +134,13 @@ p {
 	color: #2c3e50;
 }
 
+iframe {
+	width: 90%;
+	max-width: 540px;
+	margin: 0 auto;
+	display: block;
+}
+
 .share {
 	margin-bottom: 30px;
 }
