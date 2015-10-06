@@ -54,4 +54,4 @@ UX is about creating human-friendly experiences. [Reducing clicks](http://idyeah
 > &ldquo;Everything should be made as simple as it needs to be, and no simpler.&rdquo;
 > <br>&mdash; Albert Einstein
 
-Select menus are *not* meant to be used for navigation; it is merely a learned behaviour. Removing the submit button significantly degrades the experience for your users. The good news is that, if you simply put the submit button back (or use links instead) the problem disappears &mdash; *poof!*.
+Select menus are *not* meant to be used for navigation; it is merely a learned behaviour. Removing the submit button significantly degrades the experience for your users. The good news is that, if you simply put the submit button back (or use links instead) the problem disappears &mdash; *poof!*
