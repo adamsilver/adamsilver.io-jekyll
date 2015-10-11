@@ -23,8 +23,6 @@ In the context of the web, I call it &ldquo;bending the web&rdquo;. I must admit
 
 Have you done stuff like this before?
 
-Do you *still* design and build things like this?
-
 &ldquo;A Dao of Web Design&rdquo; written by John Allsopp over one and half decades ago, has some timeless insights that gives us more than a clue, as to why this happens and continues to happen today.
 
 > &ldquo;If you’ve never watched early television programs, it’s instructive viewing. Television was at that time often referred to as &ldquo;radio with pictures,&rdquo; and that’s a pretty accurate description. Much of television followed the format of popular radio at that time.&rdquo;
