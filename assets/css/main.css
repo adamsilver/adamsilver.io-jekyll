@@ -91,6 +91,7 @@ p {
 
 body {
 	font-family: 'droid serif', helvetica, arial;
+    text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
     font-size: 100%;
 }
