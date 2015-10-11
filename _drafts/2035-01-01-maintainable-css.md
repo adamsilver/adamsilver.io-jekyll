@@ -22,3 +22,5 @@ categories: css
 8. A component should be styled in its own right. Just above portability
 
 9. Explicit naming
+
+10. Up to naming UI components
