@@ -666,7 +666,7 @@ p code {
 
 @media (max-width: 760px) {
 	#article .image img {
-		max-width: 320px;
+		max-width: 100%;
 	}
 }
 
