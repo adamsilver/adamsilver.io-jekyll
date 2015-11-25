@@ -108,7 +108,7 @@ h2 {
     font-family: 'droid sans';
 	font-size: 1.6em;
 	margin-top: 1em;
-	margin-bottom: 1em;
+	margin-bottom: 0;
     color: #2c3e50;
 }
 
@@ -129,7 +129,7 @@ h4 {
 }
 
 p {
-    font-size: 1em;
+    font-size: 1.1em;
 	margin-bottom: 1.5em;
 	margin-top: 1em;
 	color: #2c3e50;
@@ -242,7 +242,7 @@ a img {
 }
 
 #content p {
-	line-height: 1.7em;
+	line-height: 1.8em;
 }
 
 #header {
