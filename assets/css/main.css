@@ -75,7 +75,7 @@
 }
 
 /**********************************************************
-* Color Turquoise: #1abc9c / Midnight blue: #2c3e50 / Clouds: #ecf0f1
+* Color Turquoise: #4A90E2 / Midnight blue: #2c3e50 / Clouds: #ecf0f1
 **********************************************************/
 
 /**********************************************************
@@ -226,7 +226,7 @@ a:visited {
 }
 
 a:hover {
-	color: #1abc9c;
+	color: #4A90E2;
 }
 
 a img {
@@ -446,11 +446,11 @@ a img {
 }
 
 #nav ul li a:hover {
-    color: #1abc9c;
+    color: #4A90E2;
 }
 
 #nav ul li a.active {
-    border-bottom: 3px solid #1abc9c;
+    border-bottom: 3px solid #4A90E2;
 }
 
 @media(max-width: 500px) {
