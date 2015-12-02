@@ -476,6 +476,7 @@ a img {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 @media(min-width: 650px) {
