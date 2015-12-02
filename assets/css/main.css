@@ -255,7 +255,7 @@ a img {
     overflow: hidden;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 400px) {
 	#headerInner {
 		padding: 14px 0px 0;
 	}
@@ -265,28 +265,28 @@ a img {
     float: left;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 400px) {
     #logo {
 		float: none;
 		overflow: hidden;
 		border-bottom: 1px solid #ebebeb;
-		padding-bottom: 10px;
+		padding-bottom: 14px;
 		padding-left: 20px;
 		padding-right: 20px;
     }
 }
 
 #logo .avatar {
-    float: left;
     border-radius: 50%;
     overflow: hidden;
     width: 32px;
     height: 32px;
-    margin-right: 10px;
 }
 
-@media (max-width: 500px) {
-    .avatar {
+@media (max-width: 400px) {
+    #logo .avatar {
+    	margin-left: auto;
+    	margin-right: auto;
     }
 }
 
@@ -297,11 +297,9 @@ a img {
     float: left;
     text-transform: uppercase;
     margin-top: 6px;
-}
-
-@media (max-width: 500px) {
-    #header h1 {
-    }
+    position: absolute;
+    left: -9999em;
+    top: 0;
 }
 
 #header h1 a {
@@ -311,9 +309,7 @@ a img {
 }
 
 #header h1 span {
-    position: absolute;
-    left: -9999em;
-    top: 0;
+
 }
 
 #content ul {
@@ -415,12 +411,11 @@ a img {
     margin-top: 6px;
 }
 
-@media(max-width: 450px) {
+@media(max-width: 400px) {
 	#nav {
 		float: none;
 		margin: 0;
 		padding-top: 15px;
-		padding-left: 20px;
 		background-color: #fafafa;
 		padding-bottom: 15px;
 	}
@@ -428,11 +423,16 @@ a img {
 
 #nav ul {
     list-style: none;
-    overflow: hidden;
+}
+
+@media(max-width: 400px) {
+	#nav ul {
+		text-align: center;
+	}
 }
 
 #nav ul li {
-    float: left;
+	display: inline-block;
     margin-left: 20px;
     font-family: 'droid sans';
     font-size: 0.9em;
@@ -453,7 +453,7 @@ a img {
     border-bottom: 3px solid #4A90E2;
 }
 
-@media(max-width: 500px) {
+@media(max-width: 400px) {
     #nav ul li {
     	margin-left: 0;
         margin-right: 20px;
@@ -462,6 +462,27 @@ a img {
 
 #nav li.contact {
 	margin-right: 0;
+}
+
+/**********************************************************
+* Face
+**********************************************************/
+
+.face {
+	border-radius: 50%;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+@media(min-width: 650px) {
+	.face {
+		float: left;
+		margin-right: 30px;
+	}
 }
 
 /**********************************************************
