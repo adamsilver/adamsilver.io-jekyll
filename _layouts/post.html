@@ -14,10 +14,22 @@
                 <span>{{ page.title }}</span>
             </div>
             <div id="article">
-                <h1 class="title">{{ page.title }}</h1>
-                {% if page.tagline %}
-                	<h2 class="tagline">{{ page.tagline }}</h2>
-                {% endif %}
+
+				<!-- {% if page.image %}
+					<div class="titleWrapper">
+						<img src="/assets/img/{{page.image}}" width="100%">
+					</div>
+					<style>
+						.titleWrapper {
+							margin-bottom: 20px;
+						}
+					</style>
+				{% endif %} -->
+
+					<h1 class="title">{{ page.title }}</h1>
+	                {% if page.tagline %}
+	                	<h2 class="tagline">{{ page.tagline }}</h2>
+	                {% endif %}
 
                 {% include articleMeta.html date=page.date cont=content %}
 
