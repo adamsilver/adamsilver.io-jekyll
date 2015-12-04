@@ -101,7 +101,8 @@ h1 {
     font-family: 'droid sans';
     margin-top: 0;
     margin-bottom: 0.2em;
-    color: #2c3e50;
+    color: #111;
+    font-weight: normal;
 }
 
 h2 {
@@ -109,7 +110,8 @@ h2 {
 	font-size: 1.6em;
 	margin-top: 1em;
 	margin-bottom: 0;
-    color: #2c3e50;
+    color: #A0A0A0;
+    font-weight: normal;
 }
 
 h3 {
@@ -117,22 +119,15 @@ h3 {
 	margin-top: 1em;
     font-family: 'droid sans';
 	margin-bottom: 0.5em;
-    color: #2c3e50;
-}
-
-h4 {
-	font-size: 1em;
-	margin-top: 1em;
-    font-family: 'droid sans';
-	margin-bottom: 0.5em;
-    color: #2c3e50;
+    color: #111;
+    font-weight: normal;
 }
 
 p {
     font-size: 1.1em;
 	margin-bottom: 1.5em;
 	margin-top: 1em;
-	color: #2c3e50;
+	color: #111;
 }
 
 iframe {
@@ -143,28 +138,64 @@ iframe {
 }
 
 .share {
-	margin-bottom: 30px;
+	margin-bottom: 60px;
+	text-align: center;
 }
 
 .share p {
-	font-style: italic;
-	font-size: 1.3em;
+	font-size: 1.4em;
 	margin: 0;
+	color: #A0A0A0;
+	font-style: italic;
+}
+
+
+.share .intro {
+	margin-bottom: 10px;
+}
+
+.share .twitter {
+	background: transparent url(/assets/img/twitter.png) no-repeat;
+	background-size: 22px 22px;
+	background-position: 10px 14px;
+	padding-left: 40px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-right: 20px;
+	display: inline-block;
+	text-decoration: none;
+	border-radius: 40px;
+	border: 1px solid #ddd;
+	font-family: 'droid sans';
+	text-transform: uppercase;
+	font-size: 0.9em;
+	color: #4099FF !important;
+}
+
+.share .twitter:hover {
+	background-color: #f9f9f9;
 }
 
 .citations {
 
 }
 
+.citations .footNotes {
+	font-size: 0.6em;
+	margin-bottom: 0;
+	font-weight: bold;
+}
+
 .citations ol {
 	list-style: none;
 	padding-left: 0;
+	margin-top: 0;
 }
 
 .citations li {
 	margin-left: 0;
-	font-size: 0.75em;
-	margin-bottom: 8px;
+	font-size: 0.6em;
+	margin-bottom: 5px;
 }
 
 .citations .ref {
@@ -192,10 +223,9 @@ iframe {
 
 .nowRead .articleTitle {
 	font-family: 'droid sans';
-	font-weight: bold;
 	font-size: 1.6em;
 	margin-bottom: 1em;
-    color: #2c3e50;
+    color: #111;
     margin-top: 0;
 }
 
@@ -205,9 +235,11 @@ blockquote {
 
 blockquote p {
     font-style: italic;
-    font-size: 1.4em;
+    font-size: 1.5em;
     margin-bottom: 1em;
     text-align: center;
+    color: #666666;
+    font-family: 'droid sans';
 }
 
  .ui {
@@ -216,13 +248,13 @@ blockquote p {
  }
 
 a:link {
-	color: #2c3e50;
+	color: #444;
 	-webkit-transition:color .1s;
     transition: color .1s;
 }
 
 a:visited {
-    color: #788A9C;
+    color: #444;
 }
 
 a:hover {
@@ -238,7 +270,7 @@ a img {
 }
 
 #content {
-	padding: 0px 20px 20px;
+	padding: 30px 20px;
 }
 
 #content p {
@@ -305,7 +337,7 @@ a img {
 #header h1 a {
     display: block;
     text-decoration: none;
-    color: #2c3e50;
+    color: #111;
 }
 
 #header h1 span {
@@ -317,7 +349,7 @@ a img {
 }
 
 #content li {
-	color: #2c3e50;
+	color: #111;
 }
 
 /**********************************************************
@@ -326,8 +358,8 @@ a img {
 
 #carbonads {
 	float: right;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-bottom: 30px;
     border: 1px solid #ebebeb;
     line-height: 1.2;
     width: 150px;
@@ -341,7 +373,7 @@ a img {
 		width: auto;
 		height: auto;
 		overflow: hidden;
-		margin: 10px 0 0 0;
+		margin: 30px 0;
 		width: 300px;
 	}
 }
@@ -440,7 +472,7 @@ a img {
 }
 
 #nav ul li a {
-    color: #2c3e50;
+    color: #111;
     text-decoration: none;
     display: block;
 }
@@ -482,7 +514,7 @@ a img {
 @media(min-width: 650px) {
 	.face {
 		float: left;
-		margin-top: 0;
+		margin-top: -10px;
 		margin-right: 30px;
 	}
 }
@@ -499,8 +531,7 @@ a img {
 }
 
 #breadcrumb span {
-    font-weight: bold;
-    color: #2c3e50;
+    color: #111;
 }
 
 /**********************************************************
@@ -558,7 +589,7 @@ form {
 	display: block;
 	margin-bottom: 10px;
 	font-family: 'droid sans';
-	color: #2c3e50;
+	color: #111;
 	text-transform: uppercase;
 	font-size: 0.9em;
 }
@@ -616,7 +647,7 @@ form {
 
 .date {
 	font-size: 0.75em;
-	color: #2c3e50;
+	color: #111;
 	font-style: italic;
 	margin: 0;
 }
@@ -628,16 +659,11 @@ form {
 .readingTime {
 	font-style: italic;
 	font-size: 0.75em;
-	color: #2c3e50;
+	color: #111;
 	margin: 0;
 }
 
 .read {
-	font-size: 1.5em;
-}
-
-#pg-home #content {
-	padding-top: 15px;
 }
 
 .newsletter {
@@ -651,7 +677,7 @@ form {
 pre {
 	font-family: Monaco,'Courier New','Courier',monospace;
 	font-size: 16px;
-	background-color: #ecf0f1;
+	background-color: #f5f5f5;
 	margin-bottom: 20px;
 	padding: 20px;
 	white-space: pre-wrap;       /* css-3 */
@@ -663,7 +689,7 @@ pre {
 
 p code {
 	font-size: 1.3em;
-	background: #ecf0f1;
+	background: #f5f5f5;
 	border: 1px solid #DBDEDF;
 }
 
@@ -703,4 +729,14 @@ p code {
 		margin: 0 auto;
 	}
 
+}
+
+/**********************************************************
+* Home
+**********************************************************/
+
+#pg-home .header {
+	margin-bottom: 30px;
+	overflow: hidden;
+	padding-top: 10px;
 }

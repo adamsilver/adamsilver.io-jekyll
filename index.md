@@ -3,11 +3,12 @@ layout: default
 id: home
 ---
 
-<div class="face">
-	<img src="/assets/img/avatar.jpg" alt="Adam Photo" width="100" height="100">
+<div class="header">
+	<div class="face">
+		<img src="/assets/img/avatar.jpg" alt="Adam Photo" width="100" height="100">
+	</div>
+	<h1>Hello, my name is Adam. I’m a UX driven front-end developer based in London.</h1>
 </div>
-
-# Hello, my name is Adam. I’m a UX driven front-end developer based in London, UK.
 
 I believe websites should be accessible to *everyone* and that embracing the conventions of the web leads to happy users.
 

@@ -26,9 +26,9 @@ Single Page Applications (SPAs) have become extremely popular on the web, becaus
 
 Whilst it's common to associate MVC, MVVM, XHR, DOM manipulation (and more) with an SPA, this article doesn't address them because they could *also* be utilised in an MPW. What *really* defines an SPA is that the **routing is handled by the client-side application using Javascript, instead of the server**. This means the application handles the browsing instead of the browser. Attempting to mimic the browser using Javascript is the root cause of the self-induced issues.
 
-## Issues
+**So about those issues...**
 
-### Navigation and fast back
+## Navigation and fast back
 
 Browsers store history, meaning pages load quickly when the user presses the *back* button. SPAs need to recreate this functionality. As Daniel Puplus says in his article [[1](#ref1)]:
 
@@ -46,7 +46,7 @@ Upon 'navigating', the application will need a method of storing and retrieving 
 
 The application will also need to determine *when* to store and retrieve pages from the cache. Navigation typically utilises *pushState* or *hashchange* and the application will need to differentiate between the user changing the URL (via clicking a link or typing a URL in the location bar) or manually hitting back/forward, which is not straightforward [[2](#ref2)].
 
-### Navigation and remembering scroll history position
+## Navigation and remembering scroll history position
 
 Browsers conveniently remember the scroll position of the pages you have visited and as Daniel Puplus says in his article:
 
@@ -54,7 +54,7 @@ Browsers conveniently remember the scroll position of the pages you have visited
 
 Clicking forward or back should remember the scroll position, but unfortunately, as SPAs rely on faux navigation this functionality is lost. Upon navigation, the application will need to remember the scroll position so that it can be retrieved later. This is a topic heavily related to "Navigation and fast back" discussed previously.
 
-### Cancelling navigation
+## Cancelling navigation
 
 The browser provides a *cancel* button, which when pressed, cancels the loading of the requested page. If a user clicks another link, the browser will cancel the previous request if one is in progress. This is useful for performance and also ensures the user's internet data allowance isn't eaten up unnecessarily.
 
@@ -62,23 +62,23 @@ SPA pages are likely to be retrieved via XHR, meaning several requests could be 
 
 The application will need to handle this functionality too. This means exposing a custom *cancel* button (which is obviously not desirable), and the duplicate requests need handling as well as cancelling all previous (in-progress) requests.
 
-### Navigation and data loss
+## Navigation and data loss
 
 Browsers normally provide the *beforeunload* event which allows the application to warn against losing unsaved changes. The application router will need to provide a hook to replicate this functionality i.e. *beforeRouting*.
 
-### Search engine optimisation
+## Search engine optimisation
 
 Some SPAs don't require SEO, but for those that do, the solutions aren't straightforward [[3](#ref3)].
 
-### Navigation and loading CSS &amp; JS
+## Navigation and loading CSS &amp; JS
 
 If an SPA grows to a significant size, loading the entire application on page load may be detrimental to the experience because it's akin to loading all pages of a website when only the home page was requested. Unfortunately, this leads to attempting to load CSS and JS for certain pages. Script loading is notoriously difficult and contains unreliable hacks [[4](#ref4)] which can can be fatal to the reliability of the application.
 
-### Analytics
+## Analytics
 
 Analytics tools will normally track page views and related tools without any extra effort but because an SPA page isn't really a page, this has to be handled with extra script which is triggered by the application router.
 
-### Automated functional testing
+## Automated functional testing
 
 Whilst you can use Selenium (and other equivalents) to test SPAs, extra effort is required to handle timeouts of XHR calls because there is no signal to Selenium that an XHR call has finished, like there is when a (real) page finishes loading. This leads to more questions and problems; *How long should the timeout be? What happens if it takes longer than normal?* The test execution will likely be slower too.
 

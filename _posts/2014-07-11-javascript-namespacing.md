@@ -29,14 +29,12 @@ It's helpful to visualise the directory structure as follows:
 
 Namespaces will be defined in `zoo.js` and `zoo.animals.js`. All other files define components of the zoo. Each folder represents a namespace. Each namespace file simply assigns an empty object to a variable or property.
 
-## Namespace setup
-
-### Root namespace
+## Root namespace setup
 
 	// zoo.js
 	var zoo = {};
 
-### Sub level namespace
+## Sub level namespace setup
 
 For our example app we don't need a deep hierarchy. Add levels as you need them. For us we just need to group animals.
 
@@ -45,23 +43,22 @@ For our example app we don't need a deep hierarchy. Add levels as you need them.
 
 *Note: The namespace matches the file name which aids discoverability.*
 
-## Animal component definitions
 
-### Penguin component
+## Penguin component definition
 
 	// zoo.animals.Penguin.js
 	zoo.animals.Penguin = function() {
 		// constructor and not relevant to this
 	};
 
-### Tiger component
+## Tiger component definition
 
 	// zoo.animals.Tiger.js
 	zoo.animals.Tiger = function() {
 		// constructor and not relevant to this
 	};
 
-### Zoo information
+## Zoo information definition
 
 When it comes to static information you can simply assign an object to your chosen namespace.
 
