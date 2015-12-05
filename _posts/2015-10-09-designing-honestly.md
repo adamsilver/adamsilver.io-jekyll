@@ -80,4 +80,4 @@ Another useful thing about the web, is that browsers and devices get better all 
 
 If you’re designing a product for the web, then design for the web.
 
-Be honest. Design honestly.
+**Be honest. Design honestly.**

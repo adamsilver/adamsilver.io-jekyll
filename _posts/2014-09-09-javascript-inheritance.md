@@ -20,7 +20,7 @@ This consists of defining a namespace for the library (which we will call *lib*)
 
     var lib = {};
 
-### Defining *cloneObject*
+## Defining *cloneObject*
 
     // For browsers that have Object.create
     if(Object.create) {
@@ -40,7 +40,7 @@ This consists of defining a namespace for the library (which we will call *lib*)
         })();
     }
 
-### Defining *inherit*
+## Defining *inherit*
 
 You will notice this function utilises the *cloneObject* function.
 

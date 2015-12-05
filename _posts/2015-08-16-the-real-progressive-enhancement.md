@@ -88,7 +88,7 @@ Some also abdicate responsibility by using 3rd party libraries without checking 
 
 People who use *other* browsers get the aforementioned *fuck you* experience, often at times when it would be straightforward to provide a *core* experience. The same thing happens when a library releases a new version and happens to drop support for more browsers &mdash; this of course is a never ending cycle.
 
-> Cutting The Mustard falls short
+## Cutting The Mustard falls short
 
 *Cutting The Mustard* (CTM) is a relatively new approach [[2](#ref2)] to Progressive Enhancement, one which has the premise of a reliable solution and is based on the concept of a core and an enhanced experience. However, it's implementation (shown below) falls short.
 

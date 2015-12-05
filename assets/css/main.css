@@ -719,8 +719,15 @@ p code {
 	font-size: 1.2em;
 }
 
+#article ol {
+	margin: 0;
+	padding: 0;
+}
+
 #article li {
-    line-height: 1.7em;
+    line-height: 2.5em;
+    font-size: 1.1em;
+    margin-left: 25px;
 }
 
 #article .image img {
