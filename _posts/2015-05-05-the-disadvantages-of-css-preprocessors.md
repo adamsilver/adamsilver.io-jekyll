@@ -20,7 +20,9 @@ CSS preprocessors have many advantages providing helpful methods for writing and
 
 ## Debugging
 
-Due to having a compilation step, the browser is not interpreting the source files, meaning the CSS line numbers are now irrelevant when trying to debug. This makes debugging a lot harder. Source maps [[0](#ref0)] provide one solution but this requires setup and only works in a limited set of *modern* browsers. Developers who care about users also test in *older* browsers. Alternatively, you can hunt down styles via abstract portions of rules, which is horrid. Brian Kernighan said "debugging is twice as hard as programming" and it's our duty to ensure this is as easy as possible.
+Due to having a compilation step, the browser is not interpreting the source files, meaning the CSS line numbers are now irrelevant when trying to debug. This makes debugging a lot harder.
+
+Source maps [[0](#ref0)] provide one solution but this requires setup and only works in a limited set of *modern* browsers. Developers who care about users also test in *older* browsers. Alternatively, you can hunt down styles via abstract portions of rules, which is horrid. Brian Kernighan said "debugging is twice as hard as programming" and it's our duty to ensure this is as easy as possible.
 
 ## Tooling
 
@@ -69,7 +71,7 @@ Note: you can't share the same colour for background-color and other CSS propert
 		-webkit-border-radius: 3px;
 	}
 
-**Nesting**, whilst not as DRY as I would like, prefixing your selectors with a common ancestor is a satisfactory solution to modularisation and encapsulation:
+**Nesting** can't quite be done but prefixing your selectors with a common ancestor is a satisfactory solution to modularisation and encapsulation:
 
 	.someComponent {
 	}
