@@ -20,7 +20,9 @@ The role of the Front-end developer has changed significantly over the years and
 
 ## User Experience (UX)
 
-Everyone is responsible for UX [[0](#ref0)] and Front-end Developers play an essential role [[1](#ref1)]. Due to the nature of their job, they should understand the platform better than anyone else. Having to develop for a huge range of browsers, across different Operating Systems and devices with different configurations means the Front-end developer truly understands the constraints of the web and embraces them to the users' advantage. This input is vital for creating a positive UX.
+Everyone is responsible for UX [[0](#ref0)] and Front-end Developers play an essential role [[1](#ref1)]. Due to the nature of their job, they should understand the platform better than anyone else.
+
+Having to develop for a huge range of browsers, across different Operating Systems and devices with different configurations means the Front-end developer truly understands the constraints of the web and embraces them to the users' advantage. This input is vital for creating a positive UX.
 
 ## Front-end architecture
 
@@ -37,7 +39,11 @@ An *experienced* Front-end developer should be able to design a suitable front-e
 
 ## Accessibility
 
-The beauty of the web is one of reach; deploy once and access everywhere; there are just two requirements: a browser and an Internet connection. Oh and of course a competent Front-end developer who won't fuck up your website [[2](#ref2)]. Front-end developers are responsible and should take pride in the fact that, the UIs they build, are accessible to everyone, no matter their age, ability, user interaction preferences and, choice of device, Operating System and browser. Front-end developers are *normally* speaking, the only advocates of accessibility and as accessibility is intertwined with usability, it's vital to be knowledgeable in the practice and to champion it readily.
+The beauty of the web is one of reach; deploy once and access everywhere; there are just two requirements: a browser and an Internet connection. Oh and of course a competent Front-end developer who won't fuck up your website [[2](#ref2)].
+
+Front-end developers are responsible and should take pride in the fact that, the UIs they build, are accessible to everyone, no matter their age, ability, user interaction preferences and, choice of device, Operating System and browser.
+
+Front-end developers are *normally* speaking, the only advocates of accessibility and as accessibility is intertwined with usability, it's vital to be knowledgeable in the practice and to champion it readily.
 
 ## Front-end feature writing
 
@@ -53,7 +59,9 @@ It is important Front-end developers understand various facets of performance en
 
 ## Browser compatibility
 
-Front-end developers should endeavour to test in as many browsers as is reasonable when developing, but will understand there is a balance to be had, as testing all browsers, in all compatibilities, on all devices is a sisyphean task. The balance can only be struck through experience of knowing which spread of browsers should be tested and at which frequency. Leaning on cross-browser scripting [[5](#ref5)] minimises the worry behind a lack of manual browser testing coverage.
+Front-end developers should endeavour to test in as many browsers as is reasonable when developing, but will understand there is a balance to be had, as testing all browsers, in all compatibilities, on all devices is a sisyphean task.
+
+The balance can only be struck through experience of knowing which spread of browsers should be tested and at which frequency. Leaning on cross-browser scripting [[5](#ref5)] minimises the worry behind a lack of manual browser testing coverage.
 
 ## Development process and methodologies
 
