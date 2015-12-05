@@ -75,10 +75,6 @@
 }
 
 /**********************************************************
-* Color Turquoise: #4A90E2 / Midnight blue: #2c3e50 / Clouds: #ecf0f1
-**********************************************************/
-
-/**********************************************************
 * General
 **********************************************************/
 
@@ -138,7 +134,10 @@ iframe {
 }
 
 .share {
-	margin-bottom: 60px;
+	padding-top: 30px;
+	padding-bottom: 60px;
+	padding-left: 20px;
+	padding-right: 20px;
 	text-align: center;
 }
 
@@ -151,7 +150,7 @@ iframe {
 
 
 .share .intro {
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 
 .share .twitter {
@@ -176,13 +175,23 @@ iframe {
 	background-color: #f9f9f9;
 }
 
-.citations {
+/**********************************************************
+* Citations
+**********************************************************/
 
+.citations {
+	border-top: 1px dashed #ddd;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.citationsInner {
+	padding: 20px;
 }
 
 .citations .footNotes {
 	font-size: 0.6em;
-	margin-bottom: 0;
+	margin: 0 0 5px;
 	font-weight: bold;
 }
 
@@ -190,6 +199,7 @@ iframe {
 	list-style: none;
 	padding-left: 0;
 	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .citations li {
@@ -202,10 +212,15 @@ iframe {
 	margin-right: 3px;
 }
 
+/**********************************************************
+* Now read
+**********************************************************/
+
 .nowRead {
 	border-top: 1px solid #ebebeb;
 	padding-top: 30px;
 	padding-bottom: 30px;
+	background-color: #F4F9FF;
 }
 
 .nowReadInner {
@@ -270,7 +285,7 @@ a img {
 }
 
 #content {
-	padding: 30px 20px;
+	padding: 30px 20px 0;
 }
 
 #content p {
@@ -722,6 +737,7 @@ p code {
 @media (min-width: 760px) {
 
 	#content,
+	.citationsInner,
 	#headerInner,
 	#footerInner,
 	.nowReadInner {
