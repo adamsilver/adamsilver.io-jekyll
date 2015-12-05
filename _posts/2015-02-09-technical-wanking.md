@@ -12,7 +12,7 @@ citations:
 
 **Do you have secrets? I do!**
 
-It's embarassing. I did something that I am ashamed of. I participated in the art of Technical Wanking. For those unaware, Technical Wanking is the practice of using "cool" and "new" technology because, well, it's "cool" and "new", but of course, technology should be chosen on its technical merit and technical merit alone. Let me tell you about how I came across this phenomena.
+It's embarrassing. I did something that I am ashamed of. I participated in the art of Technical Wanking. For those unaware, Technical Wanking is the practice of using "cool" and "new" technology because, well, it's "cool" and "new", but of course, technology should be chosen on its technical merit and technical merit alone. Let me tell you about how I came across this phenomena.
 
 I first heard of it's existence in 2010 when I was building my first Single Page Application (SPA). I had that feel-good feeling. We were using various "cutting-edge" libraries for DOM stuff and client-side templating. We rolled our own client-side router.
 
