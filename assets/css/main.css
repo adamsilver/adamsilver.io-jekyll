@@ -301,7 +301,7 @@ a img {
     overflow: hidden;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
 	#headerInner {
 		padding: 14px 0px 0;
 	}
@@ -311,7 +311,7 @@ a img {
     float: left;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     #logo {
 		float: none;
 		overflow: hidden;
@@ -327,25 +327,17 @@ a img {
     overflow: hidden;
     width: 32px;
     height: 32px;
-}
-
-@media (max-width: 400px) {
-    #logo .avatar {
-    	margin-left: auto;
-    	margin-right: auto;
-    }
+    float: left;
+    margin-right: 10px;
 }
 
 #header h1 {
-    font-family: 'droid sans';
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: normal;
     float: left;
     text-transform: uppercase;
-    margin-top: 6px;
-    position: absolute;
-    left: -9999em;
-    top: 0;
+    margin-top: 8px;
+    font-family: 'droid-serif';
 }
 
 #header h1 a {
@@ -355,7 +347,9 @@ a img {
 }
 
 #header h1 span {
-
+	position: absolute;
+	left: -999em;
+	top: 0;
 }
 
 #content ul {
@@ -372,27 +366,22 @@ a img {
 
 #nav {
     float: right;
-    margin-top: 6px;
+    margin-top: 4px;
 }
 
-@media(max-width: 400px) {
+@media(max-width: 500px) {
 	#nav {
 		float: none;
-		margin: 0;
+		margin-top: 0;
 		padding-top: 15px;
 		background-color: #fafafa;
 		padding-bottom: 15px;
+		padding-right: 20px;
 	}
 }
 
 #nav ul {
     list-style: none;
-}
-
-@media(max-width: 400px) {
-	#nav ul {
-		text-align: center;
-	}
 }
 
 #nav ul li {
@@ -414,14 +403,29 @@ a img {
 }
 
 #nav ul li a.active {
-    border-bottom: 3px solid #4A90E2;
+    padding: 3px 6px;
+    background-color: #4A90E2;
+    border-radius: 4px;
+    color: #fff;
 }
 
-@media(max-width: 400px) {
-    #nav ul li {
-    	margin-left: 0;
-        margin-right: 20px;
+@media(max-width: 500px) {
+
+	#nav ul li {
+		margin-left: 10px;
+	}
+
+    #nav ul li:first-child {
+    	margin-left: 20px;
     }
+}
+
+@media(max-width: 300px) {
+	#nav ul li {
+		display: block;
+		margin-bottom: 6px;
+		margin-left: 20px;
+	}
 }
 
 #nav li.contact {
