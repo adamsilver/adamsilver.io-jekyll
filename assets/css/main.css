@@ -92,7 +92,8 @@ body {
     font-size: 100%;
 }
 
-h1 {
+#page h1,
+#article h1 {
     font-size: 2em;
     font-family: 'droid sans';
     margin-top: 0;
@@ -337,7 +338,6 @@ a img {
     float: left;
     text-transform: uppercase;
     margin-top: 8px;
-    font-family: 'droid-serif';
 }
 
 #header h1 a {
@@ -733,7 +733,7 @@ p code {
 }
 
 .heroWrapper h1 {
-
+	font-family: 'droid sans';
 	color: #fff;
 	font-weight: bold;
 }
