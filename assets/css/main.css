@@ -294,7 +294,6 @@ a img {
 
 #header {
 	border-bottom: 1px solid #ebebeb;
-	margin-bottom: 10px;
 }
 
 #headerInner {
@@ -640,6 +639,14 @@ p code {
 	font-size: 1.2em;
 }
 
+#article {
+	padding: 30px 20px 0;
+}
+
+#article p {
+	line-height: 1.8em;
+}
+
 #article ol {
 	margin: 0;
 	padding: 0;
@@ -668,6 +675,8 @@ p code {
 	.citationsInner,
 	#headerInner,
 	#footerInner,
+	.heroWrapperInner,
+	#article,
 	.nowReadInner {
 		width: 720px;
 		margin: 0 auto;
@@ -691,6 +700,50 @@ p code {
 
 .newsletter {
     background-color: #F3F7F8;
+}
+
+/**********************************************************
+* Hero header
+**********************************************************/
+
+.heroWrapper {
+	background-color: #000;
+	background-size: cover;
+	background-position: center;
+}
+
+.backgroundCover {
+	background-color: #000;
+	background-color: rgba(0,0,0,0.4);
+	width: 100%;
+	height: 100%;
+}
+
+.heroWrapperInner {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.heroWrapper h1 {
+
+	color: #fff;
+	font-weight: bold;
+}
+
+@media(min-width: 900px) {
+	.heroWrapperInner {
+		padding-top: 160px;
+		padding-bottom: 160px;
+	}
+}
+
+.heroWrapper h2 {
+	margin: 0;
+	color: #e5e5e5;
 }
 
 /**********************************************************

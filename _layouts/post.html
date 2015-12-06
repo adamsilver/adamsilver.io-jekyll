@@ -7,41 +7,21 @@
 <body>
     <div id="container">
         {% include header.html %}
-        <div id="content">
-            <!-- <div id="breadcrumb">
-                <a href="/">Home</a> >
-                <a href="/articles/">Articles</a> >
-                <span>{{ page.title }}</span>
-            </div> -->
-            <div id="article">
 
-				<!-- {% if page.image %}
-					<div class="titleWrapper">
-						<img src="/assets/img/{{page.image}}" width="100%">
-					</div>
-					<style>
-						.titleWrapper {
-							margin-bottom: 20px;
-						}
-					</style>
-				{% endif %} -->
+        {% include articleHeader.html %}
 
-					<h1 class="title">{{ page.title }}</h1>
-	                {% if page.tagline %}
-	                	<h2 class="tagline">{{ page.tagline }}</h2>
-	                {% endif %}
+        <div id="article">
+        	{% if page.image == null %}
+				<h1 class="title">{{ page.title }}</h1>
+                {% if page.tagline %}
+                	<h2 class="tagline">{{ page.tagline }}</h2>
+                {% endif %}
+            {% endif %}
+        	{% include carbon.html %}
 
-                {% include articleMeta.html date=page.date cont=content %}
-
-            	{% include carbon.html %}
-
-               	{{ content }}
-
-
-
-
-            </div>
+           	{{ content }}
         </div>
+
         {% include share.html %}
         {% include citations.html %}
         {% include nowRead.html %}

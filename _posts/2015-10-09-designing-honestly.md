@@ -3,9 +3,9 @@ layout: post
 title:  "Designing honestly"
 date:   2015-10-09 09:00:01
 categories: ux design
+image: woman.jpeg
+tagline: Would you say you're an honest person?
 ---
-
-**Would you say you’re an honest person?**
 
 I have been designing and building websites for over half of my life now.
 
