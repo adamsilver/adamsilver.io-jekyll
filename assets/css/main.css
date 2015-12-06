@@ -736,6 +736,7 @@ p code {
 	font-family: 'droid sans';
 	color: #fff;
 	font-weight: bold;
+	margin: 0;
 }
 
 @media(min-width: 900px) {
