@@ -3,7 +3,7 @@ layout: post
 title:  "Designing honestly part 2"
 date:   2015-11-15 09:00:01
 categories: ux design ecommerce
-image: man.jpeg
+image: desk.jpg
 tagline: Have you ever made something harder to use on purpose?
 ---
 

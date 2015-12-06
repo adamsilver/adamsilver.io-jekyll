@@ -3,6 +3,8 @@ layout: post
 title: "Misusing AJAX for personalisation"
 date:   2014-12-29 09:00:01
 categories: js a11y ux performance
+image: dial.jpg
+tagline: Are you on a pursuit to speed up your website?
 citations:
  - title: Content caching
    link: https://developer.akamai.com/stuff/Caching/Content_Caching.html
