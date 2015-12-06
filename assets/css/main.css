@@ -726,10 +726,19 @@ p code {
 .heroWrapperInner {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 40px;
-	padding-right: 40px;
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+@media(min-width: 500px) {
+	.heroWrapperInner {
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
 }
 
 .heroWrapper h1 {
@@ -741,8 +750,8 @@ p code {
 
 @media(min-width: 900px) {
 	.heroWrapperInner {
-		padding-top: 160px;
-		padding-bottom: 160px;
+		padding-top: 140px;
+		padding-bottom: 140px;
 	}
 }
 
