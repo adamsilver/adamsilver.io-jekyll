@@ -3,47 +3,47 @@ layout: post
 title:  "Technical wanking"
 date:   2015-02-09 09:00:01
 categories: js spas
+image: thinking.jpg
+tagline: When I went cutting-edge
 citations:
  - title: The disadvantages of Single Page Application
    link: /articles/the-disadvantages-of-single-page-applications/
- - title: Mortgage Driven Development
-   link: http://codemanship.co.uk/parlezuml/blog/?postid=147
 ---
 
-**Do you have secrets? I do!**
+**I have a secret.** It’s something that I am embarrassed about. I participated in the art of Technical Wanking.
 
-It's embarrassing. I did something that I am ashamed of. I participated in the art of Technical Wanking. For those unaware, Technical Wanking is the practice of using "cool" and "new" technology because, well, it's "cool" and "new", but of course, technology should be chosen on its technical merit and technical merit alone. Let me tell you about how I came across this phenomena.
+Technical Wanking is the practice of using cool and new technology because &mdash; well, it’s cool and new. Of course, technology should be chosen on its technical merit and technical merit alone.
 
-I first heard of it's existence in 2010 when I was building my first Single Page Application (SPA). I had that feel-good feeling. We were using various "cutting-edge" libraries for DOM stuff and client-side templating. We rolled our own client-side router.
+I first heard of this terminology back in 2010 when I was building my first Single Page Application (SPA). We were using various “cutting-edge” libraries for DOM stuff and client-side templating, and we rolled our own client-side router.
 
-The adminstration system that we were building didn't need SEO, and was only to be used in Chrome and so we only tested in Chrome. It was a CRUD applicaton with a few rich interactions.
+The administration system we were building didn’t need to consider SEO, and was only to be used in Chrome (and so we only tested in Chrome). It was a CRUD application with a bunch of rich interactions.
 
-I couldn't wait to get my teeth into this, get the experience under my belt and propel my career accordingly. How could anyone resist my talent, with all the new buzzwords littering my CV?
+I couldn’t wait to get my teeth into this, get the experience under my belt and propel my career accordingly. **How could anyone resist my talent, with all the new buzzwords littering my CV?**
 
-At about 6 months into the project, my friend James joined the team. I accompanied him on one of his first fag breaks. He was (and still is) a demanding man, and required my presence for the majority of his fag breaks. Besides the toxic fumes, I was much obliged.
+At about 6 months into the project, my friend James Norton joined the team. I accompanied him on one of his fag breaks. It didn’t take long for us to get talking about the codebase. James was quite scathing and questioned the need and benefit of the architecture. He decided this was the time to call me a Technical Wanker (thanks James).
 
-It didn't take long for us to get talking about the codebase. James was quite scathing and questioned the need and benefit of the architecture. It was right about this time that he chose to call me a Technical Wanker! Say *whatttt*?
+Fortunately, he didn’t just call me names. He went on to constructively explain how all the not-so-good aspects of the code and UX were self-induced. Here are a few of the problems we were solving:
 
-Fortunately, he didn't just abuse me. He went on to explain how all the not-so-good aspects of the code and UX were self-induced. To give *some* insight as to what he was getting at, this included:
+1. **Writing a client-side Javascript router.** Our backend was written in Rails, which has a beautiful and perfectly reliable router. Let the browser handle the navigation.
+2. **Writing a client-side Javascript view renderer to rebuild/render only parts of the DOM tree that changed.** Again Rails (just like most server-side frameworks) has you covered. The browser is an expert at parsing and rendering HTML. Script will never do it better.
+3. **Writing client-side Javascript to massage and work with generic REST APIs.** Rails has a beautiful ORM and it’s standard practice to expose beautiful and fit-for-purpose view-models ready for consumption by server-side view templates.
 
-1. **Writing a client-side router.** Our backend was written in Rails, which has a beautiful and perfectly reliable router. Let the browser handle the navigation.
+There’s more but you get the gist.
 
-2. **Writing a client-side view engine to rebuild/render parts of the page that changed on the client.** Again Rails (just like most server-side frameworks) has you covered. The browser is an expert at parsing and rendering HTML. Script will never do it better.
+James went on to explain the application could have been better had we used a traditional architecture, without all the inherent problems with SPAs [[0](#ref0)].
 
-3. **Having to massage and work with generic REST APIs on the client.** Rails has a beautiful ORM and it's standard practice to expose beautiful and fit-for-purpose view-models ready for consumption by server-side view templates.
+Whilst I was still quite chuffed with all the clever things I appeared to be doing, I couldn’t help but realise he was right. There was just no need.
 
-There are many more examples but the gist should be getting clearer. James continued to explain the application could have been *better* had we used a traditional architecture, without all the inherent problems with SPAs [[0](#ref0)].
+I was solving self-induced problems to assist my team get their work done, as opposed to delivering a great and reliable experience for our users.
 
-Whilst I was still quite chuffed with all the clever things I appeared to be doing, I couldn't help but realise he was *right*. There was just no need. I was solving self-induced problems and nothing else.
+If we had avoided the lure of the coolness behind building a SPA, the end result would have been just as slick. Just as beautiful. Just as rich. And it would have taken half the time to build, with a far nicer split of responsibilities between the server and client, meaning we could iterate faster. Not to mention it would have had better performance and accessibility. All of which contributes to the overall UX.
 
-The application would have been just as slick. Just as beautiful. Just as rich. And it would have taken half the time to build, with a far nicer split of responsibilites between the server and client. Not to mention it would have had better performance, better accessibility and a better UX.
+**When did all this nonsense become standard practice?**
 
-**When did all this nonsense become standard practice?** Everyone's building them. Everyone writes about them. The problem is, when everyone is doing it, it's usually stupid. This follows in all walks of life. Most people eat McDonalds, but it doesn't make it good for you.
+"Everyone’s building them", they say. The problem is, when everyone is doing something, that *something* is usually a bad idea. This follows in all walks of life &mdash; **most people eat McDonalds, but it doesn’t make it good for you.**
 
-In a paid profession, it is your *duty* not to do stupid things and to serve the client and their users to the very best of your ability. It's an epidemic in the industry and I know *many* developers scattered across the industry, who are in the trenches having to use cool new technology that just causes various problems. It's most certainly a close relative of Mortgage Driven Development [[1](#ref1)] but we won't go into that in this article.
+In a paid profession, it is your duty to serve the client and their users to the very best of your ability. Not to use tech in order to improve your CV etc.
 
-In many ways I wish I hadn't participated in Technical Wankery back then, but then again, I wouldn't be where I am today having learnt all those useful lessons about what *not* to do.
+I know many developers scattered across the industry, who are in the trenches having to use this cutting-edge tech that causes more problems than it solves.
 
-It's certainly a challenge convincing colleagues that "cool" and "new" technology isn't *cool* at all. But what's all this in aid of? The user of course! The *user* just wants to use *their* chosen browser to consume your content or buy your widget and get the hell back to living life.
-
-So now, I try to do for others what James did for me: hurl abuse at my fellow developers. Normally speaking, I get a good response, a little laugh, and the opportunity to explain myself.
+In many ways I wish I hadn’t participated in Technical Wanking back then, but then again, I wouldn’t be where I am today having learnt many lessons about what not to do. All I will say is beware of the latest fad. **[Maybe it’s time to be boring](/articles//the-boring-front-end-developer/)?**
