@@ -24,9 +24,9 @@ At about 6 months into the project, my friend James Norton joined the team. I ac
 
 Fortunately, he didn’t just call me names. He went on to constructively explain how all the not-so-good aspects of the code and UX were self-induced. Here are a few of the problems we were solving:
 
-1. **Writing a client-side Javascript router.** Our backend was written in Rails, which has a beautiful and perfectly reliable router. Let the browser handle the navigation.
-2. **Writing a client-side Javascript view renderer to rebuild/render only parts of the DOM tree that changed.** Again Rails (just like most server-side frameworks) has you covered. The browser is an expert at parsing and rendering HTML. Script will never do it better.
-3. **Writing client-side Javascript to massage and work with generic REST APIs.** Rails has a beautiful ORM and it’s standard practice to expose beautiful and fit-for-purpose view-models ready for consumption by server-side view templates.
+1. **Writing a client-side Javascript router.** Server-side technology (in our case Rails) has perfectly reliable routing. Let the browser handle the browsing.
+2. **Writing a client-side Javascript view renderer to rebuild/render only parts of the DOM tree that changed.** Again server-side frameworks have you covered. The browser is an expert at parsing and rendering HTML. Script will never do it better.
+3. **Writing client-side Javascript to massage and work with generic REST APIs.** It's standard practice for a server-side framework to compose beautiful fit-for-purpose view-models ready for consumption by server-side view templates.
 
 There’s more but you get the gist.
 

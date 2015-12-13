@@ -28,7 +28,7 @@ However, this article discusses the problems you face when attempting to tame br
 
 ## Augmenting host objects
 
-Polyfills *must* augment host and native objects in order to plug missing gaps. The problem being that augmenting host objects and (to a slightly lesser extent) native objects is ill-advised and has been for well over a decade by experts including Richard Cornford, David Mark, Thomas Lahn and Kangax &mdash; the latter of which published two dedicated articles on the subject entitled *What's wrong with extending the DOM?* [[0](#ref0)] and *Extending native built-ins* [[1](#ref1)]. Here is a choice snippet below, but I highly advise reading the entire article:
+Polyfills *must* augment host and native objects in order to plug missing gaps. The problem being that augmenting host objects and (to a slightly lesser extent) native objects is ill-advised and has been for well over a decade by experts including Richard Cornford, David Mark, Thomas Lahn and Kangax&mdash;the latter of which published two dedicated articles on the subject entitled *What's wrong with extending the DOM?* [[0](#ref0)] and *Extending native built-ins* [[1](#ref1)]. Here is a choice snippet below, but I highly advise reading the entire article:
 
 > &ldquo;In fact, DOM extension seemed so temptingly useful [...]. But what hides behind this seemingly innocuous practice is a huge load of trouble. [...] the downsides of this approach far outweigh any benefits.&rdquo;
 
@@ -36,7 +36,7 @@ Polyfills *must* augment host and native objects in order to plug missing gaps. 
 
 As Peter Michaux demonstrates in *Feature Detection: State of the art browser scripting* [[2](#ref2)], the mere presence of an API is not necessarily enough to determine reliable usage. This is where feature *testing* comes in.
 
-Polyfills *tend* to just detect the presence of an API; they do not iron out the bugs or inconsistencies found across the breadth of browsers; even if they did, they would have to override the original, whereby the override may contain a reference to the original &mdash; a dangerous and unnecessary way to go. This is why facades are useful as we will see later on.
+Polyfills *tend* to just detect the presence of an API; they do not iron out the bugs or inconsistencies found across the breadth of browsers; even if they did, they would have to override the original, whereby the override may contain a reference to the original&mdash;a dangerous and unnecessary way to go. This is why facades are useful as we will see later on.
 
 ## Decoupling browser and application logic
 
@@ -48,9 +48,9 @@ As Nicholas Zakas presents in *Scalable JavaScript Application Architecture* [[3
 
 You may not need the full API to solve your problem; you may not even be *able* to implement a polyfill because there's just no way to do it. This is why context is important, which is something Javascript expert David Mark expresses frequently.
 
-What exactly does David mean by context? You would have to ask David to be completely sure but I will hazard a guess that, *first* it's vital to understand the problem of exactly what you're trying to solve. Then, *second*, implement an appropriate solution for said problem &mdash; specifically don't do *more* than solve the problem (YAGNI).
+What exactly does David mean by context? You would have to ask David to be completely sure but I will hazard a guess that, *first* it's vital to understand the problem of exactly what you're trying to solve. *Second*, implement an appropriate solution for that problem. Specifically don't do *more* than solve the problem (YAGNI).
 
-This seems sensible doesn't it? That's because it is. With polyfills it's all or nothing, whereby you rarely need *all* of the API and the solution is anything but lean.
+This seems sensible doesn't it? It is. With polyfills it's all or nothing, whereby you rarely need *all* of the API and the solution is anything but lean.
 
 ## Caveats
 
@@ -112,9 +112,9 @@ But what about browsers lacking `Object.create`? Nothing happens. The user gets 
 
 ## Summary
 
-At first polyfills seem like a great idea. Having explored the intricacies of this technique, it's clear that at best, polyfills are harder to implement and cause application and browser logic to be tightly coupled &mdash; which is costly.
+At first polyfills seem like a great idea. Having explored the intricacies of this technique, it's clear that at best, polyfills are harder to implement and cause application and browser logic to be tightly coupled, which is costly.
 
-At their worst they come with highly problematic caveats that cause pain for the developer &mdash; ultimately resulting in unreliable software and unhappy users. The answer is to use facades, enabling the abstracting away of complexity into reliable and lean software &mdash; every developers dream.
+At their worst they come with highly problematic caveats that cause pain for the developer &mdash; ultimately resulting in unreliable software and unhappy users. The answer is to use facades, enabling the abstracting away of complexity into reliable and lean software.
 
 <!--
 

@@ -581,7 +581,13 @@ p code {
 #pg-home .header {
 	margin-bottom: 30px;
 	overflow: hidden;
-	padding-top: 10px;
+	padding-top: 30px;
+}
+
+@media(max-width: 650px) {
+	#pg-home .header {
+		padding-top: 0;
+	}
 }
 
 /**********************************************************

@@ -10,22 +10,23 @@ citations:
    link: http://stackoverflow.com/questions/3410984/javascript-namespace
 ---
 
-Namespaces are used to help with code organisation and discoverability, and in the context of Javascript, the minimisation of global variables [[0](#ref0)]. Javascript doesn't (at the time of writing) have a dedicated construct for namespacing, but it can be imitated using object literals. This article discusses a simple and lean method of utilising namespaces in your application.
+Namespaces are used to help with code organisation, discoverability, and in the context of Javascript, the minimisation of global variables [[0](#ref0)].
 
-For demonstration purposes let's define an example application. Our application will be a zoo and just like *real* zoos it will have animals. Additionally, some basic information about the zoo will be stored in the codebase.
+Javascript doesn't (at the time of writing) have a dedicated construct for namespacing, but it can be imitated using object literals. This article discusses a simple and lean method of utilising namespaces in your application.
+
+For demonstration purposes let's define an example application. Our application will be a zoo and just like *real* zoos it will have animals. Additionally, some basic information about the zoo will be accessible.
 
 ## Directory structure
 
 It's helpful to visualise the directory structure as follows:
 
-	src/
-		zoo/
-			zoo.js
-			zoo.information.js
-			animals/
-				zoo.animals.js
-				zoo.animals.Penguin.js
-				zoo.animals.Tiger.js
+	zoo/
+		zoo.js
+		zoo.information.js
+		animals/
+			zoo.animals.js
+			zoo.animals.Penguin.js
+			zoo.animals.Tiger.js
 
 Namespaces will be defined in `zoo.js` and `zoo.animals.js`. All other files define components of the zoo. Each folder represents a namespace. Each namespace file simply assigns an empty object to a variable or property.
 
@@ -68,8 +69,4 @@ When it comes to static information you can simply assign an object to your chos
 		address: "52 Zoo Lane, ZA1 2AP"
 	};
 
-*Note: Do not be concerned about having too many files; overly complex namespace hiearchies should be avoided and separate files should be concatenated into one for performance.*
-
-## Summary
-
-Every component should be assigned to a namespace. Every namespace should be defined in its own file. File names and component names should match and static information can be assigned directly without the need for a separate namespace file as per `zoo.information`. Following these rules leads to an intuitive, well organised and simple codebase.
+*Note: Do not be concerned about having too many files; overly complex namespace hiearchies should be avoided and separate files should be concatenated into one when deployed.*

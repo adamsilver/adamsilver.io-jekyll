@@ -16,7 +16,7 @@ citations:
    link: /articles/reintroducing-cross-browser-scripting/"
 ---
 
-The role of the Front-end developer has changed significantly over the years and responsiblities extend far beyond translating visual designs into code. Recently, Front-end developers should be involved in many other aspects of the design and development process.
+The role of the Front-end developer extends far beyond translating visual designs into code. They should be heavily involved in many other aspects of the design and development process as follows:
 
 ## User Experience (UX)
 
@@ -66,7 +66,3 @@ The balance can only be struck through experience of knowing which spread of bro
 ## Development process and methodologies
 
 Whilst not specifically related to Front-end developers, it is very important to be able to work as part of a team in a given process. This means an understanding of various Agile methodologies. Better still, it's highly beneficial to you and your team to be able to spot friction and influence the process regularly to deliver software in a more efficient way.
-
-## Summary
-
-So we have come a long, *long* way from where we began as front-end developers. The bad news is, you may have more responsibilities than you once thought you did. The good news is that all of these things are complimentary, fun and important to the team you work with, the client you work for and the people that use the website you have built.

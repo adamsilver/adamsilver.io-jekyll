@@ -14,15 +14,16 @@ citations:
    link: /articles/javascript-namespacing/
 ---
 
-Javascript inheritance is useful with regard to code reuse [[0](#ref0)]. Unfortunately, ECMAScript doesn't provide an *inherit* function natively, so we will need to create one. This article documents a simple and powerful technique and consists of two parts: 1) creating the inherit function and 2) utilising it to demonstrate one object inheriting the features of another.
+Javascript inheritance is useful with regard to code reuse [[0](#ref0)]. Unfortunately, ECMAScript doesn't provide an *inherit* function natively, so we will need to create one. This article documents a simple and powerful technique.
 
-## Creating the *inherit* function
+## How to write an inherit function
 
-This consists of defining a namespace for the library (which we will call *lib*) containing two functions: *cloneObject* and *inherit* both taken from Jessie [[1](#ref1)]. The namespace bit is optional but good practice [[2](#ref2)].
+We need to create an `inherit` function which will use `cloneObject` internally. Both of which are taken from Jessie [[1](#ref1)]. The namespace bit is optional but good practice [[2](#ref2)].
 
+	/**** The namespace ****/
     var lib = {};
 
-## Defining *cloneObject*
+    /**** The cloneObject function ****/
 
     // For browsers that have Object.create
     if(Object.create) {
@@ -42,9 +43,7 @@ This consists of defining a namespace for the library (which we will call *lib*)
         })();
     }
 
-## Defining *inherit*
-
-You will notice this function utilises the *cloneObject* function.
+	/**** The inherit function which uses cloneObject ****/
 
     lib.inherit = function(Sub, Super) {
         // Clone the parent's prototype object and assign to child's prototype object
@@ -57,9 +56,7 @@ You will notice this function utilises the *cloneObject* function.
         Sub.prototype.constructor = Sub;
     };
 
-That's the first part complete. Now we can demonstrate its usage.
-
-## Example usage
+## How to use it
 
 The example will demonstrate a Superhero inheriting the features of a normal Person. Let's start with the Person constructor:
 
@@ -106,5 +103,3 @@ In order to show another important aspect of the *inherit* function let's create
 Using the previously defined `batman` instance above we run the scenario:
 
     batman.backDownAndRevealTrueIdentity(); // returns "My name is Bruce Wayne"
-
-The takeaway from this scenario is that you can call and reuse the Parent methods.
