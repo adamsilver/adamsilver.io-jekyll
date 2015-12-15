@@ -713,7 +713,7 @@ p code {
 }
 
 .citations .footNotes {
-	font-size: 0.6em;
+	font-size: 0.8em;
 	margin: 0 0 5px;
 	font-weight: bold;
 }
@@ -727,7 +727,7 @@ p code {
 
 .citations li {
 	margin-left: 0;
-	font-size: 0.6em;
+	font-size: 0.8em;
 	margin-bottom: 5px;
 }
 
