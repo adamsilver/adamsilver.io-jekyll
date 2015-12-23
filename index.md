@@ -5,7 +5,7 @@ id: home
 
 <div class="header">
 	<div class="face">
-		<img src="/assets/img/avatar2.jpg" alt="Adam Photo" width="100" height="100">
+		<img src="/assets/img/adam.jpg" alt="Adam Photo" width="100" height="100">
 	</div>
 	<h1>Hello, my name is Adam. I’m a UX driven front-end developer based in London.</h1>
 </div>
