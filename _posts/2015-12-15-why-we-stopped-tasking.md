@@ -3,8 +3,8 @@ layout: post
 title:  Why we stopped tasking
 date:   2015-11-24 09:00:01
 categories: agile
-image: tasks.jpg
-tagline: And how this increased our velocity
+#image: tasks.jpg
+#tagline: And how this increased our velocity
 ---
 
 Scrum advocates the breaking down of stories into tasks because: it helps to estimate more accurately, encourages collaboration and helps to show granular progress.

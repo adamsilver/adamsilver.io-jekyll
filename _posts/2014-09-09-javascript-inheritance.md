@@ -3,8 +3,8 @@ layout: post
 title:  "Javascript inheritance"
 date:   2014-09-09 09:00:59
 categories: js
-image: elephant.jpg
-tagline: A simple and powerful way to inherit
+#image: elephant.jpg
+#tagline: A simple and powerful way to inherit
 citations:
  - title: Douglas Crockford on inheritance
    link: http://javascript.crockford.com/inheritance.html

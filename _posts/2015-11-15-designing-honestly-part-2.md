@@ -3,8 +3,8 @@ layout: post
 title:  "Designing honestly part 2"
 date:   2015-11-15 09:00:01
 categories: ux design ecommerce
-image: desk.jpg
-tagline: Have you ever made something harder to use on purpose?
+#image: desk.jpg
+#tagline: Have you ever made something harder to use on purpose?
 ---
 
 One experience I have of this is when I worked at a *very* successful e-commerce company.

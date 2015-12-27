@@ -3,8 +3,8 @@ layout: post
 title:  "The disadvantages of Javascript polyfills"
 date:   2015-06-22 09:00:01
 categories: js polyfills
-image: ditch.jpg
-tagline: Working with the browser, not against it.
+#image: ditch.jpg
+#tagline: Working with the browser, not against it.
 citations:
  - title: What's wrong with extending the DOM?
    link: http://perfectionkills.com/whats-wrong-with-extending-the-dom/
