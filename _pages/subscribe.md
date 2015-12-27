@@ -5,8 +5,8 @@ id: subscribe
 permalink: /subscribe/
 ---
 
-# Subscribe to my newsletter
+# Subscribe to get my articles by email
 
-I started a newsletter for my [articles](/articles) that you can receive via email when they come out, so you don't miss anything.
+Receive my articles by email so you never miss a thing.
 
 {% include newsletterForm.html %}
