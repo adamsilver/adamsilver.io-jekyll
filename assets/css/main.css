@@ -550,6 +550,10 @@ p code {
 	margin: 0 auto;
 }
 
+.image figure {
+	margin: 0;
+}
+
 .image figcaption {
 	font-size: 0.75em;
 	color: #a1a1a1;
