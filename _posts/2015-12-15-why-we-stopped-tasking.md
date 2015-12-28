@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Why we stopped tasking
-date:   2015-11-24 09:00:01
+date:   2015-12-15 09:00:01
 categories: agile
 #image: tasks.jpg
 #tagline: And how this increased our velocity

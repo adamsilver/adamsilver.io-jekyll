@@ -550,6 +550,14 @@ p code {
 	margin: 0 auto;
 }
 
+.image figcaption {
+	font-size: 0.75em;
+	color: #a1a1a1;
+	text-align: center;
+	font-family: "droid sans";
+	margin-bottom: 40px;
+}
+
 @media (max-width: 760px) {
 	#article .image img {
 		max-width: 100%;
