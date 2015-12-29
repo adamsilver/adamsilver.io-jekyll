@@ -21,7 +21,7 @@ When a user opens a menu, they can't intuitively move the mouse directly to a su
 <div class="image">
 	<figure>
 		<img src="/assets/img/hover2.jpg" alt="Hover" width="100%">
-		<figcaption>To keep the menu open, you must move mouse carefully down and then across</figcaption>
+		<figcaption>To keep the menu open, you must move the mouse carefully down and then across</figcaption>
 	</figure>
 </div>
 
@@ -36,14 +36,14 @@ Also, if a user intends to click a link within a page, when the menu pops open j
 <div class="image">
 	<figure>
 		<img src="/assets/img/hover3.jpg" alt="Hover" width="100%">
-		<figcaption>User wants to click link below the menu but…</figcaption>
+		<figcaption>User wants to click link below the menu but...</figcaption>
 	</figure>
 </div>
 
 <div class="image">
 	<figure>
 		<img src="/assets/img/hover4.jpg" alt="Hover" width="100%">
-		<figcaption>…the menu is opening accidentally so the user clicks Energy</figcaption>
+		<figcaption>...the menu opens accidentally so the user clicks Energy instead</figcaption>
 	</figure>
 </div>
 
