@@ -59,8 +59,6 @@ Some browsers don't support Javascript, so relying on it for the core experience
 
 Sometimes the network is at fault. Only some of the script makes it down the wire. Perhaps a firewall or proxy messed with it. This actually happened to me when I worked at a large mobile network provider. The network stripped out what it thought was a comment inside a well-known library, but it was actually a regex. Mobile networks can often do these things in the name of performance but it actually broke several sites.
 
-*Note: having the latest iPhone with Javascript enabled made no difference.*
-
 But, more *commonly* and most *importantly*, is when a browser lacks support for one or more APIs that your app tries to implement. This point is well worth labouring over and I will demonstrate this shortly.
 
 ## 3. Javascript does not degrade gracefully without developer intervention (unlike HTML and CSS).

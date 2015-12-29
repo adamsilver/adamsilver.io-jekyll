@@ -3,9 +3,12 @@ layout: post
 title:  Why hover menus are problematic
 date:   2015-12-27 09:00:01
 categories: ux responsivedesign
+citations:
+ - title: "Saving clicks UX myth"
+   link: http://uxmyths.com/post/654026581/myth-all-pages-should-be-accessible-in-3-clicks
 ---
 
-Hover menus are very popular on the web. People think they are popular because they "aid discoverability" and "save users a click" &mdash; the latter of which is a common UX fallacy. The thing is, hover menus are problematic and here's why:
+Hover menus are very popular on the web. People think they are popular because they "aid discoverability" and "save users a click" &mdash; the latter of which is a common UX fallacy [[0](#ref0)]. The thing is, hover menus are problematic and here's why:
 
 ## 1. The hover tunnel and accidental deactivation
 
