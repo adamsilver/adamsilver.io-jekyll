@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Designing honestly part 2"
+title: Designing a bad experience on purpose
 date:   2015-11-15 09:00:01
 categories: ux design ecommerce
 #image: desk.jpg
