@@ -1,10 +1,8 @@
 ---
 layout: post
-title:  "7 reasons why Infinite Scrolling is probably a bad idea"
-date:   2015-11-24 09:00:01
+title: Why Infinite Scrolling is probably a bad idea
+date: 2015-11-24 09:00:01
 categories: ux design
-#image: "infinitescroll.jpeg"
-#tagline: "My notes on infinite scrolling"
 ---
 
 On more than one occasion I have found myself trying to convince team-mates that Infinite Scrolling and its close relative *Show More* is more likely to degrade the experience than improve upon it. I thought I would jot down my notes on the matter and share them with you. Here they are:
