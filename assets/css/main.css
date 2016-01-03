@@ -346,15 +346,17 @@ a img {
 .me .name {
 	display: inline-block;
 	vertical-align: middle;
-	font-size: 2.3em !important;
-	font-weight: normal !important;
 	margin-bottom: 0 !important;
 }
 
 .intro {
 	font-weight: normal;
-	font-size: 1.5em;
-	margin-bottom: 40px;
+	margin-bottom: 70px;
+	font-style: italic;
+}
+
+.belief {
+	margin-bottom: 70px;
 }
 
 /**********************************************************

@@ -13,8 +13,6 @@ I know this sounds like a pretty big undertaking. It is! I like to think I have 
 
 Since 2000 I have been designing and building websites. I come from the view-source, teach-yourself school of web development. When you build stuff for the web, you learn about so many little things that affect the User Experience.
 
-Whilst I have always had a good eye for design, I have never acquired the *visual* design skills to be a visual designer &mdash; at least one of the quality I would be proud of.
-
 In 2002 my attention moved purely to development where I became obsessed with HTML, CSS and Javascript. I let much better designers provide design assets that I would *code up* as it were.
 
 In 2008 I started to work very closely with the client and increasingly played an integral role influencing the UX. I have spent quite a lot of time as a UX designer, but spent much more as a Front-end Developer.
