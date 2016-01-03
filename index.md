@@ -17,7 +17,7 @@ id: home
 
 	<p>I believe websites should be accessible to <em>everyone</em>. The best experience is achieved by embracing the conventions of the web and striving to provide a humanised and simple experience.
 
-	<p>To do this I love to work together with the right people from idea-inception to product build &amp; delivery. I will help you focus on the truly essential and to leave out the rest &mdash; <em>less but better</em>.</p>
+	<p>I love to work together with the right people from idea-inception to product build &amp; delivery. I will help you focus on the truly essential and to leave out the rest &mdash; <em>less but better</em>.</p>
 </div>
 
 <div class="thoughts">
