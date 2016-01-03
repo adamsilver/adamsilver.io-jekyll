@@ -1,10 +1,8 @@
 ---
 layout: post
-title: "The Real Progressive Enhancement"
+title: Progressively Enhanced Javascript
 date:   2015-08-16 09:00:01
-#image: stars.jpeg
-#tagline: "How to avoid the fuck you experience"
-categories: progressiveenhancement js
+categories: progressiveenhancement js a11y
 citations:
  - title: "Myth-Busting Progressive Enhancement"
    link: "http://www.sitepoint.com/javascript-dependency-backlash-myth-busting-progressive-enhancement/"
@@ -28,7 +26,7 @@ citations:
 
 The Javascript element of Progressive Enhancement, is quite possibly the most important and misunderstood aspect of client-side Javascript development, period.
 
-This article addresses these common misunderstandings and provides techniques that can still, today be considered cutting-edge, even though they have been around for a very long time and seem to have been forgotten.
+This article addresses these misunderstandings and provides techniques that can be considered cutting-edge, even though they have been around for a very long time and have been forgotten.
 
 > &ldquo;The problems we have with websites are ones we create ourselves&rdquo;
 <br>&mdash; <cite>Motherfuckingwebsite.com</cite>
@@ -167,7 +165,7 @@ At the very least, it is beneficial to be able to spot code that does not confor
 
 ## How do I build a library like this?
 
-To explain how to build a library that conforms to the Real Progressive Enhancement would likely require a book of its own. Fortunately, Peter Michaux's article *Cross-Browser Widgets* [[8](#ref8)] provides a detailed walkthrough all in one article. However, *this* article wouldn't be complete without a short example of its own would it?
+To explain how to build a library that conforms to Progressive Enhancement would likely require a book of its own. Fortunately, Peter Michaux's article *Cross-Browser Widgets* [[8](#ref8)] provides a detailed walkthrough all in one article. However, *this* article wouldn't be complete without a short example of its own would it?
 
 This example will also demonstrate that Progressive Enhancement is not a drag in the way of "having to support old irrelevant browsers". Quite the opposite in-fact. The words "drops support for" changes to "degrades gracefully in". You also get to determine an appropriate degradation point suitable for your project.
 
@@ -219,11 +217,11 @@ Regardless, a library never *has* to drop support in the traditional sense &mdas
 
 ## Conclusion
 
-The Real Progressive Enhancement is something that puts users first. The misunderstandings of Progressive Enhancement, when broken down piece by piece are easy to understand, but if just one of those pieces falls down, technical implementations tend to fall short of the mark.
+Progressive Enhancement is something that puts users first. The misunderstandings of Progressive Enhancement, when broken down piece by piece are easy to understand, but if just one of those pieces falls down, technical implementations tend to fall short of the mark.
 
 Unfortunately, this is quite common in the industry and it's the people that suffer the most, the same people that are interested in your business or content. It's just not good enough to let them endure the *fuck you* experience, they don't deserve it and it's circumventable.
 
-Fortunately, when the real meaning of Progressive Enhancement is understood, the execution can be implemented correctly. This allows for robust, future-friendly, backwards-compatible Javascript code. The Real Progressive Enhancement allows you to *responsibly* use cutting edge browser APIs, leaving the majority of other browsers to degrade to the core experience. Your users and your business will appreciate it.
+Fortunately, when the real meaning of Progressive Enhancement is understood, the execution can be implemented correctly. This allows for robust, future-friendly, backwards-compatible Javascript code. This allows you to *responsibly* use cutting-edge browser APIs, leaving the majority of other browsers to degrade to the core experience. Your users and your business will appreciate it.
 
 <!--
 

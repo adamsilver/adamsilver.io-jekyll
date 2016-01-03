@@ -99,7 +99,7 @@ body {
     margin-top: 0;
     margin-bottom: 0.2em;
     color: #111;
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.01em;
 }
 
@@ -109,7 +109,7 @@ h2 {
 	margin-top: 1em;
 	margin-bottom: 0;
     color: #111;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 h3 {
@@ -328,20 +328,33 @@ a img {
 * Face
 **********************************************************/
 
-.face {
-	border-radius: 50%;
-    overflow: hidden;
-    width: 90px;
-    height: 90px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    border: 4px solid #fff;
-    box-shadow: 0px 0px 5px 1px #f1f1f1;
+.me {
+	padding-top: 30px;
+	margin-bottom: 20px;
 }
 
-#pg-home .header {
-	margin-bottom: 30px;
+.me .face {
+	border-radius: 50%;
+    overflow: hidden;
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.me .name {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 2.3em !important;
+	font-weight: normal !important;
+	margin-bottom: 0 !important;
+}
+
+.intro {
+	font-weight: normal;
+	font-size: 1.5em;
+	margin-bottom: 40px;
 }
 
 /**********************************************************
@@ -459,6 +472,7 @@ form {
 
 #articleList .title {
 	margin-bottom: 0;
+	font-size: 1.2em;
 }
 
 .date {
@@ -751,7 +765,6 @@ p code {
 	text-transform: uppercase;
 	font-family: 'droid sans';
 	margin-bottom: 0;
-	font-weight: bold;
 	font-size: 0.8em;
 }
 
@@ -761,6 +774,7 @@ p code {
 	margin-bottom: 1em;
     color: #111;
     margin-top: 0;
+    font-weight: normal;
 }
 
 .nowRead .articleTitle a {
