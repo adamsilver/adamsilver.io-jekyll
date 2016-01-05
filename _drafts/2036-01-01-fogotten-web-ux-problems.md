@@ -15,7 +15,7 @@ Let's chat: What are the most important or most forgotten things when it comes t
 
 4. Small touch targets
 
-5. Thinking that mobile == touch and big screens = desktop
+5. Thinking that mobile == touch and big screens == desktop
 
 6. Long paragraphs
 
@@ -64,3 +64,7 @@ Let's chat: What are the most important or most forgotten things when it comes t
 28. Desiging for the business, not the for the user.
 
 29. Hiding content, when it's simpler to just reveal it.
+
+30. Designing for breakpoints/devices instead of designing for content.
+
+31. Using JS to customise something just to make it look better.
