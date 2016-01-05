@@ -51,17 +51,9 @@ There are many myths [[0](#ref0)] about Progressive Enhancement. I want to point
 
 **1. Unobtrusive Javascript is not Progressive Enhancement**. Simply placing your Javascript code in external files, does not, in any way, address the problem of Progressive Enhancement.
 
-**2. Handling the Javascript disabled scenario is only half of the story**. It's true &mdash; some people disable Javascript. *If* this was the only scenario to consider, it might be *easier* to disregard it but this is just not true [[1](#ref1)].
+**2. Prepraring for users that disable Javascript is barely scratching the surface**. It's true &mdash; some people disable Javascript but there are so many other reasons why Javascript *is* going to fail as *"Everyone has Javascript, Right?"* explains [[1](#ref1)]. The last point in that article is most common and most important: **using Javascript that the browser doesn't recognise**. Which leads on to...
 
-Some browsers don't support Javascript, so relying on it for the core experience is ill-advised. Some people install plugins, such as those that disable tracking, these can cause script to break i.e. when one script references another object in a *blocked* script.
-
-Sometimes the network is at fault. Only some of the script makes it down the wire. Perhaps a firewall or proxy messed with it. This actually happened to me when I worked at a large mobile network provider. The network stripped out what it thought was a comment inside a well-known library, but it was actually a regex. Mobile networks can often do these things in the name of performance but it actually broke several sites.
-
-But, more *commonly* and most *importantly*, is when a browser lacks support for one or more APIs that your app tries to implement. This point is well worth labouring over and I will demonstrate this shortly.
-
-**3. Unlike HTML and CSS, Javascript does not degrade gracefully without developer intervention.** HTML and CSS degrade (or enhance depending on the way you see things) without any extra effort. Consider `<input type="email">` and `border-radius`. When unsupported, the input reverts to a standard text control and forgoes curved borders. No harm, no foul.
-
-When it comes to Javascript the same cannot be said. If the browser tries to execute code it can't handle, an error occurs &mdash; sometimes an irrevocable one. As an example, try running the following in IE8:
+**3. Unlike HTML and CSS, Javascript does not degrade gracefully without developer intervention.** HTML and CSS degrade (or enhance depending on the way you see things) without any extra effort. Consider `<input type="email">` and `border-radius`. When unsupported, the input reverts to a standard text control and forgoes curved borders. With Javascript, the browser will error when it tries to execute code it doesn't understand. As an example, try running the following in IE8:
 
 	var form = document.forms[0];
 	form.attachEvent('submit', function() {
