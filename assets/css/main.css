@@ -353,6 +353,8 @@ a img {
 	font-weight: normal;
 	margin-bottom: 70px;
 	font-style: italic;
+	font-family: "droid sans";
+	font-size: 1.5em;
 }
 
 .belief {

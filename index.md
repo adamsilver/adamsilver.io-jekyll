@@ -10,7 +10,7 @@ id: home
 	<h1 class="name">Adam Silver</h1>
 </div>
 
-<h2 class="intro">Hey. I'm a London-based Front-end developer &amp; UX designer with over 15 years experience designing and building human-friendly websites for everyone.</h2>
+<p class="intro">Hey. I'm a London-based Front-end developer &amp; UX designer with over 15 years experience designing and building human-friendly websites for everyone.</p>
 
 <div class="belief">
 	<h2>Belief &amp; approach</h2>
@@ -23,5 +23,5 @@ id: home
 <div class="thoughts">
 	<h2>Thoughts &amp; writing</h2>
 
-	<p>I <a href="http://www.twitter.com/adambsilver/">tweet</a>, I write <a href="/articles/">articles</a> here and on <a href="http://medium.com/@adamsilver">Medium</a> and I <a href="http://www.github.com/adamsilver/">code</a> on Github.</p>
+	<p>I <a href="http://www.twitter.com/adambsilver/">tweet</a>, <a href="http://www.github.com/adamsilver/">share code</a> and write <a href="/articles/">articles here</a> and on <a href="http://medium.com/@adamsilver">Medium</a>.</p>
 </div>
