@@ -2,7 +2,7 @@
 layout: post
 title: Writing Javascript that conforms to Progressive Enhancement
 date: 2015-08-16 09:00:01
-categories: progressiveenhancement js a11y ux
+categories: progressiveenhancement js a11y
 citations:
  - title: "Myth-Busting Progressive Enhancement"
    link: "http://www.sitepoint.com/javascript-dependency-backlash-myth-busting-progressive-enhancement/"
