@@ -68,3 +68,14 @@ Let's chat: What are the most important or most forgotten things when it comes t
 30. Designing for breakpoints/devices instead of designing for content.
 
 31. Using JS to customise something just to make it look better.
+
+32. Using cutting edge features irresponsibly without feature testing.
+
+33. Using tooling that that is detrimental to user such as css preprocessors - not sure what it spits out, bloat etc.
+
+34. Using hover as an intention to activate.
+
+35. Using AJAX for personalisation, meaning without JS there is no personalisation
+
+36. Using the select box (forms) for links. And links to submit.
+
