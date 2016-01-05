@@ -67,11 +67,11 @@ The browser and feature in this example is not the relevant point here. It could
 
 ## What shouldn't you do?
 
-Sometimes, it can be helpeful to explore how others are tackling the problem, because when you find flaws, you can avoid them and explore a more successful path.
+Sometimes, it can be helpful to explore how others are tackling the problem, because when you find flaws, you can avoid them and explore a more successful path.
 
-Some ignore the problem exists. If they haven't experienced a problem, then they often think one does not exist. Or perhaps, they believe it to be an edge case. Regardless, this is unfortunate to the people using the website and the potential loss to the business.
+**#1 Some ignore the problem exists.** If they haven't experienced a problem, then they often think one does not exist. Or perhaps, they believe it to be an edge case. Regardless, this is unfortunate to the people using the website and the potential loss to the business.
 
-Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality. And often, these libraries support a subset of browsers i.e. it's multi-browser as opposed to cross-browser [[2](#ref2)] &mdash; a sure sign that the library does not practice Progressive Enhancement.
+**#2 Some also abdicate responsibility by using 3rd party libraries without checking under the hood for quality.** And often, these libraries support a subset of browsers i.e. it's multi-browser as opposed to cross-browser [[2](#ref2)] &mdash; a sure sign that the library does not practice Progressive Enhancement.
 
 People who use *other* browsers get the aforementioned *fuck you* experience, often at times when it would be straightforward to provide a *core* experience. The same thing happens when a library releases a new version and happens to drop support for more browsers &mdash; this of course is a never ending cycle.
 
