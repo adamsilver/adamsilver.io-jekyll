@@ -12,9 +12,9 @@ citations:
 
 Namespaces are used to help with code organisation, discoverability, and in the context of Javascript, the minimisation of global variables [[0](#ref0)].
 
-Javascript doesn't (at the time of writing) have a dedicated construct for namespacing, but it can be imitated using object literals. This article discusses a simple and lean method of utilising namespaces in your application.
+Client-side Javascript doesn't (at the time of writing) have a dedicated construct for namespacing, but it can be imitated using object literals.
 
-For demonstration purposes let's define an example application. Our application will be a zoo and just like *real* zoos it will have animals. Additionally, some basic information about the zoo will be accessible.
+For demonstration purposes let's define an example application. Our application will be a zoo and just like *real* zoos it will have animals and some additional information.
 
 ## Directory structure
 
@@ -44,24 +44,23 @@ For our example app we don't need a deep hierarchy. Add levels as you need them.
 
 *Note: The namespace matches the file name which aids discoverability.*
 
-
-## Penguin component definition
+## Penguin definition
 
 	// zoo.animals.Penguin.js
 	zoo.animals.Penguin = function() {
-		// constructor and not relevant to this
+		// constructor
 	};
 
-## Tiger component definition
+## Tiger definition
 
 	// zoo.animals.Tiger.js
 	zoo.animals.Tiger = function() {
-		// constructor and not relevant to this
+		// constructor
 	};
 
-## Zoo information definition
+## Zoo information
 
-When it comes to static information you can simply assign an object to your chosen namespace.
+When it comes to information you can simply assign an object to your chosen namespace.
 
 	// zoo.information.js
 	zoo.information = {
@@ -69,4 +68,4 @@ When it comes to static information you can simply assign an object to your chos
 		address: "52 Zoo Lane, ZA1 2AP"
 	};
 
-*Note: Do not be concerned about having too many files; overly complex namespace hiearchies should be avoided and separate files should be concatenated into one when deployed.*
+*Note: Do not be concerned about having too many files; overly complex namespace hiearchies should be avoided and separate files should be concatenated for production.*
