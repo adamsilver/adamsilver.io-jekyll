@@ -42,7 +42,7 @@ Do you honestly understand what all these elements mean to the browser? And how 
 Do you look at what other websites do on your Macbook Pro and iPhone 6 and think "if it's good enough for them, it's good enough for me"?
 Do you sometimes design without a thought for how the browser does it?
 
-Designing a UI that works well on a different platform, but when using it on the web comes with a host of problems (think [infinite scroll](/articles/7-reasons-why-infinite-scrolling-is-probably-a-bad-idea/)).
+Designing a UI that works well on a different platform, but when using it on the web comes with a host of problems (think [infinite scroll](/articles/why-infinite-scrolling-is-probably-a-bad-idea/)).
 
 Have you ever used, designed or built a drop down select menu without a submit button? I have. When you select an option, the page refreshes and this simple bending comes with a host of [problems for the user](/articles/misusing-the-select-control/). The point is, a select box is meant to be used for input, not for navigation; that is what links are for.
 
