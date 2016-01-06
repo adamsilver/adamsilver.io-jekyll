@@ -3,8 +3,6 @@ layout: post
 title: Designing a bad experience on purpose
 date:   2015-11-15 09:00:01
 categories: ux design ecommerce
-#image: desk.jpg
-#tagline:
 ---
 
 **Have you ever made something harder to use on purpose?** One experience I have of this is when I worked at a *very* successful e-commerce company that wanted to give their users the ability to pay by PayPal.
@@ -12,7 +10,7 @@ categories: ux design ecommerce
 Just as we were about to start development the business blocked it. This was the design that got blocked:
 
 <div class="image">
-	<img src="/assets/img/paymentchoice.png" alt="Payment choice page" width="371">
+	<img src="/assets/img/paymentchoice.png" alt="Payment choice page" width="100%">
 </div>
 
 It was blocked because it was too easy to select PayPal. That's *right*, your eyes are not lying to you. The reason stemmed from the fact that when our users paid using card we received 50p per order as a transaction fee. With PayPal we wouldn't. 50p is a lot to lose when you're taking approximately 750,000 orders per week.

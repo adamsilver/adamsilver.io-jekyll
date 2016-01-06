@@ -16,7 +16,7 @@ citations:
    link: https://blogs.akamai.com/2014/05/and-you-thought-your-page-could-not-be-cached.html
 ---
 
-Sometimes developers are on a pursuit to reduce page-load time by utilising content caching [[0](#ref0)]. This is beneficial to the ux because the page response times become *much* quicker.
+Sometimes developers are on a pursuit to reduce page-load time by utilising content caching [[0](#ref0)]. This is beneficial to the UX because the page response times become *much* quicker.
 
 When the page contains personalised content, this type of caching can't neccessarily be used because a user might receive the cached version of somebody elses personalised content.
 
