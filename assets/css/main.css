@@ -135,14 +135,12 @@ iframe {
 }
 
 blockquote {
-    margin: 20px 30px;
+    margin: 30px;
 }
 
 blockquote p {
-    font-style: italic;
-    font-size: 1.2em;
     margin-bottom: 1em;
-    color: #a1a1a1;
+    color: #666;
     /*font-family: 'droid sans';*/
 }
 
@@ -181,69 +179,6 @@ a img {
 	line-height: 1.8em;
 }
 
-/**********************************************************
-* Header
-**********************************************************/
-
-#header {
-	border-bottom: 1px solid #ebebeb;
-}
-
-#headerInner {
-    padding: 14px 20px 8px;
-    overflow: hidden;
-}
-
-@media (max-width: 500px) {
-	#headerInner {
-		padding: 14px 0px 0;
-	}
-}
-
-#logo {
-    float: left;
-}
-
-@media (max-width: 500px) {
-    #logo {
-		float: none;
-		overflow: hidden;
-		border-bottom: 1px solid #ebebeb;
-		padding-bottom: 8px;
-		padding-left: 20px;
-		padding-right: 20px;
-    }
-}
-
-#logo .avatar {
-    border-radius: 50%;
-    overflow: hidden;
-    width: 32px;
-    height: 32px;
-    float: left;
-    margin-right: 10px;
-}
-
-#header h1 {
-    font-size: 1em;
-    font-weight: normal;
-    float: left;
-    text-transform: uppercase;
-    margin-top: 8px;
-}
-
-#header h1 a {
-    display: block;
-    text-decoration: none;
-    color: #111;
-}
-
-#header h1 span {
-	position: absolute;
-	left: -999em;
-	top: 0;
-}
-
 #content ul {
 	margin-left: 20px;
 }
@@ -253,35 +188,70 @@ a img {
 }
 
 /**********************************************************
+* Header
+**********************************************************/
+
+#header {
+
+}
+
+#headerInner {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid #ebebeb;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#logo {
+	margin-bottom: 10px;
+}
+
+@media(min-width: 500px) {
+	#logo {
+		text-align: center;
+	}
+}
+
+#logo a {
+	font-size: 1.2em;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: 'droid sans';
+}
+
+/**********************************************************
 * Navigation
 **********************************************************/
 
 #nav {
-    float: right;
-    margin-top: 7px;
-}
-
-@media(max-width: 500px) {
-	#nav {
-		float: none;
-		margin-top: 0;
-		padding-top: 15px;
-		background-color: #fafafa;
-		padding-bottom: 15px;
-		padding-right: 20px;
-	}
 }
 
 #nav ul {
     list-style: none;
+    font-size: 1.1em;
+}
+
+@media(min-width: 500px) {
+	#nav ul {
+		text-align: center;
+	}
 }
 
 #nav ul li {
 	display: inline-block;
-    margin-left: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
     font-family: 'droid sans';
     font-size: 0.9em;
-    text-transform: uppercase;
+}
+
+#nav ul li:first-child {
+	margin-left: 0;
+}
+
+#nav ul li:last-child {
+	margin-right: 0;
 }
 
 #nav ul li a {
@@ -290,38 +260,13 @@ a img {
     display: block;
 }
 
-#nav ul li a:hover {
+#nav ul li a:hover,
+#nav ul li a.active {
     color: #4A90E2;
 }
 
 #nav ul li a.active {
-    padding: 3px 6px;
-    background-color: #4A90E2;
-    border-radius: 4px;
-    color: #fff;
-}
-
-@media(max-width: 500px) {
-
-	#nav ul li {
-		margin-left: 10px;
-	}
-
-    #nav ul li:first-child {
-    	margin-left: 20px;
-    }
-}
-
-@media(max-width: 300px) {
-	#nav ul li {
-		display: block;
-		margin-bottom: 6px;
-		margin-left: 20px;
-	}
-}
-
-#nav li.contact {
-	margin-right: 0;
+	font-weight: bold;
 }
 
 /**********************************************************
@@ -336,25 +281,34 @@ a img {
 .me .face {
 	border-radius: 50%;
     overflow: hidden;
-    width: 55px;
-    height: 55px;
-    display: inline-block;
+    width: 85px;
+    height: 85px;
+    display: block;
 	vertical-align: middle;
-	margin-right: 10px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .me .name {
-	display: inline-block;
+	display: none;
 	vertical-align: middle;
 	margin-bottom: 0 !important;
 }
 
-.intro {
+#pg-home .intro {
 	font-weight: normal;
-	margin-bottom: 70px;
-	font-style: italic;
+	margin-bottom: 50px;
 	font-family: "droid sans";
-	font-size: 1.5em;
+	font-size: 1.8em !important;
+	text-align: center;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #ebebeb;
+}
+
+@media(min-width: 600px) {
+	#pg-home .intro {
+		font-size: 2em !important;
+	}
 }
 
 .belief {
@@ -591,16 +545,15 @@ p code {
 	}
 }
 
-@media (min-width: 760px) {
+@media (min-width: 680px) {
 
 	#content,
 	.citationsInner,
-	#headerInner,
 	#footerInner,
 	.heroWrapperInner,
 	#article,
 	.nowReadInner {
-		width: 720px;
+		width: 640px;
 		margin: 0 auto;
 	}
 

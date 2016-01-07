@@ -5,12 +5,11 @@ id: home
 
 <div class="me">
 	<div class="face">
-		<img src="/assets/img/adam2.jpg" alt="Adam Photo" width="55" height="55">
+		<img src="/assets/img/adam2.jpg" alt="Adam Photo" width="85" height="85">
 	</div>
-	<h1 class="name">Adam Silver</h1>
 </div>
 
-<p class="intro">Hey. I'm a London-based Front-end developer &amp; UX designer with over 15 years experience designing and building human-friendly websites for everyone.</p>
+<h1 class="intro">Hey, my name is Adam Silver, a London-based Front-end developer &amp; UX designer with over 15 years experience designing and building human-friendly websites.</h1>
 
 <div class="belief">
 	<h2>Belief &amp; approach</h2>
