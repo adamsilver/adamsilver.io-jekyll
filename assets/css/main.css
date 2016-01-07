@@ -198,19 +198,13 @@ a img {
 #headerInner {
 	padding-top: 25px;
 	padding-bottom: 25px;
-	border-bottom: 1px solid #ebebeb;
 	padding-left: 20px;
 	padding-right: 20px;
 }
 
 #logo {
 	margin-bottom: 10px;
-}
-
-@media(min-width: 500px) {
-	#logo {
-		text-align: center;
-	}
+	text-align: center;
 }
 
 #logo a {
@@ -230,12 +224,7 @@ a img {
 #nav ul {
     list-style: none;
     font-size: 1.1em;
-}
-
-@media(min-width: 500px) {
-	#nav ul {
-		text-align: center;
-	}
+	text-align: center;
 }
 
 #nav ul li {
@@ -275,7 +264,8 @@ a img {
 
 .me {
 	padding-top: 30px;
-	margin-bottom: 20px;
+	margin-bottom: 60px;
+	border-bottom: 1px solid #ebebeb;
 }
 
 .me .face {
@@ -287,31 +277,33 @@ a img {
 	vertical-align: middle;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 25px;
 }
 
-.me .name {
-	display: none;
-	vertical-align: middle;
-	margin-bottom: 0 !important;
-}
-
-#pg-home .intro {
+.me .intro {
 	font-weight: normal;
 	margin-bottom: 50px;
 	font-family: "droid sans";
 	font-size: 1.8em !important;
 	text-align: center;
-	padding-bottom: 40px;
-	border-bottom: 1px solid #ebebeb;
+	padding-bottom: 70px;
+
 }
 
 @media(min-width: 600px) {
-	#pg-home .intro {
+	.me .intro {
 		font-size: 2em !important;
 	}
 }
 
-.belief {
+.belief,
+.featuredArticles {
+	margin-bottom: 70px;
+	padding-bottom: 50px;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.thoughts {
 	margin-bottom: 70px;
 }
 
