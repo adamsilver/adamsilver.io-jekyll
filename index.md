@@ -41,5 +41,5 @@ id: home
 <div class="thoughts">
 	<h2>Writing</h2>
 
-	<p>I write <a href="/">articles</a> on this blog as well as on the <a href="http://medium.com/simple-human">Simple=Human</a> publication with my friend <a href="http://theluckystrike.co.uk">Mark Jenkins</a>, which is all about leadership, design and development. It's definitely worth checking out.
+	<p>I write <a href="/articles/">articles</a> on this blog as well as on the <a href="http://medium.com/simple-human">Simple=Human</a> publication with my friend <a href="http://theluckystrike.co.uk">Mark Jenkins</a>, which is all about leadership, design and development. It's definitely worth checking out.
 </div>

@@ -54,7 +54,7 @@ This seems sensible doesn't it? It is. With polyfills it's all or nothing, where
 
 ## Caveats
 
-It doesn't take much effort to find examples of problematic polyfills. I did originally plan to demonstrate some technical problems myself, but when I stumbled across the documentation in the *ES5 Shim* [[4](#ref4)] project, I found that to be very telling all by itself. In describing the `Object.create` polyfill it states:
+It doesn't take much effort to find examples of problematic polyfills. Take the *ES5 Shim* [[4](#ref4)] project documentation. In describing the `Object.create` polyfill it states:
 
 > &ldquo;For the case of simply "begetting" an object that inherits prototypically from another, this **should** work fine across legacy engines.&rdquo;
 
