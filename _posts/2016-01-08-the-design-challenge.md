@@ -2,7 +2,8 @@
 layout: post
 title:  The Design Challenge
 date:   2016-01-08 09:00:01
-categories: ux design featured
+categories: ux design
+tags: featured
 citations:
  - title: How to hire designers
    link: https://medium.com/intercom-inside/how-to-hire-designers-960663e3a3e6#.5het3jvgw
