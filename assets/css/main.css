@@ -118,6 +118,7 @@ h3 {
     font-family: 'droid sans';
 	margin-bottom: 0.5em;
     color: #111;
+    font-weight: normal;
 }
 
 p {
@@ -704,7 +705,7 @@ p code {
 	border-top: 1px solid #ebebeb;
 	padding-top: 30px;
 	padding-bottom: 30px;
-	background-color: #F4F9FF;
+	background-color: #f9f9f9;
 }
 
 .nowReadInner {

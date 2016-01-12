@@ -13,16 +13,14 @@ id: home
 <div class="featuredArticles">
 	<h2>Featured articles</h2>
 	<div id="articleList">
-		<ol class="articles">
-			{% for post in site.posts %}
-				{% if post.tags contains 'featured' %}
-					<li class="article">
-						<h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-						{% include articleMeta.html date=post.date cont=post.content %}
-					</li>
-				{% endif %}
-			{% endfor %}
-		</ol>
+		{% for post in site.posts %}
+			{% if post.tags contains 'featured' %}
+				<div class="article">
+					<h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+					{% include articleMeta.html date=post.date cont=post.content %}
+				</div>
+			{% endif %}
+		{% endfor %}
 	</div>
 </div>
 
