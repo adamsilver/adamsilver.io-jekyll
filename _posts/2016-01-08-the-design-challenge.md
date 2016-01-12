@@ -25,7 +25,7 @@ Here are a few real examples of this:
 
 Clarity trumps minimalism every time.
 
-## 2. "I don't wan't the outline on elements when the user focuses or activates something in the browser, it doesn't look nice&mdash; how many people use a keyboard anyway? Most people use a mouse, we can't legislate for all users"
+## 2. "I don't wan't the outline on elements when the user focuses or activates something in the browser, it doesn't look nice &mdash; how many people use a keyboard anyway? Most people use a mouse, we can't legislate for all users"
 
 If we know there are people that use the keyboard then why not design for them? It's not just about how something looks, it's about how it works.
 
@@ -53,7 +53,7 @@ Every form field needs a label; there are good reasons why. Legislate for this a
 
 People on low-speed connections are likely not to wait for these beautiful images. Consider performance and how we can trim the fat for all. Faster connections become super fast, slow connections become satisfactory.
 
-## 9. "Can we fix that with Javascript? We don't need to worry about the 1% of users without it&mdash; it's important that the design is nice for 99% of our users"
+## 9. "Can we fix that with Javascript? We don't need to worry about the 1% of users without it &mdash; it's important that the design is nice for 99% of our users"
 
 First, this [[1](#ref1)]. Second, it's not the amount of users, its the amount of visits. Javascript will fail to download/execute at some point. Embrace Progressive Enhancement. Every time you fix something with Javascript you take a hit in performance, maintenance and usability.
 
@@ -73,4 +73,4 @@ Sometimes website X does things, sometimes those things are ill-advised. Take th
 
 The web has been designed so that anyone with an Internet connection and a browser can access your content/application. That's the essence of the web &mdash; that's a huge part of the web's success.
 
-**Design for everyone. Legislate for all kinds of devices, screen sizes, capabilities, people with different abilities and interaction preferences. Isn't this just the challenge we face as designers and engineers?**
+*Design for everyone. Legislate for all kinds of devices, screen sizes, capabilities, people with different abilities and interaction preferences.* **Isn't this just the challenge we face as designers and engineers?**
