@@ -1,19 +1,19 @@
 ---
 layout: post
-title:  "Why Semantic HTML"
+title:  "Why semantic HTML is so important"
 date:   2014-09-26 09:00:01
 categories: html
 ---
 
-Semantic HTML is the use of mark-up to reinforce the meaning and *intention* of the content by applying the correct element, class names and IDs based on what it *is*, not on what it *does* or how it *looks*. But why is this useful?
+Semantic HTML is the use of mark-up to reinforce the meaning and *intention* of the content by applying the correct element, class names and IDs based on what it *is*, not on what it *does* or how it *looks*. But why is this so important?
 
 ## 1. Responsive Design
 
-When designing a website *responsively*, a component may be styled differently on large screens compared to small screens. A common example is when you want to have a elements line up beside each other for large screens but stack below on small screens.
+When designing a website *responsively*, a component may be styled differently depending on the size of the screen. A typical example of this is when you want to have elements line up beside each other for large screens but stack below on small screens).
 
-If you use class names such as `grid` and `column1` this causes problems. Now the CSS has to target `column1` on small screens and make it stack. But you don't always want this to happen. For example you may have a different component that does have columns on small screens as well as large screens.
+If you use class names that aren't semantic such as `grid` and `column1` this causes problems. The CSS has to target `column1` on small screens and make it stack. But `column1` is a generic stylistic class name which means, that this CSS rule that makes it stack on small screens will apply everywhere &mdash; even for components that can be beside each other on small screens.
 
-This is not a problem when you use semantic HTML class names because you just target the component in CSS and it doesn't interfere with any other component. You name the component based on what it is, not on what it does or what it looks like.
+If you style the individual components based on what they *are* then you can easily target them in CSS without affecting each other. Meaning you can have one component that stacks on small screens, and another component that doesn't.
 
 ## 2. Accessibility
 
