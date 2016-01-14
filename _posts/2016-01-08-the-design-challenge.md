@@ -11,6 +11,8 @@ citations:
    link: http://kryogenix.org/code/browser/everyonehasjs.html
  - title: The Boring Designer
    link: http://blog.capwatkins.com/the-boring-designer
+ - title: Design for content
+   link: https://medium.com/uie-brain-sparks/content-and-design-are-inseparable-work-partners-5e1450ac5bba
 ---
 
 **Can you design for everyone *and* make it visually beautiful?**
@@ -63,7 +65,7 @@ Zoom is essential. Let go, be boring [[2](#ref2)] .
 
 ## 11. "I don't like the way the text wraps and layout breaks on small screens, we'll get the copywriter to make the words fit"
 
-Again, clarity trumps minimalism. Design for content &mdash; not the other way around.
+Again, clarity trumps minimalism. Design for content [[3](#ref3)] &mdash; not the other way around.
 
 ## 12. "But website X does it, so we should do it"
 
