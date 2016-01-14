@@ -13,18 +13,17 @@
         <div id="article">
         	{% if page.image == null %}
 				<h1 class="title">{{ page.title }}</h1>
-                {% if page.tagline %}
-                	<h2 class="tagline">{{ page.tagline }}</h2>
-                {% endif %}
+                <p class="meta">
+					<span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
+					<span class="divider">&#183;</span>
+					<a class="share" href="https://twitter.com/share?source=tweetbutton&text=&quot;{{page.title}}&quot;&via=adambsilver&url={{site.url}}{{page.url}}&hashtags={% for cat in page.categories limit:3 %}{% if forloop.last != true %}{{cat}},{%else%}{{cat}}{% endif %}{% endfor %}">Share on Twitter</a>
+				</p>
             {% endif %}
-        	{% include carbon.html %}
 
            	{{ content }}
         </div>
 
-        {% include share.html %}
         {% include citations.html %}
-        {% include nowRead.html %}
         {% include footer.html %}
     </div>
 </body>

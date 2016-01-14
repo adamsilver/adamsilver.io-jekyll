@@ -5,19 +5,17 @@ date: 2015-10-09 09:00:01
 categories: ux design
 ---
 
-**Would you say you're designing honestly?** I have been designing and building websites for over half of my life now. During this time, I have witnessed designers, developers and businesses designing dishonestly over and over again.
+**Would you say you're designing honestly?** I have been designing and building websites for over half of my life now. During this time I have witnessed designers, developers and businesses designing dishonestly over and over again.
 
-There are many forms of dishonest design. This article hones in on just one aspect of it &mdash; the aspect that ignores the platform you are designing for. In the context of the web, I call it &ldquo;bending the web&rdquo;.
+There are many aspects of dishonest design. This article hones in on just one of these &mdash; the aspect that ignores the platform you are designing for. In the context of the web, I call it &ldquo;bending the web&rdquo;.
 
-I must admit, I have been known to bend it on more than a few occasions myself over the course of my career. Here are just 5 examples:
+I must admit, I have been known to bend it on more than a few occasions myself over the course of my career. I think that's okay though because only by experiencing or reading about the mistakes we make, can we avoid them in the future. Here are some examples in which I have bent the web:
 
 1. I used tables for layout.
 * I have given submit buttons the same &ldquo;hand&rdquo; cursor as a link.
 * I created a custom file input so that it looked &ldquo;nicer&rdquo;.
-* I have hidden labels to make a cleaner looking UI.
+* I have hidden labels to build a "cleaner" UI.
 * I have used a select box for navigation.
-
-Have you done stuff like this before?
 
 &ldquo;A Dao of Web Design&rdquo; written by John Allsopp over one and half decades ago, has some timeless insights that gives us more than a clue, as to why this happens and continues to happen today.
 
@@ -46,10 +44,6 @@ Designing a UI that works well on a different platform, but when using it on the
 
 Have you ever used, designed or built a drop down select menu without a submit button? I have. When you select an option, the page refreshes and this simple bending comes with a host of [problems for the user](/articles/misusing-the-select-control/). The point is, a select box is meant to be used for input, not for navigation; that is what links are for.
 
-
-
 Another useful thing about the web, is that browsers and devices get better all the time. When you design honestly, the experience gets better and better all by itself with zero effort from the designer &mdash; for proof just interact with a form on your mobile and notice how the device helps you do that.
 
-*Designing dishonestly not only costs the user, but costs the developer time and the business money, but that is a topic for another day. You might get away with the odd bit of dishonest design, but why would you want to?*
-
-If you're designing a product for the web, then design for the web. **Be honest. Design honestly.**
+Designing dishonestly not only costs the user, but costs the developer time and the business money. **You might get away with the odd bit of dishonest design, but why would you want to?**
