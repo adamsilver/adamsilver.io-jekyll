@@ -22,5 +22,3 @@ Today I don't believe so much in designing and developing separately. I have had
 For me it's not just about working with *design*. It's also about working with Product, QA, Copywriters, Researchers, Developers (Back-end, front-end, full stack), Scrum Masters etc.
 
 This is why I am a massive fan Agile. I believe in choosing the essential things to build and frequently improving the process to reduce friction.
-
-**In short, I love designing and building humanised and simple experiences.**

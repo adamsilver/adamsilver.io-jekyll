@@ -443,7 +443,7 @@ form {
 **********************************************************/
 
 #article {
-	padding: 30px 20px;
+	padding: 30px 20px 20px;
 }
 
 #article pre {
@@ -591,12 +591,11 @@ form {
 **********************************************************/
 
 .citations {
-	padding-top: 30px;
-	padding-bottom: 30px;
 }
 
 .citationsInner {
-	padding: 20px;
+	padding: 30px 20px;
+	border-top: 1px dashed #ddd;
 }
 
 .citations .footNotes {
@@ -778,7 +777,7 @@ form {
 
 #articleSignUpForm .heading {
 	color: #fff;
-	font-size: 2.2em;
+	font-size: 2em;
 	margin: 0 0 15px;
 }
 
@@ -786,10 +785,11 @@ form {
 	margin: 0 0 40px;
 	color: #fff;
 	font-family: 'droid sans';
+	max-width: 500px;
 }
 
 #articleSignUpForm .field {
-	margin: 0 auto 20px;
+	margin-bottom: 20px;
 }
 
 #articleSignUpForm .field label {
@@ -804,13 +804,14 @@ form {
 #articleSignUpForm .field .email {
 	background-color: #f5f5f5;
 	border: 1px solid #ddd;
-    padding: 15px 12px;
+    padding: 12px 10px;
     font-size: inherit;
     border-radius: 4px;
-	width: 100%;
     display: block;
     box-sizing: border-box;
     color: #111;
+    width: 100%;
+    max-width: 340px;
 }
 
 #articleSignUpForm .signUpNowButton {
@@ -830,10 +831,9 @@ form {
 	appearance: none;
 	-webkit-appearance: none;
 	background-color: #335F98;
-	margin: 0 auto;
 	width: 100%;
 	display: block;
-	max-width: 300px;
+	max-width: 340px;
 }
 
 #articleSignUpForm .signUpNowButton:hover {
