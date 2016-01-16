@@ -515,6 +515,17 @@ form {
 	}
 }
 
+#article a:link,
+#article a:visited {
+	color: #4A90E2;
+}
+
+#article a:hover,
+#article a:active {
+	text-decoration: none;
+}
+
+
 @media (min-width: 680px) {
 
 	#content,
