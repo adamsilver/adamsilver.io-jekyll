@@ -762,7 +762,7 @@ form {
 }
 
 #articleSignUpFormInner {
-	padding: 30px 20px 55px;
+	padding: 30px 30px 55px;
 	background: #f2f0ed;
 
 }
@@ -792,7 +792,7 @@ form {
 	margin-bottom: 20px;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 440px;
+
 }
 
 #articleSignUpForm .field label {
@@ -834,11 +834,11 @@ form {
 	background-color: #4A90E2;
 	width: 100%;
 	display: block;
-	max-width: 440px;
+
 	margin: 0 auto;
 	text-transform: uppercase;
 }
 
 #articleSignUpForm .signUpNowButton:hover {
-	background-color: #444;
+	background-color: #3A71B1;
 }
