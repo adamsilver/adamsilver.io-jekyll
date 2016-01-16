@@ -759,9 +759,7 @@ form {
 **********************************************************/
 
 #articleSignUpForm {
-	background: #457fca; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #457fca , #5691c8); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #457fca , #5691c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #ddd;
 }
 
 #articleSignUpFormInner {
@@ -776,7 +774,6 @@ form {
 }
 
 #articleSignUpForm .heading {
-	color: #fff;
 	font-size: 2em;
 	margin: 0 0 5px;
 	text-align: center;
@@ -784,7 +781,7 @@ form {
 
 #articleSignUpForm p {
 	margin: 0 auto 40px;
-	color: #fff;
+	font-size: 1.1em;
 	font-family: 'droid sans';
 	max-width: 440px;
 	text-align: center;
@@ -798,7 +795,6 @@ form {
 }
 
 #articleSignUpForm .field label {
-	color: #fff;
 	font-family: 'droid sans';
 	display: block;
 	font-size: 1em;
@@ -808,7 +804,7 @@ form {
 
 #articleSignUpForm .field .email {
 	background-color: #f5f5f5;
-	border: 1px solid #ddd;
+	border: 1px solid #aaa;
     padding: 12px 10px;
     font-size: inherit;
     border-radius: 4px;
@@ -834,7 +830,7 @@ form {
 	font-weight: bold;
 	appearance: none;
 	-webkit-appearance: none;
-	background-color: #335F98;
+	background-color: #444;
 	width: 100%;
 	display: block;
 	max-width: 440px;
@@ -842,5 +838,5 @@ form {
 }
 
 #articleSignUpForm .signUpNowButton:hover {
-	background-color: #3969A8;
+	background-color: #111;
 }
