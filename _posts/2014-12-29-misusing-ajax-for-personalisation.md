@@ -3,20 +3,9 @@ layout: post
 title: "Misusing AJAX for personalisation"
 date:   2014-12-29 09:00:01
 categories: js a11y ux performance
-#image: dial.jpg
-#tagline: Are you on a pursuit to speed up your website?
-citations:
- - title: Content caching
-   link: https://developer.akamai.com/stuff/Caching/Content_Caching.html
- - title: The Real Progressive Enhancement
-   link: /articles/the-real-progressive-enhancement
- - title: Some things you should know about AJAX
-   link: http://www.smashingmagazine.com/2010/02/10/some-things-you-should-know-about-ajax/
- - title: And you thought your page could not be cached
-   link: https://blogs.akamai.com/2014/05/and-you-thought-your-page-could-not-be-cached.html
 ---
 
-Sometimes developers are on a pursuit to reduce page-load time by utilising content caching [[0](#ref0)]. This is beneficial to the UX because the page response times become *much* quicker.
+Sometimes developers are on a pursuit to reduce page-load time by utilising [content caching](https://developer.akamai.com/stuff/Caching/Content_Caching.html). This is beneficial to the UX because the page response times become *much* quicker.
 
 When the page contains personalised content, this type of caching can't neccessarily be used because a user might receive the cached version of somebody elses personalised content.
 
@@ -44,13 +33,13 @@ What seems like a simple use of AJAX has a significant effect on architecture...
 
 ## Accessibility
 
-If the user doesn't have Javascript (or they have it but not the capability to make AJAX requests, traverse or manipulate the Document etc) they will be unable to use this functionality. This goes against the principle of Progressive Enhancement [[1](#ref1)] and is completely against the spirit of the web. And in the case of "logging out" this would obviously be a poor decision.
+If the user doesn't have Javascript (or they have it but not the capability to make AJAX requests, traverse or manipulate the Document etc) they will be unable to use this functionality. This goes against the principle of Progressive Enhancement and is completely against the spirit of the web. And in the case of "logging out" this would obviously be a poor decision.
 
 Furthermore, extra effort would be required to ensure the injected content is accessibile to screen readers. This alone is reason enough to realise this is an unacceptable technical solution.
 
 ## Design
 
-Christian Heilmann rightly says that *AJAX shouldn't break the web* [[2](#ref2)] and using it in this way is doing just that. He also highlights that when AJAX is used, it is important to remember how much the browser does for free, that subtly goes unnoticed. This includes displaying a loading indicator with progress bar as well as handling page not found and timeout errors.
+Christian Heilmann rightly says that [AJAX shouldn't break the web](http://www.smashingmagazine.com/2010/02/10/some-things-you-should-know-about-ajax/) and using it in this way is doing just that. He also highlights that when AJAX is used, it is important to remember how much the browser does for free, that subtly goes unnoticed. This includes displaying a loading indicator with progress bar as well as handling page not found and timeout errors.
 
 Utilising AJAX and content-caching like this, means the page is only half loaded and half rendered at which point, and sometime later, the personalised content is injected. The UX is likely to be at least a little jarring as the page fills in the gaps.
 
@@ -68,7 +57,7 @@ The potential performance benefit is somewhat negated by requiring extra Javascr
 
 ## Summary
 
-Content-caching *is* a very useful technique when used responsibly and for pages that don't contain personalised content. For pages that *do* contain personalised content, a simple cookie check can determine whether the cached version should be served or not [[3](#ref3)].
+Content-caching *is* a very useful technique when used responsibly and for pages that don't contain personalised content. For pages that *do* contain personalised content, a [cookie check can determine whether the cached version should be served or not](https://blogs.akamai.com/2014/05/and-you-thought-your-page-could-not-be-cached.html).
 
 It is ill-advised to misuse Javascript in this way as there are several negative side effects in doing so. AJAX should not break the web, it should enhance the experience where necessary. AJAX seems like an innocent and beneficial solution, but in reality it encourages bad practice that creates several self-induced problems for users and the development team.
 
