@@ -4,20 +4,11 @@ title:  The Design Challenge
 date:   2016-01-08 09:00:01
 categories: ux design
 tags: featured
-citations:
- - title: How to hire designers
-   link: https://medium.com/intercom-inside/how-to-hire-designers-960663e3a3e6#.5het3jvgw
- - title: Everyone has Javascript
-   link: http://kryogenix.org/code/browser/everyonehasjs.html
- - title: The Boring Designer
-   link: http://blog.capwatkins.com/the-boring-designer
- - title: Design for content
-   link: https://medium.com/uie-brain-sparks/content-and-design-are-inseparable-work-partners-5e1450ac5bba
 ---
 
 **Can you design for everyone *and* make it visually beautiful?**
 
-In "How To Hire Designers" [[0](#ref0)] Paul Adams explains the 4 major design disciplines: outcome, system, interaction and visual. A lot of designers excel and focus on visual.
+In "[How To Hire Designers](https://medium.com/intercom-inside/how-to-hire-designers-960663e3a3e6#.eu7al1wfu)"Paul Adams explains the 4 major design disciplines: outcome, system, interaction and visual. A lot of designers excel and focus on visual.
 
 There is no question that visual design is important. But, I am concerned at how people can place too much importance on it. So much so that it becomes detrimental to the other aspects and overall resulting experience.
 
@@ -57,15 +48,15 @@ People on low-speed connections are likely not to wait for these beautiful image
 
 ## 9. "Can we fix that with Javascript? We don't need to worry about the 1% of users without it &mdash; it's important that the design is nice for 99% of our users"
 
-First, this [[1](#ref1)]. Second, it's not the amount of users, its the amount of visits. Javascript will fail to download/execute at some point. Embrace Progressive Enhancement. Every time you fix something with Javascript you take a hit in performance, maintenance and usability.
+First, [this](http://kryogenix.org/code/browser/everyonehasjs.html). Second, it's not the amount of users, its the amount of visits. Javascript will fail to download/execute at some point. Embrace Progressive Enhancement. Every time you fix something with Javascript you take a hit in performance, maintenance and usability.
 
 ## 10. "We need to fix that by disabling zoom on mobile"
 
-Zoom is essential. Let go, be boring [[2](#ref2)] .
+Zoom is essential. Let go, [be boring](http://blog.capwatkins.com/the-boring-designer).
 
 ## 11. "I don't like the way the text wraps and layout breaks on small screens, we'll get the copywriter to make the words fit"
 
-Again, clarity trumps minimalism. Design for content [[3](#ref3)] &mdash; not the other way around.
+Again, clarity trumps minimalism. [Design for content](https://www.uie.com/articles/content_and_design/) &mdash; not the other way around.
 
 ## 12. "But website X does it, so we should do it"
 
