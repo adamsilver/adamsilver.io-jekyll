@@ -496,11 +496,11 @@ form {
 	margin: 0 auto;
 }
 
-.image figure {
+#article .image figure {
 	margin: 0;
 }
 
-.image figcaption {
+#article .image figcaption {
 	font-size: 0.75em;
 	color: #a1a1a1;
 	text-align: center;
@@ -516,12 +516,16 @@ form {
 }
 
 #article a:link,
-#article a:visited {
+#article a:visited,
+#content a:link,
+#content a:visited {
 	color: #4A90E2;
 }
 
 #article a:hover,
-#article a:active {
+#article a:active,
+#content a:hover,
+#content a:active {
 	text-decoration: none;
 }
 
