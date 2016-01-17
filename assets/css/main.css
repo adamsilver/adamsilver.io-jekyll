@@ -171,19 +171,19 @@ a img {
 	margin: 0 auto;
 }
 
-#content {
+#page {
 	padding: 30px 20px 0;
 }
 
-#content p {
+#page p {
 	line-height: 1.8em;
 }
 
-#content ul {
+#page ul {
 	margin-left: 20px;
 }
 
-#content li {
+#page li {
 	color: #111;
 }
 
@@ -517,22 +517,22 @@ form {
 
 #article a:link,
 #article a:visited,
-#content a:link,
-#content a:visited {
+#page a:link,
+#page a:visited {
 	color: #4A90E2;
 }
 
 #article a:hover,
 #article a:active,
-#content a:hover,
-#content a:active {
+#page a:hover,
+#page a:active {
 	text-decoration: none;
 }
 
 
 @media (min-width: 680px) {
 
-	#content,
+	#page,
 	.citationsInner,
 	#footerInner,
 	.heroWrapperInner,
@@ -856,4 +856,13 @@ form {
 
 #articleSignUpForm .signUpNowButton:hover {
 	background-color: #3A71B1;
+}
+
+/**********************************************************
+* Subscribe page
+**********************************************************/
+
+#pg-subscribe #page {
+	padding-left: 0;
+	padding-right: 0;
 }
