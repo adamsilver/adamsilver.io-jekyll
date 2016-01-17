@@ -3,12 +3,9 @@ layout: post
 title:  "Misusing the select control"
 date:   2014-09-17 09:00:01
 categories: forms ux a11y
-citations:
- - title: Stop counting clicks
-   link: http://idyeah.com/blog/2012/06/stop-counting-clicks/
 ---
 
-You have most likely seen and used a select control *without* a submit button. One example would be the Amazon search results or product listing page. The typical rationale behind omitting the submit button is normally to declutter the UI and reduce clicks &mdash; the latter of which is a common UX fallacy [[0](#ref0)]. The thing is doing this is detrimental to the UX.
+You have most likely seen and used a select control *without* a submit button. One example would be the Amazon search results or product listing page. The typical rationale behind omitting the submit button is normally to declutter the UI and reduce clicks &mdash; the latter of which is a common [UX fallacy](http://idyeah.com/blog/2012/06/stop-counting-clicks/). The thing is doing this is detrimental to the UX.
 
 <div class="image">
 	<img src="/assets/img/sortby.png" alt="Sort by select" width="100%">

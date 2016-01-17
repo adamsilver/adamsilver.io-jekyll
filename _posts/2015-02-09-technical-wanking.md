@@ -3,11 +3,6 @@ layout: post
 title:  "Technical wanking"
 date:   2015-02-09 09:00:01
 categories: js spas
-#image: thinking.jpg
-#tagline: When I went cutting-edge
-citations:
- - title: The disadvantages of Single Page Application
-   link: /articles/the-disadvantages-of-single-page-applications/
 ---
 
 Technical Wanking is the practice of using cool and new technology because &mdash; well &mdash; it's *cool* and *new*. Of course, technology should be chosen on its technical merit and technical merit alone.
@@ -28,7 +23,7 @@ Fortunately, he didn't just call me names. He went on to constructively explain 
 
 There's more but you get the gist.
 
-James went on to explain the application could have been better had we used a traditional architecture, without all the inherent problems with SPAs [[0](#ref0)].
+James went on to explain the application could have been better had we used a traditional architecture, without all the inherent [problems with SPAs](/articles/the-disadvantages-of-single-page-applications/).
 
 Whilst I was still quite chuffed with all the clever things I appeared to be doing, I couldn't help but realise he was right. There was just no need.
 

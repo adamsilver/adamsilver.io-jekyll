@@ -3,22 +3,13 @@ layout: post
 title:  "Javascript inheritance"
 date:   2014-09-09 09:00:59
 categories: js
-#image: elephant.jpg
-#tagline: A simple and powerful way to inherit
-citations:
- - title: Douglas Crockford on inheritance
-   link: http://javascript.crockford.com/inheritance.html
- - title: Jessie Javascript library
-   link: http://www.github.com/cinsoft/jessie/
- - title: Javascript namespacing
-   link: /articles/javascript-namespacing/
 ---
 
-Javascript inheritance is useful with regard to code reuse [[0](#ref0)]. Unfortunately, ECMAScript doesn't provide an *inherit* function natively, so we will need to create one. This article documents a simple and powerful technique.
+Javascript inheritance is useful with regard to code [reuse](http://javascript.crockford.com/inheritance.html). Unfortunately, ECMAScript doesn't provide an *inherit* function natively, so we will need to create one. This article documents a simple and powerful technique.
 
 ## How to write an inherit function
 
-We need to create an `inherit` function which will use `cloneObject` internally. Both of which are taken from Jessie [[1](#ref1)]. The namespace bit is optional but good practice [[2](#ref2)].
+We need to create an `inherit` function which will use `cloneObject` internally. Both of which are taken from [Jessie](http://www.github.com/cinsoft/jessie/). The namespace bit is optional but good [practice](/articles/javascript-namespacing/).
 
 	/**** The namespace ****/
     var lib = {};

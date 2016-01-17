@@ -3,12 +3,9 @@ layout: post
 title:  "DOM scripting forms"
 date:   2014-01-02 09:00:59
 categories: forms js
-citations:
- - title: "DOM 0 API"
-   link: "http://docs.oracle.com/cd/E19957-01/816-6408-10/"
 ---
 
-The HTML DOM has dedicated APIs for retrieving and manipulating form controls. The DOM0 [[0](#ref0)] Forms Collection API is perfect for this but unfortunately often forgotten. This article describes how to use this API.
+The HTML DOM has dedicated APIs for retrieving and manipulating form controls. The [DOM0](http://docs.oracle.com/cd/E19957-01/816-6408-10/) Forms Collection API is perfect for this but unfortunately often forgotten. This article describes how to use this API.
 
 ## Accessing a form
 

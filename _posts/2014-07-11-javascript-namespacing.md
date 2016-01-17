@@ -3,14 +3,9 @@ layout: post
 title:  "Javascript namespacing"
 date:   2014-07-11 09:00:01
 categories: js
-citations:
- - title: Global Domination
-   link: http://www.yuiblog.com/blog/2006/06/01/global-domination/
- - title: Over-engineered namespacing solutions on Stackoverflow
-   link: http://stackoverflow.com/questions/3410984/javascript-namespace
 ---
 
-Namespaces are used to help with code organisation, discoverability, and in the context of Javascript, the minimisation of global variables [[0](#ref0)].
+Namespaces are used to help with code organisation, discoverability, and in the context of Javascript, the minimisation of [global variables](http://www.yuiblog.com/blog/2006/06/01/global-domination/).
 
 Client-side Javascript doesn't (at the time of writing) have a dedicated construct for namespacing, but it can be imitated using object literals.
 
