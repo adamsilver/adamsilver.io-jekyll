@@ -296,15 +296,10 @@ a img {
 	}
 }
 
-.belief,
-.featuredArticles {
+.homePageSection {
 	margin-bottom: 70px;
 	padding-bottom: 50px;
 	border-bottom: 1px solid #ebebeb;
-}
-
-.thoughts {
-	margin-bottom: 70px;
 }
 
 /**********************************************************

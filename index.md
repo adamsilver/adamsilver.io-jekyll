@@ -10,7 +10,7 @@ id: home
 	<h1 class="intro">Hello, my name is Adam Silver, a UX engineer with over 15 years experience designing, prototyping and building human-friendly websites.</h1>
 </div>
 
-<div class="featuredArticles">
+<div class="homePageSection">
 	<h2>Featured articles</h2>
 	<div id="articleList">
 		{% for post in site.posts %}
@@ -24,20 +24,25 @@ id: home
 	</div>
 </div>
 
-<div class="belief">
+<div class="homePageSection">
 	<h2>Belief</h2>
 
-	<p>I believe websites should be accessible to <em>everyone</em> and that the best results are achieved by embracing the conventions of the web combined with a humanised and simple experience.
+	<p>I believe we can build amazing experiences for <em>everyone</em> by designing something that is humanised, simple whilst embracing the conventions of the web.</p>
 </div>
 
-<div class="belief">
+<div class="homePageSection">
 	<h2>Approach</h2>
 
 	<p>I love to work together from ideation all the way through to production. My preference is to lean on Agile methodologies to help focus on the truly essential &mdash; <em>less but better</em>.</p>
 </div>
 
-<div class="thoughts">
+<div class="homePageSection">
 	<h2>Writing</h2>
 
-	<p>I write <a href="/articles/">articles</a> on this blog as well as on the <a href="http://medium.com/simple-human">Simple=Human</a> publication with my friend <a href="http://theluckystrike.co.uk">Mark Jenkins</a>, which is all about leadership, design and development. It's definitely worth checking out.
+	<p>Not only do I <a href="/articles/">write here</a> but I also write on the <a href="http://medium.com/simple-human">Simple=Human</a> publication with my friend <a href="http://theluckystrike.co.uk">Mark Jenkins</a>, which is a collection of articles written by us about leadership, design and development.</p>
+</div>
+
+<div class="homePageSection">
+	<h2>Interested in working with me?</h2>
+	<p><a href="mailto:adambsilver+project@gmail.com">Get in touch</a> so we can discuss your project</p>
 </div>
