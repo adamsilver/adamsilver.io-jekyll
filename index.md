@@ -44,5 +44,5 @@ id: home
 
 <div class="homePageSection">
 	<h2>Interested in working with me?</h2>
-	<p><a href="mailto:adambsilver+project@gmail.com">Get in touch</a> so we can discuss your project</p>
+	<p><a href="mailto:adambsilver+project@gmail.com">Get in touch</a> so we can discuss your project.</p>
 </div>
