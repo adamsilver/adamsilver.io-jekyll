@@ -8,7 +8,7 @@ tags: featured
 
 **Can you design for everyone *and* make it visually beautiful?**
 
-In "[How To Hire Designers](https://medium.com/intercom-inside/how-to-hire-designers-960663e3a3e6#.eu7al1wfu)" Paul Adams explains the 4 major design disciplines: outcome, system, interaction and visual. A lot of designers excel and focus on visual.
+In [How To Hire Designers](https://medium.com/intercom-inside/how-to-hire-designers-960663e3a3e6#.eu7al1wfu) Paul Adams explains the 4 major design disciplines: outcome, system, interaction and visual. A lot of designers excel and focus on visual.
 
 There is no question that visual design is important. But, I am concerned at how people can place too much importance on it. So much so that it becomes detrimental to the other aspects and overall resulting experience.
 

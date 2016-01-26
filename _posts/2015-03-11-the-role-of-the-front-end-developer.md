@@ -16,7 +16,7 @@ citations:
    link: /articles/reintroducing-cross-browser-scripting/"
 ---
 
-The role of the Front-end developer extends far beyond translating  designs into code. They should be heavily involved in many other aspects of the design and development process as...
+The role of the Front-end developer extends far beyond translating  designs into code. They should be heavily involved in many other aspects of the design and development process...
 
 ## UX
 
