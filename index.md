@@ -27,7 +27,7 @@ id: home
 <div class="homePageSection">
 	<h2>Belief</h2>
 
-	<p>I believe we can build amazing experiences for <em>everyone</em> by designing something that is humanised, simple whilst embracing the conventions of the web.</p>
+	<p>I believe in creating amazing digital products that are <a href="/articles/the-role-of-the-front-end-developer/#accessibility">accessible</a> to everyone, no matter their age, ability, choice of device or interaction preferences. We can do this by designing humanised and simple experiences that <a href="/articles/designing-honestly-for-the-web/">embrace the conventions of the web</a>.</p>
 </div>
 
 <div class="homePageSection">
