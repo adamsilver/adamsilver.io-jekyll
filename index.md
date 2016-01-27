@@ -11,7 +11,7 @@ id: home
 
 # Hello, my name is Adam Silver, a UX engineer with over 15 years experience designing, prototyping and building human-friendly websites.
 
-## Featured articles
+<!-- ## Featured articles
 
 <div id="articleList">
 	{% for post in site.posts %}
@@ -22,8 +22,7 @@ id: home
 			</div>
 		{% endif %}
 	{% endfor %}
-</div>
-
+</div> -->
 
 ## Belief
 
