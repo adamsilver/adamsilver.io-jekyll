@@ -200,15 +200,54 @@ a:active {
 	margin: 0 20px 35px 40px;
 }
 
+@media(min-width: 600px) {
+	#article ol,
+	#article ul {
+		margin-bottom: 45px;
+	}
+}
+
 #article ol li,
 #article ul li {
-	font-size: 2em;
+	font-size: 1.6em;
 	line-height: 1.7em;
 	color: #292929;
 }
 
+@media(min-width: 600px) {
+	#article ol li,
+	#article ul li {
+		font-size: 2em;
+	}
+}
+
 #article figure {
-	margin-bottom: 35px;
+	margin-bottom: 30px;
+}
+
+@media(min-width: 600px) {
+	#article figure {
+		margin-bottom: 45px;
+	}
+}
+
+#article figure img {
+	margin-bottom: 4px;
+}
+
+#article figure figcaption {
+	font-size: 1.4em;
+	color: #292929;
+	text-align: center;
+	font-family: "droid sans";
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+@media(min-width: 600px) {
+	#article figure figcaption {
+		font-size: 1.7em;
+	}
 }
 
 /**********************************************************
@@ -237,15 +276,6 @@ a:active {
 	margin: 0 20px;
 }
 
-/*#articleSignUpForm label {
-	font-size: 1.6em;
-	line-height: 1.7em;
-	color: #292929;
-	display: block;
-	font-family: "droid sans";
-	text-transform: uppercase;
-}*/
-
 #articleSignUpForm .email {
 	font-family: "droid sans";
 	font-size: 1.6em;
@@ -255,7 +285,7 @@ a:active {
 	max-width: 400px;
 	display: inline-block;
 	margin-right: 5px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	box-sizing: border-box;
 }
 
