@@ -254,15 +254,15 @@ a:active {
 }
 
 /**********************************************************
-* Sign up form
+* Newsletter form
 **********************************************************/
 
-#articleSignUpForm {
+#newsletterForm {
 	max-width: 700px;
 	margin: 0 auto 50px;
 }
 
-#articleSignUpForm .heading {
+#newsletterForm .heading {
 	margin: 0 20px 15px;
 	font-size: 2em;
 	line-height: 1.2em;
@@ -270,16 +270,16 @@ a:active {
 }
 
 @media(min-width: 600px) {
-	#articleSignUpForm .heading {
+	#newsletterForm .heading {
 		font-size: 2.3em;
 	}
 }
 
-#articleSignUpForm .field {
+#newsletterForm .field {
 	margin: 0 20px;
 }
 
-#articleSignUpForm .email {
+#newsletterForm .email {
 	font-family: "droid sans";
 	font-size: 1.6em;
 	width: 100%;
@@ -292,7 +292,7 @@ a:active {
 	box-sizing: border-box;
 }
 
-#articleSignUpForm .signUpNowButton {
+#newsletterForm .signUpNowButton {
 	font-family: "droid sans";
 	font-size: 1.7em;
 	padding: 10px 45px;
@@ -305,12 +305,12 @@ a:active {
 }
 
 @media(min-width: 550px) {
-	#articleSignUpForm .signUpNowButton {
+	#newsletterForm .signUpNowButton {
 		width: auto;
 	}
 }
 
-#articleSignUpForm .signUpNowButton:hover {
+#newsletterForm .signUpNowButton:hover {
 	background-color: #6A3381;
 }
 
@@ -522,9 +522,36 @@ a:active {
 	border-top: 1px solid #ddd;
 }
 
-#footer p {
-	font-size: 1.8em;
-	font-family: 'droid sans';
+#footer ul {
+    list-style: none;
+    font-size: 1.8em;
+}
+
+#footer ul li {
+	display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: 'droid sans';
+    font-size: 0.9em;
+}
+
+#footer ul li:first-child {
+	margin-left: 20px;
+}
+
+#footer ul li:last-child {
+	margin-right: 20px;
+}
+
+#footer ul li a:link,
+#footer ul li a:visited {
+    color: #292929;
+    text-decoration: none;
+    display: block;
+}
+
+#footer ul li a:hover {
+    color: #8e44ad;
 }
 
 /**********************************************************
