@@ -334,6 +334,20 @@ a:active {
 	}
 }
 
+#page h2 {
+	margin: 0 20px 10px;
+	font-size: 2em;
+	line-height: 1.2em;
+	color: #292929;
+}
+
+@media(min-width: 600px) {
+	#page h2 {
+		font-size: 2.3em;
+		margin-bottom: 15px;
+	}
+}
+
 #page p {
 	margin: 0 20px 30px;
 	font-size: 1.6em;
