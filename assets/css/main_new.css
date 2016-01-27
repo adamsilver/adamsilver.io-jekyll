@@ -96,7 +96,7 @@ h1 {
 
 a:link,
 a:visited {
-	color: #4A90E2;
+	color: #8e44ad;
 }
 
 a:hover,
@@ -105,7 +105,7 @@ a:focus {
 }
 
 a:active {
-	background-color: #4A90E2;
+	background-color: #8e44ad;
 	color: #fff;
 }
 
@@ -294,7 +294,7 @@ a:active {
 	font-size: 1.7em;
 	padding: 10px 45px;
 	display: inline-block;
-	background-color: #4A90E2;
+	background-color: #8e44ad;
 	color: #fff;
 	border: none;
 	width: 100%;
@@ -494,7 +494,7 @@ a:active {
 }
 
 #nav ul li a:hover {
-    color: #4A90E2;
+    color: #8e44ad;
 }
 
 #nav ul li a:active,
@@ -504,7 +504,7 @@ a:active {
 
 #nav ul li a.active {
 	font-weight: bold;
-	color: #4A90E2;
+	color: #8e44ad;
 }
 
 /**********************************************************
