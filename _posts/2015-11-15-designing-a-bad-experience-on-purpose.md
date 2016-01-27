@@ -10,7 +10,10 @@ categories: ux design ecommerce
 Just as we were about to start development the business blocked it. This was the design that got blocked:
 
 <div class="image">
-	<img src="/assets/img/paymentchoice.png" alt="Payment choice page" width="100%">
+	<figure>
+		<img src="/assets/img/paymentchoice.png" alt="Payment choice page" width="100%">
+		<figcaption>Payment choice wireframe</figcaption>
+	</figure>
 </div>
 
 It was blocked because it was too easy to select PayPal. That's *right*, your eyes are not lying to you. The reason stemmed from the fact that when our users paid using card we received 50p per order as a transaction fee. With PayPal we wouldn't. 50p is a lot to lose when you're taking approximately 750,000 orders per week.

@@ -8,7 +8,10 @@ categories: forms a11y ux
 Sometimes a form is designed to be multi-purpose. Take the example below. It represents an edit details form whereby the user can either update their information or delete it all together. This kind of form causes usability problems for keyboard users.
 
 <div class="image">
-	<img src="/assets/img/multiplesubmit.png" alt="Multi submit problem" width="100%">
+	<figure>
+		<img src="/assets/img/multiplesubmit.png" alt="Multi submit problem" width="100%">
+		<figcaption>Multiple submit buttons</figcaption>
+	</figure>
 </div>
 
 <!-- <form>

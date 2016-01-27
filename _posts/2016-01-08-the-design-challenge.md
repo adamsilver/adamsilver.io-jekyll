@@ -6,19 +6,15 @@ categories: ux design
 tags: featured
 ---
 
-**Can you design for everyone *and* make it visually beautiful?**
+**Can you design for everyone *and* make it visually beautiful?** In [How To Hire Designers](https://medium.com/intercom-inside/how-to-hire-designers-960663e3a3e6#.eu7al1wfu) Paul Adams explains the 4 major design disciplines: outcome, system, interaction and visual. A lot of designers excel and focus on visual.
 
-In [How To Hire Designers](https://medium.com/intercom-inside/how-to-hire-designers-960663e3a3e6#.eu7al1wfu) Paul Adams explains the 4 major design disciplines: outcome, system, interaction and visual. A lot of designers excel and focus on visual.
+There is no question that visual design is important. But, I am concerned at how people can place too much importance on it. So much so that it becomes detrimental to the other aspects and overall resulting experience. Here are a few real examples of this:
 
-There is no question that visual design is important. But, I am concerned at how people can place too much importance on it. So much so that it becomes detrimental to the other aspects and overall resulting experience.
-
-Here are a few real examples of this:
-
-## 1. "We don't want to differentiate between buttons and links because we want a minimal design"
+**1. "We don't want to differentiate between buttons and links because we want a minimal design"**.
 
 Clarity trumps minimalism every time.
 
-## 2. "I don't wan't the outline on elements when the user focuses or activates something in the browser, it doesn't look nice &mdash; how many people use a keyboard anyway? Most people use a mouse, we can't legislate for all users"
+**2. "I don't wan't the outline on elements when the user focuses or activates something in the browser, it doesn't look nice &mdash; how many people use a keyboard anyway? Most people use a mouse, we can't legislate for all users"**.
 
 If we know there are people that use the keyboard then why not design for them? It's not just about how something looks, it's about how it works.
 
@@ -66,4 +62,4 @@ Sometimes website X does things, sometimes those things are ill-advised. Take th
 
 The web has been designed so that anyone with an Internet connection and a browser can access your content/application. That's the essence of the web &mdash; that's a huge part of the web's success.
 
-*Design for everyone. Legislate for all kinds of devices, screen sizes, capabilities, people with different abilities and interaction preferences.* **Isn't this just the challenge we face as designers and engineers?**
+Design for everyone. Legislate for all kinds of devices, screen sizes, capabilities, people with different abilities and interaction preferences. **Isn't this just the challenge we face as designers and engineers?**
