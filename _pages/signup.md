@@ -1,6 +1,7 @@
 ---
 layout: default
 id: signup
+title: Newsletter sign up
 permalink: /signup/
 ---
 
