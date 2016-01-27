@@ -9,11 +9,7 @@
 	        {% include header.html %}
 	        <div id="article">
 				<h1 class="title">{{ page.title }}</h1>
-	            <!-- <p class="meta">
-					<span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
-					<span class="divider">&#183;</span>
-					<a class="share" href="https://twitter.com/share?source=tweetbutton&text=&quot;{{page.title}}&quot;&via=adambsilver&url={{site.url}}{{page.url}}&hashtags={% for cat in page.categories limit:3 %}{% if forloop.last != true %}{{cat}},{%else%}{{cat}}{% endif %}{% endfor %}">Share on Twitter</a>
-				</p> -->
+	            <!-- <p class="share"><a class="share" href="https://twitter.com/share?source=tweetbutton&text=&quot;{{page.title}}&quot;&via=adambsilver&url={{site.url}}{{page.url}}&hashtags={% for cat in page.categories limit:3 %}{% if forloop.last != true %}{{cat}},{%else%}{{cat}}{% endif %}{% endfor %}">Share on Twitter</a></p> -->
 
 	           	{{ content }}
 	        </div>
