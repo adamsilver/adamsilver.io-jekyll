@@ -3,21 +3,6 @@ layout: post
 title:  "The disadvantages of Javascript polyfills"
 date:   2015-06-22 09:00:01
 categories: js polyfills
-#image: ditch.jpg
-#tagline: Working with the browser, not against it.
-citations:
- - title: What's wrong with extending the DOM?
-   link: http://perfectionkills.com/whats-wrong-with-extending-the-dom/
- - title: Extending native built-ins
-   link: http://perfectionkills.com/extending-native-builtins/
- - title: Feature Detection - State of the art browser scripting
-   link: http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting
- - title: Scalable JavaScript Application Architecture
-   link: https://www.youtube.com/watch?v=vXjVFPosQHw
- - title: ES Shim readme - see "Shams" and "May fail" sections
-   link: https://github.com/es-shims/es5-shim
- - title: Cross-browser widgets
-   link: http://peter.michaux.ca/articles/cross-browser-widgets
 ---
 
 A polyfill, also known as a shim, is a user defined implementation of an API that a developer expects a browser to provide natively, normalising browser differences.
@@ -28,19 +13,19 @@ However, this article discusses the problems you face when attempting to tame br
 
 ## Augmenting host objects
 
-Polyfills *must* augment host and native objects in order to plug missing gaps. The problem being that augmenting host objects and (to a slightly lesser extent) native objects is ill-advised and has been for well over a decade by experts including Richard Cornford, David Mark, Thomas Lahn and Kangax&mdash;the latter of which published two dedicated articles on the subject entitled *What's wrong with extending the DOM?* [[0](#ref0)] and *Extending native built-ins* [[1](#ref1)]. Here is a choice snippet below, but I highly advise reading the entire article:
+Polyfills *must* augment host and native objects in order to plug missing gaps. The problem being that augmenting host objects and (to a slightly lesser extent) native objects is ill-advised and has been for well over a decade by experts including Richard Cornford, David Mark, Thomas Lahn and Kangax&mdash;the latter of which published two dedicated articles on the subject entitled [What's wrong with extending the DOM?](http://perfectionkills.com/whats-wrong-with-extending-the-dom/) and [Extending native built-ins](http://perfectionkills.com/extending-native-builtins/). Here is a choice snippet below, but I highly advise reading the entire article:
 
 > &ldquo;In fact, DOM extension seemed so temptingly useful [...]. But what hides behind this seemingly innocuous practice is a huge load of trouble. [...] the downsides of this approach far outweigh any benefits.&rdquo;
 
 ## Feature detection is not enough
 
-As Peter Michaux demonstrates in *Feature Detection: State of the art browser scripting* [[2](#ref2)], the mere presence of an API is not necessarily enough to determine reliable usage. This is where feature *testing* comes in.
+As Peter Michaux demonstrates in [Feature Detection: State of the art browser scripting](http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting), the mere presence of an API is not necessarily enough to determine reliable usage. This is where feature *testing* comes in.
 
 Polyfills *tend* to just detect the presence of an API; they do not iron out the bugs or inconsistencies found across the breadth of browsers; even if they did, they would have to override the original, whereby the override may contain a reference to the original&mdash;a dangerous and unnecessary way to go. This is why facades are useful as we will see later on.
 
 ## Decoupling browser and application logic
 
-As Nicholas Zakas presents in *Scalable JavaScript Application Architecture* [[3](#ref3)], it is important to decouple application and browser logic. He states:
+As Nicholas Zakas presents in [Scalable JavaScript Application Architecture](https://www.youtube.com/watch?v=vXjVFPosQHw), it is important to decouple application and browser logic. He states:
 
 > &ldquo;Application logic should be written one way for all browsers in order to keep the code maintainable. If you’re using native APIs in your application logic, you can’t help but know what browser is being used because you need to account for browser differences. That means your application logic will always need to be updated as new browsers and new browser versions are released. **That’s a recipe for disaster**&rdquo;.
 
@@ -54,7 +39,7 @@ This seems sensible doesn't it? It is. With polyfills it's all or nothing, where
 
 ## Caveats
 
-It doesn't take much effort to find examples of problematic polyfills. Take the *ES5 Shim* [[4](#ref4)] project documentation. In describing the `Object.create` polyfill it states:
+It doesn't take much effort to find examples of problematic polyfills. Take the [ES5 Shim](https://github.com/es-shims/es5-shim) project documentation. In describing the `Object.create` polyfill it states:
 
 > &ldquo;For the case of simply "begetting" an object that inherits prototypically from another, this **should** work fine across legacy engines.&rdquo;
 
@@ -68,7 +53,7 @@ Does any of this sound like something you want to add to your codebase? I would 
 
 A facade, a form of wrapper, is a design pattern that normally provides a simplified interface to something more complex. This allows you to completely abstract away the differing browser implementations and bugs, with the flexibility to provide a suitable solution and a simplified method signature.
 
-Inside the facade there is nothing to stop you using portions of the API, and feature testing various implementations and acting accordingly, much like Peter Michaux demonstrates in his other brilliant article *Cross browser Widgets* [[5](#ref5)].
+Inside the facade there is nothing to stop you using portions of the API, and feature testing various implementations and acting accordingly, much like Peter Michaux demonstrates in his other brilliant article [Cross browser Widgets](http://peter.michaux.ca/articles/cross-browser-widgets).
 
 Cloning an object is pertinent to this article because `Object.create` is a useful API to solve this problem. If you just wanted to support "modern" browsers i.e ones that provide `Object.create`, then an implementation might be as follows:
 

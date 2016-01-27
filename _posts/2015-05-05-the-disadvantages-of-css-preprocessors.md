@@ -1,21 +1,9 @@
 ---
 layout: post
-title:  "The disadvantages of CSS preprocessors"
+title:  The disadvantages of CSS preprocessors
 date:   2015-05-05 09:00:01
 categories: css sass less
-#image: code.jpg
-#tagline: Be conscious before adding one to your tech stack
-citations:
- - title: SASS Source Maps
-   link: http://thesassway.com/intermediate/using-source-maps-with-sass
- - title: Should generated CSS be included in source control?
-   link: http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo
- - title: Consencus Driven Development
-   link: http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/
- - title: Cons of a CSS Preprocessor (File size deceiving)
-   link: http://jaketrent.com/post/cons-css-preprocessors/
- - title: The problem with CSS preprocessors (Dumb code duplication is dumb)
-   link: http://blog.millermedeiros.com/the-problem-with-css-pre-processors/
+
 ---
 
 CSS preprocessors have many advantages providing helpful methods for writing and reusing styles. However, CSS processors have several *disadvantages*, which I discuss in this article. It would be wise to at least be conscious of these issues before making the decision to use one on your project.
@@ -24,7 +12,7 @@ CSS preprocessors have many advantages providing helpful methods for writing and
 
 Due to having a compilation step, the browser is not interpreting the source files, meaning the CSS line numbers are now irrelevant when trying to debug. This makes debugging a lot harder.
 
-Source maps [[0](#ref0)] provide one solution but this requires setup and only works in a limited set of *modern* browsers. Developers who care about users also test in *older* browsers. Alternatively, you can hunt down styles via abstract portions of rules, which is horrid. Brian Kernighan said "debugging is twice as hard as programming" and it's our duty to ensure this is as easy as possible.
+[Source maps](http://thesassway.com/intermediate/using-source-maps-with-sass) provide one solution but this requires setup and only works in a limited set of *modern* browsers. Developers who care about users also test in *older* browsers. Alternatively, you can hunt down styles via abstract portions of rules, which is horrid. Brian Kernighan said "debugging is twice as hard as programming" and it's our duty to ensure this is as easy as possible.
 
 ## Tooling
 
@@ -40,11 +28,11 @@ Compilation can be quick but it can also be slow, *very* slow. I have frequently
 
 ## Saving generated files or not
 
-Whilst I firmly believe that you *shouldn't* save generated files to source control, I (and I am not the only one to) have experienced opinions to the contrary [[1](#ref1)] and in this case prepare for  Concenus Driven Development [[2](#ref2)].
+Whilst I firmly believe that you *shouldn't* save generated files to source control, I (and I am not the only one to) have experienced opinions to the [contrary](http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo) and in this case prepare for  [Concenus Driven Development](http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/).
 
 ## Performance
 
-Source file size can be deceiving [[3](#ref3)] because the generated CSS is likely to be significantly larger than the source file, potentially causing performance problems [[4](#ref4)]. Ultimately, what is generated is out of your control and *some* responsibility is handed over to your chosen CSS preprocessor.
+[Source file size can be deceiving](http://jaketrent.com/post/cons-css-preprocessors/) because the generated CSS is likely to be significantly larger than the source file, potentially causing [performance problems](http://blog.millermedeiros.com/the-problem-with-css-pre-processors/). Ultimately, what is generated is out of your control and *some* responsibility is handed over to your chosen CSS preprocessor.
 
 ## Onboarding and recruitment
 

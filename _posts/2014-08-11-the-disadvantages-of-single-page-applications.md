@@ -4,24 +4,9 @@ title:  "The disadvantages of Single Page Applications"
 date:   2014-08-11 09:00:01
 categories: js spas featured
 tags: featured
-citations:
- - title: Wikipedia on SPAs
-   link: http://en.wikipedia.org/wiki/Single-page_application
- - title: Beyond pushState - building single page applications
-   link: https://medium.com/joys-of-javascript/4353246f4480
- - title: Stackoverflow on Detecting back button click
-   link: http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button
- - title: Stackoverflow on SPAs and SEO
-   link: http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo
- - title: Script loading hacks
-   link: http://blog.getify.com/labjs-script-loading-the-way-it-should-be/
- - title: Improving performance on twitter
-   link: https://blog.twitter.com/2012/improving-performance-on-twittercom
- - title: Lifehacker and the hash bang debarkle
-   link: http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs
 ---
 
-Single Page Applications (SPAs) have become extremely popular on the web, because they are *supposed* to 'provide a more fluid user experience' [[0](#ref0)]. However, there are several technical issues which can be detrimental to the User Experience. Before getting to the issues, let's first discuss the difference between an SPA and a traditional multi-page website (MPW).
+Single Page Applications (SPAs) have become extremely popular on the web, because they are *supposed* to [provide a more fluid user experience](http://en.wikipedia.org/wiki/Single-page_application). However, there are several technical issues which can be detrimental to the User Experience. Before getting to the issues, let's first discuss the difference between an SPA and a traditional multi-page website (MPW).
 
 ## What differentiates an SPA from an MPW?
 
@@ -31,7 +16,7 @@ Whilst it's common to associate MVC, MVVM, XHR, DOM manipulation (and more) with
 
 ## Navigation and fast back
 
-Browsers store history, meaning pages load quickly when the user presses the *back* button. SPAs need to recreate this functionality. As Daniel Puplus says in his article [[1](#ref1)]:
+Browsers store history, meaning pages load quickly when the user presses the *back* button. SPAs need to recreate this functionality. As [Daniel Puplus says in his article](https://medium.com/joys-of-javascript/4353246f4480):
 
 > &ldquo;Back should be quick; users don’t expect data to have changed much.
 
@@ -45,7 +30,7 @@ Upon 'navigating', the application will need a method of storing and retrieving 
 
 **Note: The words 'navigating' and 'pages' are in quotes because SPAs, by definition don't have the concept of navigation and pages in the traditional sense. Quotes will be discarded going forward for brevity.**
 
-The application will also need to determine *when* to store and retrieve pages from the cache. Navigation typically utilises *pushState* or *hashchange* and the application will need to differentiate between the user changing the URL (via clicking a link or typing a URL in the location bar) or manually hitting back/forward, which is not straightforward [[2](#ref2)].
+The application will also need to determine *when* to store and retrieve pages from the cache. Navigation typically utilises *pushState* or *hashchange* and the application will need to differentiate between the user changing the URL (via clicking a link or typing a URL in the location bar) or [manually hitting back/forward, which is not straightforward](http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button).
 
 ## Navigation and remembering scroll history position
 
@@ -69,11 +54,11 @@ Browsers normally provide the *beforeunload* event which allows the application 
 
 ## Search engine optimisation
 
-Some SPAs don't require SEO, but for those that do, the solutions aren't straightforward [[3](#ref3)].
+Some SPAs don't require SEO, but for those that do, [the solutions aren't straightforward](http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo).
 
 ## Navigation and loading CSS &amp; JS
 
-If an SPA grows to a significant size, loading the entire application on page load may be detrimental to the experience because it's akin to loading all pages of a website when only the home page was requested. Unfortunately, this leads to attempting to load CSS and JS for certain pages. Script loading is notoriously difficult and contains unreliable hacks [[4](#ref4)] which can can be fatal to the reliability of the application.
+If an SPA grows to a significant size, loading the entire application on page load may be detrimental to the experience because it's akin to loading all pages of a website when only the home page was requested. Unfortunately, this leads to attempting to load CSS and JS for certain pages. [Script loading is notoriously difficult and contains unreliable hacks](http://blog.getify.com/labjs-script-loading-the-way-it-should-be/) which can can be fatal to the reliability of the application.
 
 ## Analytics
 
@@ -87,4 +72,4 @@ Whilst you can use Selenium (and other equivalents) to test SPAs, extra effort i
 
 SPAs are meant to provide a better experience. It is therefore ironic that SPAs require significantly more development effort, with a result that is detrimental to the user. Javascript is never going to do it better than the browser! Websites can still have Rich User Interfaces without cramming the entire site into one document.
 
-Furthermore, it is interesting to note that sites such as Twitter [[5](#ref5)] and Lifehacker [[6](#ref6)] realised the SPA architecture was a mistake and have since reverted their architectures. The issues described in this article are self-induced. Remember, **avoiding the SPA architecture avoids the issues**.
+Furthermore, it is interesting to note that sites such as [Twitter](https://blog.twitter.com/2012/improving-performance-on-twittercom) and [Lifehacker](http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs) realised the SPA architecture was a mistake and have since reverted their architectures. The issues described in this article are self-induced. Remember, **avoiding the SPA architecture avoids the issues**.

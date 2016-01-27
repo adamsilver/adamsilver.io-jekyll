@@ -3,24 +3,13 @@ layout: post
 title:  "The role of the Front-end Developer"
 date:   2015-03-11 09:00:01
 categories: js frontenddevelopment
-citations:
- - title: There is no UX, there is only UX
-   link: http://www.disambiguity.com/there-is-no-ux/"
- - title: Why You Should Include Your Developer In The Design Process
-   link: http://www.smashingmagazine.com/2014/11/21/why-you-should-include-your-developer-in-the-design-process/"
- - title: This is a mother fucking website
-   link: http://www.motherfuckingwebsite.com"
- - title: Don't use AJAX to display personalised content on cached pages
-   link: /articles/dont-use-ajax-to-display-personalised-content-on-cached-pages/"
- - title: Reintroduction to Cross-browser scripting
-   link: /articles/reintroducing-cross-browser-scripting/"
 ---
 
 The role of the Front-end developer extends far beyond translating  designs into code. They should be heavily involved in many other aspects of the design and development process...
 
 ## UX
 
-Everyone is responsible for UX [[0](#ref0)] and Front-end Developers play an essential role [[1](#ref1)] due to their intimate relationship with a huge range browsers, across devices and operating systems. **How can you design for the web if you don't understand the platforms' constraints and powers?**
+[Everyone is responsible for UX](http://www.disambiguity.com/there-is-no-ux/) and [Front-end Developers play an essential role](http://www.smashingmagazine.com/2014/11/21/why-you-should-include-your-developer-in-the-design-process/) due to their intimate relationship with a huge range browsers, across devices and operating systems. **How can you design for the web if you don't understand the platforms' constraints and powers?**
 
 ## Front-end architecture
 
@@ -37,7 +26,7 @@ An *experienced* Front-end developer should be able to design a suitable front-e
 
 ## Accessibility
 
-The beauty of the web is one of reach; deploy once and access everywhere; there are just two requirements: a browser and an Internet connection. Oh and a competent Front-end developer who won't fuck up your website [[2](#ref2)].
+The beauty of the web is one of reach; deploy once and access everywhere; there are just two requirements: a browser and an Internet connection. Oh and a competent Front-end developer who won't [fuck up your website](http://www.motherfuckingwebsite.com).
 
 Front-end developers are responsible and should take pride in the fact that, the UIs they build, are accessible to everyone, no matter their age, ability, user interaction preferences and, choice of device, Operating System and browser.
 
@@ -53,13 +42,13 @@ Much like Accessibility, it is imperative Front-end developers understand how to
 
 ## Front-end performance
 
-It is important Front-end developers understand various facets of performance ensuring that web pages are served and run as fast as possible without degrading the UX [[4](#ref4)]. This includes a good knowledge of browser caching, compression, bundling and runtime performance.
+It is important Front-end developers understand various facets of performance ensuring that web pages are served and [run as fast as possible without degrading the UX](/articles/misusing-ajax-for-personalisation). This includes a good knowledge of browser caching, compression, bundling and runtime performance.
 
 ## Browser compatibility
 
 Front-end developers should endeavour to test in as many browsers as is reasonable when developing, but will understand there is a balance to be had, as testing all browsers, in all compatibilities, on all devices is a sisyphean task.
 
-The balance can only be struck through experience of knowing which spread of browsers should be tested and at which frequency. Leaning on cross-browser scripting [[5](#ref5)] minimises the worry behind a lack of manual browser testing coverage.
+The balance can only be struck through experience of knowing which spread of browsers should be tested and at which frequency. Leaning on [cross-browser scripting](/articles/writing-javascript-that-conforms-to-progressive-enhancement/) minimises the worry behind a lack of manual browser testing coverage.
 
 ## Development process and methodologies
 
