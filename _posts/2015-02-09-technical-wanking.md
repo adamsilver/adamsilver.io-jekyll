@@ -21,13 +21,9 @@ Fortunately, he didn't just call me names. He went on to constructively explain 
 2. **Writing a client-side Javascript view renderer to rebuild/render only parts of the DOM tree that changed.** Again server-side frameworks have you covered. The browser is an expert at parsing and rendering HTML. Script will never do it better.
 3. **Writing client-side Javascript to massage and work with generic REST APIs.** It's standard practice for a server-side framework to compose beautiful fit-for-purpose view-models ready for consumption by server-side view templates.
 
-There's more but you get the gist.
-
 James went on to explain the application could have been better had we used a traditional architecture, without all the inherent [problems with SPAs](/articles/the-disadvantages-of-single-page-applications/).
 
-Whilst I was still quite chuffed with all the clever things I appeared to be doing, I couldn't help but realise he was right. There was just no need.
-
-I was solving self-induced problems to assist my team get their work done, as opposed to delivering a great and reliable experience for our users.
+Whilst I was still quite chuffed with all the clever things I appeared to be doing, I couldn't help but realise he was right. I was solving self-induced problems to assist my team in get ting their work done, as opposed to delivering a great and reliable experience for our users.
 
 If we had avoided the lure of the coolness behind building a SPA, the end result would have been just as slick. Just as beautiful. Just as rich. And it would have taken half the time to build, with a far nicer split of responsibilities between the server and client, meaning we could iterate faster. Not to mention it would have had better performance and accessibility. All of which contributes to the overall UX.
 

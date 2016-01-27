@@ -135,14 +135,14 @@ a:active {
 
 #article h2 {
 	margin: 0 20px 10px;
-	font-size: 1.9em;
+	font-size: 2em;
 	line-height: 1.2em;
 	color: #292929;
 }
 
 @media(min-width: 600px) {
 	#article h2 {
-		font-size: 2.2em;
+		font-size: 2.3em;
 		margin-bottom: 15px;
 	}
 }
@@ -192,7 +192,7 @@ a:active {
 }
 
 #article blockquote cite {
-	color: #4A90E2;
+	font-weight: bold;
 }
 
 #article ol,
