@@ -109,6 +109,9 @@ a:active {
 	color: #fff;
 }
 
+#content {
+	margin-bottom: 100px;
+}
 
 /**********************************************************
 * Article
@@ -261,14 +264,14 @@ a:active {
 
 #articleSignUpForm .heading {
 	margin: 0 20px 15px;
-	font-size: 1.8em;
+	font-size: 2em;
 	line-height: 1.2em;
 	color: #292929;
 }
 
 @media(min-width: 600px) {
-	#article .heading {
-		font-size: 2.2em;
+	#articleSignUpForm .heading {
+		font-size: 2.3em;
 	}
 }
 
@@ -505,6 +508,23 @@ a:active {
 #nav ul li a.active {
 	font-weight: bold;
 	color: #8e44ad;
+}
+
+/**********************************************************
+* Footer
+**********************************************************/
+
+#footer {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	max-width: 700px;
+	margin: 0 auto;
+	border-top: 1px solid #ddd;
+}
+
+#footer p {
+	font-size: 1.8em;
+	font-family: 'droid sans';
 }
 
 /**********************************************************
