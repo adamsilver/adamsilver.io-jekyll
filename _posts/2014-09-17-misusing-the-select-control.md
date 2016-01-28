@@ -44,11 +44,7 @@ She also stated that a few respondents commented that auto-submit drop-down menu
 
 ## How can I solve this problem?
 
-If you want to avoid the pitfalls you have two options to choose from:
-
-1. Make the options links instead. Users intuitively understand what a link will do.
-
-2. Give the select a submit button so that users can comfortably select an option and choose to submit it.
+If you want to avoid the pitfalls you have two options: the first is to make the options links instead. Users intuitively understand what a link will do. The second is to give the select box a submit button, so that users can comfortably select an option and choose to submit it.
 
 ## Summary
 
