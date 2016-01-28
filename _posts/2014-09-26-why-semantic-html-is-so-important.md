@@ -38,5 +38,3 @@ Functional tests are easier to write because the hooks are mapped to features. F
 ## 7. Performance
 
 This is probably the least beneficial, but when you use semantic HTML the page weight is likely smaller. Unsemantic HTML might use inline styles or stylistic elements such as `<font>`. It also increases the likeliness of elements having multiple class names which increasing bloat.
-
-**In life, without good foundations everything falls down. HTML is no different. When you use semantic HTML everything else is better.**

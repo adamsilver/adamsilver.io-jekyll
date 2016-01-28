@@ -54,6 +54,4 @@ If the user doesn't understand the answers to these questions, they will have a 
 
 With pagination, people can anticipate the effort required to browse through the results. There is a happy sense of completion when a page is finished. There is a clear end. Pagination gives people control to decide whether or not to continue to the next page.
 
-Also, smaller pages, means a faster, more focused, less overwhelming experience with none of the pitfalls described above. People don't mind clicking links (to new pages) as long as each click is meaningful and leads them closer to the desired goal.
-
-**It's boringly simple but since when is that a bad thing?**
+Also, smaller pages, means a faster, more focused, less overwhelming experience with none of the pitfalls described above. People don't mind clicking links (to new pages) as long as each click is meaningful and leads them closer to their desired goal.

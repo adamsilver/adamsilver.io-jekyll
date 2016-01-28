@@ -31,7 +31,7 @@ If we had stuck with the original design I think that:
 1. A small percentage of existing users would have started using PayPal.
 * We would have attracted new users because we now offer PayPal.
 
-Even if as much as say 25% of users (which is unlikely) stopped paying the 50p, it is highly likely they would be happier for using PayPal as a more convenient, and perceptively more secure option.
+Even if as much as say 25% of users (which is unlikely) stopped paying the transaction fee, it is highly likely they would be happier for using PayPal as a more convenient, and perceptively more secure option.
 
 A happy user is one that purchases more frequently or at least continues to use the service at the same frequency. A happy user also has the potential to recommend to friends or family&mdash;how much is that worth in marketing?
 
@@ -51,5 +51,3 @@ Firstly points #1 and #2 contradict each other. If PayPal influenced *every* exi
 We can confidently assume all users that switched to PayPal are happier for doing so and as described above, happy users continue to use the product and help significantly with marketing.
 
 As a welcome bonus, there would be no need to support card payments, as everyone uses PayPal which lowers ongoing development costs with the added bonus of simplifying the checkout flow; which is very likely to increase conversion with end results far exceeding 50p per order.
-
-**If you’re going to provide a feature, *always* make it easy to use.**

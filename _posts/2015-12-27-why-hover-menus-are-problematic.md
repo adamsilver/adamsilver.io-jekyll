@@ -9,7 +9,7 @@ Hover menus are very popular on the web. People think they are popular because t
 
 ## 1. The hover tunnel and accidental deactivation
 
-When a user opens a menu, they can't intuitively move the mouse directly to a sub menu item because this will accidentally close the menu &mdash; either by leaving the menu or activating another menu by accident. This makes the menu very hard and frustrating to use which **drains vital user energy**.
+When a user opens a menu, they can't intuitively move the mouse directly to a sub menu item because this will accidentally close the menu &mdash; either by leaving the menu or activating another menu by accident. This makes the menu very hard and frustrating to use which **drains peoples energy**.
 
 <div class="image">
 	<figure>
@@ -31,7 +31,7 @@ When a user opens a menu, they can't intuitively move the mouse directly to a su
 
 With hover, a user can accidentally open a menu even though they never intended it and when this happens it obscures the content behind disrupting the experience.
 
-Also, if a user intends to click a link within a page, when the menu pops open just before clicking that link, the user may end up navigating away accidentally. I have seen this happen several times and it's a very bad experience indeed.
+Also, if a user intends to click a link within a page, when the menu pops open just before clicking that link, the user may end up navigating away accidentally. I have seen this happen several times and it's a poor experience.
 
 <div class="image">
 	<figure>
@@ -43,7 +43,7 @@ Also, if a user intends to click a link within a page, when the menu pops open j
 <div class="image">
 	<figure>
 		<img src="/assets/img/hover4.jpg" alt="Hover" width="100%">
-		<figcaption>...the menu opens accidentally so the user clicks Energy instead</figcaption>
+		<figcaption>...the menu opens accidentally so the user clicks "Energy" instead</figcaption>
 	</figure>
 </div>
 

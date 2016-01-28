@@ -191,7 +191,7 @@ Progressive Enhancement is something that puts users first. The misunderstanding
 
 Unfortunately, this is quite common in the industry and it's the people that suffer the most, the same people that are interested in your business or content. It's just not good enough to let them endure the *fuck you* experience, they don't deserve it and it's circumventable.
 
-Fortunately, when the real meaning of Progressive Enhancement is understood, the execution can be implemented correctly. This allows for robust, future-friendly, backwards-compatible Javascript code. This allows you to *responsibly* use cutting-edge browser APIs, leaving the majority of other browsers to degrade to the core experience. Your users and your business will appreciate it.
+Fortunately, when the real meaning of Progressive Enhancement is understood, the execution can be implemented correctly. This allows for robust, future-friendly, backwards-compatible Javascript code. This allows you to *responsibly* use cutting-edge browser APIs, leaving the majority of other browsers to degrade to the core experience.
 
 <!--
 

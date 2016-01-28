@@ -42,9 +42,3 @@ Silly but true! A lot less trees were killed when stopped tasking.
 ## 8. Collaboration was achieved by the overall process
 
 Our team didn't need tasks to enable collaboration. We sat in close proximity, had regular, useful and well-timed meetings, we paired when appropriate and had regular productive feedback loops.
-
-## Final note
-
-The great thing about Agile Scrum is that it encourages regular change through Retrospectives. It just so happens that one of the processes Scrum advocates doesn't always work so well.
-
-**Question everything, look for friction, improve the process.**

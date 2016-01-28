@@ -6,9 +6,9 @@ categories: ux design
 tags: featured
 ---
 
-**Can you design for everyone *and* make it visually beautiful?** In [How To Hire Designers](https://medium.com/intercom-inside/how-to-hire-designers-960663e3a3e6#.eu7al1wfu) Paul Adams explains the 4 major design disciplines: outcome, system, interaction and visual. A lot of designers excel and focus on visual.
+**Can you design for everyone *and* make it visually beautiful?** In [How To Hire Designers](https://medium.com/intercom-inside/how-to-hire-designers-960663e3a3e6#.eu7al1wfu) Paul Adams explains the 4 major design disciplines: outcome, system, interaction and visual.
 
-There is no question that visual design is important. But, I am concerned at how people can place too much importance on it. So much so that it becomes detrimental to the other aspects and overall resulting experience. Here are a few real examples of this:
+A lot of designers focus on visual. The thing is, sometimes we place so much emphasis on it, that it becomes detrimental to the other aspects and overall experience. Here are a few real examples...
 
 **#1 "We don't want to differentiate between buttons and links because we want a minimal design".** Clarity trumps minimalism every time.
 
@@ -34,8 +34,4 @@ There is no question that visual design is important. But, I am concerned at how
 
 **#12 "But website X does it, so we should do it"** Sometimes website X does things, sometimes those things are ill-advised. Take this opportunity to do it better.
 
-## Isn't this our challenge?
-
-The web has been designed so that anyone with an Internet connection and a browser can access your content/application. That's the essence of the web &mdash; that's a huge part of the web's success.
-
-Design for everyone. Legislate for all kinds of devices, screen sizes, capabilities, people with different abilities and interaction preferences. **Isn't this just the challenge we face as designers and engineers?**
+Why not design for everyone? Why not legislate for all kinds of devices, screen sizes, capabilities, people with different abilities and interaction preferences? **Isn't this *the* challenge?**

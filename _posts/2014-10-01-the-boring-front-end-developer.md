@@ -6,11 +6,17 @@ categories: js featured
 tags: featured
 ---
 
-*Cool* front-end developers are always *pushing the envelope*, jumping out of their seat to use the latest and greatest and shiniest of UI frameworks and libraries. They are often found bridging the gap between native apps and web and so will strive to make the UI look and behave like an app. *Which app?* you may ask. *iPhone? Android? What version?* All good questions, alas another topic altogether. However, there is another kind of front-end developer, the *boring* front-end developer. Here is an ode to the *boring* front-end developer, *BFED* if you will.
+*Cool* front-end developers are always *pushing the envelope*, jumping out of their seat to use the latest and greatest and shiniest of UI frameworks and libraries.
+
+They are often found bridging the gap between native apps and web and so will strive to make the UI look and behave like an app. *Which app?* you may ask. *iPhone? Android? What version?* All good questions, alas another topic altogether.
+
+However, there is another kind of front-end developer, the *boring* front-end developer. Here is an ode to the *boring* front-end developer, *BFED* if you will.
 
 ## Browser support
 
-The BFED realises that while not all experiences will be identical, all browsers *can* be used to consume a website, even *gasp*, IE6 and below. He/she will promote Progressive Enhancement and Cross-browser (not Multi-browser) scripting at any given opportunity. The BFED also realises it is not a feat to drop support for a particular (set of) browser(s) and understands that forgetting about the existence of those users hurts them and their perception of the company/product.
+The BFED realises that while not all experiences will be identical, all browsers *can* be used to consume a website, even *gasp*, IE6 and below. He/she will promote Progressive Enhancement and Cross-browser (not Multi-browser) scripting at any given opportunity.
+
+The BFED also realises it is not a feat to drop support for a particular (set of) browser(s) and understands that forgetting about the existence of those users hurts them and their perception of the company/product.
 
 ## Preprocessors
 
@@ -18,7 +24,7 @@ When given the choice to add a preprocessor (e.g. LESS, SASS, CoffeeScript etc) 
 
 ## Accessibility
 
-The BFED realises that users have different abilities and preferred ways of using a computer, whether its a mouse, finger, thumb, screen reader, keyboard or a combination of all, websites should be consumable no matter the audience, screen size or capability of the browser.
+The BFED realises that users have different abilities and preferred ways of using a computer, whether it's a mouse, finger, thumb, screen reader, keyboard or a combination of all, websites should be consumable no matter the audience, screen size or capability of the browser.
 
 ## UI design
 

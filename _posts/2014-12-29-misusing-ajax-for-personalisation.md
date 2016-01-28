@@ -61,8 +61,6 @@ Content-caching *is* a very useful technique when used responsibly and for pages
 
 It is ill-advised to misuse Javascript in this way as there are several negative side effects in doing so. AJAX should not break the web, it should enhance the experience where necessary. AJAX seems like an innocent and beneficial solution, but in reality it encourages bad practice that creates several self-induced problems for users and the development team.
 
-**Keep things simple.**
-
 <!--
 
 ## Todo:
