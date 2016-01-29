@@ -425,6 +425,7 @@ a:active {
 	vertical-align: middle;
 	margin-left: 20px;
 	margin-bottom: 30px;
+	border: 10px solid #f9f9f9;
 }
 
 .homePageSection h2 {
