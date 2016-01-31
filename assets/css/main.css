@@ -120,7 +120,7 @@ a:active {
 #article {
 	padding-top: 70px;
 	max-width: 700px;
-	margin: 0 auto 100px;
+	margin: 0 auto 0px;
 }
 
 #article h1 {
@@ -259,7 +259,9 @@ a:active {
 
 #newsletterForm {
 	max-width: 700px;
-	margin: 0 auto 50px;
+	padding-top: 40px;
+	padding-bottom: 45px;
+	margin: 0 auto;
 }
 
 #newsletterForm .heading {
@@ -321,7 +323,7 @@ a:active {
 #page {
 	padding-top: 70px;
 	max-width: 700px;
-	margin: 0 auto 100px;
+	margin: 0 auto 70px;
 }
 
 #page h1 {
@@ -553,6 +555,56 @@ a:active {
 
 #footer ul li a:hover {
     color: #8e44ad;
+}
+
+/**********************************************************
+* Now read
+**********************************************************/
+
+.nowRead {
+	max-width: 700px;
+	margin: 0 auto;
+	padding-top: 40px;
+	padding-bottom: 45px;
+	background-color: #f9f9f9;
+}
+
+@media(min-width: 620px) {
+	.nowRead {
+		border-radius: 10px;
+	}
+}
+
+.nowRead .heading {
+	margin: 0 20px 5px;
+	font-size: 1.3em;
+	line-height: 1.2em;
+	color: #555;
+	text-transform: uppercase;
+	font-family: 'droid sans';
+}
+
+@media(min-width: 600px) {
+	.nowRead .heading {
+		font-size: 1.6em;
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+}
+
+.nowRead .articleTitle {
+	margin: 0 20px;
+	font-size: 1.7em;
+	line-height: 1.2em;
+	color: #292929;
+}
+
+@media(min-width: 600px) {
+	.nowRead .articleTitle {
+		font-size: 2em;
+		margin-left: 40px;
+		margin-right: 40px;
+	}
 }
 
 /**********************************************************

@@ -1,8 +1,6 @@
 {% if page.previous.url %}
 	<div class="nowRead">
-		<div class="nowReadInner">
-			<h2 class="now">Now read this</h2>
-			<h3 class="articleTitle"><a href="{{page.previous.url}}">{{page.previous.title}}</a></h3>
-		</div>
+		<h2 class="heading">Now read</h2>
+		<h2 class="articleTitle"><a href="{{page.previous.url}}">{{page.previous.title}}</a></h2>
 	</div>
 {% endif %}
