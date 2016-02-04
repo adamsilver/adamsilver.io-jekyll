@@ -1,8 +1,5 @@
 name: Adam Silver | London-based UX engineer
-markdown: redcarpet
-highlighter: pygments
+markdown: kramdown
 permalink: /articles/:title/
 url: http://adamsilver.io
 include: ['_pages']
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
