@@ -37,8 +37,8 @@ There are many [myths about Progressive Enhancement](http://www.sitepoint.com/ja
 
 	var form = document.forms[0];
 	form.attachEvent('submit', function() {
-		window.event.returnValue = false;
-		var widgets = document.getElementsByClassName('widget');
+	    window.event.returnValue = false;
+        var widgets = document.getElementsByClassName('widget');
 	});
 
 The code above errors because IE8 doesn't support the retrieving of elements by class name. The problem here is that the page didn't *fully* enhance. The user didn't get the enhanced experience. Nor did they get the core experience. *No*, instead they got the *fuck you* experience.
@@ -59,8 +59,8 @@ People who use *other* browsers get the aforementioned *fuck you* experience, of
 
 [Cutting The Mustard](http://responsivenews.co.uk/post/18948466399/cutting-the-mustard) (CTM) is a relatively new approach to Progressive Enhancement, one which has the premise of a reliable solution and is based on the concept of a core and an enhanced experience. However, it's implementation (shown below) falls short.
 
-	if(	document.querySelector && window.addEventListener && window.localStorage) {
-		// bootstrap application
+	if(document.querySelector && window.addEventListener && window.localStorage) {
+        // bootstrap application
 	}
 
 It works by *detecting* a few *choice* browser APIs, in order to *infer* that the browser is "modern" &mdash; something that is impossible to determine and irrelevant anyway.
@@ -83,14 +83,14 @@ More specifically, CTM has the following problems of note:
 
 **6. It's unreliable**. If the application uses any API that is not within the CTM test, the chance of a *fuck you* experience is high. As an  example, it will break in browsers where `matchMedia` isn't provided, or even in browsers where it is provided but it's buggy. Furthermore, `querySelector` itself has many bugs depending on context and arguments supplied, further reducing the reliability of CTM. An example follows:
 
-	if(	document.querySelector && window.addEventListener && window.localStorage) {
-		// application that uses other APIs
+	if(document.querySelector && window.addEventListener && window.localStorage) {
+	    // application that uses other APIs
 
-		window.addEventListener("load", function(e) {
-			// FAIL = ANOTHER FUCK YOU
-			var matches = window.matchMedia(...);
-			// ...other stuff...
-		}, false);
+	    window.addEventListener("load", function(e) {
+	        // FAIL = ANOTHER FUCK YOU
+	        var matches = window.matchMedia(...);
+	        // ...other stuff...
+	    }, false);
 	}
 
 I had a little chat with Jeremy Keith about this and he rightly says that you can use CTM better by detecting all the APIs. He is definitely right of course.
@@ -111,10 +111,10 @@ Then, in order to determine that the browser can provide the enhanced experience
 The only way to reliably do this is through wrappers, or *facades* if jargon is your thing. A library that employs Progressive Enhancement *must* provide a dynamic API. Dynamic, in that it adapts and changes based on the host environment i.e. the browser. This is what it basically looks like:
 
 	if(lib.hasFeatures('find', 'addListener', 'storeValue')) {
-		var el = lib.find('.whatever');
-		lib.addListener(el, "click", function() {
-			lib.storeValue('key', 'value');
-		});
+        var el = lib.find('.whatever');
+        lib.addListener(el, "click", function() {
+		    lib.storeValue('key', 'value');
+	    });
 	}
 
 **1. Notice how remarkably similar CTM *looks* in comparison.** The difference is that the application doesn't directly interface with browser APIs. Facades provide a leaner, context-specific API, that allows you to iron out bugs, all of which reliably enables Progressive Enhancement.
@@ -200,5 +200,4 @@ The combination of the facts that it is impossible to determine which browser is
 
 Veal:
 I would add - and with a mobile connection you have no choice but to use the proxy because that is the way the network is configured. They are not as open as your home broadband and companies often employ a proxy to save bandwidth, and again you cannot avoid this
-
 -->

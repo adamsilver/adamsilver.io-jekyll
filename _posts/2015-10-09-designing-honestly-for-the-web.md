@@ -12,10 +12,10 @@ There are many aspects of dishonest design. This article hones in on just one of
 I must admit, I have been known to bend it on more than a few occasions myself over the course of my career. I think that's okay though because only by experiencing or reading about the mistakes we make, can we avoid them in the future. Here are some examples in which I have bent the web:
 
 1. I used tables for layout.
-* I have given submit buttons the same &ldquo;hand&rdquo; cursor as a link.
-* I created a custom file input so that it looked &ldquo;nicer&rdquo;.
-* I have hidden labels to build a "cleaner" UI.
-* I have used a select box for navigation.
+2. I have given submit buttons the same &ldquo;hand&rdquo; cursor as a link.
+3. I created a custom file input so that it looked &ldquo;nicer&rdquo;.
+4. I have hidden labels to build a "cleaner" UI.
+5. I have used a select box for navigation.
 
 &ldquo;A Dao of Web Design&rdquo; written by John Allsopp over one and half decades ago, has some timeless insights that gives us more than a clue, as to why this happens and continues to happen today.
 
