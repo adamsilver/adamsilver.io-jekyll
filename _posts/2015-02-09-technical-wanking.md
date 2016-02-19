@@ -35,4 +35,4 @@ In a paid profession, it is your duty to serve the client and their users to the
 
 I know many developers scattered across the industry, who are in the trenches having to use this cutting-edge tech that causes more problems than it solves.
 
-In many ways I wish I hadn't participated in Technical Wanking back then, but then again, I wouldn't be where I am today having learnt many lessons about what not to do. All I will say is beware of the latest fad. **[Maybe it's time to be boring](/articles//the-boring-front-end-developer/)?**
+In many ways I wish I hadn't participated in Technical Wanking back then, but then again, I wouldn't be where I am today having learnt many lessons about what *not* to do. All I will say is beware of the latest fad. **[Maybe it's time to be boring?](/articles//the-boring-front-end-developer/)**
