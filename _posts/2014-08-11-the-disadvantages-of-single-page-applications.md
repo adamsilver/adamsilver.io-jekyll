@@ -24,7 +24,7 @@ Browsers store history, meaning pages load quickly when the user presses the *ba
 
 > &ldquo;In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.&rdquo;
 
-Upon 'navigating', the application will need a method of storing and retrieving 'pages' from a cache. Unless of course we want to slow down the speed of loading 'pages', which is meant to be a significant benefit of SPAs. Storage options could include memory, local (or session) storage, client-side database and cookies.
+When 'navigating', the application will need a method of storing and retrieving 'pages' from a cache. Unless of course we want to slow down the speed of loading 'pages', which is meant to be a significant benefit of SPAs. Storage options could include memory, local (or session) storage, client-side database and cookies.
 
 **Note: The words 'navigating' and 'pages' are in quotes because SPAs, by definition don't have the concept of navigation and pages in the traditional sense. Quotes will be discarded going forward for brevity.**
 
@@ -65,6 +65,10 @@ Analytics tools will normally track page views and related tools without any ext
 ## 8. Automated functional testing
 
 Whilst you can use Selenium (and other equivalents) to test SPAs, extra effort is required to handle timeouts of XHR calls because there is no signal to Selenium that an XHR call has finished, like there is when a (real) page finishes loading. This leads to more questions and problems; *How long should the timeout be? What happens if it takes longer than normal?* The test execution will likely be slower too.
+
+## 9. It's going to fail
+
+[Everyone has Javascript, Right?](http://kryogenix.org/code/browser/everyonehasjs.html) Wrong. It's going to fail and because as SPAs *depend* on many different Javascript enhancements, when it does fail it will fail in a fatal way as they tend not to [conform to Progressive Enhancement](/articles/writing-javascript-that-conforms-to-progressive-enhancement/).
 
 ## Summary
 
