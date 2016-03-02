@@ -68,10 +68,14 @@ Whilst you can use Selenium (and other equivalents) to test SPAs, extra effort i
 
 ## 9. It's going to fail
 
-[Everyone has Javascript, Right?](http://kryogenix.org/code/browser/everyonehasjs.html) Wrong. It's going to fail and because as SPAs *depend* on many different Javascript enhancements, when it does fail it will fail in a fatal way as they tend not to [conform to Progressive Enhancement](/articles/writing-javascript-that-conforms-to-progressive-enhancement/).
+[Everyone has Javascript, Right?](http://kryogenix.org/code/browser/everyonehasjs.html) Wrong. It's going to fail and because SPAs *depend* on many different Javascript enhancements, when it does fail, it will fail in a fatal way as they tend not to [conform to Progressive Enhancement](/articles/writing-javascript-that-conforms-to-progressive-enhancement/).
 
 ## Summary
 
-SPAs are meant to provide a better experience. It is therefore ironic that SPAs require significantly more development effort, with a result that is detrimental to the user. Javascript is never going to do it better than the browser! Websites can still have Rich User Interfaces without cramming the entire site into one document.
+Whilst SPAs are meant to provide a better experience, it's pretty clear and ironic that they are much harder to design and build with a result that is detrimental to the user.
 
-Furthermore, it is interesting to note that sites such as [Twitter](https://blog.twitter.com/2012/improving-performance-on-twittercom) and [Lifehacker](http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs) realised the SPA architecture was a mistake and have since reverted their architectures. The issues described in this article are self-induced. Remember, **avoiding the SPA architecture avoids the issues**.
+Javascript is never going to beat the browser at what it does best &mdash; *browsing*. And you can still have beautifully rich, enhanced experiences without cramming an entire site into one document.
+
+Furthermore, it is interesting to note that sites such as [Twitter](https://blog.twitter.com/2012/improving-performance-on-twittercom) and [Lifehacker](http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs), and more recently [Delicious](http://blog.delicious.com/2016/01/delicious-changes/) have also found these issues to be so problematic that they have reverted to more traditional archictures with positive results.
+
+Finally, just remember that these are self-induced problems and that by avoid the SPA architecture you instantly avoid the problems. And can focus your efforts on *real* problems.
