@@ -24,8 +24,8 @@ Less bullshit.
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/bullshit.png" alt="Enhanceconf Q&amp;A" width="100%">
-		<figcaption><a href="deathtobullshit.com">Death To Bullshit</a></figcaption>
+		<img src="/assets/img/bullshit.jpg" alt="Enhanceconf Q&amp;A" width="100%">
+		<figcaption><a href="http://deathtobullshit.com">Death To Bullshit</a></figcaption>
 	</figure>
 </div>
 
@@ -49,8 +49,8 @@ Today, this is what my desktop looks like…
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/desktop.png" alt="Enhanceconf Q&amp;A" width="100%">
-		<figcaption>Desktop</figcaption>
+		<img src="/assets/img/desktop.jpg" alt="My desktop" width="100%">
+		<figcaption>My desktop</figcaption>
 	</figure>
 </div>
 
@@ -61,8 +61,8 @@ And, this is what my home screen looks like…
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/homescreen.png" alt="Enhanceconf Q&amp;A" width="100%">
-		<figcaption>Homescreen</figcaption>
+		<img src="/assets/img/homescreen.jpg" alt="My homescreen" width="100%">
+		<figcaption>My homescreen</figcaption>
 	</figure>
 </div>
 
@@ -74,7 +74,7 @@ So when we're both doing less, we both work better.
 
 **Now, web design and development is hard. How can we make it simpler for ourselves and for our users?**
 
-It's true that simple is *complicated* but sometimes simple is *simple*.
+It's true that simple is *complicated* but sometimes simple is ***simple***.
 
 And it's this latter variety of simple that I want to focus on today because I think that's what we're missing. I think there is a huge opportunity to do the simple things and get big results.
 
@@ -86,7 +86,7 @@ We hone in on complicated and skip the basics and I recently came across a story
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/gawande.png" alt="Atul Gawande" width="100%">
+		<img src="/assets/img/gawande.jpg" alt="Atul Gawande" width="100%">
 		<figcaption>Atul Gawande, Professor of Surgery, Harvard Medical School</figcaption>
 	</figure>
 </div>
@@ -143,13 +143,13 @@ He talked to experts in other high-risk professions, such as aviation.
 
 > But, here, the result came by checking the most basic things.
 
-> Because the basics were actually the most important of all.
+> **Because the basics were actually the most important of all.**
 
 > It's a normal human reaction to forget the importance of getting the basic things right.
 
 > Human beings get **seduced by complexity**.
 
-> Which is exactly what's happening in our industry. We're so hypnotised by complexity, we forget the basics.
+Which is exactly what's happening in our industry. We're so hypnotised by complexity, we forget the basics.
 
 We're so busy worrying about the Javascript this, the framework that, the AJAX, the carousel etc.
 
@@ -157,7 +157,9 @@ We're often just rebuilding the same thing we did last year, this year in a new 
 
 Now, there are many reasons we do complicated. I want to share two interesting ones with you today.
 
-The first reason is *contribution*. We feel that if we put a lot of effort in, then we get a lot of value out but this is often not the case.
+The first reason is **contribution**.
+
+We feel that if we put a lot of effort in, then we get a lot of value out but this is often not the case.
 
 And to demonstrate, I want to share with you a portion of an article I read recently by my friend [Mark Jenkins](https://twitter.com/markjenkins), a designer here in London. It's entitled “[Contribution](https://medium.com/simple-human/contribution-3dff1af38ba4#.nl9814tbr)” and it's a tale of two designers &mdash;** Designer A** and **Designer B**.
 
@@ -189,13 +191,9 @@ And to demonstrate, I want to share with you a portion of an article I read rece
 
 > **Designer A** relies on what they don't know.
 
-> **Designer A** releases early to learn.
+> **Designer A** releases early to learn. Then goes back to improve.
 
-> Then goes back to improve.
-
-> **Designer B** releases late.
-
-> They learn less because they believe they have perfected something, without testing.
+> **Designer B** releases late. They learn less because they believe they have perfected something, without testing.
 
 > **Designer A** works with context.
 
@@ -211,7 +209,7 @@ And I guess if I wanted to sum this up nicely for you it would be that value onl
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/value.png" alt="Value only has a value when it's value is valued" width="100%">
+		<img src="/assets/img/value.jpg" alt="Value only has a value when it's value is valued" width="100%">
 	</figure>
 </div>
 
@@ -219,7 +217,7 @@ And in the case of enhancements, I am not so sure all the enhancements we go abo
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/boots.png" alt="Boots" width="100%">
+		<img src="/assets/img/boots.jpg" alt="Boots" width="100%">
 	</figure>
 </div>
 
@@ -227,7 +225,8 @@ One example I have of this was when I was working on Boots.com back in 2008, in 
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/boots_single.png" alt="Boots Checkout Diagram" width="100%">
+		<img src="/assets/img/boots_single.jpg" alt="Boots Checkout Diagram" width="100%">
+		<figcaption>Boots.com single-page checkout diagram</figcaption>
 	</figure>
 </div>
 
@@ -235,7 +234,8 @@ We put in so much effort upfront in order to design, build, test, release and fi
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/boots_page.png" alt="Boots Page Diagram" width="100%">
+		<img src="/assets/img/boots_page.jpg" alt="Boots Page Diagram" width="100%">
+		<figcaption>Boots.com multi-page checkout diagram</figcaption>
 	</figure>
 </div>
 
@@ -243,7 +243,7 @@ So we ended up reverting to the basics. Each accordion step became it's own page
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/justeat.png" alt="Just Eat" width="100%">
+		<img src="/assets/img/justeat.jpg" alt="Just Eat" width="100%">
 	</figure>
 </div>
 
@@ -251,7 +251,8 @@ And as history repeats itself, almost 6 years later I was working at Just Eat. W
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/justeat_checkout.png" alt="Just Eat Checkout" width="100%">
+		<img src="/assets/img/justeat_checkout.jpg" alt="Just Eat Checkout" width="100%">
+		<figcaption>Multi-page checkout on Just Eat</figcaption>
 	</figure>
 </div>
 
@@ -261,7 +262,7 @@ All of this resulted in almost 2 million extra orders per year. That's orders, n
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/twomillion.png" alt="Two illion extra orders per year" width="100%">
+		<img src="/assets/img/twomillion.jpg" alt="Two million extra orders per year" width="100%">
 	</figure>
 </div>
 
@@ -273,7 +274,7 @@ You could say that I became less marketable because my CV was far less “wow”
 
 But it's a little but like how the surgeons found it demeaning to do the most basic things and we saw what results they achieved. And afterall, it's not about me or my CV, it's about the results and the human being at the end of them.
 
-Then comes *technology*…
+Then comes **technology**…
 
 Technology is easy to complicate. One very simple example of this is the use of Jekyll. For those unaware, Jekyll is a static website generator written in Ruby. It's geared towards blogs so it basically produces a bunch of articles where each article is made of some simple HTML.
 
@@ -290,6 +291,12 @@ But if you think about it, comments can be really valuable and a comment is just
 **So why do we do this?**
 
 We do this because it makes our lives as developers easier &mdash; it's so easy to throw a piece of Javascript at it.
+
+<div class="image">
+	<figure>
+		<img src="/assets/img/problem.jpg" alt="Make it your problem" width="100%">
+	</figure>
+</div>
 
 But ultimately we have put our needs before the needs of the user which as [Jeremy Keith](https://adactio.com/) says…
 
@@ -309,11 +316,11 @@ You see, there is so much to explore with just the basics.
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/essential.png" alt="Mobile first is essential only" width="100%">
+		<img src="/assets/img/essential.jpg" alt="Mobile first is essential only" width="100%">
 	</figure>
 </div>
 
-I am also thinking mobile first, which to me just means small screen first, which to me just really means essential first, which to me just really really means essential only.
+I am also thinking mobile first, which to *me* just means small screen first, which to me just *really* means essential first, which to me just really *really* means essential only.
 
 And this has been a real boon for the industry because it has forced us to cater for small screens and picking what is truly essential to the experience which scales up easily to big screens.
 
@@ -351,4 +358,4 @@ Ultimately, this is what I want for us, this is what I want for the industry, an
 
 *It was a pleasure to speak and share my knowledge and experiences alongside the others who were there: [Nat Buckley](https://twitter.com/thatnatbuckley), [Anna Debenham](https://twitter.com/anna_debenham), [Stefan Tilkov](https://twitter.com/stilkov), [Forbes Lindesay](Forbes Lindesay), [Oliver Joseph Ash](https://twitter.com/OliverJAsh), [Stu Cox](https://twitter.com/StuCoxMedia), [Phil Hawksworth](https://twitter.com/philhawksworth), [Stephen Waller](https://twitter.com/bruised_blood), [Jen Simmons](https://twitter.com/jensimmons), [Robin Christopherson](https://twitter.com/USA2DAY), [Stephanie Morillo](https://twitter.com/radiomorillo), [Aaron Gustafson](https://twitter.com/AaronGustafson) and [Jeremy Keith](https://twitter.com/adactio).*
 
-*Finally I want to thank [Simon McManus](Simon McManus) for inviting me to talk and a brilliantly organised conference &mdash; thank you!*
+*Finally I want to thank [Simon McManus](https://twitter.com/simonmcmanus) for inviting me to talk and a brilliantly organised conference &mdash; thank you!*
