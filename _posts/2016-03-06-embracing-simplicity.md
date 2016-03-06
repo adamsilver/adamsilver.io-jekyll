@@ -300,7 +300,7 @@ We do this because it makes our lives as developers easier &mdash; it's so e
 	</figure>
 </div>
 
-But ultimately we have put our needs before the needs of the user which as [Jeremy Keith](https://adactio.com/) says…
+But ultimately we have put our needs before the needs of the user which as [Jeremy Keith](https://adactio.com/journal/10325) says…
 
 > If I had to choose between making something my problem and making something the users problem, I would make it mine every time.
 
