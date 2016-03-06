@@ -217,7 +217,7 @@ And in the case of enhancements, I am not so sure all the enhancements we go abo
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/boots.jpg" alt="Boots" width="100%">
+		<img src="/assets/img/boots.jpg" alt="Boots logo" width="100%">
 	</figure>
 </div>
 
@@ -225,7 +225,7 @@ One example I have of this was when I was working on Boots.com back in 2008, in 
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/boots_single.jpg" alt="Boots Checkout Diagram" width="100%">
+		<img src="/assets/img/boots_single.jpg" alt="Boots.com single-page checkout diagram" width="100%">
 		<figcaption>Boots.com single-page checkout diagram</figcaption>
 	</figure>
 </div>
@@ -234,7 +234,7 @@ We put in so much effort upfront in order to design, build, test, release and fi
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/boots_page.jpg" alt="Boots Page Diagram" width="100%">
+		<img src="/assets/img/boots_page.jpg" alt="Boots.com multi-page checkout diagram" width="100%">
 		<figcaption>Boots.com multi-page checkout diagram</figcaption>
 	</figure>
 </div>
@@ -243,7 +243,7 @@ So we ended up reverting to the basics. Each accordion step became it's own page
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/justeat.jpg" alt="Just Eat" width="100%">
+		<img src="/assets/img/justeat.jpg" alt="Just Eat logo" width="100%">
 	</figure>
 </div>
 
@@ -251,7 +251,7 @@ And as history repeats itself, almost 6 years later I was working at Just Eat. W
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/justeat_checkout.jpg" alt="Just Eat Checkout" width="100%">
+		<img src="/assets/img/justeat_checkout.jpg" alt="Multi-page checkout on Just Eat" width="100%">
 		<figcaption>Multi-page checkout on Just Eat</figcaption>
 	</figure>
 </div>
@@ -294,7 +294,7 @@ We do this because it makes our lives as developers easier &mdash; it's so e
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/problem.jpg" alt="Make it your problem" width="100%">
+		<img src="/assets/img/problem.jpg" alt="Make it your problem, not your users." width="100%">
 	</figure>
 </div>
 
@@ -316,7 +316,7 @@ You see, there is so much to explore with just the basics.
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/essential.jpg" alt="Mobile first is essential only" width="100%">
+		<img src="/assets/img/essential.jpg" alt="Mobile first is really just essential only" width="100%">
 	</figure>
 </div>
 
