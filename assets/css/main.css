@@ -109,6 +109,13 @@ a:active {
 	color: #fff;
 }
 
+hr {
+	height: 1px;
+	background-color: #eee;
+	border: none;
+	margin-bottom: 45px;
+}
+
 #content {
 	margin-bottom: 100px;
 }
