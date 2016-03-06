@@ -221,7 +221,9 @@ And in the case of enhancements, I am not so sure all the enhancements we go abo
 	</figure>
 </div>
 
-One example I have of this was when I was working on Boots.com back in 2008, in particular their checkout flow. It was designed as a single page checkout. It had all the enhancements including Accordions, AJAX, client-side validation, no page refreshes. As you go through each step the accordions would expand and collapse.
+One example I have of this was when I was working on Boots.com back in 2008, in particular their checkout flow. It was designed as a single page checkout.
+
+It had all the enhancements including Accordions, AJAX, client-side validation, no page refreshes. As you go through each step the accordions would expand and collapse.
 
 <div class="image">
 	<figure>
