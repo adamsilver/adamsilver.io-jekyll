@@ -161,7 +161,7 @@ The first reason is **contribution**.
 
 We feel that if we put a lot of effort in, then we get a lot of value out but this is often not the case.
 
-And to demonstrate, I want to share with you a portion of an article I read recently by my friend [Mark Jenkins](http://www.theluckystrike.co.uk/), a designer here in London. It's entitled “[Contribution](https://medium.com/simple-human/contribution-3dff1af38ba4#.nl9814tbr)” and it's a tale of two designers &mdash;** Designer A** and **Designer B**.
+And to demonstrate, I want to share with you a portion of an article I read recently by my friend [Mark Jenkins](http://www.theluckystrike.co.uk/embracing-simplicity/), a designer here in London. It's entitled “[Contribution](https://medium.com/simple-human/contribution-3dff1af38ba4#.nl9814tbr)” and it's a tale of two designers &mdash;** Designer A** and **Designer B**.
 
 > **Designer A** spends an hour of their time making 5 screens because they know they need to design 5 screens. They're not trying to change the world, they achieve what they set out to do.
 
