@@ -7,12 +7,14 @@ categories: ux design webdevelopment
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/enhanceconf_qanda.jpeg" alt="Enhanceconf Q&amp;A" width="100%">
+		<img src="{{ site.url }}/assets/img/enhanceconf_qanda.jpeg" alt="Enhanceconf Q&amp;A" width="100%">
 		<figcaption>Photo by <a href="https://www.flickr.com/photos/psd/">Paul Downey</a></figcaption>
 	</figure>
 </div>
 
-*I had the honour of speaking at [Enhanceconf](http://enhanceconf.com/) 2016 &mdash; a conference dedicated to Progressive Enhancement. It was a pleasure speaking about a subject close to my heart and I was really chuffed with peoples feedback. Here are my [slides](https://speakerdeck.com/adamsilver/embracing-simplicity) and here is what I said on the day:*
+*I had the honour of speaking at [Enhanceconf](http://enhanceconf.com/) 2016 &mdash; a conference dedicated to Progressive Enhancement. It was a pleasure speaking about a subject close to my heart and I was really chuffed with peoples feedback. Here are my [slides](https://speakerdeck.com/adamsilver/embracing-simplicity) and below is the video along with the transcript:*
+
+<iframe width="100%" height="415" src="https://www.youtube.com/embed/UlzG6-fI00g" frameborder="0" allowfullscreen></iframe>
 
 I want to start by using our imagination.
 
@@ -24,7 +26,7 @@ Less bullshit.
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/bullshit.jpg" alt="Enhanceconf Q&amp;A" width="100%">
+		<img src="{{ site.url }}/assets/img/bullshit.jpg" alt="Enhanceconf Q&amp;A" width="100%">
 		<figcaption><a href="http://deathtobullshit.com">Death To Bullshit</a></figcaption>
 	</figure>
 </div>
@@ -49,7 +51,7 @@ Today, this is what my desktop looks like…
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/desktop.jpg" alt="My desktop" width="100%">
+		<img src="{{ site.url }}/assets/img/desktop.jpg" alt="My desktop" width="100%">
 		<figcaption>My desktop</figcaption>
 	</figure>
 </div>
@@ -61,7 +63,7 @@ And, this is what my home screen looks like…
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/homescreen.jpg" alt="My homescreen" width="100%">
+		<img src="{{ site.url }}/assets/img/homescreen.jpg" alt="My homescreen" width="100%">
 		<figcaption>My homescreen</figcaption>
 	</figure>
 </div>
@@ -86,7 +88,7 @@ We hone in on complicated and skip the basics and I recently came across a story
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/gawande.jpg" alt="Atul Gawande" width="100%">
+		<img src="{{ site.url }}/assets/img/gawande.jpg" alt="Atul Gawande" width="100%">
 		<figcaption>Atul Gawande, Professor of Surgery, Harvard Medical School</figcaption>
 	</figure>
 </div>
@@ -209,7 +211,7 @@ And I guess if I wanted to sum this up nicely for you it would be that value onl
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/value.jpg" alt="Value only has a value when it's value is valued" width="100%">
+		<img src="{{ site.url }}/assets/img/value.jpg" alt="Value only has a value when it's value is valued" width="100%">
 	</figure>
 </div>
 
@@ -217,17 +219,17 @@ And in the case of enhancements, I am not so sure all the enhancements we go abo
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/boots.jpg" alt="Boots logo" width="100%">
+		<img src="{{ site.url }}/assets/img/boots.jpg" alt="Boots logo" width="100%">
 	</figure>
 </div>
 
 One example I have of this was when I was working on Boots.com back in 2008, in particular their checkout flow. It was designed as a single page checkout.
 
-It had all the enhancements including Accordions, AJAX, client-side validation, no page refreshes. As you go through each step the accordions would expand and collapse.
+It had all the enhancements including Accordions, AJAX, client-side validation, no page refreshes. As you go through each step, the accordions would expand and collapse.
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/boots_single.jpg" alt="Boots.com single-page checkout diagram" width="100%">
+		<img src="{{ site.url }}/assets/img/boots_single.jpg" alt="Boots.com single-page checkout diagram" width="100%">
 		<figcaption>Boots.com single-page checkout diagram</figcaption>
 	</figure>
 </div>
@@ -236,7 +238,7 @@ We put in so much effort upfront in order to design, build, test, release and fi
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/boots_page.jpg" alt="Boots.com multi-page checkout diagram" width="100%">
+		<img src="{{ site.url }}/assets/img/boots_page.jpg" alt="Boots.com multi-page checkout diagram" width="100%">
 		<figcaption>Boots.com multi-page checkout diagram</figcaption>
 	</figure>
 </div>
@@ -245,15 +247,15 @@ So we ended up reverting to the basics. Each accordion step became it's own page
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/justeat.jpg" alt="Just Eat logo" width="100%">
+		<img src="{{ site.url }}/assets/img/justeat.jpg" alt="Just Eat logo" width="100%">
 	</figure>
 </div>
 
-And as history repeats itself, almost 6 years later I was working at Just Eat. We had a single page checkout too and we were tasked with improving conversion within the checkout flow.
+And as history repeats itself, almost 6 years later, I was working at Just Eat. We had a single page checkout too and we were tasked with improving conversion within the checkout flow.
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/justeat_checkout.jpg" alt="Multi-page checkout on Just Eat" width="100%">
+		<img src="{{ site.url }}/assets/img/justeat_checkout.jpg" alt="Multi-page checkout on Just Eat" width="100%">
 		<figcaption>Multi-page checkout on Just Eat</figcaption>
 	</figure>
 </div>
@@ -264,7 +266,7 @@ All of this resulted in almost 2 million extra orders per year. That's orders, n
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/twomillion.jpg" alt="Two million extra orders per year" width="100%">
+		<img src="{{ site.url }}/assets/img/twomillion.jpg" alt="Two million extra orders per year" width="100%">
 	</figure>
 </div>
 
@@ -296,7 +298,7 @@ We do this because it makes our lives as developers easier &mdash; it's so e
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/problem.jpg" alt="Make it your problem, not your users." width="100%">
+		<img src="{{ site.url }}/assets/img/problem.jpg" alt="Make it your problem, not your users." width="100%">
 	</figure>
 </div>
 
@@ -318,7 +320,7 @@ You see, there is so much to explore with just the basics.
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/essential.jpg" alt="Mobile first is really just essential only" width="100%">
+		<img src="{{ site.url }}/assets/img/essential.jpg" alt="Mobile first is really just essential only" width="100%">
 	</figure>
 </div>
 
@@ -328,7 +330,7 @@ And this has been a real boon for the industry because it has forced us to cater
 
 **We must stop fearing the page refresh and stop fearing white space.**
 
-When we trim the fat for all, and when we build these things in the right way the page refresh, something we have always had, goes unnoticed and can be responsible for some amazingly simple experiences.
+When we trim the fat for all, and when we build these things in the right way the page refresh (something we have always had) goes unnoticed and can be responsible for some amazingly simple experiences.
 
 And I am not saying that we should oversimplify, nor that there isn't a place for complicated. But if “ten” is complicated, and “one” is simple, we spend way to much time near the ten mark and I think we need to bring it closer to one at least by default.
 
@@ -342,13 +344,13 @@ We all know the benefits of iterative development and user-testing and I think P
 
 I suggest we design and develop the core experience. Then release and test with users. At this point, you might find that this core experience is all that is needed. Great &mdash; move on to the next feature.
 
-If it doesn't work well enough can iterate. I suggest we practice thoughtful reduction rather than mindless addition by exploring the basics a little deeper. If that works great.
+If it doesn't work well enough, we can iterate. I suggest we practice thoughtful reduction rather than mindless addition by exploring the basics a little deeper. If it works now, great &mdash; now move on.
 
 If this still doesn't work you have my permission to enhance.
 
 But the great thing here is that you have delivered little and often, learnt little often which is great for team morale and momentum. And of course we know along the way that our effort is adding value in terms of team knowledge and product user experience.
 
-It is also great because it can reduce the emotional attachment we are prone to. As designers and developers if we put a lot of upfront effort in then we get more attached to our work. If we let the results do the talking then we remove this problem which again is great for morale and momentum.
+It is also great because it can reduce the emotional attachment we are prone to. As designers and developers if we put a lot of upfront effort in then we get more attached to our work. If we let the results do the talking, then we remove this problem which again is great for morale and momentum.
 
 And small steps can result in small wins, and small wins are worth celebrating.
 
