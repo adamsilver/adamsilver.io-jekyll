@@ -11,22 +11,9 @@ id: home
 
 # Hello, my name is Adam Silver, a UX engineer with over 15 years experience designing, prototyping and building human-friendly websites.
 
-<!-- ## Featured articles
-
-<div id="articleList">
-	{% for post in site.posts %}
-		{% if post.tags contains 'featured' %}
-			<div class="article">
-				<h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-				{% include articleMeta.html date=post.date cont=post.content %}
-			</div>
-		{% endif %}
-	{% endfor %}
-</div> -->
-
 ## Belief
 
-I believe in creating amazing digital products that are [accessible](/articles/the-role-of-the-front-end-developer/#accessibility) to everyone, no matter their age, ability, choice of device or interaction preferences. We can do this by designing humanised and simple experiences that [embrace the conventions of the web](/articles/designing-honestly-for-the-web/).
+I believe in creating amazing digital products that are [accessible](/articles/the-role-of-the-front-end-developer/#accessibility) to everyone, no matter their age, ability, choice of device or interaction preferences. We can do this by designing humanised and [simple experiences]({% post_url 2016-03-06-embracing-simplicity %}) that [embrace the conventions of the web]({% post_url 2015-10-09-designing-honestly-for-the-web %}).
 
 ## Approach
 
