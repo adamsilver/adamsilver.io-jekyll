@@ -48,31 +48,31 @@ hr {
 * Article
 **********************************************************/
 
-#article {
+#content {
 	padding-top: 30px;
 	max-width: 700px;
 	margin: 0 auto 0px;
 }
 
 @media(min-width: 600px) {
-	#article {
+	#content {
 		padding-top: 40px;
 	}
 }
 
-#article h1 {
+#content h1 {
 	margin: 0 20px 40px;
 	font-size: 2.6em;
 	line-height: 1.2em;
 }
 
 @media(min-width: 600px) {
-	#article h1 {
+	#content h1 {
 		font-size: 3.2em;
 	}
 }
 
-#article h2 {
+#content h2 {
 	margin: 0 20px 10px;
 	font-size: 1.5em;
 	line-height: 1.2em;
@@ -80,31 +80,31 @@ hr {
 }
 
 @media(min-width: 600px) {
-	#article h2 {
+	#content h2 {
 		font-size: 1.9em;
 		margin-bottom: 15px;
 	}
 }
 
-#article p {
+#content p {
 	margin: 0 20px 30px;
 	font-size: 1.7em;
 	line-height: 1.7em;
 }
 
 @media(min-width: 600px) {
-	#article p {
+	#content p {
 		font-size: 2.1em;
 		margin-bottom: 45px;
 	}
 }
 
-#article p code {
+#content p code {
 	background: #f5f5f5;
 	font-size: 1.3em;
 }
 
-#article pre {
+#content pre {
 	font-family: Monaco,'Courier New','Courier',monospace;
 	font-size: 1.9em;
 	background-color: #f5f5f5;
@@ -118,80 +118,80 @@ hr {
 }
 
 @media(min-width: 600px) {
-	#article pre {
+	#content pre {
 		font-size: 2.6em;
 		margin-bottom: 45px;
 	}
 }
 
-#article blockquote {
+#content blockquote {
 	margin: 0 30px 35px;
 	font-style: italic;
 }
 
-#article blockquote cite {
+#content blockquote cite {
 	font-weight: bold;
 }
 
-#article ol,
-#article ul {
+#content ol,
+#content ul {
 	margin: 0 20px 35px 40px;
 }
 
 @media(min-width: 600px) {
-	#article ol,
-	#article ul {
+	#content ol,
+	#content ul {
 		margin-bottom: 45px;
 	}
 }
 
-#article ol li,
-#article ul li {
+#content ol li,
+#content ul li {
 	font-size: 1.7em;
 	line-height: 1.7em;
 }
 
 @media(min-width: 600px) {
-	#article ol li,
-	#article ul li {
+	#content ol li,
+	#content ul li {
 		font-size: 2.1em;
 	}
 }
 
-#article figure {
+#content figure {
 	margin-bottom: 30px;
 }
 
 @media(min-width: 600px) {
-	#article figure {
+	#content figure {
 		margin-bottom: 45px;
 	}
 }
 
-#article figure img {
+#content figure img {
 	margin-bottom: 4px;
 }
 
-#article figure figcaption {
+#content figure figcaption {
 	font-size: 1.4em;
 	text-align: center;
-	font-family: "droid sans";
+	font-family: helvetica, arial;
 	padding-left: 20px;
 	padding-right: 20px;
 }
 
 @media(min-width: 600px) {
-	#article figure figcaption {
+	#content figure figcaption {
 		font-size: 1.7em;
 	}
 }
 
-#article iframe {
+#content iframe {
 	margin-bottom: 30px;
 }
 
 @media(min-width: 600px) {
-	#article iframe {
+	#content iframe {
 		margin-bottom: 45px;
 	}
 }
@@ -200,31 +200,32 @@ hr {
 * Newsletter form
 **********************************************************/
 
-#newsletterForm {
+.newsletterForm {
 	max-width: 700px;
 	padding-top: 40px;
 	padding-bottom: 45px;
 	margin: 0 auto;
 }
 
-#newsletterForm .heading {
+.newsletterForm-heading {
 	margin: 0 20px 15px;
-	font-size: 2em;
+	font-size: 1.5em;
 	line-height: 1.2em;
+	text-transform: uppercase;
 }
 
 @media(min-width: 600px) {
-	#newsletterForm .heading {
-		font-size: 2.3em;
+	.newsletterForm-heading {
+		font-size: 1.9em;
 	}
 }
 
-#newsletterForm .field {
+.newsletterForm-field {
 	margin: 0 20px;
 }
 
-#newsletterForm .email {
-	font-family: "droid sans";
+.newsletterForm-email {
+	font-family: helvetica, arial;
 	font-size: 1.6em;
 	width: 100%;
 	border: 2px solid #bdbdbd;
@@ -236,8 +237,8 @@ hr {
 	box-sizing: border-box;
 }
 
-#newsletterForm .signUpNowButton {
-	font-family: "droid sans";
+.newsletterForm-button {
+	font-family: helvetica, arial;
 	font-size: 1.7em;
 	padding: 10px 45px;
 	display: inline-block;
@@ -249,68 +250,13 @@ hr {
 }
 
 @media(min-width: 600px) {
-	#newsletterForm .signUpNowButton {
+	.newsletterForm-button {
 		width: auto;
 	}
 }
 
-#newsletterForm .signUpNowButton:hover {
+.newsletterForm-button:hover {
 	background-color: #6A3381;
-}
-
-/**********************************************************
-* Page
-**********************************************************/
-
-#page {
-	padding-top: 30px;
-	max-width: 700px;
-	margin: 0 auto 70px;
-}
-
-@media(min-width: 600px) {
-	#page {
-		padding-top: 40px;
-	}
-}
-
-#page h1 {
-	margin: 0 20px 40px;
-	font-size: 2.6em;
-	line-height: 1.2em;
-}
-
-@media(min-width: 600px) {
-	#page h1 {
-		font-size: 3.2em;
-	}
-}
-
-#page h2 {
-	margin: 0 20px 10px;
-	font-size: 1.5em;
-	line-height: 1.2em;
-	text-transform: uppercase;
-}
-
-@media(min-width: 600px) {
-	#page h2 {
-		font-size: 1.9em;
-		margin-bottom: 15px;
-	}
-}
-
-#page p {
-	margin: 0 20px 30px;
-	font-size: 1.7em;
-	line-height: 1.7em;
-}
-
-@media(min-width: 600px) {
-	#page p {
-		font-size: 2.1em;
-		margin-bottom: 45px;
-	}
 }
 
 /**********************************************************
@@ -404,7 +350,7 @@ hr {
 * Header
 **********************************************************/
 
-#nav {
+.nav {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	max-width: 700px;
@@ -412,13 +358,13 @@ hr {
 	border-bottom: 1px solid #ddd;
 }
 
-#nav ul {
+.nav ul {
     list-style: none;
     margin-left: 20px;
     margin-right: 20px;
 }
 
-#nav ul li {
+.nav ul li {
 	display: inline-block;
     margin-left: 10px;
     margin-right: 10px;
@@ -426,32 +372,32 @@ hr {
     font-size: 1.5em;
 }
 
-#nav ul li:first-child {
+.nav ul li:first-child {
 	margin-left: 0;
 }
 
-#nav ul li:last-child {
+.nav ul li:last-child {
 	margin-right: 0;
 }
 
-#nav ul li a:link,
-#nav ul li a:visited {
+.nav ul li a:link,
+.nav ul li a:visited {
     text-decoration: none;
     display: block;
     color: #000;
 }
 
-#nav ul li a:hover {
+.nav ul li a:hover {
     color: #8e44ad;
 }
 
-#nav ul li a:active,
-#nav ul li a.active:active {
+.nav ul li a:active,
+.nav ul li a.nav-active:active {
     color: #fff;
     background-color: #8e44ad;
 }
 
-#nav ul li a.active {
+.nav ul li a.nav-active {
 	font-weight: bold;
 	color: #8e44ad;
 }
@@ -460,7 +406,7 @@ hr {
 * Footer
 **********************************************************/
 
-#footer {
+.footer {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	max-width: 700px;
@@ -468,11 +414,11 @@ hr {
 	border-top: 1px solid #ddd;
 }
 
-#footer ul {
+.footer ul {
     list-style: none;
 }
 
-#footer ul li {
+.footer ul li {
 	display: inline-block;
     margin-left: 5px;
     margin-right: 5px;
@@ -480,22 +426,22 @@ hr {
     font-size: 1.5em;
 }
 
-#footer ul li:first-child {
+.footer ul li:first-child {
 	margin-left: 20px;
 }
 
-#footer ul li:last-child {
+.footer ul li:last-child {
 	margin-right: 20px;
 }
 
-#footer ul li a:link,
-#footer ul li a:visited {
+.footer ul li a:link,
+.footer ul li a:visited {
     text-decoration: none;
     display: block;
     color: #000;
 }
 
-#footer ul li a:hover {
+.footer ul li a:hover {
     color: #8e44ad;
 }
 
