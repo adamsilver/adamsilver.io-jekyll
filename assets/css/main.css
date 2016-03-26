@@ -414,7 +414,6 @@ hr {
 
 #nav ul {
     list-style: none;
-    font-size: 1.8em;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -424,7 +423,7 @@ hr {
     margin-left: 10px;
     margin-right: 10px;
     font-family: helvetica, arial;
-    font-size: 0.9em;
+    font-size: 1.5em;
 }
 
 #nav ul li:first-child {
@@ -471,7 +470,6 @@ hr {
 
 #footer ul {
     list-style: none;
-    font-size: 1.8em;
 }
 
 #footer ul li {
@@ -479,7 +477,7 @@ hr {
     margin-left: 5px;
     margin-right: 5px;
     font-family: helvetica, arial;
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 #footer ul li:first-child {
@@ -494,6 +492,7 @@ hr {
 #footer ul li a:visited {
     text-decoration: none;
     display: block;
+    color: #000;
 }
 
 #footer ul li a:hover {
