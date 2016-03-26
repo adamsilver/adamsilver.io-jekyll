@@ -463,7 +463,7 @@ hr {
 	}
 }
 
-.nowRead .heading {
+.nowRead-heading {
 	margin: 0 20px 5px;
 	font-size: 1.3em;
 	line-height: 1.2em;
@@ -472,14 +472,14 @@ hr {
 }
 
 @media(min-width: 600px) {
-	.nowRead .heading {
+	.nowRead-heading {
 		font-size: 1.6em;
 		margin-left: 40px;
 		margin-right: 40px;
 	}
 }
 
-.nowRead .articleTitle {
+.nowRead-articleTitle {
 	margin: 0 20px;
 	font-size: 2.2em;
 	line-height: 1.2em;
@@ -487,14 +487,14 @@ hr {
 }
 
 @media(min-width: 600px) {
-	.nowRead .articleTitle {
+	.nowRead-articleTitle {
 		font-size: 3em;
 		margin-left: 40px;
 		margin-right: 40px;
 	}
 }
 
-.nowRead .articleTitle a {
+.nowRead-articleTitle a {
 	text-decoration: none;
 }
 
