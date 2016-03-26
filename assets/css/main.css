@@ -40,39 +40,35 @@ hr {
 	margin-bottom: 45px;
 }
 
-#content {
-	margin-bottom: 100px;
-}
-
 /**********************************************************
 * Article
 **********************************************************/
 
-#content {
+.mainContent {
 	padding-top: 30px;
 	max-width: 700px;
 	margin: 0 auto 0px;
 }
 
 @media(min-width: 600px) {
-	#content {
+	.mainContent {
 		padding-top: 40px;
 	}
 }
 
-#content h1 {
+.mainContent h1 {
 	margin: 0 20px 40px;
 	font-size: 2.6em;
 	line-height: 1.2em;
 }
 
 @media(min-width: 600px) {
-	#content h1 {
+	.mainContent h1 {
 		font-size: 3.2em;
 	}
 }
 
-#content h2 {
+.mainContent h2 {
 	margin: 0 20px 10px;
 	font-size: 1.5em;
 	line-height: 1.2em;
@@ -80,31 +76,31 @@ hr {
 }
 
 @media(min-width: 600px) {
-	#content h2 {
+	.mainContent h2 {
 		font-size: 1.9em;
 		margin-bottom: 15px;
 	}
 }
 
-#content p {
+.mainContent p {
 	margin: 0 20px 30px;
 	font-size: 1.7em;
 	line-height: 1.7em;
 }
 
 @media(min-width: 600px) {
-	#content p {
+	.mainContent p {
 		font-size: 2.1em;
 		margin-bottom: 45px;
 	}
 }
 
-#content p code {
+.mainContent p code {
 	background: #f5f5f5;
 	font-size: 1.3em;
 }
 
-#content pre {
+.mainContent pre {
 	font-family: Monaco,'Courier New','Courier',monospace;
 	font-size: 1.9em;
 	background-color: #f5f5f5;
@@ -118,61 +114,61 @@ hr {
 }
 
 @media(min-width: 600px) {
-	#content pre {
+	.mainContent pre {
 		font-size: 2.6em;
 		margin-bottom: 45px;
 	}
 }
 
-#content blockquote {
+.mainContent blockquote {
 	margin: 0 30px 35px;
 	font-style: italic;
 }
 
-#content blockquote cite {
+.mainContent blockquote cite {
 	font-weight: bold;
 }
 
-#content ol,
-#content ul {
+.mainContent ol,
+.mainContent ul {
 	margin: 0 20px 35px 40px;
 }
 
 @media(min-width: 600px) {
-	#content ol,
-	#content ul {
+	.mainContent ol,
+	.mainContent ul {
 		margin-bottom: 45px;
 	}
 }
 
-#content ol li,
-#content ul li {
+.mainContent ol li,
+.mainContent ul li {
 	font-size: 1.7em;
 	line-height: 1.7em;
 }
 
 @media(min-width: 600px) {
-	#content ol li,
-	#content ul li {
+	.mainContent ol li,
+	.mainContent ul li {
 		font-size: 2.1em;
 	}
 }
 
-#content figure {
+.mainContent figure {
 	margin-bottom: 30px;
 }
 
 @media(min-width: 600px) {
-	#content figure {
+	.mainContent figure {
 		margin-bottom: 45px;
 	}
 }
 
-#content figure img {
+.mainContent figure img {
 	margin-bottom: 4px;
 }
 
-#content figure figcaption {
+.mainContent figure figcaption {
 	font-size: 1.4em;
 	text-align: center;
 	font-family: helvetica, arial;
@@ -181,17 +177,17 @@ hr {
 }
 
 @media(min-width: 600px) {
-	#content figure figcaption {
+	.mainContent figure figcaption {
 		font-size: 1.7em;
 	}
 }
 
-#content iframe {
+.mainContent iframe {
 	margin-bottom: 30px;
 }
 
 @media(min-width: 600px) {
-	#content iframe {
+	.mainContent iframe {
 		margin-bottom: 45px;
 	}
 }
@@ -317,33 +313,15 @@ hr {
 * Face
 **********************************************************/
 
-.me {
-	margin-bottom: 60px;
-}
-
-.me .face {
+.face {
+	margin-bottom: 40px;
 	border-radius: 50%;
     overflow: hidden;
     width: 85px;
     height: 85px;
     display: block;
-	vertical-align: middle;
 	margin-left: 20px;
-	margin-bottom: 30px;
 	border: 10px solid #f9f9f9;
-}
-
-.homePageSection h2 {
-	margin: 0 20px 10px;
-	font-size: 1.8em;
-	line-height: 1.2em;
-}
-
-@media(min-width: 600px) {
-	.homePageSection h2 {
-		font-size: 2.2em;
-		margin-bottom: 15px;
-	}
 }
 
 /**********************************************************

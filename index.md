@@ -3,10 +3,8 @@ layout: default
 id: home
 ---
 
-<div class="me">
-	<div class="face">
-		<img src="/assets/img/adam2.jpg" alt="Adam Photo" width="85" height="85">
-	</div>
+<div class="face">
+	<img src="/assets/img/adam2.jpg" alt="Adam Photo" width="85" height="85">
 </div>
 
 # Hello, my name is Adam Silver, a UX engineer with over 15 years experience designing, prototyping and building human-friendly websites.

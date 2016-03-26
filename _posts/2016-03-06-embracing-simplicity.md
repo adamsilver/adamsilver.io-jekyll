@@ -7,7 +7,7 @@ categories: ux design webdevelopment
 
 <div class="image">
 	<figure>
-		<img src="{{ site.url }}/assets/img/enhanceconf_qanda.jpeg" alt="Enhanceconf Q&amp;A" width="100%">
+		<img src="{{ site.url }}/assets/img/enhanceconf.jpg" alt="Enhanceconf Q&amp;A" width="100%">
 		<figcaption>Photo by <a href="https://www.flickr.com/photos/psd/">Paul Downey</a></figcaption>
 	</figure>
 </div>
