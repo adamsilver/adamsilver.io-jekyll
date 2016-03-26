@@ -535,16 +535,21 @@ hr {
 
 .nowRead .articleTitle {
 	margin: 0 20px;
-	font-size: 2em;
+	font-size: 2.2em;
 	line-height: 1.2em;
+	font-weight: normal;
 }
 
 @media(min-width: 600px) {
 	.nowRead .articleTitle {
-		font-size: 2.4em;
+		font-size: 3em;
 		margin-left: 40px;
 		margin-right: 40px;
 	}
+}
+
+.nowRead .articleTitle a {
+	text-decoration: none;
 }
 
 /**********************************************************
