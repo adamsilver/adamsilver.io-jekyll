@@ -3,7 +3,6 @@ layout: post
 title: Writing Javascript that conforms to Progressive Enhancement
 date: 2015-08-16 09:00:01
 categories: progressiveenhancement js a11y
-tags: featured
 ---
 
 The Javascript element of Progressive Enhancement, is quite possibly the most important and misunderstood aspect of client-side Javascript development, period.

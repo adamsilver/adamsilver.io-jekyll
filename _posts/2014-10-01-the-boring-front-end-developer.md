@@ -3,7 +3,6 @@ layout: post
 title:  "The boring front-end developer"
 date:   2014-10-01 09:00:01
 categories: js featured
-tags: featured
 ---
 
 *Cool* front-end developers are always *pushing the envelope*, jumping out of their seat to use the latest and greatest and shiniest of UI frameworks and libraries.

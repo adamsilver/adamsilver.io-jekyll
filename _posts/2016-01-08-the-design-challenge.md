@@ -3,7 +3,6 @@ layout: post
 title:  The Design Challenge
 date:   2016-01-08 09:00:01
 categories: ux design
-tags: featured
 ---
 
 **Can you design for everyone *and* make it visually beautiful?** In [How To Hire Designers](https://medium.com/intercom-inside/how-to-hire-designers-960663e3a3e6#.eu7al1wfu) Paul Adams explains the 4 major design disciplines: outcome, system, interaction and visual.
