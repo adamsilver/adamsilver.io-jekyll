@@ -9,19 +9,67 @@ Semantic HTML is the use of mark-up to reinforce the meaning and *intention* of 
 
 ## 1. Responsive Design
 
-When designing a website *responsively*, a component may be styled differently depending on the size of the screen. A typical example of this is when you want to have elements line up beside each other for large screens but stack below on small screens).
+When designing a website *responsively*, a component may be styled differently depending on the size of the screen.
 
-If you use class names that aren't semantic such as `grid` and `column1` this causes problems. The CSS has to target `column1` on small screens and make it stack. But `column1` is a generic stylistic class name which means, that this CSS rule that makes it stack on small screens will apply everywhere &mdash; even for components that can be beside each other on small screens.
+### Example 1: Misleading mark-up
 
-If you style the individual components based on what they *are* then you can easily target them in CSS without affecting each other. Meaning you can have one component that stacks on small screens, and another component that doesn't.
+What does the following HTML tell us?
+
+	<!-- module 1 -->
+	<div class="row">
+		<div class="column1">Content 1...</div>
+		<div class="column2">Content 2...</div>
+	</div>
+
+It suggests that these two pieces of content sit beside each other in columns. This incorrectly suggest to us that it *looks* a certain way. It doesn't tell me what it is.
+
+However, on "small" screens, "Content 2" sites below "Content 1" as there is not enough room to sit side-by-side. The problem is that the class names don't provide any meaningful information about the content &mdash; in fact, they are misleading.
+
+Stylistic information should reside in CSS, not in HTML.
+
+### Example 2: No way to target differences
+
+It appears these classes are great because they are reusable &mdash; but they actually cause trouble. Let's expand our previous example and introduce a second module:
+
+	<!-- module 2 -->
+	<div class="row">
+		<div class="column1">BIG Content 3...</div>
+		<div class="column2">BIG Content 4...</div>
+	</div>
+
+Now, we have a different module, reusing the same class names to provide the same behaviour. The problem is that for module 2 as each piece of content is so big, we want this to stack on "medium" size screens. We could change the breakpoint, but then module 1 will  affected so that the content sits beneath each other way too early.
+
+We *could* apply an additional class that will override the media query. This is the very beginning of bloat in the HTML and override hell in the CSS. Neither of which is something I want to tackle. I want to nip it in the bud.
+
+Now, same example as before but with semantic HTML. Note: exchange `.module1` for your module name i.e. `.product`.
+
+	<div class="module1">
+		<div class="module1-someSection1">Content 3...</div>
+		<div class="module2-someSection2">Content 4...</div>
+	</div>
+
+	<div class="module2">
+		<div class="module2-someSection1">BIG Content 3...</div>
+		<div class="module2-someSection2">BIG Content 4...</div>
+	</div>
+
+If these modules look the same we can reuse styles:
+
+	.module1, .module2 {}
+
+If they look different we have unique hooks to apply the differences:
+
+	.module1 {}
+
+	.module2 {}
 
 ## 2. Accessibility
 
 Some disabled users utilise the functionality of a screen reader and when HTML is semantic, there is a much higher chance it will be read out meaningfully to the user.
 
-## 3. Search Engine Optimisation
+## 3. Search Engine Optimisation and Experience
 
-Search engine crawlers rank the page based on the content. The content is easier to understand if semantic HTML is used which improves ranking.
+Search engine crawlers rank the page based on the content. The content is easier to understand if semantic HTML is used which improves ranking. Additionally, some search engines will improve the experience by listing additional information or shortcuts based on what the bot finding meaningful HTML.
 
 ## 4. Understanding
 
@@ -37,4 +85,4 @@ Functional tests are easier to write because the hooks are mapped to features. F
 
 ## 7. Performance
 
-This is probably the least beneficial, but when you use semantic HTML the page weight is likely smaller. Unsemantic HTML might use inline styles or stylistic elements such as `<font>`. It also increases the likeliness of elements having multiple class names which increasing bloat.
+This is probably the least beneficial, but when you use semantic HTML the page weight is likely smaller. Non-semantic HTML might use inline styles or stylistic elements such as `<font>`. It also increases the likeliness of elements having multiple class names which increasing bloat.

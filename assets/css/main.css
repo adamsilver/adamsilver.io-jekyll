@@ -82,6 +82,21 @@ hr {
 	}
 }
 
+.mainContent h3 {
+	margin: 0 20px 10px;
+	font-size: 1.3em;
+	line-height: 1.2em;
+	color: #000;
+	text-transform: uppercase;
+	font-family: helvetica;
+}
+
+@media(min-width: 600px) {
+	.mainContent h3 {
+		font-size: 1.7em;
+	}
+}
+
 .mainContent p {
 	margin: 0 20px 30px;
 	font-size: 1.7em;
