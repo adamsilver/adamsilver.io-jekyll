@@ -27,7 +27,7 @@ When a user opens a menu, they can't intuitively move the mouse directly to a su
 
 ## 2. Understanding user intention and accidental activation
 
-**Hovering is not an intention to activate**. It is at most a *suggestion* that the user *might* interact with something. Technically, the user is always hovering. This is why hover states are beneficial to the user, such as a change of cursor (browsers do this by default) and a change of style.
+Hovering is not an intention to activate. It is at most a *suggestion* that the user *might* interact with something. Technically, the user is always hovering. This is why hover states are beneficial to the user, such as a change of cursor (browsers do this by default) and a change of style.
 
 With hover, a user can accidentally open a menu even though they never intended it and when this happens it obscures the content behind disrupting the experience.
 
@@ -57,9 +57,11 @@ Items on the bottom of the menu are hard to click because the user might acciden
 
 There is no hover on touch-enabled devices (unless the user plugs in a pointing device). And touch-enabled devices are everywhere and they come in all shapes and sizes.
 
-## Embrace the web, design for everyone
+## Conclusion
 
-**Instead of focusing on device classification, focus on device capability.** You can't control who will access your website and with what device so it's advisable to design for touch, mouse, finger, keyboard interchangeably.
+Embrace the web, design for everyone!
+
+Instead of focusing on device classification, focus on device capability. You can't control who will access your website and with what device so it's advisable to design for touch, mouse, finger, keyboard interchangeably.
 
 The simplest solution is to show a menu via click. Click works when the user taps, when the user clicks with the mouse, and when the user tabs via keyboard and presses enter.
 
