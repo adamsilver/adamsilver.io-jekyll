@@ -57,9 +57,7 @@ Items on the bottom of the menu are hard to click because the user might acciden
 
 There is no hover on touch-enabled devices (unless the user plugs in a pointing device). And touch-enabled devices are everywhere and they come in all shapes and sizes.
 
-## Conclusion
-
-Embrace the web, design for everyone!
+## Summary
 
 Instead of focusing on device classification, focus on device capability. You can't control who will access your website and with what device so it's advisable to design for touch, mouse, finger, keyboard interchangeably.
 

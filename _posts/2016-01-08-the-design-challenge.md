@@ -11,7 +11,7 @@ In [How To Hire Designers](https://medium.com/intercom-inside/how-to-hire-design
 
 A lot of designers focus on visual. The thing is, sometimes we place so much emphasis on it, that it becomes detrimental to the other aspects and overall experience. Here are a few real examples...
 
-## 1 "We don't want to differentiate between buttons and links because we want a minimal design".**
+## 1 "We don't want to differentiate between buttons and links because we want a minimal design".
 
 Clarity trumps minimalism every time.
 
@@ -58,5 +58,7 @@ Again, clarity trumps minimalism. [Design for content](https://www.uie.com/artic
 ## 12. "But website X does it, so we should do it"
 
 Sometimes website X does things, sometimes those things are ill-advised. Take this opportunity to do it better.
+
+## Conclusion
 
 Why not design for everyone? Why not legislate for all kinds of devices, screen sizes, capabilities, people with different abilities and interaction preferences? **Isn't this *the* challenge?**

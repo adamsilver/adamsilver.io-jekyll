@@ -61,13 +61,13 @@ Note: you can't share the same colour for background-color and other CSS propert
 		-webkit-border-radius: 3px;
 	}
 
-**Nesting** can't quite be done but prefixing your selectors with a common ancestor is a satisfactory solution to modularisation and encapsulation:
+**Nesting** can't quite be achieved. However, that's not so bad because nesting can cause performance problems and is ill-advised. Instead, use a convention that groups module components together:
 
-	.someComponent {
-	}
+	.someModule {}
 
-	.someComponent .someChild {
-	}
+	.someModule-someComponent {}
+
+	.someModule-someOtherComponent {}
 
 ## Summary
 

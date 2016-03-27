@@ -19,9 +19,9 @@ With that said, this can be cached because you can create two types of cached pa
 
 An example that doesn't scale and makes content-caching redundant is when personalised content includes something specific to a user. A good example would be their name such as a 'Welcome Bob' message.
 
-**What are the problems with this?**
+What are the problems with this?
 
-## Architecture
+## 1. Architecture
 
 What seems like a simple use of AJAX has a significant effect on architecture...
 
@@ -31,13 +31,13 @@ What seems like a simple use of AJAX has a significant effect on architecture...
 > <br><br>How do you organise the view partials for this on the server?
 > <br><br>At what point is personalised content not essential to the UX and how does that affect architecture?
 
-## Accessibility
+## 2. Accessibility
 
 If the user doesn't have Javascript (or they have it but not the capability to make AJAX requests, traverse or manipulate the Document etc) they will be unable to use this functionality. This goes against the principle of Progressive Enhancement and is completely against the spirit of the web. And in the case of "logging out" this would obviously be a poor decision.
 
 Furthermore, extra effort would be required to ensure the injected content is accessibile to screen readers. This alone is reason enough to realise this is an unacceptable technical solution.
 
-## Design
+## 3. Design
 
 Christian Heilmann rightly says that [AJAX shouldn't break the web](http://www.smashingmagazine.com/2010/02/10/some-things-you-should-know-about-ajax/) and using it in this way is doing just that. He also highlights that when AJAX is used, it is important to remember how much the browser does for free, that subtly goes unnoticed. This includes displaying a loading indicator with progress bar as well as handling page not found and timeout errors.
 
@@ -45,11 +45,11 @@ Utilising AJAX and content-caching like this, means the page is only half loaded
 
 Solutions may include loading spinners, hiding content and transitions but in reality they are far from perfect. Also, the user may not see the various updates as they are busy interacting further down the page. This is all exacabated on slower connections.
 
-## Effort
+## 4. Effort
 
 Extra design effort is required to cater for the aformentioned degrading in UX. Extra development effort is required to write and test script. It's also harder to automate the functional testing and changes the way in which those tests are written.
 
-## Performance
+## 5. Performance
 
 Instead of having a single HTTP request that contains the entire required response there will now be multiple. The first would be for the Document containing non-personalised content. The subsequent request will be via AJAX and *will* hit your web server, therefore subject to the same latency as always.
 
