@@ -5,7 +5,9 @@ date: 2015-10-09 09:00:01
 categories: ux design
 ---
 
-**Would you say you're designing honestly?** I have been designing and building websites for over half of my life now. During this time I have witnessed designers, developers and businesses designing dishonestly over and over again.
+Would you say you're designing honestly?
+
+I have been designing and building websites for over half of my life now. During this time I have witnessed designers, developers and businesses designing dishonestly over and over again.
 
 There are many aspects of dishonest design. This article hones in on just one of these &mdash; the aspect that ignores the platform you are designing for. In the context of the web, I call it &ldquo;bending the web&rdquo;.
 

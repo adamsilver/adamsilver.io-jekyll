@@ -5,7 +5,9 @@ date:   2015-11-15 09:00:01
 categories: ux design ecommerce
 ---
 
-**Have you ever made something harder to use on purpose?** One experience I have of this is when I worked at a *very* successful e-commerce company that wanted to give their users the ability to pay by PayPal.
+Have you ever made something harder to use on purpose?
+
+One experience I have of this is when I worked at a *very* successful e-commerce company that wanted to give their users the ability to pay by PayPal.
 
 Just as we were about to start development the business blocked it. This was the design that got blocked:
 
@@ -29,7 +31,7 @@ There are many reasons why people drop off during checkout, which costs the busi
 If we had stuck with the original design I think that:
 
 1. A small percentage of existing users would have started using PayPal.
-* We would have attracted new users because we now offer PayPal.
+2. We would have attracted new users because we now offer PayPal.
 
 Even if as much as say 25% of users (which is unlikely) stopped paying the transaction fee, it is highly likely they would be happier for using PayPal as a more convenient, and perceptively more secure option.
 
