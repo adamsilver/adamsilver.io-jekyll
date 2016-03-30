@@ -86,3 +86,15 @@ Functional tests are easier to write because the hooks are mapped to features. F
 ## 7. Performance
 
 This is probably the least beneficial, but when you use semantic HTML the page weight is likely smaller. Non-semantic HTML might use inline styles or stylistic elements such as `<font>`. It also increases the likeliness of elements having multiple class names which increasing bloat.
+
+## 8. Searchability
+
+If an element has classes based on how it looks such as `.red` or `.clearfix` or `.pull-left` etc, then these classes will be all over the codebase. So if you're trying to hunt for a particular piece of HTML, the class name is not going to help you.
+
+On the other hand, if your class names are semantic, a search is likely going to hunt down the HTML in question. Same goes for the CSS.
+
+## 9. Unexpected regressions
+
+If you have utility non-semantic classes that describe the look  then when you edit one of these classes, they will propogate to every single element with that class. Which normally means a developer, is too scared to touch an existing utility class because it is likely it will cause a regression.
+
+When you use semantic class names, they are unique, so when editing one, it will only apply to the module in question.
