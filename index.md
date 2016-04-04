@@ -7,7 +7,7 @@ id: home
 	<img src="/assets/img/adam2.jpg" alt="Adam Photo" width="85" height="85">
 </div>
 
-# Hello, my name is Adam Silver, a UX engineer with over 15 years experience designing, prototyping and building human-friendly websites.
+# Hi, my name's Adam Silver, a UX designer &amp; engineer. I have been making things simple and human since the turn of the century.
 
 ## Belief
 
