@@ -3,6 +3,7 @@ layout: post
 title: Embracing simplicity
 date: 2016-03-06 09:00:01
 categories: ux design webdevelopment
+description: Are you sure that all the effort you put into design is adding value to the experience? Can we just provide a core experience without the enhancement and end up with something better? Find out in my talk Embracing Simplicity.
 ---
 
 <div class="image">

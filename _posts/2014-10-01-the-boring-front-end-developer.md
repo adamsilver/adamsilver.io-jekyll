@@ -3,6 +3,7 @@ layout: post
 title:  "The boring front-end developer"
 date:   2014-10-01 09:00:01
 categories: js featured
+description: Cool front-end developers are always pushing the envelope, jumping out of their seat to use the latest and greatest and shiniest of UI frameworks and libraries. However, there is another kind of front-end developer, the boring front-end developer. Here is an ode to the boring front-end developer, BFED if you will.
 ---
 
 *Cool* front-end developers are always *pushing the envelope*, jumping out of their seat to use the latest and greatest and shiniest of UI frameworks and libraries.

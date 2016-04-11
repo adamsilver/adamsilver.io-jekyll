@@ -3,22 +3,50 @@
 <meta name="Author" content="Adam Silver">
 <meta property="og:locale" content="en_GB">
 <meta property="og:type" content="website">
-<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %} {{ site.name }}">
-<meta property="og:description" content="{{ site.description }}">
+
+{% if page.layout == "post" %}
+	<meta content="{{ page.title }}" property="og:title">
+{% else %}
+ 	<meta content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}" property="og:title">
+{% endif %}
+
+{% if page.description %}
+	<meta property="og:description" content="{{ page.description }}">
+{% else %}
+	<meta property="og:description" content="{{ site.description }}">
+{% endif %}
+
 <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html',''}}">
 <meta property="og:site_name" content="Adam Silver">
-
 <meta property="og:image" content="{{ site.url }}/assets/img/adam2.jpg">
 <meta property="og:image:width" content="181">
 <meta property="og:image:height" content="181">
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:description" content="{{ site.description }}">
+
+{% if page.description %}
+	<meta name="twitter:description" content="{{ page.description }}">
+{% else %}
+	<meta name="twitter:description" content="{{ site.description }}">
+{% endif %}
+
 <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {% endif %} {{ site.name }}">
+
+{% if page.layout == "post" %}
+	<meta content="{{ page.title }}" name="twitter:title">
+{% else %}
+	<meta content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}" name="twitter:title">
+{% endif %}
+
 <meta name="twitter:site" content="@adambsilver">
 <meta name="twitter:creator" content="@adambsilver">
-<meta itemprop="description" content="{{ site.description }}">
 <meta property="twitter:image" content="{{ site.url }}/assets/img/adam2.jpg">
+
+{% if page.description %}
+	<meta itemprop="description" content="{{ page.description }}">
+{% else %}
+	<meta itemprop="description" content="{{ site.description }}">
+{% endif %}
 
 <link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all">
 <!--[if IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" type="text/css" media="all"><![endif]-->
