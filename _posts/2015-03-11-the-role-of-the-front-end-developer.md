@@ -3,6 +3,7 @@ layout: post
 title:  "The role of the Front-end Developer"
 date:   2015-03-11 09:00:01
 categories: js frontenddevelopment
+description: Everything you need to know to become a great Front-end Developer.
 ---
 
 The role of the Front-end developer extends far beyond translating  designs into code. They should be heavily involved in many other aspects of the design and development process...

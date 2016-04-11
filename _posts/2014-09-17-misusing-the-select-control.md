@@ -3,6 +3,7 @@ layout: post
 title:  "Misusing the select control"
 date:   2014-09-17 09:00:01
 categories: forms ux a11y
+description: Sometimes designers and developers misuse the select drop down control. Find out about the problems and how to solve in this article.
 ---
 
 You have most likely seen and used a select control *without* a submit button. One example would be the Amazon search results or product listing page. The typical rationale behind omitting the submit button is normally to declutter the UI and reduce clicks &mdash; the latter of which is a common [UX fallacy](http://idyeah.com/blog/2012/06/stop-counting-clicks/). The thing is doing this is detrimental to the UX.

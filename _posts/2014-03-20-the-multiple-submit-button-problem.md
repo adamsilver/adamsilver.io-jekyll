@@ -3,6 +3,7 @@ layout: post
 title:  "The multiple submit button problem"
 date:   2014-03-20 09:00:01
 categories: forms a11y ux
+description: Forms with multiple submit buttons have both UX problems and technical problems all of which is discussed in this article.
 ---
 
 Sometimes a form is designed to be multi-purpose. Take the example below. It represents an edit details form whereby the user can either update their information or delete it all together. This kind of form causes usability problems for keyboard users.

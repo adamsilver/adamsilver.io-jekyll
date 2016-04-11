@@ -3,6 +3,7 @@ layout: post
 title:  "Why semantic HTML is so important"
 date:   2014-09-26 09:00:01
 categories: html
+description: Semantic HTML is the foundation of a solid front-end architecture. Find out why.
 ---
 
 Semantic HTML is the use of mark-up to reinforce the meaning and *intention* of the content by applying the correct element, class names and IDs based on what it *is*, not on what it *does* or how it *looks*. But why is this so important?

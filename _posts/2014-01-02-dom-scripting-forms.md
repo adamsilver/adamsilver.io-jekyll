@@ -3,6 +3,7 @@ layout: post
 title:  "DOM scripting forms"
 date:   2014-01-02 09:00:59
 categories: forms js
+description: Modifying and enhancing forms is easy with the DOM0 API.
 ---
 
 The HTML DOM has dedicated APIs for retrieving and manipulating form controls. The [DOM0](http://docs.oracle.com/cd/E19957-01/816-6408-10/) Forms Collection API is perfect for this but unfortunately often forgotten. This article describes how to use this API.

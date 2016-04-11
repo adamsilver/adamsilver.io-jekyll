@@ -3,6 +3,7 @@ layout: post
 title:  "The disadvantages of Single Page Applications"
 date:   2014-08-11 09:00:01
 categories: js spas featured
+description: SPAs are full of pitfalls. There are many reasons why.
 ---
 
 Single Page Applications (SPAs) have become extremely popular on the web, because they are *supposed* to [provide a more fluid user experience](http://en.wikipedia.org/wiki/Single-page_application). However, there are several technical issues which can be detrimental to the User Experience. Before getting to the issues, let's first discuss the difference between an SPA and a traditional multi-page website (MPW).

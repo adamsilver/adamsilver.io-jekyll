@@ -3,6 +3,7 @@ layout: post
 title: Designing a bad experience on purpose
 date:   2015-11-15 09:00:01
 categories: ux design ecommerce
+description: The crazy world of making things hard to use on purpose. This is one experience of that.
 ---
 
 Have you ever made something harder to use on purpose?

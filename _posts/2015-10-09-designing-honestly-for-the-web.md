@@ -3,6 +3,7 @@ layout: post
 title: Designing honestly for the web
 date: 2015-10-09 09:00:01
 categories: ux design
+description: Designing true to the platform makes for better experiences. But learn why designers are prone to dishonest design.
 ---
 
 Would you say you're designing honestly?

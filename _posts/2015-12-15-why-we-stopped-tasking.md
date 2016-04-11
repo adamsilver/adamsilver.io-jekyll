@@ -5,6 +5,7 @@ date:   2015-12-15 09:00:01
 categories: agile
 #image: tasks.jpg
 #tagline: And how this increased our velocity
+description: Tasking can be painful when you do it ahead of time. Don't blindly follow Scrum. Question everything. Increase velocity.
 ---
 
 Scrum advocates the breaking down of stories into tasks because: it helps to estimate more accurately, encourages collaboration and helps to show granular progress.

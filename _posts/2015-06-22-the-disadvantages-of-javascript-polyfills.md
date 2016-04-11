@@ -3,6 +3,7 @@ layout: post
 title:  "The disadvantages of Javascript polyfills"
 date:   2015-06-22 09:00:01
 categories: js polyfills
+description: Javascript polyfills are ever-present in the front end industry, but they are very problematic and unnecessary.
 ---
 
 A polyfill, also known as a shim, is a user defined implementation of an API that a developer expects a browser to provide natively, normalising browser differences.

@@ -3,6 +3,7 @@ layout: post
 title:  "Javascript namespacing"
 date:   2014-07-11 09:00:01
 categories: js
+description: Organising your client-side Javascript is important. Namespaces are a sane, cross-browser approach to help with this.
 ---
 
 Namespaces are used to help with code organisation, discoverability, and in the context of Javascript, the minimisation of [global variables](http://www.yuiblog.com/blog/2006/06/01/global-domination/).

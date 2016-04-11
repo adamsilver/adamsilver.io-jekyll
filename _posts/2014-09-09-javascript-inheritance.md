@@ -3,6 +3,7 @@ layout: post
 title:  "Javascript inheritance"
 date:   2014-09-09 09:00:59
 categories: js
+description: Javascript inheritance is an often overcomplicated endeavour. Here is an extremely powerful yet simple technique for doing so.
 ---
 
 Javascript inheritance is useful with regard to code [reuse](http://javascript.crockford.com/inheritance.html). Unfortunately, ECMAScript doesn't provide an *inherit* function natively, so we will need to create one. This article documents a simple and powerful technique.

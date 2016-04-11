@@ -3,6 +3,7 @@ layout: post
 title: "Misusing AJAX for personalisation"
 date:   2014-12-29 09:00:01
 categories: js a11y ux performance
+description: Sometimes developers are on a pursuit to reduce page-load time by utilising AJAX to get around personalised content. This is problematic.
 ---
 
 Sometimes developers are on a pursuit to reduce page-load time by utilising [content caching](https://developer.akamai.com/stuff/Caching/Content_Caching.html). This is beneficial to the UX because the page response times become *much* quicker.

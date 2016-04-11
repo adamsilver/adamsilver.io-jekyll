@@ -3,6 +3,7 @@ layout: post
 title:  The Design Challenge
 date:   2016-01-08 09:00:01
 categories: ux design
+description: Can you design for everyone *and* make it visually beautiful?
 ---
 
 Can you design for everyone *and* make it visually beautiful?

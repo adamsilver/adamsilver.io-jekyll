@@ -3,6 +3,7 @@ layout: post
 title:  Why hover menus are problematic
 date:   2015-12-27 09:00:01
 categories: ux responsivedesign
+description: Hover menus have been around for years on the web. But this has never been a great experience, and now more than ever it is ill advised. Find out why.
 ---
 
 Hover menus are very popular on the web. People think they are popular because they "aid discoverability" and "save users a click", the latter of which is a common [UX fallacy](http://uxmyths.com/post/654026581/myth-all-pages-should-be-accessible-in-3-clicks). The thing is, hover menus are problematic and here's why:

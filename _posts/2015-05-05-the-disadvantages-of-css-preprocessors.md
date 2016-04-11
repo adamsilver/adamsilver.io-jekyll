@@ -3,7 +3,7 @@ layout: post
 title:  The disadvantages of CSS preprocessors
 date:   2015-05-05 09:00:01
 categories: css sass less
-
+description: CSS preprocessors have obvious advantages but they also come with a host of problems. Learn about these to avoid pain for you and your team.
 ---
 
 CSS preprocessors have many advantages providing helpful methods for writing and reusing styles. However, CSS processors have several *disadvantages*, which I discuss here for consideration.

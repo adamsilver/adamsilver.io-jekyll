@@ -3,6 +3,7 @@ layout: post
 title:  "Creating accessible forms"
 date:   2014-01-22 09:00:01
 categories: forms a11y ux
+description: Create accessible forms following these simple steps.
 ---
 
 Interacting with forms is one of the most important interactions a person can have on the web. The great news is, forms can be made to be accessible and in-turn more human-friendly with very little effort. This article describes the simple techniques you can utilise to ensure your forms are accessible.

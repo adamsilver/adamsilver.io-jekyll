@@ -3,6 +3,7 @@ layout: post
 title:  "Technical wanking"
 date:   2015-02-09 09:00:01
 categories: js spas
+description: Technical Wanking is the practice of using cool and new tech just for the sake of it. Are you technical wanking?
 ---
 
 Technical Wanking is the practice of using cool and new technology because &mdash; well &mdash; it's *cool* and *new*. Of course, technology should be chosen on its technical merit and technical merit alone.
