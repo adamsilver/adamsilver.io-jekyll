@@ -1,7 +1,7 @@
-name: Adam Silver | UX consultant. Engineering. Design. Strategy. Making things simple and human. Based in London.
+name: Adam Silver | UX. Engineering. Design. Strategy. Making things simple and human. Based in London.
 markdown: kramdown
 permalink: /articles/:title/
 url: http://adamsilver.io
 include: ['_pages']
-description: Hello, I am Adam Silver, a UX consultant specialising in Engineering, Design and Strategy. I help companies and people make things simple and human. Based in London.
+description: Hello, I am Adam Silver, I specialise in UX, Engineering, Design and Strategy. I help companies and people make things simple and human. Based in London.
 future: true;
