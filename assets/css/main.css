@@ -184,7 +184,7 @@ hr {
 }
 
 .mainContent figure figcaption {
-	font-size: 1.4em;
+	font-size: 1.2em;
 	text-align: center;
 	font-family: helvetica, arial;
 	padding-left: 20px;
@@ -193,7 +193,7 @@ hr {
 
 @media(min-width: 600px) {
 	.mainContent figure figcaption {
-		font-size: 1.7em;
+		font-size: 1.4em;
 	}
 }
 
