@@ -17,9 +17,11 @@ At least 50% of our Sprint Planning sessions involved breaking down stories into
 
 ## 2. Defining tasks ahead of time is inaccurate
 
-*"Weeks of programming can save you hours of planning."*
+When coding it is inevitable that the solution will change as development unearths unforeseen scenarios and opportunity for improvement. This is why tasking is inaccurate.
 
-When coding it is inevitable that the solution will change as development unearths unforeseen scenarios and opportunity for improvement. This is why tasking is inaccurate. Don't bother, give yourself more time to code.
+> "Weeks of programming can save you hours of planning."
+
+Don't bother, give yourself more time to code instead.
 
 ## 3. Many tasks are repetitive
 

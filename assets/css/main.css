@@ -73,6 +73,7 @@ hr {
 	font-size: 1.5em;
 	line-height: 1.2em;
 	text-transform: uppercase;
+	letter-spacing: 0.03em;
 }
 
 @media(min-width: 600px) {
@@ -496,8 +497,32 @@ hr {
 **********************************************************/
 
 .share {
-	max-width: 700px;
-	margin: 0 auto 40px;
+	max-width: 620px;
+	margin: 0 auto 50px;
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.share-button:link,
+.share-button:visited {
+	border-radius: 30px;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 12px 30px;
+	font-size: 1.1em;
+	background-color: #8e44ad;
+	color: #ffffff;
+	font-weight: bold;
+	letter-spacing: 0.04em;
+	width: 150px;
+	text-align: center;
+	margin: 0 auto;
+	font-family: Arial;
+}
+
+.share-button:hover {
+	background-color: #000;
 }
 
 .share p {
