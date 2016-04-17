@@ -28,6 +28,6 @@ Born out of experiencing all the same problems and frustrations that you have pr
 
 Give it a try (you can read and apply the principles in minutes), and let me know if you have any questions or suggestions, because I would love to hear from you.
 
-Oh, and lastly, there will be more chapter coming soon, so watch out for those.
+Oh, and lastly, there will be more chapters coming soon, so watch out for those.
 
 Visit [MaintainableCSS](http://maintainablecss.com).
