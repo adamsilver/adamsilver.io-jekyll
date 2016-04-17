@@ -24,7 +24,7 @@ Introducing [MaintainableCSS](http://maintainablecss.com)&mdash;an approach to w
 
 Born out of experiencing all the same problems and frustrations that you have probably had, I realised that a combination of [semantics](http://maintainablecss.com/chapters/semantics/) and [reuse](http://maintainablecss.com/chapters/reuse/) (not how you might think) are reasons why we can get our knickers in a twist with CSS.
 
-*MaintainableCSS* isn’t something you can download&mdash;it’s a very simple set of guidelines, explaining how and why you should write CSS for your project.
+*MaintainableCSS* isn’t something you can download&mdash;it’s a very simple set of guidelines, explaining how to write CSS for your project.
 
 Give it a try (you can read and apply the principles in minutes), and let me know if you have any questions or suggestions, because I would love to hear from you.
 
