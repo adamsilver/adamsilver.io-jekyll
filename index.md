@@ -7,7 +7,7 @@ id: home
 	<img src="/assets/img/adam2.jpg" alt="Adam Photo" width="85" height="85">
 </div>
 
-# Hello, I am Adam Silver, specialising in Engineering, UX Design and Strategy. I help companies and people make things simple and human. Based in London.
+# Hello, I am Adam Silver, specialising in Engineering, UX and Strategy. I help companies and people make things simple and human. Based in London.
 
 ## Belief
 
