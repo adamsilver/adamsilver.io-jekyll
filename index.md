@@ -15,7 +15,7 @@ I believe in creating amazing experiences on the web that are [accessible](/arti
 
 ## Approach
 
-I like solve real problems, working together from ideation through to production. My preference is to lean on Agile methodologies to help focus on the truly essential &mdash; <em>less but better</em>.
+I like solving *real* problems, working together from ideation through to production. My preference is to lean on Agile methodologies to help focus on the truly essential &mdash; <em>less but better</em>.
 
 ## Speaking
 
@@ -24,6 +24,10 @@ Sometimes I [speak at conferences]({% post_url 2016-03-06-embracing-simplicity %
 ## Writing
 
 Not only do I [write here](/articles/) but I also write on the [Simple=Human](http://medium.com/simple-human) publication with my friend [Mark Jenkins](http://theluckystrike.co.uk), which is a collection of articles written by us about leadership, design and development.
+
+## Author
+
+I also wrote a book about writing maintainable CSS, called [MaintainableCSS](http://maintainablecss.com) (creative I know). Go check it out.
 
 ## Want to know more?
 
