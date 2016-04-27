@@ -57,7 +57,7 @@ hr {
 }
 
 .mainContent h1 {
-	margin: 0 20px 40px;
+	margin: 0 20px 25px;
 	font-size: 2.6em;
 	line-height: 1.2em;
 }
@@ -80,6 +80,7 @@ hr {
 	.mainContent h2 {
 		font-size: 1.9em;
 		margin-bottom: 15px;
+		line-height: 1.6;
 	}
 }
 
@@ -222,13 +223,14 @@ hr {
 .newsletterForm-heading {
 	margin: 0 20px 15px;
 	font-size: 1.5em;
-	line-height: 1.2em;
+	line-height: 1.2;
 	text-transform: uppercase;
 }
 
 @media(min-width: 600px) {
 	.newsletterForm-heading {
 		font-size: 1.9em;
+		line-height: 1.6;
 	}
 }
 
@@ -511,8 +513,8 @@ hr {
 	text-decoration: none;
 	padding: 12px 30px;
 	font-size: 1.1em;
-	background-color: #8e44ad;
-	color: #ffffff;
+	background-color: #eee;
+	color: #222;
 	font-weight: bold;
 	letter-spacing: 0.04em;
 	width: 150px;
@@ -522,7 +524,8 @@ hr {
 }
 
 .share-button:hover {
-	background-color: #000;
+	background-color: #8e44ad;
+	color: #fff;
 }
 
 .share p {
