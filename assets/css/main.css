@@ -286,18 +286,10 @@ hr {
 }
 
 #articleList .article .title {
-	margin: 0 20px;
-	font-size: 2.2em;
-	line-height: 1.2em;
-	font-weight: normal;
-	text-transform: none;
+	margin-bottom: 0;
+	max-width: 340px;
 }
 
-@media(min-width: 600px) {
-	#articleList .article .title {
-		font-size: 3em;
-	}
-}
 
 #articleList a {
 	text-decoration: none;
@@ -314,14 +306,15 @@ hr {
 
 #articleList .article .meta {
 	margin: 0 20px;
-	font-size: 1.4em;
+	font-size: 1.3em;
 	line-height: 1.7em;
 	color: #000;
+	text-transform: uppercase;
 }
 
 @media(min-width: 600px) {
 	#articleList .article .meta {
-		font-size: 1.8em;
+		font-size: 1.5em;
 	}
 }
 
