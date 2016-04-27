@@ -12,7 +12,7 @@ One experience I have of this is when I worked at a *very* successful e-commerce
 
 Just as we were about to start development the business blocked it. This was the design that got blocked:
 
-<div class="image">
+<div class="image" style="max-width: 320px;margin: 0 auto;">
 	<figure>
 		<img src="/assets/img/paymentchoice.png" alt="Payment choice page" width="100%">
 		<figcaption>Payment choice wireframe</figcaption>
