@@ -8,7 +8,7 @@ description: Sometimes designers and developers misuse the select drop down cont
 
 You have most likely seen and used a select control *without* a submit button. One example would be the Amazon search results or product listing page. The typical rationale behind omitting the submit button is normally to declutter the UI and reduce clicks &mdash; the latter of which is a common [UX fallacy](http://idyeah.com/blog/2012/06/stop-counting-clicks/). The thing is doing this is detrimental to the UX.
 
-<div class="image">
+<div class="image" style="max-width: 320px;margin: 0 auto;">
 	<figure>
 		<img src="/assets/img/sortby.png" alt="Sort by select" width="100%">
 		<figcaption>Sort by select box missing a submit button</figcaption>
