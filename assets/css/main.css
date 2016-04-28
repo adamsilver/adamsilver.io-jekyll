@@ -410,8 +410,7 @@ hr {
 
 .footer ul li {
 	display: inline-block;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-right: 10px;
     font-family: helvetica, arial;
     font-size: 1.5em;
 }
