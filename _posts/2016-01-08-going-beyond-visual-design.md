@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Beyond Visual Design
+title: Going beyond Visual Design
 date:   2016-01-08 09:00:01
 categories: ux design
 description: Can you design for everyone *and* make it visually beautiful?
