@@ -8,7 +8,7 @@ description: Everything you need to know to become a great Front-end Developer.
 
 The role of the Front-end developer extends far beyond translating  designs into code. They should be heavily involved in many other aspects of the design and development process...
 
-## UX
+## User Experience &amp; Interaction Design
 
 [Everyone is responsible for UX](http://www.disambiguity.com/there-is-no-ux/) and [Front-end Developers play an essential role](http://www.smashingmagazine.com/2014/11/21/why-you-should-include-your-developer-in-the-design-process/) due to their intimate relationship with a huge range browsers, across devices and operating systems. **How can you design for the web if you don't understand the platforms' constraints and powers?**
 

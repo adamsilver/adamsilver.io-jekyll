@@ -12,25 +12,25 @@ As a huge proponent of the outside-in approach to development, I can see the lur
 
 However, this article discusses the problems you face when attempting to tame browsers in this way, which ultimately results in unreliable Javascript, unreliable web pages and of course, unhappy *users*.
 
-## Augmenting host objects
+## 1. Augmenting host objects is a bad idea.
 
 Polyfills *must* augment host and native objects in order to plug missing gaps. The problem being that augmenting host objects and (to a slightly lesser extent) native objects is ill-advised and has been for well over a decade by experts including Richard Cornford, David Mark, Thomas Lahn and Kangax&mdash;the latter of which published two dedicated articles on the subject entitled [What's wrong with extending the DOM?](http://perfectionkills.com/whats-wrong-with-extending-the-dom/) and [Extending native built-ins](http://perfectionkills.com/extending-native-builtins/). Here is a choice snippet below, but I highly advise reading the entire article:
 
 > &ldquo;In fact, DOM extension seemed so temptingly useful [...]. But what hides behind this seemingly innocuous practice is a huge load of trouble. [...] the downsides of this approach far outweigh any benefits.&rdquo;
 
-## Feature detection is not enough
+## 2. Feature detection is not enough.
 
 As Peter Michaux demonstrates in [Feature Detection: State of the art browser scripting](http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting), the mere presence of an API is not necessarily enough to determine reliable usage. This is where feature *testing* comes in.
 
 Polyfills *tend* to just detect the presence of an API; they do not iron out the bugs or inconsistencies found across the breadth of browsers; even if they did, they would have to override the original, whereby the override may contain a reference to the original&mdash;a dangerous and unnecessary way to go. This is why facades are useful as we will see later on.
 
-## Decoupling browser and application logic
+## 3. Decoupling browser and application logic is advisable.
 
 As Nicholas Zakas presents in [Scalable JavaScript Application Architecture](https://www.youtube.com/watch?v=vXjVFPosQHw), it is important to decouple application and browser logic. He states:
 
 > &ldquo;Application logic should be written one way for all browsers in order to keep the code maintainable. If you’re using native APIs in your application logic, you can’t help but know what browser is being used because you need to account for browser differences. That means your application logic will always need to be updated as new browsers and new browser versions are released. **That’s a recipe for disaster**&rdquo;.
 
-## Context context context
+## 4. Context context context.
 
 You may not need the full API to solve your problem; you may not even be *able* to implement a polyfill because there's just no way to do it. This is why context is important, which is something Javascript expert David Mark expresses frequently.
 
@@ -38,7 +38,7 @@ What exactly does David mean by context? You would have to ask David to be compl
 
 This seems sensible doesn't it? It is. With polyfills it's all or nothing, whereby you rarely need *all* of the API and the solution is anything but lean.
 
-## Caveats
+## 5. Polyfills suffer from caveats.
 
 It doesn't take much effort to find examples of problematic polyfills. Take the [ES5 Shim](https://github.com/es-shims/es5-shim) project documentation. In describing the `Object.create` polyfill it states:
 

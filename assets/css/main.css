@@ -469,6 +469,7 @@ hr {
 	font-size: 2.2em;
 	line-height: 1.2em;
 	font-weight: normal;
+	font-family: helvetica, arial;
 }
 
 @media(min-width: 600px) {
