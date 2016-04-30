@@ -224,13 +224,13 @@ hr {
 }
 
 .newsletterForm-heading {
-	margin: 0 20px;
+	margin: 0 20px 10px;
 	font-size: 1.5em;
-	line-height: 1.2;
+	line-height: 1.5;
 	text-transform: uppercase;
 	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 	color: #fff;
-	margin-bottom: 5px;
+	letter-spacing: 0.03em;
 }
 
 @media(min-width: 600px) {
@@ -243,9 +243,9 @@ hr {
 .newsletterForm-description {
 	margin: 0 20px;
 	font-size: 1.7em;
-	line-height: 1.4em;
+	line-height: 1.5;
 	color: #fff;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 }
 
 @media(min-width: 600px) {
@@ -262,13 +262,18 @@ hr {
 	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 	font-size: 1.6em;
 	width: 100%;
-	padding: 8px 8px;
-	max-width: 380px;
+	padding: 8px;
 	display: inline-block;
 	margin-right: 5px;
 	margin-bottom: 5px;
 	box-sizing: border-box;
 	background-color: #eee;
+}
+
+@media(min-width: 600px) {
+	.newsletterForm-email {
+		max-width: 368px;
+	}
 }
 
 .newsletterForm-button {
@@ -280,12 +285,11 @@ hr {
 	color: #fff;
 	border: none;
 	width: 100%;
-	max-width: 380px;
 	text-transform: uppercase;
 	font-weight: bold;
 }
 
-@media(min-width: 640px) {
+@media(min-width: 600px) {
 	.newsletterForm-button {
 		width: auto;
 	}
