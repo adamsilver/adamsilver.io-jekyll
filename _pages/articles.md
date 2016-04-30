@@ -1,19 +1,16 @@
 ---
-layout: default
+layout: other
 title: Articles
 id: articles
 permalink: /articles/
 ---
 
-# Articles
-
-<div id="articleList">
+<div class="articleList">
+	<h1>Articles</h1>
 	{% for post in site.posts %}
-		<a href="{{ post.url }}">
-			<div class="article">
-				<h2 class="title">{{ post.title }}</a></h2>
-				{% include articleMeta.html date=post.date cont=post.content %}
-			</div>
-		</a>
+		<div class="articleList-article">
+			<h2 class="articleList-articleTitle"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+			{% include articleMeta.html date=post.date cont=post.content %}
+		</div>
 	{% endfor %}
 </div>

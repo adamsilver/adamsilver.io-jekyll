@@ -78,7 +78,7 @@ hr {
 	.mainContent h2 {
 		font-size: 1.9em;
 		margin-bottom: 5px;
-		line-height: 1.6;
+		line-height: 1.5;
 	}
 }
 
@@ -186,7 +186,7 @@ hr {
 .mainContent figure figcaption {
 	font-size: 1.2em;
 	text-align: center;
-	font-family: helvetica, arial;
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 	padding-left: 20px;
 	padding-right: 20px;
 }
@@ -212,17 +212,25 @@ hr {
 **********************************************************/
 
 .newsletterForm {
-	max-width: 700px;
 	padding-top: 40px;
 	padding-bottom: 45px;
+	margin: 0 auto;
+	background-color: #333;
+}
+
+.newsletterForm-inner {
+	max-width: 700px;
 	margin: 0 auto;
 }
 
 .newsletterForm-heading {
-	margin: 0 20px 15px;
+	margin: 0 20px;
 	font-size: 1.5em;
 	line-height: 1.2;
 	text-transform: uppercase;
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
+	color: #fff;
+	margin-bottom: 5px;
 }
 
 @media(min-width: 600px) {
@@ -232,33 +240,51 @@ hr {
 	}
 }
 
+.newsletterForm-description {
+	margin: 0 20px;
+	font-size: 1.7em;
+	line-height: 1.4em;
+	color: #fff;
+	margin-bottom: 15px;
+}
+
+@media(min-width: 600px) {
+	.newsletterForm-description {
+		font-size: 2.1em;
+	}
+}
+
 .newsletterForm-field {
 	margin: 0 20px;
 }
 
 .newsletterForm-email {
-	font-family: helvetica, arial;
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 	font-size: 1.6em;
 	width: 100%;
-	border: 2px solid #bdbdbd;
+	border: 2px solid #999;
 	padding: 8px 8px;
 	max-width: 380px;
 	display: inline-block;
 	margin-right: 5px;
 	margin-bottom: 5px;
 	box-sizing: border-box;
+	background-color: #555;
+	color: #fff;
 }
 
 .newsletterForm-button {
-	font-family: helvetica, arial;
-	font-size: 1.7em;
-	padding: 10px 45px;
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
+	font-size: 1.4em;
+	padding: 11px 45px;
 	display: inline-block;
 	background-color: #8e44ad;
 	color: #fff;
 	border: none;
 	width: 100%;
 	max-width: 380px;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 @media(min-width: 600px) {
@@ -275,46 +301,88 @@ hr {
 * Articles
 **********************************************************/
 
-#articleList .article {
+.articleList {
+	padding-top: 30px;
+	max-width: 700px;
+	margin: 0 auto 0px;
+}
+
+@media(min-width: 600px) {
+	.articleList {
+		padding-top: 40px;
+	}
+}
+
+.articleList h1 {
+	margin: 0 20px 35px;
+	font-size: 2.3em;
+	line-height: 1.3em;
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+@media(min-width: 600px) {
+	.articleList h1 {
+		font-size: 3.2em;
+	}
+}
+
+.articleList-article {
 	margin-bottom: 30px;
 }
 
 @media(min-width: 600px) {
-	#articleList .article {
+	.articleList-article {
 		margin-bottom: 45px;
 	}
 }
 
-#articleList .article .title {
-	margin-bottom: 0;
-	max-width: 340px;
+.articleList-articleTitle {
+	max-width: 400px;
+	margin: 0 20px;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 }
 
+@media(min-width: 600px) {
+	.articleList-articleTitle {
+		font-size: 1.9em;
+		line-height: 1.5;
+	}
+}
 
-#articleList a {
+.articleList a {
 	text-decoration: none;
 }
 
-#articleList a:active {
+.articleList a:active {
     color: #fff;
     background-color: #8e44ad;
 }
 
-#articleList a:active .title {
+.articleList-articleTitle a:active {
     background-color: #8e44ad;
 }
 
-#articleList .article .meta {
+/**********************************************************
+* Meta
+**********************************************************/
+
+.meta {
 	margin: 0 20px;
-	font-size: 1.3em;
+	font-size: 1.1em;
 	line-height: 1.7em;
-	color: #000;
+	color: #666;
+	letter-spacing: 0.02em;
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 	text-transform: uppercase;
 }
 
 @media(min-width: 600px) {
-	#articleList .article .meta {
-		font-size: 1.5em;
+	.meta {
+		font-size: 1.3em;
 	}
 }
 
@@ -356,7 +424,7 @@ hr {
 	display: inline-block;
     margin-left: 10px;
     margin-right: 10px;
-    font-family: helvetica, arial;
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
     font-size: 1.5em;
 }
 
@@ -411,7 +479,7 @@ hr {
 .footer ul li {
 	display: inline-block;
     margin-right: 10px;
-    font-family: helvetica, arial;
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
     font-size: 1.5em;
 }
 
@@ -437,14 +505,16 @@ hr {
 .nowRead {
 	max-width: 700px;
 	margin: 0 auto;
-	padding-top: 40px;
-	padding-bottom: 45px;
+	padding-top: 25px;
+	padding-bottom: 30px;
 	background-color: #f9f9f9;
+	margin-bottom: 20px;
 }
 
 @media(min-width: 620px) {
 	.nowRead {
 		border-radius: 10px;
+		margin-bottom: 35px;
 	}
 }
 
@@ -453,7 +523,7 @@ hr {
 	font-size: 1.3em;
 	line-height: 1.2em;
 	text-transform: uppercase;
-	font-family: helvetica, arial;
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 }
 
 @media(min-width: 600px) {
@@ -469,7 +539,7 @@ hr {
 	font-size: 2.2em;
 	line-height: 1.2em;
 	font-weight: normal;
-	font-family: helvetica, arial;
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 }
 
 @media(min-width: 600px) {
