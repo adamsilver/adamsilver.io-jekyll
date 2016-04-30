@@ -215,7 +215,7 @@ hr {
 	padding-top: 40px;
 	padding-bottom: 45px;
 	margin: 0 auto;
-	background-color: #333;
+	background-color: #222;
 }
 
 .newsletterForm-inner {
@@ -262,15 +262,13 @@ hr {
 	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 	font-size: 1.6em;
 	width: 100%;
-	border: 2px solid #999;
 	padding: 8px 8px;
 	max-width: 380px;
 	display: inline-block;
 	margin-right: 5px;
 	margin-bottom: 5px;
 	box-sizing: border-box;
-	background-color: #555;
-	color: #fff;
+	background-color: #eee;
 }
 
 .newsletterForm-button {
@@ -287,7 +285,7 @@ hr {
 	font-weight: bold;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 640px) {
 	.newsletterForm-button {
 		width: auto;
 	}
@@ -513,24 +511,21 @@ hr {
 
 @media(min-width: 620px) {
 	.nowRead {
-		border-radius: 10px;
-		margin-bottom: 35px;
+		margin-bottom: 30px;
 	}
 }
 
 .nowRead-heading {
-	margin: 0 20px 5px;
 	font-size: 1.3em;
 	line-height: 1.2em;
 	text-transform: uppercase;
 	font-family: 'helvetica neue', helvetica, arial, sans-serif;
+	margin: 0 20px;
 }
 
 @media(min-width: 600px) {
 	.nowRead-heading {
 		font-size: 1.6em;
-		margin-left: 40px;
-		margin-right: 40px;
 	}
 }
 
@@ -544,9 +539,7 @@ hr {
 
 @media(min-width: 600px) {
 	.nowRead-articleTitle {
-		font-size: 3em;
-		margin-left: 40px;
-		margin-right: 40px;
+		font-size: 2.6em;
 	}
 }
 
