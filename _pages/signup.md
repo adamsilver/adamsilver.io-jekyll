@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: newsletter
 id: signup
 title: Newsletter
 permalink: /signup/
@@ -7,8 +7,4 @@ permalink: /signup/
 
 # Newsletter
 
-Do you enjoy convenience and interesting information about Leadership, User Experience, Design and Development?
-
-Then I think you might enjoy my newsletter. Never miss an article again. I will never spam and you can leave whenever you want!
-
-Feel free not to, I won't take offence.
+Do you enjoy, practical advice about User Experience, Design, Development and Leadership in the workplace? I write approximately one article per month, with one humdinger every 3 or so. Don't miss out.
