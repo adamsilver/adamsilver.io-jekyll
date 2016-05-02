@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Creating accessible forms"
+title: How to create accessible forms
 date:   2014-01-22 09:00:01
 categories: forms a11y ux
 description: Create accessible forms following these simple steps.
