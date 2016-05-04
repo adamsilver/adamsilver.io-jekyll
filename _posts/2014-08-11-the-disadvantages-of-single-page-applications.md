@@ -72,7 +72,11 @@ Single Page Applications mean that pages are "long lived" increasing the chance 
 
 ## 10. Loading indicator issues.
 
-When a traditional page is requested, the browser shows a loading indicator custom to the browser, which provides the most accurate indication of when a page will finish loading. With client-side routing, you have to implement you're own version of this which is hard to do and inaccurate as Javascript doesn't have access to the same details the browser does.
+When a traditional page is requested, the browser shows a loading indicator custom to *that* browser, which provides the most accurate indication of when a page will finish loading. With client-side routing, you have to implement your own loading indicator which to detrimental to the User Experience for two reasons:
+
+Firstly, the Javascript implemented loading indicator is inaccurate in terms of progress, because it doesn't have access to progress information like the browser does and...
+
+...secondly, it's disorientating to the user because the individual gets used to the behaviour of *their* chosen browser and unconsciously and intuitively understands where to look for this information. A Javascript solution is always different depending on the implementation.
 
 ## 11. It's going to fail!
 
