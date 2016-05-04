@@ -18,13 +18,15 @@ The BFED realises that while not all experiences will be identical, all browsers
 
 The BFED also realises it is not a feat to drop support for a particular (set of) browser(s) and understands that forgetting about the existence of those users hurts them and their perception of the company/product.
 
-## Preprocessors
-
-When given the choice to add a preprocessor (e.g. LESS, SASS, CoffeeScript etc) to the technology stack, the BFED realises there is a deeper impact beyond just "writing less code". *Will it be harder to onboard developers? Will debugging code be more difficult?* If the answer to any of these ([and many other](/articles/the-disadvantages-of-css-preprocessors/)) questions is *yes* then the BFED will say *no* to preprocessors.
-
 ## Accessibility
 
 The BFED realises that users have different abilities and preferred ways of using a computer, whether it's a mouse, finger, thumb, screen reader, keyboard or a combination of all, websites should be consumable no matter the audience, screen size or capability of the browser.
+
+## Preprocessors
+
+When given the choice to add a preprocessor (e.g. LESS, SASS, CoffeeScript etc) to the tech stack, the BFED realises there is a much deeper impact beyond just "writing less code".
+
+*"Will debugging code be more difficult?"*, *"Might performance degrade?"* and *"Will I be slowed down due to compile times?"* are just some of the [questions](/articles/the-disadvantages-of-css-preprocessors/) the BFED will consider to avoid problems in the future.
 
 ## UI design
 
