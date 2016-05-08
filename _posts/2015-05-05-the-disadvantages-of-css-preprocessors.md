@@ -6,7 +6,7 @@ categories: css sass less
 description: CSS preprocessors have obvious advantages but they also come with a host of problems. Learn about these to avoid pain for you and your team.
 ---
 
-CSS preprocessors have many advantages providing helpful methods for writing and reusing styles. However, CSS processors have several *disadvantages*, which I discuss here for consideration.
+CSS preprocessors have many benefits because they provide features that plain old CSS doesn't, such as variables, nesting, partials, mixins, inheritance and operators. However, CSS processors have several *disadvantages* which I discuss here for your consideration:
 
 ## 1. Debugging is harder
 
@@ -53,18 +53,18 @@ Candidates that *don't* have knowledge of CSS preprocessors (or the workflows ar
 
 	selector,
 	anotherSelector {
-		color: red;
+	    color: red;
 	}
 
 **Mixins** can be achieved the same way, by using comma-delimited CSS selectors, as follows:
 
 	selector,
 	anotherSelector {
-		border-radius: 3px;
-		-webkit-border-radius: 3px;
+	    border-radius: 3px;
+	    -webkit-border-radius: 3px;
 	}
 
-**Nesting** can't quite be achieved. However, that's not so bad because nesting can cause performance problems and is ill-advised. Instead, [use a convention](http://maintainablecss.com) that groups module components together:
+**Nesting** can't quite be achieved. However, that's not so bad because nesting can cause performance problems and is ill-advised for most situations. Instead, [use a convention](http://maintainablecss.com) that groups module components together:
 
 	.someModule {}
 
@@ -74,4 +74,4 @@ Candidates that *don't* have knowledge of CSS preprocessors (or the workflows ar
 
 ## Summary
 
-CSS preprocessors have issues, some of which there *are* solutions for. For me and many other developers, the disadvantages are overwhelming and cause too much friction in comparison to using CSS. At the very least, be concious of the decision to use a CSS preprocessor and the impact it might have on you and your team.
+Whilst CSS preprocessors have several advantages, they also have several disadvantages. Only you can decide the trade-offs you're willing to make for your situation&mdash;I simply urge you to make sure that the decision is a *conscious* one.
