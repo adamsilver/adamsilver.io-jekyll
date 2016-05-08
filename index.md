@@ -7,7 +7,7 @@ id: home
 	<img src="/assets/img/adam2.jpg" alt="Adam Photo" width="85" height="85">
 </div>
 
-# Hello, I am Adam Silver and I help people and companies make the web simple and human. I specialise in UX, Front-end Engineering and Strategy. I am based in London.
+# Hello, I am Adam Silver and I help people and companies make the web simple and human. I specialise in UX, [Front-end Engineering](/articles/the-role-of-the-front-end-developer/) and [Strategy](/articles/why-we-stopped-tasking/). I am based in London.
 
 ## Belief
 
@@ -27,7 +27,7 @@ Not only do I [write here](/articles/) but I also write on the [Simple=Human](ht
 
 ## Author
 
-I also wrote a book about writing maintainable CSS, called [MaintainableCSS](http://maintainablecss.com) (creative I know). Go check it out.
+I also wrote a book about writing maintainable CSS called [MaintainableCSS](http://maintainablecss.com) (creative I know). Go check it out.
 
 ## Want to know more?
 
