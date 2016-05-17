@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Forgotten web ux problems
-date: 2037-01-01 09:00:01
+title: Hello UX designer
+date: 2016-05-17 09:00:01
 categories: ux
 ---
 
-I always get a little frustrated if an individual thinks they are responsible for UX because actually that’s not true.
+I always get a little frustrated if an individual thinks they are solely responsible for UX because actually that’s not true.
 
 Things are always better when people work together. The world wouldn’t be what it is today if it wasn’t for humans working together to achieve what would previously seem impossible.
 
 > “UX means User Experience which, in turn, means everything a human experiences when interacting with your product or service. Everything.”
-><br>— <cite>Benedikt Lehnert</cite>
+><br>&mdash;<cite>Benedikt Lehnert</cite>
 
-So if you’re in the office, look to your left and right — they are responsible for UX and guess what, so are you. Here are some examples...
+So if you’re in the office, look to your left and right&mdash;they are responsible for UX and guess what, so are you. Here are some examples...
 
 ## If you communicate to your customers over social media or work in customer support...
 
