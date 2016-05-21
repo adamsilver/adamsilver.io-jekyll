@@ -7,7 +7,7 @@ id: home
 	<img src="/assets/img/adam2.jpg" alt="Adam Photo" width="85" height="85">
 </div>
 
-# Hello, I am Adam Silver and I help people and companies make the web simple and human. I specialise in [UX](/articles/hello-ux-designer/), [Front-end Engineering](/articles/the-role-of-the-front-end-developer/) and [Strategy](/articles/why-we-stopped-tasking/). I am based in London.
+# Hello, I am Adam Silver and I help people and companies make the web simple and human. I specialise in [UX](/articles/hello-ux-designer/), [Front-end Engineering](/articles/the-role-of-the-front-end-developer/) and [Strategy](/articles/how-we-cut-our-mvp-in-half-to-launch-kidly/). I am based in London.
 
 ## Belief
 
