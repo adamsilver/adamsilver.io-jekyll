@@ -54,20 +54,20 @@ hr {
 
 .mainContent h1 {
 	margin: 0 20px 35px;
-	font-size: 2.7em;
+	font-size: 3em;
 	line-height: 1.25em;
 	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 }
 
 @media(min-width: 600px) {
 	.mainContent h1 {
-		font-size: 3.4em;
+		font-size: 3.7em;
 	}
 }
 
 .mainContent h2 {
 	margin: 0 20px 10px;
-	font-size: 2.2em;
+	font-size: 2.4em;
 	line-height: 1.5em;
 	letter-spacing: 0.01em;
 	font-family: 'helvetica neue', helvetica, arial, sans-serif;
@@ -83,15 +83,15 @@ hr {
 
 .mainContent h3 {
 	margin: 0 20px 10px;
-	font-size: 1.8em;
-	line-height: 1.2em;
+	font-size: 2em;
+	line-height: 1.1em;
 	color: #999;
 	font-family: helvetica;
 }
 
 @media(min-width: 600px) {
 	.mainContent h3 {
-		font-size: 2.5em;
+		font-size: 2.4em;
 	}
 }
 
