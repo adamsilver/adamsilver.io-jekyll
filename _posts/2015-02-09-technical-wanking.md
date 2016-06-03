@@ -28,7 +28,7 @@ James went on to explain the application could have been better had we used a tr
 
 Whilst I was still quite chuffed with all the clever things I appeared to be doing, I couldn't help but realise he was right. I was solving self-induced problems to assist my team in get ting their work done, as opposed to delivering a great and reliable experience for our users.
 
-If we had avoided the lure of the coolness behind building a SPA, the end result would have been just as slick. Just as beautiful. Just as rich. And it would have taken half the time to build, with a far nicer split of responsibilities between the server and client, meaning we could iterate faster. Not to mention it would have had better performance and accessibility. All of which contributes to the overall UX.
+If we had avoided the lure of the coolness behind building a SPA, the end result would have been just as slick. Just as beautiful. Just as rich. And it would have taken half the time to build, with a far nicer split of responsibilities between the server and client, meaning we could iterate faster. Not to mention it would have had better performance and accessibility. All of which contributes to the [overall UX]({% post_url 2016-05-17-hello-ux-designer %}).
 
 ## When did all this nonsense become standard practice?
 
@@ -38,4 +38,4 @@ In a paid profession, it is your duty to serve the client and their users to the
 
 I know many developers scattered across the industry, who are in the trenches having to use this cutting-edge tech that causes more problems than it solves.
 
-In many ways I wish I hadn't participated in Technical Wanking back then, but then again, I wouldn't be where I am today having learnt many lessons about what *not* to do. All I will say is beware of the latest fad. **[Maybe it's time to be boring?](/articles//the-boring-front-end-developer/)**
+In many ways I wish I hadn't participated in Technical Wanking back then, but then again, I wouldn't be where I am today having learnt many lessons about what *not* to do.
