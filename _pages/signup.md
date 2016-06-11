@@ -1,7 +1,7 @@
 ---
 layout: newsletter
 id: signup
-title: Newsletter
+title: Sign up for updates
 permalink: /signup/
 ---
 

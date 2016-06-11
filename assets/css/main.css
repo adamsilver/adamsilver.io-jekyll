@@ -218,7 +218,7 @@ hr {
 	padding-top: 40px;
 	padding-bottom: 45px;
 	margin: 0 auto;
-	background-color: #222;
+	background-color: #0074D9;
 }
 
 .newsletterForm-inner {
@@ -228,18 +228,18 @@ hr {
 
 .newsletterForm-heading {
 	margin: 0 20px 10px;
-	font-size: 1.5em;
-	line-height: 1.5;
-	text-transform: uppercase;
-	font-family: 'helvetica neue', helvetica, arial, sans-serif;
+	font-size: 2.4em;
+	line-height: 1.5em;
+	letter-spacing: 0.01em;
 	color: #fff;
-	letter-spacing: 0.03em;
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 }
 
 @media(min-width: 600px) {
 	.newsletterForm-heading {
-		font-size: 1.9em;
-		line-height: 1.6;
+		font-size: 3em;
+		margin-bottom: 5px;
+		line-height: 1.5;
 	}
 }
 
@@ -248,7 +248,6 @@ hr {
 	font-size: 1.7em;
 	line-height: 1.5;
 	color: #fff;
-	margin-bottom: 20px;
 }
 
 @media(min-width: 600px) {
@@ -257,50 +256,10 @@ hr {
 	}
 }
 
-.newsletterForm-field {
-	margin: 0 20px;
-}
-
-.newsletterForm-email {
-	font-family: 'helvetica neue', helvetica, arial, sans-serif;
-	font-size: 1.6em;
-	width: 100%;
-	padding: 8px;
-	display: inline-block;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	box-sizing: border-box;
-	background-color: #eee;
-}
-
-@media(min-width: 600px) {
-	.newsletterForm-email {
-		max-width: 368px;
-	}
-}
-
-.newsletterForm-button {
-	font-family: 'helvetica neue', helvetica, arial, sans-serif;
-	font-size: 1.4em;
-	padding: 11px 45px;
-	display: inline-block;
-	background-color: #0074D9;
+.newsletterForm a {
 	color: #fff;
-	border: none;
-	width: 100%;
-	text-transform: uppercase;
-	font-weight: bold;
 }
 
-@media(min-width: 600px) {
-	.newsletterForm-button {
-		width: auto;
-	}
-}
-
-.newsletterForm-button:hover {
-	background-color: #0267BF;
-}
 
 /**********************************************************
 * Articles
@@ -637,25 +596,25 @@ hr {
 	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 	font-size: 1.6em;
 	width: 100%;
-	padding: 8px 10px;
+	padding: 10px 10px;
 	display: inline-block;
 	margin-right: 5px;
 	margin-bottom: 5px;
 	box-sizing: border-box;
 	background-color: #fff;
-	border: 1px solid #ccc;
+	border: 1px solid #ddd;
 }
 
 @media(min-width: 660px) {
 	.signUpForm-email {
-		max-width: 368px;
+		max-width: 328px;
 	}
 }
 
 .signUpForm-button {
 	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 	font-size: 1.4em;
-	padding: 11px 45px;
+	padding: 11px 35px;
 	display: inline-block;
 	background-color: #0074D9;
 	color: #fff;
