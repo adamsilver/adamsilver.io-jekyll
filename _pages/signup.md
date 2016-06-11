@@ -5,6 +5,8 @@ title: Newsletter
 permalink: /signup/
 ---
 
-# Newsletter
+# I am writing a book...
 
-Do you enjoy learning practical advice about User Experience, Engineering and Leadership in the workplace? I write approximately one article per month, with one humdinger every 3 or so. Don't miss out.
+I am obsessed with forms. And because they are such an important part of a friction-free web experience, I have decided to write a book about how to make them great.
+
+Don't worry, I will still be writing the odd article as per normal, but I will also keep you up to date on the book in the form of free chapters, so you can get a sneaky preview.
