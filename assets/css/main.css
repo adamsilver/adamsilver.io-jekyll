@@ -266,6 +266,17 @@ hr {
 	font-style: italic;
 }
 
+.mainContent blockquote p {
+	font-size: 2.5em;
+	color: #545a6a;
+}
+
+@media(min-width: 600px) {
+	.mainContent blockquote p {
+		font-size: 2.9em;
+	}
+}
+
 .mainContent blockquote cite {
 	font-weight: bold;
 }
@@ -581,15 +592,15 @@ hr {
 }
 
 .nowRead p {
-	font-size: 1.7em;
-	line-height: 1.7em;
+	font-size: 1.6em;
+	line-height: 1.8;
 	max-width: 350px;
 	margin: 0 auto;
 }
 
 @media(min-width: 600px) {
 	.nowRead p {
-		font-size: 2.1em;
+		font-size: 1.9em;
 		margin-bottom: 45px;
 	}
 }
@@ -620,8 +631,8 @@ hr {
 	text-decoration: none;
 	padding: 12px 30px;
 	font-size: 1.1em;
-	background-color: #eee;
-	color: #222;
+	border: 1px solid #eee;
+	color: #31343e;
 	font-weight: bold;
 	letter-spacing: 0.04em;
 	width: 150px;
@@ -630,8 +641,7 @@ hr {
 }
 
 .share-button:hover {
-	background-color: #0074D9;
-	color: #fff;
+	background-color: #eee;
 }
 
 .share p {
@@ -655,14 +665,16 @@ hr {
 	margin: 0 20px 40px;
 	background-color: #f5f5f5;
 	padding: 25px 20px;
+	max-width: 640px;
+	margin: 0 auto 40px;
 }
 
 @media(min-width: 800px) {
 	.signUpForm {
-		max-width: 650px;
 		margin: 0 auto 40px;
 		background-color: #f5f5f5;
-		padding: 45px 40px;
+		padding: 40px;
+		max-width: 580px;
 	}
 }
 
@@ -697,7 +709,7 @@ hr {
 }
 
 .signUpForm-button {
-	font-size: 1.4em;
+	font-size: 1.5em;
 	padding: 11px 35px;
 	display: inline-block;
 	background-color: #0074D9;
@@ -706,6 +718,7 @@ hr {
 	width: 100%;
 	text-transform: uppercase;
 	font-weight: bold;
+	letter-spacing: 0.03em;
 }
 
 @media(min-width: 660px) {

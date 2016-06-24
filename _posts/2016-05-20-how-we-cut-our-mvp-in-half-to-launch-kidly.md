@@ -93,7 +93,7 @@ What I mean by this is that every single piece of copy, every pixel and every
 micro interaction was scrutinised over and over. Ultimately it
 was near-death by a thousand cuts.
 
-> Nobody cares about your product as much as you do
+> “Nobody cares about your product as much as you do”
 
 Instead of designing overall flows, screens and
 [states](https://medium.com/swlh/the-nine-states-of-design-5bfe9b3d6d85#.9wrs8ne3o),
