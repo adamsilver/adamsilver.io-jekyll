@@ -181,6 +181,7 @@ hr {
 	margin: 0 20px 35px;
 	font-size: 3em;
 	line-height: 1.25em;
+	color: #545a6a;
 }
 
 @media(min-width: 600px) {
@@ -194,6 +195,7 @@ hr {
 	font-size: 2.4em;
 	line-height: 1.5em;
 	letter-spacing: 0.01em;
+	color: #31343e;
 }
 
 @media(min-width: 600px) {
@@ -206,26 +208,27 @@ hr {
 
 .mainContent h3 {
 	margin: 0 20px 10px;
-	font-size: 2em;
-	line-height: 1.1em;
-	color: #999;
+	font-size: 1.7em;
+	line-height: 1.4;
+	color: #31343e;
 }
 
 @media(min-width: 600px) {
 	.mainContent h3 {
-		font-size: 2.4em;
+		font-size: 2.1em;
 	}
 }
 
 .mainContent p {
 	margin: 0 20px 30px;
-	font-size: 1.7em;
-	line-height: 1.7em;
+	font-size: 1.6em;
+	line-height: 1.8;
+	color: #31343e;
 }
 
 @media(min-width: 600px) {
 	.mainContent p {
-		font-size: 2.1em;
+		font-size: 1.9em;
 		margin-bottom: 45px;
 	}
 }
@@ -278,14 +281,15 @@ hr {
 
 .mainContent ol li,
 .mainContent ul li {
-	font-size: 1.7em;
-	line-height: 1.7em;
+	font-size: 1.6em;
+	line-height: 1.8;
+	color: #31343e;
 }
 
 @media(min-width: 600px) {
 	.mainContent ol li,
 	.mainContent ul li {
-		font-size: 2.1em;
+		font-size: 1.9em;
 	}
 }
 
@@ -304,7 +308,7 @@ hr {
 }
 
 .mainContent figure figcaption {
-	font-size: 1.2em;
+	font-size: 1.3em;
 	text-align: center;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -312,7 +316,7 @@ hr {
 
 @media(min-width: 600px) {
 	.mainContent figure figcaption {
-		font-size: 1.4em;
+		font-size: 1.5em;
 	}
 }
 
