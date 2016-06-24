@@ -14,37 +14,21 @@ Things are always better when people work together. The world wouldn’t be what
 
 So if you’re in the office, look to your left and right&mdash;they are responsible for UX and guess what, so are you. Here are some examples...
 
-### If you communicate to your customers over social media or work in customer support...
+If you communicate to your customers over social media or work in customer support...**you’re responsible for UX.**
 
-You’re responsible for UX.
+If you ensure the application architecture is designed for speed, reliability and iteration, by considering things like CQRS, Micro services and caching...**you’re responsible for UX.**
 
-### If you ensure the application architecture is designed for speed, reliability and iteration, by considering things like CQRS, Micro services and caching...
+If you write copy for websites and emails or strategise around when to send communication...**you’re responsible for UX.**
 
-You’re responsible for UX.
+If you translate designs into responsive and progressively enhanced front-end solutions and advise on what doesn’t work well cross-browser...**you’re responsible for UX.**
 
-### If you write copy for websites and emails or strategise around when to send communication...
+If you conduct user research...**you’re responsible for UX.**
 
-You’re responsible for UX.
+If you test software for quality...**you’re responsible for UX.**
 
-### If you translate designs into responsive and progressively enhanced front-end solutions and advise on what doesn’t work well cross-browser...
+If you facilitate the iterative process for regular improvement...**you’re responsible for UX.**
 
-You’re responsible for UX.
-
-### If you conduct user research...
-
-You’re responsible for UX.
-
-### If you test software for quality...
-
-You’re responsible for UX.
-
-### If you facilitate the iterative process for regular improvement...
-
-You’re responsible for UX.
-
-### And if you design UIs...
-
-Yes you too, are responsible for UX.
+And if you design UIs...**yes you too, are responsible for UX.**
 
 **Think about it**...what good is a beautiful UI if it takes 10 seconds to load or contains crappy content? What good is it if you have a great content, but a terrible customer service? What good is it if everything is great except for the fact the website is unstable and goes down frequently? The answer is of course **not much good!**
 
