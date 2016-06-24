@@ -294,7 +294,7 @@ input {
 }
 
 body {
-	font-family: georgia, serif;
+	font-family: Merriweather, georgia, serif;
     text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
     font-size: 62.5%;
@@ -323,6 +323,30 @@ hr {
 }
 
 /**********************************************************
+* Sans
+**********************************************************/
+
+.mainContent h1,
+.mainContent h2,
+.mainContent h3,
+.mainContent figure figcaption,
+.newsletterForm-heading,
+.articleList h1,
+.articleList-articleTitle,
+.meta,
+.nav ul li,
+.footer p,
+.share-button,
+.signUpForm-email,
+.signUpForm-button {
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+/**********************************************************
+* Serif
+**********************************************************/
+
+/**********************************************************
 * Article
 **********************************************************/
 
@@ -342,7 +366,6 @@ hr {
 	margin: 0 20px 35px;
 	font-size: 3em;
 	line-height: 1.25em;
-	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 }
 
 @media(min-width: 600px) {
@@ -356,7 +379,6 @@ hr {
 	font-size: 2.4em;
 	line-height: 1.5em;
 	letter-spacing: 0.01em;
-	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 }
 
 @media(min-width: 600px) {
@@ -372,7 +394,6 @@ hr {
 	font-size: 2em;
 	line-height: 1.1em;
 	color: #999;
-	font-family: helvetica;
 }
 
 @media(min-width: 600px) {
@@ -470,7 +491,6 @@ hr {
 .mainContent figure figcaption {
 	font-size: 1.2em;
 	text-align: center;
-	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 	padding-left: 20px;
 	padding-right: 20px;
 }
@@ -513,7 +533,6 @@ hr {
 	line-height: 1.5em;
 	letter-spacing: 0.01em;
 	color: #fff;
-	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 }
 
 @media(min-width: 600px) {
@@ -562,7 +581,6 @@ hr {
 	margin: 0 20px 35px;
 	font-size: 3em;
 	line-height: 1.25em;
-	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 }
 
 @media(min-width: 600px) {
@@ -588,7 +606,6 @@ hr {
 	line-height: 1.5em;
 	text-transform: uppercase;
 	letter-spacing: 0.03em;
-	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 }
 
 @media(min-width: 600px) {
@@ -621,7 +638,6 @@ hr {
 	line-height: 1.7em;
 	color: #666;
 	letter-spacing: 0.02em;
-	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 	text-transform: uppercase;
 }
 
@@ -669,7 +685,6 @@ hr {
 	display: inline-block;
     margin-left: 7px;
     margin-right: 7px;
-    font-family: 'helvetica neue', helvetica, arial, sans-serif;
     font-size: 1.5em;
     margin-bottom: 10px;
 }
@@ -720,38 +735,7 @@ hr {
 	margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
-    font-family: 'helvetica neue', helvetica, arial, sans-serif;
 }
-
-/*.footer ul {
-    list-style: none;
-    max-width: 640px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.footer ul li {
-	display: inline-block;
-    margin-right: 10px;
-    font-family: 'helvetica neue', helvetica, arial, sans-serif;
-    font-size: 1.5em;
-}
-
-.footer ul li:last-child {
-	margin-right: 20px;
-}
-
-.footer ul li a:link,
-.footer ul li a:visited {
-    text-decoration: none;
-    display: block;
-    color: #000;
-}
-
-.footer ul li a:hover {
-    color: #0074D9;
-}*/
 
 /**********************************************************
 * Now read
@@ -821,7 +805,6 @@ hr {
 	width: 150px;
 	text-align: center;
 	margin: 0 auto;
-	font-family: Arial;
 }
 
 .share-button:hover {
@@ -874,7 +857,6 @@ hr {
 }
 
 .signUpForm-email {
-	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 	font-size: 1.6em;
 	width: 100%;
 	padding: 10px 10px;
@@ -893,7 +875,6 @@ hr {
 }
 
 .signUpForm-button {
-	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 	font-size: 1.4em;
 	padding: 11px 35px;
 	display: inline-block;
