@@ -113,6 +113,7 @@ body {
     text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
     font-size: 62.5%;
+    color: #31343e;
 }
 
 a:link,
