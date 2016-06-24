@@ -4,56 +4,12 @@
 
 @font-face {
 	font-family: 'Lato';
-	src: url('../fonts/Lato/Lato-BlackItalic.eot');
-	src: local('Lato Black Italic'), local('Lato-BlackItalic'),
-		url('../fonts/Lato/Lato-BlackItalic.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Lato/Lato-BlackItalic.woff') format('woff'),
-		url('../fonts/Lato/Lato-BlackItalic.ttf') format('truetype');
-	font-weight: 900;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'Lato Hairline';
-	src: url('../fonts/Lato/Lato-HairlineItalic.eot');
-	src: local('Lato-HairlineItalic'),
-		url('../fonts/Lato/Lato-HairlineItalic.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Lato/Lato-HairlineItalic.woff') format('woff'),
-		url('../fonts/Lato/Lato-HairlineItalic.ttf') format('truetype');
-	font-weight: 300;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'Lato';
 	src: url('../fonts/Lato/Lato-Regular.eot');
 	src: local('Lato Regular'), local('Lato-Regular'),
 		url('../fonts/Lato/Lato-Regular.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/Lato/Lato-Regular.woff') format('woff'),
 		url('../fonts/Lato/Lato-Regular.ttf') format('truetype');
 	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Lato';
-	src: url('../fonts/Lato/Lato-Black.eot');
-	src: local('Lato Black'), local('Lato-Black'),
-		url('../fonts/Lato/Lato-Black.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Lato/Lato-Black.woff') format('woff'),
-		url('../fonts/Lato/Lato-Black.ttf') format('truetype');
-	font-weight: 900;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Lato Hairline';
-	src: url('../fonts/Lato/Lato-Hairline.eot');
-	src: local('Lato-Hairline'),
-		url('../fonts/Lato/Lato-Hairline.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Lato/Lato-Hairline.woff') format('woff'),
-		url('../fonts/Lato/Lato-Hairline.ttf') format('truetype');
-	font-weight: 300;
 	font-style: normal;
 }
 
@@ -88,28 +44,6 @@
 		url('../fonts/Lato/Lato-BoldItalic.ttf') format('truetype');
 	font-weight: bold;
 	font-style: italic;
-}
-
-@font-face {
-	font-family: 'Lato';
-	src: url('../fonts/Lato/Lato-LightItalic.eot');
-	src: local('Lato-LightItalic'),
-		url('../fonts/Lato/Lato-LightItalic.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Lato/Lato-LightItalic.woff') format('woff'),
-		url('../fonts/Lato/Lato-LightItalic.ttf') format('truetype');
-	font-weight: 300;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'Lato';
-	src: url('../fonts/Lato/Lato-Light.eot');
-	src: local('Lato-Light'),
-		url('../fonts/Lato/Lato-Light.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Lato/Lato-Light.woff') format('woff'),
-		url('../fonts/Lato/Lato-Light.ttf') format('truetype');
-	font-weight: 300;
-	font-style: normal;
 }
 
 /**********************************************************
@@ -151,56 +85,12 @@
 
 @font-face {
 	font-family: 'Merriweather';
-	src: url('../fonts/Merriweather/Merriweather-LightItalic.eot');
-	src: local('Merriweather Light Italic'), local('Merriweather-LightItalic'),
-		url('../fonts/Merriweather/Merriweather-LightItalic.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Merriweather/Merriweather-LightItalic.woff') format('woff'),
-		url('../fonts/Merriweather/Merriweather-LightItalic.ttf') format('truetype');
-	font-weight: 300;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'Merriweather';
-	src: url('../fonts/Merriweather/Merriweather-HeavyItalic.eot');
-	src: local('Merriweather Heavy Italic'), local('Merriweather-HeavyItalic'),
-		url('../fonts/Merriweather/Merriweather-HeavyItalic.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Merriweather/Merriweather-HeavyItalic.woff') format('woff'),
-		url('../fonts/Merriweather/Merriweather-HeavyItalic.ttf') format('truetype');
-	font-weight: 900;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'Merriweather';
-	src: url('../fonts/Merriweather/Merriweather-Light.eot');
-	src: local('Merriweather Light'), local('Merriweather-Light'),
-		url('../fonts/Merriweather/Merriweather-Light.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Merriweather/Merriweather-Light.woff') format('woff'),
-		url('../fonts/Merriweather/Merriweather-Light.ttf') format('truetype');
-	font-weight: 300;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Merriweather';
 	src: url('../fonts/Merriweather/Merriweather-Bold.eot');
 	src: local('Merriweather Bold'), local('Merriweather-Bold'),
 		url('../fonts/Merriweather/Merriweather-Bold.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/Merriweather/Merriweather-Bold.woff') format('woff'),
 		url('../fonts/Merriweather/Merriweather-Bold.ttf') format('truetype');
 	font-weight: bold;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Merriweather';
-	src: url('../fonts/Merriweather/Merriweather-Heavy.eot');
-	src: local('Merriweather Heavy'), local('Merriweather-Heavy'),
-		url('../fonts/Merriweather/Merriweather-Heavy.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Merriweather/Merriweather-Heavy.woff') format('woff'),
-		url('../fonts/Merriweather/Merriweather-Heavy.ttf') format('truetype');
-	font-weight: 900;
 	font-style: normal;
 }
 
