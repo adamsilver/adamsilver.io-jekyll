@@ -23,7 +23,7 @@ Sometimes I [speak at conferences]({% post_url 2016-03-06-embracing-simplicity %
 
 ## Writing
 
-Not only do I [write here](/articles/) but I also write on the [Simple=Human](http://medium.com/simple-human) publication with my friend [Mark Jenkins](http://theluckystrike.co.uk), which is a collection of articles written by us about leadership, design and development.
+In addition to this blog, I write for [Simple=Human](http://medium.com/simple-human)&mdash;a Medium publication I started with my friend [Mark Jenkins](http://theluckystrike.co.uk) about leadership, design and development. I also write for [Smashing Magazine](https://www.smashingmagazine.com/2016/06/improving-ux-for-color-blind-users/) about UX.
 
 ## Author
 
