@@ -194,7 +194,7 @@ hr {
 .mainContent h2 {
 	margin: 0 20px 10px;
 	font-size: 2.3em;
-	line-height: 1.5em;
+	line-height: 1.5;
 	letter-spacing: 0.01em;
 	color: #31343e;
 }
@@ -351,30 +351,29 @@ hr {
 
 .newsletterForm-heading {
 	margin: 0 20px 10px;
-	font-size: 2.4em;
-	line-height: 1.5em;
+	font-size: 2.3em;
+	line-height: 1.5;
 	letter-spacing: 0.01em;
 	color: #fff;
 }
 
 @media(min-width: 600px) {
 	.newsletterForm-heading {
-		font-size: 3em;
+		font-size: 2.9em;
 		margin-bottom: 5px;
-		line-height: 1.5;
 	}
 }
 
 .newsletterForm-description {
 	margin: 0 20px;
-	font-size: 1.7em;
-	line-height: 1.5;
+	font-size: 1.6em;
+	line-height: 1.8;
 	color: #fff;
 }
 
 @media(min-width: 600px) {
 	.newsletterForm-description {
-		font-size: 2.1em;
+		font-size: 1.9em;
 	}
 }
 
