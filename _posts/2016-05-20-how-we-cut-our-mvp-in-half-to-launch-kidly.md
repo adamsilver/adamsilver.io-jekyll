@@ -194,7 +194,7 @@ In the end we launched in 5 weeks, and even that was down to a third party couri
 
 It must be said that James and the team achieved what felt impossible to achieve. It has been very enjoyable working with the team, especially in the last 4 weeks as I have witnessed the progression of this success.
 
-## What our customers say?
+## What our customers said
 
 We have had some wonderful feedback from our many VIPs. Here is just some of that feedback:
 
