@@ -1,16 +1,9 @@
 ---
 layout: post
 title: Why placeholders are problematic
-date: 2016-07-04 09:00:01
+date: 2016-06-16 09:00:01
 categories: design ux
 ---
-
-<!-- <div class="image">
-	<figure>
-		<img src="{{ site.url }}/assets/img/kidly.jpg" alt="The team" width="100%">
-		<figcaption>The team</figcaption>
-	</figure>
-</div> -->
 
 Since placeholders arrived on the scene, they have been rapidly adopted to provide hints and instructions to help users fill in forms. Whilst this sounds good, it is actually problematic due to the way the placeholder behaves — there is one ‘space’ containing two values: the hint and the value.
 
