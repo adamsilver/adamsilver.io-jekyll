@@ -319,6 +319,9 @@ hr {
 
 .mainContent figure img {
 	margin-bottom: 4px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .mainContent figure figcaption {
