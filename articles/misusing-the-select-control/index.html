@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en">
+	<head>
+	    <title>Misusing the select control | Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
+	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+
+<link rel="apple-touch-icon" sizes="57x57" href="http://adamsilver.io/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://adamsilver.io/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://adamsilver.io/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://adamsilver.io/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://adamsilver.io/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://adamsilver.io/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://adamsilver.io/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://adamsilver.io/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://adamsilver.io/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="http://adamsilver.io/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="http://adamsilver.io/manifest.json">
+<link rel="mask-icon" href="http://adamsilver.io/safari-pinned-tab.svg" color="#001f3f">
+<meta name="msapplication-TileColor" content="#001F3F">
+<meta name="msapplication-TileImage" content="http://adamsilver.io/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+
+
+	<meta content="Misusing the select control" property="og:title">
+
+
+
+	<meta property="og:description" content="Sometimes designers and developers misuse the select drop down control. Find out about the problems and how to solve in this article.">
+
+
+<meta property="og:url" content="http://adamsilver.io/articles/misusing-the-select-control/">
+<meta property="og:site_name" content="Adamsilver.io">
+<meta property="og:image" content="http://adamsilver.io/assets/img/card.png">
+<meta property="og:image:width" content="181">
+<meta property="og:image:height" content="181">
+
+<meta name="twitter:card" content="summary">
+
+
+	<meta name="twitter:description" content="Sometimes designers and developers misuse the select drop down control. Find out about the problems and how to solve in this article.">
+
+
+<meta name="twitter:title" content="Misusing the select control -  Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.">
+
+
+	<meta content="Misusing the select control" name="twitter:title">
+
+
+<meta name="twitter:site" content="@adambsilver">
+<meta name="twitter:creator" content="@adambsilver">
+<meta property="twitter:image" content="http://adamsilver.io/assets/img/card.jpg">
+
+
+	<meta itemprop="description" content="Sometimes designers and developers misuse the select drop down control. Find out about the problems and how to solve in this article.">
+
+
+<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all">
+<!--[if IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" type="text/css" media="all"><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/assets/css/ie7.css" type="text/css" media="all"><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/assets/css/ie6.css" type="text/css" media="all"><![endif]-->
+
+<link rel="canonical" href="http://adamsilver.io/articles/misusing-the-select-control/">
+<link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47311666-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	</head>
+	<body>
+	    <div class="nav">
+	<ul>
+		<li><a class="" href="/">Home</a></li>
+		<li><a class="nav-active" href="/articles/">Articles</a></li>
+		<li><a class="" href="/about/">About</a></li>
+		<li><a class="" href="/signup/">Sign up</a></li>
+	</ul>
+</div>
+	    <div class="mainContent">
+			<h1>Misusing the select control</h1>
+	        <p>You have most likely seen and used a select control <em>without</em> a submit button. The rationale behind omitting the submit button is normally to declutter the UI and reduce clicks—the latter of which is a common <a href="http://idyeah.com/blog/2012/06/stop-counting-clicks/">UX fallacy</a>. However, this is detrimental to the User Experience.</p>
+
+<div class="image" style="max-width: 320px;margin: 0 auto;">
+	<figure>
+		<img src="/assets/img/sortby.png" alt="Sort by select" width="100%" />
+		<figcaption>Sort by select box missing a submit button</figcaption>
+	</figure>
+</div>
+
+<h2 id="links-are-for-navigation">Links are for navigation.</h2>
+
+<p>Select menus are to help users fill in data. They are <em>not</em> meant to be used for navigation; that’s what links are for. They can be used as a means of changing the data that is displayed on a page. Think search results or filtering but that’s it.</p>
+
+<h2 id="inputting-data-versus-submitting-data">Inputting data versus submitting data.</h2>
+
+<p>There should be a difference between selection and <em>submission</em>. Combining the two into a single interaction causes usability issues (which I will show later).</p>
+
+<blockquote>
+  <p>“Changing the setting of any user interface component does not automatically cause a change of context”
+<br />—<cite>WCAG 2.0 Guidelines</cite></p>
+</blockquote>
+
+<h2 id="generally-difficult-to-use">Generally difficult to use.</h2>
+
+<p>Larry Marinem conducted usability tests and states that sometimes designers try to “over-automate” by reducing combining selection and submission and that dropdown lists are expected to display the selection, not go somewhere.</p>
+
+<p>Users are prone to mis-selecting an option so when it launches them off somewhere else, this can be really disorientating. He added that reducing the number of clicks does not make a site more usable but giving the users appropriate control of their navigation does.</p>
+
+<h2 id="keyboard-users-find-them-troublesome">Keyboard users find them troublesome.</h2>
+
+<p>In the case of keyboard users, tabbing to a select menu and pressing up or down will select different options. In the following video, I am failing in my attempt to select the 3rd <code>option</code> making the experience very frustrating:</p>
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/rnKDDSo9Omk" frameborder="0" allowfullscreen=""></iframe>
+
+<p><em>Note: Visit <a href="http://html.cita.illinois.edu/script/onchange/onchange-example.php">the demo</a> in an offending browser, such as Chrome (Windows), Opera (Windows), IE6, IE7, IE8 and IE9—if you come across another offending browser, do let me know</em>.</p>
+
+<h2 id="what-about-screen-readers">What about screen readers?</h2>
+
+<p>Sarah Miller found that dropdown lists without buttons were confusing because, while the user had to inspect every item in the list, the action of reading an item meant that it was selected so the user would never get past the first item in the list, again very frustrating.</p>
+
+<h2 id="what-are-my-options">What are my options?</h2>
+
+<p>Adding the submit button back works beautifully and puts the user firmly back in control. Alternatively, you can make each option a link as follows:</p>
+
+<pre><code>&lt;a href="/whatever/?sort=popularity"&gt;Popularity&lt;/a&gt;
+&lt;a href="/whatever/?sort=location"&gt;Location&lt;/a&gt;
+&lt;a href="/whatever/?sort=etc"&gt;Etc&lt;/a&gt;
+</code></pre>
+
+<p>Which reduces the clicks, exposes the options and doesn’t have usability problems.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>UX is about creating human-friendly experiences. Reducing clicks and decluttering the UI might be the result of a solution but they should not be considered <em>objectives</em> in and of themselves.</p>
+
+<blockquote>
+  <p>“Everything should be made as simple as it needs to be, and no simpler.”
+<br />— <cite>Albert Einstein</cite></p>
+</blockquote>
+
+	    </div>
+		<div class="share">
+	<a class="share-button" href="https://twitter.com/share?source=tweetbutton&text=&quot;Misusing the select control&quot;&via=adambsilver&url=http://adamsilver.io/articles/misusing-the-select-control/&hashtags=forms,ux,a11y">Share on Twitter</a>
+
+	<!-- <p><a href="https://twitter.com/share?source=tweetbutton&text=&quot;Misusing the select control&quot;&via=adambsilver&url=http://adamsilver.io/articles/misusing-the-select-control/&hashtags=forms,ux,a11y">Tweet this article</a> if you found value in it. Thank you!</p> -->
+</div>
+		
+	<div class="nowRead">
+		<p>Next up for you is... <br> <a href="/articles/javascript-inheritance/">Javascript inheritance</a></p>
+	</div>
+
+		
+<div class="newsletterForm">
+	<div class="newsletterForm-inner">
+		<h2 class="newsletterForm-heading">Psssst! I'm writing my second book...</h2>
+		<p class="newsletterForm-description">If you're interested, you can <a href="/signup">find out more here</a>.</p>
+	</div>
+</div>
+
+		<div class="footer">
+	<p>&copy; 2016.
+		<a href="/team/">Team</a> |
+		<a href="http://www.twitter.com/adambsilver/">Twitter</a> |
+		<a href="http://www.github.com/adamsilver/">Github</a> |
+		<a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></p>
+	<!-- <ul>
+		<li></li>
+		<li><a href="http://medium.com/@adamsilver">Medium</a></li>
+		<li><a href="http://www.github.com/adamsilver/">Github</a></li>
+		<li><a href="http://www.twitter.com/adambsilver/">Twitter</a></li>
+		<li><a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></li>
+	</ul> -->
+</div>
+	</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en">
+	<head>
+	    <title>The disadvantages of CSS preprocessors | Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
+	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+
+<link rel="apple-touch-icon" sizes="57x57" href="http://adamsilver.io/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://adamsilver.io/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://adamsilver.io/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://adamsilver.io/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://adamsilver.io/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://adamsilver.io/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://adamsilver.io/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://adamsilver.io/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://adamsilver.io/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="http://adamsilver.io/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="http://adamsilver.io/manifest.json">
+<link rel="mask-icon" href="http://adamsilver.io/safari-pinned-tab.svg" color="#001f3f">
+<meta name="msapplication-TileColor" content="#001F3F">
+<meta name="msapplication-TileImage" content="http://adamsilver.io/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+
+
+	<meta content="The disadvantages of CSS preprocessors" property="og:title">
+
+
+
+	<meta property="og:description" content="CSS preprocessors have obvious advantages but they also come with a host of problems. Learn about these to avoid pain for you and your team.">
+
+
+<meta property="og:url" content="http://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/">
+<meta property="og:site_name" content="Adamsilver.io">
+<meta property="og:image" content="http://adamsilver.io/assets/img/card.png">
+<meta property="og:image:width" content="181">
+<meta property="og:image:height" content="181">
+
+<meta name="twitter:card" content="summary">
+
+
+	<meta name="twitter:description" content="CSS preprocessors have obvious advantages but they also come with a host of problems. Learn about these to avoid pain for you and your team.">
+
+
+<meta name="twitter:title" content="The disadvantages of CSS preprocessors -  Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.">
+
+
+	<meta content="The disadvantages of CSS preprocessors" name="twitter:title">
+
+
+<meta name="twitter:site" content="@adambsilver">
+<meta name="twitter:creator" content="@adambsilver">
+<meta property="twitter:image" content="http://adamsilver.io/assets/img/card.jpg">
+
+
+	<meta itemprop="description" content="CSS preprocessors have obvious advantages but they also come with a host of problems. Learn about these to avoid pain for you and your team.">
+
+
+<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all">
+<!--[if IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" type="text/css" media="all"><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/assets/css/ie7.css" type="text/css" media="all"><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/assets/css/ie6.css" type="text/css" media="all"><![endif]-->
+
+<link rel="canonical" href="http://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/">
+<link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47311666-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	</head>
+	<body>
+	    <div class="nav">
+	<ul>
+		<li><a class="" href="/">Home</a></li>
+		<li><a class="nav-active" href="/articles/">Articles</a></li>
+		<li><a class="" href="/about/">About</a></li>
+		<li><a class="" href="/signup/">Sign up</a></li>
+	</ul>
+</div>
+	    <div class="mainContent">
+			<h1>The disadvantages of CSS preprocessors</h1>
+	        <p>CSS preprocessors have many benefits because they provide features that plain old CSS doesn’t, such as variables, nesting, partials, mixins, inheritance and operators. However, CSS processors have several <em>disadvantages</em> which I discuss here for your consideration:</p>
+
+<h2 id="debugging-is-harder">1. Debugging is harder</h2>
+
+<p>Due to having a compilation step, the browser is not interpreting the source files, meaning the CSS line numbers are now irrelevant when trying to debug. This makes debugging a lot harder.</p>
+
+<blockquote>
+  <p>“Debugging is twice as hard as programming”
+<br />— <cite>Brian Kernighan</cite></p>
+</blockquote>
+
+<p><a href="http://thesassway.com/intermediate/using-source-maps-with-sass">Source maps</a> provide one solution but this requires setup and only works in a limited set of <em>modern</em> browsers. Developers who care about users also test in <em>older</em> browsers.</p>
+
+<p>Alternatively, you can hunt down styles via abstract portions of rules, which is horrid. Brian Kernighan said “debugging is twice as hard as programming” and it’s our duty to ensure this is as easy as possible.</p>
+
+<h2 id="compilation-time-slows-down-development">2. Compilation time slows down development</h2>
+
+<p>Compilation can be quick but it can also be slow, <em>very</em> slow. I have frequently found myself <em>saving</em> and <em>refreshing</em> before compilation time finishes—even using CLI tooling on the latest Macbook Pro. <em>Your</em> mileage may vary.</p>
+
+<h2 id="performance-is-compromised">3. Performance is compromised</h2>
+
+<p><a href="http://jaketrent.com/post/cons-css-preprocessors/">Source file size can be deceiving</a> because the generated CSS is likely to be significantly larger than the source file, potentially causing <a href="http://blog.millermedeiros.com/the-problem-with-css-pre-processors/">performance problems</a>. Ultimately, what is generated is out of your control and <em>some</em> responsibility is handed over to your chosen CSS preprocessor.</p>
+
+<h2 id="maintainence">4. Maintainence</h2>
+
+<p>Maintainability can sometimes be compromised. As an example, I have seen <code>@brandRed</code> (instead of <code>#ff0000</code>) sprinkled across various CSS files which isn’t really advantageous. If the colour changes to something that isn’t a red, then you have to do a <em>search and replace</em> anyway (which by the way isn’t exactly difficult).</p>
+
+<h2 id="tooling-can-constrain-developer-choice">5. Tooling can constrain developer choice</h2>
+
+<p>Extra tooling (CLI, GUI, plugins) is required. Developers shouldn’t be <em>too</em> constrained in their choice of development setups and with every tool added, there is something that needs setting up, working with, upgrading and maintaining which increases the chance of issues.</p>
+
+<p>CSS linters and text editor highlighting (CLI or plugins) are commonly available. CSS preprocessors are not <em>as</em> readily available. If they <em>are</em> available, they need setting up (and the rules need sharing with other developers easily).</p>
+
+<p>If they aren’t available then your remaining options are to either, find another editor or forget about linting, either way, not ideal.</p>
+
+<h2 id="saving-generated-files-or-not">6. Saving generated files (or not)</h2>
+
+<p>Whilst I firmly believe that you <em>shouldn’t</em> save generated files to source control, I (and I am not the only one to) have experienced opinions to the <a href="http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo">contrary</a> and in this case prepare for  <a href="http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/">Concenus Driven Development</a>.</p>
+
+<h2 id="onboarding-and-recruitment-is-harder">7. Onboarding and recruitment is harder</h2>
+
+<p>Candidates that <em>don’t</em> have knowledge of CSS preprocessors (or the workflows around them) become more costly when onboarding. If you really want someone that has suitable knowledge then the pool of candidates is reduced. Whilst it’s not a steep learning curve, and more developers are aquiring these skills, it’s still something you might want to consider.</p>
+
+<h2 id="but-what-about-variables-mixins-and-nesting">But what about variables, mixins, and nesting?</h2>
+
+<p><strong>Variables</strong> can be achieved by using comma-delimited CSS selectors, as follows:</p>
+
+<pre><code>selector,
+anotherSelector {
+    color: red;
+}
+</code></pre>
+
+<p><strong>Mixins</strong> can be achieved the same way, by using comma-delimited CSS selectors, as follows:</p>
+
+<pre><code>selector,
+anotherSelector {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+</code></pre>
+
+<p><strong>Nesting</strong> can’t quite be achieved. However, that’s not so bad because nesting can cause performance problems and is ill-advised for most situations. Instead, <a href="http://maintainablecss.com">use a convention</a> that groups module components together:</p>
+
+<pre><code>.someModule {}
+
+.someModule-someComponent {}
+
+.someModule-someOtherComponent {}
+</code></pre>
+
+<h2 id="summary">Summary</h2>
+
+<p>Whilst CSS preprocessors have several advantages, they also have several disadvantages. Only you can decide the trade-offs you’re willing to make for your situation—I simply urge you to make sure that the decision is a <em>conscious</em> one.</p>
+
+	    </div>
+		<div class="share">
+	<a class="share-button" href="https://twitter.com/share?source=tweetbutton&text=&quot;The disadvantages of CSS preprocessors&quot;&via=adambsilver&url=http://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/&hashtags=css,sass,less">Share on Twitter</a>
+
+	<!-- <p><a href="https://twitter.com/share?source=tweetbutton&text=&quot;The disadvantages of CSS preprocessors&quot;&via=adambsilver&url=http://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/&hashtags=css,sass,less">Tweet this article</a> if you found value in it. Thank you!</p> -->
+</div>
+		
+	<div class="nowRead">
+		<p>Next up for you is... <br> <a href="/articles/the-role-of-the-front-end-developer/">The role of the Front-end Developer</a></p>
+	</div>
+
+		
+<div class="newsletterForm">
+	<div class="newsletterForm-inner">
+		<h2 class="newsletterForm-heading">Psssst! I'm writing my second book...</h2>
+		<p class="newsletterForm-description">If you're interested, you can <a href="/signup">find out more here</a>.</p>
+	</div>
+</div>
+
+		<div class="footer">
+	<p>&copy; 2016.
+		<a href="/team/">Team</a> |
+		<a href="http://www.twitter.com/adambsilver/">Twitter</a> |
+		<a href="http://www.github.com/adamsilver/">Github</a> |
+		<a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></p>
+	<!-- <ul>
+		<li></li>
+		<li><a href="http://medium.com/@adamsilver">Medium</a></li>
+		<li><a href="http://www.github.com/adamsilver/">Github</a></li>
+		<li><a href="http://www.twitter.com/adambsilver/">Twitter</a></li>
+		<li><a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></li>
+	</ul> -->
+</div>
+	</body>
+</html>

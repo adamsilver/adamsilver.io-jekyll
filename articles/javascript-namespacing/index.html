@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en">
+	<head>
+	    <title>Javascript namespacing | Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
+	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+
+<link rel="apple-touch-icon" sizes="57x57" href="http://adamsilver.io/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://adamsilver.io/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://adamsilver.io/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://adamsilver.io/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://adamsilver.io/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://adamsilver.io/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://adamsilver.io/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://adamsilver.io/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://adamsilver.io/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="http://adamsilver.io/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="http://adamsilver.io/manifest.json">
+<link rel="mask-icon" href="http://adamsilver.io/safari-pinned-tab.svg" color="#001f3f">
+<meta name="msapplication-TileColor" content="#001F3F">
+<meta name="msapplication-TileImage" content="http://adamsilver.io/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+
+
+	<meta content="Javascript namespacing" property="og:title">
+
+
+
+	<meta property="og:description" content="Organising your client-side Javascript is important. Namespaces are a sane, cross-browser approach to help with this.">
+
+
+<meta property="og:url" content="http://adamsilver.io/articles/javascript-namespacing/">
+<meta property="og:site_name" content="Adamsilver.io">
+<meta property="og:image" content="http://adamsilver.io/assets/img/card.png">
+<meta property="og:image:width" content="181">
+<meta property="og:image:height" content="181">
+
+<meta name="twitter:card" content="summary">
+
+
+	<meta name="twitter:description" content="Organising your client-side Javascript is important. Namespaces are a sane, cross-browser approach to help with this.">
+
+
+<meta name="twitter:title" content="Javascript namespacing -  Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.">
+
+
+	<meta content="Javascript namespacing" name="twitter:title">
+
+
+<meta name="twitter:site" content="@adambsilver">
+<meta name="twitter:creator" content="@adambsilver">
+<meta property="twitter:image" content="http://adamsilver.io/assets/img/card.jpg">
+
+
+	<meta itemprop="description" content="Organising your client-side Javascript is important. Namespaces are a sane, cross-browser approach to help with this.">
+
+
+<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all">
+<!--[if IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" type="text/css" media="all"><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/assets/css/ie7.css" type="text/css" media="all"><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/assets/css/ie6.css" type="text/css" media="all"><![endif]-->
+
+<link rel="canonical" href="http://adamsilver.io/articles/javascript-namespacing/">
+<link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47311666-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	</head>
+	<body>
+	    <div class="nav">
+	<ul>
+		<li><a class="" href="/">Home</a></li>
+		<li><a class="nav-active" href="/articles/">Articles</a></li>
+		<li><a class="" href="/about/">About</a></li>
+		<li><a class="" href="/signup/">Sign up</a></li>
+	</ul>
+</div>
+	    <div class="mainContent">
+			<h1>Javascript namespacing</h1>
+	        <p>Namespaces are used to help with code organisation, discoverability, and in the context of Javascript, the minimisation of <a href="http://www.yuiblog.com/blog/2006/06/01/global-domination/">global variables</a>.</p>
+
+<p>Client-side Javascript doesn’t (at the time of writing) have a dedicated construct for namespacing, but it can be imitated using object literals.</p>
+
+<p>For demonstration purposes let’s define an example application. Our application will be a zoo and just like <em>real</em> zoos it will have animals and some additional information.</p>
+
+<h2 id="directory-structure">Directory structure</h2>
+
+<p>It’s helpful to visualise the directory structure as follows:</p>
+
+<pre><code>zoo/
+	zoo.js
+	zoo.information.js
+	animals/
+		zoo.animals.js
+		zoo.animals.Penguin.js
+		zoo.animals.Tiger.js
+</code></pre>
+
+<p>Namespaces will be defined in <code>zoo.js</code> and <code>zoo.animals.js</code>. All other files define components of the zoo. Each folder represents a namespace. Each namespace file simply assigns an empty object to a variable or property.</p>
+
+<h2 id="root-namespace-setup">Root namespace setup</h2>
+
+<pre><code>// zoo.js
+var zoo = {};
+</code></pre>
+
+<h2 id="sub-level-namespace-setup">Sub level namespace setup</h2>
+
+<p>For our example app we don’t need a deep hierarchy. Add levels as you need them. For us we just need to group animals.</p>
+
+<pre><code>// zoo.animals.js
+zoo.animals = {};
+</code></pre>
+
+<p><em>Note: The namespace matches the file name which aids discoverability.</em></p>
+
+<h2 id="penguin-definition">Penguin definition</h2>
+
+<pre><code>// zoo.animals.Penguin.js
+zoo.animals.Penguin = function() {
+	// constructor
+};
+</code></pre>
+
+<h2 id="tiger-definition">Tiger definition</h2>
+
+<pre><code>// zoo.animals.Tiger.js
+zoo.animals.Tiger = function() {
+	// constructor
+};
+</code></pre>
+
+<h2 id="zoo-information">Zoo information</h2>
+
+<p>When it comes to information you can simply assign an object to your chosen namespace.</p>
+
+<pre><code>// zoo.information.js
+zoo.information = {
+	name: "My Awesome Zoo",
+	address: "52 Zoo Lane, ZA1 2AP"
+};
+</code></pre>
+
+<p><em>Note: Do not be concerned about having too many files; overly complex namespace hiearchies should be avoided and separate files should be concatenated for production.</em></p>
+
+	    </div>
+		<div class="share">
+	<a class="share-button" href="https://twitter.com/share?source=tweetbutton&text=&quot;Javascript namespacing&quot;&via=adambsilver&url=http://adamsilver.io/articles/javascript-namespacing/&hashtags=js">Share on Twitter</a>
+
+	<!-- <p><a href="https://twitter.com/share?source=tweetbutton&text=&quot;Javascript namespacing&quot;&via=adambsilver&url=http://adamsilver.io/articles/javascript-namespacing/&hashtags=js">Tweet this article</a> if you found value in it. Thank you!</p> -->
+</div>
+		
+	<div class="nowRead">
+		<p>Next up for you is... <br> <a href="/articles/the-multiple-submit-button-problem/">The multiple submit button problem</a></p>
+	</div>
+
+		
+<div class="newsletterForm">
+	<div class="newsletterForm-inner">
+		<h2 class="newsletterForm-heading">Psssst! I'm writing my second book...</h2>
+		<p class="newsletterForm-description">If you're interested, you can <a href="/signup">find out more here</a>.</p>
+	</div>
+</div>
+
+		<div class="footer">
+	<p>&copy; 2016.
+		<a href="/team/">Team</a> |
+		<a href="http://www.twitter.com/adambsilver/">Twitter</a> |
+		<a href="http://www.github.com/adamsilver/">Github</a> |
+		<a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></p>
+	<!-- <ul>
+		<li></li>
+		<li><a href="http://medium.com/@adamsilver">Medium</a></li>
+		<li><a href="http://www.github.com/adamsilver/">Github</a></li>
+		<li><a href="http://www.twitter.com/adambsilver/">Twitter</a></li>
+		<li><a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></li>
+	</ul> -->
+</div>
+	</body>
+</html>

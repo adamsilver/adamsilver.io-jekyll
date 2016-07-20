@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en">
+	<head>
+	    <title>The disadvantages of Javascript polyfills | Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
+	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+
+<link rel="apple-touch-icon" sizes="57x57" href="http://adamsilver.io/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://adamsilver.io/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://adamsilver.io/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://adamsilver.io/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://adamsilver.io/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://adamsilver.io/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://adamsilver.io/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://adamsilver.io/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://adamsilver.io/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="http://adamsilver.io/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="http://adamsilver.io/manifest.json">
+<link rel="mask-icon" href="http://adamsilver.io/safari-pinned-tab.svg" color="#001f3f">
+<meta name="msapplication-TileColor" content="#001F3F">
+<meta name="msapplication-TileImage" content="http://adamsilver.io/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+
+
+	<meta content="The disadvantages of Javascript polyfills" property="og:title">
+
+
+
+	<meta property="og:description" content="Javascript polyfills are ever-present in the front end industry, but they are very problematic and unnecessary.">
+
+
+<meta property="og:url" content="http://adamsilver.io/articles/the-disadvantages-of-javascript-polyfills/">
+<meta property="og:site_name" content="Adamsilver.io">
+<meta property="og:image" content="http://adamsilver.io/assets/img/card.png">
+<meta property="og:image:width" content="181">
+<meta property="og:image:height" content="181">
+
+<meta name="twitter:card" content="summary">
+
+
+	<meta name="twitter:description" content="Javascript polyfills are ever-present in the front end industry, but they are very problematic and unnecessary.">
+
+
+<meta name="twitter:title" content="The disadvantages of Javascript polyfills -  Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.">
+
+
+	<meta content="The disadvantages of Javascript polyfills" name="twitter:title">
+
+
+<meta name="twitter:site" content="@adambsilver">
+<meta name="twitter:creator" content="@adambsilver">
+<meta property="twitter:image" content="http://adamsilver.io/assets/img/card.jpg">
+
+
+	<meta itemprop="description" content="Javascript polyfills are ever-present in the front end industry, but they are very problematic and unnecessary.">
+
+
+<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all">
+<!--[if IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" type="text/css" media="all"><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/assets/css/ie7.css" type="text/css" media="all"><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/assets/css/ie6.css" type="text/css" media="all"><![endif]-->
+
+<link rel="canonical" href="http://adamsilver.io/articles/the-disadvantages-of-javascript-polyfills/">
+<link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47311666-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	</head>
+	<body>
+	    <div class="nav">
+	<ul>
+		<li><a class="" href="/">Home</a></li>
+		<li><a class="nav-active" href="/articles/">Articles</a></li>
+		<li><a class="" href="/about/">About</a></li>
+		<li><a class="" href="/signup/">Sign up</a></li>
+	</ul>
+</div>
+	    <div class="mainContent">
+			<h1>The disadvantages of Javascript polyfills</h1>
+	        <p>A polyfill, also known as a shim, is a user defined implementation of an API that a developer expects a browser to provide natively, normalising browser differences.</p>
+
+<p>As a huge proponent of the outside-in approach to development, I can see the lure to try to develop web applications as if all browsers are the same.</p>
+
+<p>However, this article discusses the problems you face when attempting to tame browsers in this way, which ultimately results in unreliable Javascript, unreliable web pages and of course, unhappy <em>users</em>.</p>
+
+<h2 id="augmenting-host-objects-is-a-bad-idea">1. Augmenting host objects is a bad idea.</h2>
+
+<p>Polyfills <em>must</em> augment host and native objects in order to plug missing gaps. The problem being that augmenting host objects and (to a slightly lesser extent) native objects is ill-advised and has been for well over a decade by experts including Richard Cornford, David Mark, Thomas Lahn and Kangax—the latter of which published two dedicated articles on the subject entitled <a href="http://perfectionkills.com/whats-wrong-with-extending-the-dom/">What’s wrong with extending the DOM?</a> and <a href="http://perfectionkills.com/extending-native-builtins/">Extending native built-ins</a>. Here is a choice snippet below, but I highly advise reading the entire article:</p>
+
+<blockquote>
+  <p>“In fact, DOM extension seemed so temptingly useful […]. But what hides behind this seemingly innocuous practice is a huge load of trouble. […] the downsides of this approach far outweigh any benefits.”</p>
+</blockquote>
+
+<h2 id="feature-detection-is-not-enough">2. Feature detection is not enough.</h2>
+
+<p>As Peter Michaux demonstrates in <a href="http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting">Feature Detection: State of the art browser scripting</a>, the mere presence of an API is not necessarily enough to determine reliable usage. This is where feature <em>testing</em> comes in.</p>
+
+<p>Polyfills <em>tend</em> to just detect the presence of an API; they do not iron out the bugs or inconsistencies found across the breadth of browsers; even if they did, they would have to override the original, whereby the override may contain a reference to the original—a dangerous and unnecessary way to go. This is why facades are useful as we will see later on.</p>
+
+<h2 id="decoupling-browser-and-application-logic-is-advisable">3. Decoupling browser and application logic is advisable.</h2>
+
+<p>As Nicholas Zakas presents in <a href="https://www.youtube.com/watch?v=vXjVFPosQHw">Scalable JavaScript Application Architecture</a>, it is important to decouple application and browser logic. He states:</p>
+
+<blockquote>
+  <p>“Application logic should be written one way for all browsers in order to keep the code maintainable. If you’re using native APIs in your application logic, you can’t help but know what browser is being used because you need to account for browser differences. That means your application logic will always need to be updated as new browsers and new browser versions are released. <strong>That’s a recipe for disaster</strong>”.</p>
+</blockquote>
+
+<h2 id="context-context-context">4. Context context context.</h2>
+
+<p>You may not need the full API to solve your problem; you may not even be <em>able</em> to implement a polyfill because there’s just no way to do it. This is why context is important, which is something Javascript expert David Mark expresses frequently.</p>
+
+<p>What exactly does David mean by context? You would have to ask David to be completely sure but I will hazard a guess that, <em>first</em> it’s vital to understand the problem of exactly what you’re trying to solve. <em>Second</em>, implement an appropriate solution for that problem. Specifically don’t do <em>more</em> than solve the problem (YAGNI).</p>
+
+<p>This seems sensible doesn’t it? It is. With polyfills it’s all or nothing, whereby you rarely need <em>all</em> of the API and the solution is anything but lean.</p>
+
+<h2 id="polyfills-suffer-from-caveats">5. Polyfills suffer from caveats.</h2>
+
+<p>It doesn’t take much effort to find examples of problematic polyfills. Take the <a href="https://github.com/es-shims/es5-shim">ES5 Shim</a> project documentation. In describing the <code>Object.create</code> polyfill it states:</p>
+
+<blockquote>
+  <p>“For the case of simply “begetting” an object that inherits prototypically from another, this <strong>should</strong> work fine across legacy engines.”</p>
+</blockquote>
+
+<p>The word “should” doesn’t instill confidence does it? Personally, I like to build on top of reliable foundations. As David Mark says, you’re only as reliable as your lowest level function(s). So in the case of polyfills that would be, not very. Unfortunately, it continues:</p>
+
+<blockquote>
+  <p>“The second argument is passed to Object.defineProperties which will <strong>probably fail either silently or with extreme prejudice</strong>.”</p>
+</blockquote>
+
+<p>Does any of this sound like something you want to add to your codebase? I would hope not. Providing code for your team to use, whereby they can’t reliably use the fully exposed API without severe recourse, can only be interpreted as a bad idea. And it should go without saying that it doesn’t matter how good the application code is on top of these foundations, as the saying goes, you’re simply polishing a turd.</p>
+
+<h2 id="what-to-do-instead">What to do instead?</h2>
+
+<p>A facade, a form of wrapper, is a design pattern that normally provides a simplified interface to something more complex. This allows you to completely abstract away the differing browser implementations and bugs, with the flexibility to provide a suitable solution and a simplified method signature.</p>
+
+<p>Inside the facade there is nothing to stop you using portions of the API, and feature testing various implementations and acting accordingly, much like Peter Michaux demonstrates in his other brilliant article <a href="http://peter.michaux.ca/articles/cross-browser-widgets">Cross browser Widgets</a>.</p>
+
+<p>Cloning an object is pertinent to this article because <code>Object.create</code> is a useful API to solve this problem. If you just wanted to support “modern” browsers i.e ones that provide <code>Object.create</code>, then an implementation might be as follows:</p>
+
+<pre><code>var lib = {};
+if(Object.create) {
+	lib.cloneObject = function(obj) {
+		return Object.create(obj);
+	};
+}
+</code></pre>
+
+<p>Note there is only one argument. This facade uses a smaller part of an API, exposing a simpler method signature creating a lean solution to our problem in the process. What about browsers lacking <code>Object.create</code>? Simply add a second fork:</p>
+
+<pre><code>// Code credited to David Mark. Thanks.
+var lib = {};
+if(Object.create) {
+	lib.cloneObject = function(obj) {
+		return Object.create(obj);
+	};
+} else {
+	lib.cloneObject = (function() {
+		var Fn = function() {};
+		return function(obj) {
+			Fn.prototype = obj;
+			return new Fn();
+		};
+	})();
+}
+</code></pre>
+
+<p>The context of the problem changed; it got a little harder —  but the implementation is still lean and method signature still what we need. What we most certainly didn’t need to do, was to worry about recreating <code>Object.create</code> in its entirety.</p>
+
+<p>With that said, what if you did need the full functionality this API can provide? Well you would only need two simple edits: change the name of the function to be appropriate and expand the method signature to allow for property descriptors:</p>
+
+<pre><code>var lib = {};
+if(Object.create) {
+	lib.createObject = function(obj, props) {
+		return Object.create(obj, props);
+	};
+}
+</code></pre>
+
+<p>But what about browsers lacking <code>Object.create</code>? Nothing happens. The user gets the degraded experience as the browser doesn’t cut the mustard. This is the very essence of Progressive Enhancement and why it is so important in producing reliable front-end code.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>At first polyfills seem like a great idea. Having explored the intricacies of this technique, it’s clear that at best, polyfills are harder to implement and cause application and browser logic to be tightly coupled, which is costly.</p>
+
+<p>At their worst they come with highly problematic caveats that cause pain for the developer — ultimately resulting in unreliable software and unhappy users. The answer is to use facades, enabling the abstracting away of complexity into reliable and lean software.</p>
+
+<!--
+
+* ADDED IMPLEMENTATION Just because an API is implemented in a browser doesn't mean it's trustworthy. Sometimes, the spec is simply misunderstood and implemented differently across browser vendors. Adding a polyfill to the mix just adds complexity in the form of another user-defined implementation.
+
+* CONSISTENCY Then there is the question of consistency. Do you want to use some polyfills and some facades. Probably not. Just use a consistent abstraction, a facade.
+
+-->
+
+	    </div>
+		<div class="share">
+	<a class="share-button" href="https://twitter.com/share?source=tweetbutton&text=&quot;The disadvantages of Javascript polyfills&quot;&via=adambsilver&url=http://adamsilver.io/articles/the-disadvantages-of-javascript-polyfills/&hashtags=js,polyfills">Share on Twitter</a>
+
+	<!-- <p><a href="https://twitter.com/share?source=tweetbutton&text=&quot;The disadvantages of Javascript polyfills&quot;&via=adambsilver&url=http://adamsilver.io/articles/the-disadvantages-of-javascript-polyfills/&hashtags=js,polyfills">Tweet this article</a> if you found value in it. Thank you!</p> -->
+</div>
+		
+	<div class="nowRead">
+		<p>Next up for you is... <br> <a href="/articles/the-disadvantages-of-css-preprocessors/">The disadvantages of CSS preprocessors</a></p>
+	</div>
+
+		
+<div class="newsletterForm">
+	<div class="newsletterForm-inner">
+		<h2 class="newsletterForm-heading">Psssst! I'm writing my second book...</h2>
+		<p class="newsletterForm-description">If you're interested, you can <a href="/signup">find out more here</a>.</p>
+	</div>
+</div>
+
+		<div class="footer">
+	<p>&copy; 2016.
+		<a href="/team/">Team</a> |
+		<a href="http://www.twitter.com/adambsilver/">Twitter</a> |
+		<a href="http://www.github.com/adamsilver/">Github</a> |
+		<a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></p>
+	<!-- <ul>
+		<li></li>
+		<li><a href="http://medium.com/@adamsilver">Medium</a></li>
+		<li><a href="http://www.github.com/adamsilver/">Github</a></li>
+		<li><a href="http://www.twitter.com/adambsilver/">Twitter</a></li>
+		<li><a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></li>
+	</ul> -->
+</div>
+	</body>
+</html>

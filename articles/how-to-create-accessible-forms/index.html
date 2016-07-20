@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en">
+	<head>
+	    <title>How to create accessible forms | Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
+	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+
+<link rel="apple-touch-icon" sizes="57x57" href="http://adamsilver.io/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://adamsilver.io/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://adamsilver.io/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://adamsilver.io/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://adamsilver.io/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://adamsilver.io/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://adamsilver.io/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://adamsilver.io/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://adamsilver.io/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="http://adamsilver.io/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="http://adamsilver.io/manifest.json">
+<link rel="mask-icon" href="http://adamsilver.io/safari-pinned-tab.svg" color="#001f3f">
+<meta name="msapplication-TileColor" content="#001F3F">
+<meta name="msapplication-TileImage" content="http://adamsilver.io/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+
+
+	<meta content="How to create accessible forms" property="og:title">
+
+
+
+	<meta property="og:description" content="Create accessible forms following these simple steps.">
+
+
+<meta property="og:url" content="http://adamsilver.io/articles/how-to-create-accessible-forms/">
+<meta property="og:site_name" content="Adamsilver.io">
+<meta property="og:image" content="http://adamsilver.io/assets/img/card.png">
+<meta property="og:image:width" content="181">
+<meta property="og:image:height" content="181">
+
+<meta name="twitter:card" content="summary">
+
+
+	<meta name="twitter:description" content="Create accessible forms following these simple steps.">
+
+
+<meta name="twitter:title" content="How to create accessible forms -  Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.">
+
+
+	<meta content="How to create accessible forms" name="twitter:title">
+
+
+<meta name="twitter:site" content="@adambsilver">
+<meta name="twitter:creator" content="@adambsilver">
+<meta property="twitter:image" content="http://adamsilver.io/assets/img/card.jpg">
+
+
+	<meta itemprop="description" content="Create accessible forms following these simple steps.">
+
+
+<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all">
+<!--[if IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" type="text/css" media="all"><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/assets/css/ie7.css" type="text/css" media="all"><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/assets/css/ie6.css" type="text/css" media="all"><![endif]-->
+
+<link rel="canonical" href="http://adamsilver.io/articles/how-to-create-accessible-forms/">
+<link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47311666-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	</head>
+	<body>
+	    <div class="nav">
+	<ul>
+		<li><a class="" href="/">Home</a></li>
+		<li><a class="nav-active" href="/articles/">Articles</a></li>
+		<li><a class="" href="/about/">About</a></li>
+		<li><a class="" href="/signup/">Sign up</a></li>
+	</ul>
+</div>
+	    <div class="mainContent">
+			<h1>How to create accessible forms</h1>
+	        <p>Interacting with forms is one of the most important interactions a person can have on the web. The great news is, forms can be made to be accessible and in-turn more human-friendly with very little effort. This article describes the simple techniques you can utilise to ensure your forms are accessible.</p>
+
+<h2 id="labels">Labels</h2>
+
+<p>Labels provide information about each control. Visual users will see the label and visually impaired users may use a screen reader which will read out the label. Labels are only needed for controls that provide a vessel for input e.g. submit buttons are fine without.</p>
+
+<p>Additionally, browsers may provide the ability to click a label which will either move focus to the control or even mark the control as checked in the case of a checkbox or radio control.</p>
+
+<p>Associating a control with a label as follows:</p>
+
+<pre><code>&lt;label for="username"&gt;Username&lt;/label&gt;
+&lt;input id="username"&gt;
+</code></pre>
+
+<p>Note: the <code>for</code> attribute associates a label with another control explicitly by matching the id attribute of the control.</p>
+
+<h2 id="fieldsets-and-related-controls">Fieldsets and related controls</h2>
+
+<p>Fieldsets provide information about a group of related controls. Typically this is useful for controls with a type attribute <em>radio</em> or <em>checkbox</em>.</p>
+
+<p>Imagine a form control which allows the user to choose their favourite colour. The choices are represented as radios with associated labels: Red, Yellow and Blue.</p>
+
+<p>“Red” doesn’t convey enough information on its own. However, wrapping the group of radios in a fieldset with a legend of “Favourite colour” will ensure the control can be read out by a screen reader as “Favourite colour, Red”.</p>
+
+<pre><code>&lt;fieldset&gt;
+	&lt;legend&gt;Favourite colour&lt;/legend&gt;
+	&lt;input type="radio" name="colour" id="colourRed" value="red"&gt;
+	&lt;label for="colourRed"&gt;Red&lt;/label&gt;
+	&lt;!-- ... --&gt;
+&lt;/fieldset&gt;
+</code></pre>
+
+<h2 id="optional-radio-group-control">Optional radio group control</h2>
+
+<p>Radio controls can not be toggled; once marked as checked they cannot be unchecked until a different radio control is checked. Therefore it is imperative that an additional radio control is added with a ‘None selected’ option so that the user may change their mind. An example follows:</p>
+
+<pre><code>&lt;fieldset&gt;
+	&lt;legend&gt;Favourite colour&lt;/legend&gt;
+	&lt;input type="radio" name="colour" id="colourNone" value="none"&gt;
+	&lt;label for="colourNone"&gt;None selected&lt;/label&gt;
+	&lt;input type="radio" name="colour" id="colourRed" value="red"&gt;
+	&lt;label for="colourRed"&gt;Red&lt;/label&gt;
+	&lt;input type="radio" name="colour" id="colourBlue" value="blue"&gt;
+	&lt;label for="colourBlue"&gt;Blue&lt;/label&gt;
+&lt;/fieldset&gt;
+</code></pre>
+
+<h2 id="option-groups-and-options">Option groups and options</h2>
+
+<p>The optgroup element can improve accessibility of the options within a select control by adding information to groups of options. If a user had to select their favourite fruit including variety then adding an optgroup named “Apple” containing options such as “Pink Lady” would be advisable as follows:</p>
+
+<pre><code>&lt;select&gt;
+	&lt;optgroup label="Apples"&gt;
+		&lt;option&gt;Pink lady&lt;/option&gt;
+		&lt;!-- ... --&gt;
+	&lt;/optgroup&gt;
+	&lt;!-- ... --&gt;
+&lt;/select&gt;
+</code></pre>
+
+<h2 id="dont-abuse-select-controls">Don’t abuse select controls</h2>
+
+<p>The select control provides a list of options of which one can be selected for input. An <a href="/articles/misusing-the-select-control/">accessibility/usability issue can arise when script is used to submit the form when the select’s change event fires</a>. Keyboard users may struggle. If a user wants to select the 4th option this would then require 3 form submissions which would be a terribly frustrating experience.</p>
+
+<h2 id="avoid-multiple-select-controls">Avoid multiple select controls</h2>
+
+<p>Multiple select controls allow the user to select multiple options but it’s recommended that these controls are avoided due to users not understanding how to use them. Checkboxes provide a better alternative.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>So there you have it; three things you should do, one thing you can do, and two things you shouldn’t do. With very little effort you can make your forms accessible and human-friendly to everyone.</p>
+
+	    </div>
+		<div class="share">
+	<a class="share-button" href="https://twitter.com/share?source=tweetbutton&text=&quot;How to create accessible forms&quot;&via=adambsilver&url=http://adamsilver.io/articles/how-to-create-accessible-forms/&hashtags=forms,a11y,ux">Share on Twitter</a>
+
+	<!-- <p><a href="https://twitter.com/share?source=tweetbutton&text=&quot;How to create accessible forms&quot;&via=adambsilver&url=http://adamsilver.io/articles/how-to-create-accessible-forms/&hashtags=forms,a11y,ux">Tweet this article</a> if you found value in it. Thank you!</p> -->
+</div>
+		
+	<div class="nowRead">
+		<p>Next up for you is... <br> <a href="/articles/an-introduction-to-dom-scripting-forms/">An introduction to DOM scripting forms</a></p>
+	</div>
+
+		
+<div class="newsletterForm">
+	<div class="newsletterForm-inner">
+		<h2 class="newsletterForm-heading">Psssst! I'm writing my second book...</h2>
+		<p class="newsletterForm-description">If you're interested, you can <a href="/signup">find out more here</a>.</p>
+	</div>
+</div>
+
+		<div class="footer">
+	<p>&copy; 2016.
+		<a href="/team/">Team</a> |
+		<a href="http://www.twitter.com/adambsilver/">Twitter</a> |
+		<a href="http://www.github.com/adamsilver/">Github</a> |
+		<a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></p>
+	<!-- <ul>
+		<li></li>
+		<li><a href="http://medium.com/@adamsilver">Medium</a></li>
+		<li><a href="http://www.github.com/adamsilver/">Github</a></li>
+		<li><a href="http://www.twitter.com/adambsilver/">Twitter</a></li>
+		<li><a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></li>
+	</ul> -->
+</div>
+	</body>
+</html>

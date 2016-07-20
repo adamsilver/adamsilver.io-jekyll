@@ -1,20 +1,206 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for post in site.posts %}
+    
     <url>
-        <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
+        <loc>http://adamsilver.io/articles/fogotten-web-ux-problems/</loc>
     </url>
-    {% endfor %}
+    
+    <url>
+        <loc>http://adamsilver.io/articles/submit-buttons-arent-links/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/how-to-interview-front-end-developers/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/logicless-templating-and-nice-view-models/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/why-not-x/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/the-disadvantages-of-customising-form-controls/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/always-use-a-label/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/why-placeholders-are-problematic/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/how-we-cut-our-mvp-in-half-to-launch-kidly/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/hello-ux-designer/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/how-to-write-modular-scalable-and-maintainable-css/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/embracing-simplicity/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/why-hover-menus-are-problematic/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/why-we-stopped-tasking/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/why-infinite-scrolling-is-probably-a-bad-idea/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/designing-honestly-for-the-web/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/writing-javascript-that-conforms-to-progressive-enhancement/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/the-disadvantages-of-javascript-polyfills/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/the-role-of-the-front-end-developer/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/technical-wanking/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/on-outside-in-development/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/quotes/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/dont-use-icon-fonts/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/misusing-ajax-for-personalisation/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/the-boring-front-end-developer/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/misusing-the-select-control/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/javascript-inheritance/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/the-disadvantages-of-single-page-applications/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/javascript-namespacing/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/the-multiple-submit-button-problem/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/how-to-create-accessible-forms/</loc>
+    </url>
+    
+    <url>
+        <loc>http://adamsilver.io/articles/an-introduction-to-dom-scripting-forms/</loc>
+    </url>
+    
 
-    {% for page in site.pages %}
-    {% if page.layout != nil %}
-    {% if page.layout != 'feed' %}
+    
+    
+    
     <url>
-        <loc>{{site.url}}{{ page.url | remove: 'index.html' }}</loc>
+        <loc>http://adamsilver.io/404/</loc>
     </url>
-    {% endif %}
-    {% endif %}
-    {% endfor %}
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://adamsilver.io/about/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://adamsilver.io/articles/</loc>
+    </url>
+    
+    
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://adamsilver.io/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://adamsilver.io/recommends/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://adamsilver.io/signup/</loc>
+    </url>
+    
+    
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://adamsilver.io/team/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://adamsilver.io/what-others-say/</loc>
+    </url>
+    
+    
+    
 </urlset>

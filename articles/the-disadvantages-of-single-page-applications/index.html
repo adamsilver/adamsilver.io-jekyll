@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en">
+	<head>
+	    <title>The disadvantages of Single Page Applications | Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
+	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+
+<link rel="apple-touch-icon" sizes="57x57" href="http://adamsilver.io/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://adamsilver.io/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://adamsilver.io/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://adamsilver.io/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://adamsilver.io/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://adamsilver.io/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://adamsilver.io/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://adamsilver.io/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://adamsilver.io/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="http://adamsilver.io/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="http://adamsilver.io/manifest.json">
+<link rel="mask-icon" href="http://adamsilver.io/safari-pinned-tab.svg" color="#001f3f">
+<meta name="msapplication-TileColor" content="#001F3F">
+<meta name="msapplication-TileImage" content="http://adamsilver.io/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+
+
+	<meta content="The disadvantages of Single Page Applications" property="og:title">
+
+
+
+	<meta property="og:description" content="SPAs are full of pitfalls. There are many reasons why.">
+
+
+<meta property="og:url" content="http://adamsilver.io/articles/the-disadvantages-of-single-page-applications/">
+<meta property="og:site_name" content="Adamsilver.io">
+<meta property="og:image" content="http://adamsilver.io/assets/img/card.png">
+<meta property="og:image:width" content="181">
+<meta property="og:image:height" content="181">
+
+<meta name="twitter:card" content="summary">
+
+
+	<meta name="twitter:description" content="SPAs are full of pitfalls. There are many reasons why.">
+
+
+<meta name="twitter:title" content="The disadvantages of Single Page Applications -  Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.">
+
+
+	<meta content="The disadvantages of Single Page Applications" name="twitter:title">
+
+
+<meta name="twitter:site" content="@adambsilver">
+<meta name="twitter:creator" content="@adambsilver">
+<meta property="twitter:image" content="http://adamsilver.io/assets/img/card.jpg">
+
+
+	<meta itemprop="description" content="SPAs are full of pitfalls. There are many reasons why.">
+
+
+<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all">
+<!--[if IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" type="text/css" media="all"><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/assets/css/ie7.css" type="text/css" media="all"><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/assets/css/ie6.css" type="text/css" media="all"><![endif]-->
+
+<link rel="canonical" href="http://adamsilver.io/articles/the-disadvantages-of-single-page-applications/">
+<link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47311666-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	</head>
+	<body>
+	    <div class="nav">
+	<ul>
+		<li><a class="" href="/">Home</a></li>
+		<li><a class="nav-active" href="/articles/">Articles</a></li>
+		<li><a class="" href="/about/">About</a></li>
+		<li><a class="" href="/signup/">Sign up</a></li>
+	</ul>
+</div>
+	    <div class="mainContent">
+			<h1>The disadvantages of Single Page Applications</h1>
+	        <p>Single Page Applications (SPAs) have become extremely popular on the web, because they are <em>supposed</em> to <a href="http://en.wikipedia.org/wiki/Single-page_application">provide a more fluid user experience</a>. However, there are many User Experience and technical problems that arise from architecting websites this way. Before getting to them, let’s first discuss the difference between an SPA and a traditional, multi-page website (MPW).</p>
+
+<h2 id="whats-the-difference-between-a-single-page-app-and-an-multi-page-website">What’s the difference between a Single Page App and an Multi-page Website?</h2>
+
+<p>Whilst it’s common to associate MVC, MVVM, XHR, DOM manipulation (and more) with an SPA, this article doesn’t address them because they could <em>also</em> be utilised in an MPW.</p>
+
+<p>What <em>really</em> defines an SPA is that the <strong>routing is handled by the client-side application using Javascript, instead of the server</strong>.</p>
+
+<p>This means the application handles the browsing instead of the browser. Attempting to mimic the browser using Javascript is what causes these self-induced issues…</p>
+
+<h2 id="navigation-and-fast-back">1. Navigation and fast back</h2>
+
+<p>Browsers store history, meaning pages load quickly when the user presses the <em>back</em> button. SPAs need to recreate this functionality. As <a href="https://medium.com/joys-of-javascript/4353246f4480">Daniel Puplus says in his article</a>:</p>
+
+<blockquote>
+  <p>“Back should be quick; users don’t expect data to have changed much.</p>
+</blockquote>
+
+<blockquote>
+  <p>“When a user presses the browser’s back button they expect the change to happen quickly and for the page to be in a similar state to how it was last time they saw it.</p>
+</blockquote>
+
+<blockquote>
+  <p>“In the traditional web model the browser will typically be able use a cached version of the page and linked resources.</p>
+</blockquote>
+
+<blockquote>
+  <p>“In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.”</p>
+</blockquote>
+
+<p>When ‘navigating’, the application will need a method of storing and retrieving ‘pages’ from a cache. Unless of course we want to slow down the speed of loading ‘pages’, which is meant to be a significant benefit of SPAs. Storage options could include memory, local (or session) storage, client-side database and cookies.</p>
+
+<p><strong>Note: The words ‘navigating’ and ‘pages’ are in quotes because SPAs, by definition don’t have the concept of navigation and pages in the traditional sense. Quotes will be discarded going forward for brevity.</strong></p>
+
+<p>The application will also need to determine <em>when</em> to store and retrieve pages from the cache. Navigation typically utilises <em>pushState</em> or <em>hashchange</em> and the application will need to differentiate between the user changing the URL (via clicking a link or typing a URL in the location bar) or <a href="http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button">manually hitting back/forward, which is not straightforward</a>.</p>
+
+<h2 id="navigation-and-remembering-scroll-history-position">2. Navigation and remembering scroll history position</h2>
+
+<p>Browsers conveniently remember the scroll position of the pages you have visited and as Daniel Puplus says in his article:</p>
+
+<blockquote>
+  <p>“Lots of sites get this wrong and it’s really annoying. When the user navigates using the browser’s forward or back button the scroll position should be the same as it was last time they were on the page. This sometimes works correctly on Facebook but sometimes doesn’t. Google+ always seems to lose your scroll position.”</p>
+</blockquote>
+
+<p>Clicking forward or back should remember the scroll position, but unfortunately, as SPAs rely on faux navigation this functionality is lost. Upon navigation, the application will need to remember the scroll position so that it can be retrieved later. This is a topic heavily related to “Navigation and fast back” discussed previously.</p>
+
+<h2 id="cancelling-navigation">3. Cancelling navigation</h2>
+
+<p>The browser provides a <em>cancel</em> button, which when pressed, cancels the loading of the requested page. If a user clicks another link, the browser will cancel the previous request if one is in progress. This is useful for performance and also ensures the user’s internet data allowance isn’t eaten up unnecessarily.</p>
+
+<p>SPA pages are likely to be retrieved via XHR, meaning several requests could be in progress at the same time; the first page request might be loaded last, even though it should have been cancelled out by the second page request. Also, the same link could be clicked twice, meaning the page will be requested (and loaded) twice, which is not efficient and could also cause visual glitches.</p>
+
+<p>The application will need to handle this functionality too. This means exposing a custom <em>cancel</em> button (which is obviously not desirable), and the duplicate requests need handling as well as cancelling all previous (in-progress) requests.</p>
+
+<h2 id="navigation-and-data-loss">4. Navigation and data loss</h2>
+
+<p>Browsers normally provide the <em>beforeunload</em> event which allows the application to warn against losing unsaved changes. The application router will need to provide a hook to replicate this functionality i.e. <em>beforeRouting</em>.</p>
+
+<h2 id="search-engine-ranking">5. Search engine ranking</h2>
+
+<p>Some SPAs don’t require SEO, but for those that do, <a href="http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo">the solutions aren’t straightforward</a>.</p>
+
+<h2 id="loading-css-amp-javascript">6. Loading CSS &amp; Javascript</h2>
+
+<p>If an SPA grows to a significant size, loading the entire application on page load may be detrimental to the experience because it’s akin to loading all pages of a website when only the home page was requested. Unfortunately, this leads to attempting to load CSS and JS for certain pages. <a href="http://blog.getify.com/labjs-script-loading-the-way-it-should-be/">Script loading is notoriously difficult and contains unreliable hacks</a> which can can be fatal to the reliability of the application.</p>
+
+<h2 id="analytics-is-harder-to-implement">7. Analytics is harder to implement</h2>
+
+<p>Analytics tools will normally track page views and related tools without any extra effort but because an SPA page isn’t really a page, this has to be handled with extra script which is triggered by the application router.</p>
+
+<h2 id="automated-functional-testing">8. Automated functional testing</h2>
+
+<p>Whilst you can use Selenium (and other equivalents) to test SPAs, extra effort is required to handle timeouts of XHR calls because there is no signal to Selenium that an XHR call has finished, like there is when a (real) page finishes loading. This leads to more questions and problems; <em>How long should the timeout be? What happens if it takes longer than normal?</em> The test execution will likely be slower too.</p>
+
+<h2 id="performance-problems">9. Performance problems</h2>
+
+<p>Pages are “long lived” increasing the chance of exposing a memory leak due to lack of page reloads. This is known to degrade UX and cause battery drain on mobile devices.</p>
+
+<h2 id="loading-indicator-issues">10. Loading indicator issues</h2>
+
+<p>When a traditional page is requested, the browser shows a loading indicator custom to <em>that</em> browser, which provides the most accurate indication of when a page will finish loading. With client-side routing, you have to implement your own loading indicator which is detrimental to the User Experience for two reasons:</p>
+
+<p>First, the Javascript implemented loading indicator is inaccurate in terms of progress, because it doesn’t have access to progress information like the browser does and second, it’s disorientating to the user because the individual gets used to the behaviour of <em>their</em> chosen browser and unconsciously and intuitively understands where to look for this information. A Javascript solution is always different depending on the implementation.</p>
+
+<h2 id="its-going-to-fail">11. It’s going to fail!</h2>
+
+<p><a href="http://kryogenix.org/code/browser/everyonehasjs.html">Everyone has Javascript, Right?</a> Wrong. It’s going to fail and because SPAs <em>depend</em> on many different Javascript enhancements, so when it fails, it will do so in a fatal way as they tend not to <a href="/articles/writing-javascript-that-conforms-to-progressive-enhancement/">conform to Progressive Enhancement</a>.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>Whilst SPAs are meant to provide a better experience, it’s pretty clear and ironic that they are much harder to design and build with a result that is detrimental to the user.</p>
+
+<p>Javascript is never going to beat the browser at what it does best — <em>browsing</em>. You can still have beautifully rich, enhanced experiences without cramming an entire site into one document.</p>
+
+<p>It’s interesting to note that sites such as <a href="https://blog.twitter.com/2012/improving-performance-on-twittercom">Twitter</a>, <a href="http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs">Lifehacker</a> and more recently <a href="http://blog.delicious.com/2016/01/delicious-changes/">Delicious</a> have also experienced many of these issues and have since reverted to more traditional archictures with great results.</p>
+
+<p>Instead of solving self-induced problems that are already solved by browsers, it’s better to spend your time solving <em>real</em> problems.</p>
+
+	    </div>
+		<div class="share">
+	<a class="share-button" href="https://twitter.com/share?source=tweetbutton&text=&quot;The disadvantages of Single Page Applications&quot;&via=adambsilver&url=http://adamsilver.io/articles/the-disadvantages-of-single-page-applications/&hashtags=js,spas,featured">Share on Twitter</a>
+
+	<!-- <p><a href="https://twitter.com/share?source=tweetbutton&text=&quot;The disadvantages of Single Page Applications&quot;&via=adambsilver&url=http://adamsilver.io/articles/the-disadvantages-of-single-page-applications/&hashtags=js,spas,featured">Tweet this article</a> if you found value in it. Thank you!</p> -->
+</div>
+		
+	<div class="nowRead">
+		<p>Next up for you is... <br> <a href="/articles/javascript-namespacing/">Javascript namespacing</a></p>
+	</div>
+
+		
+<div class="newsletterForm">
+	<div class="newsletterForm-inner">
+		<h2 class="newsletterForm-heading">Psssst! I'm writing my second book...</h2>
+		<p class="newsletterForm-description">If you're interested, you can <a href="/signup">find out more here</a>.</p>
+	</div>
+</div>
+
+		<div class="footer">
+	<p>&copy; 2016.
+		<a href="/team/">Team</a> |
+		<a href="http://www.twitter.com/adambsilver/">Twitter</a> |
+		<a href="http://www.github.com/adamsilver/">Github</a> |
+		<a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></p>
+	<!-- <ul>
+		<li></li>
+		<li><a href="http://medium.com/@adamsilver">Medium</a></li>
+		<li><a href="http://www.github.com/adamsilver/">Github</a></li>
+		<li><a href="http://www.twitter.com/adambsilver/">Twitter</a></li>
+		<li><a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></li>
+	</ul> -->
+</div>
+	</body>
+</html>

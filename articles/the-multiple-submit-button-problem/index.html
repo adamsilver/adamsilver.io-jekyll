@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en">
+	<head>
+	    <title>The multiple submit button problem | Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
+	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+
+<link rel="apple-touch-icon" sizes="57x57" href="http://adamsilver.io/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://adamsilver.io/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://adamsilver.io/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://adamsilver.io/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://adamsilver.io/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://adamsilver.io/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://adamsilver.io/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://adamsilver.io/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://adamsilver.io/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="http://adamsilver.io/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="http://adamsilver.io/manifest.json">
+<link rel="mask-icon" href="http://adamsilver.io/safari-pinned-tab.svg" color="#001f3f">
+<meta name="msapplication-TileColor" content="#001F3F">
+<meta name="msapplication-TileImage" content="http://adamsilver.io/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+
+
+	<meta content="The multiple submit button problem" property="og:title">
+
+
+
+	<meta property="og:description" content="Forms with multiple submit buttons have both UX problems and technical problems all of which is discussed in this article.">
+
+
+<meta property="og:url" content="http://adamsilver.io/articles/the-multiple-submit-button-problem/">
+<meta property="og:site_name" content="Adamsilver.io">
+<meta property="og:image" content="http://adamsilver.io/assets/img/card.png">
+<meta property="og:image:width" content="181">
+<meta property="og:image:height" content="181">
+
+<meta name="twitter:card" content="summary">
+
+
+	<meta name="twitter:description" content="Forms with multiple submit buttons have both UX problems and technical problems all of which is discussed in this article.">
+
+
+<meta name="twitter:title" content="The multiple submit button problem -  Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.">
+
+
+	<meta content="The multiple submit button problem" name="twitter:title">
+
+
+<meta name="twitter:site" content="@adambsilver">
+<meta name="twitter:creator" content="@adambsilver">
+<meta property="twitter:image" content="http://adamsilver.io/assets/img/card.jpg">
+
+
+	<meta itemprop="description" content="Forms with multiple submit buttons have both UX problems and technical problems all of which is discussed in this article.">
+
+
+<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all">
+<!--[if IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" type="text/css" media="all"><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/assets/css/ie7.css" type="text/css" media="all"><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/assets/css/ie6.css" type="text/css" media="all"><![endif]-->
+
+<link rel="canonical" href="http://adamsilver.io/articles/the-multiple-submit-button-problem/">
+<link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47311666-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	</head>
+	<body>
+	    <div class="nav">
+	<ul>
+		<li><a class="" href="/">Home</a></li>
+		<li><a class="nav-active" href="/articles/">Articles</a></li>
+		<li><a class="" href="/about/">About</a></li>
+		<li><a class="" href="/signup/">Sign up</a></li>
+	</ul>
+</div>
+	    <div class="mainContent">
+			<h1>The multiple submit button problem</h1>
+	        <p>Sometimes a form is designed to be multi-purpose. Take the example below. It represents an edit details form whereby the user can either update their information or delete it all together. This kind of form causes usability problems for keyboard users.</p>
+
+<div class="image" style="max-width: 320px;margin: 0 auto;">
+	<figure>
+		<img src="/assets/img/multiplesubmit.png" alt="Multi submit problem" width="100%" />
+		<figcaption>Multiple submit buttons</figcaption>
+	</figure>
+</div>
+
+<!-- <form>
+	<input type="text" name="firstName" value="Adam">
+	<input type="text" name="lastName" value="Silver">
+	<input type="submit" name="delete" value="Delete">
+	<input type="submit" name="save" value="Save">
+</form> -->
+
+<p>The user can submit the form while focused on <em>first name</em> or <em>last name</em> control by pressing the enter key. If they do this the form will be submitted based on the first button in the document flow which in this case is the <em>update</em> button.</p>
+
+<p>This is not always the case though. Sometimes the visual design means that the <em>delete</em> button is first in the document flow (and there is no CSS trick to get around this). In this case the user presses enter, and instead of updating their details, they delete them.</p>
+
+<h2 id="whats-the-best-solution">What’s the best solution?</h2>
+
+<p>Where possible, the best solution would be to split out the forms into two. This means each form contains <em>one</em> submit button. Often this provides a better User Experience in the form of focused pages and actions dedicated to each task the user wishes to accomplish.</p>
+
+<p>In our example above the delete button would become a link to a page that allows the user to delete the details.</p>
+
+<h2 id="what-if-you-must-have-two-actions-in-one-form">What if you “must have” two actions in one form?</h2>
+
+<p>If you <em>must</em> have two actions in one form then you must answer the following question: <strong>what is the form’s primary action?</strong></p>
+
+<p>This is not always a straightforward answer, but in the example above it’s clearly the <em>update</em> button. For this simply make sure that button comes first in the document flow.</p>
+
+<p>The only potential problem here is that you might be limited by the powers of CSS in terms of visually positioning the buttons as desired. If this is the case then you can duplicate the primary button at the top of the form and hide it off screen with CSS:</p>
+
+<p>The trade off here is that when the user is tabbing through the page and arrives at the hidden button, the UI will appear to be unresponsive. This is because focusing on an interactive element would normally provide some sort of visual feedback. As the button is hidden you lose this functionality.</p>
+
+<p>The solution to this, is to display the button if focused, and then hide again when the user loses focus from this button. Again, this may not be desired but it’s a trade off you may have to make.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>The simple omission of the submit button causes usability and accessibility problems which degrades the experience. Where possible design this out of the system and <a href="/articles/designing-honestly-for-the-web/">embrace the constraints of the web</a>. If it really isn’t possible to do this, then a little effort to choose the primary action will improve the experience for these users.</p>
+
+	    </div>
+		<div class="share">
+	<a class="share-button" href="https://twitter.com/share?source=tweetbutton&text=&quot;The multiple submit button problem&quot;&via=adambsilver&url=http://adamsilver.io/articles/the-multiple-submit-button-problem/&hashtags=forms,a11y,ux">Share on Twitter</a>
+
+	<!-- <p><a href="https://twitter.com/share?source=tweetbutton&text=&quot;The multiple submit button problem&quot;&via=adambsilver&url=http://adamsilver.io/articles/the-multiple-submit-button-problem/&hashtags=forms,a11y,ux">Tweet this article</a> if you found value in it. Thank you!</p> -->
+</div>
+		
+	<div class="nowRead">
+		<p>Next up for you is... <br> <a href="/articles/how-to-create-accessible-forms/">How to create accessible forms</a></p>
+	</div>
+
+		
+<div class="newsletterForm">
+	<div class="newsletterForm-inner">
+		<h2 class="newsletterForm-heading">Psssst! I'm writing my second book...</h2>
+		<p class="newsletterForm-description">If you're interested, you can <a href="/signup">find out more here</a>.</p>
+	</div>
+</div>
+
+		<div class="footer">
+	<p>&copy; 2016.
+		<a href="/team/">Team</a> |
+		<a href="http://www.twitter.com/adambsilver/">Twitter</a> |
+		<a href="http://www.github.com/adamsilver/">Github</a> |
+		<a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></p>
+	<!-- <ul>
+		<li></li>
+		<li><a href="http://medium.com/@adamsilver">Medium</a></li>
+		<li><a href="http://www.github.com/adamsilver/">Github</a></li>
+		<li><a href="http://www.twitter.com/adambsilver/">Twitter</a></li>
+		<li><a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></li>
+	</ul> -->
+</div>
+	</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en">
+	<head>
+	    <title>Why placeholders are problematic | Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
+	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+
+<link rel="apple-touch-icon" sizes="57x57" href="http://adamsilver.io/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://adamsilver.io/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://adamsilver.io/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://adamsilver.io/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://adamsilver.io/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://adamsilver.io/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://adamsilver.io/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://adamsilver.io/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://adamsilver.io/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="http://adamsilver.io/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="http://adamsilver.io/manifest.json">
+<link rel="mask-icon" href="http://adamsilver.io/safari-pinned-tab.svg" color="#001f3f">
+<meta name="msapplication-TileColor" content="#001F3F">
+<meta name="msapplication-TileImage" content="http://adamsilver.io/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+
+
+	<meta content="Why placeholders are problematic" property="og:title">
+
+
+
+	<meta property="og:description" content="Hello, I am Adam Silver, I specialise in UX, Front-end Engineering and Strategy. I help companies and people make things simple and human. Based in London.">
+
+
+<meta property="og:url" content="http://adamsilver.io/articles/why-placeholders-are-problematic/">
+<meta property="og:site_name" content="Adamsilver.io">
+<meta property="og:image" content="http://adamsilver.io/assets/img/card.png">
+<meta property="og:image:width" content="181">
+<meta property="og:image:height" content="181">
+
+<meta name="twitter:card" content="summary">
+
+
+	<meta name="twitter:description" content="Hello, I am Adam Silver, I specialise in UX, Front-end Engineering and Strategy. I help companies and people make things simple and human. Based in London.">
+
+
+<meta name="twitter:title" content="Why placeholders are problematic -  Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.">
+
+
+	<meta content="Why placeholders are problematic" name="twitter:title">
+
+
+<meta name="twitter:site" content="@adambsilver">
+<meta name="twitter:creator" content="@adambsilver">
+<meta property="twitter:image" content="http://adamsilver.io/assets/img/card.jpg">
+
+
+	<meta itemprop="description" content="Hello, I am Adam Silver, I specialise in UX, Front-end Engineering and Strategy. I help companies and people make things simple and human. Based in London.">
+
+
+<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all">
+<!--[if IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" type="text/css" media="all"><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/assets/css/ie7.css" type="text/css" media="all"><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/assets/css/ie6.css" type="text/css" media="all"><![endif]-->
+
+<link rel="canonical" href="http://adamsilver.io/articles/why-placeholders-are-problematic/">
+<link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47311666-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	</head>
+	<body>
+	    <div class="nav">
+	<ul>
+		<li><a class="" href="/">Home</a></li>
+		<li><a class="nav-active" href="/articles/">Articles</a></li>
+		<li><a class="" href="/about/">About</a></li>
+		<li><a class="" href="/signup/">Sign up</a></li>
+	</ul>
+</div>
+	    <div class="mainContent">
+			<h1>Why placeholders are problematic</h1>
+	        <p>Since placeholders arrived on the scene, they have been rapidly adopted to provide hints and instructions to help users fill in forms. Whilst this sounds good, it is actually problematic due to the way the placeholder behaves — there is one ‘space’ containing two values: the hint and the value.</p>
+
+<p>It pretty much comes down to the fact that the valuable information put in placeholders is not always available. And what is worse, is when they are used as a <em>replacement</em> for labels. Here’s why:</p>
+
+<h2 id="disappearing-placeholder-text-is-easy-to-forget">1. Disappearing placeholder text is easy to forget</h2>
+
+<p>Because the placeholder disappears as the user starts typing, the user can easily forget the requirements of the field. This is especially the case on more complex fields.</p>
+
+<p>For a login form, you may be tempted to omit labels because you think the fields are obvious, but why even risk making it harder for people to use, in the name of <a href="http://uxmyths.com/post/115783813605/myth-34-simple-minimal">minimalism</a>? The aim is to make something as easy as possible.</p>
+
+<h2 id="not-all-browsers-support-placeholders">2. Not all browsers support placeholders</h2>
+
+<p>Whilst the majority of browsers support placeholders, some people use browsers that don’t, <a href="https://adactio.com/journal/10665">and remember the web is for everyone</a>. People using a browser without placeholder support, will see a blank box — which if there are no labels, makes it impossible to fill out.</p>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/placeholders/2.jpeg" alt="Caniuse.com Placeholder support" width="100%" />
+		<figcaption>Caniuse.com Placeholder support</figcaption>
+	</figure>
+</div>
+
+<h2 id="pre-populated-values-are-hard-to-understand">3. Pre-populated values are hard to understand</h2>
+
+<p>When a form is loaded with real values — as would be the case with an <em>edit details</em> form, for example — it’s very difficult to understand what the value means without a label. See the example below:</p>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/placeholders/3.png" alt="Pre-populated values without labels are hard to understand" width="100%" style="max-width: 400px;" />
+		<figcaption>Pre-populated values without labels are hard to understand</figcaption>
+	</figure>
+</div>
+
+<h2 id="reviewing-a-long-form-is-difficult">4. Reviewing a long form is difficult</h2>
+
+<p>If someone has filled in a long form and wants to go back to review what they entered, the user will have to have remembered what each field wanted. Also, some browsers autocomplete entries incorrectly which can exacerbate the problem.</p>
+
+<h2 id="erroneous-fields-are-harder-to-fix">5. Erroneous fields are harder to fix</h2>
+
+<p>A form containing errors is now harder to fix, because the information lacks
+context without labels. For example, see the field below:</p>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/placeholders/5.png" alt="Error message lacks context when the label is missing." width="100%" style="max-width: 400px;" />
+		<figcaption>Error message lacks context when the label is missing.</figcaption>
+	</figure>
+</div>
+
+<p><span class="figcaption_hack"></span></p>
+
+<p>The error message explains that a number is required, but not the <em>type</em> of number. In this case the error message needs to be unnecessarily verbose i.e.
+“<em>Expiry date must use numbers only</em>”.</p>
+
+<p>However, a field with a label doesn’t suffer from such problems:</p>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/placeholders/5b.png" alt="Error message with a label for context." width="100%" style="max-width: 400px;" />
+		<figcaption>Error message with a label for context.</figcaption>
+	</figure>
+</div>
+
+<h2 id="some-browsers-will-remove-placeholder-text-on-focus">6. Some browsers will remove placeholder text on focus</h2>
+
+<p>When browsers first implemented placeholders, they would disappear as soon as the user focused. This meant that the user would have no time to read the instructions before typing, which resulted in users having to read <em>ahead</em> of the currently focused input.</p>
+
+<p>Whilst most browsers only hide the placeholder when the user starts <em>typing</em>, some browsers still have this original behaviour.</p>
+
+<h2 id="placeholder-text-may-be-mistaken-for-a-value">7. Placeholder text may be mistaken for a value</h2>
+
+<p>People may scan empty fields in order to know what they have missed, but the difference in placeholder contrast is so subtle that it can make a field <em>appear</em> complete. This can result in a user skipping a required field, only to be shown an error later on, once the form is validated.</p>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/placeholders/7.png" alt="The difference between a placeholder and a value is subtle" width="100%" style="max-width: 400px;" />
+		<figcaption>The difference between a placeholder and a value is subtle</figcaption>
+	</figure>
+</div>
+
+<h2 id="they-have-insufficient-contrast">8. They have insufficient contrast</h2>
+
+<p>Placeholder copy is afforded by being slightly greyed out which is problematic for two reasons. First, it’s hard to notice the difference in colour (as discussed above). Second, the colours are of insufficient contrast making it hard to read for people with vision impairments.</p>
+
+<h2 id="screen-readers-may-not-announce-them">9. Screen readers may not announce them</h2>
+
+<p>Placeholders may not be read out by screen readers which is the visual
+equivalent of a meaningless blank box. Labels are <em>always</em> read out.</p>
+
+<h2 id="a-missing-label-reduces-the-size-of-the-hit-area">10. A missing label reduces the size of the hit area</h2>
+
+<p>This means that people with fine motor skill impairments will find it harder to
+apply focus to a field withtheir finger or mouse.</p>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/placeholders/10.png" alt="No label means a smaller hit area." width="100%" style="max-width: 400px;" />
+		<figcaption>No label means a smaller hit area.</figcaption>
+	</figure>
+</div>
+
+<h2 id="placeholder-text-is-limited-to-the-size-of-the-field">11. Placeholder text is limited to the size of the field</h2>
+
+<p>Placeholder text is cut off if it goes beyond the size of the field so you’re
+constrained as to what kind of hint or instruction to put there. Labels don’t
+suffer from this problem.</p>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/placeholders/11.png" alt="Placeholder copy gets cropped." width="100%" style="max-width: 400px;" />
+		<figcaption>Placeholder copy gets cropped.</figcaption>
+	</figure>
+</div>
+
+<h2 id="but-its-okay-if-they-are-used-in-addition-to-labels-right">But it’s okay if they are used in addition to labels right?</h2>
+
+<p>Not particularly. Its certainly better but it’s still problematic.</p>
+
+<p>If a piece of text adds value to a user experience — in this case by helping the user fill out a form , either by showing an additional hint, input format or example of what goes in the field — then it would be better if it didn’t suffer from all the problems discussed above.</p>
+
+<p>On the other hand, if the placeholder is used in addition to a label, and doesn’t contain any vital information, then why have it in the first place as it’s seemingly not adding any value to the experience?</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>Each of the problems discussed above cause friction for people trying to fill in a form — the sort of friction that drains peoples energy — the sort of friction that a great user experience strives to eliminate.</p>
+
+<p>If you’re trying to help the user, the best place to start is to <a href="https://medium.com/simple-human/always-use-a-label-a39ceab554e6#.r15yzj7p7">always include a clear, always-visible
+label</a>.</p>
+
+<p>On occasion, a placeholder — in <em>addition</em> to label — <em>might</em> be helpful, but use them judiciously and if in doubt, test with different people, under
+different circumstances and different browsers.</p>
+
+	    </div>
+		<div class="share">
+	<a class="share-button" href="https://twitter.com/share?source=tweetbutton&text=&quot;Why placeholders are problematic&quot;&via=adambsilver&url=http://adamsilver.io/articles/why-placeholders-are-problematic/&hashtags=design,ux">Share on Twitter</a>
+
+	<!-- <p><a href="https://twitter.com/share?source=tweetbutton&text=&quot;Why placeholders are problematic&quot;&via=adambsilver&url=http://adamsilver.io/articles/why-placeholders-are-problematic/&hashtags=design,ux">Tweet this article</a> if you found value in it. Thank you!</p> -->
+</div>
+		
+	<div class="nowRead">
+		<p>Next up for you is... <br> <a href="/articles/how-we-cut-our-mvp-in-half-to-launch-kidly/">How we cut our MVP in half to launch KIDLY</a></p>
+	</div>
+
+		
+<div class="newsletterForm">
+	<div class="newsletterForm-inner">
+		<h2 class="newsletterForm-heading">Psssst! I'm writing my second book...</h2>
+		<p class="newsletterForm-description">If you're interested, you can <a href="/signup">find out more here</a>.</p>
+	</div>
+</div>
+
+		<div class="footer">
+	<p>&copy; 2016.
+		<a href="/team/">Team</a> |
+		<a href="http://www.twitter.com/adambsilver/">Twitter</a> |
+		<a href="http://www.github.com/adamsilver/">Github</a> |
+		<a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></p>
+	<!-- <ul>
+		<li></li>
+		<li><a href="http://medium.com/@adamsilver">Medium</a></li>
+		<li><a href="http://www.github.com/adamsilver/">Github</a></li>
+		<li><a href="http://www.twitter.com/adambsilver/">Twitter</a></li>
+		<li><a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></li>
+	</ul> -->
+</div>
+	</body>
+</html>
