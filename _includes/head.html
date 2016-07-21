@@ -51,10 +51,28 @@
 	<meta itemprop="description" content="{{ site.description }}">
 {% endif %}
 
+<!-- build:css /assets/css/main.min.css -->
 <link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all">
-<!--[if IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" type="text/css" media="all"><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="/assets/css/ie7.css" type="text/css" media="all"><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" href="/assets/css/ie6.css" type="text/css" media="all"><![endif]-->
+<!-- endbuild -->
+
+<!--[if IE 8]>
+<!-- build:css /assets/css/ie8.min.css -->
+<link rel="stylesheet" href="/assets/css/ie8.css" type="text/css" media="all">
+<!-- endbuild -->
+<![endif]-->
+<!--[if IE 7]>
+<!-- build:css /assets/css/ie7.min.css -->
+<link rel="stylesheet" href="/assets/css/ie7.css" type="text/css" media="all">
+<!-- endbuild -->
+<![endif]-->
+
+
+<!--[if IE 6]>
+<!-- build:css /assets/css/ie6.min.css -->
+<link rel="stylesheet" href="/assets/css/ie6.css" type="text/css" media="all">
+<!-- endbuild -->
+<![endif]-->
+
 
 <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
 <link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">

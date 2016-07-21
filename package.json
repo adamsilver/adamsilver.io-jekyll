@@ -1,0 +1,28 @@
+{
+  "name": "adamsilver.io",
+  "version": "1.0.0",
+  "description": "## Run in dev mode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamsilver/adamsilver.io.git"
+  },
+  "author": "Adam Silver",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamsilver/adamsilver.io/issues"
+  },
+  "homepage": "https://github.com/adamsilver/adamsilver.io#readme",
+  "devDependencies": {
+    "git-directory-deploy": "^1.5.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-filerev": "^2.3.1",
+    "grunt-usemin": "^3.1.1"
+  }
+}
