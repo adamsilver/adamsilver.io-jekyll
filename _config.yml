@@ -4,4 +4,5 @@ permalink: /articles/:title/
 url: http://adamsilver.io
 include: ['_pages']
 description: Hello, I am Adam Silver, I specialise in UX, Front-end Engineering and Strategy. I help companies and people make things simple and human. Based in London.
-future: true;
+future: true
+exclude: ['node_modules', 'Gruntfile.js']
