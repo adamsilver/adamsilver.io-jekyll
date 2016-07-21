@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 		usemin: {
 			html: '_site/**/*.html',
 			options: {
-				assetsDirs: ['_site']
+				assetsDirs: ['_site', '_site/css']
 			}
 		}
 	});
@@ -44,8 +44,8 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerTask('default', [
-		'clean:css',
 		'useminPrepare',
+		'concat:generated',
 		'concat:generated',
 		'cssmin:generated',
 		'filerev:dist',
