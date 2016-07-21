@@ -4,3 +4,4 @@ _site
 *.sublime-workspace
 .idea
 node_modules
+.tmp
