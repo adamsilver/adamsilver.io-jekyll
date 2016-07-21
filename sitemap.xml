@@ -2,30 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>http://adamsilver.io/articles/fogotten-web-ux-problems/</loc>
-    </url>
-    
-    <url>
-        <loc>http://adamsilver.io/articles/submit-buttons-arent-links/</loc>
-    </url>
-    
-    <url>
-        <loc>http://adamsilver.io/articles/how-to-interview-front-end-developers/</loc>
-    </url>
-    
-    <url>
-        <loc>http://adamsilver.io/articles/logicless-templating-and-nice-view-models/</loc>
-    </url>
-    
-    <url>
-        <loc>http://adamsilver.io/articles/why-not-x/</loc>
-    </url>
-    
-    <url>
-        <loc>http://adamsilver.io/articles/the-disadvantages-of-customising-form-controls/</loc>
-    </url>
-    
-    <url>
         <loc>http://adamsilver.io/articles/always-use-a-label/</loc>
     </url>
     
@@ -39,10 +15,6 @@
     
     <url>
         <loc>http://adamsilver.io/articles/hello-ux-designer/</loc>
-    </url>
-    
-    <url>
-        <loc>http://adamsilver.io/articles/how-to-write-modular-scalable-and-maintainable-css/</loc>
     </url>
     
     <url>
@@ -83,18 +55,6 @@
     
     <url>
         <loc>http://adamsilver.io/articles/technical-wanking/</loc>
-    </url>
-    
-    <url>
-        <loc>http://adamsilver.io/articles/on-outside-in-development/</loc>
-    </url>
-    
-    <url>
-        <loc>http://adamsilver.io/articles/quotes/</loc>
-    </url>
-    
-    <url>
-        <loc>http://adamsilver.io/articles/dont-use-icon-fonts/</loc>
     </url>
     
     <url>
