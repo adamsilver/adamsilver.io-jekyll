@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en">
+	<head>
+	    <title>Buttons shouldn't have a hand cursor | Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
+	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+
+<link rel="apple-touch-icon" sizes="57x57" href="http://adamsilver.io/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://adamsilver.io/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://adamsilver.io/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://adamsilver.io/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://adamsilver.io/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://adamsilver.io/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://adamsilver.io/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://adamsilver.io/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://adamsilver.io/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="http://adamsilver.io/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="http://adamsilver.io/manifest.json">
+<link rel="mask-icon" href="http://adamsilver.io/safari-pinned-tab.svg" color="#001f3f">
+<meta name="msapplication-TileColor" content="#001F3F">
+<meta name="msapplication-TileImage" content="http://adamsilver.io/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+
+
+	<meta content="Buttons shouldn't have a hand cursor" property="og:title">
+
+
+
+	<meta property="og:description" content="Hello, I am Adam Silver, I specialise in UX, Front-end Engineering and Strategy. I help companies and people make things simple and human. Based in London.">
+
+
+<meta property="og:url" content="http://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor/">
+<meta property="og:site_name" content="Adamsilver.io">
+<meta property="og:image" content="http://adamsilver.io/assets/img/card.png">
+<meta property="og:image:width" content="181">
+<meta property="og:image:height" content="181">
+
+<meta name="twitter:card" content="summary">
+
+
+	<meta name="twitter:description" content="Hello, I am Adam Silver, I specialise in UX, Front-end Engineering and Strategy. I help companies and people make things simple and human. Based in London.">
+
+
+<meta name="twitter:title" content="Buttons shouldn't have a hand cursor -  Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.">
+
+
+	<meta content="Buttons shouldn't have a hand cursor" name="twitter:title">
+
+
+<meta name="twitter:site" content="@adambsilver">
+<meta name="twitter:creator" content="@adambsilver">
+<meta property="twitter:image" content="http://adamsilver.io/assets/img/card.jpg">
+
+
+	<meta itemprop="description" content="Hello, I am Adam Silver, I specialise in UX, Front-end Engineering and Strategy. I help companies and people make things simple and human. Based in London.">
+
+
+<link rel="stylesheet" href="/assets/css/main.min.3759338f.css" media="all">
+
+<!--[if IE 8]>
+<link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
+<![endif]-->
+
+<!--[if IE 7]>
+<link rel="stylesheet" href="/assets/css/ie7.min.d41d8cd9.css" media="all">
+<![endif]-->
+
+
+<!--[if IE 6]>
+<link rel="stylesheet" href="/assets/css/ie6.min.2d22a25b.css" media="all">
+<![endif]-->
+
+
+<link rel="canonical" href="http://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor/">
+<link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47311666-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	</head>
+	<body>
+	    <div class="nav">
+	<ul>
+		<li><a class="" href="/">Home</a></li>
+		<li><a class="nav-active" href="/articles/">Articles</a></li>
+		<li><a class="" href="/about/">About</a></li>
+		<li><a class="" href="/signup/">Sign up</a></li>
+	</ul>
+</div>
+	    <div class="mainContent">
+			<h1>Buttons shouldn't have a hand cursor</h1>
+	        <p>There is this belief that the hand cursor means ‘clickable’, but this is incorrect and potentially problematic. My hope is that by the end of the article, you’ll never want to use the hand cursor for buttons ever again.</p>
+
+<h2 id="the-hand-does-not-mean-clickable">The hand does not mean clickable</h2>
+
+<p>It’s no accident that browsers don’t give buttons (and other elements) a hand cursor — it’s because they’re not meant to. Take a look at the following screenshot:</p>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/buttons/chrome.jpeg" alt="Chrome on Mac OS" width="100%" />
+		<figcaption>Chrome on Mac OS</figcaption>
+	</figure>
+</div>
+
+<p>Almost every element is interactive and clickable — the menu, the tabs, the whitespace, the browser buttons, the bookmark bar and Google’s search box — but, none of them have a hand cursor.</p>
+
+<p>There are more interactive and clickable elements not shown above— select menus, sliders, checkboxes, radios, labels, images, empty space (e.g right click — view source) and text — again, none of them have a hand cursor.</p>
+
+<p>The same goes for any computer you have ever used. You can tap, drag, select, press, left click and right click on a plethora of different elements including buttons. However, buttons are not afforded by a hand cursor displaying on hover.</p>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/buttons/license.jpeg" alt="“License Agreement” is a link and uses the hand cursor. The buttons don’t." width="100%" />
+		<figcaption>“License Agreement” is a link and uses the hand cursor. The buttons don’t.</figcaption>
+	</figure>
+</div>
+
+<p>Affordance is provided by the way something looks regardless of the cursor. Remember, the cursor is only available when hovering with a pointing device such as a mouse.</p>
+
+<p>This is why, for example, <a href="http://danieldelaney.net/checkboxes">checkboxes are never round</a> (and radios are never square). This is also why links are typically underlined. This is why links do, in fact, have a hand cursor.</p>
+
+<h2 id="the-hand-cursor-is-for-links">The hand cursor is for links</h2>
+
+<p>The hand (and often underlined text) signifies a link. Links are not buttons. Links came along with the web. To help users understand that they are different, they are given the hand cursor. It serves as an extra clue. Here’s why:</p>
+
+<ul>
+  <li>Clicking a link opens a web page or resource.</li>
+  <li>(On desktop) I can right-click on a link and do many things (that I can’t do with a button). Open in new tab/window, save a link, copy address, add to reading list, bookmark it and more.</li>
+  <li>(On mobile devices) I can tap and hold on a link and get a similar context menu as per the previous point.</li>
+  <li>A link also tells me that I am just going somewhere else. I am not modifying any data or making changes in anyway (like a button is likely to do).</li>
+</ul>
+
+<h2 id="summary">Summary</h2>
+
+<p>When a button has the hand cursor, it subtly suggests that the user is interacting with a link when they’re not. If you want to give visual feedback when the user hovers, you can do so with other style changes such as background colour. A well-designed button does not need a hand cursor to help the user realise it does something.</p>
+
+<p>The hand cursor is reserved for links. This is because they are unique in their behaviour. Browsers and Operating Systems have done the work for you — because contrary to popular belief — browsers know best.</p>
+
+<p>Links have always been handled this way since the web came along — this is the convention of the web that you need not innovate on. You can rest easy knowing that browsers have you covered. This leaves you and your team to solve real problems.</p>
+
+<!--
+
+http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-button-is-not-a-hand-pointer
+
+-->
+
+	    </div>
+		<div class="share">
+	<a class="share-button" href="https://twitter.com/share?source=tweetbutton&text=&quot;Buttons shouldn't have a hand cursor&quot;&via=adambsilver&url=http://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor/&hashtags=design,ux">Share on Twitter</a>
+
+	<!-- <p><a href="https://twitter.com/share?source=tweetbutton&text=&quot;Buttons shouldn't have a hand cursor&quot;&via=adambsilver&url=http://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor/&hashtags=design,ux">Tweet this article</a> if you found value in it. Thank you!</p> -->
+</div>
+		
+	<div class="nowRead">
+		<p>Next up for you is... <br> <a href="/articles/always-use-a-label/">Always use a label</a></p>
+	</div>
+
+		
+<div class="newsletterForm">
+	<div class="newsletterForm-inner">
+		<h2 class="newsletterForm-heading">Psssst! I'm writing my second book...</h2>
+		<p class="newsletterForm-description">If you're interested, you can <a href="/signup">find out more here</a>.</p>
+	</div>
+</div>
+
+		<div class="footer">
+	<p>&copy; 2016.
+		<a href="/team/">Team</a> |
+		<a href="http://www.twitter.com/adambsilver/">Twitter</a> |
+		<a href="http://www.github.com/adamsilver/">Github</a> |
+		<a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></p>
+	<!-- <ul>
+		<li></li>
+		<li><a href="http://medium.com/@adamsilver">Medium</a></li>
+		<li><a href="http://www.github.com/adamsilver/">Github</a></li>
+		<li><a href="http://www.twitter.com/adambsilver/">Twitter</a></li>
+		<li><a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></li>
+	</ul> -->
+</div>
+	</body>
+</html>
