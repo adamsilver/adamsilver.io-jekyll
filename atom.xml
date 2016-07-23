@@ -3,7 +3,7 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-07-23T08:06:44+01:00</updated>
+	<updated>2016-07-23T08:09:50+01:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -13,7 +13,7 @@
 		<entry>
 			<title>Buttons shouldn't have a hand cursor</title>
 			<link href="http://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor/"/>
-			<updated>2016-07-01T10:00:01+01:00</updated>
+			<updated>2016-07-15T10:00:01+01:00</updated>
 			<id>http://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor</id>
 			<content type="html">&lt;p&gt;There is this belief that the hand cursor means ‘clickable’, but this is incorrect and potentially problematic. My hope is that by the end of the article, you’ll never want to use the hand cursor for buttons ever again.&lt;/p&gt;
 
