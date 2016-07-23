@@ -7,7 +7,7 @@ id: home
 
 ## Summary
 
-I love to design and build delightful experiences on the web for [everyone](/articles/the-role-of-the-front-end-developer/#accessibility). This is made possible by designing humanised and [simple experiences]({% post_url 2016-03-06-embracing-simplicity %}) that [embrace the web]({% post_url 2015-10-09-designing-honestly-for-the-web %}). I am happiest working with my team to solve *real* problems for users.
+I love to design and build delightful experiences on the web for [everyone](/articles/the-role-of-the-front-end-developer/#accessibility). This is made possible by designing humanised and [simple experiences]({% post_url 2016-03-06-embracing-simplicity %}) that [embrace the web]({% post_url 2015-10-09-designing-honestly-for-the-web %}). I am at my happiest when I work alongside other people to help solve *real* problems.
 
 ## Speaking
 

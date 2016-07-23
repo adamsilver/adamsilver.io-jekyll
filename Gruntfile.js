@@ -19,10 +19,10 @@ module.exports = function(grunt) {
             }
 		},
 		useminPrepare: {
-			html: '_site/signup/index.html',
+			html: '_includes/headCss.html',
 			options: {
 				dest: '_site/',
-				root: '_site/'
+				root: './'
 			}
 		},
 		usemin: {
@@ -44,6 +44,7 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerTask('default', [
+		'clean:css',
 		'useminPrepare',
 		'concat:generated',
 		'concat:generated',
