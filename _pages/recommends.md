@@ -11,7 +11,7 @@ On this page I recommend the very best and timeless articles, books and videos r
 
 ## Video about Mortgage Driven Development
 
-Coming soon.
+[https://vimeo.com/39660655](Video)
 
 ## People / Process / Thinking / Attitude / Team / Business
 
