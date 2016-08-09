@@ -47,54 +47,6 @@
 }
 
 /**********************************************************
-* Merriweather
-**********************************************************/
-
-@font-face {
-	font-family: 'Merriweather';
-	src: url('../fonts/Merriweather/Merriweather.eot');
-	src: local('Merriweather'),
-		url('../fonts/Merriweather/Merriweather.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Merriweather/Merriweather.woff') format('woff'),
-		url('../fonts/Merriweather/Merriweather.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Merriweather';
-	src: url('../fonts/Merriweather/Merriweather-BoldItalic.eot');
-	src: local('Merriweather Bold Italic'), local('Merriweather-BoldItalic'),
-		url('../fonts/Merriweather/Merriweather-BoldItalic.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Merriweather/Merriweather-BoldItalic.woff') format('woff'),
-		url('../fonts/Merriweather/Merriweather-BoldItalic.ttf') format('truetype');
-	font-weight: bold;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'Merriweather';
-	src: url('../fonts/Merriweather/Merriweather-Italic.eot');
-	src: local('Merriweather Italic'), local('Merriweather-Italic'),
-		url('../fonts/Merriweather/Merriweather-Italic.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Merriweather/Merriweather-Italic.woff') format('woff'),
-		url('../fonts/Merriweather/Merriweather-Italic.ttf') format('truetype');
-	font-weight: normal;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'Merriweather';
-	src: url('../fonts/Merriweather/Merriweather-Bold.eot');
-	src: local('Merriweather Bold'), local('Merriweather-Bold'),
-		url('../fonts/Merriweather/Merriweather-Bold.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Merriweather/Merriweather-Bold.woff') format('woff'),
-		url('../fonts/Merriweather/Merriweather-Bold.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
-}
-
-/**********************************************************
 * General
 **********************************************************/
 
@@ -109,11 +61,10 @@ input {
 }
 
 body {
-	font-family: Merriweather, georgia, serif;
+	font-family: Lato, arial, sans-serif;
     text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
     font-size: 62.5%;
-    color: #31343e;
 }
 
 a:link,
@@ -139,6 +90,16 @@ hr {
 }
 
 /**********************************************************
+* Colours (off black)
+**********************************************************/
+
+body,
+a:link,
+a:visited {
+ 	color: #333333;
+}
+
+/**********************************************************
 * Sans
 **********************************************************/
 
@@ -157,10 +118,6 @@ hr {
 .signUpForm-button {
 	font-family: Lato, arial, sans-serif;
 }
-
-/**********************************************************
-* Serif
-**********************************************************/
 
 /**********************************************************
 * Article
@@ -182,7 +139,6 @@ hr {
 	margin: 0 20px 35px;
 	font-size: 3.1em;
 	line-height: 1.25em;
-	color: #545a6a;
 }
 
 @media(min-width: 600px) {
@@ -196,7 +152,6 @@ hr {
 	font-size: 2.3em;
 	line-height: 1.5;
 	letter-spacing: 0.01em;
-	color: #545a6a;
 }
 
 @media(min-width: 600px) {
@@ -211,7 +166,6 @@ hr {
 	margin: 0 20px 10px;
 	font-size: 1.6em;
 	line-height: 1.4;
-	color: #31343e;
 	text-transform: uppercase;
 	letter-spacing: 0.03em;
 }
@@ -224,9 +178,8 @@ hr {
 
 .mainContent p {
 	margin: 0 20px 30px;
-	font-size: 1.6em;
+	font-size: 1.7em;
 	line-height: 1.8;
-	color: #31343e;
 }
 
 @media(min-width: 600px) {
@@ -237,14 +190,14 @@ hr {
 }
 
 .mainContent p code {
-	background: #e6eff3;
+	background: #fafafa;
 	font-size: 1.3em;
 }
 
 .mainContent pre {
 	font-family: Monaco,'Courier New','Courier',monospace;
 	font-size: 1.9em;
-	background-color: #e6eff3;
+	background-color: #fafafa;
 	margin-bottom: 30px;
 	padding: 20px;
 	white-space: pre-wrap;       /* css-3 */
@@ -264,16 +217,16 @@ hr {
 .mainContent blockquote {
 	margin: 0 20px 35px;
 	font-style: italic;
+	border-left: 4px solid #333;
 }
 
 .mainContent blockquote p {
-	font-size: 2.2em;
-	color: #545a6a;
+	font-size: 1.6em;
 }
 
 @media(min-width: 600px) {
 	.mainContent blockquote p {
-		font-size: 2.9em;
+		font-size: 1.9em;
 	}
 }
 
@@ -297,7 +250,6 @@ hr {
 .mainContent ul li {
 	font-size: 1.6em;
 	line-height: 1.8;
-	color: #31343e;
 }
 
 @media(min-width: 600px) {
@@ -442,7 +394,6 @@ hr {
 	margin: 0 20px 35px;
 	font-size: 3.1em;
 	line-height: 1.25em;
-	color: #545a6a;
 }
 
 @media(min-width: 600px) {
@@ -498,7 +449,6 @@ hr {
 	margin: 0 20px;
 	font-size: 1.3em;
 	line-height: 1.7em;
-	color: #545a6a;
 	letter-spacing: 0.02em;
 }
 
@@ -515,7 +465,7 @@ hr {
 .nav {
 	padding-top: 20px;
 	padding-bottom: 10px;
-	background-color: #e6eff3;
+	background-color: #fafafa;
 }
 
 .nav ul {
@@ -531,7 +481,7 @@ hr {
 	display: inline-block;
     margin-left: 7px;
     margin-right: 7px;
-    font-size: 1.5em;
+    font-size: 1.7em;
     margin-bottom: 10px;
 }
 
@@ -547,7 +497,6 @@ hr {
 .nav ul li a:visited {
     text-decoration: none;
     display: block;
-    color: #31343e;
 }
 
 .nav ul li a:hover {
@@ -572,7 +521,7 @@ hr {
 .footer {
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color: #e6eff3;
+	background-color: #fafafa;
 }
 
 .footer p {
@@ -651,7 +600,6 @@ hr {
 	padding: 12px 30px;
 	font-size: 1.1em;
 	border: 1px solid #eee;
-	color: #31343e;
 	font-weight: bold;
 	letter-spacing: 0.04em;
 	width: 150px;
@@ -682,7 +630,7 @@ hr {
 
 .signUpForm {
 	margin: 0 20px 40px;
-	background-color: #e6eff3;
+	background-color: #fafafa;
 	padding: 25px 20px;
 	max-width: 640px;
 	margin: 0 auto 40px;
@@ -691,7 +639,7 @@ hr {
 @media(min-width: 800px) {
 	.signUpForm {
 		margin: 0 auto 40px;
-		background-color: #e6eff3;
+		background-color: #fafafa;
 		padding: 40px;
 		max-width: 580px;
 	}

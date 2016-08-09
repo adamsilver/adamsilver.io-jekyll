@@ -96,61 +96,34 @@ We hone in on complicated and skip the basics and I recently came across a story
 
 > Atul Gawande, Professor of Surgery, Harvard Medical School
 This is Atul Gawande. He is the professor of surgery at Harvard Medical School.
-
-> The World Health Organisation asked him to help reduce the number of deaths during surgery.
-
-> Did we need more training or more technology?
-
-> Gawande found they were looking in the wrong place.
+> <br><br>The World Health Organisation asked him to help reduce the number of deaths during surgery.
+> <br><br>Did we need more training or more technology?
+> <br><br>Gawande found they were looking in the wrong place.
 He talked to experts in other high-risk professions, such as aviation.
-
-> What he discovered was that there are usually three main problems.
-
-> 1) Problems of ignorance.
-
-> 2) Problems of technology.
-
-> 3) Problems of ineptitude.
-
-> All surgical attention had been focused on the first two.
-
-> They had solved the problem of ignorance: the average surgeon now had ten to 15 years of training.
-
-> They had solved the problem of technology: surgeons performed up to 4,000 different procedures and prescribed up to 6,000 drugs.
-
-> But, unlike the aviation industry, they had ignored the third problem.
-
-> The problem that highly skilled people often make basic mistakes.
-
-> In the airline industry, this was covered by checklists.
-
-> Before any pilot takes off, he and his co-pilot run through a checklist.
-
-> "Brakes &mdash; set. Autopilot &mdash; disconnected. Fuel level &mdash; set"
-
-> Double-checking the absolute basics don't get overlooked.
-
-> Gawande recommended checklists before surgical procedures.
-
-> Reading aloud and checking off the basics:
-
-> "Patient's identity. Name and area for procedure. Known allergies"
-
-> At first, surgical staff resisted because it felt demeaning.
-
-> But then the results came in.
-
-> At the end of the trial, death rates across the hospitals tested had fallen by 47 per cent.
-
-> If they had seen that result from any drug or technology, it would have been hailed as a miracle cure.
-
-> But, here, the result came by checking the most basic things.
-
-> **Because the basics were actually the most important of all.**
-
-> It's a normal human reaction to forget the importance of getting the basic things right.
-
-> Human beings get **seduced by complexity**.
+> <br><br>What he discovered was that there are usually three main problems.
+> <br><br>1) Problems of ignorance.
+> <br><br>2) Problems of technology.
+> <br><br>3) Problems of ineptitude.
+> <br><br>All surgical attention had been focused on the first two.
+> <br><br>They had solved the problem of ignorance: the average surgeon now had ten to 15 years of training.
+> <br><br>They had solved the problem of technology: surgeons performed up to 4,000 different procedures and prescribed up to 6,000 drugs.
+> <br><br>But, unlike the aviation industry, they had ignored the third problem.
+> <br><br>The problem that highly skilled people often make basic mistakes.
+> <br><br>In the airline industry, this was covered by checklists.
+> <br><br>Before any pilot takes off, he and his co-pilot run through a checklist.
+> <br><br>"Brakes &mdash; set. Autopilot &mdash; disconnected. Fuel level &mdash; set"
+> <br><br>Double-checking the absolute basics don't get overlooked.
+> <br><br>Gawande recommended checklists before surgical procedures.
+> <br><br>Reading aloud and checking off the basics:
+> <br><br>"Patient's identity. Name and area for procedure. Known allergies"
+> <br><br>At first, surgical staff resisted because it felt demeaning.
+> <br><br>But then the results came in.
+> <br><br>At the end of the trial, death rates across the hospitals tested had fallen by 47 per cent.
+> <br><br>If they had seen that result from any drug or technology, it would have been hailed as a miracle cure.
+> <br><br>But, here, the result came by checking the most basic things.
+> <br><br>**Because the basics were actually the most important of all.**
+> <br><br>It's a normal human reaction to forget the importance of getting the basic things right.
+> <br><br>Human beings get **seduced by complexity**.
 
 Which is exactly what's happening in our industry. We're so hypnotised by complexity, we forget the basics.
 
@@ -167,46 +140,26 @@ We feel that if we put a lot of effort in, then we get a lot of value out but th
 And to demonstrate, I want to share with you a portion of an article I read recently by my friend [Mark Jenkins](http://www.theluckystrike.co.uk/embracing-simplicity/), a designer here in London. It's entitled “[Contribution](https://medium.com/simple-human/contribution-3dff1af38ba4#.nl9814tbr)” and it's a tale of two designers &mdash;** Designer A** and **Designer B**.
 
 > **Designer A** spends an hour of their time making 5 screens because they know they need to design 5 screens. They're not trying to change the world, they achieve what they set out to do.
-
-> **Designer B** takes an entire day to make one screen because they are obsessed with moving pixels, but they are stuck. They can't let go.
-
-> They end up doing less because of their own insecurities about their contribution.
-
-> They create the same thing over and over, they end up with unfinished design(s) or they go right back to the beginning.
-
-> **Designer A** understands that there's no 'perfect'.
-
-> **Designer B** believes 'perfection' exists, their belief of perfect is jaded by their own inability to understand the solution to the problem.
-
-> In some cases, they are making a solution for a non existent problem.
-
-> **Designer A** thinks (differently).
-
-> **Designer B** overthinks.
-
-> **Designer A**'s contribution is greater because they think about the necessary.
-
-> **Designer B**'s contribution is lower because they think about the unnecessary.
-
-> **Designer B** is a blocker. To themselves (and the rest of their team).
-
-> **Designer B** relies on what they know.
-
-> **Designer A** relies on what they don't know.
-
-> **Designer A** releases early to learn. Then goes back to improve.
-
-> **Designer B** releases late. They learn less because they believe they have perfected something, without testing.
-
-> **Designer A** works with context.
-
-> **Designer B** has no context.
-
-> **Designer A** learns.
-
-> **Designer B** thinks they don't have to learn.
-
-> Both A and B are designers. However, there is a HUGE difference between the two of them.
+> <br><br>**Designer B** takes an entire day to make one screen because they are obsessed with moving pixels, but they are stuck. They can't let go.
+> <br><br>They end up doing less because of their own insecurities about their contribution.
+> <br><br>They create the same thing over and over, they end up with unfinished design(s) or they go right back to the beginning.
+> <br><br>**Designer A** understands that there's no 'perfect'.
+> <br><br>**Designer B** believes 'perfection' exists, their belief of perfect is jaded by their own inability to understand the solution to the problem.
+> <br><br>In some cases, they are making a solution for a non existent problem.
+> <br><br>**Designer A** thinks (differently).
+> <br><br>**Designer B** overthinks.
+> <br><br>**Designer A**'s contribution is greater because they think about the necessary.
+> <br><br>**Designer B**'s contribution is lower because they think about the unnecessary.
+> <br><br>**Designer B** is a blocker. To themselves (and the rest of their team).
+> <br><br>**Designer B** relies on what they know.
+> <br><br>**Designer A** relies on what they don't know.
+> <br><br>**Designer A** releases early to learn. Then goes back to improve.
+> <br><br>**Designer B** releases late. They learn less because they believe they have perfected something, without testing.
+> <br><br>**Designer A** works with context.
+> <br><br>**Designer B** has no context.
+> <br><br>**Designer A** learns.
+> <br><br>**Designer B** thinks they don't have to learn.
+> <br><br>Both A and B are designers. However, there is a HUGE difference between the two of them.
 
 And I guess if I wanted to sum this up nicely for you it would be that value only has a value when it's value is valued.
 
