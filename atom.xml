@@ -3,7 +3,7 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-07-23T12:27:21+01:00</updated>
+	<updated>2016-08-09T21:07:50+01:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -720,116 +720,35 @@ space&lt;/a&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Atul Gawande, Professor of Surgery, Harvard Medical School
-This is Atul Gawande. He is the professor of surgery at Harvard Medical School.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The World Health Organisation asked him to help reduce the number of deaths during surgery.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Did we need more training or more technology?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Gawande found they were looking in the wrong place.
-He talked to experts in other high-risk professions, such as aviation.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;What he discovered was that there are usually three main problems.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;1) Problems of ignorance.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;2) Problems of technology.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;3) Problems of ineptitude.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;All surgical attention had been focused on the first two.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;They had solved the problem of ignorance: the average surgeon now had ten to 15 years of training.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;They had solved the problem of technology: surgeons performed up to 4,000 different procedures and prescribed up to 6,000 drugs.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;But, unlike the aviation industry, they had ignored the third problem.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The problem that highly skilled people often make basic mistakes.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;In the airline industry, this was covered by checklists.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Before any pilot takes off, he and his co-pilot run through a checklist.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Brakes — set. Autopilot — disconnected. Fuel level — set”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Double-checking the absolute basics don’t get overlooked.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Gawande recommended checklists before surgical procedures.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Reading aloud and checking off the basics:&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Patient’s identity. Name and area for procedure. Known allergies”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;At first, surgical staff resisted because it felt demeaning.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;But then the results came in.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;At the end of the trial, death rates across the hospitals tested had fallen by 47 per cent.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;If they had seen that result from any drug or technology, it would have been hailed as a miracle cure.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;But, here, the result came by checking the most basic things.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Because the basics were actually the most important of all.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;It’s a normal human reaction to forget the importance of getting the basic things right.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Human beings get &lt;strong&gt;seduced by complexity&lt;/strong&gt;.&lt;/p&gt;
+This is Atul Gawande. He is the professor of surgery at Harvard Medical School.
+&lt;br /&gt;&lt;br /&gt;The World Health Organisation asked him to help reduce the number of deaths during surgery.
+&lt;br /&gt;&lt;br /&gt;Did we need more training or more technology?
+&lt;br /&gt;&lt;br /&gt;Gawande found they were looking in the wrong place.
+He talked to experts in other high-risk professions, such as aviation.
+&lt;br /&gt;&lt;br /&gt;What he discovered was that there are usually three main problems.
+&lt;br /&gt;&lt;br /&gt;1) Problems of ignorance.
+&lt;br /&gt;&lt;br /&gt;2) Problems of technology.
+&lt;br /&gt;&lt;br /&gt;3) Problems of ineptitude.
+&lt;br /&gt;&lt;br /&gt;All surgical attention had been focused on the first two.
+&lt;br /&gt;&lt;br /&gt;They had solved the problem of ignorance: the average surgeon now had ten to 15 years of training.
+&lt;br /&gt;&lt;br /&gt;They had solved the problem of technology: surgeons performed up to 4,000 different procedures and prescribed up to 6,000 drugs.
+&lt;br /&gt;&lt;br /&gt;But, unlike the aviation industry, they had ignored the third problem.
+&lt;br /&gt;&lt;br /&gt;The problem that highly skilled people often make basic mistakes.
+&lt;br /&gt;&lt;br /&gt;In the airline industry, this was covered by checklists.
+&lt;br /&gt;&lt;br /&gt;Before any pilot takes off, he and his co-pilot run through a checklist.
+&lt;br /&gt;&lt;br /&gt;“Brakes — set. Autopilot — disconnected. Fuel level — set”
+&lt;br /&gt;&lt;br /&gt;Double-checking the absolute basics don’t get overlooked.
+&lt;br /&gt;&lt;br /&gt;Gawande recommended checklists before surgical procedures.
+&lt;br /&gt;&lt;br /&gt;Reading aloud and checking off the basics:
+&lt;br /&gt;&lt;br /&gt;“Patient’s identity. Name and area for procedure. Known allergies”
+&lt;br /&gt;&lt;br /&gt;At first, surgical staff resisted because it felt demeaning.
+&lt;br /&gt;&lt;br /&gt;But then the results came in.
+&lt;br /&gt;&lt;br /&gt;At the end of the trial, death rates across the hospitals tested had fallen by 47 per cent.
+&lt;br /&gt;&lt;br /&gt;If they had seen that result from any drug or technology, it would have been hailed as a miracle cure.
+&lt;br /&gt;&lt;br /&gt;But, here, the result came by checking the most basic things.
+&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Because the basics were actually the most important of all.&lt;/strong&gt;
+&lt;br /&gt;&lt;br /&gt;It’s a normal human reaction to forget the importance of getting the basic things right.
+&lt;br /&gt;&lt;br /&gt;Human beings get &lt;strong&gt;seduced by complexity&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Which is exactly what’s happening in our industry. We’re so hypnotised by complexity, we forget the basics.&lt;/p&gt;
@@ -847,87 +766,27 @@ He talked to experts in other high-risk professions, such as aviation.&lt;/p&gt;
 &lt;p&gt;And to demonstrate, I want to share with you a portion of an article I read recently by my friend &lt;a href=&quot;http://www.theluckystrike.co.uk/embracing-simplicity/&quot;&gt;Mark Jenkins&lt;/a&gt;, a designer here in London. It’s entitled “&lt;a href=&quot;https://medium.com/simple-human/contribution-3dff1af38ba4#.nl9814tbr&quot;&gt;Contribution&lt;/a&gt;” and it’s a tale of two designers —&lt;strong&gt; Designer A&lt;/strong&gt; and &lt;strong&gt;Designer B&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Designer A&lt;/strong&gt; spends an hour of their time making 5 screens because they know they need to design 5 screens. They’re not trying to change the world, they achieve what they set out to do.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Designer B&lt;/strong&gt; takes an entire day to make one screen because they are obsessed with moving pixels, but they are stuck. They can’t let go.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;They end up doing less because of their own insecurities about their contribution.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;They create the same thing over and over, they end up with unfinished design(s) or they go right back to the beginning.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Designer A&lt;/strong&gt; understands that there’s no ‘perfect’.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Designer B&lt;/strong&gt; believes ‘perfection’ exists, their belief of perfect is jaded by their own inability to understand the solution to the problem.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;In some cases, they are making a solution for a non existent problem.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Designer A&lt;/strong&gt; thinks (differently).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Designer B&lt;/strong&gt; overthinks.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Designer A&lt;/strong&gt;’s contribution is greater because they think about the necessary.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Designer B&lt;/strong&gt;’s contribution is lower because they think about the unnecessary.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Designer B&lt;/strong&gt; is a blocker. To themselves (and the rest of their team).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Designer B&lt;/strong&gt; relies on what they know.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Designer A&lt;/strong&gt; relies on what they don’t know.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Designer A&lt;/strong&gt; releases early to learn. Then goes back to improve.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Designer B&lt;/strong&gt; releases late. They learn less because they believe they have perfected something, without testing.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Designer A&lt;/strong&gt; works with context.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Designer B&lt;/strong&gt; has no context.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Designer A&lt;/strong&gt; learns.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Designer B&lt;/strong&gt; thinks they don’t have to learn.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Both A and B are designers. However, there is a HUGE difference between the two of them.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Designer A&lt;/strong&gt; spends an hour of their time making 5 screens because they know they need to design 5 screens. They’re not trying to change the world, they achieve what they set out to do.
+&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Designer B&lt;/strong&gt; takes an entire day to make one screen because they are obsessed with moving pixels, but they are stuck. They can’t let go.
+&lt;br /&gt;&lt;br /&gt;They end up doing less because of their own insecurities about their contribution.
+&lt;br /&gt;&lt;br /&gt;They create the same thing over and over, they end up with unfinished design(s) or they go right back to the beginning.
+&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Designer A&lt;/strong&gt; understands that there’s no ‘perfect’.
+&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Designer B&lt;/strong&gt; believes ‘perfection’ exists, their belief of perfect is jaded by their own inability to understand the solution to the problem.
+&lt;br /&gt;&lt;br /&gt;In some cases, they are making a solution for a non existent problem.
+&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Designer A&lt;/strong&gt; thinks (differently).
+&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Designer B&lt;/strong&gt; overthinks.
+&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Designer A&lt;/strong&gt;’s contribution is greater because they think about the necessary.
+&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Designer B&lt;/strong&gt;’s contribution is lower because they think about the unnecessary.
+&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Designer B&lt;/strong&gt; is a blocker. To themselves (and the rest of their team).
+&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Designer B&lt;/strong&gt; relies on what they know.
+&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Designer A&lt;/strong&gt; relies on what they don’t know.
+&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Designer A&lt;/strong&gt; releases early to learn. Then goes back to improve.
+&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Designer B&lt;/strong&gt; releases late. They learn less because they believe they have perfected something, without testing.
+&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Designer A&lt;/strong&gt; works with context.
+&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Designer B&lt;/strong&gt; has no context.
+&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Designer A&lt;/strong&gt; learns.
+&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Designer B&lt;/strong&gt; thinks they don’t have to learn.
+&lt;br /&gt;&lt;br /&gt;Both A and B are designers. However, there is a HUGE difference between the two of them.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;And I guess if I wanted to sum this up nicely for you it would be that value only has a value when it’s value is valued.&lt;/p&gt;
