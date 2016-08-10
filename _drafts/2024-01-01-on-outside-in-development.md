@@ -5,8 +5,6 @@ date:   2015-01-01 09:00:01
 categories: todo
 ---
 
-This needs a lot of work
-
 As a Front-end developer I find myself cosily positioned between UX design and Backend development, however, the wholistic picture is a little more complicated. In a (dare I say it) Agile environment, the entire team are involved across several aspects of the project delivery process, which of course includes me. Why am I telling you this? Because I want to talk about Outside-in Development in terms of *people* as well as code. Whilst team members have different disciplines, we should all be working towards the single goal of *pleasing the user*.
 
 If the user is *pleased*, then they love the product; consume it; buy the widget etc. And all software development should, for the most part, start with this perspective; the *Outside-in* perspective. Consider the opposite approach. If you're solving problems buried in the underlying structures first, then it is *very* likely you and your team are solving problems that don't exist, which most certainly means you're not pleasing the user or anyone else for that matter.
@@ -20,9 +18,7 @@ In a totally unrealistic, distilled, Waterfall version of an example development
 3. Test Automation supports the Product
 4. Front-end supports the Test Automation (in the form of Acceptance tests perhaps)
 5. Backend supports the Front-end
-6. APIs support the Backend
-
-...and so it continues until you have struck the very center of the earth, where you will find the lowest level component that is barely recogniseable as even a thing, and it has zero dependencies.
+6. DB, 3rd party APIs etc, support the Backend
 
 From an application perspective, the most outer edge starts with Front-end. Every problem that needs solving can be either achieved on the Front-end or pushed back down to the level below. If you're not building a static website, then you're building a dynamic website. And if you're building a dynamic website, the HTML needs to contain content that resides elsewhere. This could be an API, database, file store, cookies, etc. As a Front-end developer, I am not too concerned about the finer details of those layers, so that complexity is abstracted away nicely, in what the industry calls a *View Model* - a Model that is appropriately designed to populate the View. I don't wish to have complex, business logic in my Views, which is why Logic-less templating has become popular, as an answer on Stackoverflow indicates [[0](#ref0)]:
 

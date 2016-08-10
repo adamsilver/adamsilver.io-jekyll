@@ -9,10 +9,6 @@ permalink: /recommends/
 
 On this page I recommend the very best and timeless articles, books and videos related to User Experience, Business and Front-end Web development.
 
-## Video about Mortgage Driven Development
-
-[https://vimeo.com/39660655](Video)
-
 ## People / Process / Thinking / Attitude / Team / Business
 
 * [Essentialism: The Disciplined Pursuit of Less](http://gregmckeown.com/essentialism-the-disciplined-pursuit-of-less/)
