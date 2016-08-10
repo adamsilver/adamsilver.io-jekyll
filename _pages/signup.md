@@ -5,8 +5,6 @@ title: Sign up for updates
 permalink: /signup/
 ---
 
-# I am writing my second book...
+# Sign up
 
-I am obsessed with forms. And because they are such an important part of a friction-free web experience, I have decided to write a book about how to make them great.
-
-I will still be writing [articles](/articles/) as per normal, but I will also keep you posted on book developments and the occasional free chapter.
+I am writing a book about how to design super-friendly forms. If you'd like to receive free chapters along the way (as well as my usual articles), just fill out the form below:

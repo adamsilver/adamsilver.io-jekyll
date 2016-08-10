@@ -101,6 +101,17 @@ hr {
 	font-family: Lato, arial, sans-serif;
 }
 
+.face {
+	margin-bottom: 40px;
+	border-radius: 50%;
+    overflow: hidden;
+    width: 85px;
+    height: 85px;
+    display: block;
+	margin-left: 20px;
+	border: 10px solid #fafafa;
+}
+
 /**********************************************************
 * Article
 **********************************************************/
@@ -582,26 +593,21 @@ hr {
 **********************************************************/
 
 .signUpForm {
-	margin: 0 20px 40px;
-	background-color: #fafafa;
-	padding: 25px 20px;
 	max-width: 640px;
 	margin: 0 auto 40px;
+	padding: 0 20px;
 }
 
 @media(min-width: 800px) {
 	.signUpForm {
 		margin: 0 auto 40px;
-		background-color: #fafafa;
-		padding: 40px;
-		max-width: 580px;
 	}
 }
 
 .signUpForm-description {
 	font-size: 1.6em;
 	line-height: 1.8;
-	margin-bottom: 20px;
+	margin-bottom: 5px;
 }
 
 @media(min-width: 600px) {
@@ -614,37 +620,31 @@ hr {
 	font-size: 1.6em;
 	width: 100%;
 	padding: 10px 10px;
-	display: inline-block;
 	margin-right: 5px;
-	margin-bottom: 5px;
+	margin-bottom: 25px;
 	box-sizing: border-box;
 	background-color: #fff;
-	border: 1px solid #ddd;
+	border: 1px solid #333;
+	max-width: 288px;
+	display: block;
 }
 
-@media(min-width: 660px) {
-	.signUpForm-email {
-		max-width: 328px;
-	}
+.signUpForm-email:focus {
+	outline-color: #0074D9;
+	outline-width: 5px;
 }
 
 .signUpForm-button {
 	font-size: 1.5em;
-	padding: 11px 35px;
-	display: inline-block;
+	padding: 15px 35px;
+	display: block;
 	background-color: #0074D9;
 	color: #fff;
 	border: none;
-	width: 100%;
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 0.03em;
-}
-
-@media(min-width: 660px) {
-	.signUpForm-button {
-		width: auto;
-	}
+	border-radius: 8px;
 }
 
 .signUpForm-button:hover {
