@@ -44,26 +44,24 @@ renders differently under three scenarios:
 Consider the following template (built in
 [Swig](http://paularmstrong.github.io/swig/)):
 
-  {% 
-   isLoggedIn %}
-    {% 
-   firstName && lastName %}
-      <div class="welcomeMessage">
-        <p>Hello {{firstName}} {{lastName}}</p>
-        <a href="{{signOutLink.href}}">{{signOutLink.text}}</a>
-      </div>
-    {% else %}
-      <div class="welcomeMessage">
-        <p>Welcome back</p>
-        <a href="{{signOutLink.href}}">{{signOutLink.text}}</a>
-      </div>
-    {% endif %}
-  {% else %}
-     <div class="welcomeMessage">
-        <p>Welcome</p>
-        <a href="{{signInLink.href}}">{{signInLink.text}}</a>
-     </div>
-  {% endif %}
+	{% if isLoggedIn %}
+	  {% if firstName && lastName %}
+	    <div class="welcomeMessage">
+	      <p>Hello {{firstName}} {{lastName}}</p>
+	      <a href="{{signOutLink.href}}">{{signOutLink.text}}</a>
+	    </div>
+	  {% else %}
+	    <div class="welcomeMessage">
+	      <p>Welcome back</p>
+	      <a href="{{signOutLink.href}}">{{signOutLink.text}}</a>
+	    </div>
+	  {% endif %}
+	{% else %}
+	   <div class="welcomeMessage">
+	      <p>Welcome</p>
+	      <a href="{{signInLink.href}}">{{signInLink.text}}</a>
+	   </div>
+	{% endif %}
 
 Forget for the moment that you might be able to factor out the nested
 if-statement — and, that you could reuse the HTML by abstracting it into a
@@ -117,9 +115,9 @@ Taking the design as follows:
 
 The View-Model would be:
 
-  { 
-      message: "Hello Adam Silver", 
-      link: { href: "/sign-out", text: "Sign out" } 
+  {
+      message: "Hello Adam Silver",
+      link: { href: "/sign-out", text: "Sign out" }
   }
 
 And the template would be:
@@ -153,27 +151,26 @@ message when the the user is authenticated and has supplied their name:
 
 When the message should be shown, the View-Model would be:
 
-  { 
-      showMessage: true, 
-      message: "Hello Adam Silver", 
-      link: { href: '/sign-out', text: 'Sign out' } 
+  {
+      showMessage: true,
+      message: "Hello Adam Silver",
+      link: { href: '/sign-out', text: 'Sign out' }
   }
 
 When the message is hidden the View-Model would be:
 
-  { 
+  {
       showMessage: false
   }
 
 And the template would be:
 
-  {% 
-   showMessage %}
-      <div class="welcomeMessage">
-          <p>Welcome</p>
-          <a href="{{signInLink.href}}">{{signInLink.text}}</a>
-      </div>
-  {% endif %}
+	{% if showMessage %}
+	    <div class="welcomeMessage">
+	        <p>Welcome</p>
+	        <a href="{{signInLink.href}}">{{signInLink.text}}</a>
+	    </div>
+	{% endif %}
 
 Here the explicit boolean property determines whether it’s shown. Don’t be
 tempted to expose lower-level logic that the template uses to infer visibility.
@@ -185,7 +182,7 @@ or array. As an example, let’s display a list of restaurants by area.
 
 The View-Model would be:
 
-  { 
+  {
       restaurants: [{
           name: "Pizza House",
           address: "..."
@@ -194,52 +191,44 @@ The View-Model would be:
 
 And the template would be:
 
-  <div class="restaurants">
-      {% for restaurant in restaurants %}
-          <div class=”restaurant”>
-              <h2>{{
-  .name}}</h2>
-              <p>{{
-  .address}}</h2>
-          </div>
-      {% endfor %} 
-  </div>
+	<div class="restaurants">
+	    {% for restaurant in restaurants %}
+	        <div class=”restaurant”>
+	            <h2>{{restaurant.name}}</h2>
+	            <p>{{restaurant.address}}</h2>
+	        </div>
+	    {% endfor %}
+	</div>
 
 Often with loops, you will only show the items if there are items in the
 collection. You may be tempted to interrogate the size of the collection in the
 template as follows:
 
-  {% 
-   restaurants.length > 0 %}
-     <div class="restaurants">
-         {% for restaurant in restaurants %}
-             <div class=”restaurant”>
-                 <h2>{{
-  .name}}</h2>
-                 <p>{{
-  .address}}</h2>
-             </div>
-         {% endfor %} 
-     </div>
-  {% endif %}
+	{% if restaurants.length > 0 %}
+	   <div class="restaurants">
+	       {% for restaurant in restaurants %}
+	           <div class=”restaurant”>
+	               <h2>{{restaurant.name}}</h2>
+	               <p>{{restaurant.address}}</h2>
+	           </div>
+	       {% endfor %}
+	   </div>
+	{% endif %}
 
 Whilst this isn’t the end of the world, it can lead to maintenance problems.
 Instead, continue to use the approach used in the previous example by explicitly
 checking a boolean property *before* iterating over the loop:
 
-  {% 
-   showRestaurants %}
-     <div class="restaurants">
-         {% for restaurant in restaurants %}
-           <div class=”restaurant”>
-                 <h2>{{
-  .name}}</h2>
-                 <p>{{
-  .address}}</h2>
-             </div>
-         {% endfor %}
-     </div>
-  {% endif%}
+	{% if showRestaurants %}
+	   <div class="restaurants">
+	       {% for restaurant in restaurants %}
+	         <div class=”restaurant”>
+	               <h2>{{restaurant.name}}</h2>
+	               <p>{{restaurant.address}}</h2>
+	           </div>
+	       {% endfor %}
+	   </div>
+	{% endif%}
 
 This way templates are consistent, and the logic behind the conditionality can
 evolve over time without having to change the template — perhaps the restaurants
