@@ -564,9 +564,6 @@ hr {
 	border: 1px solid #0074D9;
 	font-weight: bold;
 	letter-spacing: 0.04em;
-	width: 150px;
-	text-align: center;
-	margin: 0 auto;
 	color: #0074D9;
 }
 
@@ -593,7 +590,7 @@ hr {
 **********************************************************/
 
 .signUpForm {
-	max-width: 640px;
+	max-width: 680px;
 	margin: 0 auto 40px;
 	padding: 0 20px;
 }
@@ -644,9 +641,37 @@ hr {
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 0.03em;
-	border-radius: 8px;
+	border-radius: 3px;
 }
 
 .signUpForm-button:hover {
 	background-color: #0267BF;
+}
+
+.next {
+	margin: 0 20px 30px;
+	overflow: hidden;
+}
+
+.next-readButton:link,
+.next-readButton:visited,
+.next-signUpButton:link,
+.next-signUpButton:visited {
+	border-radius: 30px;
+	text-transform: uppercase;
+	padding: 17px 30px;
+	font-size: 1.3em;
+	border: 1px solid #0074D9;
+	font-weight: bold;
+	letter-spacing: 0.04em;
+	color: #0074D9;
+	display: inline-block;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+.next-readButton:hover,
+.next-signUpButton:hover {
+	background-color: #0074D9;
+	color: #fff;
 }

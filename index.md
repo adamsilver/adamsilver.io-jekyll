@@ -7,11 +7,7 @@ id: home
   	<img src="/assets/img/adam2.jpg" alt="Adam Photo" width="85" height="85">
 </div>
 
-# Hey, I'm Adam Silver and I make the web simple and human. I specialise in [UX](/articles/hello-ux-designer/), [Front-end Engineering](/articles/the-role-of-the-front-end-developer/) and [Strategy](/articles/how-we-cut-our-mvp-in-half-to-launch-kidly/). I am based in London.
-
-## Summary
-
-I love to design and build delightful experiences on the web for [everyone](/articles/the-role-of-the-front-end-developer/#accessibility). This is made possible by designing humanised and [simple experiences]({% post_url 2016-03-06-embracing-simplicity %}) that [embrace the web]({% post_url 2015-10-09-designing-honestly-for-the-web %}). I am at my happiest when I work alongside other people to help solve *real* problems.
+# Hey, I'm Adam Silver. I strive to make the web [simple]({% post_url 2016-03-06-embracing-simplicity %}) and human for [everyone](/articles/the-role-of-the-front-end-developer/#accessibility). I specialise in [UX](/articles/hello-ux-designer/), [Front-end Engineering](/articles/the-role-of-the-front-end-developer/) and [Strategy](/articles/how-we-cut-our-mvp-in-half-to-launch-kidly/).
 
 ## Speaking
 
@@ -23,8 +19,13 @@ In addition to this blog, I write for [Simple=Human](http://medium.com/simple-hu
 
 ## Author
 
-I wrote a book about writing maintainable CSS called [MaintainableCSS](http://maintainablecss.com) (creative I know) and I am working on my [second book](/signup/) which is all about forms.
+I wrote a book about writing maintainable CSS called [MaintainableCSS](http://maintainablecss.com) (creative I know). Now, I am working on my [second book](/signup/) about how to design user-friendly forms on the web.
 
-## Interested in working with me?
+## Need help with your project?
 
-[Get in touch](mailto:adambsilver+project@gmail.com) so we can discuss your project.
+[Email me](mailto:adambsilver+project@gmail.com) so we can discuss your project.
+
+<!-- <div class="next">
+	<a class="next-readButton" href="/articles/">Read an article</a>
+	<a class="next-signUpButton" href="/signup/">Sign up to newsletter</a>
+</div> -->
