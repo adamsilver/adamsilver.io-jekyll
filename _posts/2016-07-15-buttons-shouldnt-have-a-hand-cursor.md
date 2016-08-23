@@ -35,6 +35,16 @@ Affordance is provided by the way something looks regardless of the cursor. Reme
 
 This is why, for example, [checkboxes are never round](http://danieldelaney.net/checkboxes) (and radios are never square). This is also why links are typically underlined. This is why links do, in fact, have a hand cursor.
 
+## What the authorities say
+
+[Microsoft’s Design Guidelines](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742466%28v=vs.85%29.aspx) talk about weak affordance:
+
+> Text and graphics links use a hand […] pointer […] because of their weak affordance. While links may have other visual clues to indicate that they are links (such as underlines and special placement), displaying the hand pointer on hover is the definitive indication of a link.
+
+> To avoid confusion, it is imperative not to use the hand pointer for other purposes. For example, command buttons already have a strong affordance, so they don’t need a hand pointer. The hand pointer must mean “this target is a link” and nothing else.
+
+[Apple’s Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/Pointers.html) explain that the hand cursor should be used when “the content is a URL link”. [W3C User Interface Guidelines](https://www.w3.org/TR/CSS21/ui.html#propdef-cursor) says the same thing again with “The cursor is a pointer that indicates a link”.
+
 ## The hand cursor is for links
 
 The hand (and often underlined text) signifies a link. Links are not buttons. Links came along with the web. To help users understand that they are different, they are given the hand cursor. It serves as an extra clue. Here’s why:
@@ -53,7 +63,5 @@ The hand cursor is reserved for links. This is because they are unique in their 
 Links have always been handled this way since the web came along — this is the convention of the web that you need not innovate on. You can rest easy knowing that browsers have you covered. This leaves you and your team to solve real problems.
 
 <!--
-
 http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-button-is-not-a-hand-pointer
-
 -->
