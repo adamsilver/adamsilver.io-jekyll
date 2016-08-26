@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en">
+	<head>
+	    <title>Developing better templates with an outside-in approach | Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
+	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+
+<link rel="apple-touch-icon" sizes="57x57" href="http://adamsilver.io/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://adamsilver.io/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://adamsilver.io/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://adamsilver.io/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://adamsilver.io/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://adamsilver.io/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://adamsilver.io/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://adamsilver.io/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://adamsilver.io/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="http://adamsilver.io/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="http://adamsilver.io/manifest.json">
+<link rel="mask-icon" href="http://adamsilver.io/safari-pinned-tab.svg" color="#001f3f">
+<meta name="msapplication-TileColor" content="#001F3F">
+<meta name="msapplication-TileImage" content="http://adamsilver.io/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+
+
+	<meta content="Developing better templates with an outside-in approach" property="og:title">
+
+
+
+	<meta property="og:description" content="Hello, I am Adam Silver, I specialise in UX, Front-end Engineering and Strategy. I help companies and people make things simple and human. Based in London.">
+
+
+<meta property="og:url" content="http://adamsilver.io/articles/developing-better-templates-with-an-outside-in-approach/">
+<meta property="og:site_name" content="Adamsilver.io">
+<meta property="og:image" content="http://adamsilver.io/assets/img/card.png">
+<meta property="og:image:width" content="181">
+<meta property="og:image:height" content="181">
+
+<meta name="twitter:card" content="summary">
+
+
+	<meta name="twitter:description" content="Hello, I am Adam Silver, I specialise in UX, Front-end Engineering and Strategy. I help companies and people make things simple and human. Based in London.">
+
+
+<meta name="twitter:title" content="Developing better templates with an outside-in approach -  Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.">
+
+
+	<meta content="Developing better templates with an outside-in approach" name="twitter:title">
+
+
+<meta name="twitter:site" content="@adambsilver">
+<meta name="twitter:creator" content="@adambsilver">
+<meta property="twitter:image" content="http://adamsilver.io/assets/img/card.jpg">
+
+
+	<meta itemprop="description" content="Hello, I am Adam Silver, I specialise in UX, Front-end Engineering and Strategy. I help companies and people make things simple and human. Based in London.">
+
+
+<link rel="stylesheet" href="/assets/css/main.min.2b290017.css" media="all">
+
+<!--[if IE 8]>
+<link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
+<![endif]-->
+
+<!--[if IE 7]>
+<link rel="stylesheet" href="/assets/css/ie7.min.d41d8cd9.css" media="all">
+<![endif]-->
+
+
+<!--[if IE 6]>
+<link rel="stylesheet" href="/assets/css/ie6.min.2d22a25b.css" media="all">
+<![endif]-->
+
+
+<link rel="canonical" href="http://adamsilver.io/articles/developing-better-templates-with-an-outside-in-approach/">
+<link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47311666-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	</head>
+	<body>
+	    <div class="nav">
+	<ul>
+		<li><a class="" href="/">Home</a></li>
+		<li><a class="nav-active" href="/articles/">Articles</a></li>
+		<li><a class="" href="/about/">About</a></li>
+		<li><a class="" href="/signup/">Sign up</a></li>
+	</ul>
+</div>
+	    <div class="mainContent">
+			<h1>Developing better templates with an outside-in approach</h1>
+	        <p>When we design websites, we start with a user problem and translate that into a set of screens and flows.</p>
+
+<p>Next, we translate these screens into front-end code. We look at the best way to split up the design into pages,
+<a href="http://maintainablecss.com/chapters/modules/">modules</a> and components.</p>
+
+<p>After this, we integrate data and logic into a template to be displayed to the user on-screen. The object that contains this data and logic is called a
+<em>View-Model</em> — it’s a Model designed <em>for</em> the View.</p>
+
+<p>You can’t design a View-Model without first understanding the requirements of the View itself. And you can’t understand the requirements of the View without first understanding the visual and interaction design requirements et cetera.</p>
+
+<p>Sometimes, a View-Model is poorly designed, neglected or designed from the
+inside-out. This often means it exposes too much low-level logic — something
+which makes a template unnecessarily difficult to work with. This is best
+demonstrated with a simple example.</p>
+
+<p>Take a <em>Welcome Message</em> module: it contains a piece of text and a link, and it renders differently under three scenarios:</p>
+
+<ol>
+  <li>The user is anonymous.</li>
+  <li>The user is authenticated and has supplied their name.</li>
+  <li>The user is authenticated but hasn’t supplied their name.</li>
+</ol>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/templates/anon.png" alt="Anonymous user" width="100%" style="max-width: 400px;" />
+		<figcaption>Anonymous user</figcaption>
+	</figure>
+</div>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/templates/recognised-with-name.png" alt="Authenticated with a name" width="100%" style="max-width: 400px;" />
+		<figcaption>Authenticated with a name</figcaption>
+	</figure>
+</div>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/templates/recognised-no-name.png" alt="Authenticated without a name" width="100%" style="max-width: 400px;" />
+		<figcaption>Authenticated without a name</figcaption>
+	</figure>
+</div>
+
+<p>Consider the following template (built in
+<a href="http://paularmstrong.github.io/swig/">Swig</a>):</p>
+
+<pre><code>{% if isLoggedIn %}
+    {% if firstName &amp;&amp; lastName %}
+        &lt;div class="welcomeMessage"&gt;
+            &lt;p&gt;Hello {{firstName}} {{lastName}}&lt;/p&gt;
+            &lt;a href="{{signOutLink.href}}"&gt;{{signOutLink.text}}&lt;/a&gt;
+        &lt;/div&gt;
+    {% else %}
+        &lt;div class="welcomeMessage"&gt;
+            &lt;p&gt;Welcome back&lt;/p&gt;
+            &lt;a href="{{signOutLink.href}}"&gt;{{signOutLink.text}}&lt;/a&gt;
+        &lt;/div&gt;
+    {% endif %}
+{% else %}
+    &lt;div class="welcomeMessage"&gt;
+        &lt;p&gt;Welcome&lt;/p&gt;
+        &lt;a href="{{signInLink.href}}"&gt;{{signInLink.text}}&lt;/a&gt;
+    &lt;/div&gt;
+{% endif %}
+</code></pre>
+
+<p>Forget for the moment that you might be able to factor out the nested
+if-statement — and, that you could reuse the HTML by abstracting it into a
+partial — this template is overly <em>complicated</em>.</p>
+
+<p>It exposes low-level information that the template does not need to know in
+order to do its job. It’s been designed from little pieces, from the inside-out.</p>
+
+<p>For example, there is nothing in the design that requires knowledge of the first name and last name separately (as they are styled the same) and there is no need to determine if the user is authenticated.</p>
+
+<p>Instead, consider the following template:</p>
+
+<pre><code>&lt;div class=”welcomeMessage”&gt;
+    &lt;p&gt;{{message}}&lt;/p&gt;
+    &lt;a href=”{{link.href}}”&gt;{{link.text}}&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>The View-Model has been designed from the outside-in; it contains just what the template needs in order to render itself. And because there is always a message and a link, there is no need for conditionality. This template is dumb-by-design, and leaves complex logic to reside somewhere more appropriate in the stack.</p>
+
+<p>In comparison to the original, this template is just four lines compared to 18 and consists mostly of HTML, making this template much easier to work with. As an added bonus, the logic that no-longer resides in the template can be unit-tested. For example, we can now test that the message is “Welcome <name>” when the user is authenticated.</name></p>
+
+<p>This gives a glimpse as to the impact a well-designed View-Model can have on the maintainability of a template.</p>
+
+<p>With this in-mind let’s have a look at the common scenarios we need to design for when developing a template.</p>
+
+<h3 id="when-a-module-has-dynamic-properties">1. When a module has dynamic properties</h3>
+
+<p>When data or text is dynamic it will reside somewhere else in a system e.g. a database. In fact, even if it is <em>static</em> it may still reside somewhere else for internationalisation or maintenance purposes.</p>
+
+<p><strong>What’s important is that the template should not concern itself with where
+this data comes from — it’s just information exposed via the View-Model.</strong></p>
+
+<p>Taking the design as follows:</p>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/templates/recognised-with-name.png" alt="Authenticated with a name" width="100%" style="max-width: 400px;" />
+		<figcaption>Authenticated with a name</figcaption>
+	</figure>
+</div>
+
+<p>The View-Model would be:</p>
+
+<pre><code>{
+  message: "Hello Adam Silver",
+  link: { href: "/sign-out", text: "Sign out" }
+}
+</code></pre>
+
+<p>And the template would be:</p>
+
+<pre><code>&lt;div class=”welcomeMessage”&gt;
+  &lt;p&gt;{{message}}&lt;/p&gt;
+  &lt;a href=”{{link.href}}”&gt;{{link.text}}&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>The message consists of text that may ultimately be retrieved from resource
+files and a database. Perhaps the link’s href property could come from a routes configuration object etc.</p>
+
+<p>Regardless, the template doesn’t care — it leaves this responsibility to other parts of the system. The View-Model is lean and provides just enough information for the View to render itself.</p>
+
+<h3 id="when-a-module-has-conditionality">2. When a module has conditionality</h3>
+
+<p>Conditionally showing a portion of a View involves display-logic. The simplest of its type is based on a condition: if-this-show-that.</p>
+
+<p><strong>The important thing to remember, is that a template shouldn’t have to know why something is shown or not. It should just know whether it should.</strong></p>
+
+<p>We’ll modify the original requirements so that it <em>only</em> displays a welcome
+message when the the user is authenticated and has supplied their name:</p>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/templates/recognised-with-name.png" alt="Authenticated and name is supplied" width="100%" style="max-width: 400px;" />
+		<figcaption>Authenticated and name is supplied</figcaption>
+	</figure>
+</div>
+
+<p>When the message should be shown, the View-Model would be:</p>
+
+<pre><code>{
+  showMessage: true,
+  message: "Hello Adam Silver",
+  link: { href: '/sign-out', text: 'Sign out' }
+}
+</code></pre>
+
+<p>When the message is hidden the View-Model would be:</p>
+
+<pre><code>{
+  showMessage: false
+}
+</code></pre>
+
+<p>And the template would be:</p>
+
+<pre><code>{% if showMessage %}
+  &lt;div class="welcomeMessage"&gt;
+    &lt;p&gt;Welcome&lt;/p&gt;
+    &lt;a href="{{signInLink.href}}"&gt;{{signInLink.text}}&lt;/a&gt;
+  &lt;/div&gt;
+{% endif %}
+</code></pre>
+
+<p>Here the explicit boolean property determines whether it’s shown. Don’t be
+tempted to expose lower-level logic that the template uses to infer visibility.</p>
+
+<h3 id="when-showing-a-collection-of-items">3. When showing a collection of items</h3>
+
+<p>When showing a number of similar items you will need to loop over a collection or array. As an example, let’s display a list of restaurants by area.</p>
+
+<p>The View-Model would be:</p>
+
+<pre><code>{
+  restaurants: [{
+      name: "Pizza House",
+      address: "..."
+  }, ...]
+}
+</code></pre>
+
+<p>And the template would be:</p>
+
+<pre><code>&lt;div class="restaurants"&gt;
+  {% for restaurant in restaurants %}
+    &lt;div class=”restaurant”&gt;
+      &lt;h2&gt;{{restaurant.name}}&lt;/h2&gt;
+      &lt;p&gt;{{restaurant.address}}&lt;/h2&gt;
+    &lt;/div&gt;
+  {% endfor %}
+&lt;/div&gt;
+</code></pre>
+
+<p>Often with loops, you will only show the items if there are items in the
+collection. You may be tempted to interrogate the size of the collection in the template as follows:</p>
+
+<p>Whilst this isn’t the end of the world, it can lead to maintenance problems.
+Instead, continue to use the approach used in the previous example by explicitly checking a boolean property <em>before</em> iterating over the loop:</p>
+
+<p>This way templates are consistent, and the logic behind the conditionality can evolve over time without having to change the template — perhaps the restaurants are only shown to authenticated users for example.</p>
+
+<h3 id="summary">Summary</h3>
+
+<p>Ultimately, templates should be easy-to-read and consist mostly of HTML and just enough information in order to support the display-logic. They shouldn’t have to infer display-logic from other properties and they shouldn’t have to care where this data comes from such as a database or cookie.</p>
+
+<p>Architecting a system is difficult and sometimes that difficulty bleeds out into the template. This creates problems for the developers who maintain them (mostly front-end developers).</p>
+
+<p>This is why logic-less templates are popular. They attempt to enforce the
+separation of concerns between back-end and front-end. You don’t need to use a logic-less template engine to reap the benefits. You can architect your View-Models in much the same way regardless.</p>
+
+<p>Designing a View-Model <em>for</em> the View allows more logic to be unit-tested and drastically improves the maintainability of your templates.</p>
+
+	    </div>
+		<div class="share">
+	<a class="share-button" href="https://twitter.com/share?source=tweetbutton&text=&quot;Developing better templates with an outside-in approach&quot;&via=adambsilver&url=http://adamsilver.io/articles/developing-better-templates-with-an-outside-in-approach/&hashtags=development,html">Share on Twitter</a>
+</div>
+		
+	<div class="nowRead">
+		<p>Now read: <a href="/articles/buttons-shouldnt-have-a-hand-cursor/">Buttons shouldn't have a hand cursor</a></p>
+	</div>
+
+		<div class="signUpHero">
+	<div class="signUpHero-inner">
+		<h2 class="signUpHero-heading">Sign up for my newsletter</h2>
+		<p class="signUpHero-description">If you hate learning about the best ways to design and develop human-friendly websites, you should refrain from my <a href="/signup">newsletter</a>.</p>
+	</div>
+</div>
+		<div class="footer">
+	<p>&copy; 2016.
+		<a href="/team/">Team</a> |
+		<a href="http://www.twitter.com/adambsilver/">Twitter</a> |
+		<a href="http://www.github.com/adamsilver/">Github</a> |
+		<a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></p>
+	<!-- <ul>
+		<li></li>
+		<li><a href="http://medium.com/@adamsilver">Medium</a></li>
+		<li><a href="http://www.github.com/adamsilver/">Github</a></li>
+		<li><a href="http://www.twitter.com/adambsilver/">Twitter</a></li>
+		<li><a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a></li>
+	</ul> -->
+</div>
+	</body>
+</html>

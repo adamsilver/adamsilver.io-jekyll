@@ -3,12 +3,238 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-08-19T12:54:41+01:00</updated>
+	<updated>2016-08-26T17:27:41+01:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
 	</author>
 
+	
+		<entry>
+			<title>Developing better templates with an outside-in approach</title>
+			<link href="http://adamsilver.io/articles/developing-better-templates-with-an-outside-in-approach/"/>
+			<updated>2016-07-15T10:00:01+01:00</updated>
+			<id>http://adamsilver.io/articles/developing-better-templates-with-an-outside-in-approach</id>
+			<content type="html">&lt;p&gt;When we design websites, we start with a user problem and translate that into a set of screens and flows.&lt;/p&gt;
+
+&lt;p&gt;Next, we translate these screens into front-end code. We look at the best way to split up the design into pages,
+&lt;a href=&quot;http://maintainablecss.com/chapters/modules/&quot;&gt;modules&lt;/a&gt; and components.&lt;/p&gt;
+
+&lt;p&gt;After this, we integrate data and logic into a template to be displayed to the user on-screen. The object that contains this data and logic is called a
+&lt;em&gt;View-Model&lt;/em&gt; — it’s a Model designed &lt;em&gt;for&lt;/em&gt; the View.&lt;/p&gt;
+
+&lt;p&gt;You can’t design a View-Model without first understanding the requirements of the View itself. And you can’t understand the requirements of the View without first understanding the visual and interaction design requirements et cetera.&lt;/p&gt;
+
+&lt;p&gt;Sometimes, a View-Model is poorly designed, neglected or designed from the
+inside-out. This often means it exposes too much low-level logic — something
+which makes a template unnecessarily difficult to work with. This is best
+demonstrated with a simple example.&lt;/p&gt;
+
+&lt;p&gt;Take a &lt;em&gt;Welcome Message&lt;/em&gt; module: it contains a piece of text and a link, and it renders differently under three scenarios:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The user is anonymous.&lt;/li&gt;
+  &lt;li&gt;The user is authenticated and has supplied their name.&lt;/li&gt;
+  &lt;li&gt;The user is authenticated but hasn’t supplied their name.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/templates/anon.png&quot; alt=&quot;Anonymous user&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;figcaption&gt;Anonymous user&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated with a name&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;figcaption&gt;Authenticated with a name&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/templates/recognised-no-name.png&quot; alt=&quot;Authenticated without a name&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;figcaption&gt;Authenticated without a name&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Consider the following template (built in
+&lt;a href=&quot;http://paularmstrong.github.io/swig/&quot;&gt;Swig&lt;/a&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{% if isLoggedIn %}
+    {% if firstName &amp;amp;&amp;amp; lastName %}
+        &amp;lt;div class=&quot;welcomeMessage&quot;&amp;gt;
+            &amp;lt;p&amp;gt;Hello {{firstName}} {{lastName}}&amp;lt;/p&amp;gt;
+            &amp;lt;a href=&quot;{{signOutLink.href}}&quot;&amp;gt;{{signOutLink.text}}&amp;lt;/a&amp;gt;
+        &amp;lt;/div&amp;gt;
+    {% else %}
+        &amp;lt;div class=&quot;welcomeMessage&quot;&amp;gt;
+            &amp;lt;p&amp;gt;Welcome back&amp;lt;/p&amp;gt;
+            &amp;lt;a href=&quot;{{signOutLink.href}}&quot;&amp;gt;{{signOutLink.text}}&amp;lt;/a&amp;gt;
+        &amp;lt;/div&amp;gt;
+    {% endif %}
+{% else %}
+    &amp;lt;div class=&quot;welcomeMessage&quot;&amp;gt;
+        &amp;lt;p&amp;gt;Welcome&amp;lt;/p&amp;gt;
+        &amp;lt;a href=&quot;{{signInLink.href}}&quot;&amp;gt;{{signInLink.text}}&amp;lt;/a&amp;gt;
+    &amp;lt;/div&amp;gt;
+{% endif %}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Forget for the moment that you might be able to factor out the nested
+if-statement — and, that you could reuse the HTML by abstracting it into a
+partial — this template is overly &lt;em&gt;complicated&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;It exposes low-level information that the template does not need to know in
+order to do its job. It’s been designed from little pieces, from the inside-out.&lt;/p&gt;
+
+&lt;p&gt;For example, there is nothing in the design that requires knowledge of the first name and last name separately (as they are styled the same) and there is no need to determine if the user is authenticated.&lt;/p&gt;
+
+&lt;p&gt;Instead, consider the following template:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=”welcomeMessage”&amp;gt;
+    &amp;lt;p&amp;gt;{{message}}&amp;lt;/p&amp;gt;
+    &amp;lt;a href=”{{link.href}}”&amp;gt;{{link.text}}&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The View-Model has been designed from the outside-in; it contains just what the template needs in order to render itself. And because there is always a message and a link, there is no need for conditionality. This template is dumb-by-design, and leaves complex logic to reside somewhere more appropriate in the stack.&lt;/p&gt;
+
+&lt;p&gt;In comparison to the original, this template is just four lines compared to 18 and consists mostly of HTML, making this template much easier to work with. As an added bonus, the logic that no-longer resides in the template can be unit-tested. For example, we can now test that the message is “Welcome &lt;name&gt;” when the user is authenticated.&lt;/name&gt;&lt;/p&gt;
+
+&lt;p&gt;This gives a glimpse as to the impact a well-designed View-Model can have on the maintainability of a template.&lt;/p&gt;
+
+&lt;p&gt;With this in-mind let’s have a look at the common scenarios we need to design for when developing a template.&lt;/p&gt;
+
+&lt;h3 id=&quot;when-a-module-has-dynamic-properties&quot;&gt;1. When a module has dynamic properties&lt;/h3&gt;
+
+&lt;p&gt;When data or text is dynamic it will reside somewhere else in a system e.g. a database. In fact, even if it is &lt;em&gt;static&lt;/em&gt; it may still reside somewhere else for internationalisation or maintenance purposes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What’s important is that the template should not concern itself with where
+this data comes from — it’s just information exposed via the View-Model.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Taking the design as follows:&lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated with a name&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;figcaption&gt;Authenticated with a name&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The View-Model would be:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  message: &quot;Hello Adam Silver&quot;,
+  link: { href: &quot;/sign-out&quot;, text: &quot;Sign out&quot; }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And the template would be:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=”welcomeMessage”&amp;gt;
+  &amp;lt;p&amp;gt;{{message}}&amp;lt;/p&amp;gt;
+  &amp;lt;a href=”{{link.href}}”&amp;gt;{{link.text}}&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The message consists of text that may ultimately be retrieved from resource
+files and a database. Perhaps the link’s href property could come from a routes configuration object etc.&lt;/p&gt;
+
+&lt;p&gt;Regardless, the template doesn’t care — it leaves this responsibility to other parts of the system. The View-Model is lean and provides just enough information for the View to render itself.&lt;/p&gt;
+
+&lt;h3 id=&quot;when-a-module-has-conditionality&quot;&gt;2. When a module has conditionality&lt;/h3&gt;
+
+&lt;p&gt;Conditionally showing a portion of a View involves display-logic. The simplest of its type is based on a condition: if-this-show-that.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The important thing to remember, is that a template shouldn’t have to know why something is shown or not. It should just know whether it should.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ll modify the original requirements so that it &lt;em&gt;only&lt;/em&gt; displays a welcome
+message when the the user is authenticated and has supplied their name:&lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated and name is supplied&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;figcaption&gt;Authenticated and name is supplied&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;When the message should be shown, the View-Model would be:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  showMessage: true,
+  message: &quot;Hello Adam Silver&quot;,
+  link: { href: &#39;/sign-out&#39;, text: &#39;Sign out&#39; }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When the message is hidden the View-Model would be:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  showMessage: false
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And the template would be:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{% if showMessage %}
+  &amp;lt;div class=&quot;welcomeMessage&quot;&amp;gt;
+    &amp;lt;p&amp;gt;Welcome&amp;lt;/p&amp;gt;
+    &amp;lt;a href=&quot;{{signInLink.href}}&quot;&amp;gt;{{signInLink.text}}&amp;lt;/a&amp;gt;
+  &amp;lt;/div&amp;gt;
+{% endif %}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here the explicit boolean property determines whether it’s shown. Don’t be
+tempted to expose lower-level logic that the template uses to infer visibility.&lt;/p&gt;
+
+&lt;h3 id=&quot;when-showing-a-collection-of-items&quot;&gt;3. When showing a collection of items&lt;/h3&gt;
+
+&lt;p&gt;When showing a number of similar items you will need to loop over a collection or array. As an example, let’s display a list of restaurants by area.&lt;/p&gt;
+
+&lt;p&gt;The View-Model would be:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  restaurants: [{
+      name: &quot;Pizza House&quot;,
+      address: &quot;...&quot;
+  }, ...]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And the template would be:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&quot;restaurants&quot;&amp;gt;
+  {% for restaurant in restaurants %}
+    &amp;lt;div class=”restaurant”&amp;gt;
+      &amp;lt;h2&amp;gt;{{restaurant.name}}&amp;lt;/h2&amp;gt;
+      &amp;lt;p&amp;gt;{{restaurant.address}}&amp;lt;/h2&amp;gt;
+    &amp;lt;/div&amp;gt;
+  {% endfor %}
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Often with loops, you will only show the items if there are items in the
+collection. You may be tempted to interrogate the size of the collection in the template as follows:&lt;/p&gt;
+
+&lt;p&gt;Whilst this isn’t the end of the world, it can lead to maintenance problems.
+Instead, continue to use the approach used in the previous example by explicitly checking a boolean property &lt;em&gt;before&lt;/em&gt; iterating over the loop:&lt;/p&gt;
+
+&lt;p&gt;This way templates are consistent, and the logic behind the conditionality can evolve over time without having to change the template — perhaps the restaurants are only shown to authenticated users for example.&lt;/p&gt;
+
+&lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
+
+&lt;p&gt;Ultimately, templates should be easy-to-read and consist mostly of HTML and just enough information in order to support the display-logic. They shouldn’t have to infer display-logic from other properties and they shouldn’t have to care where this data comes from such as a database or cookie.&lt;/p&gt;
+
+&lt;p&gt;Architecting a system is difficult and sometimes that difficulty bleeds out into the template. This creates problems for the developers who maintain them (mostly front-end developers).&lt;/p&gt;
+
+&lt;p&gt;This is why logic-less templates are popular. They attempt to enforce the
+separation of concerns between back-end and front-end. You don’t need to use a logic-less template engine to reap the benefits. You can architect your View-Models in much the same way regardless.&lt;/p&gt;
+
+&lt;p&gt;Designing a View-Model &lt;em&gt;for&lt;/em&gt; the View allows more logic to be unit-tested and drastically improves the maintainability of your templates.&lt;/p&gt;
+</content>
+		</entry>
 	
 		<entry>
 			<title>Buttons shouldn't have a hand cursor</title>
@@ -45,6 +271,20 @@
 
 &lt;p&gt;This is why, for example, &lt;a href=&quot;http://danieldelaney.net/checkboxes&quot;&gt;checkboxes are never round&lt;/a&gt; (and radios are never square). This is also why links are typically underlined. This is why links do, in fact, have a hand cursor.&lt;/p&gt;
 
+&lt;h2 id=&quot;what-the-authorities-say&quot;&gt;What the authorities say&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/dn742466%28v=vs.85%29.aspx&quot;&gt;Microsoft’s Design Guidelines&lt;/a&gt; talk about weak affordance:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Text and graphics links use a hand […] pointer […] because of their weak affordance. While links may have other visual clues to indicate that they are links (such as underlines and special placement), displaying the hand pointer on hover is the definitive indication of a link.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;To avoid confusion, it is imperative not to use the hand pointer for other purposes. For example, command buttons already have a strong affordance, so they don’t need a hand pointer. The hand pointer must mean “this target is a link” and nothing else.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/Pointers.html&quot;&gt;Apple’s Human Interface Guidelines&lt;/a&gt; explain that the hand cursor should be used when “the content is a URL link”. &lt;a href=&quot;https://www.w3.org/TR/CSS21/ui.html#propdef-cursor&quot;&gt;W3C User Interface Guidelines&lt;/a&gt; says the same thing again with “The cursor is a pointer that indicates a link”.&lt;/p&gt;
+
 &lt;h2 id=&quot;the-hand-cursor-is-for-links&quot;&gt;The hand cursor is for links&lt;/h2&gt;
 
 &lt;p&gt;The hand (and often underlined text) signifies a link. Links are not buttons. Links came along with the web. To help users understand that they are different, they are given the hand cursor. It serves as an extra clue. Here’s why:&lt;/p&gt;
@@ -65,9 +305,7 @@
 &lt;p&gt;Links have always been handled this way since the web came along — this is the convention of the web that you need not innovate on. You can rest easy knowing that browsers have you covered. This leaves you and your team to solve real problems.&lt;/p&gt;
 
 &lt;!--
-
 http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-button-is-not-a-hand-pointer
-
 --&gt;
 </content>
 		</entry>

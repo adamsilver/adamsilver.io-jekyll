@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>http://adamsilver.io/articles/developing-better-templates-with-an-outside-in-approach/</loc>
+    </url>
+    
+    <url>
         <loc>http://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor/</loc>
     </url>
     
@@ -136,7 +140,7 @@
     
     
     <url>
-        <loc>http://adamsilver.io/people-to-follow/</loc>
+        <loc>http://adamsilver.io/people/</loc>
     </url>
     
     
