@@ -49,26 +49,27 @@ Take a *Welcome Message* module: it contains a piece of text and a link, and it 
 
 Consider the following template (built in
 [Swig](http://paularmstrong.github.io/swig/)):
-	{% raw %}
-	{% if isLoggedIn %}
-		{% if firstName && lastName %}
-			<div class="welcomeMessage">
-				<p>Hello {{firstName}} {{lastName}}</p>
-				<a href="{{signOutLink.href}}">{{signOutLink.text}}</a>
-			</div>
-		{% else %}
-			<div class="welcomeMessage">
-				<p>Welcome back</p>
-				<a href="{{signOutLink.href}}">{{signOutLink.text}}</a>
-			</div>
-		{% endif %}
-	{% else %}
-		<div class="welcomeMessage">
-			<p>Welcome</p>
-			<a href="{{signInLink.href}}">{{signInLink.text}}</a>
-		</div>
-	{% endif %}
-	{% endraw %}
+
+{% raw %}
+    {% if isLoggedIn %}
+        {% if firstName && lastName %}
+            <div class="welcomeMessage">
+                <p>Hello {{firstName}} {{lastName}}</p>
+                <a href="{{signOutLink.href}}">{{signOutLink.text}}</a>
+            </div>
+        {% else %}
+            <div class="welcomeMessage">
+                <p>Welcome back</p>
+                <a href="{{signOutLink.href}}">{{signOutLink.text}}</a>
+            </div>
+        {% endif %}
+    {% else %}
+        <div class="welcomeMessage">
+            <p>Welcome</p>
+            <a href="{{signInLink.href}}">{{signInLink.text}}</a>
+        </div>
+    {% endif %}
+{% endraw %}
 
 Forget for the moment that you might be able to factor out the nested
 if-statement — and, that you could reuse the HTML by abstracting it into a
@@ -81,10 +82,12 @@ For example, there is nothing in the design that requires knowledge of the first
 
 Instead, consider the following template:
 
-  <div class=”welcomeMessage”>
-   <p>{{message}}</p>
-   <a href=”{{link.href}}”>{{link.text}}</a>
-  </div>
+{% raw %}
+    <div class=”welcomeMessage”>
+        <p>{{message}}</p>
+        <a href=”{{link.href}}”>{{link.text}}</a>
+    </div>
+{% endraw %}
 
 The View-Model has been designed from the outside-in; it contains just what the template needs in order to render itself. And because there is always a message and a link, there is no need for conditionality. This template is dumb-by-design, and leaves complex logic to reside somewhere more appropriate in the stack.
 
@@ -113,16 +116,18 @@ Taking the design as follows:
 The View-Model would be:
 
 	{
-		message: "Hello Adam Silver",
-		link: { href: "/sign-out", text: "Sign out" }
+	  message: "Hello Adam Silver",
+      link: { href: "/sign-out", text: "Sign out" }
 	}
 
 And the template would be:
 
-  <div class=”welcomeMessage”>
-   <p>{{message}}</p>
-   <a href=”{{link.href}}”>{{link.text}}</a>
-  </div>
+{% raw %}
+    <div class=”welcomeMessage”>
+      <p>{{message}}</p>
+      <a href=”{{link.href}}”>{{link.text}}</a>
+    </div>
+{% endraw %}
 
 The message consists of text that may ultimately be retrieved from resource
 files and a database. Perhaps the link’s href property could come from a routes configuration object etc.
@@ -148,25 +153,27 @@ message when the the user is authenticated and has supplied their name:
 When the message should be shown, the View-Model would be:
 
 	{
-		showMessage: true,
-		message: "Hello Adam Silver",
-		link: { href: '/sign-out', text: 'Sign out' }
+	  showMessage: true,
+	  message: "Hello Adam Silver",
+	  link: { href: '/sign-out', text: 'Sign out' }
 	}
 
 When the message is hidden the View-Model would be:
 
-  {
+    {
       showMessage: false
-  }
+    }
 
 And the template would be:
 
-	{% if showMessage %}
-	    <div class="welcomeMessage">
-	        <p>Welcome</p>
-	        <a href="{{signInLink.href}}">{{signInLink.text}}</a>
-	    </div>
-	{% endif %}
+{% raw %}
+    {% if showMessage %}
+      <div class="welcomeMessage">
+        <p>Welcome</p>
+        <a href="{{signInLink.href}}">{{signInLink.text}}</a>
+      </div>
+    {% endif %}
+{% endraw %}
 
 Here the explicit boolean property determines whether it’s shown. Don’t be
 tempted to expose lower-level logic that the template uses to infer visibility.
@@ -177,23 +184,25 @@ When showing a number of similar items you will need to loop over a collection o
 
 The View-Model would be:
 
-  {
+    {
       restaurants: [{
           name: "Pizza House",
           address: "..."
       }, ...]
-  }
+    }
 
 And the template would be:
 
+{% raw %}
 	<div class="restaurants">
-	    {% for restaurant in restaurants %}
-	        <div class=”restaurant”>
-	            <h2>{{restaurant.name}}</h2>
-	            <p>{{restaurant.address}}</h2>
-	        </div>
-	    {% endfor %}
+	  {% for restaurant in restaurants %}
+	    <div class=”restaurant”>
+          <h2>{{restaurant.name}}</h2>
+	      <p>{{restaurant.address}}</h2>
+	    </div>
+	  {% endfor %}
 	</div>
+{% endraw %}
 
 Often with loops, you will only show the items if there are items in the
 collection. You may be tempted to interrogate the size of the collection in the template as follows:

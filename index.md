@@ -7,7 +7,9 @@ id: home
   	<img src="/assets/img/adam2.jpg" alt="Adam Photo" width="85" height="85">
 </div>
 
-# Hey, I'm Adam Silver. I strive to make the web [simple]({% post_url 2016-03-06-embracing-simplicity %}) and human for [everyone](/articles/the-role-of-the-front-end-developer/#accessibility). I specialise in [UX](/articles/hello-ux-designer/), [Front-end Engineering](/articles/the-role-of-the-front-end-developer/) and [Strategy](/articles/how-we-cut-our-mvp-in-half-to-launch-kidly/).
+# Hey, I'm Adam and I design and build websites to be [simple]({% post_url 2016-03-06-embracing-simplicity %}) and [human]((/articles/the-role-of-the-front-end-developer/#accessibility)).
+
+<!--I specialise in [UX](/articles/hello-ux-designer/), [Front-end Engineering](/articles/the-role-of-the-front-end-developer/) and [Strategy](/articles/how-we-cut-our-mvp-in-half-to-launch-kidly/).-->
 
 ## Speaking
 

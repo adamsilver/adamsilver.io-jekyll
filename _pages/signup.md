@@ -5,6 +5,8 @@ title: Sign up for updates
 permalink: /signup/
 ---
 
-# Sign up
+# Sign up to my private newsletter
 
-I am writing a book about how to design super-friendly forms. If you'd like to receive free chapters along the way (as well as my usual articles), just fill out the form below:
+**Anyone who hates learning about the best ways to design and develop human-friendly websites should refrain from my newsletter.**
+
+I release a good old article about once a month on average but I'm not regular (ahem!) so that might suit you as you won't feel spammed :).
