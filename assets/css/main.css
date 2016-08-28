@@ -96,8 +96,7 @@ hr {
 
 .share-button,
 .signUpForm-email,
-.signUpForm-button,
-.signUpHero-button {
+.signUpForm-button {
 	font-family: Lato, arial, sans-serif;
 }
 
@@ -119,6 +118,7 @@ hr {
 .mainContent {
 	padding-top: 30px;
 	max-width: 700px;
+	padding-bottom: 20px;
 	margin: 0 auto 0px;
 }
 
@@ -595,13 +595,52 @@ hr {
 	padding: 0 20px;
 }
 
+.signUpForm-isArticle {
+	background-color: #f8f8f8;
+	padding: 30px 20px;
+}
+
+@media(min-width: 800px) {
+	.signUpForm-isArticle {
+		padding: 50px 40px;
+	}
+}
+
 @media(min-width: 800px) {
 	.signUpForm {
 		margin: 0 auto 40px;
 	}
 }
 
+.signUpForm-heading {
+	margin-bottom: 10px;
+	font-size: 2.3em;
+	line-height: 1.5;
+	letter-spacing: 0.01em;
+}
+
+@media(min-width: 600px) {
+	.signUpForm-heading {
+		font-size: 2.9em;
+		margin-bottom: 5px;
+		line-height: 1.5;
+	}
+}
+
 .signUpForm-description {
+	font-size: 1.6em;
+	line-height: 1.8;
+	margin-bottom: 25px;
+	display: block;
+}
+
+@media(min-width: 600px) {
+	.signUpForm-description {
+		font-size: 1.9em;
+	}
+}
+
+.signUpForm-label {
 	font-size: 1.6em;
 	line-height: 1.8;
 	margin-bottom: 5px;
@@ -609,7 +648,7 @@ hr {
 }
 
 @media(min-width: 600px) {
-	.signUpForm-description {
+	.signUpForm-label {
 		font-size: 1.9em;
 	}
 }
