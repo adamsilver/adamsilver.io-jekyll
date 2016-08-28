@@ -7,7 +7,7 @@ permalink: /articles/
 
 # Articles
 
-I publish to my [private mailing list](/signup/) first (about once a month ish) and some of those articles appear below some time later.
+I write for my dear subscribers on my [private mailing list](/signup/). Some of those articles end up below.
 
 <div>
 {% for post in site.posts %}
