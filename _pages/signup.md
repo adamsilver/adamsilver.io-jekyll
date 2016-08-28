@@ -7,8 +7,8 @@ permalink: /signup/
 
 # Sign up to my private newsletter
 
-**Anyone who hates learning about the best ways to design and develop human-friendly websites should refrain from my newsletter.**
+I write for [Smashing Magazine](https://www.smashingmagazine.com/2016/06/improving-ux-for-color-blind-users/) and the [Simple=Human](http://medium.com/simple-human) Medium publication which I setup with my friend [Mark Jenkins](http://theluckystrike.co.uk). Some of my articles have also been featured on the front-page of Hacker News.
 
-I release a good old article about once a month on average but I'm not regular (ahem!) so that might suit you as you won't feel spammed :).
+You can expect an email once-a-month ish. You'll get the best of what I've got before anyone else. You can unsubscribe at any time but please don't :).
 
 {% include signUpForm.html %}

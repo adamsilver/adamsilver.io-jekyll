@@ -378,24 +378,18 @@ hr {
 	}
 }
 
-.articleList-articleTitle {
+.mainContent .articleList-articleTitle {
 	max-width: 400px;
 	margin: 0 20px;
-	font-size: 1.5em;
-	line-height: 1.5em;
-	text-transform: uppercase;
+	font-size: 1.8em;
+	line-height: 1.5;
 	letter-spacing: 0.03em;
 }
 
 @media(min-width: 600px) {
-	.articleList-articleTitle {
-		font-size: 1.9em;
-		line-height: 1.5;
+	.mainContent .articleList-articleTitle {
+		font-size: 2.2em;
 	}
-}
-
-.articleList a {
-
 }
 
 .articleList a:active {
@@ -411,7 +405,7 @@ hr {
 * Meta
 **********************************************************/
 
-.meta {
+.mainContent .meta {
 	margin: 0 20px;
 	font-size: 1.3em;
 	line-height: 1.7em;
@@ -419,7 +413,7 @@ hr {
 }
 
 @media(min-width: 600px) {
-	.meta {
+	.mainContent .meta {
 		font-size: 1.6em;
 	}
 }

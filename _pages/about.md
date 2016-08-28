@@ -5,20 +5,20 @@ id: about
 permalink: /about/
 ---
 
-# About me
+<div class="face">
+  	<img src="/assets/img/adam2.jpg" alt="Adam Photo" width="85" height="85">
+</div>
 
-My name is Adam. And my mission is to make the web better. A *lot* better.
+# Adam Silver who?
 
-I know this sounds like a pretty big undertaking. It is! I like to think I have influenced little pockets of the web, through working with developers and designers alike, tweeting and writing articles, some of which have made the front page of Hacker News.
+My name is Adam and my mission is to make the web better. A *lot* better!
 
-Since 2000 I have been designing and building websites. I come from the view-source, teach-yourself school of web development. When you build stuff for the web, you learn about so many little things that affect the User Experience.
+**I know this sounds like a big undertaking and it is!** You see I have been doing this since I can remember (over 15 years) and in that time I have built over 50 large-scale websites for huge house-hold names such as Tesco, Boots, Just Eat, Selfridges, Financial Times and so many others.
 
-In 2002 my attention moved purely to development where I became obsessed with HTML, CSS and Javascript. I let much better designers provide design assets that I would *code up* as it were.
+I absolutely love working with others to solve *real* problems in a simple and human way which always works out best for people using your website. I've learnt so from doing and from other great people that I like to share all the things I've learnt with you. So if this sounds interesting to you, sign up below.
 
-In 2008 I started to work very closely with the client and increasingly played an integral role influencing the UX. I have spent quite a lot of time as a UX designer, but more time as a Front-end Developer.
+In addition to that I have written a handy little book that will seriously help you build modular, scalable and maintainable CSS called [MaintainableCSS](http://maintainablecss.com) which has had over 250,000 readers.
 
-Today I don't believe so much in designing and developing separately. I have had the best results working closely *with* design and development from ideation to production.
+When I am not doing this stuff, you can find me running outside, playing sport and spending precious time with my beautiful wife and little boy.
 
-For me it's not just about working with *design*. It's also about working with Product, QA, Copywriters, Researchers, Developers (Back-end, front-end, full stack), Scrum Masters etc.
-
-This is why I am a massive Agile fan. I believe in choosing the essential things to build and frequently improving the process to reduce friction.
+Have a question? [Get in touch](mailto:adam@adamsilver.io).
