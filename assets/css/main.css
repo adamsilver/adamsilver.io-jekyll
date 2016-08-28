@@ -605,6 +605,7 @@ hr {
 	font-size: 1.6em;
 	line-height: 1.8;
 	margin-bottom: 5px;
+	display: block;
 }
 
 @media(min-width: 600px) {
@@ -618,22 +619,22 @@ hr {
 	width: 100%;
 	padding: 10px 10px;
 	margin-right: 5px;
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 	box-sizing: border-box;
 	background-color: #fff;
 	border: 1px solid #333;
 	max-width: 288px;
-	display: block;
+	display: inline-block;
 }
 
 .signUpForm-email:focus {
-	outline-color: #0074D9;
-	outline-width: 5px;
+	outline: 3px solid #0074D9;
+	border: 1px solid #0074D9;
 }
 
 .signUpForm-button {
 	font-size: 1.5em;
-	padding: 15px 35px;
+	padding: 12px 22px;
 	display: block;
 	background-color: #0074D9;
 	color: #fff;
@@ -641,7 +642,8 @@ hr {
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 0.03em;
-	border-radius: 3px;
+	border-radius: 2px;
+	display: inline-block;
 }
 
 .signUpForm-button:hover {
