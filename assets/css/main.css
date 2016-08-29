@@ -297,37 +297,40 @@ hr {
 **********************************************************/
 
 .signUpHero {
-	padding-top: 40px;
-	padding-bottom: 30px;
+	padding-bottom: 20px;
 	margin: 0 auto;
-	background-color: #0074D9;
+	max-width: 660px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
-.signUpHero-inner {
-	max-width: 700px;
-	margin: 0 auto;
+.signUpHero-isArticle {
+	background-color: #fafafa;
+	margin-bottom: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 .signUpHero-heading {
-	margin: 0 20px 10px;
-	font-size: 2.3em;
+	margin-bottom: 10px;
+	font-size: 1.8em;
 	line-height: 1.5;
 	letter-spacing: 0.01em;
-	color: #fff;
+	text-transform: uppercase;
+	color: #0074D9;
 }
 
 @media(min-width: 600px) {
 	.signUpHero-heading {
-		font-size: 2.9em;
+		font-size: 2.1em;
 		margin-bottom: 5px;
 	}
 }
 
 .signUpHero-description {
-	margin: 0 20px 25px;
+	margin-bottom: 25px;
 	font-size: 1.6em;
 	line-height: 1.8;
-	color: #fff;
 }
 
 @media(min-width: 600px) {
@@ -486,8 +489,8 @@ hr {
 }
 
 .footer p {
-	font-size: 1.3em;
-	max-width: 640px;
+	font-size: 1.7em;
+	max-width: 660px;
 	margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
@@ -495,8 +498,8 @@ hr {
 
 .footer a {
 	display: inline-block;
-	margin-right: 3px;
-	margin-left: 3px;
+	margin-right: 7px;
+	margin-left: 7px;
 }
 
 /**********************************************************
@@ -589,17 +592,6 @@ hr {
 	padding: 0 20px;
 }
 
-.signUpForm-isArticle {
-	background-color: #f8f8f8;
-	padding: 30px 20px;
-}
-
-@media(min-width: 800px) {
-	.signUpForm-isArticle {
-		padding: 50px 40px;
-	}
-}
-
 @media(min-width: 800px) {
 	.signUpForm {
 		margin: 0 auto 40px;
@@ -634,7 +626,8 @@ hr {
 	}
 }
 
-.signUpForm-label {
+.signUpForm-label,
+.signUpHero-label {
 	font-size: 1.6em;
 	line-height: 1.8;
 	margin-bottom: 5px;
@@ -642,12 +635,14 @@ hr {
 }
 
 @media(min-width: 600px) {
-	.signUpForm-label {
+	.signUpForm-label,
+	.signUpHero-label {
 		font-size: 1.9em;
 	}
 }
 
-.signUpForm-email {
+.signUpForm-email,
+.signUpHero-email {
 	font-size: 1.6em;
 	width: 100%;
 	padding: 10px 10px;
@@ -660,12 +655,14 @@ hr {
 	display: inline-block;
 }
 
-.signUpForm-email:focus {
+.signUpForm-email:focus,
+.signUpHero-email:focus {
 	outline: 3px solid #0074D9;
 	border: 1px solid #0074D9;
 }
 
-.signUpForm-button {
+.signUpForm-button,
+.signUpHero-button {
 	font-size: 1.5em;
 	padding: 12px 22px;
 	display: block;
@@ -679,34 +676,7 @@ hr {
 	display: inline-block;
 }
 
-.signUpForm-button:hover {
+.signUpForm-button:hover,
+.signUpHero-button:hover {
 	background-color: #0267BF;
-}
-
-.next {
-	margin: 0 20px 30px;
-	overflow: hidden;
-}
-
-.next-readButton:link,
-.next-readButton:visited,
-.next-signUpButton:link,
-.next-signUpButton:visited {
-	border-radius: 30px;
-	text-transform: uppercase;
-	padding: 17px 30px;
-	font-size: 1.3em;
-	border: 1px solid #0074D9;
-	font-weight: bold;
-	letter-spacing: 0.04em;
-	color: #0074D9;
-	display: inline-block;
-	margin-bottom: 20px;
-	margin-right: 20px;
-}
-
-.next-readButton:hover,
-.next-signUpButton:hover {
-	background-color: #0074D9;
-	color: #fff;
 }
