@@ -11,7 +11,7 @@ permalink: /about/
 
 # Adam Silver who?
 
-My name is Adam and my mission is to make the web as easy-to-use as possible!
+My name is Adam and my mission is to enhance people's lives, by designing and building delightful experiences on the web.
 
 I have been doing this since I can remember (15+ years) and in that time I have built countless large-scale websites for huge house-hold names such as Tesco, BBC, Argos, Boots, Just Eat, News Corp, Selfridges, Financial Times, T-Mobile and so many others.
 
