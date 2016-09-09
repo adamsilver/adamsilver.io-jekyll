@@ -20,12 +20,9 @@ This means the application handles the browsing instead of the browser. Attempti
 
 Browsers store history, meaning pages load quickly when the user presses the *back* button. SPAs need to recreate this functionality. As [Daniel Puplus says in his article](https://medium.com/joys-of-javascript/4353246f4480):
 
-> &ldquo;Back should be quick; users don’t expect data to have changed much.
-
-> &ldquo;When a user presses the browser’s back button they expect the change to happen quickly and for the page to be in a similar state to how it was last time they saw it.
-
-> &ldquo;In the traditional web model the browser will typically be able use a cached version of the page and linked resources.
-
+> &ldquo;Back should be quick; users don’t expect data to have changed much.<br><br>
+> &ldquo;When a user presses the browser’s back button they expect the change to happen quickly and for the page to be in a similar state to how it was last time they saw it.<br><br>
+> &ldquo;In the traditional web model the browser will typically be able use a cached version of the page and linked resources.<br><br>
 > &ldquo;In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.&rdquo;
 
 When 'navigating', the application will need a method of storing and retrieving 'pages' from a cache. Unless of course you want to slow down the loading 'pages', which is meant to be a significant benefit of SPAs. Storage options could include memory, local (or session) storage, client-side database and cookies.
