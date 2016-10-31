@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Developing better templates with an outside-in approach
-date: 2016-07-15 09:00:01
+date: 2016-08-08 09:00:01
 categories: development html
 ---
 
