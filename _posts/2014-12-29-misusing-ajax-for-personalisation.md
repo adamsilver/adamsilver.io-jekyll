@@ -6,19 +6,19 @@ categories: js a11y ux performance
 description: Sometimes developers are on a pursuit to reduce page-load time by utilising AJAX to get around personalised content. This is problematic.
 ---
 
-Sometimes developers are on a pursuit to reduce page-load time by utilising [content caching](https://developer.akamai.com/stuff/Caching/Content_Caching.html). This is beneficial to the UX because the page response times become *much* quicker.
+Sometimes developers are on a pursuit to reduce page-load time by utilising [content caching](https://developer.akamai.com/stuff/Caching/Content_Caching.html). UX is improved because page response times are much faster.
 
 When the page contains personalised content, this type of caching can't neccessarily be used because a user might receive the cached version of somebody elses personalised content.
 
-The problem arises with the suggestion that you can use AJAX to request the personalised content. This article discusses this problem. But first, what is personalised content?
+Problems arise when AJAX is used to make an additional request for personalised content. Before discussing the problems, let's first define what is personalised content?
 
 ## What is personalised content?
 
 Personalised content is any content that is specific to a user. The most basic example would be a "Logout" link because the page knows that *you* are logged in and that *you* may want to logout.
 
-With that said, this can be cached because you can create two types of cached pages. As in a whole bunch of anonymous users can receive the *logged-out* cached page and a whole bunch of logged-in users can get the *logged-in* cached page.
+With that said, this can be cached because you can create two types of cached pages. What I mean is: anonymous users can receive a *logged-out* cached page and logged-in users can get a *logged-in* cached page.
 
-An example that doesn't scale and makes content-caching redundant is when personalised content includes something specific to a user. A good example would be their name such as a 'Welcome Bob' message.
+An example that doesn't scale and makes content-caching redundant is when personalised content includes something specific to an individual user. A good example would be their name such as a 'Welcome Bob' message.
 
 What are the problems with this?
 
@@ -26,13 +26,13 @@ What are the problems with this?
 
 What seems like a simple use of AJAX has a significant effect on architecture...
 
-> Is there one extra request for personalised content or multiple?
-> <br><br>Do you serve it as JSON and then parse that on the client?
-> <br><br>How do you organise your scripts for this?
-> <br><br>How do you organise the view partials for this on the server?
-> <br><br>At what point is personalised content not essential to the UX and how does that affect architecture?
+Is there one extra request for personalised content or multiple?
+<br>Do you serve it as JSON and then parse that on the client?
+<br>How do you organise your scripts for this?
+<br>How do you organise the view partials for this on the server?
+<br>At what point is personalised content not essential to the UX and how does that affect architecture?
 
-## 2. Degraded experience for some people.
+## 2. Poor experience for some people.
 
 If the user doesn't have Javascript (or they have it but not the capability to make AJAX requests, traverse or manipulate the Document etc) they will be unable to use this functionality. This goes against the principle of Progressive Enhancement and is completely against the spirit of the web. And in the case of "logging out" this would obviously be a poor decision.
 
