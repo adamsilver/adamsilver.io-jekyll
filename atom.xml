@@ -3,12 +3,120 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://localhost:4000/atom.xml" rel="self"/>
 	<link href="http://localhost:4000/"/>
-	<updated>2016-11-22T14:34:12+00:00</updated>
+	<updated>2016-11-22T14:39:11+00:00</updated>
 	<id>http://localhost:4000</id>
 	<author>
 		<name>Adam Silver</name>
 	</author>
 
+	
+		<entry>
+			<title>Less but better</title>
+			<link href="http://localhost:4000/articles/less-but-better/"/>
+			<updated>2016-11-18T09:00:01+00:00</updated>
+			<id>http://localhost:4000/articles/less-but-better</id>
+			<content type="html">&lt;p&gt;There are times in life when you learn something new — a moment that sets you off down a different path. Maybe you always had it “in” you, but something triggered it. Maybe it was a culmination of things or maybe something else entirely.&lt;/p&gt;
+
+&lt;p&gt;I think it happened to me when I was working with &lt;a href=&quot;http://theluckystrike.co.uk/&quot;&gt;Mark
+Jenkins&lt;/a&gt; in the UX team at &lt;a href=&quot;http://just-eat.co.uk/&quot;&gt;Just
+Eat&lt;/a&gt; back in 2014. But, before I tell you what happened, I want to set the scene a little bit.&lt;/p&gt;
+
+&lt;p&gt;They say 3 of the hardest things to deal with in life are: having a child,
+refurbishing a house and moving job. Well, the hero I am (LOL), I did all three at the same time.&lt;/p&gt;
+
+&lt;p&gt;And whilst it was my choice to do the first two, the third wasn’t. They let me go and whilst that can happen as part of being a contractor it wasn’t part of the “plan”.&lt;/p&gt;
+
+&lt;p&gt;Doing one thing is hard enough but doing three is not the way to do something well or stress-free. If, for example, I just had the new job, it would have been far easier to deal with.&lt;/p&gt;
+
+&lt;p&gt;So I moved on and sorted myself out with a new six-month contract at Just Eat. And that is when I met Mark, a UX designer.&lt;/p&gt;
+
+&lt;p&gt;It didn’t take long for me to realise how awesome he was. I am not one of those guys who says everything is “awesome”. Mark though, was and is, awesome.&lt;/p&gt;
+
+&lt;p&gt;We talked about some of the troubles that Just Eat had. How we hoped we could help the team make things better. In terms of UX, front-end and the time it takes to release — just to name a few.&lt;/p&gt;
+
+&lt;p&gt;It’s not only Just Eat — most companies, teams and products have problems.
+In-fact, they have problems because of their huge success.&lt;/p&gt;
+
+&lt;p&gt;Success can breed failure because success breeds growth. And when a company
+grows, there is just &lt;em&gt;more&lt;/em&gt; of everything — more people and more opportunities to spend your attention on.&lt;/p&gt;
+
+&lt;p&gt;Mark and I spent a lot of time discussing these things. Then, one day he gave me this book: &lt;a href=&quot;https://www.amazon.co.uk/gp/product/0753555166/ref=as_li_tl?ie=UTF8&amp;amp;camp=1634&amp;amp;creative=6738&amp;amp;creativeASIN=0753555166&amp;amp;linkCode=as2&amp;amp;tag=adamsilverio-21&quot;&gt;Essentialism: The disciplined pursuit of
+less&lt;/a&gt;. He said “read this, you’ll love it.”&lt;/p&gt;
+
+&lt;p&gt;I did love it.&lt;/p&gt;
+
+&lt;p&gt;It was the idea that doing less is far more productive than doing more. The idea that you can do less, but better.&lt;/p&gt;
+
+&lt;p&gt;Problem is, it seems as though people are hard-wired with a do-more mindset.&lt;/p&gt;
+
+&lt;p&gt;I see it all the time in our industry. They design solutions for problems that don’t exist. They make something far more complicated than needed. They do a whole bunch of stuff that adds little or no value.&lt;/p&gt;
+
+&lt;p&gt;People think you’re mad if you say you want less stuff . In-fact the American Dream revolves around the idea that more is better — but that
+&lt;a href=&quot;http://www.theminimalists.com/dream/&quot;&gt;story&lt;/a&gt; is for another day.&lt;/p&gt;
+
+&lt;p&gt;When you do more, there is a tendency to do even more after that. It’s habit
+forming.&lt;/p&gt;
+
+&lt;p&gt;And I am not just talking about design. I am talking about &lt;em&gt;everything&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Whether you’re designing, coding, or managing product scope, make the next smallest improvement. Then get feedback. Do just what you need to do and no more than that.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Narrow your focus and do it better.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In software engineering, they call it
+&lt;a href=&quot;https://en.wikipedia.org/wiki/You_aren&#39;t_gonna_need_it&quot;&gt;YAGNI&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In product management, they call it
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Minimum_viable_product&quot;&gt;MVP&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In Agile they call it &lt;a href=&quot;https://leankit.com/learn/kanban/continuous-improvement/&quot;&gt;continuous
+improvement&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In reality all this — everything — is design. Whether you’re designing a
+product, a process or even your life, it’s all design.&lt;/p&gt;
+
+&lt;p&gt;Coding up a UI component? Just build it and worry about abstraction later. Once you’ve learned more about what’s worth abstracting.&lt;/p&gt;
+
+&lt;p&gt;Facilitating and managing the delivery process? Add just as much process as you need and no more. Ask your team how it went. And improve.&lt;/p&gt;
+
+&lt;p&gt;Enhancing something with Javascript? Build the degraded version first and see if it’s good enough. You might surprise yourself.&lt;/p&gt;
+
+&lt;p&gt;Living life? Try and &lt;a href=&quot;https://medium.com/the-mission/the-1-rule-for-creating-all-habits-53aa3f10bc5d#.8n48coaus&quot;&gt;improve something small just 1% per
+day&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;People get excited by more. People get excited by complexity. People get excited by the idea that something can be perfect but there is no such thing.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Done&lt;/em&gt; is better than perfect.&lt;/p&gt;
+
+&lt;p&gt;I get excited by doing something that didn’t need complexity. That didn’t need more. That &lt;em&gt;less&lt;/em&gt; was enough, that &lt;em&gt;less&lt;/em&gt; was &lt;em&gt;better&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;It’s a constant practice, a habit to form, a mindset to nurture.&lt;/p&gt;
+
+&lt;p&gt;The trick is to practice continuous improvement.&lt;/p&gt;
+
+&lt;p&gt;Then after you’re done you can &lt;em&gt;iterate&lt;/em&gt;. The next smallest improvement creates momentum. Then you’re done again.&lt;/p&gt;
+
+&lt;p&gt;Then you’re in a flow of done.&lt;/p&gt;
+
+&lt;p&gt;Then you’re in a flow of learning (from users).&lt;/p&gt;
+
+&lt;p&gt;Then you’ve achieved momentum.&lt;/p&gt;
+
+&lt;p&gt;Then it’s just the way you do things.&lt;/p&gt;
+
+&lt;p&gt;The users might be your team members following a process.&lt;/p&gt;
+
+&lt;p&gt;They might be your fellow developers trying to use your code.&lt;/p&gt;
+
+&lt;p&gt;And, of course, people using your product.&lt;/p&gt;
+
+&lt;p&gt;When you do more, you spread yourself thinly. You widen your focus and you do it all to a lesser standard. You learn fewer things, over a longer period of time and get stressed. That’s not a recipe for success.&lt;/p&gt;
+
+&lt;p&gt;Anyway, this email is my MVP. Time to press send.&lt;/p&gt;
+
+&lt;p&gt;If you unsubscribe, that’s okay. For one I got it done. For two I can learn to iterate and write you a better email next time.&lt;/p&gt;
+</content>
+		</entry>
 	
 		<entry>
 			<title>Browsers are different but so what?</title>
