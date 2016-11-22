@@ -3,7 +3,7 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://localhost:4000/atom.xml" rel="self"/>
 	<link href="http://localhost:4000/"/>
-	<updated>2016-11-22T14:32:00+00:00</updated>
+	<updated>2016-11-22T14:34:12+00:00</updated>
 	<id>http://localhost:4000</id>
 	<author>
 		<name>Adam Silver</name>
@@ -53,7 +53,7 @@ The “problem” is that when the file can’t be found, FireFox displays a “
 
 &lt;p&gt;Is this a problem? Of course not. Firefox will do this for all websites that use the download attribute. Arguably it’s an enhancement for FireFox Users — lucky them! In the future FireFox might change the behaviour. Maybe Chrome copies them. Maybe none of this happens. Who knows and who cares? Users don’t.&lt;/p&gt;
 
-&lt;p&gt;My point is this. The web is its own thing. It has its own ways. This is not something to be feared. There is nothing to bat into shape. The web and the browser is to be embraced to the user’s advantage.&lt;/p&gt;
+&lt;p&gt;My point is this. The web is its own thing. It has its own ways. This is not something to be feared. There is nothing to bat into shape. The web and the browser is to be &lt;a href=&quot;/articles/embracing-simplicity/&quot;&gt;embraced&lt;/a&gt; to the user’s advantage.&lt;/p&gt;
 </content>
 		</entry>
 	
