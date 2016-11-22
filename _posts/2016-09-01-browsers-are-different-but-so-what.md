@@ -44,4 +44,4 @@ The “problem” is that when the file can’t be found, FireFox displays a “
 
 Is this a problem? Of course not. Firefox will do this for all websites that use the download attribute. Arguably it’s an enhancement for FireFox Users — lucky them! In the future FireFox might change the behaviour. Maybe Chrome copies them. Maybe none of this happens. Who knows and who cares? Users don’t.
 
-My point is this. The web is its own thing. It has its own ways. This is not something to be feared. There is nothing to bat into shape. The web and the browser is to be embraced to the user’s advantage.
+My point is this. The web is its own thing. It has its own ways. This is not something to be feared. There is nothing to bat into shape. The web and the browser is to be [embraced](/articles/embracing-simplicity/) to the user’s advantage.
