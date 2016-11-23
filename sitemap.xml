@@ -2,111 +2,111 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>http://localhost:4000/articles/less-but-better/</loc>
+        <loc>http://adamsilver.io/articles/less-but-better/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/browsers-are-different-but-so-what/</loc>
+        <loc>http://adamsilver.io/articles/browsers-are-different-but-so-what/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/developing-better-templates-with-an-outside-in-approach/</loc>
+        <loc>http://adamsilver.io/articles/developing-better-templates-with-an-outside-in-approach/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/buttons-shouldnt-have-a-hand-cursor/</loc>
+        <loc>http://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/always-use-a-label/</loc>
+        <loc>http://adamsilver.io/articles/always-use-a-label/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/why-placeholders-are-problematic/</loc>
+        <loc>http://adamsilver.io/articles/why-placeholders-are-problematic/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/how-we-cut-our-mvp-in-half-to-launch-kidly/</loc>
+        <loc>http://adamsilver.io/articles/how-we-cut-our-mvp-in-half-to-launch-kidly/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/hello-ux-designer/</loc>
+        <loc>http://adamsilver.io/articles/hello-ux-designer/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/embracing-simplicity/</loc>
+        <loc>http://adamsilver.io/articles/embracing-simplicity/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/why-hover-menus-are-problematic/</loc>
+        <loc>http://adamsilver.io/articles/why-hover-menus-are-problematic/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/why-we-stopped-tasking/</loc>
+        <loc>http://adamsilver.io/articles/why-we-stopped-tasking/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/why-infinite-scrolling-is-probably-a-bad-idea/</loc>
+        <loc>http://adamsilver.io/articles/why-infinite-scrolling-is-probably-a-bad-idea/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/designing-honestly-for-the-web/</loc>
+        <loc>http://adamsilver.io/articles/designing-honestly-for-the-web/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/writing-javascript-that-conforms-to-progressive-enhancement/</loc>
+        <loc>http://adamsilver.io/articles/writing-javascript-that-conforms-to-progressive-enhancement/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/the-disadvantages-of-javascript-polyfills/</loc>
+        <loc>http://adamsilver.io/articles/the-disadvantages-of-javascript-polyfills/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/the-disadvantages-of-css-preprocessors/</loc>
+        <loc>http://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/the-role-of-the-front-end-developer/</loc>
+        <loc>http://adamsilver.io/articles/the-role-of-the-front-end-developer/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/technical-wanking/</loc>
+        <loc>http://adamsilver.io/articles/technical-wanking/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/misusing-ajax-for-personalisation/</loc>
+        <loc>http://adamsilver.io/articles/misusing-ajax-for-personalisation/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/the-boring-front-end-developer/</loc>
+        <loc>http://adamsilver.io/articles/the-boring-front-end-developer/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/misusing-the-select-control/</loc>
+        <loc>http://adamsilver.io/articles/misusing-the-select-control/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/javascript-inheritance/</loc>
+        <loc>http://adamsilver.io/articles/javascript-inheritance/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/the-disadvantages-of-single-page-applications/</loc>
+        <loc>http://adamsilver.io/articles/the-disadvantages-of-single-page-applications/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/javascript-namespacing/</loc>
+        <loc>http://adamsilver.io/articles/javascript-namespacing/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/the-multiple-submit-button-problem/</loc>
+        <loc>http://adamsilver.io/articles/the-multiple-submit-button-problem/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/how-to-create-accessible-forms/</loc>
+        <loc>http://adamsilver.io/articles/how-to-create-accessible-forms/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/an-introduction-to-dom-scripting-forms/</loc>
+        <loc>http://adamsilver.io/articles/an-introduction-to-dom-scripting-forms/</loc>
     </url>
     
 
@@ -114,7 +114,7 @@
     
     
     <url>
-        <loc>http://localhost:4000/404/</loc>
+        <loc>http://adamsilver.io/404/</loc>
     </url>
     
     
@@ -122,7 +122,7 @@
     
     
     <url>
-        <loc>http://localhost:4000/about/</loc>
+        <loc>http://adamsilver.io/about/</loc>
     </url>
     
     
@@ -130,41 +130,7 @@
     
     
     <url>
-        <loc>http://localhost:4000/articles/</loc>
-    </url>
-    
-    
-    
-    
-    
-    
-    
-    <url>
-        <loc>http://localhost:4000/</loc>
-    </url>
-    
-    
-    
-    
-    
-    <url>
-        <loc>http://localhost:4000/people/</loc>
-    </url>
-    
-    
-    
-    
-    
-    <url>
-        <loc>http://localhost:4000/recommends/</loc>
-    </url>
-    
-    
-    
-    
-    
-    <url>
-        <loc>http://localhost:4000/signup/</loc>
+        <loc>http://adamsilver.io/articles/</loc>
     </url>
     
     
@@ -174,7 +140,7 @@
     
     
     <url>
-        <loc>http://localhost:4000/team/</loc>
+        <loc>http://adamsilver.io/</loc>
     </url>
     
     
@@ -182,7 +148,41 @@
     
     
     <url>
-        <loc>http://localhost:4000/what-others-say/</loc>
+        <loc>http://adamsilver.io/people/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://adamsilver.io/recommends/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://adamsilver.io/signup/</loc>
+    </url>
+    
+    
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://adamsilver.io/team/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://adamsilver.io/what-others-say/</loc>
     </url>
     
     
