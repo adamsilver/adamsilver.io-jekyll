@@ -3,7 +3,7 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-11-23T17:47:15+00:00</updated>
+	<updated>2016-11-25T20:03:41+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -1415,16 +1415,23 @@ He talked to experts in other high-risk professions, such as aviation.
 			<link href="http://adamsilver.io/articles/why-we-stopped-tasking/"/>
 			<updated>2015-12-15T09:00:01+00:00</updated>
 			<id>http://adamsilver.io/articles/why-we-stopped-tasking</id>
-			<content type="html">&lt;p&gt;Scrum advocates the breaking down of stories into tasks because: it helps to estimate more accurately, encourages collaboration and helps to show granular progress.&lt;/p&gt;
+			<content type="html">&lt;p&gt;Scrum advocates breaking down stories into tasks because it:&lt;/p&gt;
 
-&lt;p&gt;This used to make sense to me until I was working with someone who convinced me and the rest of the development team to stop tasking altogether. Once we did, we never looked back. Here’s why:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;makes story estimation easier&lt;/li&gt;
+  &lt;li&gt;encourages collaboration&lt;/li&gt;
+  &lt;li&gt;enables the team to show granular process during a sprint.&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;h2 id=&quot;we-gained-60-hours-back-per-sprint&quot;&gt;1. We gained 60 hours back per sprint&lt;/h2&gt;
-&lt;p&gt;At least 50% of our Sprint Planning sessions involved breaking down stories into tasks. When we stopped tasking, the sessions went down from about five hours to less than two. And considering our team had over 20 people we gained a lot of development time.&lt;/p&gt;
+&lt;p&gt;When one of my colleagues convinced me and the team to stop it we increased our velocity significantly. Here’s why:&lt;/p&gt;
 
-&lt;h2 id=&quot;defining-tasks-ahead-of-time-is-inaccurate&quot;&gt;2. Defining tasks ahead of time is inaccurate&lt;/h2&gt;
+&lt;h2 id=&quot;we-didnt-need-to-spend-time-tasking&quot;&gt;1. We didn’t need to spend time tasking&lt;/h2&gt;
 
-&lt;p&gt;When coding it is inevitable that the solution will change as development unearths unforeseen scenarios and opportunity for improvement. This is why tasking is inaccurate.&lt;/p&gt;
+&lt;p&gt;At least 50% of our Sprint Planning sessions was spent breaking down stories into tasks. For our team of over 20 people, we gained almost 60 man-hours back per sprint.&lt;/p&gt;
+
+&lt;h2 id=&quot;tasking-ahead-of-development-is-inaccurate&quot;&gt;2. Tasking ahead of development is inaccurate&lt;/h2&gt;
+
+&lt;p&gt;Solutions change during development due to unforseen scenarios. Only through coding might you find opportunites for improvement. A lot of our tasks weren’t accurate which meant tasking had negative value.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;“Weeks of programming can save you hours of planning.”&lt;/p&gt;
@@ -1432,28 +1439,37 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;p&gt;Don’t bother, give yourself more time to code instead.&lt;/p&gt;
 
-&lt;h2 id=&quot;many-tasks-are-repetitive&quot;&gt;3. Many tasks are repetitive&lt;/h2&gt;
+&lt;h2 id=&quot;tasks-are-repetitive&quot;&gt;3. Tasks are repetitive&lt;/h2&gt;
 
-&lt;p&gt;Different stories typically require similar tasks: unit tests, a controller action, a view template, some JS enhancement, some styling etc. Specifying these as tasks wasn’t helpful to us. We knew what we had to do and we had a clear Definition of Done and Acceptance Criteria, which ensured the smooth delivery of each story.&lt;/p&gt;
+&lt;p&gt;A lot of the stories required many of the same tasks. For example unit tests, a controller action, a template, some Javascript and styling enhancements etc. These things were always going to happen.&lt;/p&gt;
+
+&lt;p&gt;Writing them as tasks wasn’t valuable. Instead we relied on a clear Definition of Done and Acceptance Criteria. Both of which ensure the smooth delivery of each story.&lt;/p&gt;
 
 &lt;h2 id=&quot;many-tasks-are-carried-out-in-parallel&quot;&gt;4. Many tasks are carried out in parallel&lt;/h2&gt;
 
-&lt;p&gt;Often many tasks are carried at at the same time. For example we would typically write HTML &amp;amp; CSS together as well as writing JS &amp;amp; unit tests together. Often the JS enhanced version would need extra HTML and CSS. This meant that most (if not all) tasks moved from in-progress to complete at the same time meaning we didn’t show granular progress. We may as well have moved the entire story which is what we did in the end.&lt;/p&gt;
+&lt;p&gt;Tasks are often carried out at the same time. For example, we would  write HTML &amp;amp; CSS together. Often the JS-enhanced version would need extra HTML and CSS.&lt;/p&gt;
 
-&lt;h2 id=&quot;our-estimates-didnt-improve-because-of-tasking&quot;&gt;5. Our estimates didn’t improve because of tasking&lt;/h2&gt;
+&lt;p&gt;This meant that a lot of tasks moved from “in-progress” to “complete” at the same time. We never showed granular progress. In the end we just moved the Story card.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://illustratedagile.com/2012/11/13/the-5-stages-of-user-story-sizing/&quot;&gt;Estimation is based on several things&lt;/a&gt;. Most importantly estimation comes from experience. Experience working together with a team you know well, on a particular project within a particular organisation. Only then will you have a predictable velocity.&lt;/p&gt;
+&lt;h2 id=&quot;estimates-didnt-improve&quot;&gt;5. Estimates didn’t improve&lt;/h2&gt;
 
-&lt;h2 id=&quot;the-board-was-easier-to-use&quot;&gt;6. The board was easier to use&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://illustratedagile.com/2012/11/13/the-5-stages-of-user-story-sizing/&quot;&gt;Estimation is based on several things&lt;/a&gt;. Estimation comes from experience. Experience working together with a team you know well, on a particular project within a particular organisation. Only then will you have a predictable velocity.&lt;/p&gt;
 
-&lt;p&gt;Removing the tasks instantly decluttered the board. No longer did we cram hundreds of tasks into each swim lane. Instead we had a single card per story. Our board was easy to understand, use and explain.&lt;/p&gt;
+&lt;h2 id=&quot;its-easier-to-understand-the-task-board&quot;&gt;6. It’s easier to understand the task board&lt;/h2&gt;
+
+&lt;p&gt;Removing tasks decluttered the task board significantly. We no longer had to fit tasks into each swim lane. Instead we had a single card per story.&lt;/p&gt;
 
 &lt;h2 id=&quot;we-wasted-less-paper&quot;&gt;7. We wasted less paper&lt;/h2&gt;
-&lt;p&gt;Silly but true! A lot less trees were killed when stopped tasking.&lt;/p&gt;
 
-&lt;h2 id=&quot;collaboration-was-achieved-by-the-overall-process&quot;&gt;8. Collaboration was achieved by the overall process&lt;/h2&gt;
+&lt;p&gt;We saved trees. We saved money. What’s not to like about that?&lt;/p&gt;
 
-&lt;p&gt;Our team didn’t need tasks to enable collaboration. We sat in close proximity, had regular, useful and well-timed meetings, we paired when appropriate and had regular productive feedback loops.&lt;/p&gt;
+&lt;h2 id=&quot;the-overall-process-encouraged-us-to-collaborate&quot;&gt;8. The overall process encouraged us to collaborate&lt;/h2&gt;
+
+&lt;p&gt;We didn’t need tasks to help us collaborate. We sat in close proximity. We had regular, useful and well-timed meetings. We paired when appropriate and had regular productive feedback loops. All of this added up to a collaborative environment.&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;If you’re tasking and it works for you, good. But take some time and consider if it’s really helping.&lt;/p&gt;
 </content>
 		</entry>
 	
@@ -2590,7 +2606,7 @@ zoo.information = {
 			<link href="http://adamsilver.io/articles/the-multiple-submit-button-problem/"/>
 			<updated>2014-03-20T09:00:01+00:00</updated>
 			<id>http://adamsilver.io/articles/the-multiple-submit-button-problem</id>
-			<content type="html">&lt;p&gt;Sometimes a form is designed to be multi-purpose. Take the example below. It represents an edit details form whereby the user can either update their information or delete it all together. This kind of form causes usability problems for keyboard users.&lt;/p&gt;
+			<content type="html">&lt;p&gt;Sometimes forms are designed with more than one action. The example below shows an edit form. The user can either update their information or delete it altogether. A form with multiple actions causes problems for keyboard users.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot; style=&quot;max-width: 320px;margin: 0 auto;&quot;&gt;
 	&lt;figure&gt;
@@ -2610,27 +2626,25 @@ zoo.information = {
 
 &lt;p&gt;This is not always the case though. Sometimes the visual design means that the &lt;em&gt;delete&lt;/em&gt; button is first in the document flow (and there is no CSS trick to get around this). In this case the user presses enter, and instead of updating their details, they delete them.&lt;/p&gt;
 
-&lt;h2 id=&quot;whats-the-best-solution&quot;&gt;What’s the best solution?&lt;/h2&gt;
+&lt;h2 id=&quot;split-the-forms-up&quot;&gt;1. Split the forms up&lt;/h2&gt;
 
-&lt;p&gt;Where possible, the best solution would be to split out the forms into two. This means each form contains &lt;em&gt;one&lt;/em&gt; submit button. Often this provides a better User Experience in the form of focused pages and actions dedicated to each task the user wishes to accomplish.&lt;/p&gt;
+&lt;p&gt;If possible, you should split out the forms into two. This means each form contains &lt;em&gt;one&lt;/em&gt; submit button. This provides a better experience all-round. This is because each page has particular focus. Thus reducing cognitive burden.&lt;/p&gt;
 
-&lt;p&gt;In our example above the delete button would become a link to a page that allows the user to delete the details.&lt;/p&gt;
+&lt;p&gt;In the above example, the delete button would become a link to a page that allows the user to delete the details.&lt;/p&gt;
 
-&lt;h2 id=&quot;what-if-you-must-have-two-actions-in-one-form&quot;&gt;What if you “must have” two actions in one form?&lt;/h2&gt;
+&lt;h2 id=&quot;choose-a-primary-action&quot;&gt;2. Choose a primary action&lt;/h2&gt;
 
-&lt;p&gt;If you &lt;em&gt;must&lt;/em&gt; have two actions in one form then you must answer the following question: &lt;strong&gt;what is the form’s primary action?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you &lt;em&gt;must&lt;/em&gt; have two actions then you need to work out what the primary action of the form is. This is not always easier to answer.&lt;/p&gt;
 
-&lt;p&gt;This is not always a straightforward answer, but in the example above it’s clearly the &lt;em&gt;update&lt;/em&gt; button. For this simply make sure that button comes first in the document flow.&lt;/p&gt;
+&lt;p&gt;In the above example, it’s wise to make &lt;em&gt;update&lt;/em&gt; the primary action because you probably don’t want to make deletion easy.&lt;/p&gt;
 
-&lt;p&gt;The only potential problem here is that you might be limited by the powers of CSS in terms of visually positioning the buttons as desired. If this is the case then you can duplicate the primary button at the top of the form and hide it off screen with CSS:&lt;/p&gt;
+&lt;p&gt;To do this make sure the button is first in the document flow as per the design above. If the design doesn’t allow you to do this then you should duplicate the primary button and put it at the top of the form. Hide it visually off screen with CSS.&lt;/p&gt;
 
-&lt;p&gt;The trade off here is that when the user is tabbing through the page and arrives at the hidden button, the UI will appear to be unresponsive. This is because focusing on an interactive element would normally provide some sort of visual feedback. As the button is hidden you lose this functionality.&lt;/p&gt;
-
-&lt;p&gt;The solution to this, is to display the button if focused, and then hide again when the user loses focus from this button. Again, this may not be desired but it’s a trade off you may have to make.&lt;/p&gt;
+&lt;p&gt;Unfortunately, this approach has a problem. When the user uses their keyboard to tab to through the form, the UI will appear to be unresponsive. This is because the user has focused on a button that is off screen.&lt;/p&gt;
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
-&lt;p&gt;The simple omission of the submit button causes usability and accessibility problems which degrades the experience. Where possible design this out of the system and &lt;a href=&quot;/articles/designing-honestly-for-the-web/&quot;&gt;embrace the constraints of the web&lt;/a&gt;. If it really isn’t possible to do this, then a little effort to choose the primary action will improve the experience for these users.&lt;/p&gt;
+&lt;p&gt;Forms with multiple submit buttons cause problems for users not using a mouse. If at all possible, design this out of the system. Your users will thank you.&lt;/p&gt;
 </content>
 		</entry>
 	
