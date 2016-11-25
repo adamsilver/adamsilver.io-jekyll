@@ -170,7 +170,7 @@ hr {
 }
 
 .mainContent p {
-	margin: 0 20px 30px;
+	margin: 0 20px 20px;
 	font-size: 1.7em;
 	line-height: 1.8;
 }
@@ -178,7 +178,7 @@ hr {
 @media(min-width: 600px) {
 	.mainContent p {
 		font-size: 1.9em;
-		margin-bottom: 45px;
+		margin-bottom: 25px;
 	}
 }
 
@@ -191,7 +191,7 @@ hr {
 	font-family: Monaco,'Courier New','Courier',monospace;
 	font-size: 1.9em;
 	background-color: #fafafa;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	padding: 20px;
 	white-space: pre-wrap;       /* css-3 */
 	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
@@ -203,7 +203,7 @@ hr {
 @media(min-width: 600px) {
 	.mainContent pre {
 		font-size: 2.6em;
-		margin-bottom: 45px;
+		margin-bottom: 30px;
 	}
 }
 
@@ -229,13 +229,14 @@ hr {
 
 .mainContent ol,
 .mainContent ul {
-	margin: 0 20px 35px 40px;
+	margin: 0 20px 45px 50px;
 }
 
 @media(min-width: 600px) {
 	.mainContent ol,
 	.mainContent ul {
-		margin-bottom: 45px;
+		margin-bottom: 65px;
+		margin-right: 60px;
 	}
 }
 

@@ -2,7 +2,7 @@
 
 ## Run in dev mode
 
-	jekyll serve . --config _config.yml,configdev.yml
+	jekyll serve . --config _config.yml,_configdev.yml
 
 ## Run in product mode
 
