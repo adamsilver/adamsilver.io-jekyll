@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html dir="ltr" lang="en">
 	<head>
-	    <title>The multiple submit button problem | Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
+	    <title>Forms with multiple submit buttons are problematic | Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <meta name="viewport" content="initial-scale=1.0">
 <meta name="Author" content="Adam Silver">
@@ -29,14 +29,14 @@
 <meta property="og:type" content="website">
 
 
-	<meta content="The multiple submit button problem" property="og:title">
+	<meta content="Forms with multiple submit buttons are problematic" property="og:title">
 
 
 
 	<meta property="og:description" content="Forms with multiple submit buttons have both UX problems and technical problems all of which is discussed in this article.">
 
 
-<meta property="og:url" content="http://adamsilver.io/articles/the-multiple-submit-button-problem/">
+<meta property="og:url" content="http://adamsilver.io/articles/forms-with-multiple-submit-buttons-are-problematic/">
 <meta property="og:site_name" content="Adamsilver.io">
 <meta property="og:image" content="http://adamsilver.io/assets/img/card.png">
 <meta property="og:image:width" content="181">
@@ -48,10 +48,10 @@
 	<meta name="twitter:description" content="Forms with multiple submit buttons have both UX problems and technical problems all of which is discussed in this article.">
 
 
-<meta name="twitter:title" content="The multiple submit button problem -  Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.">
+<meta name="twitter:title" content="Forms with multiple submit buttons are problematic -  Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.">
 
 
-	<meta content="The multiple submit button problem" name="twitter:title">
+	<meta content="Forms with multiple submit buttons are problematic" name="twitter:title">
 
 
 <meta name="twitter:site" content="@adambsilver">
@@ -78,7 +78,7 @@
 <![endif]-->
 
 
-<link rel="canonical" href="http://adamsilver.io/articles/the-multiple-submit-button-problem/">
+<link rel="canonical" href="http://adamsilver.io/articles/forms-with-multiple-submit-buttons-are-problematic/">
 <link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
 
 <script>
@@ -103,46 +103,32 @@
 	</ul>
 </div>
 	    <div class="mainContent">
-			<h1>The multiple submit button problem</h1>
-	        <p>Sometimes forms are designed with more than one action. The example below shows an edit form. The user can either update their information or delete it altogether. A form with multiple actions causes problems for keyboard users.</p>
+			<h1>Forms with multiple submit buttons are problematic</h1>
+	        <p>Forms that have multiple submit buttons are problematic for people who use a keyboard. The problem occurs due to the way forms work with regards to submission.</p>
+
+<p>When a user fills out a form, they can submit that form at any time by pressing enter, even if they are focussed on a text field. When there are multiple buttons, the form submits as if the first button was pressed.</p>
+
+<p>This isn’t always desirable because the first button may not be considered the primary action of the form. For example, you might have an address form with a postcode look-up.</p>
 
 <div class="image" style="max-width: 320px;margin: 0 auto;">
 	<figure>
-		<img src="/assets/img/multiplesubmit.png" alt="Multi submit problem" width="100%" />
-		<figcaption>Multiple submit buttons</figcaption>
+		<img src="/assets/img/multiplesubmit.png" alt="Delivery address form" width="100%" />
 	</figure>
 </div>
 
-<!-- <form>
-	<input type="text" name="firstName" value="Adam">
-	<input type="text" name="lastName" value="Silver">
-	<input type="submit" name="delete" value="Delete">
-	<input type="submit" name="save" value="Save">
-</form> -->
+<p>Pressing enter will always perform a postcode look-up. That’s because that button appears before the primary button.</p>
 
-<p>The user can submit the form while focused on <em>first name</em> or <em>last name</em> control by pressing the enter key. If they do this the form will be submitted based on the first button in the document flow which in this case is the <em>update</em> button.</p>
+<p>Your best option is to split up the forms. In the above example, have one that does the postcode look-up. And have another that saves the address.</p>
 
-<p>This is not always the case though. Sometimes the visual design means that the <em>delete</em> button is first in the document flow (and there is no CSS trick to get around this). In this case the user presses enter, and instead of updating their details, they delete them.</p>
+<p>Not only does this help keyboard users, but it provides a better all-round experience. This is because each page or feature has a dedicated focus which reduces the cognitive burden on users.</p>
 
-<h2 id="split-the-forms-up">1. Split the forms up</h2>
+<p>If you <em>really</em> can’t do that, then you’ll have to choose a primary action. This isn’t always easy, because some forms have two buttons with similar weighting.</p>
 
-<p>If possible, you should split out the forms into two. This means each form contains <em>one</em> submit button. This provides a better experience all-round. This is because each page has particular focus. Thus reducing cognitive burden.</p>
+<p>If the form’s primary action doesn’t come first, then you’ll have to modify the design which isn’t always possible. Or you’ll need to add a duplicate button to the top of the form and hide it visually with CSS.</p>
 
-<p>In the above example, the delete button would become a link to a page that allows the user to delete the details.</p>
+<p>When the user tabs via keyboard to the hidden button, the UI will appear unresponsive. That’s because the button is focused but off-screen. This is an undesirable experience that can disorientate users.</p>
 
-<h2 id="choose-a-primary-action">2. Choose a primary action</h2>
-
-<p>If you <em>must</em> have two actions then you need to work out what the primary action of the form is. This is not always easier to answer.</p>
-
-<p>In the above example, it’s wise to make <em>update</em> the primary action because you probably don’t want to make deletion easy.</p>
-
-<p>To do this make sure the button is first in the document flow as per the design above. If the design doesn’t allow you to do this then you should duplicate the primary button and put it at the top of the form. Hide it visually off screen with CSS.</p>
-
-<p>Unfortunately, this approach has a problem. When the user uses their keyboard to tab to through the form, the UI will appear to be unresponsive. This is because the user has focused on a button that is off screen.</p>
-
-<h2 id="summary">Summary</h2>
-
-<p>Forms with multiple submit buttons cause problems for users not using a mouse. If at all possible, design this out of the system. Your users will thank you.</p>
+<p>If at all possible, split up the forms.</p>
 
 	    </div>
 		<div class="signUpHero  signUpHero-isArticle ">
@@ -151,7 +137,7 @@
 	<form action="//adamsilver.us9.list-manage.com/subscribe/post?u=b8fb04f39bf86109693e00ba5&amp;id=441c045a36" method="post">
 		<input type="hidden" name="b_b8fb04f39bf86109693e00ba5_441c045a36" value="">
 		<input type="hidden" name="SITE" value="http://adamsilver.io">
-		<input type="hidden" name="LOCATION" value="/articles/the-multiple-submit-button-problem/">
+		<input type="hidden" name="LOCATION" value="/articles/forms-with-multiple-submit-buttons-are-problematic/">
 		<label for="mce-EMAIL" class="signUpHero-label">Your email address</label>
 		<input type="email" name="EMAIL" id="mce-EMAIL" class="signUpHero-email" required>
 		<input class="signUpHero-button" type="submit" value="Sign up" name="subscribe">

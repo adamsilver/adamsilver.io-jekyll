@@ -3,7 +3,7 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-11-25T20:03:41+00:00</updated>
+	<updated>2016-11-27T18:50:03+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -2602,49 +2602,35 @@ zoo.information = {
 		</entry>
 	
 		<entry>
-			<title>The multiple submit button problem</title>
-			<link href="http://adamsilver.io/articles/the-multiple-submit-button-problem/"/>
+			<title>Forms with multiple submit buttons are problematic</title>
+			<link href="http://adamsilver.io/articles/forms-with-multiple-submit-buttons-are-problematic/"/>
 			<updated>2014-03-20T09:00:01+00:00</updated>
-			<id>http://adamsilver.io/articles/the-multiple-submit-button-problem</id>
-			<content type="html">&lt;p&gt;Sometimes forms are designed with more than one action. The example below shows an edit form. The user can either update their information or delete it altogether. A form with multiple actions causes problems for keyboard users.&lt;/p&gt;
+			<id>http://adamsilver.io/articles/forms-with-multiple-submit-buttons-are-problematic</id>
+			<content type="html">&lt;p&gt;Forms that have multiple submit buttons are problematic for people who use a keyboard. The problem occurs due to the way forms work with regards to submission.&lt;/p&gt;
+
+&lt;p&gt;When a user fills out a form, they can submit that form at any time by pressing enter, even if they are focussed on a text field. When there are multiple buttons, the form submits as if the first button was pressed.&lt;/p&gt;
+
+&lt;p&gt;This isn’t always desirable because the first button may not be considered the primary action of the form. For example, you might have an address form with a postcode look-up.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot; style=&quot;max-width: 320px;margin: 0 auto;&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;/assets/img/multiplesubmit.png&quot; alt=&quot;Multi submit problem&quot; width=&quot;100%&quot; /&gt;
-		&lt;figcaption&gt;Multiple submit buttons&lt;/figcaption&gt;
+		&lt;img src=&quot;/assets/img/multiplesubmit.png&quot; alt=&quot;Delivery address form&quot; width=&quot;100%&quot; /&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;!-- &lt;form&gt;
-	&lt;input type=&quot;text&quot; name=&quot;firstName&quot; value=&quot;Adam&quot;&gt;
-	&lt;input type=&quot;text&quot; name=&quot;lastName&quot; value=&quot;Silver&quot;&gt;
-	&lt;input type=&quot;submit&quot; name=&quot;delete&quot; value=&quot;Delete&quot;&gt;
-	&lt;input type=&quot;submit&quot; name=&quot;save&quot; value=&quot;Save&quot;&gt;
-&lt;/form&gt; --&gt;
+&lt;p&gt;Pressing enter will always perform a postcode look-up. That’s because that button appears before the primary button.&lt;/p&gt;
 
-&lt;p&gt;The user can submit the form while focused on &lt;em&gt;first name&lt;/em&gt; or &lt;em&gt;last name&lt;/em&gt; control by pressing the enter key. If they do this the form will be submitted based on the first button in the document flow which in this case is the &lt;em&gt;update&lt;/em&gt; button.&lt;/p&gt;
+&lt;p&gt;Your best option is to split up the forms. In the above example, have one that does the postcode look-up. And have another that saves the address.&lt;/p&gt;
 
-&lt;p&gt;This is not always the case though. Sometimes the visual design means that the &lt;em&gt;delete&lt;/em&gt; button is first in the document flow (and there is no CSS trick to get around this). In this case the user presses enter, and instead of updating their details, they delete them.&lt;/p&gt;
+&lt;p&gt;Not only does this help keyboard users, but it provides a better all-round experience. This is because each page or feature has a dedicated focus which reduces the cognitive burden on users.&lt;/p&gt;
 
-&lt;h2 id=&quot;split-the-forms-up&quot;&gt;1. Split the forms up&lt;/h2&gt;
+&lt;p&gt;If you &lt;em&gt;really&lt;/em&gt; can’t do that, then you’ll have to choose a primary action. This isn’t always easy, because some forms have two buttons with similar weighting.&lt;/p&gt;
 
-&lt;p&gt;If possible, you should split out the forms into two. This means each form contains &lt;em&gt;one&lt;/em&gt; submit button. This provides a better experience all-round. This is because each page has particular focus. Thus reducing cognitive burden.&lt;/p&gt;
+&lt;p&gt;If the form’s primary action doesn’t come first, then you’ll have to modify the design which isn’t always possible. Or you’ll need to add a duplicate button to the top of the form and hide it visually with CSS.&lt;/p&gt;
 
-&lt;p&gt;In the above example, the delete button would become a link to a page that allows the user to delete the details.&lt;/p&gt;
+&lt;p&gt;When the user tabs via keyboard to the hidden button, the UI will appear unresponsive. That’s because the button is focused but off-screen. This is an undesirable experience that can disorientate users.&lt;/p&gt;
 
-&lt;h2 id=&quot;choose-a-primary-action&quot;&gt;2. Choose a primary action&lt;/h2&gt;
-
-&lt;p&gt;If you &lt;em&gt;must&lt;/em&gt; have two actions then you need to work out what the primary action of the form is. This is not always easier to answer.&lt;/p&gt;
-
-&lt;p&gt;In the above example, it’s wise to make &lt;em&gt;update&lt;/em&gt; the primary action because you probably don’t want to make deletion easy.&lt;/p&gt;
-
-&lt;p&gt;To do this make sure the button is first in the document flow as per the design above. If the design doesn’t allow you to do this then you should duplicate the primary button and put it at the top of the form. Hide it visually off screen with CSS.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, this approach has a problem. When the user uses their keyboard to tab to through the form, the UI will appear to be unresponsive. This is because the user has focused on a button that is off screen.&lt;/p&gt;
-
-&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;Forms with multiple submit buttons cause problems for users not using a mouse. If at all possible, design this out of the system. Your users will thank you.&lt;/p&gt;
+&lt;p&gt;If at all possible, split up the forms.&lt;/p&gt;
 </content>
 		</entry>
 	
