@@ -6,15 +6,13 @@ categories: js
 description: Organising your client-side Javascript is important. Namespaces are a sane, cross-browser approach to help with this.
 ---
 
-Namespaces are used to help with code organisation, discoverability, and in the context of Javascript, the minimisation of [global variables](http://www.yuiblog.com/blog/2006/06/01/global-domination/).
+Namespaces help you organise a codebase, so that others can easily find their way around it. In Javascript, they also minimise the number of [global variables](http://www.yuiblog.com/blog/2006/06/01/global-domination/).
 
-Client-side Javascript doesn't (at the time of writing) have a dedicated construct for namespacing, but it can be imitated using object literals.
+Javascript doesn't (at the time of writing) have a dedicated way to namespace components. But we can imitate them using object literals.
 
-For demonstration purposes let's define an example application. Our application will be a zoo and just like *real* zoos it will have animals and some additional information.
+To show how we can do this I'll create an example application. The application will represent a zoo. This zoo will have a couple of animals and details about the Zoo itself.
 
-## Directory structure
-
-It's helpful to visualise the directory structure as follows:
+The zoo's directory structure is below:
 
 	zoo/
 		zoo.js
@@ -24,39 +22,24 @@ It's helpful to visualise the directory structure as follows:
 			zoo.animals.Penguin.js
 			zoo.animals.Tiger.js
 
-Namespaces will be defined in `zoo.js` and `zoo.animals.js`. All other files define components of the zoo. Each folder represents a namespace. Each namespace file simply assigns an empty object to a variable or property.
+The root namespace resides inside `zoo.js`.
 
-## Root namespace setup
-
-	// zoo.js
 	var zoo = {};
 
-## Sub level namespace setup
-
-For our example app we don't need a deep hierarchy. Add levels as you need them. For us we just need to group animals.
+The animals need a sub level namespace too which resides inside `zoo.animals.js`.
 
 	// zoo.animals.js
 	zoo.animals = {};
 
-*Note: The namespace matches the file name which aids discoverability.*
+You will notice that the namespace matches the name of the file. This consistency helps you find the relevant component later.
 
-## Penguin definition
+The zoo has a penguin and a tiger definition which reside inside `zoo.animals.Penguin.js` and `zoo.animals.Tiger.js` respectively. The penguin definition is shown below:
 
-	// zoo.animals.Penguin.js
 	zoo.animals.Penguin = function() {
 		// constructor
 	};
 
-## Tiger definition
-
-	// zoo.animals.Tiger.js
-	zoo.animals.Tiger = function() {
-		// constructor
-	};
-
-## Zoo information
-
-When it comes to information you can simply assign an object to your chosen namespace.
+If you need to store some information in the zoo you can do so as follows:
 
 	// zoo.information.js
 	zoo.information = {
@@ -64,4 +47,4 @@ When it comes to information you can simply assign an object to your chosen name
 		address: "52 Zoo Lane, ZA1 2AP"
 	};
 
-*Note: Do not be concerned about having too many files; overly complex namespace hiearchies should be avoided and separate files should be concatenated for production.*
+Where possible, you should avoid deeply nested hierarchies. But don't worry about having lot's of files. You should be concatenating them for production anyway.
