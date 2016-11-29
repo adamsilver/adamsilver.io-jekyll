@@ -62,20 +62,28 @@
 	<meta itemprop="description" content="Forms with multiple submit buttons have both UX problems and technical problems all of which is discussed in this article.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.ea6b14a2.css" media="all">
+<!-- build:css /assets/css/main.min.css -->
+<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all">
+<!-- endbuild -->
 
+<!-- build:css /assets/css/ie8.min.css -->
 <!--[if IE 8]>
-<link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
+<link rel="stylesheet" href="/assets/css/ie8.css" type="text/css" media="all">
 <![endif]-->
+<!-- endbuild -->
 
+<!-- build:css /assets/css/ie7.min.css -->
 <!--[if IE 7]>
-<link rel="stylesheet" href="/assets/css/ie7.min.d41d8cd9.css" media="all">
+<link rel="stylesheet" href="/assets/css/ie7.css" type="text/css" media="all">
 <![endif]-->
+<!-- endbuild -->
 
 
+<!-- build:css /assets/css/ie6.min.css -->
 <!--[if IE 6]>
-<link rel="stylesheet" href="/assets/css/ie6.min.2d22a25b.css" media="all">
+<link rel="stylesheet" href="/assets/css/ie6.css" type="text/css" media="all">
 <![endif]-->
+<!-- endbuild -->
 
 
 <link rel="canonical" href="http://adamsilver.io/articles/forms-with-multiple-submit-buttons-are-problematic/">
@@ -104,7 +112,7 @@
 </div>
 	    <div class="mainContent">
 			<h1>Forms with multiple submit buttons are problematic</h1>
-	        <p>Forms that have multiple submit buttons are problematic for people who use a keyboard. The problem occurs due to the way forms work with regards to submission.</p>
+	        <p>Forms with multiple submit buttons are problematic for people who use a keyboard. The problem occurs due to the way forms work with regards to submission.</p>
 
 <p>When a user fills out a form, they can submit that form at any time by pressing enter, even if they are focussed on a text field. When there are multiple buttons, the form submits as if the first button was pressed.</p>
 
@@ -126,7 +134,7 @@
 
 <p>If the form’s primary action doesn’t come first, then you’ll have to modify the design which isn’t always possible. Or you’ll need to add a duplicate button to the top of the form and hide it visually with CSS.</p>
 
-<p>When the user tabs via keyboard to the hidden button, the UI will appear unresponsive. That’s because the button is focused but off-screen. This is an undesirable experience that can disorientate users.</p>
+<p>However, when the user tabs via keyboard to the hidden button, the UI will appear unresponsive. That’s because the button is focused but off-screen. This is an undesirable experience that can disorientate users.</p>
 
 <p>If at all possible, split up the forms.</p>
 

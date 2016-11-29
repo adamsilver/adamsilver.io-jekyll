@@ -62,20 +62,28 @@
 	<meta itemprop="description" content="Organising your client-side Javascript is important. Namespaces are a sane, cross-browser approach to help with this.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.ea6b14a2.css" media="all">
+<!-- build:css /assets/css/main.min.css -->
+<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all">
+<!-- endbuild -->
 
+<!-- build:css /assets/css/ie8.min.css -->
 <!--[if IE 8]>
-<link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
+<link rel="stylesheet" href="/assets/css/ie8.css" type="text/css" media="all">
 <![endif]-->
+<!-- endbuild -->
 
+<!-- build:css /assets/css/ie7.min.css -->
 <!--[if IE 7]>
-<link rel="stylesheet" href="/assets/css/ie7.min.d41d8cd9.css" media="all">
+<link rel="stylesheet" href="/assets/css/ie7.css" type="text/css" media="all">
 <![endif]-->
+<!-- endbuild -->
 
 
+<!-- build:css /assets/css/ie6.min.css -->
 <!--[if IE 6]>
-<link rel="stylesheet" href="/assets/css/ie6.min.2d22a25b.css" media="all">
+<link rel="stylesheet" href="/assets/css/ie6.css" type="text/css" media="all">
 <![endif]-->
+<!-- endbuild -->
 
 
 <link rel="canonical" href="http://adamsilver.io/articles/javascript-namespacing/">
@@ -104,71 +112,53 @@
 </div>
 	    <div class="mainContent">
 			<h1>Javascript namespacing</h1>
-	        <p>Namespaces are used to help with code organisation, discoverability, and in the context of Javascript, the minimisation of <a href="http://www.yuiblog.com/blog/2006/06/01/global-domination/">global variables</a>.</p>
+	        <p>Namespaces help you organise a codebase, so that others can easily find their way around it. In Javascript, they also minimise the number of <a href="http://www.yuiblog.com/blog/2006/06/01/global-domination/">global variables</a>.</p>
 
-<p>Client-side Javascript doesn’t (at the time of writing) have a dedicated construct for namespacing, but it can be imitated using object literals.</p>
+<p>Javascript doesn’t (at the time of writing) have a dedicated way to namespace components. But we can do it using object literals.</p>
 
-<p>For demonstration purposes let’s define an example application. Our application will be a zoo and just like <em>real</em> zoos it will have animals and some additional information.</p>
+<p>I’ll show you how to do namespace your components with an example application. The application represents a zoo. The zoo has a couple of animals plus some additional information.</p>
 
-<h2 id="directory-structure">Directory structure</h2>
-
-<p>It’s helpful to visualise the directory structure as follows:</p>
+<p>This is the directory structure for the zoo:</p>
 
 <pre><code>zoo/
-	zoo.js
-	zoo.information.js
-	animals/
-		zoo.animals.js
-		zoo.animals.Penguin.js
-		zoo.animals.Tiger.js
+  zoo.js
+  zoo.information.js
+  animals/
+    zoo.animals.js
+    zoo.animals.Penguin.js
+    zoo.animals.Tiger.js
 </code></pre>
 
-<p>Namespaces will be defined in <code>zoo.js</code> and <code>zoo.animals.js</code>. All other files define components of the zoo. Each folder represents a namespace. Each namespace file simply assigns an empty object to a variable or property.</p>
+<p>The root namespace resides inside <code>zoo.js</code>.</p>
 
-<h2 id="root-namespace-setup">Root namespace setup</h2>
-
-<pre><code>// zoo.js
-var zoo = {};
+<pre><code>var zoo = {};
 </code></pre>
 
-<h2 id="sub-level-namespace-setup">Sub level namespace setup</h2>
-
-<p>For our example app we don’t need a deep hierarchy. Add levels as you need them. For us we just need to group animals.</p>
+<p>The animals need a sub level namespace too which resides inside <code>zoo.animals.js</code>.</p>
 
 <pre><code>// zoo.animals.js
 zoo.animals = {};
 </code></pre>
 
-<p><em>Note: The namespace matches the file name which aids discoverability.</em></p>
+<p>You will notice that the namespace matches the name of the file. This consistency helps you find the relevant component later.</p>
 
-<h2 id="penguin-definition">Penguin definition</h2>
+<p>The zoo has a penguin and a tiger definition which reside inside <code>zoo.animals.Penguin.js</code> and <code>zoo.animals.Tiger.js</code> respectively. The penguin definition is shown below:</p>
 
-<pre><code>// zoo.animals.Penguin.js
-zoo.animals.Penguin = function() {
-	// constructor
+<pre><code>zoo.animals.Penguin = function() {
+  // constructor
 };
 </code></pre>
 
-<h2 id="tiger-definition">Tiger definition</h2>
-
-<pre><code>// zoo.animals.Tiger.js
-zoo.animals.Tiger = function() {
-	// constructor
-};
-</code></pre>
-
-<h2 id="zoo-information">Zoo information</h2>
-
-<p>When it comes to information you can simply assign an object to your chosen namespace.</p>
+<p>If you need to store some information in the zoo you can do so as follows:</p>
 
 <pre><code>// zoo.information.js
 zoo.information = {
-	name: "My Awesome Zoo",
-	address: "52 Zoo Lane, ZA1 2AP"
+  name: "My Awesome Zoo",
+  address: "52 Zoo Lane, ZA1 2AP"
 };
 </code></pre>
 
-<p><em>Note: Do not be concerned about having too many files; overly complex namespace hiearchies should be avoided and separate files should be concatenated for production.</em></p>
+<p>Where possible, you should avoid deeply nested hierarchies. But don’t worry about having a lot of files. You should be concatenating them for production anyway.</p>
 
 	    </div>
 		<div class="signUpHero  signUpHero-isArticle ">
