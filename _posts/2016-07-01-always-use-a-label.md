@@ -5,11 +5,7 @@ date: 2016-07-01 09:00:01
 categories: design ux
 ---
 
-Sometimes designers oversimplify a form by removing the labels. The problem is
-that [minimal does not always mean it’s
-simple](http://uxmyths.com/post/115783813605/myth-34-simple-minimal) — which is
-certainly the case for labels. Labels, in fact, are an essential part of
-designing easy-to-use forms. Here’s why:
+Sometimes designers oversimplify a form by removing the labels. [Minimal does not always mean it’s simple](http://uxmyths.com/post/115783813605/myth-34-simple-minimal) which is certainly the case for labels. Labels, in fact, are an essential part of designing easy-to-use forms. Here’s why:
 
 **A) Sighted users will see the instructions** and know what to do. Without a
 label this is challenging at best.
@@ -54,9 +50,9 @@ They do and unfortunately, it’s rather common to find missing labels on produc
 	</figure>
 </div>
 
-Instead of a label, they rely on the first *option* in the menu to provide meaning. Whilst this is *sort of * okay for *visual* users in the non-selected state, it *does* suffer from points B and C — *and* A when a value has been selected — as is the case with the colourmenu as shown above.
+Instead of a label, they rely on the first *option* in the menu to provide meaning. Whilst this is *sort of* okay for *visual* users in the non-selected state, it *does* suffer from points B and C — *and* A when a value has been selected — as is the case with the colour menu as shown above.
 
-[House of Fraser](http://www.houseoffraser.co.uk/Polo+Ralph+Lauren+Short-Sleeve+V-Neck+T-Shirt/233780500,default,pd.html) shows a label with their quantity menu improving usabilty for everyone:
+[House of Fraser](http://www.houseoffraser.co.uk/Polo+Ralph+Lauren+Short-Sleeve+V-Neck+T-Shirt/233780500,default,pd.html) shows a label next to the quantity menu improving usabilty for everyone:
 
 <div class="image">
 	<figure>
@@ -67,8 +63,7 @@ Instead of a label, they rely on the first *option* in the menu to provide meani
 
 ## But a simple search form doesn’t need a label does it?
 
-It does and unfortunately, search forms are often designed without a label. As
-an example you can see [Selfridges ](http://www.selfridges.com/)below:
+It does and unfortunately, search forms are often designed without a label. For example, [Selfridges'](http://www.selfridges.com/) search form is missing a label:
 
 <div class="image">
 	<figure>
@@ -77,10 +72,10 @@ an example you can see [Selfridges ](http://www.selfridges.com/)below:
 	</figure>
 </div>
 
-Instead of a label, they rely on the submit button (in this case a magnifying glass) and the placeholder to provide meaning. But this is unnecessarily difficult to use for less abled people — and of course —[placeholders should not be used as a replacement for
-labels](https://medium.com/simple-human/10-reasons-why-placeholders-are-problematic-f8079412b960).
+Instead of a label, they rely on the submit button (in this case a magnifying glass) and the placeholder to provide meaning. But this is unnecessarily difficult to use for less abled people — and of course — [placeholders should not be used as a replacement for
+labels](/articles/why-placeholders-are-problematic).
 
-[Smashing Magazine](https://www.smashingmagazine.com/author/adamsilver/) shows that including a label can be both beautiful *and* functional at the same time:
+[Smashing Magazine](https://www.smashingmagazine.com/author/adamsilver/) shows that including a label can be beautiful *and* functional at the same time:
 
 <div class="image">
 	<figure>

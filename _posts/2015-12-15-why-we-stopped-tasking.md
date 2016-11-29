@@ -32,7 +32,7 @@ Don't bother, give yourself more time to code instead.
 
 A lot of the stories required many of the same tasks. For example unit tests, a controller action, a template, some Javascript and styling enhancements etc. These things were always going to happen.
 
-Writing them as tasks wasn't valuable. Instead we relied on a clear Definition of Done and Acceptance Criteria. Both of which ensure the smooth delivery of each story.
+Writing them as tasks wasn't valuable. Instead we relied on a clear Definition of Done and Acceptance Criteria. Both of which ensured the smooth delivery of each story.
 
 ## 4. Many tasks are carried out in parallel
 

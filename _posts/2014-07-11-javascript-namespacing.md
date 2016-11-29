@@ -8,19 +8,19 @@ description: Organising your client-side Javascript is important. Namespaces are
 
 Namespaces help you organise a codebase, so that others can easily find their way around it. In Javascript, they also minimise the number of [global variables](http://www.yuiblog.com/blog/2006/06/01/global-domination/).
 
-Javascript doesn't (at the time of writing) have a dedicated way to namespace components. But we can imitate them using object literals.
+Javascript doesn't (at the time of writing) have a dedicated way to namespace components. But we can do it using object literals.
 
-To show how we can do this I'll create an example application. The application will represent a zoo. This zoo will have a couple of animals and details about the Zoo itself.
+I'll show you how to do namespace your components with an example application. The application represents a zoo. The zoo has a couple of animals plus some additional information.
 
-The zoo's directory structure is below:
+This is the directory structure for the zoo:
 
 	zoo/
-		zoo.js
-		zoo.information.js
-		animals/
-			zoo.animals.js
-			zoo.animals.Penguin.js
-			zoo.animals.Tiger.js
+	  zoo.js
+      zoo.information.js
+      animals/
+        zoo.animals.js
+        zoo.animals.Penguin.js
+        zoo.animals.Tiger.js
 
 The root namespace resides inside `zoo.js`.
 
@@ -36,15 +36,15 @@ You will notice that the namespace matches the name of the file. This consistenc
 The zoo has a penguin and a tiger definition which reside inside `zoo.animals.Penguin.js` and `zoo.animals.Tiger.js` respectively. The penguin definition is shown below:
 
 	zoo.animals.Penguin = function() {
-		// constructor
+      // constructor
 	};
 
 If you need to store some information in the zoo you can do so as follows:
 
 	// zoo.information.js
 	zoo.information = {
-		name: "My Awesome Zoo",
-		address: "52 Zoo Lane, ZA1 2AP"
+	  name: "My Awesome Zoo",
+      address: "52 Zoo Lane, ZA1 2AP"
 	};
 
-Where possible, you should avoid deeply nested hierarchies. But don't worry about having lot's of files. You should be concatenating them for production anyway.
+Where possible, you should avoid deeply nested hierarchies. But don't worry about having a lot of files. You should be concatenating them for production anyway.
