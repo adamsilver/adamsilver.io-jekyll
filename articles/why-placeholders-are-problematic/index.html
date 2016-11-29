@@ -62,28 +62,20 @@
 	<meta itemprop="description" content="Hello, I am Adam Silver, I specialise in UX, Front-end Engineering and Strategy. I help companies and people make things simple and human. Based in London.">
 
 
-<!-- build:css /assets/css/main.min.css -->
-<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all">
-<!-- endbuild -->
+<link rel="stylesheet" href="/assets/css/main.min.ea6b14a2.css" media="all">
 
-<!-- build:css /assets/css/ie8.min.css -->
 <!--[if IE 8]>
-<link rel="stylesheet" href="/assets/css/ie8.css" type="text/css" media="all">
+<link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
 <![endif]-->
-<!-- endbuild -->
 
-<!-- build:css /assets/css/ie7.min.css -->
 <!--[if IE 7]>
-<link rel="stylesheet" href="/assets/css/ie7.css" type="text/css" media="all">
+<link rel="stylesheet" href="/assets/css/ie7.min.d41d8cd9.css" media="all">
 <![endif]-->
-<!-- endbuild -->
 
 
-<!-- build:css /assets/css/ie6.min.css -->
 <!--[if IE 6]>
-<link rel="stylesheet" href="/assets/css/ie6.css" type="text/css" media="all">
+<link rel="stylesheet" href="/assets/css/ie6.min.2d22a25b.css" media="all">
 <![endif]-->
-<!-- endbuild -->
 
 
 <link rel="canonical" href="http://adamsilver.io/articles/why-placeholders-are-problematic/">
@@ -112,19 +104,21 @@
 </div>
 	    <div class="mainContent">
 			<h1>Why placeholders are problematic</h1>
-	        <p>Since placeholders arrived on the scene, they have been rapidly adopted to provide hints and instructions to help users fill in forms. Whilst this sounds good, it is actually problematic due to the way the placeholder behaves — there is one ‘space’ containing two values: the hint and the value.</p>
+	        <p>When browsers introduced the placeholder, designers were quick to use them for hints and instructions as a way to help users fill in forms. Whilst this sounds good, it’s actually problematic due to the way the placeholder behaves.</p>
 
-<p>It pretty much comes down to the fact that the valuable information put in placeholders is not always available. And what is worse, is when they are used as a <em>replacement</em> for labels. Here’s why:</p>
+<p>There is effectively one ‘space’ containing two values: the hint and the value. It comes down to the fact that the valuable information put in placeholders is not always available to users when they need it. And the problem is exacerbated when placeholders are used as a replacement for labels.</p>
+
+<p>Here’s why the placeholder is problematic:</p>
 
 <h2 id="disappearing-placeholder-text-is-easy-to-forget">1. Disappearing placeholder text is easy to forget</h2>
 
-<p>Because the placeholder disappears as the user starts typing, the user can easily forget the requirements of the field. This is especially the case on more complex fields.</p>
+<p>Because the placeholder disappears as the user types, they can easily forget the requirements of the field. This is especially the case with more complex fields.</p>
 
-<p>For a login form, you may be tempted to omit labels because you think the fields are obvious, but why even risk making it harder for people to use, in the name of <a href="http://uxmyths.com/post/115783813605/myth-34-simple-minimal">minimalism</a>? The aim is to make something as easy as possible.</p>
+<p>For a login form, you may be tempted to omit labels because you think the fields are obvious, but why risk making it hard for people to use, in the name of <a href="http://uxmyths.com/post/115783813605/myth-34-simple-minimal">minimalism</a>? The aim is to make something as easy as possible.</p>
 
 <h2 id="not-all-browsers-support-placeholders">2. Not all browsers support placeholders</h2>
 
-<p>Whilst the majority of browsers support placeholders, some people use browsers that don’t, <a href="https://adactio.com/journal/10665">and remember the web is for everyone</a>. People using a browser without placeholder support, will see a blank box — which if there are no labels, makes it impossible to fill out.</p>
+<p>Whilst the majority of browsers support placeholders, some people use browsers that don’t. The <a href="https://adactio.com/journal/10665">web is for everyone</a> and we shouldn’t forget that. People using a browser without placeholder support, will see a blank box.</p>
 
 <div class="image">
 	<figure>
@@ -135,7 +129,7 @@
 
 <h2 id="pre-populated-values-are-hard-to-understand">3. Pre-populated values are hard to understand</h2>
 
-<p>When a form is loaded with real values — as would be the case with an <em>edit details</em> form, for example — it’s very difficult to understand what the value means without a label. See the example below:</p>
+<p>When a form is pre-populated—as is the case with an <em>edit details</em> form— it’s very difficult to understand what the value means without a label. See the example below:</p>
 
 <div class="image">
 	<figure>
@@ -146,7 +140,7 @@
 
 <h2 id="reviewing-a-long-form-is-difficult">4. Reviewing a long form is difficult</h2>
 
-<p>If someone has filled in a long form and wants to go back to review what they entered, the user will have to have remembered what each field wanted. Also, some browsers autocomplete entries incorrectly which can exacerbate the problem.</p>
+<p>If a user has filled in a long form and wants to go back to review what they entered, they’ll need to have remembered what each field wanted. Also, some browsers autocomplete entries incorrectly which can exacerbate the problem.</p>
 
 <h2 id="erroneous-fields-are-harder-to-fix">5. Erroneous fields are harder to fix</h2>
 
@@ -160,10 +154,7 @@ context without labels. For example, see the field below:</p>
 	</figure>
 </div>
 
-<p><span class="figcaption_hack"></span></p>
-
-<p>The error message explains that a number is required, but not the <em>type</em> of number. In this case the error message needs to be unnecessarily verbose i.e.
-“<em>Expiry date must use numbers only</em>”.</p>
+<p>The error message explains that a number is required, but not the <em>type</em> of number. In this case the error message needs to be unnecessarily verbose i.e. “<em>Expiry date must use numbers only</em>”.</p>
 
 <p>However, a field with a label doesn’t suffer from such problems:</p>
 
@@ -176,13 +167,13 @@ context without labels. For example, see the field below:</p>
 
 <h2 id="some-browsers-will-remove-placeholder-text-on-focus">6. Some browsers will remove placeholder text on focus</h2>
 
-<p>When browsers first implemented placeholders, they would disappear as soon as the user focused. This meant that the user would have no time to read the instructions before typing, which resulted in users having to read <em>ahead</em> of the currently focused input.</p>
+<p>When browsers first implemented placeholders, they would disappear as soon as the user focused on the control. This meant the user would have no time to read the instructions before typing. This resulted in users having to read <em>ahead</em> of the currently focused input.</p>
 
 <p>Whilst most browsers only hide the placeholder when the user starts <em>typing</em>, some browsers still have this original behaviour.</p>
 
 <h2 id="placeholder-text-may-be-mistaken-for-a-value">7. Placeholder text may be mistaken for a value</h2>
 
-<p>People may scan empty fields in order to know what they have missed, but the difference in placeholder contrast is so subtle that it can make a field <em>appear</em> complete. This can result in a user skipping a required field, only to be shown an error later on, once the form is validated.</p>
+<p>People scan empty fields to know what they have missed, but the difference in placeholder contrast is so subtle that it can make a field <em>appear</em> complete. This can result in a user skipping a required field, only to be shown an error later once they submit the form.</p>
 
 <div class="image">
 	<figure>
@@ -193,17 +184,16 @@ context without labels. For example, see the field below:</p>
 
 <h2 id="they-have-insufficient-contrast">8. They have insufficient contrast</h2>
 
-<p>Placeholder copy is afforded by being slightly greyed out which is problematic for two reasons. First, it’s hard to notice the difference in colour (as discussed above). Second, the colours are of insufficient contrast making it hard to read for people with vision impairments.</p>
+<p>Placeholder copy is afforded by being slightly greyed out which is problematic for two reasons. First, it’s hard to notice the difference in colour. Second, the colours are of insufficient contrast making it hard to read for people with vision impairments.</p>
 
 <h2 id="screen-readers-may-not-announce-them">9. Screen readers may not announce them</h2>
 
 <p>Placeholders may not be read out by screen readers which is the visual
-equivalent of a meaningless blank box. Labels are <em>always</em> read out.</p>
+equivalent of a blank box. Labels are <em>always</em> read out.</p>
 
 <h2 id="a-missing-label-reduces-the-size-of-the-hit-area">10. A missing label reduces the size of the hit area</h2>
 
-<p>This means that people with fine motor skill impairments will find it harder to
-apply focus to a field withtheir finger or mouse.</p>
+<p>This means that people with fine motor skill impairments will find it harder to apply focus to a field with their finger or mouse.</p>
 
 <div class="image">
 	<figure>
@@ -214,9 +204,7 @@ apply focus to a field withtheir finger or mouse.</p>
 
 <h2 id="placeholder-text-is-limited-to-the-size-of-the-field">11. Placeholder text is limited to the size of the field</h2>
 
-<p>Placeholder text is cut off if it goes beyond the size of the field so you’re
-constrained as to what kind of hint or instruction to put there. Labels don’t
-suffer from this problem.</p>
+<p>Placeholder text is cut off if it goes beyond the size of the field so you’re constrained as to what kind of hint or instruction to put there. Labels don’t suffer from this problem.</p>
 
 <div class="image">
 	<figure>
@@ -225,20 +213,19 @@ suffer from this problem.</p>
 	</figure>
 </div>
 
-<h2 id="but-its-okay-if-they-are-used-in-addition-to-labels-right">But it’s okay if they are used in addition to labels right?</h2>
+<h2 id="is-it-okay-if-theyre-used-in-addition-to-labels">Is it okay if they’re used in addition to labels?</h2>
 
 <p>Not particularly. Its certainly better but it’s still problematic.</p>
 
-<p>If a piece of text adds value to a user experience — in this case by helping the user fill out a form , either by showing an additional hint, input format or example of what goes in the field — then it would be better if it didn’t suffer from all the problems discussed above.</p>
+<p>If a piece of text adds value to the user—in this case by helping the user fill out a form, either by showing an additional hint, input format or example of what goes in the field—then it would be better if it was always available for the user to refer to.</p>
 
-<p>On the other hand, if the placeholder is used in addition to a label, and doesn’t contain any vital information, then why have it in the first place as it’s seemingly not adding any value to the experience?</p>
+<p>On the other hand, if the placeholder is used in addition to a label, and doesn’t contain any vital information, then I wonder why you’d include it in the first place. It’s clearly not adding value.</p>
 
 <h2 id="summary">Summary</h2>
 
 <p>Each of the problems discussed above cause friction for people trying to fill in a form — the sort of friction that drains peoples energy — the sort of friction that a great user experience strives to eliminate.</p>
 
-<p>If you’re trying to help the user, the best place to start is to <a href="https://medium.com/simple-human/always-use-a-label-a39ceab554e6#.r15yzj7p7">always include a clear, always-visible
-label</a>.</p>
+<p>If you’re trying to help the user, the best place to start is to <a href="/articles/always-use-label/">always include a clear, always-visible label</a>.</p>
 
 <p>On occasion, a placeholder — in <em>addition</em> to label — <em>might</em> be helpful, but use them judiciously and if in doubt, test with different people, under
 different circumstances and different browsers.</p>

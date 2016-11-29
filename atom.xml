@@ -3,7 +3,7 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-11-29T17:46:46+00:00</updated>
+	<updated>2016-11-29T19:21:17+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -398,7 +398,7 @@ separation of concerns between back-end and front-end. You don’t need to use a
 			<id>http://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor</id>
 			<content type="html">&lt;p&gt;There is this belief that the hand cursor means ‘clickable’, but this is incorrect and potentially problematic. My hope is that by the end of the article, you’ll never want to use the hand cursor for buttons ever again.&lt;/p&gt;
 
-&lt;h2 id=&quot;the-hand-does-not-mean-clickable&quot;&gt;The hand does not mean clickable&lt;/h2&gt;
+&lt;h2 id=&quot;the-hand-doesnt-mean-clickable&quot;&gt;The hand doesn’t mean clickable&lt;/h2&gt;
 
 &lt;p&gt;It’s no accident that browsers don’t give buttons (and other elements) a hand cursor — it’s because they’re not meant to. Take a look at the following screenshot:&lt;/p&gt;
 
@@ -411,9 +411,9 @@ separation of concerns between back-end and front-end. You don’t need to use a
 
 &lt;p&gt;Almost every element is interactive and clickable — the menu, the tabs, the whitespace, the browser buttons, the bookmark bar and Google’s search box — but, none of them have a hand cursor.&lt;/p&gt;
 
-&lt;p&gt;There are more interactive and clickable elements not shown above— select menus, sliders, checkboxes, radios, labels, images, empty space (e.g right click — view source) and text — again, none of them have a hand cursor.&lt;/p&gt;
+&lt;p&gt;There are more interactive and clickable elements not shown above — select menus, sliders, checkboxes, radios, labels, images, empty space (e.g right click — view source) and text — again, none of them have a hand cursor.&lt;/p&gt;
 
-&lt;p&gt;The same goes for any computer you have ever used. You can tap, drag, select, press, left click and right click on a plethora of different elements including buttons. However, buttons are not afforded by a hand cursor displaying on hover.&lt;/p&gt;
+&lt;p&gt;The same goes for any computer you’ve ever used. You can tap, drag, select, press, left click and right click on a plethora of different elements including buttons. However, buttons are not afforded by a hand cursor displaying on hover.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
@@ -438,11 +438,11 @@ separation of concerns between back-end and front-end. You don’t need to use a
   &lt;p&gt;To avoid confusion, it is imperative not to use the hand pointer for other purposes. For example, command buttons already have a strong affordance, so they don’t need a hand pointer. The hand pointer must mean “this target is a link” and nothing else.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/Pointers.html&quot;&gt;Apple’s Human Interface Guidelines&lt;/a&gt; explain that the hand cursor should be used when “the content is a URL link”. &lt;a href=&quot;https://www.w3.org/TR/CSS21/ui.html#propdef-cursor&quot;&gt;W3C User Interface Guidelines&lt;/a&gt; says the same thing again with “The cursor is a pointer that indicates a link”.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/Pointers.html&quot;&gt;Apple’s Human Interface Guidelines&lt;/a&gt; states that the hand cursor should be used when “the content is a URL link”. &lt;a href=&quot;https://www.w3.org/TR/CSS21/ui.html#propdef-cursor&quot;&gt;W3C User Interface Guidelines&lt;/a&gt; says the same thing again with “The cursor is a pointer that indicates a link”.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-hand-cursor-is-for-links&quot;&gt;The hand cursor is for links&lt;/h2&gt;
 
-&lt;p&gt;The hand (and often underlined text) signifies a link. Links are not buttons. Links came along with the web. To help users understand that they are different, they are given the hand cursor. It serves as an extra clue. Here’s why:&lt;/p&gt;
+&lt;p&gt;The hand (and often underlined text) signifies a link. Links are not buttons. Links came along with the web. To help users understand that they’re different, they’re given the hand cursor. It serves as an extra clue. Here’s why:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Clicking a link opens a web page or resource.&lt;/li&gt;
@@ -453,11 +453,11 @@ separation of concerns between back-end and front-end. You don’t need to use a
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
-&lt;p&gt;When a button has the hand cursor, it subtly suggests that the user is interacting with a link when they’re not. If you want to give visual feedback when the user hovers, you can do so with other style changes such as background colour. A well-designed button does not need a hand cursor to help the user realise it does something.&lt;/p&gt;
+&lt;p&gt;When a button has the hand cursor, it subtly suggests that the user is interacting with a link when they’re not. If you want to give visual feedback when on hover, you can do so with other style changes such as background colour. A well-designed button doesn’t need a hand cursor to help the user realise it does something.&lt;/p&gt;
 
-&lt;p&gt;The hand cursor is reserved for links. This is because they are unique in their behaviour. Browsers and Operating Systems have done the work for you — because contrary to popular belief — browsers know best.&lt;/p&gt;
+&lt;p&gt;The hand cursor is reserved for links. This is because their behaviour is unique. Browsers and Operating Systems have done the work for you — because contrary to popular belief — browsers know best.&lt;/p&gt;
 
-&lt;p&gt;Links have always been handled this way since the web came along — this is the convention of the web that you need not innovate on. You can rest easy knowing that browsers have you covered. This leaves you and your team to solve real problems.&lt;/p&gt;
+&lt;p&gt;Links have always been handled this way since the web came along — this is the convention of the web that you need not innovate on. You can rest easy knowing that browsers have your back. This leaves you and your team to solve real problems.&lt;/p&gt;
 
 &lt;!--
 http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-button-is-not-a-hand-pointer
@@ -470,11 +470,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 			<link href="http://adamsilver.io/articles/always-use-a-label/"/>
 			<updated>2016-07-01T10:00:01+01:00</updated>
 			<id>http://adamsilver.io/articles/always-use-a-label</id>
-			<content type="html">&lt;p&gt;Sometimes designers oversimplify a form by removing the labels. The problem is
-that &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;minimal does not always mean it’s
-simple&lt;/a&gt; — which is
-certainly the case for labels. Labels, in fact, are an essential part of
-designing easy-to-use forms. Here’s why:&lt;/p&gt;
+			<content type="html">&lt;p&gt;Sometimes designers oversimplify a form by removing the labels. &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;Minimal does not always mean it’s simple&lt;/a&gt; which is certainly the case for labels. Labels, in fact, are an essential part of designing easy-to-use forms. Here’s why:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;A) Sighted users will see the instructions&lt;/strong&gt; and know what to do. Without a
 label this is challenging at best.&lt;/p&gt;
@@ -519,9 +515,9 @@ clicking (or tapping) a label acts as if the user clicked the control itself.&lt
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Instead of a label, they rely on the first &lt;em&gt;option&lt;/em&gt; in the menu to provide meaning. Whilst this is &lt;em&gt;sort of * okay for *visual&lt;/em&gt; users in the non-selected state, it &lt;em&gt;does&lt;/em&gt; suffer from points B and C — &lt;em&gt;and&lt;/em&gt; A when a value has been selected — as is the case with the colourmenu as shown above.&lt;/p&gt;
+&lt;p&gt;Instead of a label, they rely on the first &lt;em&gt;option&lt;/em&gt; in the menu to provide meaning. Whilst this is &lt;em&gt;sort of&lt;/em&gt; okay for &lt;em&gt;visual&lt;/em&gt; users in the non-selected state, it &lt;em&gt;does&lt;/em&gt; suffer from points B and C — &lt;em&gt;and&lt;/em&gt; A when a value has been selected — as is the case with the colour menu as shown above.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.houseoffraser.co.uk/Polo+Ralph+Lauren+Short-Sleeve+V-Neck+T-Shirt/233780500,default,pd.html&quot;&gt;House of Fraser&lt;/a&gt; shows a label with their quantity menu improving usabilty for everyone:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.houseoffraser.co.uk/Polo+Ralph+Lauren+Short-Sleeve+V-Neck+T-Shirt/233780500,default,pd.html&quot;&gt;House of Fraser&lt;/a&gt; shows a label next to the quantity menu improving usabilty for everyone:&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
@@ -532,8 +528,7 @@ clicking (or tapping) a label acts as if the user clicked the control itself.&lt
 
 &lt;h2 id=&quot;but-a-simple-search-form-doesnt-need-a-label-does-it&quot;&gt;But a simple search form doesn’t need a label does it?&lt;/h2&gt;
 
-&lt;p&gt;It does and unfortunately, search forms are often designed without a label. As
-an example you can see &lt;a href=&quot;http://www.selfridges.com/&quot;&gt;Selfridges &lt;/a&gt;below:&lt;/p&gt;
+&lt;p&gt;It does and unfortunately, search forms are often designed without a label. For example, &lt;a href=&quot;http://www.selfridges.com/&quot;&gt;Selfridges’&lt;/a&gt; search form is missing a label:&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
@@ -542,10 +537,10 @@ an example you can see &lt;a href=&quot;http://www.selfridges.com/&quot;&gt;Self
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Instead of a label, they rely on the submit button (in this case a magnifying glass) and the placeholder to provide meaning. But this is unnecessarily difficult to use for less abled people — and of course —&lt;a href=&quot;https://medium.com/simple-human/10-reasons-why-placeholders-are-problematic-f8079412b960&quot;&gt;placeholders should not be used as a replacement for
+&lt;p&gt;Instead of a label, they rely on the submit button (in this case a magnifying glass) and the placeholder to provide meaning. But this is unnecessarily difficult to use for less abled people — and of course — &lt;a href=&quot;/articles/why-placeholders-are-problematic&quot;&gt;placeholders should not be used as a replacement for
 labels&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.smashingmagazine.com/author/adamsilver/&quot;&gt;Smashing Magazine&lt;/a&gt; shows that including a label can be both beautiful &lt;em&gt;and&lt;/em&gt; functional at the same time:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.smashingmagazine.com/author/adamsilver/&quot;&gt;Smashing Magazine&lt;/a&gt; shows that including a label can be beautiful &lt;em&gt;and&lt;/em&gt; functional at the same time:&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
@@ -565,19 +560,21 @@ labels&lt;/a&gt;.&lt;/p&gt;
 			<link href="http://adamsilver.io/articles/why-placeholders-are-problematic/"/>
 			<updated>2016-06-16T10:00:01+01:00</updated>
 			<id>http://adamsilver.io/articles/why-placeholders-are-problematic</id>
-			<content type="html">&lt;p&gt;Since placeholders arrived on the scene, they have been rapidly adopted to provide hints and instructions to help users fill in forms. Whilst this sounds good, it is actually problematic due to the way the placeholder behaves — there is one ‘space’ containing two values: the hint and the value.&lt;/p&gt;
+			<content type="html">&lt;p&gt;When browsers introduced the placeholder, designers were quick to use them for hints and instructions as a way to help users fill in forms. Whilst this sounds good, it’s actually problematic due to the way the placeholder behaves.&lt;/p&gt;
 
-&lt;p&gt;It pretty much comes down to the fact that the valuable information put in placeholders is not always available. And what is worse, is when they are used as a &lt;em&gt;replacement&lt;/em&gt; for labels. Here’s why:&lt;/p&gt;
+&lt;p&gt;There is effectively one ‘space’ containing two values: the hint and the value. It comes down to the fact that the valuable information put in placeholders is not always available to users when they need it. And the problem is exacerbated when placeholders are used as a replacement for labels.&lt;/p&gt;
+
+&lt;p&gt;Here’s why the placeholder is problematic:&lt;/p&gt;
 
 &lt;h2 id=&quot;disappearing-placeholder-text-is-easy-to-forget&quot;&gt;1. Disappearing placeholder text is easy to forget&lt;/h2&gt;
 
-&lt;p&gt;Because the placeholder disappears as the user starts typing, the user can easily forget the requirements of the field. This is especially the case on more complex fields.&lt;/p&gt;
+&lt;p&gt;Because the placeholder disappears as the user types, they can easily forget the requirements of the field. This is especially the case with more complex fields.&lt;/p&gt;
 
-&lt;p&gt;For a login form, you may be tempted to omit labels because you think the fields are obvious, but why even risk making it harder for people to use, in the name of &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;minimalism&lt;/a&gt;? The aim is to make something as easy as possible.&lt;/p&gt;
+&lt;p&gt;For a login form, you may be tempted to omit labels because you think the fields are obvious, but why risk making it hard for people to use, in the name of &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;minimalism&lt;/a&gt;? The aim is to make something as easy as possible.&lt;/p&gt;
 
 &lt;h2 id=&quot;not-all-browsers-support-placeholders&quot;&gt;2. Not all browsers support placeholders&lt;/h2&gt;
 
-&lt;p&gt;Whilst the majority of browsers support placeholders, some people use browsers that don’t, &lt;a href=&quot;https://adactio.com/journal/10665&quot;&gt;and remember the web is for everyone&lt;/a&gt;. People using a browser without placeholder support, will see a blank box — which if there are no labels, makes it impossible to fill out.&lt;/p&gt;
+&lt;p&gt;Whilst the majority of browsers support placeholders, some people use browsers that don’t. The &lt;a href=&quot;https://adactio.com/journal/10665&quot;&gt;web is for everyone&lt;/a&gt; and we shouldn’t forget that. People using a browser without placeholder support, will see a blank box.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
@@ -588,7 +585,7 @@ labels&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;pre-populated-values-are-hard-to-understand&quot;&gt;3. Pre-populated values are hard to understand&lt;/h2&gt;
 
-&lt;p&gt;When a form is loaded with real values — as would be the case with an &lt;em&gt;edit details&lt;/em&gt; form, for example — it’s very difficult to understand what the value means without a label. See the example below:&lt;/p&gt;
+&lt;p&gt;When a form is pre-populated—as is the case with an &lt;em&gt;edit details&lt;/em&gt; form— it’s very difficult to understand what the value means without a label. See the example below:&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
@@ -599,7 +596,7 @@ labels&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;reviewing-a-long-form-is-difficult&quot;&gt;4. Reviewing a long form is difficult&lt;/h2&gt;
 
-&lt;p&gt;If someone has filled in a long form and wants to go back to review what they entered, the user will have to have remembered what each field wanted. Also, some browsers autocomplete entries incorrectly which can exacerbate the problem.&lt;/p&gt;
+&lt;p&gt;If a user has filled in a long form and wants to go back to review what they entered, they’ll need to have remembered what each field wanted. Also, some browsers autocomplete entries incorrectly which can exacerbate the problem.&lt;/p&gt;
 
 &lt;h2 id=&quot;erroneous-fields-are-harder-to-fix&quot;&gt;5. Erroneous fields are harder to fix&lt;/h2&gt;
 
@@ -613,10 +610,7 @@ context without labels. For example, see the field below:&lt;/p&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;span class=&quot;figcaption_hack&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;The error message explains that a number is required, but not the &lt;em&gt;type&lt;/em&gt; of number. In this case the error message needs to be unnecessarily verbose i.e.
-“&lt;em&gt;Expiry date must use numbers only&lt;/em&gt;”.&lt;/p&gt;
+&lt;p&gt;The error message explains that a number is required, but not the &lt;em&gt;type&lt;/em&gt; of number. In this case the error message needs to be unnecessarily verbose i.e. “&lt;em&gt;Expiry date must use numbers only&lt;/em&gt;”.&lt;/p&gt;
 
 &lt;p&gt;However, a field with a label doesn’t suffer from such problems:&lt;/p&gt;
 
@@ -629,13 +623,13 @@ context without labels. For example, see the field below:&lt;/p&gt;
 
 &lt;h2 id=&quot;some-browsers-will-remove-placeholder-text-on-focus&quot;&gt;6. Some browsers will remove placeholder text on focus&lt;/h2&gt;
 
-&lt;p&gt;When browsers first implemented placeholders, they would disappear as soon as the user focused. This meant that the user would have no time to read the instructions before typing, which resulted in users having to read &lt;em&gt;ahead&lt;/em&gt; of the currently focused input.&lt;/p&gt;
+&lt;p&gt;When browsers first implemented placeholders, they would disappear as soon as the user focused on the control. This meant the user would have no time to read the instructions before typing. This resulted in users having to read &lt;em&gt;ahead&lt;/em&gt; of the currently focused input.&lt;/p&gt;
 
 &lt;p&gt;Whilst most browsers only hide the placeholder when the user starts &lt;em&gt;typing&lt;/em&gt;, some browsers still have this original behaviour.&lt;/p&gt;
 
 &lt;h2 id=&quot;placeholder-text-may-be-mistaken-for-a-value&quot;&gt;7. Placeholder text may be mistaken for a value&lt;/h2&gt;
 
-&lt;p&gt;People may scan empty fields in order to know what they have missed, but the difference in placeholder contrast is so subtle that it can make a field &lt;em&gt;appear&lt;/em&gt; complete. This can result in a user skipping a required field, only to be shown an error later on, once the form is validated.&lt;/p&gt;
+&lt;p&gt;People scan empty fields to know what they have missed, but the difference in placeholder contrast is so subtle that it can make a field &lt;em&gt;appear&lt;/em&gt; complete. This can result in a user skipping a required field, only to be shown an error later once they submit the form.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
@@ -646,17 +640,16 @@ context without labels. For example, see the field below:&lt;/p&gt;
 
 &lt;h2 id=&quot;they-have-insufficient-contrast&quot;&gt;8. They have insufficient contrast&lt;/h2&gt;
 
-&lt;p&gt;Placeholder copy is afforded by being slightly greyed out which is problematic for two reasons. First, it’s hard to notice the difference in colour (as discussed above). Second, the colours are of insufficient contrast making it hard to read for people with vision impairments.&lt;/p&gt;
+&lt;p&gt;Placeholder copy is afforded by being slightly greyed out which is problematic for two reasons. First, it’s hard to notice the difference in colour. Second, the colours are of insufficient contrast making it hard to read for people with vision impairments.&lt;/p&gt;
 
 &lt;h2 id=&quot;screen-readers-may-not-announce-them&quot;&gt;9. Screen readers may not announce them&lt;/h2&gt;
 
 &lt;p&gt;Placeholders may not be read out by screen readers which is the visual
-equivalent of a meaningless blank box. Labels are &lt;em&gt;always&lt;/em&gt; read out.&lt;/p&gt;
+equivalent of a blank box. Labels are &lt;em&gt;always&lt;/em&gt; read out.&lt;/p&gt;
 
 &lt;h2 id=&quot;a-missing-label-reduces-the-size-of-the-hit-area&quot;&gt;10. A missing label reduces the size of the hit area&lt;/h2&gt;
 
-&lt;p&gt;This means that people with fine motor skill impairments will find it harder to
-apply focus to a field withtheir finger or mouse.&lt;/p&gt;
+&lt;p&gt;This means that people with fine motor skill impairments will find it harder to apply focus to a field with their finger or mouse.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
@@ -667,9 +660,7 @@ apply focus to a field withtheir finger or mouse.&lt;/p&gt;
 
 &lt;h2 id=&quot;placeholder-text-is-limited-to-the-size-of-the-field&quot;&gt;11. Placeholder text is limited to the size of the field&lt;/h2&gt;
 
-&lt;p&gt;Placeholder text is cut off if it goes beyond the size of the field so you’re
-constrained as to what kind of hint or instruction to put there. Labels don’t
-suffer from this problem.&lt;/p&gt;
+&lt;p&gt;Placeholder text is cut off if it goes beyond the size of the field so you’re constrained as to what kind of hint or instruction to put there. Labels don’t suffer from this problem.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
@@ -678,20 +669,19 @@ suffer from this problem.&lt;/p&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;but-its-okay-if-they-are-used-in-addition-to-labels-right&quot;&gt;But it’s okay if they are used in addition to labels right?&lt;/h2&gt;
+&lt;h2 id=&quot;is-it-okay-if-theyre-used-in-addition-to-labels&quot;&gt;Is it okay if they’re used in addition to labels?&lt;/h2&gt;
 
 &lt;p&gt;Not particularly. Its certainly better but it’s still problematic.&lt;/p&gt;
 
-&lt;p&gt;If a piece of text adds value to a user experience — in this case by helping the user fill out a form , either by showing an additional hint, input format or example of what goes in the field — then it would be better if it didn’t suffer from all the problems discussed above.&lt;/p&gt;
+&lt;p&gt;If a piece of text adds value to the user—in this case by helping the user fill out a form, either by showing an additional hint, input format or example of what goes in the field—then it would be better if it was always available for the user to refer to.&lt;/p&gt;
 
-&lt;p&gt;On the other hand, if the placeholder is used in addition to a label, and doesn’t contain any vital information, then why have it in the first place as it’s seemingly not adding any value to the experience?&lt;/p&gt;
+&lt;p&gt;On the other hand, if the placeholder is used in addition to a label, and doesn’t contain any vital information, then I wonder why you’d include it in the first place. It’s clearly not adding value.&lt;/p&gt;
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;Each of the problems discussed above cause friction for people trying to fill in a form — the sort of friction that drains peoples energy — the sort of friction that a great user experience strives to eliminate.&lt;/p&gt;
 
-&lt;p&gt;If you’re trying to help the user, the best place to start is to &lt;a href=&quot;https://medium.com/simple-human/always-use-a-label-a39ceab554e6#.r15yzj7p7&quot;&gt;always include a clear, always-visible
-label&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you’re trying to help the user, the best place to start is to &lt;a href=&quot;/articles/always-use-label/&quot;&gt;always include a clear, always-visible label&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;On occasion, a placeholder — in &lt;em&gt;addition&lt;/em&gt; to label — &lt;em&gt;might&lt;/em&gt; be helpful, but use them judiciously and if in doubt, test with different people, under
 different circumstances and different browsers.&lt;/p&gt;
