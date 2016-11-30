@@ -16,3 +16,7 @@
 
 	jekyll build && grunt
 	git-directory-deploy --directory _site --branch gh-pages
+
+## Build and deploy
+
+	jekyll build && grunt && git-directory-deploy --directory _site --branch gh-pages
