@@ -8,9 +8,9 @@ description: Cool front-end developers are always pushing the envelope, jumping 
 
 *Cool* front-end developers are always *pushing the envelope*, jumping out of their seat to use the latest and greatest and shiniest of UI frameworks and libraries.
 
-They are often found bridging the gap between native apps and web and so will strive to make the UI look and behave like an app. *Which app?* you may ask. *iPhone? Android? What version?* All good questions, alas another topic altogether.
+They're often found bridging the gap between native apps and web and so will strive to make the UI look and behave like an app. *Which app?* you may ask. *iPhone? Android? What version?* All good questions, alas another topic altogether.
 
-However, there is another kind of front-end developer, the *boring* front-end developer. Here is an ode to the *boring* front-end developer, *BFED* if you will.
+However, there's another kind of front-end developer, the *boring* front-end developer. Here's an ode to the *boring* front-end developer, *BFED* if you will.
 
 ## Browser support
 
@@ -24,7 +24,7 @@ The BFED realises that users have different abilities and preferred ways of usin
 
 ## Preprocessors
 
-When given the choice to add a preprocessor (e.g. LESS, SASS, CoffeeScript etc) to the tech stack, the BFED realises there is a much deeper impact beyond just "writing less code".
+When given the choice to add a preprocessor (e.g. LESS, SASS, CoffeeScript etc) to the tech stack, the BFED knows there's a much deeper impact beyond just "writing less code".
 
 *"Will debugging code be more difficult?"*, *"Might performance degrade?"* and *"Will I be slowed down due to compile times?"* are just some of the [questions](/articles/the-disadvantages-of-css-preprocessors/) the BFED will consider to avoid problems in the future.
 
@@ -49,7 +49,7 @@ The BFED will adhere to the following quote:
 > &ldquo;As a Lead JavaScript Engineer, I try to get my team to write as little JavaScript as possible.&rdquo;
 > <br>&mdash; <cite>James Norton</cite>
 
-Furthermore, the BFED realises that [Single Page Applications cause severe problems](/articles/the-disadvantages-of-single-page-applications/) and that by avoiding them and leaning on the server appropriately provides a better experience and reach.
+Furthermore, the BFED realises that [Single Page Applications cause severe problems](/articles/the-disadvantages-of-single-page-applications/) and that avoiding them and leaning on the server appropriately, provides a better experience and reach.
 
 ## CV
 
