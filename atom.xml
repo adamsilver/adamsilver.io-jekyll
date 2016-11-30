@@ -3,7 +3,7 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-11-29T19:21:17+00:00</updated>
+	<updated>2016-11-30T09:41:54+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -2190,9 +2190,9 @@ anotherSelector {
 			<id>http://adamsilver.io/articles/the-boring-front-end-developer</id>
 			<content type="html">&lt;p&gt;&lt;em&gt;Cool&lt;/em&gt; front-end developers are always &lt;em&gt;pushing the envelope&lt;/em&gt;, jumping out of their seat to use the latest and greatest and shiniest of UI frameworks and libraries.&lt;/p&gt;
 
-&lt;p&gt;They are often found bridging the gap between native apps and web and so will strive to make the UI look and behave like an app. &lt;em&gt;Which app?&lt;/em&gt; you may ask. &lt;em&gt;iPhone? Android? What version?&lt;/em&gt; All good questions, alas another topic altogether.&lt;/p&gt;
+&lt;p&gt;They’re often found bridging the gap between native apps and web and so will strive to make the UI look and behave like an app. &lt;em&gt;Which app?&lt;/em&gt; you may ask. &lt;em&gt;iPhone? Android? What version?&lt;/em&gt; All good questions, alas another topic altogether.&lt;/p&gt;
 
-&lt;p&gt;However, there is another kind of front-end developer, the &lt;em&gt;boring&lt;/em&gt; front-end developer. Here is an ode to the &lt;em&gt;boring&lt;/em&gt; front-end developer, &lt;em&gt;BFED&lt;/em&gt; if you will.&lt;/p&gt;
+&lt;p&gt;However, there’s another kind of front-end developer, the &lt;em&gt;boring&lt;/em&gt; front-end developer. Here’s an ode to the &lt;em&gt;boring&lt;/em&gt; front-end developer, &lt;em&gt;BFED&lt;/em&gt; if you will.&lt;/p&gt;
 
 &lt;h2 id=&quot;browser-support&quot;&gt;Browser support&lt;/h2&gt;
 
@@ -2206,7 +2206,7 @@ anotherSelector {
 
 &lt;h2 id=&quot;preprocessors&quot;&gt;Preprocessors&lt;/h2&gt;
 
-&lt;p&gt;When given the choice to add a preprocessor (e.g. LESS, SASS, CoffeeScript etc) to the tech stack, the BFED realises there is a much deeper impact beyond just “writing less code”.&lt;/p&gt;
+&lt;p&gt;When given the choice to add a preprocessor (e.g. LESS, SASS, CoffeeScript etc) to the tech stack, the BFED knows there’s a much deeper impact beyond just “writing less code”.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;“Will debugging code be more difficult?”&lt;/em&gt;, &lt;em&gt;“Might performance degrade?”&lt;/em&gt; and &lt;em&gt;“Will I be slowed down due to compile times?”&lt;/em&gt; are just some of the &lt;a href=&quot;/articles/the-disadvantages-of-css-preprocessors/&quot;&gt;questions&lt;/a&gt; the BFED will consider to avoid problems in the future.&lt;/p&gt;
 
@@ -2233,7 +2233,7 @@ anotherSelector {
 &lt;br /&gt;— &lt;cite&gt;James Norton&lt;/cite&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Furthermore, the BFED realises that &lt;a href=&quot;/articles/the-disadvantages-of-single-page-applications/&quot;&gt;Single Page Applications cause severe problems&lt;/a&gt; and that by avoiding them and leaning on the server appropriately provides a better experience and reach.&lt;/p&gt;
+&lt;p&gt;Furthermore, the BFED realises that &lt;a href=&quot;/articles/the-disadvantages-of-single-page-applications/&quot;&gt;Single Page Applications cause severe problems&lt;/a&gt; and that avoiding them and leaning on the server appropriately, provides a better experience and reach.&lt;/p&gt;
 
 &lt;h2 id=&quot;cv&quot;&gt;CV&lt;/h2&gt;
 
