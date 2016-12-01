@@ -3,14 +3,12 @@ layout: post
 title:  "Javascript inheritance"
 date:   2014-09-09 09:00:59
 categories: js
-description: Javascript inheritance is an often overcomplicated endeavour. Here is an extremely powerful yet simple technique for doing so.
+description: Developers often complicate Javascript inheritance. Here is a powerful, yet simple technique for doing it.
 ---
 
-Javascript inheritance is useful with regard to code [reuse](http://javascript.crockford.com/inheritance.html). Unfortunately, ECMAScript doesn't provide an *inherit* function natively, so we will need to create one. This article documents a simple and powerful technique.
+ECMAScript doesn't have an *inherit* function. But you can mimic the functionality yourself if you need to.
 
-## How to write an inherit function
-
-We need to create an `inherit` function which will use `cloneObject` internally. Both of which are taken from [Jessie](http://www.github.com/cinsoft/jessie/). The namespace bit is optional but good [practice](/articles/javascript-namespacing/).
+Here's a ready made inherit function you can use in your project:
 
 	/**** The namespace ****/
     var lib = {};
@@ -22,8 +20,6 @@ We need to create an `inherit` function which will use `cloneObject` internally.
         lib.cloneObject = function(o) {
             return Object.create(o);
         };
-
-    // For browsers that don't have Object.create available
     } else {
         lib.cloneObject = (function() {
             var Fn = function() {};
@@ -48,9 +44,7 @@ We need to create an `inherit` function which will use `cloneObject` internally.
         Sub.prototype.constructor = Sub;
     };
 
-## How to use it
-
-The example will demonstrate a Superhero inheriting the features of a normal Person. Let's start with the Person constructor:
+As an example you might want a superhero to inherit the features of a regular person. A person constructor might look like this:
 
     function Person(name) {
         this.name = name;
@@ -60,38 +54,30 @@ The example will demonstrate a Superhero inheriting the features of a normal Per
         return "My name is:" + this.name;
     };
 
-Creating an instance of a Person is as follows:
-
     var bob = new Person('Bob');
-    bob.sayName(); // returns "My name is Bob"
+    bob.sayName(); // "My name is Bob"
 
-Defining a Superhero is very similar to defining a Person. The difference being that a Superhero will not tell you his true identity. So we define an *alias* property on the Superhero and when a Superhero says their name, they will instead say their alias:
+A superhero constructor is has some differences. First the superhero will not reveal their true identity. Instead they will tell you their alias. The code for this is as follows:
 
     function Superhero(name, alias) {
-        // call Parent constructor so that Superheros also have names like a regular Person
+        // call parent constructor so that Superheros have a name
         Superhero.superConstructor.call(this, name);
         this.alias = alias;
     }
 
-    // Superhero inherits the features of a Person
+    // Inherit the features of a Person
     lib.inherit(Superhero, Person);
 
-    // Override sayName method so that Superheros keep their true identity a secret
+    // Override method so that Superheros only tell you their alias
     Superhero.prototype.sayName = function() {
         return "Can't tell you that but my alias is: " + this.alias;
     }
 
-Creating an instance of a Superhero is as follows:
-
-    var batman = new Superhero("Bruce Wayne", "Batman");
-    batman.sayName(); // returns "Can't tell you that but my alias is Batman"
-
-In order to show another important aspect of the *inherit* function let's create another scenario for our Superhero. The scenario entails a situation where the Superhero is forced to back down in order to save humanity, and in doing so must reveal their name to their enemy. We can define a method on the Superhero called *backDownAndRevealTrueIdentity*.
-
-    Superhero.prototype.backDownAndRevealTrueIdentity = function() {
+    // Call parent method if you need to
+    Superhero.prototype.revealIdentity = function() {
         return Superhero.superConstructor.prototype.sayName();
     };
 
-Using the previously defined `batman` instance above we run the scenario:
-
-    batman.backDownAndRevealTrueIdentity(); // returns "My name is Bruce Wayne"
+    var batman = new Superhero("Bruce Wayne", "Batman");
+    batman.sayName(); // "Can't tell you that but my alias is Batman"
+    batman.revealIdentity(); // "My name is Bruce Wayne"

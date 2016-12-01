@@ -6,11 +6,11 @@ categories: js
 description: Organising your client-side Javascript is important. Namespaces are a sane, cross-browser approach to help with this.
 ---
 
-Namespaces help you organise a codebase, so that others can easily find their way around it. In Javascript, they also minimise the number of [global variables](http://www.yuiblog.com/blog/2006/06/01/global-domination/).
+Namespaces help you organise code so that it's easy for others to find their way around it. In Javascript, they also minimise the number of [global variables](http://www.yuiblog.com/blog/2006/06/01/global-domination/).
 
 Javascript doesn't (at the time of writing) have a dedicated way to namespace components. But we can do it using object literals.
 
-I'll show you how to do namespace your components with an example application. The application represents a zoo. The zoo has a couple of animals plus some additional information.
+I'll show you how to namespace your components with an example application. The application represents a zoo. The zoo has a couple of animals plus some additional information.
 
 This is the directory structure for the zoo:
 
