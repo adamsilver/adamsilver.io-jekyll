@@ -57,7 +57,7 @@ As an example you might want a superhero to inherit the features of a regular pe
     var bob = new Person('Bob');
     bob.sayName(); // "My name is Bob"
 
-A superhero constructor is has some differences. First the superhero will not reveal their true identity. Instead they will tell you their alias. The code for this is as follows:
+A superhero has some differences. They won't tell you their identity. Instead they will tell you their alias. The code for this is as follows:
 
     function Superhero(name, alias) {
         // call parent constructor so that Superheros have a name
