@@ -33,7 +33,7 @@
 
 
 
-	<meta property="og:description" content="Javascript inheritance is an often overcomplicated endeavour. Here is an extremely powerful yet simple technique for doing so.">
+	<meta property="og:description" content="Developers often complicate Javascript inheritance. Here is a powerful, yet simple technique for doing it.">
 
 
 <meta property="og:url" content="http://adamsilver.io/articles/javascript-inheritance/">
@@ -45,7 +45,7 @@
 <meta name="twitter:card" content="summary">
 
 
-	<meta name="twitter:description" content="Javascript inheritance is an often overcomplicated endeavour. Here is an extremely powerful yet simple technique for doing so.">
+	<meta name="twitter:description" content="Developers often complicate Javascript inheritance. Here is a powerful, yet simple technique for doing it.">
 
 
 <meta name="twitter:title" content="Javascript inheritance -  Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.">
@@ -59,7 +59,7 @@
 <meta property="twitter:image" content="http://adamsilver.io/assets/img/card.png">
 
 
-	<meta itemprop="description" content="Javascript inheritance is an often overcomplicated endeavour. Here is an extremely powerful yet simple technique for doing so.">
+	<meta itemprop="description" content="Developers often complicate Javascript inheritance. Here is a powerful, yet simple technique for doing it.">
 
 
 <link rel="stylesheet" href="/assets/css/main.min.ea6b14a2.css" media="all">
@@ -104,11 +104,9 @@
 </div>
 	    <div class="mainContent">
 			<h1>Javascript inheritance</h1>
-	        <p>Javascript inheritance is useful with regard to code <a href="http://javascript.crockford.com/inheritance.html">reuse</a>. Unfortunately, ECMAScript doesn’t provide an <em>inherit</em> function natively, so we will need to create one. This article documents a simple and powerful technique.</p>
+	        <p>ECMAScript doesn’t have an <em>inherit</em> function. But you can mimic the functionality yourself if you need to.</p>
 
-<h2 id="how-to-write-an-inherit-function">How to write an inherit function</h2>
-
-<p>We need to create an <code>inherit</code> function which will use <code>cloneObject</code> internally. Both of which are taken from <a href="http://www.github.com/cinsoft/jessie/">Jessie</a>. The namespace bit is optional but good <a href="/articles/javascript-namespacing/">practice</a>.</p>
+<p>Here’s a ready made inherit function you can use in your project:</p>
 
 <pre><code>/**** The namespace ****/
 var lib = {};
@@ -120,8 +118,6 @@ if(Object.create) {
     lib.cloneObject = function(o) {
         return Object.create(o);
     };
-
-// For browsers that don't have Object.create available
 } else {
     lib.cloneObject = (function() {
         var Fn = function() {};
@@ -147,9 +143,7 @@ lib.inherit = function(Sub, Super) {
 };
 </code></pre>
 
-<h2 id="how-to-use-it">How to use it</h2>
-
-<p>The example will demonstrate a Superhero inheriting the features of a normal Person. Let’s start with the Person constructor:</p>
+<p>As an example you might want a superhero to inherit the features of a regular person. A person constructor might look like this:</p>
 
 <pre><code>function Person(name) {
     this.name = name;
@@ -158,47 +152,35 @@ lib.inherit = function(Sub, Super) {
 Person.prototype.sayName = function() {
     return "My name is:" + this.name;
 };
+
+var bob = new Person('Bob');
+bob.sayName(); // "My name is Bob"
 </code></pre>
 
-<p>Creating an instance of a Person is as follows:</p>
-
-<pre><code>var bob = new Person('Bob');
-bob.sayName(); // returns "My name is Bob"
-</code></pre>
-
-<p>Defining a Superhero is very similar to defining a Person. The difference being that a Superhero will not tell you his true identity. So we define an <em>alias</em> property on the Superhero and when a Superhero says their name, they will instead say their alias:</p>
+<p>A superhero constructor is has some differences. First the superhero will not reveal their true identity. Instead they will tell you their alias. The code for this is as follows:</p>
 
 <pre><code>function Superhero(name, alias) {
-    // call Parent constructor so that Superheros also have names like a regular Person
+    // call parent constructor so that Superheros have a name
     Superhero.superConstructor.call(this, name);
     this.alias = alias;
 }
 
-// Superhero inherits the features of a Person
+// Inherit the features of a Person
 lib.inherit(Superhero, Person);
 
-// Override sayName method so that Superheros keep their true identity a secret
+// Override method so that Superheros only tell you their alias
 Superhero.prototype.sayName = function() {
     return "Can't tell you that but my alias is: " + this.alias;
 }
-</code></pre>
 
-<p>Creating an instance of a Superhero is as follows:</p>
-
-<pre><code>var batman = new Superhero("Bruce Wayne", "Batman");
-batman.sayName(); // returns "Can't tell you that but my alias is Batman"
-</code></pre>
-
-<p>In order to show another important aspect of the <em>inherit</em> function let’s create another scenario for our Superhero. The scenario entails a situation where the Superhero is forced to back down in order to save humanity, and in doing so must reveal their name to their enemy. We can define a method on the Superhero called <em>backDownAndRevealTrueIdentity</em>.</p>
-
-<pre><code>Superhero.prototype.backDownAndRevealTrueIdentity = function() {
+// Call parent method if you need to
+Superhero.prototype.revealIdentity = function() {
     return Superhero.superConstructor.prototype.sayName();
 };
-</code></pre>
 
-<p>Using the previously defined <code>batman</code> instance above we run the scenario:</p>
-
-<pre><code>batman.backDownAndRevealTrueIdentity(); // returns "My name is Bruce Wayne"
+var batman = new Superhero("Bruce Wayne", "Batman");
+batman.sayName(); // "Can't tell you that but my alias is Batman"
+batman.revealIdentity(); // "My name is Bruce Wayne"
 </code></pre>
 
 	    </div>

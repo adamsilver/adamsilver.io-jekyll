@@ -3,7 +3,7 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-11-30T09:41:54+00:00</updated>
+	<updated>2016-12-02T07:49:46+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -1798,6 +1798,92 @@ I would add - and with a mobile connection you have no choice but to use the pro
 		</entry>
 	
 		<entry>
+			<title>Addendum to the boring front-end developer</title>
+			<link href="http://adamsilver.io/articles/addendum-to-the-boring-front-end-developer/"/>
+			<updated>2015-07-15T10:00:01+01:00</updated>
+			<id>http://adamsilver.io/articles/addendum-to-the-boring-front-end-developer</id>
+			<content type="html">&lt;p&gt;Thanks to everyone who took the time to read T&lt;a href=&quot;/the-boring-front-end-developer/&quot;&gt;he Boring Front-end
+Developer&lt;/a&gt;. There were some outrageous and funny comments which I found entertaining and there were also some points worth addressing.&lt;/p&gt;
+
+&lt;h3 id=&quot;css-preprocessors&quot;&gt;1. CSS preprocessors&lt;/h3&gt;
+
+&lt;p&gt;I know I’m in the minority here.&lt;/p&gt;
+
+&lt;p&gt;I know a lot of developers who like them, I know a lot of developers who don’t.
+I can see advantages in them too.&lt;/p&gt;
+
+&lt;p&gt;But I have worked on enough projects to know that these things come with very
+real and painful disadvantages.&lt;/p&gt;
+
+&lt;p&gt;Important issues like performance, maintainability (the thing they’re trying to
+&lt;a href=&quot;http://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/&quot;&gt;more&lt;/a&gt;.
+It’s relatively easy (read: cheap) to add a CSS preprocessor to the tech stack,
+but it’s relatively hard (read: costly) to remove it down the line.&lt;/p&gt;
+
+&lt;p&gt;I just advise, as with everything else, to be conscious of the issues before
+deciding to use one and putting that on to your current and future team mates.&lt;/p&gt;
+
+&lt;h2 id=&quot;new--good--new--bad&quot;&gt;2. New != good &amp;amp;&amp;amp; New != bad&lt;/h2&gt;
+
+&lt;p&gt;I use a lot of “new” technology and I use a lot of “old” technology.&lt;/p&gt;
+
+&lt;p&gt;FWIW I use Github, Jekyll, Grunt, Node and Bower to name a few.&lt;/p&gt;
+
+&lt;p&gt;I choose to use these things for many good reasons. Those reasons are not to do
+with popularity, newness or how many stars they have on Github. At most these
+are secondary reasons.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, I don’t believe this to be the case for the majority of
+developers in the front-end space right now.&lt;/p&gt;
+
+&lt;p&gt;I am simply advocating critical and deliberate analysis, so that any decision is a &lt;em&gt;conscious&lt;/em&gt; one.&lt;/p&gt;
+
+&lt;h2 id=&quot;bfeds-dont-get-paid-well&quot;&gt;3. BFEDs don’t get paid well&lt;/h2&gt;
+
+&lt;p&gt;I know several developers that would be classed as “boring”, all of which are
+paid very well.&lt;/p&gt;
+
+&lt;h2 id=&quot;change-isnt-necessarily-progress&quot;&gt;4. Change isn’t necessarily progress&lt;/h2&gt;
+
+&lt;p&gt;(Disclaimer: this is not my own thought)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I also find people touting “progress” don’t realise that a lot of the time they &amp;gt; just mean “change”. I mean, sure, if a new way of doing things is demonstrably better, by all means let’s use it. But a lot of the time you’re just swapping one (well-understood) set of tradeoffs and considerations for a new, less understood set, because “That’s what we’re doing now”. — qu4z-2&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There’s a &lt;em&gt;lot&lt;/em&gt; of “change” going on in the industry, developers are having a
+whale of a time in doing so.&lt;/p&gt;
+
+&lt;p&gt;But is this &lt;em&gt;really&lt;/em&gt; adding value to the user or business?&lt;/p&gt;
+
+&lt;h2 id=&quot;people-first-developers-second&quot;&gt;5. People first, developers second&lt;/h2&gt;
+
+&lt;p&gt;It is very common to hear developers berating old browsers and dropping support
+in the name of cost and security but &lt;em&gt;your&lt;/em&gt; users don’t care and are unaware,
+and sometimes not in control of what browsers they use. Corporations locking
+down IE6 is a common example.&lt;/p&gt;
+
+&lt;p&gt;Heck some people don’t even know what a browser *is *and yet, these people
+manage to surf and buy shit using one.&lt;/p&gt;
+
+&lt;p&gt;These users arrive at your site because they can, and they leave because you
+have unnecessarily and irresponsibly not given a thought to them.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Question: Has browser usage dropped because the browser is “old” &lt;strong&gt;or&lt;/strong&gt; because the website doesn’t work in that browser anymore?
+&lt;a href=&quot;http://motherfuckingwebsite.com/&quot;&gt;Motherfuckingwebsite.com&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Yes, it’s true that you probably shouldn’t be testing your site in IE1 or
+Mosaic, but there are front-end engineering approaches that ensure “any” browser can be used to access a website (for the most part anyway). These techniques serve new browsers just as much as old browsers.&lt;/p&gt;
+
+&lt;p&gt;It’s our job to serve the user first.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;People first, developers second.&lt;/strong&gt;&lt;/p&gt;
+</content>
+		</entry>
+	
+		<entry>
 			<title>The disadvantages of Javascript polyfills</title>
 			<link href="http://adamsilver.io/articles/the-disadvantages-of-javascript-polyfills/"/>
 			<updated>2015-06-22T10:00:01+01:00</updated>
@@ -2323,11 +2409,9 @@ anotherSelector {
 			<link href="http://adamsilver.io/articles/javascript-inheritance/"/>
 			<updated>2014-09-09T10:00:59+01:00</updated>
 			<id>http://adamsilver.io/articles/javascript-inheritance</id>
-			<content type="html">&lt;p&gt;Javascript inheritance is useful with regard to code &lt;a href=&quot;http://javascript.crockford.com/inheritance.html&quot;&gt;reuse&lt;/a&gt;. Unfortunately, ECMAScript doesn’t provide an &lt;em&gt;inherit&lt;/em&gt; function natively, so we will need to create one. This article documents a simple and powerful technique.&lt;/p&gt;
+			<content type="html">&lt;p&gt;ECMAScript doesn’t have an &lt;em&gt;inherit&lt;/em&gt; function. But you can mimic the functionality yourself if you need to.&lt;/p&gt;
 
-&lt;h2 id=&quot;how-to-write-an-inherit-function&quot;&gt;How to write an inherit function&lt;/h2&gt;
-
-&lt;p&gt;We need to create an &lt;code&gt;inherit&lt;/code&gt; function which will use &lt;code&gt;cloneObject&lt;/code&gt; internally. Both of which are taken from &lt;a href=&quot;http://www.github.com/cinsoft/jessie/&quot;&gt;Jessie&lt;/a&gt;. The namespace bit is optional but good &lt;a href=&quot;/articles/javascript-namespacing/&quot;&gt;practice&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here’s a ready made inherit function you can use in your project:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;/**** The namespace ****/
 var lib = {};
@@ -2339,8 +2423,6 @@ if(Object.create) {
     lib.cloneObject = function(o) {
         return Object.create(o);
     };
-
-// For browsers that don&#39;t have Object.create available
 } else {
     lib.cloneObject = (function() {
         var Fn = function() {};
@@ -2366,9 +2448,7 @@ lib.inherit = function(Sub, Super) {
 };
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&quot;how-to-use-it&quot;&gt;How to use it&lt;/h2&gt;
-
-&lt;p&gt;The example will demonstrate a Superhero inheriting the features of a normal Person. Let’s start with the Person constructor:&lt;/p&gt;
+&lt;p&gt;As an example you might want a superhero to inherit the features of a regular person. A person constructor might look like this:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;function Person(name) {
     this.name = name;
@@ -2377,47 +2457,35 @@ lib.inherit = function(Sub, Super) {
 Person.prototype.sayName = function() {
     return &quot;My name is:&quot; + this.name;
 };
+
+var bob = new Person(&#39;Bob&#39;);
+bob.sayName(); // &quot;My name is Bob&quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Creating an instance of a Person is as follows:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;var bob = new Person(&#39;Bob&#39;);
-bob.sayName(); // returns &quot;My name is Bob&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Defining a Superhero is very similar to defining a Person. The difference being that a Superhero will not tell you his true identity. So we define an &lt;em&gt;alias&lt;/em&gt; property on the Superhero and when a Superhero says their name, they will instead say their alias:&lt;/p&gt;
+&lt;p&gt;A superhero constructor is has some differences. First the superhero will not reveal their true identity. Instead they will tell you their alias. The code for this is as follows:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;function Superhero(name, alias) {
-    // call Parent constructor so that Superheros also have names like a regular Person
+    // call parent constructor so that Superheros have a name
     Superhero.superConstructor.call(this, name);
     this.alias = alias;
 }
 
-// Superhero inherits the features of a Person
+// Inherit the features of a Person
 lib.inherit(Superhero, Person);
 
-// Override sayName method so that Superheros keep their true identity a secret
+// Override method so that Superheros only tell you their alias
 Superhero.prototype.sayName = function() {
     return &quot;Can&#39;t tell you that but my alias is: &quot; + this.alias;
 }
-&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Creating an instance of a Superhero is as follows:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;var batman = new Superhero(&quot;Bruce Wayne&quot;, &quot;Batman&quot;);
-batman.sayName(); // returns &quot;Can&#39;t tell you that but my alias is Batman&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In order to show another important aspect of the &lt;em&gt;inherit&lt;/em&gt; function let’s create another scenario for our Superhero. The scenario entails a situation where the Superhero is forced to back down in order to save humanity, and in doing so must reveal their name to their enemy. We can define a method on the Superhero called &lt;em&gt;backDownAndRevealTrueIdentity&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Superhero.prototype.backDownAndRevealTrueIdentity = function() {
+// Call parent method if you need to
+Superhero.prototype.revealIdentity = function() {
     return Superhero.superConstructor.prototype.sayName();
 };
-&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Using the previously defined &lt;code&gt;batman&lt;/code&gt; instance above we run the scenario:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;batman.backDownAndRevealTrueIdentity(); // returns &quot;My name is Bruce Wayne&quot;
+var batman = new Superhero(&quot;Bruce Wayne&quot;, &quot;Batman&quot;);
+batman.sayName(); // &quot;Can&#39;t tell you that but my alias is Batman&quot;
+batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 &lt;/code&gt;&lt;/pre&gt;
 </content>
 		</entry>
@@ -2523,11 +2591,11 @@ batman.sayName(); // returns &quot;Can&#39;t tell you that but my alias is Batma
 			<link href="http://adamsilver.io/articles/javascript-namespacing/"/>
 			<updated>2014-07-11T10:00:01+01:00</updated>
 			<id>http://adamsilver.io/articles/javascript-namespacing</id>
-			<content type="html">&lt;p&gt;Namespaces help you organise a codebase, so that others can easily find their way around it. In Javascript, they also minimise the number of &lt;a href=&quot;http://www.yuiblog.com/blog/2006/06/01/global-domination/&quot;&gt;global variables&lt;/a&gt;.&lt;/p&gt;
+			<content type="html">&lt;p&gt;Namespaces help you organise code so that it’s easy for others to find their way around it. In Javascript, they also minimise the number of &lt;a href=&quot;http://www.yuiblog.com/blog/2006/06/01/global-domination/&quot;&gt;global variables&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Javascript doesn’t (at the time of writing) have a dedicated way to namespace components. But we can do it using object literals.&lt;/p&gt;
 
-&lt;p&gt;I’ll show you how to do namespace your components with an example application. The application represents a zoo. The zoo has a couple of animals plus some additional information.&lt;/p&gt;
+&lt;p&gt;I’ll show you how to namespace your components with an example application. The application represents a zoo. The zoo has a couple of animals plus some additional information.&lt;/p&gt;
 
 &lt;p&gt;This is the directory structure for the zoo:&lt;/p&gt;
 
