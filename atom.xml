@@ -3,7 +3,7 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-12-02T07:49:46+00:00</updated>
+	<updated>2016-12-02T07:55:23+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -1805,7 +1805,7 @@ I would add - and with a mobile connection you have no choice but to use the pro
 			<content type="html">&lt;p&gt;Thanks to everyone who took the time to read T&lt;a href=&quot;/the-boring-front-end-developer/&quot;&gt;he Boring Front-end
 Developer&lt;/a&gt;. There were some outrageous and funny comments which I found entertaining and there were also some points worth addressing.&lt;/p&gt;
 
-&lt;h3 id=&quot;css-preprocessors&quot;&gt;1. CSS preprocessors&lt;/h3&gt;
+&lt;h2 id=&quot;css-preprocessors&quot;&gt;1. CSS preprocessors&lt;/h2&gt;
 
 &lt;p&gt;I know I’m in the minority here.&lt;/p&gt;
 
@@ -2462,7 +2462,7 @@ var bob = new Person(&#39;Bob&#39;);
 bob.sayName(); // &quot;My name is Bob&quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;A superhero constructor is has some differences. First the superhero will not reveal their true identity. Instead they will tell you their alias. The code for this is as follows:&lt;/p&gt;
+&lt;p&gt;A superhero has some differences. They won’t tell you their identity. Instead they will tell you their alias. The code for this is as follows:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;function Superhero(name, alias) {
     // call parent constructor so that Superheros have a name
