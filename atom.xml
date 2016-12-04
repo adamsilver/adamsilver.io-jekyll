@@ -3,7 +3,7 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-12-02T07:55:23+00:00</updated>
+	<updated>2016-12-04T09:45:31+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -1330,6 +1330,76 @@ He talked to experts in other high-risk professions, such as aviation.
 &lt;p&gt;&lt;em&gt;It was a pleasure to speak and share my knowledge and experiences alongside the others who were there: &lt;a href=&quot;https://twitter.com/thatnatbuckley&quot;&gt;Nat Buckley&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/anna_debenham&quot;&gt;Anna Debenham&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/stilkov&quot;&gt;Stefan Tilkov&lt;/a&gt;, &lt;a href=&quot;Forbes Lindesay&quot;&gt;Forbes Lindesay&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/OliverJAsh&quot;&gt;Oliver Joseph Ash&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/StuCoxMedia&quot;&gt;Stu Cox&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/philhawksworth&quot;&gt;Phil Hawksworth&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/bruised_blood&quot;&gt;Stephen Waller&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/jensimmons&quot;&gt;Jen Simmons&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/USA2DAY&quot;&gt;Robin Christopherson&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/radiomorillo&quot;&gt;Stephanie Morillo&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/AaronGustafson&quot;&gt;Aaron Gustafson&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/adactio&quot;&gt;Jeremy Keith&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Finally I want to thank &lt;a href=&quot;https://twitter.com/simonmcmanus&quot;&gt;Simon McManus&lt;/a&gt; for inviting me to talk and a brilliantly organised conference — thank you!&lt;/em&gt;&lt;/p&gt;
+</content>
+		</entry>
+	
+		<entry>
+			<title>The design challenge</title>
+			<link href="http://adamsilver.io/articles/the-design-challenge/"/>
+			<updated>2016-01-08T09:00:01+00:00</updated>
+			<id>http://adamsilver.io/articles/the-design-challenge</id>
+			<content type="html">&lt;p&gt;Paul Adams &lt;a href=&quot;https://medium.com/intercom-inside/how-to-hire-designers-960663e3a3e6#.5het3jvgw&quot;&gt;explains&lt;/a&gt; there are four major design disciplines: outcome, system, interaction and visual. Most designers seem to focus on  visual.&lt;/p&gt;
+
+&lt;p&gt;In doing so they neglect the other three aspects. This often results in a degraded experience. Here are some real examples of this:&lt;/p&gt;
+
+&lt;h2 id=&quot;buttons-and-links-should-look-the-same-it-creates-a-minimalist-ui&quot;&gt;1. “Buttons and links should look the same. It creates a minimalist UI.”&lt;/h2&gt;
+
+&lt;p&gt;Clarity trumps minimalism every time. &lt;a href=&quot;/articles/buttons-shouldnt-have-a-hand-cursor&quot;&gt;Buttons and links are different&lt;/a&gt;. We should design to accomodate those differences. Not ignore them.&lt;/p&gt;
+
+&lt;h2 id=&quot;remove-the-outline-when-the-user-focuses-on-an-element-it-doesnt-look-nice-most-people-dont-use-their-keyboard-anyway-we-cant-legislate-for-all-users-be-realastic&quot;&gt;2. “Remove the outline when the user focuses on an element. It doesn’t look nice. Most people don’t use their keyboard anyway. We can’t legislate for all users. Be realastic.”&lt;/h2&gt;
+
+&lt;p&gt;If you know there are people that use a keyboard then design for
+them. It’s not just about how something looks, it’s about how it works.&lt;/p&gt;
+
+&lt;h2 id=&quot;most-people-with-large-screens-use-a-mouse-therefore-we-dont-need-to-make-big-screens-touch-friendly&quot;&gt;3. “Most people with large screens use a mouse. Therefore we don’t need to make big screens touch-friendly.”&lt;/h2&gt;
+
+&lt;p&gt;Designers often infer that a device is touch-enabled if the screen is small. This is wrong. Take a look a the Surface or iPad Pro.&lt;/p&gt;
+
+&lt;p&gt;If you design large targets, it helps people who use a mouse &lt;em&gt;and&lt;/em&gt; people who use their finger.&lt;/p&gt;
+
+&lt;h2 id=&quot;for-small-screens-lets-hide-the-arrow-buttons-on-the-carousel-small-screen-devices-allow-the-user-to-swipe&quot;&gt;4. “For small screens, let’s hide the arrow buttons on the carousel. Small screen devices allow the user to swipe.”&lt;/h2&gt;
+
+&lt;p&gt;Maybe some browsers don’t support gestures. Maybe users don’t realise an interface is swipable. Including buttons helps.&lt;/p&gt;
+
+&lt;h2 id=&quot;mobile-users-swipe-desktop-users-dont&quot;&gt;5. “Mobile users swipe, desktop users don’t”&lt;/h2&gt;
+
+&lt;p&gt;There’s no desktop, there’s no mobile. There are browsers of varying sizes and capabilities. There are people with different preferences and abilities. They need your help and consideration.&lt;/p&gt;
+
+&lt;h2 id=&quot;i-think-the-colour-contrasts-are-fine-they-work-great-on-most-new-devices-and-thats-our-target-audience&quot;&gt;6. “I think the colour contrasts are fine, they work great on most new devices and that’s our target audience”&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://backchannel.com/how-the-web-became-unreadable-a781ddc711b6#.c9zxfsiep&quot;&gt;You’re making the web unreadable&lt;/a&gt;. Your challenge is to use visually pleasing acceptable contrasts.&lt;/p&gt;
+
+&lt;p&gt;This makes the clear clearer and the unclear clear. &lt;a href=&quot;https://www.smashingmagazine.com/2016/06/improving-ux-for-color-blind-users/&quot;&gt;Not everyone can see like you can&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-select-box-without-a-label-is-fine-its-unnecessary-clutter&quot;&gt;7. “A select box without a label is fine, it’s unnecessary clutter.”&lt;/h2&gt;
+
+&lt;p&gt;Every &lt;a href=&quot;/articles/always-use-a-label/&quot;&gt;form field needs a label&lt;/a&gt;; there are good reasons why. Legislate for this and make the design look good as well.&lt;/p&gt;
+
+&lt;h2 id=&quot;most-users-are-on-a-fast-connection-its-important-that-we-have-10-high-quality-images-on-one-page&quot;&gt;8. “Most users are on a fast connection, it’s important that we have 10 high quality images on one page.”&lt;/h2&gt;
+
+&lt;p&gt;People on low-speed connections don’t want to wait. Design with performance in-mind from the beginning. Trim the fat for everyone and everyone wins. Faster connections become super fast, slow connections become satisfactory.&lt;/p&gt;
+
+&lt;h2 id=&quot;fix-it-with-javascript-we-dont-need-to-worry-about-the-1-of-users-without-it-its-important-that-the-design-looks-good-for-the-99&quot;&gt;9. “Fix it with Javascript. We don’t need to worry about the 1% of users without it. It’s important that the design looks good for the 99%.”&lt;/h2&gt;
+
+&lt;p&gt;First, &lt;a href=&quot;http://kryogenix.org/code/browser/everyonehasjs.html&quot;&gt;this&lt;/a&gt;. Second,
+it’s not the amount of &lt;em&gt;users&lt;/em&gt;, its the amount of *visits. *Javascript will fail to download/execute at some point. Embrace &lt;a href=&quot;http://adamsilver.io/articles/writing-javascript-that-conforms-to-progressive-enhancement/&quot;&gt;Progressive
+Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a hit in performance, maintenance and usability.&lt;/p&gt;
+
+&lt;h2 id=&quot;we-need-to-fix-that-by-disabling-zoom-on-mobile&quot;&gt;10. “We need to fix that by disabling zoom on mobile”&lt;/h2&gt;
+
+&lt;p&gt;Zoom is essential. Not everyone has &lt;a href=&quot;http://mrmrs.io/writing/2016/03/23/the-veil-of-ignorance/&quot;&gt;good vision like you do&lt;/a&gt;. Let go, be &lt;a href=&quot;http://blog.capwatkins.com/the-boring-designer&quot;&gt;boring&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;i-dont-like-the-way-the-text-wraps-on-small-screens-well-get-the-copywriter-to-make-the-words-fit&quot;&gt;11. “I don’t like the way the text wraps on small screens, we’ll get the copywriter to make the words fit.”&lt;/h2&gt;
+
+&lt;p&gt;Again, clarity trumps minimalism. &lt;a href=&quot;https://medium.com/uie-brain-sparks/content-and-design-are-inseparable-work-partners-5e1450ac5bba&quot;&gt;Design for content&lt;/a&gt;. Not the other way around.&lt;/p&gt;
+
+&lt;h2 id=&quot;website-x-does-it-so-we-should-do-it&quot;&gt;12. “Website X does it, so we should do it.”&lt;/h2&gt;
+
+&lt;p&gt;Just because someone else does it, doesn’t mean it’s good. You’re probably testing the website in a cutting edge browser and you’re you. &lt;a href=&quot;http://uxmyths.com/post/715988395/myth-you-are-like-your-users&quot;&gt;You’re not your users&lt;/a&gt;. Take the opportunity to do it better. Test with users.&lt;/p&gt;
+
+&lt;h2 id=&quot;isnt-this-your-challenge&quot;&gt;Isn’t this your challenge?&lt;/h2&gt;
+
+&lt;p&gt;By default, anyone with a browser can use your website. That’s what makes the web so amazing. Your challenge is to design a website that doesn’t break the web. Understand the platform. Design for everyone.&lt;/p&gt;
 </content>
 		</entry>
 	
