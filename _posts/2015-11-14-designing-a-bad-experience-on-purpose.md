@@ -14,7 +14,7 @@ Specifically, they were concerned with how easy it was to choose Paypal. This is
 
 <div class="image">
 	<figure>
-		<img src="{{ site.url }}/assets/img/paymentchoice.png" alt="Payment choice page" width="100%" style="max-width: 300px;">
+		<img src="{{ site.url }}/assets/img/paymentchoice.png" alt="Payment choice page" width="100%" style="max-width: 400px;">
 		<figcaption>Payment choice page</figcaption>
 	</figure>
 </div>
