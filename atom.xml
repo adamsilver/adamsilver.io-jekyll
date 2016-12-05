@@ -3,7 +3,7 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-12-04T09:45:31+00:00</updated>
+	<updated>2016-12-05T18:51:09+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -1594,6 +1594,84 @@ Or should I try filtering instead?&lt;br /&gt;&lt;/p&gt;
 		</entry>
 	
 		<entry>
+			<title>Designing a bad experience on purpose</title>
+			<link href="http://adamsilver.io/articles/designing-a-bad-experience-on-purpose/"/>
+			<updated>2015-11-14T09:00:01+00:00</updated>
+			<id>http://adamsilver.io/articles/designing-a-bad-experience-on-purpose</id>
+			<content type="html">&lt;p&gt;I once worked on a successful e-commerce website. The business wanted us to design something that was hard-to-use on purpose. Can you believe it?&lt;/p&gt;
+
+&lt;p&gt;They wanted users to be able to pay by PayPal. And, just as we started development, the business stopped us because they had concerns about our design solution.&lt;/p&gt;
+
+&lt;p&gt;Specifically, they were concerned with how easy it was to choose Paypal. This is what it looked like:&lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/paymentchoice.png&quot; alt=&quot;Payment choice page&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;figcaption&gt;Payment choice page&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The issue was that when users paid by card, we received fifty pence as a
+transaction fee. If the user paid by Paypal we would get nothing.&lt;/p&gt;
+
+&lt;p&gt;If the business takes 750,000 orders per week, fifty pence is a lot to lose.&lt;/p&gt;
+
+&lt;p&gt;The business wanted us to hide Paypal behind some sort of expand/collapse panel. In other words, to make Paypal hard to find.&lt;/p&gt;
+
+&lt;p&gt;But why give users the choice at all?&lt;/p&gt;
+
+&lt;p&gt;We knew our users &lt;em&gt;wanted&lt;/em&gt; PayPal and many people &lt;em&gt;only&lt;/em&gt; shop with PayPal for security &lt;em&gt;and&lt;/em&gt; convenience reasons.&lt;/p&gt;
+
+&lt;p&gt;We also knew that users drop off during checkout for many reasons. Each person that drops off costs the business a lot more than fifty pence. The average order value was about £20.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-would-happen-if-we-added-paypal-as-originally-designed&quot;&gt;&lt;strong&gt;What would happen if we added PayPal as originally designed?&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;It’s hard to know but I think that:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a small percentage of existing users would’ve started using PayPal&lt;/li&gt;
+  &lt;li&gt;and we would’ve attracted new users to the site.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If lots of people switched over to Paypal, I would assume they did so because it’s their preference. Because it’s easier for them. In which case they would be happier customers.&lt;/p&gt;
+
+&lt;p&gt;A happy customer is one that purchases more frequently. Or at least continues to use the service at the same frequency.&lt;/p&gt;
+
+&lt;p&gt;Also, a happy user is more likely to recommend the service to friends. That must be worth massive amounts in marketing terms.&lt;/p&gt;
+
+&lt;p&gt;Mid-to-late adopters need a nudge before they make the jump. PayPal could’ve
+provided a welcome tipping point to attract new users.&lt;/p&gt;
+
+&lt;p&gt;And, if our competitors offered PayPal, users may decide to switch.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;So to sum up: keep users happy (+ attract new users) = business longevity&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;what-if-the-worst-happened&quot;&gt;What if the worst happened?&lt;/h2&gt;
+
+&lt;p&gt;The worse case scenario might include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;all existing users switching to Paypal (no transaction free received).&lt;/li&gt;
+  &lt;li&gt;and no new users signing up&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;First, both of these points contradict each other. If Paypal makes existing
+users switch I would imagine the service would attract new users.&lt;/p&gt;
+
+&lt;p&gt;Second, all of our users would be happier using Paypal. That’s why they
+switched.&lt;/p&gt;
+
+&lt;p&gt;Third, there is no need to offer the ability to pay by card. This reduces the cost of development.&lt;/p&gt;
+
+&lt;p&gt;Fourth, the checkout flow is even easier to use as there is no choice in payment type. This would likely result in an uptick in conversion.&lt;/p&gt;
+
+&lt;p&gt;All of this to say, this is worth a lot more than 50p per order.&lt;/p&gt;
+
+&lt;p&gt;If you’re going to provide a feature, always make it easy-to-use. Or don’t bother.&lt;/p&gt;
+</content>
+		</entry>
+	
+		<entry>
 			<title>Designing honestly for the web</title>
 			<link href="http://adamsilver.io/articles/designing-honestly-for-the-web/"/>
 			<updated>2015-10-09T10:00:01+01:00</updated>
@@ -1646,6 +1724,104 @@ Do you sometimes design without a thought for how the browser does it?&lt;/p&gt;
 &lt;p&gt;Another useful thing about the web, is that browsers and devices get better all the time. When you design honestly, the experience gets better and better all by itself with zero effort from the designer — for proof just interact with a form on your mobile and notice how the device helps you do that.&lt;/p&gt;
 
 &lt;p&gt;Designing dishonestly not only costs the user, but costs the developer time and the business money. &lt;strong&gt;You might get away with the odd bit of dishonest design, but why would you want to?&lt;/strong&gt;&lt;/p&gt;
+</content>
+		</entry>
+	
+		<entry>
+			<title>Designing a responsive menu without a hamburger</title>
+			<link href="http://adamsilver.io/articles/designing-a-responsive-menu-without-a-hamburger/"/>
+			<updated>2015-09-14T10:00:01+01:00</updated>
+			<id>http://adamsilver.io/articles/designing-a-responsive-menu-without-a-hamburger</id>
+			<content type="html">&lt;p&gt;I’m not going to tell you &lt;em&gt;why&lt;/em&gt; the hamburger sucks. James Archer has &lt;a href=&quot;http://deep.design/the-hamburger-menu/&quot;&gt;done that&lt;/a&gt; for me. Instead, I’ll provide some alternative responsive menus that avoid the hamburger.&lt;/p&gt;
+
+&lt;h2 id=&quot;medium&quot;&gt;1. Medium&lt;/h2&gt;
+
+&lt;p&gt;A big part of Medium’s success is in its simplicity and it can be seen in its menu. If you’re reading this on a small screen you will see the menu takes up a little more space by dropping down below the header.&lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/hamburger/medium.png&quot; alt=&quot;Medium menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;figcaption&gt;Medium&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You probably &lt;em&gt;didn’t&lt;/em&gt; notice this.&lt;/p&gt;
+
+&lt;p&gt;That’s because like most people, you don’t care about the fine detail of
+Medium’s design, you just want to use the site for its content.&lt;/p&gt;
+
+&lt;h2 id=&quot;product-hunt&quot;&gt;2. Product Hunt&lt;/h2&gt;
+
+&lt;p&gt;Product Hunt always displays the menu below the header, regardless of screen
+size.&lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/hamburger/producthunt.png&quot; alt=&quot;Product Hunt menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;figcaption&gt;Product Hunt&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As there is not enough room for all the links, they wrap on to two lines. Whilst I am sure this menu could look a little nicer with a tad more effort, the menu is still very user-friendly on small and big screens.&lt;/p&gt;
+
+&lt;p&gt;And, this particular website has a target audience of highly critical, industry designers and developers, and it is still a very much loved website.&lt;/p&gt;
+
+&lt;h2 id=&quot;node&quot;&gt;3. Node&lt;/h2&gt;
+
+&lt;p&gt;You might be thinking “this guy is only show sites with small
+menus”. So, I give you Nodejs.org with &lt;strong&gt;eight&lt;/strong&gt; links!&lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/hamburger/node.png&quot; alt=&quot;Node menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;figcaption&gt;Node&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;When in big screens the links are on one line, and when there is not enough
+room, the links are simply put into two columns.&lt;/p&gt;
+
+&lt;p&gt;Out of all the examples this one takes up the most space. A few pixels could be trimmed via reducing the size and space around the logo. But they needn’t bother, this works.&lt;/p&gt;
+
+&lt;h2 id=&quot;adamsilverio&quot;&gt;4. Adamsilver.io&lt;/h2&gt;
+
+&lt;p&gt;Shamefully, I include my own site for your pleasure :)&lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/hamburger/adamsilver.png&quot; alt=&quot;Adam Silver menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;figcaption&gt;Adamsilver.io&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;google-design&quot;&gt;5. Google Design&lt;/h2&gt;
+
+&lt;p&gt;Google Design allows users to horizontally scroll through the options.&lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/hamburger/googledesign.png&quot; alt=&quot;Google Design menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;figcaption&gt;Google Design&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Horizontal scrolling is normally ill-advised but on mobile devices this simple approach works well. And it scales pretty nicely too.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-minimalists&quot;&gt;6. The Minimalists&lt;/h2&gt;
+
+&lt;p&gt;The Minimalists website is designed true to their message. When there’s not enough room, the links wrap on to the next line. No biggie.&lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/hamburger/minimalists.png&quot; alt=&quot;The Minimalists&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;figcaption&gt;The Minimalists&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;What I love about these examples is how &lt;em&gt;boringly simple&lt;/em&gt; and
+&lt;em&gt;user-friendly&lt;/em&gt; they are. &lt;a href=&quot;http://uxmyths.com/post/654047943/myth-people-dont-scroll&quot;&gt;User’s don’t mind scrolling&lt;/a&gt; and it’s wise not to exert too much energy trying to fit everything above an imaginary fold.&lt;/p&gt;
 </content>
 		</entry>
 	

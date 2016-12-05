@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html dir="ltr" lang="en">
 	<head>
-	    <title>Forms with multiple submit buttons are problematic | Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
+	    <title>Designing a bad experience on purpose | Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <meta name="viewport" content="initial-scale=1.0">
 <meta name="Author" content="Adam Silver">
@@ -29,14 +29,14 @@
 <meta property="og:type" content="website">
 
 
-	<meta content="Forms with multiple submit buttons are problematic" property="og:title">
+	<meta content="Designing a bad experience on purpose" property="og:title">
 
 
 
-	<meta property="og:description" content="Forms with multiple submit buttons have both UX problems and technical problems all of which is discussed in this article.">
+	<meta property="og:description" content="If you've ever been forced to design a bad experience on purpose, you'll like this article.">
 
 
-<meta property="og:url" content="http://adamsilver.io/articles/forms-with-multiple-submit-buttons-are-problematic/">
+<meta property="og:url" content="http://adamsilver.io/articles/designing-a-bad-experience-on-purpose/">
 <meta property="og:site_name" content="Adamsilver.io">
 <meta property="og:image" content="http://adamsilver.io/assets/img/card.png">
 <meta property="og:image:width" content="181">
@@ -45,13 +45,13 @@
 <meta name="twitter:card" content="summary">
 
 
-	<meta name="twitter:description" content="Forms with multiple submit buttons have both UX problems and technical problems all of which is discussed in this article.">
+	<meta name="twitter:description" content="If you've ever been forced to design a bad experience on purpose, you'll like this article.">
 
 
-<meta name="twitter:title" content="Forms with multiple submit buttons are problematic -  Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.">
+<meta name="twitter:title" content="Designing a bad experience on purpose -  Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.">
 
 
-	<meta content="Forms with multiple submit buttons are problematic" name="twitter:title">
+	<meta content="Designing a bad experience on purpose" name="twitter:title">
 
 
 <meta name="twitter:site" content="@adambsilver">
@@ -59,7 +59,7 @@
 <meta property="twitter:image" content="http://adamsilver.io/assets/img/card.png">
 
 
-	<meta itemprop="description" content="Forms with multiple submit buttons have both UX problems and technical problems all of which is discussed in this article.">
+	<meta itemprop="description" content="If you've ever been forced to design a bad experience on purpose, you'll like this article.">
 
 
 <link rel="stylesheet" href="/assets/css/main.min.8d8f4259.css" media="all">
@@ -78,7 +78,7 @@
 <![endif]-->
 
 
-<link rel="canonical" href="http://adamsilver.io/articles/forms-with-multiple-submit-buttons-are-problematic/">
+<link rel="canonical" href="http://adamsilver.io/articles/designing-a-bad-experience-on-purpose/">
 <link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
 
 <script>
@@ -103,32 +103,77 @@
 	</ul>
 </div>
 	    <div class="mainContent">
-			<h1>Forms with multiple submit buttons are problematic</h1>
-	        <p>Forms with multiple submit buttons are problematic for people who use a keyboard. The problem occurs due to the way forms work with regards to submission.</p>
+			<h1>Designing a bad experience on purpose</h1>
+	        <p>I once worked on a successful e-commerce website. The business wanted us to design something that was hard-to-use on purpose. Can you believe it?</p>
 
-<p>When a user fills out a form, they can submit that form at any time by pressing enter, even if they are focussed on a text field. When there are multiple buttons, the form submits as if the first button was pressed.</p>
+<p>They wanted users to be able to pay by PayPal. And, just as we started development, the business stopped us because they had concerns about our design solution.</p>
 
-<p>This isn’t always desirable because the first button may not be considered the primary action of the form. For example, you might have an address form with a postcode look-up.</p>
+<p>Specifically, they were concerned with how easy it was to choose Paypal. This is what it looked like:</p>
 
-<div class="image" style="max-width: 320px;margin: 0 auto;">
+<div class="image">
 	<figure>
-		<img src="/assets/img/multiplesubmit.png" alt="Delivery address form" width="100%" />
+		<img src="http://adamsilver.io/assets/img/paymentchoice.png" alt="Payment choice page" width="100%" style="max-width: 400px;" />
+		<figcaption>Payment choice page</figcaption>
 	</figure>
 </div>
 
-<p>Pressing enter will always perform a postcode look-up. That’s because that button appears before the primary button.</p>
+<p>The issue was that when users paid by card, we received fifty pence as a
+transaction fee. If the user paid by Paypal we would get nothing.</p>
 
-<p>Your best option is to split up the forms. In the above example, have one that does the postcode look-up. And have another that saves the address.</p>
+<p>If the business takes 750,000 orders per week, fifty pence is a lot to lose.</p>
 
-<p>Not only does this help keyboard users, but it provides a better all-round experience. This is because each page or feature has a dedicated focus which reduces the cognitive burden on users.</p>
+<p>The business wanted us to hide Paypal behind some sort of expand/collapse panel. In other words, to make Paypal hard to find.</p>
 
-<p>If you <em>really</em> can’t do that, then you’ll have to choose a primary action. This isn’t always easy, because some forms have two buttons with similar weighting.</p>
+<p>But why give users the choice at all?</p>
 
-<p>If the form’s primary action doesn’t come first, then you’ll have to modify the design which isn’t always possible. Or you’ll need to add a duplicate button to the top of the form and hide it visually with CSS.</p>
+<p>We knew our users <em>wanted</em> PayPal and many people <em>only</em> shop with PayPal for security <em>and</em> convenience reasons.</p>
 
-<p>However, when the user tabs via keyboard to the hidden button, the UI will appear unresponsive. That’s because the button is focused but off-screen. This is an undesirable experience that can disorientate users.</p>
+<p>We also knew that users drop off during checkout for many reasons. Each person that drops off costs the business a lot more than fifty pence. The average order value was about £20.</p>
 
-<p>If at all possible, split up the forms.</p>
+<h2 id="what-would-happen-if-we-added-paypal-as-originally-designed"><strong>What would happen if we added PayPal as originally designed?</strong></h2>
+
+<p>It’s hard to know but I think that:</p>
+
+<ul>
+  <li>a small percentage of existing users would’ve started using PayPal</li>
+  <li>and we would’ve attracted new users to the site.</li>
+</ul>
+
+<p>If lots of people switched over to Paypal, I would assume they did so because it’s their preference. Because it’s easier for them. In which case they would be happier customers.</p>
+
+<p>A happy customer is one that purchases more frequently. Or at least continues to use the service at the same frequency.</p>
+
+<p>Also, a happy user is more likely to recommend the service to friends. That must be worth massive amounts in marketing terms.</p>
+
+<p>Mid-to-late adopters need a nudge before they make the jump. PayPal could’ve
+provided a welcome tipping point to attract new users.</p>
+
+<p>And, if our competitors offered PayPal, users may decide to switch.</p>
+
+<p><em>So to sum up: keep users happy (+ attract new users) = business longevity</em></p>
+
+<h2 id="what-if-the-worst-happened">What if the worst happened?</h2>
+
+<p>The worse case scenario might include:</p>
+
+<ul>
+  <li>all existing users switching to Paypal (no transaction free received).</li>
+  <li>and no new users signing up</li>
+</ul>
+
+<p>First, both of these points contradict each other. If Paypal makes existing
+users switch I would imagine the service would attract new users.</p>
+
+<p>Second, all of our users would be happier using Paypal. That’s why they
+switched.</p>
+
+<p>Third, there is no need to offer the ability to pay by card. This reduces the cost of development.</p>
+
+<p>Fourth, the checkout flow is even easier to use as there is no choice in payment type. This would likely result in an uptick in conversion.</p>
+
+<p>All of this to say, this is worth a lot more than 50p per order.</p>
+
+<p>If you’re going to provide a feature, always make it easy-to-use. Or don’t bother.</p>
 
 	    </div>
 		<div class="signUpHero  signUpHero-isArticle ">
@@ -137,7 +182,7 @@
 	<form action="//adamsilver.us9.list-manage.com/subscribe/post?u=b8fb04f39bf86109693e00ba5&amp;id=441c045a36" method="post">
 		<input type="hidden" name="b_b8fb04f39bf86109693e00ba5_441c045a36" value="">
 		<input type="hidden" name="SITE" value="http://adamsilver.io">
-		<input type="hidden" name="LOCATION" value="/articles/forms-with-multiple-submit-buttons-are-problematic/">
+		<input type="hidden" name="LOCATION" value="/articles/designing-a-bad-experience-on-purpose/">
 		<label for="mce-EMAIL" class="signUpHero-label">Your email address</label>
 		<input type="email" name="EMAIL" id="mce-EMAIL" class="signUpHero-email" required>
 		<input class="signUpHero-button" type="submit" value="Sign up" name="subscribe">
@@ -146,7 +191,7 @@
 
 		<!-- 
 	<div class="nowRead">
-		<p>Now read: <a href="/articles/how-to-create-accessible-forms/">How to create accessible forms</a></p>
+		<p>Now read: <a href="/articles/designing-honestly-for-the-web/">Designing honestly for the web</a></p>
 	</div>
  -->
 
