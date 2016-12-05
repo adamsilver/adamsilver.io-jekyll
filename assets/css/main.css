@@ -229,13 +229,13 @@ hr {
 
 .mainContent ol,
 .mainContent ul {
-	margin: 0 20px 45px 50px;
+	margin: 0 20px 30px 50px;
 }
 
 @media(min-width: 600px) {
 	.mainContent ol,
 	.mainContent ul {
-		margin-bottom: 65px;
+		margin-bottom: 45px;
 		margin-right: 60px;
 	}
 }
