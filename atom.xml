@@ -3,7 +3,7 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-12-05T18:51:09+00:00</updated>
+	<updated>2016-12-06T19:25:37+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -470,7 +470,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 			<link href="http://adamsilver.io/articles/always-use-a-label/"/>
 			<updated>2016-07-01T10:00:01+01:00</updated>
 			<id>http://adamsilver.io/articles/always-use-a-label</id>
-			<content type="html">&lt;p&gt;Sometimes designers oversimplify a form by removing the labels. &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;Minimal does not always mean it’s simple&lt;/a&gt; which is certainly the case for labels. Labels, in fact, are an essential part of designing easy-to-use forms. Here’s why:&lt;/p&gt;
+			<content type="html">&lt;p&gt;Sometimes designers oversimplify a form by removing labels. This is problematic because &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;minimal does not always mean simple&lt;/a&gt;. When it comes to labels, this definitely applies. Labels, in fact, are an essential part of designing easy-to-use forms. Here’s why:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;A) Sighted users will see the instructions&lt;/strong&gt; and know what to do. Without a
 label this is challenging at best.&lt;/p&gt;
@@ -560,9 +560,9 @@ labels&lt;/a&gt;.&lt;/p&gt;
 			<link href="http://adamsilver.io/articles/why-placeholders-are-problematic/"/>
 			<updated>2016-06-16T10:00:01+01:00</updated>
 			<id>http://adamsilver.io/articles/why-placeholders-are-problematic</id>
-			<content type="html">&lt;p&gt;When browsers introduced the placeholder, designers were quick to use them for hints and instructions as a way to help users fill in forms. Whilst this sounds good, it’s actually problematic due to the way the placeholder behaves.&lt;/p&gt;
+			<content type="html">&lt;p&gt;When browsers implemented the placeholder, designers rapidly adopted them for hints and instructions to help users fill out forms. Whilst this sounds good, it’s actually problematic due to the way the placeholder behaves.&lt;/p&gt;
 
-&lt;p&gt;There is effectively one ‘space’ containing two values: the hint and the value. It comes down to the fact that the valuable information put in placeholders is not always available to users when they need it. And the problem is exacerbated when placeholders are used as a replacement for labels.&lt;/p&gt;
+&lt;p&gt;There’s effectively one ‘space’ containing two values: the hint and the value. It comes down to the fact that the valuable information put in placeholders is not always available to users when they need it. And the problem is exacerbated when placeholders are used as a replacement for labels.&lt;/p&gt;
 
 &lt;p&gt;Here’s why the placeholder is problematic:&lt;/p&gt;
 
@@ -976,16 +976,16 @@ space&lt;/a&gt;.&lt;/p&gt;
 			<link href="http://adamsilver.io/articles/hello-ux-designer/"/>
 			<updated>2016-05-17T10:00:01+01:00</updated>
 			<id>http://adamsilver.io/articles/hello-ux-designer</id>
-			<content type="html">&lt;p&gt;I always get a little frustrated if an individual thinks they are solely responsible for UX because actually that’s not true.&lt;/p&gt;
+			<content type="html">&lt;p&gt;I always get a bit frustrated if an individual thinks they’re solely responsible for UX because that’s not true. Design is always better when people work together.&lt;/p&gt;
 
-&lt;p&gt;Things are always better when people work together. The world wouldn’t be what it is today if it wasn’t for humans working together to achieve what would previously seem impossible.&lt;/p&gt;
+&lt;p&gt;The world wouldn’t be what it is today if it wasn’t for humans working together to achieve what would previously seem impossible.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;“UX means User Experience which, in turn, means everything a human experiences when interacting with your product or service. Everything.”
 &lt;br /&gt;—&lt;cite&gt;Benedikt Lehnert&lt;/cite&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;So if you’re in the office, look to your left and right—they are responsible for UX and guess what, so are you. Here are some examples…&lt;/p&gt;
+&lt;p&gt;So if you’re at work, look to your left and right—they’re responsible for UX and guess what, so are you.&lt;/p&gt;
 
 &lt;p&gt;If you communicate to your customers over social media or work in customer support…&lt;strong&gt;you’re responsible for UX.&lt;/strong&gt;&lt;/p&gt;
 
@@ -993,7 +993,7 @@ space&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;If you write copy for websites and emails or strategise around when to send communication…&lt;strong&gt;you’re responsible for UX.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;If you translate designs into responsive and progressively enhanced front-end solutions and advise on what doesn’t work well cross-browser…&lt;strong&gt;you’re responsible for UX.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you translate designs into responsive and progressively enhanced front-end code and advise on what doesn’t work well cross-browser…&lt;strong&gt;you’re responsible for UX.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;If you conduct user research…&lt;strong&gt;you’re responsible for UX.&lt;/strong&gt;&lt;/p&gt;
 
@@ -1003,9 +1003,15 @@ space&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;And if you design UIs…&lt;strong&gt;yes you too, are responsible for UX.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Think about it&lt;/strong&gt;…what good is a beautiful UI if it takes 10 seconds to load or contains crappy content? What good is it if you have a great content, but a terrible customer service? What good is it if everything is great except for the fact the website is unstable and goes down frequently? The answer is of course &lt;strong&gt;not much good!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Think about it.&lt;/p&gt;
 
-&lt;p&gt;Whoever you are, you’re responsible for UX. I look forward to working with you.&lt;/p&gt;
+&lt;p&gt;What good is a beautiful UI if it takes 10 seconds to load or contains crappy content?&lt;/p&gt;
+
+&lt;p&gt;What good is it if you have a great content, but a terrible customer service?&lt;/p&gt;
+
+&lt;p&gt;What good is it if everything is great except for the fact the website is unstable and goes down frequently?&lt;/p&gt;
+
+&lt;p&gt;Not much.&lt;/p&gt;
 </content>
 		</entry>
 	
@@ -1338,11 +1344,13 @@ He talked to experts in other high-risk professions, such as aviation.
 			<link href="http://adamsilver.io/articles/the-design-challenge/"/>
 			<updated>2016-01-08T09:00:01+00:00</updated>
 			<id>http://adamsilver.io/articles/the-design-challenge</id>
-			<content type="html">&lt;p&gt;Paul Adams &lt;a href=&quot;https://medium.com/intercom-inside/how-to-hire-designers-960663e3a3e6#.5het3jvgw&quot;&gt;explains&lt;/a&gt; there are four major design disciplines: outcome, system, interaction and visual. Most designers seem to focus on  visual.&lt;/p&gt;
+			<content type="html">&lt;p&gt;In &lt;a href=&quot;https://medium.com/intercom-inside/how-to-hire-designers-960663e3a3e6#.5het3jvgw&quot;&gt;How to hire designers&lt;/a&gt;, Paul Adams explains that there are four major design disciplines: outcome, system, interaction and visual.&lt;/p&gt;
 
-&lt;p&gt;In doing so they neglect the other three aspects. This often results in a degraded experience. Here are some real examples of this:&lt;/p&gt;
+&lt;p&gt;Whilst all four disciplines need our consideration, in my experience most designers get caught up on the visual side of design. And in doing so, the overall design is worse off.&lt;/p&gt;
 
-&lt;h2 id=&quot;buttons-and-links-should-look-the-same-it-creates-a-minimalist-ui&quot;&gt;1. “Buttons and links should look the same. It creates a minimalist UI.”&lt;/h2&gt;
+&lt;p&gt;Here are some examples that I’ve had to deal with over the years:&lt;/p&gt;
+
+&lt;h2 id=&quot;buttons-and-links-should-look-the-same-minimalist-design-ftw&quot;&gt;1. “Buttons and links should look the same. Minimalist design FTW.”&lt;/h2&gt;
 
 &lt;p&gt;Clarity trumps minimalism every time. &lt;a href=&quot;/articles/buttons-shouldnt-have-a-hand-cursor&quot;&gt;Buttons and links are different&lt;/a&gt;. We should design to accomodate those differences. Not ignore them.&lt;/p&gt;
 
@@ -1397,9 +1405,9 @@ Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a h
 
 &lt;p&gt;Just because someone else does it, doesn’t mean it’s good. You’re probably testing the website in a cutting edge browser and you’re you. &lt;a href=&quot;http://uxmyths.com/post/715988395/myth-you-are-like-your-users&quot;&gt;You’re not your users&lt;/a&gt;. Take the opportunity to do it better. Test with users.&lt;/p&gt;
 
-&lt;h2 id=&quot;isnt-this-your-challenge&quot;&gt;Isn’t this your challenge?&lt;/h2&gt;
+&lt;h2 id=&quot;isnt-this-our-challenge&quot;&gt;Isn’t this our challenge?&lt;/h2&gt;
 
-&lt;p&gt;By default, anyone with a browser can use your website. That’s what makes the web so amazing. Your challenge is to design a website that doesn’t break the web. Understand the platform. Design for everyone.&lt;/p&gt;
+&lt;p&gt;By default, anyone with a browser can use your website. That’s what makes the web so amazing. Our challenge is to design a website that doesn’t break the web. Understand the platform. Design for everyone. Isn’t that what our job is?&lt;/p&gt;
 </content>
 		</entry>
 	
