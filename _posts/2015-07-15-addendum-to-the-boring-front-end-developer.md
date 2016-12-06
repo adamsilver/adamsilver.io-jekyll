@@ -6,8 +6,8 @@ categories: js html css
 description: My response to Hacker News comments about The Boring Front-end Developer.
 ---
 
-Thanks to everyone who took the time to read T[he Boring Front-end
-Developer](/the-boring-front-end-developer/). There were some outrageous and funny comments which I found entertaining and there were also some points worth addressing.
+Thanks to everyone who took the time to read [The Boring Front-end
+Developer](/articles/the-boring-front-end-developer/). There were some outrageous and funny comments which I found entertaining and there were also some points worth addressing.
 
 ## 1. CSS preprocessors
 
