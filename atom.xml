@@ -3,7 +3,7 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-12-06T19:25:37+00:00</updated>
+	<updated>2016-12-06T19:26:55+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -2056,7 +2056,7 @@ I would add - and with a mobile connection you have no choice but to use the pro
 			<link href="http://adamsilver.io/articles/addendum-to-the-boring-front-end-developer/"/>
 			<updated>2015-07-15T10:00:01+01:00</updated>
 			<id>http://adamsilver.io/articles/addendum-to-the-boring-front-end-developer</id>
-			<content type="html">&lt;p&gt;Thanks to everyone who took the time to read T&lt;a href=&quot;/the-boring-front-end-developer/&quot;&gt;he Boring Front-end
+			<content type="html">&lt;p&gt;Thanks to everyone who took the time to read &lt;a href=&quot;/articles/the-boring-front-end-developer/&quot;&gt;The Boring Front-end
 Developer&lt;/a&gt;. There were some outrageous and funny comments which I found entertaining and there were also some points worth addressing.&lt;/p&gt;
 
 &lt;h2 id=&quot;css-preprocessors&quot;&gt;1. CSS preprocessors&lt;/h2&gt;
