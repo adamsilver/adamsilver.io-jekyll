@@ -5,7 +5,7 @@ date: 2016-07-01 09:00:01
 categories: design ux
 ---
 
-Sometimes designers oversimplify a form by removing the labels. [Minimal does not always mean it’s simple](http://uxmyths.com/post/115783813605/myth-34-simple-minimal) which is certainly the case for labels. Labels, in fact, are an essential part of designing easy-to-use forms. Here’s why:
+Sometimes designers oversimplify a form by removing labels. This is problematic because [minimal does not always mean simple](http://uxmyths.com/post/115783813605/myth-34-simple-minimal). When it comes to labels, this definitely applies. Labels, in fact, are an essential part of designing easy-to-use forms. Here’s why:
 
 **A) Sighted users will see the instructions** and know what to do. Without a
 label this is challenging at best.

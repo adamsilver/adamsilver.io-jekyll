@@ -5,9 +5,9 @@ date: 2016-06-16 09:00:01
 categories: design ux
 ---
 
-When browsers introduced the placeholder, designers were quick to use them for hints and instructions as a way to help users fill in forms. Whilst this sounds good, it's actually problematic due to the way the placeholder behaves.
+When browsers implemented the placeholder, designers rapidly adopted them for hints and instructions to help users fill out forms. Whilst this sounds good, it's actually problematic due to the way the placeholder behaves.
 
-There is effectively one 'space' containing two values: the hint and the value. It comes down to the fact that the valuable information put in placeholders is not always available to users when they need it. And the problem is exacerbated when placeholders are used as a replacement for labels.
+There's effectively one 'space' containing two values: the hint and the value. It comes down to the fact that the valuable information put in placeholders is not always available to users when they need it. And the problem is exacerbated when placeholders are used as a replacement for labels.
 
 Here's why the placeholder is problematic:
 

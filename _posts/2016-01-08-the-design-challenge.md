@@ -6,11 +6,13 @@ categories: ux design
 description: Can you design inclusively and beautifully at the same time?
 ---
 
-Paul Adams [explains](https://medium.com/intercom-inside/how-to-hire-designers-960663e3a3e6#.5het3jvgw) there are four major design disciplines: outcome, system, interaction and visual. Most designers seem to focus on  visual.
+In [How to hire designers](https://medium.com/intercom-inside/how-to-hire-designers-960663e3a3e6#.5het3jvgw), Paul Adams explains that there are four major design disciplines: outcome, system, interaction and visual.
 
-In doing so they neglect the other three aspects. This often results in a degraded experience. Here are some real examples of this:
+Whilst all four disciplines need our consideration, in my experience most designers get caught up on the visual side of design. And in doing so, the overall design is worse off.
 
-## 1. "Buttons and links should look the same. It creates a minimalist UI."
+Here are some examples that I've had to deal with over the years:
+
+## 1. "Buttons and links should look the same. Minimalist design FTW."
 
 Clarity trumps minimalism every time. [Buttons and links are different](/articles/buttons-shouldnt-have-a-hand-cursor). We should design to accomodate those differences. Not ignore them.
 
@@ -65,6 +67,6 @@ Again, clarity trumps minimalism. [Design for content](https://medium.com/uie-br
 
 Just because someone else does it, doesn't mean it's good. You're probably testing the website in a cutting edge browser and you're you. [You're not your users](http://uxmyths.com/post/715988395/myth-you-are-like-your-users). Take the opportunity to do it better. Test with users.
 
-## Isn’t this your challenge?
+## Isn’t this our challenge?
 
-By default, anyone with a browser can use your website. That's what makes the web so amazing. Your challenge is to design a website that doesn't break the web. Understand the platform. Design for everyone.
+By default, anyone with a browser can use your website. That's what makes the web so amazing. Our challenge is to design a website that doesn't break the web. Understand the platform. Design for everyone. Isn't that what our job is?
