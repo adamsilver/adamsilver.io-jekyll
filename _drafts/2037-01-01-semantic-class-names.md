@@ -6,7 +6,7 @@ categories: css
 ---
 
 Make no mistake. Naming class names is difficult. It’s no coincidence that I
-discuss semantic class names so early on in [MaintainableCSS](http://maintainablecss.com/). In that chapter, I explain why we should name a module based on what it is. Not what it looks like or how it behaves. 
+discuss [semantic class names](http://maintainablecss.com/chapters/semantics) so early on in [MaintainableCSS](http://maintainablecss.com/). In that chapter, I explain why we should name a module based on what it is. Not what it looks like or how it behaves. 
 
 But, even if you’re completely and utterly sold on the rational; even if you avoid stylistic and behavioural class names, you can still get your knickers in a twist. The problem boils down to naming your classes either too generically or too specifically. Both of which have pros and cons. 
 
@@ -30,9 +30,7 @@ To start, we could name these elements as follows:
     </div>
 
 These class names are specific and coupled to the module. This is
-good because we can apply styling to this form without affecting the others.
-
-But, if we wanted to, we could ensure that all forms, including this one have the same aesthetic. Either by using a mixin or by comma-delimitting selectors:
+good because we can apply styling to this form without affecting the others. But, if we wanted to, we could ensure that all forms (including this one) have the same aesthetic. Either by using a mixin or by comma-delimitting selectors:
 
     .loginForm,
     .someOtherForm {
@@ -47,19 +45,13 @@ But, if we wanted to, we could ensure that all forms, including this one have th
 
 If you have a lot of forms, you could end up with a lot of CSS. This seems a bit unnecessary. Can we do better?
 
-This is where we can be more generic. Perhaps `.loginForm-field` would be better. This enables us to reuse the same styles across all fields within the login form.
-
-But this name still seems too specific. Aren't these styles relevant to all fields across all forms? Probably. Consistency is an important aspect of good design. 
+We could choose a more generic class name. Perhaps `.loginForm-field` would be better. This enables us to reuse the same styles across all fields within the login form. But aren't these styles relevant to all fields across all forms? Probably. Consistency is an important aspect of good design. 
 
 Let's change these components into a module. And let's name this module `.formField`. That feels better doesn't it?
 
-All three of the class names follow MaintainableCSS principles. But they
-have significant differences in how they impact the maintainability of our
-codebase.
+All of the class names we've tried so far are semantic. But, they impact the maintainability of our CSS in very different ways. Let's continue and find some more problems with this generic, reusable `.formField` module.
 
-Let’s find some more problems with this generic, reusable `.formField` module.
-
-What if some fields need to accomodate a hint, for example? And each field that needs a hint needs different styles?
+What if some fields need to accomodate a hint, for example? And each of these fields needs different styles?
 
 This is where [modifiers](http://maintainablecss.com/chapters/modifiers/) come
 in. Just add an extra class name and make the required tweaks.
@@ -76,59 +68,44 @@ in. Just add an extra class name and make the required tweaks.
       </div>
     </div>
 
-In this example we just need a few tweaks but what if we had something more
-significant different? For example, we probably have form fields that are made up of radio buttons.
+In this case we just need a few tweaks but what if we had something that was significantly different? For example, plenty of forms have fields that are made up of radio buttons.
 
 Using a modifier is problematic because there is little to inherit. When we named the form field `.formField` we didn’t consider radio buttons at all did we?
 
 This isn’t a bad thing. In many ways this is good. If we try too early to find commonality in a design system, it can lead to over-engineered solutions. Technically speaking, you could name all elements `.item` because everything *is* an “item”, but this is neither practical nor useful.
 
-Radio buttons are different to a text field. They would have a legend, a
-fieldset, and a different look and feel. In reality, they are so different that
-despite both being form fields, we shouldn’t consider them to be the same. **And this is a major point worth pondering over.**
+Text fields are very different to a set of radios. The latter requires a legend, fieldset and a different structure e.g. labels are to the right of the control. 
 
-At this point it becomes clear that `.formField` is too generic. We don’t want to update styles for a set of radios, and worry that we'll regress
-styles in a text field. We also don’t wish to work out the few bits of
-commonality between these two entities, just to shave a little CSS.
+They're so different that despite them both being form fields, we shouldn't consider them to be the *same* at all. This is a point worth pondering over.
 
-Where does this leave us then?
+Clearly `.formField` is too generic and causes problems. We don't want to update the radio field and worry about regressing the styles in a text field. And, we don't want to work out the few bits of commanility between these two entities, just to shave a little CSS.
 
-We’ve gone from too specific to too generic, and we're trying so hard to do a
-good job.
+If `.formField` is too generic and `.loginForm-email` (and `.loginForm-field`) is too specific then what do we do?
 
-If `.formField` is too generic and `.loginForm-email` (and `.loginForm-field`) is too specific then where do we go from here?
+Having analysed the situation at length, it's much easier to decide on an appropriate name. I would suggest naming a text field `.textField` and set of radios `.radioGroupField`.
 
-Having navigated through these problems, it's quite easy to decide on a good name. It would make sense to call the text field `.textField` and the radio group field `.radioGroupField`. 
+This enables us to treat them as the distinct modules they are. They are specific enough to be able to differentiate. Yet they are generic enough to be reused across multiple forms, without writing unnecessary CSS.
 
-This way, we can treat them as the distinct modules they are. They are specific enough to be able to differentiate. Yet they are generic
-enough so the we can use them many times across several forms, without writing
-unnecessary CSS.
+The problem is that we face decisions like this all the time. Or we don't bother and end up with our knickers in a twist. This is why I prefer to start with specific class names.
 
-The *real* problem is that we face decisions like this all the time.
+I'd rather have a little more CSS and the flexibility to style elements consistently (or different whatever the case may be). Otherwise, I'd have to tackle the issue of overrides and regression.
 
-This is why I lean toward being too specific because I’d rather have a little
-more CSS and the flexibility to style elements consistently or differently
-(whatever the case may be), than to get caught up with overrides and regression. I am not saying this is “perfect”. But that’s why I do it and why I advise it.
+This approach also gives you the space and time to learn what is worth abstracting and what isn't. You may even learn that `.textField` is too generic. For example, you might have many different types of text fields that are better off being their own modules. You might not.
 
-Also, this gives you the time to learn what is worth abstracting and
-what isn’t. You might come to learn that even `.textField` is too generic in that you might have many different types of text fields that are better off being their own modules. You might not.
+What's important is that we think and ask questions frequently and rigorously.
 
-The takeaway here is to think and ask questions frequently and rigorously:
+## 1. What if a module is used in many times but might look a little different basedon its proximity, location or contents?
 
-## 1. What if a module is used in lots of places but sometimes it can look a bit different for reasons such as proximity, location, contents etc?
+Sounds like you need a [modifier](http://maintainablecss.com/chapters/modifiers/).
 
-In this case, you’ll probably benefit from a modifier.
+## 2. What if a component can be used elsewhere, pretty much as is?
 
-## 2. What if a component can be used frequently, pretty much as is, elsewhere?
-
-In this case, abstract into a module but be careful not to name it too
-generically.
+Abstract the component into a module. Be careful not to name it too generically.
 
 ## 3. What if you’re spending a lot of time writing many different modifiers or
 working out what to abstract as common styles?
 
-In this case, it’s probably named too generically. Split up into separate
-dedicated modules.
+You've probably named the module too generically. Split this module out into dedicated modules.
 
 ## Summary
 
