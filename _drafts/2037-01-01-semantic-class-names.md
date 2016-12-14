@@ -6,16 +6,13 @@ categories: css
 ---
 
 Make no mistake. Naming class names is difficult. It’s no coincidence that I
-discuss semantic class names early on in [MaintainableCSS](http://maintainablecss.com/).
+discuss semantic class names so early on in [MaintainableCSS](http://maintainablecss.com/). In that chapter, I explain why we should name a module based on what it is. Not what it looks like or how it behaves. 
 
-In that chapter, I explain that we should name a module based on what it is. Not what it looks like or how it behaves. Even if you’re sold on the rational, there’s still plenty of room for error.
-
-Even if we avoid stylistic and behavioural class names, we can still get our
-knickers in a twist. In reality, I mean that our class names will be either too generic or too specific. Both of which have their pros and cons.
+But, even if you’re completely and utterly sold on the rational; even if you avoid stylistic and behavioural class names, you can still get your knickers in a twist. The problem boils down to naming your classes either too generically or too specifically. Both of which have pros and cons. 
 
 Most developers go for generic. In theory, this is a good because the more generic the class name, the more reusable it is. In reality it’s not so simple.
 
-To show you what I mean we’ll build a login form together. This form consists of an email and password field. And we'll start off at the specific end of the scale.
+It's easier to explain all this with an example. Let's build a login form together. Our login form consists of an email and password field.
 
 To start, we could name these elements as follows:
 
