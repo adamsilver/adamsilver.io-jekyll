@@ -94,20 +94,18 @@ This approach also gives you the space and time to learn what is worth abstracti
 
 What's important is that we think and ask questions frequently and rigorously.
 
-## 1. What if a module is used in many times but might look a little different basedon its proximity, location or contents?
+## 1. Do you have a module appearing in many places but with slightly different aesthetics based on proximity, location or contents?
 
-Sounds like you need a [modifier](http://maintainablecss.com/chapters/modifiers/).
+You probably need a [modifier](http://maintainablecss.com/chapters/modifiers/).
 
-## 2. What if a component can be used elsewhere, pretty much as is?
+## 2. Do you have a componentn that could be used elsewhere pretty much as is?
 
-Abstract the component into a module. Be careful not to name it too generically.
+You should probably convert the module into a component. Be careful not to name it too generically.
 
-## 3. What if you’re spending a lot of time writing many different modifiers or
-working out what to abstract as common styles?
+## 3. Do you have a module with many different modifiers? Or are you spending time working out what styles are common to each scenario?
 
-You've probably named the module too generically. Split this module out into dedicated modules.
+You probably named the module too generically. Split it out into several dedicated modules.
 
 ## Summary
 
-Deciding on a name is tricky. But if we navigate through these problems frequently and vigorously we can ensure our CSS is as easy to maintain as possible.
-
+Deciding on a name is tricky. But if we navigate through these problems frequently and vigorously, we can ensure our CSS easy to maintain.
