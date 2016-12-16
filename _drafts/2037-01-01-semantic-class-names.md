@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Semantic class names: are you being too generic?
-date:   2037-01-01 09:00:01
+title: Semantic class names are you being too generic?
+date: 2035-01-01 09:00:01
 categories: css
 ---
 
 Make no mistake. Naming class names is difficult. It’s no coincidence that I
-discuss [semantic class names](http://maintainablecss.com/chapters/semantics) so early on in [MaintainableCSS](http://maintainablecss.com/). In that chapter, I explain why we should name a module based on what it is. Not what it looks like or how it behaves. 
+discuss [semantic class names](http://maintainablecss.com/chapters/semantics) so early on in [MaintainableCSS](http://maintainablecss.com/). In that chapter, I explain why we should name a module based on what it is. Not what it looks like or how it behaves.
 
-But, even if you’re completely and utterly sold on the rational; even if you avoid stylistic and behavioural class names, you can still get your knickers in a twist. The problem boils down to naming your classes either too generically or too specifically. Both of which have pros and cons. 
+But, even if you’re completely and utterly sold on the rational; even if you avoid stylistic and behavioural class names altogether, you can still get your knickers in a twist. The problem boils down to naming your classes either too generically or too specifically. Both of which have pros and cons.
 
-Most developers go for generic. In theory, this is a good because the more generic the class name, the more reusable it is. In reality it’s not so simple.
+Most developers tend to use genericic class names. This is a good because the more generic the class name, the more reusable it is. At least in theory.
 
-It's easier to explain all this with an example. Let's build a login form together. Our login form consists of an email and password field.
+It's easier to explain with an example. Let's build a login form together. Our login form consists of an email and password field.
 
 To start, we could name these elements as follows:
 
@@ -45,7 +45,7 @@ good because we can apply styling to this form without affecting the others. But
 
 If you have a lot of forms, you could end up with a lot of CSS. This seems a bit unnecessary. Can we do better?
 
-We could choose a more generic class name. Perhaps `.loginForm-field` would be better. This enables us to reuse the same styles across all fields within the login form. But aren't these styles relevant to all fields across all forms? Probably. Consistency is an important aspect of good design. 
+We could choose a more generic class name. Perhaps `.loginForm-field` would be better. This enables us to reuse the same styles across all fields within the login form. But aren't these styles relevant to all fields across all forms? Probably. Consistency is an important aspect of good design.
 
 Let's change these components into a module. And let's name this module `.formField`. That feels better doesn't it?
 
@@ -74,7 +74,7 @@ Using a modifier is problematic because there is little to inherit. When we name
 
 This isn’t a bad thing. In many ways this is good. If we try too early to find commonality in a design system, it can lead to over-engineered solutions. Technically speaking, you could name all elements `.item` because everything *is* an “item”, but this is neither practical nor useful.
 
-Text fields are very different to a set of radios. The latter requires a legend, fieldset and a different structure e.g. labels are to the right of the control. 
+Text fields are very different to a set of radios. The latter requires a legend, fieldset and a different structure e.g. labels are to the right of the control.
 
 They're so different that despite them both being form fields, we shouldn't consider them to be the *same* at all. This is a point worth pondering over.
 
@@ -94,15 +94,15 @@ This approach also gives you the space and time to learn what is worth abstracti
 
 What's important is that we think and ask questions frequently and rigorously.
 
-## 1. Do you have a module appearing in many places but with slightly different aesthetics based on proximity, location or contents?
+**1) Do you have a module appearing in many places but with slightly different aesthetics based on proximity, location or contents?**
 
 You probably need a [modifier](http://maintainablecss.com/chapters/modifiers/).
 
-## 2. Do you have a componentn that could be used elsewhere pretty much as is?
+ **2) Do you have a componentn that could be used elsewhere pretty much as is?**
 
 You should probably convert the module into a component. Be careful not to name it too generically.
 
-## 3. Do you have a module with many different modifiers? Or are you spending time working out what styles are common to each scenario?
+ **3) Do you have a module with many different modifiers? Or are you spending time working out what styles are common to each scenario?**
 
 You probably named the module too generically. Split it out into several dedicated modules.
 
