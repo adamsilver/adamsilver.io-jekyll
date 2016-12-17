@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en">
+	<head>
+	    <title>Semantic class names: are you being too generic or too specific? | Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
+	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+
+<link rel="apple-touch-icon" sizes="57x57" href="http://adamsilver.io/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://adamsilver.io/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://adamsilver.io/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://adamsilver.io/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://adamsilver.io/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://adamsilver.io/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://adamsilver.io/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://adamsilver.io/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://adamsilver.io/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="http://adamsilver.io/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="http://adamsilver.io/manifest.json">
+<link rel="mask-icon" href="http://adamsilver.io/safari-pinned-tab.svg" color="#001f3f">
+<meta name="msapplication-TileColor" content="#001F3F">
+<meta name="msapplication-TileImage" content="http://adamsilver.io/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+
+
+	<meta content="Semantic class names: are you being too generic or too specific?" property="og:title">
+
+
+
+	<meta property="og:description" content="Hello, I am Adam Silver, I specialise in UX, Front-end Engineering and Strategy. I help companies and people make things simple and human. Based in London.">
+
+
+<meta property="og:url" content="http://adamsilver.io/articles/semantic-class-names-are-you-being-too-generic-or-too-specific/">
+<meta property="og:site_name" content="Adamsilver.io">
+<meta property="og:image" content="http://adamsilver.io/assets/img/card.png">
+<meta property="og:image:width" content="181">
+<meta property="og:image:height" content="181">
+
+<meta name="twitter:card" content="summary">
+
+
+	<meta name="twitter:description" content="Hello, I am Adam Silver, I specialise in UX, Front-end Engineering and Strategy. I help companies and people make things simple and human. Based in London.">
+
+
+<meta name="twitter:title" content="Semantic class names: are you being too generic or too specific? -  Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.">
+
+
+	<meta content="Semantic class names: are you being too generic or too specific?" name="twitter:title">
+
+
+<meta name="twitter:site" content="@adambsilver">
+<meta name="twitter:creator" content="@adambsilver">
+<meta property="twitter:image" content="http://adamsilver.io/assets/img/card.png">
+
+
+	<meta itemprop="description" content="Hello, I am Adam Silver, I specialise in UX, Front-end Engineering and Strategy. I help companies and people make things simple and human. Based in London.">
+
+
+<link rel="stylesheet" href="/assets/css/main.min.fa5421b6.css" media="all">
+
+<!--[if IE 8]>
+<link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
+<![endif]-->
+
+<!--[if IE 7]>
+<link rel="stylesheet" href="/assets/css/ie7.min.d41d8cd9.css" media="all">
+<![endif]-->
+
+
+<!--[if IE 6]>
+<link rel="stylesheet" href="/assets/css/ie6.min.2d22a25b.css" media="all">
+<![endif]-->
+
+
+<link rel="canonical" href="http://adamsilver.io/articles/semantic-class-names-are-you-being-too-generic-or-too-specific/">
+<link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47311666-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	</head>
+	<body>
+	    <div class="nav">
+	<ul>
+		<li><a class="" href="/">Home</a></li>
+		<li><a class="nav-active" href="/articles/">Articles</a></li>
+		<li><a class="" href="/about/">About</a></li>
+		<li><a class="" href="/signup/">Newsletter</a></li>
+	</ul>
+</div>
+	    <div class="mainContent">
+			<h1>Semantic class names: are you being too generic or too specific?</h1>
+	        <p>Make no mistake. Naming class names is difficult. It’s no coincidence that I
+discuss <a href="http://maintainablecss.com/chapters/semantics">semantic class names</a> so early on in <a href="http://maintainablecss.com/">MaintainableCSS</a>. In that chapter, I explain why we should name a module based on what it is. Not what it looks like or how it behaves.</p>
+
+<p>But, even if you’re completely and utterly sold on the rational; even if you avoid stylistic and behavioural class names altogether, you can still get your knickers in a twist. The problem boils down to naming your classes either too generically or too specifically. Both of which have pros and cons.</p>
+
+<p>Most developers tend to use generic class names. This is a good because the more generic the class name, the more reusable it is. At least in theory.</p>
+
+<p>It’s easier to explain with an example. Let’s build a login form together. Our login form consists of an email and password field.</p>
+
+<p>To start, we could name these elements as follows:</p>
+
+<pre><code>&lt;div class=”loginForm”&gt;
+  &lt;form&gt;
+    &lt;div class=”loginForm-email”&gt;
+      &lt;label&gt;…&lt;/label&gt;
+      &lt;input type=”email”&gt;
+    &lt;/div&gt;
+    &lt;div class=”loginForm-password”&gt;
+      &lt;label&gt;…&lt;/label&gt;
+      &lt;input type=”password”&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>These class names are specific and coupled to the module. This is
+good because we can apply styling to this form without affecting the others. But, if we wanted to, we could ensure that all forms (including this one) have the same aesthetic. We could do this with a mixin or by comma-delimitting selectors:</p>
+
+<pre><code>.loginForm,
+.someOtherForm {
+  /* Common styles for container */
+}
+
+.loginForm-email,
+.loginForm-password,
+.someOtherForm-someField {
+  /* Common styles for fields */
+}
+</code></pre>
+
+<p>If you have a lot of forms, you could end up with a lot of CSS. This seems a bit unnecessary. Can we do better?</p>
+
+<p>We could choose a more generic class name. Perhaps <code>.loginForm-field</code> would be better. This enables us to reuse the same styles across all fields within the login form.</p>
+
+<p>But these styles are most likely relevant to all fields across all forms. Consistency is an important aspect of good design. Let’s convert the field from a component to a module. And let’s name it <code>.formField</code>. This feels better.</p>
+
+<p>Interestingly, all of the class names we’ve tried so far are semantic. But, they impact the maintainability of our CSS in very different ways. Let’s continue by finding some problems with this generic, reusable <code>.formField</code> module.</p>
+
+<p>What if some fields need to accomodate a hint, for example? And each of these fields needs different styles?</p>
+
+<p>This is where <a href="http://maintainablecss.com/chapters/modifiers/">modifiers</a> come in. Just add an extra class name and make the required tweaks.</p>
+
+<pre><code>&lt;div class=”someForm”&gt;
+  &lt;div class=”formField”&gt;
+    &lt;label&gt;…&lt;/label&gt;
+    &lt;input type=”text”&gt;
+  &lt;/div&gt;
+  &lt;div class=”formField formField-withHint”&gt;
+    &lt;label&gt;…&lt;/label&gt;
+    &lt;p&gt;The hint goes here&lt;/p&gt;
+    &lt;input type=”text”&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>In this case we just need a few tweaks and so this generic class names works well. But what if we had something that’s significantly different? For example, you might need a field with radio buttons.</p>
+
+<p>Using a modifier is problematic because there is little to inherit. When we named our module <code>.formField</code> we didn’t consider radio buttons at all.</p>
+
+<p>This isn’t necessarily a bad thing. In fact, in many ways this is good. If we try too early to find commonality in a design system, it can lead to over-engineered solutions. Technically speaking, you could name all elements <code>.item</code> because everything <em>is</em> an “item”, but this is neither practical nor useful.</p>
+
+<p>Text fields are very different to a set of radios. The latter requires a legend, fieldset and a different structure. They’re so different that despite them both being form fields, we shouldn’t consider them to be the <em>same</em> at all. This point is worth deliberating over.</p>
+
+<p>Clearly <code>.formField</code> is too generic and causes problems. We don’t want to update the radio field and worry about regressing the styles in a text field. And, we don’t want to work out the few bits of commanility between these two entities, just to shave a little CSS.</p>
+
+<p>If <code>.formField</code> is too generic and <code>.loginForm-email</code> (and <code>.loginForm-field</code>) is too specific then what do we do?</p>
+
+<p>Having analysed the situation at length, it’s much easier to decide on an appropriate name. I would suggest naming a text field <code>.textField</code> and set of radios <code>.radioField</code>.</p>
+
+<p>This enables us to treat them as the distinct modules they are. They are specific enough to be able to differentiate. Yet they are generic enough to be reused across multiple forms, without writing unnecessary CSS. Easy right?</p>
+
+<p>The problem is that we face decisions like this all the time. Or we don’t think about it and end up with our knickers in a twist. This is why I prefer to start with specific class names.</p>
+
+<p>I’d rather have a little more CSS and the flexibility to style elements consistently (or differently whatever the case may be). Otherwise, I’d have to content with overrides and regression.</p>
+
+<p>This approach also gives you the space and time to learn what is worth abstracting and what isn’t. You may learn that even <code>.textField</code> is too generic. For example, you might have many different types of text fields that are better off being their own modules. You might not.</p>
+
+<p>What’s most important is that we think and ask analyse these things frequently and rigorously.</p>
+
+<p><strong>1) Do you have a module appearing in many places but with slightly different aesthetics based on proximity, location or content?</strong></p>
+
+<p>If yes, you should probably use a <a href="http://maintainablecss.com/chapters/modifiers/">modifier</a>.</p>
+
+<p><strong>2) Do you have a component that could be used elsewhere pretty much as is?</strong></p>
+
+<p>If yes, you should probably convert the module into a component. But, be careful not to name it too generically.</p>
+
+<p><strong>3) Do you have a module with many different modifiers? Or are you spending time working out what styles are common to all scenarios?</strong></p>
+
+<p>If yes, you probably named the module too generically. Split it out into several dedicated modules.</p>
+
+	    </div>
+		<div class="signUpHero  signUpHero-isArticle ">
+	<h2 class="signUpHero-heading">Join the newsletter</h2>
+	<p class="signUpHero-description">Do you love enhancing people's lives by designing and building simple and humanised experiences on the web? If yes, then you'll probably love my newsletter. Just pop your email in the box below:</p>
+	<form action="//adamsilver.us9.list-manage.com/subscribe/post?u=b8fb04f39bf86109693e00ba5&amp;id=441c045a36" method="post">
+		<input type="hidden" name="b_b8fb04f39bf86109693e00ba5_441c045a36" value="">
+		<input type="hidden" name="SITE" value="http://adamsilver.io">
+		<input type="hidden" name="LOCATION" value="/articles/semantic-class-names-are-you-being-too-generic-or-too-specific/">
+		<label for="mce-EMAIL" class="signUpHero-label">Your email address</label>
+		<input type="email" name="EMAIL" id="mce-EMAIL" class="signUpHero-email" required>
+		<input class="signUpHero-button" type="submit" value="Sign up" name="subscribe">
+	</form>
+</div>
+
+		<!-- 
+	<div class="nowRead">
+		<p>Now read: <a href="/articles/browsers-are-different-but-so-what/">Browsers are different but so what?</a></p>
+	</div>
+ -->
+
+		<div class="footer">
+	<p>Elsewhere... <!--<a href="/team/">Team</a>-->
+		<a href="http://www.twitter.com/adambsilver/">Twitter</a>
+		<a href="http://www.github.com/adamsilver/">Github</a>
+		<a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a>
+		<a href="http://medium.com/@adambsilver">Medium</a>
+	</p>
+</div>
+	</body>
+</html>
