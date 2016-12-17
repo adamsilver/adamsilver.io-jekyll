@@ -10,9 +10,9 @@ description: Tasking can be painful when you do it ahead of time. Don't blindly 
 
 Scrum advocates breaking down stories into tasks because it:
 
-1. makes story estimation easier
-2. encourages collaboration
-3. enables the team to show granular process during a sprint.
+- makes story estimation easier;
+- encourages collaboration; and
+- enables the team to show granular process during a sprint.
 
 When one of my colleagues convinced me and the team to stop it we increased our velocity significantly. Here's why:
 
