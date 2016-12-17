@@ -3,7 +3,7 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-12-17T14:32:37+00:00</updated>
+	<updated>2016-12-17T15:09:55+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -1593,11 +1593,11 @@ Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a h
 			<id>http://adamsilver.io/articles/why-we-stopped-tasking</id>
 			<content type="html">&lt;p&gt;Scrum advocates breaking down stories into tasks because it:&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;makes story estimation easier&lt;/li&gt;
-  &lt;li&gt;encourages collaboration&lt;/li&gt;
+&lt;ul&gt;
+  &lt;li&gt;makes story estimation easier;&lt;/li&gt;
+  &lt;li&gt;encourages collaboration; and&lt;/li&gt;
   &lt;li&gt;enables the team to show granular process during a sprint.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;When one of my colleagues convinced me and the team to stop it we increased our velocity significantly. Here’s why:&lt;/p&gt;
 
