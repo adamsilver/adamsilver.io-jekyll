@@ -1,40 +1,52 @@
 ---
 layout: post
-title:  "On Outside-in Development"
-date:   2015-01-01 09:00:01
-categories: todo
+title: On Outside-in Development
+date: 2015-01-01 09:00:01
+categories: process thinking
 ---
 
-As a Front-end developer I find myself cosily positioned between UX design and Backend development, however, the wholistic picture is a little more complicated. In a (dare I say it) Agile environment, the entire team are involved across several aspects of the project delivery process, which of course includes me. Why am I telling you this? Because I want to talk about Outside-in Development in terms of *people* as well as code. Whilst team members have different disciplines, we should all be working towards the single goal of *pleasing the user*.
+I want to talk about Outside-in Development. It interestingly has a strong connection with User Centered Design. Whilst a team is made up of several different disciplines, everyone in that team should be working toward the single goal of pleasing the user.
 
-If the user is *pleased*, then they love the product; consume it; buy the widget etc. And all software development should, for the most part, start with this perspective; the *Outside-in* perspective. Consider the opposite approach. If you're solving problems buried in the underlying structures first, then it is *very* likely you and your team are solving problems that don't exist, which most certainly means you're not pleasing the user or anyone else for that matter.
+If we can please the user, then they probably like the product; consume it; buy the widget; come back for more. And all products, software or otherwise should&mdash;for the most part at least&mdash;start with this perspective. The Outside-in perspective.
 
-**Note:** there are times Inside-out Development is useful and necessary, but I won't go into that here.
+Consider the opposite approach. If you get to work on designing and building internal structures first, then you massively increase the chance of solving problems that aren't even problems. They probably don't exist yet. If you're spending time here, you're most certainly not pleasing the user.
 
-In a totally unrealistic, distilled, Waterfall version of an example development process, you could summarise the relationship as follows:
+Outside-in development isn't always possible. Sometimes Inside-out development is usefull and necessary but that's a topic for another time.
 
-1. Business supports the User
-2. Product supports the Business
-3. Test Automation supports the Product
-4. Front-end supports the Test Automation (in the form of Acceptance tests perhaps)
-5. Backend supports the Front-end
-6. DB, 3rd party APIs etc, support the Backend
+Going back to the team for a moment. You could summarise each person as a servant to another.
 
-From an application perspective, the most outer edge starts with Front-end. Every problem that needs solving can be either achieved on the Front-end or pushed back down to the level below. If you're not building a static website, then you're building a dynamic website. And if you're building a dynamic website, the HTML needs to contain content that resides elsewhere. This could be an API, database, file store, cookies, etc. As a Front-end developer, I am not too concerned about the finer details of those layers, so that complexity is abstracted away nicely, in what the industry calls a *View Model* - a Model that is appropriately designed to populate the View. I don't wish to have complex, business logic in my Views, which is why Logic-less templating has become popular, as an answer on Stackoverflow indicates [[0](#ref0)]:
+- Product supports User;
+- Test Automation supports the Product;
+- Front-end supports Test Automation;
+- Back-end supports Front-end; and
+- Databases and 3rd Party APIs support Back-end
 
-> In the old JSP days, it was very common to have JSP files sprinkled with Java code, which made refactoring much harder, since you had your code scattered.
+In reality it's more nuanced than this. Because everyone is responsible for UX. But you can see the point. Ultimately it all leads back to the user. Like it should.
 
-> If you prevent logic in templates by design (like mustache does), you will be obliged to put the logic elsewhere, so your templates will end up uncluttered.
+<!--Every problem that can be simply pushed back to the level below should be.
+Derek Featherstone said, “If you can solve the problem with a simpler solution lower in the stack, you should-->
 
-> Another advantage is that you are forced to think in terms of separation of concerns: your logic code will have to do the data massaging before sending data to the UI. If you later switch your template for another (let's say you start using a different templating engine), the transition would be easy because you only had to implement UI details (since there's no logic on the template, remember).
+In terms of application code, the most outer edge is Front-end. If you're building a dynamic website, then HTML needs to contain content that originates from somewhere else. This could be an API, database, file store, cookies etc. Or it has logic that depends on the state of this data.
 
-I personally think Logic-less templating is too extreme, and a bit of misnomer, but without getting into the details, the point is the *design* of the solution has been driven from the Outside-in. And if the View is not provided with an appropriate View Model, it is the Front-end developer's responsibility to request the right thing from the layer below, which in this case would be the Backend developers.
+Regardless, if you're a front-end developer you shouldn't necessarily concern yourself about the finer details of these other layers. Obviously knowing about them helps but I mean to the extent that you take on the responsibility in some form or other in the *Front-end*. This is something I explain in "Developing better templates with an outside-in approach".
 
-But this should be happening at all levels. Consider a situation where the Backend consumes an API. If that API is simply a bunch of micro-services around CRUD database calls, then it is likely not fit-for-purpose, in helping the Backend provide an appropriate View Model. It might be a particular View contains data that ultimately comes from 3 separate API calls.
+In that article I explain that template logic should be just that, and anything more complex should be abstracted away into a View Model. A View Model is something that resides in the back-end.
 
-In this scenario it would be wise to demand more from the layer below and request an end-point that aggregates 3 seperate calls (expensive and complex) into 1 (cheap and easy). Industry lingo refers to this as an *Orchestrator* [[1](#ref1)]. Again, this is another topic in itself [[2](#ref2)] but the point is, enforce the right separation of concerns, by leaning on the layer below, in order to deliver something that works better for you and ultimately the user.
+This principle should be applied to all levels of the system. For example, let's say the back-end builds up a View Model from 3 seperate API calls. If at all possible, you would be wise to demand more from the API developers and request that 3 separate calls (expensive and complex) are converted into 1 call (cheap and easy).
 
-In summary, Outside-in Development promotes a different mindset in which to solve a problem, whereby each layer of the system &amp; team serves the layer above it, which of course enforces the right separation of concerns. If the layer below is not serving you well, it is your responsibility to work out a better solution together.
+The industry calls this an Orchestration Layer. The reason APIs are designed so generically in the first place is so that once they are written the developers don't need to touch them again. But this is short-sighted.
+
+Whilst we all want to provide an API that doesn't need updating it's an endeavour that is either impossible or causes much trouble. If you're going to do this, you might as well creat an API that can read from a database and except an SQL query. This way it's one end-point with a million different possibilities. Job done.
+
+I have brushed over these topics and again things are never black and white. But the point is to try and enforce the right separation of concerns. Too often separation of concerns are determined by the lower levels of the system and this causes a lot of trouble for the outer layers.
+
+Every layer leads to the User. Improve each layer, you'll ultimately improve the User Experience. This might come in the form of:
+
+- speed of application (if right layer doing the right thing then faster): better to expose dedicated fast api call than have to make 3
+- easier to maintain: quicker to release new features/improvements
+- less bugs: if each layer is as simple as possible then less bugs. as per view model.
+
+Ultimately, Outside-in Development is a mindset in which to solve a problem. If the layer below is not serving you well, it's your responsiblility to work out a better solution together.
 
 <dl>
 	<dt class="citation" id="ref0">[0]</dt>
@@ -44,4 +56,10 @@ In summary, Outside-in Development promotes a different mindset in which to solv
 	<dt class="citation" id="ref2">[2]</dt>
 	<dd><a href="http://martinfowler.com/bliki/CQRS.html">CQRS</a></dd>
 </dl>
+
+> In the old JSP days, it was very common to have JSP files sprinkled with Java code, which made refactoring much harder, since you had your code scattered.
+
+> If you prevent logic in templates by design (like mustache does), you will be obliged to put the logic elsewhere, so your templates will end up uncluttered.
+
+> Another advantage is that you are forced to think in terms of separation of concerns: your logic code will have to do the data massaging before sending data to the UI. If you later switch your template for another (let's say you start using a different templating engine), the transition would be easy because you only had to implement UI details (since there's no logic on the template, remember).
 
