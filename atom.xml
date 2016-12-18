@@ -3,7 +3,7 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-12-17T15:09:55+00:00</updated>
+	<updated>2016-12-18T09:29:46+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -123,59 +123,50 @@ day&lt;/a&gt;.&lt;/p&gt;
 			<link href="http://adamsilver.io/articles/semantic-class-names-are-you-being-too-generic-or-too-specific/"/>
 			<updated>2016-10-31T09:00:01+00:00</updated>
 			<id>http://adamsilver.io/articles/semantic-class-names-are-you-being-too-generic-or-too-specific</id>
-			<content type="html">&lt;p&gt;Make no mistake. Naming class names is difficult. It’s no coincidence that I
-discuss &lt;a href=&quot;http://maintainablecss.com/chapters/semantics&quot;&gt;semantic class names&lt;/a&gt; so early on in &lt;a href=&quot;http://maintainablecss.com/&quot;&gt;MaintainableCSS&lt;/a&gt;. In that chapter, I explain why we should name a module based on what it is. Not what it looks like or how it behaves.&lt;/p&gt;
+			<content type="html">&lt;p&gt;Even if you’re completely and utterly sold on the &lt;a href=&quot;http://maintainablecss.com/chapters/semantics/&quot;&gt;rational behind semantic class names&lt;/a&gt;; even if you avoid stylistic and behavioural class names altogether; choosing a good class name for your HTML elements is hard.&lt;/p&gt;
 
-&lt;p&gt;But, even if you’re completely and utterly sold on the rational; even if you avoid stylistic and behavioural class names altogether, you can still get your knickers in a twist. The problem boils down to naming your classes either too generically or too specifically. Both of which have pros and cons.&lt;/p&gt;
+&lt;p&gt;The problem boils down to naming your classes either too generically or too specifically. Both of which have pros and cons. But I like to think we can choose a class name without any cons. Let’s see.&lt;/p&gt;
 
-&lt;p&gt;Most developers tend to use generic class names. This is a good because the more generic the class name, the more reusable it is. At least in theory.&lt;/p&gt;
+&lt;p&gt;Most developers I’ve worked with tend to use overly generic class names. There’s a tendency to do this because—at least in theory—the more generic something is the more reusable it is. But for CSS this isn’t really the case.&lt;/p&gt;
 
-&lt;p&gt;It’s easier to explain with an example. Let’s build a login form together. Our login form consists of an email and password field.&lt;/p&gt;
+&lt;p&gt;It’s easier to explain what I mean by example. So, let’s build a login form together. The login form has an email and password field. I will leave out certain elements for brevity.&lt;/p&gt;
 
 &lt;p&gt;To start, we could name these elements as follows:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;div class=”loginForm”&amp;gt;
-  &amp;lt;form&amp;gt;
-    &amp;lt;div class=”loginForm-email”&amp;gt;
-      &amp;lt;label&amp;gt;…&amp;lt;/label&amp;gt;
-      &amp;lt;input type=”email”&amp;gt;
-    &amp;lt;/div&amp;gt;
-    &amp;lt;div class=”loginForm-password”&amp;gt;
-      &amp;lt;label&amp;gt;…&amp;lt;/label&amp;gt;
-      &amp;lt;input type=”password”&amp;gt;
-    &amp;lt;/div&amp;gt;
-  &amp;lt;/form&amp;gt;
-&amp;lt;/div&amp;gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;form class=”loginForm”&amp;gt;
+  &amp;lt;div class=”loginForm-email”&amp;gt;
+    &amp;lt;label&amp;gt;…&amp;lt;/label&amp;gt;
+    &amp;lt;input type=”email”&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;div class=”loginForm-password”&amp;gt;
+    &amp;lt;label&amp;gt;…&amp;lt;/label&amp;gt;
+    &amp;lt;input type=”password”&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/form&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;These class names are specific and coupled to the module. This is
-good because we can apply styling to this form without affecting the others. But, if we wanted to, we could ensure that all forms (including this one) have the same aesthetic. We could do this with a mixin or by comma-delimitting selectors:&lt;/p&gt;
+&lt;p&gt;These class names are coupled to the module. They can’t be reused elsewhere. This is good because we can style this form without affecting other forms. On the other hand, by using a  mixin or comma-delimitting selectors we can reuse the &lt;em&gt;styles&lt;/em&gt;:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;.loginForm,
-.someOtherForm {
-  /* Common styles for container */
-}
-
-.loginForm-email,
+&lt;pre&gt;&lt;code&gt;.loginForm-email,
 .loginForm-password,
 .someOtherForm-someField {
-  /* Common styles for fields */
+  /* Common field style */
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;If you have a lot of forms, you could end up with a lot of CSS. This seems a bit unnecessary. Can we do better?&lt;/p&gt;
+&lt;p&gt;There are problems with this approach. First, you could end up with quite a lot of CSS which seems a bit unnecessary. Second, every new form or field requires CSS changes. Simple changes, but changes nonetheless.&lt;/p&gt;
 
-&lt;p&gt;We could choose a more generic class name. Perhaps &lt;code&gt;.loginForm-field&lt;/code&gt; would be better. This enables us to reuse the same styles across all fields within the login form.&lt;/p&gt;
+&lt;p&gt;Now if your forms have a different structure and aesthetic this last problem isn’t a problem at all. In fact it’s a benefit. But I would guess that most, if not all forms will have the same styling. Good design is consistent.&lt;/p&gt;
 
-&lt;p&gt;But these styles are most likely relevant to all fields across all forms. Consistency is an important aspect of good design. Let’s convert the field from a component to a module. And let’s name it &lt;code&gt;.formField&lt;/code&gt;. This feels better.&lt;/p&gt;
+&lt;p&gt;We could improve our approach by upgrading a field to a module and naming it &lt;code&gt;.formField&lt;/code&gt;. This feels better to me, at least at this stage of the analysis. This module doesn’t require a mixin or comma-delimitted selectors. And each new field does not require CSS changes.&lt;/p&gt;
 
 &lt;p&gt;Interestingly, all of the class names we’ve tried so far are semantic. But, they impact the maintainability of our CSS in very different ways. Let’s continue by finding some problems with this generic, reusable &lt;code&gt;.formField&lt;/code&gt; module.&lt;/p&gt;
 
-&lt;p&gt;What if some fields need to accomodate a hint, for example? And each of these fields needs different styles?&lt;/p&gt;
+&lt;p&gt;What if some fields need to accomodate a hint, for example? And for the purposes of this example this sort of field needs different styles to accomodate this hint.&lt;/p&gt;
 
 &lt;p&gt;This is where &lt;a href=&quot;http://maintainablecss.com/chapters/modifiers/&quot;&gt;modifiers&lt;/a&gt; come in. Just add an extra class name and make the required tweaks.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;div class=”someForm”&amp;gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;form class=”someForm”&amp;gt;
   &amp;lt;div class=”formField”&amp;gt;
     &amp;lt;label&amp;gt;…&amp;lt;/label&amp;gt;
     &amp;lt;input type=”text”&amp;gt;
@@ -185,32 +176,30 @@ good because we can apply styling to this form without affecting the others. But
     &amp;lt;p&amp;gt;The hint goes here&amp;lt;/p&amp;gt;
     &amp;lt;input type=”text”&amp;gt;
   &amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
+&amp;lt;/form&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;In this case we just need a few tweaks and so this generic class names works well. But what if we had something that’s significantly different? For example, you might need a field with radio buttons.&lt;/p&gt;
+&lt;p&gt;In this case we just needed a few tweaks and so this generic class name works well. But what if we had something that’s significantly different? For example, you might need a field with radio buttons.&lt;/p&gt;
 
-&lt;p&gt;Using a modifier is problematic because there is little to inherit. When we named our module &lt;code&gt;.formField&lt;/code&gt; we didn’t consider radio buttons at all.&lt;/p&gt;
+&lt;p&gt;Using a modifier is problematic because there is little to inherit. When we named our module &lt;code&gt;.formField&lt;/code&gt; we didn’t consider radio buttons, or any other type of control for that matter.&lt;/p&gt;
 
 &lt;p&gt;This isn’t necessarily a bad thing. In fact, in many ways this is good. If we try too early to find commonality in a design system, it can lead to over-engineered solutions. Technically speaking, you could name all elements &lt;code&gt;.item&lt;/code&gt; because everything &lt;em&gt;is&lt;/em&gt; an “item”, but this is neither practical nor useful.&lt;/p&gt;
 
-&lt;p&gt;Text fields are very different to a set of radios. The latter requires a legend, fieldset and a different structure. They’re so different that despite them both being form fields, we shouldn’t consider them to be the &lt;em&gt;same&lt;/em&gt; at all. This point is worth deliberating over.&lt;/p&gt;
+&lt;p&gt;Text fields are very different radios. The latter requires a legend, fieldset and a different structure. They’re so different that despite them both being form fields, we shouldn’t consider them to be the &lt;em&gt;same&lt;/em&gt; at all. This point is worth deliberating over.&lt;/p&gt;
 
-&lt;p&gt;Clearly &lt;code&gt;.formField&lt;/code&gt; is too generic and causes problems. We don’t want to update the radio field and worry about regressing the styles in a text field. And, we don’t want to work out the few bits of commanility between these two entities, just to shave a little CSS.&lt;/p&gt;
+&lt;p&gt;Earlier on &lt;code&gt;.formField&lt;/code&gt; felt like the perfect name for a class. But now, with this new information it isn’t such a good name. We don’t want to update styles for a radio field and worry about regressing the text field.  And, we don’t want to work out the few bits of commanility between these two entities, just to shave a little CSS.&lt;/p&gt;
 
-&lt;p&gt;If &lt;code&gt;.formField&lt;/code&gt; is too generic and &lt;code&gt;.loginForm-email&lt;/code&gt; (and &lt;code&gt;.loginForm-field&lt;/code&gt;) is too specific then what do we do?&lt;/p&gt;
+&lt;p&gt;Having analysed the situation, it’s much easier to decide on a good name. I would suggest naming the text field &lt;code&gt;.textField&lt;/code&gt; and the radios &lt;code&gt;.radioField&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Having analysed the situation at length, it’s much easier to decide on an appropriate name. I would suggest naming a text field &lt;code&gt;.textField&lt;/code&gt; and set of radios &lt;code&gt;.radioField&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This enables us to treat them as the distinct modules they are. They’re specific enough to be able to differentiate. Yet they are generic enough to be reused across multiple forms, without writing unnecessary CSS.&lt;/p&gt;
 
-&lt;p&gt;This enables us to treat them as the distinct modules they are. They are specific enough to be able to differentiate. Yet they are generic enough to be reused across multiple forms, without writing unnecessary CSS. Easy right?&lt;/p&gt;
-
-&lt;p&gt;The problem is that we face decisions like this all the time. Or we don’t think about it and end up with our knickers in a twist. This is why I prefer to start with specific class names.&lt;/p&gt;
+&lt;p&gt;In retrospect this seems rather easy. The problem is that we face decisions like this all the time. Or we don’t face them and end up with unmaintainable CSS. This is why I prefer to start with specific class names.&lt;/p&gt;
 
 &lt;p&gt;I’d rather have a little more CSS and the flexibility to style elements consistently (or differently whatever the case may be). Otherwise, I’d have to content with overrides and regression.&lt;/p&gt;
 
-&lt;p&gt;This approach also gives you the space and time to learn what is worth abstracting and what isn’t. You may learn that even &lt;code&gt;.textField&lt;/code&gt; is too generic. For example, you might have many different types of text fields that are better off being their own modules. You might not.&lt;/p&gt;
+&lt;p&gt;This affords us the space and time to learn what is worth abstracting and what isn’t. You may learn that even &lt;code&gt;.textField&lt;/code&gt; is too generic. For example, you might have many different types of text fields that are better off being their own modules. You might not.&lt;/p&gt;
 
-&lt;p&gt;What’s most important is that we think and ask analyse these things frequently and rigorously.&lt;/p&gt;
+&lt;p&gt;What’s important is that we think about these things frequently and rigorously. Here are some questions we can ask ourselves which can guide us in the right direction:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;1) Do you have a module appearing in many places but with slightly different aesthetics based on proximity, location or content?&lt;/strong&gt;&lt;/p&gt;
 
