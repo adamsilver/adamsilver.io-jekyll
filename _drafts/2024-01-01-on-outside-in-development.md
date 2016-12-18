@@ -5,15 +5,19 @@ date: 2015-01-01 09:00:01
 categories: process thinking
 ---
 
-I want to talk about Outside-in Development. It interestingly has a strong connection with User Centered Design. Whilst a team is made up of several different disciplines, everyone in that team should be working toward the single goal of pleasing the user.
+I want to talk about Outside-in Development because for one people don't talk about it very often. For two, it bares a strinking resemblance to User Centered Design.
 
-If we can please the user, then they probably like the product; consume it; buy the widget; come back for more. And all products, software or otherwise should&mdash;for the most part at least&mdash;start with this perspective. The Outside-in perspective.
+Designers frequently talk about users. If they're not designing for the user then what are they doing? But developers are more likely to get distracted by problems lower down the technology stack.
 
-Consider the opposite approach. If you get to work on designing and building internal structures first, then you massively increase the chance of solving problems that aren't even problems. They probably don't exist yet. If you're spending time here, you're most certainly not pleasing the user.
+They can become consumed by problems in their own world. And sometimes those problems don't end up benefiting the user. If developers are solving problems that don't benefit the user, then what are they doing?
 
-Outside-in development isn't always possible. Sometimes Inside-out development is usefull and necessary but that's a topic for another time.
+It's important to note that even if we remove, just for a moment, the people who *use* the product; there are still plenty of *people* that need our consideration.
 
-Going back to the team for a moment. You could summarise each person as a servant to another.
+For example, if you're a coder, there will be other people that need to work with your code. If your code is easy to understand, then other coders will help you build upon it quicker and more robust.
+
+Stepping back away from code for a moment. Let's look at the people involved in order to deliver a web product or service. Users, Product Design, Test Automation, Front-end, Back-end, Database, 3rd party APIs.
+
+I tend to think of it a bit like this:
 
 - Product supports User;
 - Test Automation supports the Product;
@@ -62,4 +66,6 @@ Ultimately, Outside-in Development is a mindset in which to solve a problem. If 
 > If you prevent logic in templates by design (like mustache does), you will be obliged to put the logic elsewhere, so your templates will end up uncluttered.
 
 > Another advantage is that you are forced to think in terms of separation of concerns: your logic code will have to do the data massaging before sending data to the UI. If you later switch your template for another (let's say you start using a different templating engine), the transition would be easy because you only had to implement UI details (since there's no logic on the template, remember).
+
+Now it's worth noting the developing software from the outside-in is not always possible. The way in which a technology works is a constraint to design. But this doesn't stop us practicing outside-in development at least by default.
 
