@@ -5,7 +5,7 @@ date: 2016-10-31 09:00:01
 categories: css
 ---
 
-Even if you’re completely and utterly sold on the [rational behind semantic class names](http://maintainablecss.com/chapters/semantics/); even if you avoid stylistic and behavioural class names altogether; choosing a good class name for your HTML elements is hard.
+Even if you’re completely sold on [semantic class names](http://maintainablecss.com/chapters/semantics/) and avoid stylistic and behavioural class names altogether, choosing a good class name is hard.
 
 The problem boils down to naming your classes either too generically or too specifically. Both of which have pros and cons. But I like to think we can choose a class name without any cons. Let's see.
 

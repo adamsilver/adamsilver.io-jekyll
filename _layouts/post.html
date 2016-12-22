@@ -6,14 +6,11 @@
 	</head>
 	<body>
 	    {% include navigation.html %}
-	    <div class="mainContent">
+	    <main class="mainContent">
 			<h1>{{ page.title }}</h1>
 	        {{ content }}
-	    </div>
+	    </main>
 		{% include signUpHero.html layout=page.layout %}
-
-		<!-- {% include nowRead.html %} -->
-
 		{% include footer.html %}
 	</body>
 </html>

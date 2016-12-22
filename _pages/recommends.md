@@ -7,23 +7,22 @@ permalink: /recommends/
 
 # Recommendations
 
-On this page I recommend the very best and timeless articles, books and videos related to User Experience, Business and Front-end Web development.
+## Books
 
-## People / Process / Thinking / Attitude / Team / Business
-
+* [Resilient Web Design](http://resilientwebdesign.com)
+* [Inclusive Design Patterns](https://www.smashingmagazine.com/inclusive-design-patterns)
+* [Don't Make Me Think](http://www.amazon.com/gp/product/0321965515/)
 * [Essentialism: The Disciplined Pursuit of Less](http://gregmckeown.com/essentialism-the-disciplined-pursuit-of-less/)
 * [Start With Why](https://www.startwithwhy.com/)
+* [Rework](https://37signals.com/rework)
 
-## User Experience
+## User Experience articles
 
 * [The Hamburger doesn't work](http://deep.design/the-hamburger-menu/)
-* [Triage](https://medium.com/@tyrale/ux-triage-what-i-have-learned-performing-ux-audits-around-the-globe-250266ac95a5)
-* [4 Invisible User Experiences You Never Knew About](https://medium.com/hackerpreneur-magazine/4-invisible-user-experiences-you-d13cc9c3c7ab)
-* [Don't Make Me Think](http://www.amazon.com/gp/product/0321965515/ref=as_li_qf_sp_asin_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=0321965515&linkCode=as2&tag=advancedcommonse)
 * [Fixed positioning is a nightmare](http://bradfrost.com/blog/mobile/fixed-position/)
 * [Death to bullshit](http://deathtobullshit.com)
 
-## Front-end development
+## Front-end articles
 
 * [Introducing awfulness.js](https://tommorris.org/posts/2547") by Tom Morris
 * [Cross browser widgets](http://peter.michaux.ca/articles/cross-browser-widgets) by Peter Michaux
@@ -34,7 +33,7 @@ On this page I recommend the very best and timeless articles, books and videos r
 * [What's wrong with extending the DOM?](http://perfectionkills.com/whats-wrong-with-extending-the-dom/) by Kangax
 * [Everyone has Javascript right?](http://kryogenix.org/code/browser/everyonehasjs.html)
 
-## David Marks Progressive Enhancement (Cross-browser Scripting) articles
+## Progressive Enhancement Primers
 
 * [Attaching and detaching event listeners](https://groups.google.com/group/comp.lang.javascript/browse_thread/thread/b94b12547ed572f8?hl=en&noredirect=true)
 * [The load problem and related matters](https://groups.google.com/group/comp.lang.javascript/browse_thread/thread/6d5575fd79d1169d?hl=en&noredirect=true)
