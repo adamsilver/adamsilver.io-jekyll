@@ -3,7 +3,7 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-12-18T13:29:25+00:00</updated>
+	<updated>2016-12-23T07:57:48+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -123,7 +123,7 @@ day&lt;/a&gt;.&lt;/p&gt;
 			<link href="http://adamsilver.io/articles/semantic-class-names-are-you-being-too-generic-or-too-specific/"/>
 			<updated>2016-10-31T09:00:01+00:00</updated>
 			<id>http://adamsilver.io/articles/semantic-class-names-are-you-being-too-generic-or-too-specific</id>
-			<content type="html">&lt;p&gt;Even if you’re completely and utterly sold on the &lt;a href=&quot;http://maintainablecss.com/chapters/semantics/&quot;&gt;rational behind semantic class names&lt;/a&gt;; even if you avoid stylistic and behavioural class names altogether; choosing a good class name for your HTML elements is hard.&lt;/p&gt;
+			<content type="html">&lt;p&gt;Even if you’re completely sold on &lt;a href=&quot;http://maintainablecss.com/chapters/semantics/&quot;&gt;semantic class names&lt;/a&gt; and avoid stylistic and behavioural class names altogether, choosing a good class name is hard.&lt;/p&gt;
 
 &lt;p&gt;The problem boils down to naming your classes either too generically or too specifically. Both of which have pros and cons. But I like to think we can choose a class name without any cons. Let’s see.&lt;/p&gt;
 
