@@ -3,7 +3,7 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-12-23T07:57:48+00:00</updated>
+	<updated>2016-12-23T08:03:44+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -646,7 +646,7 @@ labels&lt;/a&gt;.&lt;/p&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;Accommodating labels into a visual design can be challenging but &lt;a href=&quot;https://medium.com/simple-human/the-design-challenge-6b2d5346da7a&quot;&gt;shying away from the challenge&lt;/a&gt; is not the answer. Embrace the challenge, don’t over simplify. And of course, &lt;strong&gt;always use a label.&lt;/strong&gt;&lt;/p&gt;
 </content>
@@ -778,7 +778,7 @@ equivalent of a blank box. Labels are &lt;em&gt;always&lt;/em&gt; read out.&lt;/
 
 &lt;p&gt;Each of the problems discussed above cause friction for people trying to fill in a form — the sort of friction that drains peoples energy — the sort of friction that a great user experience strives to eliminate.&lt;/p&gt;
 
-&lt;p&gt;If you’re trying to help the user, the best place to start is to &lt;a href=&quot;/articles/always-use-label/&quot;&gt;always include a clear, always-visible label&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you’re trying to help the user, the best place to start is to &lt;a href=&quot;/articles/always-use-a-label/&quot;&gt;always include a clear, always-visible label&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;On occasion, a placeholder — in &lt;em&gt;addition&lt;/em&gt; to label — &lt;em&gt;might&lt;/em&gt; be helpful, but use them judiciously and if in doubt, test with different people, under
 different circumstances and different browsers.&lt;/p&gt;
