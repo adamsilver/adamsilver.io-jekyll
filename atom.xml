@@ -3,7 +3,7 @@
 	<title>Adam Silver, specialising in UX, Front-end Engineering and Strategy, London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-12-23T10:21:54+00:00</updated>
+	<updated>2016-12-23T15:12:31+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -1117,16 +1117,20 @@ space&lt;/a&gt;.&lt;/p&gt;
 			<link href="http://adamsilver.io/articles/embracing-simplicity/"/>
 			<updated>2016-03-06T09:00:01+00:00</updated>
 			<id>http://adamsilver.io/articles/embracing-simplicity</id>
-			<content type="html">&lt;div class=&quot;image&quot;&gt;
-	&lt;figure&gt;
-		&lt;img src=&quot;http://adamsilver.io/assets/img/enhanceconf.jpg&quot; alt=&quot;Enhanceconf Q&amp;amp;A&quot; width=&quot;100%&quot; /&gt;
-		&lt;figcaption&gt;Photo by &lt;a href=&quot;https://www.flickr.com/photos/psd/&quot;&gt;Paul Downey&lt;/a&gt;&lt;/figcaption&gt;
-	&lt;/figure&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;em&gt;I had the honour of speaking at &lt;a href=&quot;http://enhanceconf.com/&quot;&gt;Enhanceconf&lt;/a&gt; 2016 — a conference dedicated to Progressive Enhancement. It was a pleasure speaking about a subject close to my heart and I was really chuffed with peoples feedback. Here are my &lt;a href=&quot;https://speakerdeck.com/adamsilver/embracing-simplicity&quot;&gt;slides&lt;/a&gt; and below is the video along with the transcript:&lt;/em&gt;&lt;/p&gt;
+			<content type="html">&lt;p&gt;This is the talk I gave at &lt;a href=&quot;http://enhanceconf.com/&quot;&gt;Enhanceconf&lt;/a&gt; 2016, a conference dedicated to Progressive Enhancement.&lt;/p&gt;
 
 &lt;iframe width=&quot;100%&quot; height=&quot;415&quot; src=&quot;https://www.youtube.com/embed/UlzG6-fI00g&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;!-- &lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/enhanceconf.jpg&quot; alt=&quot;Enhanceconf Q&amp;amp;A&quot; width=&quot;100%&quot;&gt;
+		&lt;figcaption&gt;Photo by &lt;a href=&quot;https://www.flickr.com/photos/psd/&quot;&gt;Paul Downey&lt;/a&gt;&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt; --&gt;
+
+&lt;p&gt;You can view my &lt;a href=&quot;https://speakerdeck.com/adamsilver/embracing-simplicity&quot;&gt;presentation slides&lt;/a&gt; and the transcript for the video is below.&lt;/p&gt;
+
+&lt;h2 id=&quot;transcript&quot;&gt;Transcript&lt;/h2&gt;
 
 &lt;p&gt;I want to start by using our imagination.&lt;/p&gt;
 
