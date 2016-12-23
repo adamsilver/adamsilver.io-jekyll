@@ -133,6 +133,7 @@ hr {
 	font-size: 3.1em;
 	line-height: 1.25em;
 	font-family: 'Open sans';
+	letter-spacing: -0.01em;
 }
 
 @media(min-width: 600px) {
@@ -145,7 +146,7 @@ hr {
 	margin: 0 20px 10px;
 	font-size: 2.3em;
 	line-height: 1.5;
-	letter-spacing: 0.01em;
+	letter-spacing: -0.01em;
 	font-family: 'Open sans';
 }
 
@@ -322,6 +323,7 @@ hr {
 	letter-spacing: 0.01em;
 	text-transform: uppercase;
 	color: #0074D9;
+	font-family: 'Open sans';
 }
 
 @media(min-width: 600px) {
@@ -450,6 +452,7 @@ hr {
     margin-right: 7px;
     font-size: 1.7em;
     margin-bottom: 10px;
+    font-family: 'Open sans';
 }
 
 .nav ul li:first-child {
