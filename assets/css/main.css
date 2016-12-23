@@ -163,7 +163,7 @@ hr {
 	font-size: 1.6em;
 	line-height: 1.4;
 	text-transform: uppercase;
-	letter-spacing: 0.03em;
+	letter-spacing: 0.02em;
 	font-family: 'Open sans';
 }
 
@@ -392,7 +392,7 @@ hr {
 	margin: 0 20px;
 	font-size: 1.8em;
 	line-height: 1.5;
-	letter-spacing: 0.03em;
+	letter-spacing: -0.01em;
 }
 
 @media(min-width: 600px) {

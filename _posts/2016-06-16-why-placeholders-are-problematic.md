@@ -126,7 +126,7 @@ On the other hand, if the placeholder is used in addition to a label, and doesn�
 
 Each of the problems discussed above cause friction for people trying to fill in a form — the sort of friction that drains peoples energy — the sort of friction that a great user experience strives to eliminate.
 
-If you’re trying to help the user, the best place to start is to [always include a clear, always-visible label](/articles/always-use-label/).
+If you’re trying to help the user, the best place to start is to [always include a clear, always-visible label](/articles/always-use-a-label/).
 
 On occasion, a placeholder — in *addition* to label — *might* be helpful, but use them judiciously and if in doubt, test with different people, under
 different circumstances and different browsers.

@@ -84,6 +84,6 @@ labels](/articles/why-placeholders-are-problematic).
 	</figure>
 </div>
 
-### Summary
+## Summary
 
 Accommodating labels into a visual design can be challenging but [shying away from the challenge](https://medium.com/simple-human/the-design-challenge-6b2d5346da7a) is not the answer. Embrace the challenge, don’t over simplify. And of course, **always use a label.**
