@@ -6,16 +6,20 @@ categories: ux design webdevelopment
 description: Are you sure that all the effort you put into design is adding value to the experience? Can we just provide a core experience without the enhancement and end up with something better? Find out in my talk Embracing Simplicity.
 ---
 
-<div class="image">
+This is the talk I gave at [Enhanceconf](http://enhanceconf.com/) 2016, a conference dedicated to Progressive Enhancement.
+
+<iframe width="100%" height="415" src="https://www.youtube.com/embed/UlzG6-fI00g" frameborder="0" allowfullscreen></iframe>
+
+<!-- <div class="image">
 	<figure>
 		<img src="{{ site.url }}/assets/img/enhanceconf.jpg" alt="Enhanceconf Q&amp;A" width="100%">
 		<figcaption>Photo by <a href="https://www.flickr.com/photos/psd/">Paul Downey</a></figcaption>
 	</figure>
-</div>
+</div> -->
 
-*I had the honour of speaking at [Enhanceconf](http://enhanceconf.com/) 2016 &mdash; a conference dedicated to Progressive Enhancement. It was a pleasure speaking about a subject close to my heart and I was really chuffed with peoples feedback. Here are my [slides](https://speakerdeck.com/adamsilver/embracing-simplicity) and below is the video along with the transcript:*
+You can view my [presentation slides](https://speakerdeck.com/adamsilver/embracing-simplicity) and the transcript for the video is below.
 
-<iframe width="100%" height="415" src="https://www.youtube.com/embed/UlzG6-fI00g" frameborder="0" allowfullscreen></iframe>
+## Transcript
 
 I want to start by using our imagination.
 
