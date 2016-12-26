@@ -6,11 +6,9 @@ categories: forms a11y ux
 description: Forms with multiple submit buttons have both UX problems and technical problems all of which is discussed in this article.
 ---
 
-Forms with multiple submit buttons are problematic for people who use a keyboard. The problem occurs due to the way forms work with regards to submission.
+Forms with multiple submit buttons are problematic for keyboard users because of the way submission works. When a user fills out a form, they can submit that form by pressing enter, even if the focus is within a field.
 
-When a user fills out a form, they can submit that form at any time by pressing enter, even if they are focussed on a text field. When there are multiple buttons, the form submits as if the first button was pressed.
-
-This isn't always desirable because the first button may not be considered the primary action of the form. For example, you might have an address form with a postcode look-up.
+When there are multiple buttons, the form submits as if the *first* button was pressed. This is problematic because if there are multiple buttons it's impossible to know which of them the user intends to press. For example, you might have an address form with a postcode look-up.
 
 <div class="image" style="max-width: 320px;margin: 0 auto;">
 	<figure>
@@ -18,13 +16,21 @@ This isn't always desirable because the first button may not be considered the p
 	</figure>
 </div>
 
-Pressing enter will always perform a postcode look-up. That's because that button appears before the primary button.
+Pressing enter will always perform a postcode look-up because it's first in the document flow.
 
-Your best option is to split up the forms. In the above example, have one that does the postcode look-up. And have another that saves the address.
+## Split up the forms
 
-Not only does this help keyboard users, but it provides a better all-round experience. This is because each page or feature has a dedicated focus which reduces the cognitive burden on users.
+The best course of action would be to split your forms so that there is only one submit button. Then there is no ambiguity in the act of submission.
 
-If you *really* can't do that, then you'll have to choose a primary action. This isn't always easy, because some forms have two buttons with similar weighting.
+In the example above, one form would perform the look-up. Another would save the users address.
+
+This pattern is not only beneficial to keyboard users. This pattern is inclusive to all types of users. It's a better experience because a big task is broken down into two. This reduces the cognitive load on users.
+
+If you can't split your forms up then there is another option.
+
+## Choose a primary button
+
+If you *really* can't split up your forms, then you'll have to choose a primary action. This isn't always easy, because some forms have two buttons with similar weighting.
 
 If the form's primary action doesn't come first, then you'll have to modify the design which isn't always possible. Or you'll need to add a duplicate button to the top of the form and hide it visually with CSS.
 

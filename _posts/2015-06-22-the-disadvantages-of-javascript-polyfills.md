@@ -8,7 +8,7 @@ description: Javascript polyfills are ever-present in the front end industry, bu
 
 A polyfill, also known as a shim, is a user defined implementation of an API that a developer expects a browser to provide natively, normalising browser differences.
 
-As a huge proponent of the outside-in approach to development, I can see the lure to try to develop web applications as if all browsers are the same.
+As a huge proponent of the [outside-in approach to development](/articles/developing-templates-using-an-outside-in-approach), I can see the lure to try to develop web applications as if all browsers are the same.
 
 However, this article discusses the problems you face when attempting to tame browsers in this way, which ultimately results in unreliable Javascript, unreliable web pages and of course, unhappy *users*.
 
