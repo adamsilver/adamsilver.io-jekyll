@@ -43,7 +43,7 @@ Much like Accessibility, it is imperative Front-end developers understand how to
 
 ## Front-end performance
 
-It is important Front-end developers understand various facets of performance ensuring that web pages are served and [run as fast as possible without degrading the UX](/articles/misusing-ajax-for-personalisation). This includes a good knowledge of browser caching, compression, bundling and runtime performance.
+It is important Front-end developers understand various facets of performance ensuring that web pages are served and [run as fast as possible without degrading the UX](/articles/dont-use-ajax-for-personalised-content). This includes a good knowledge of browser caching, compression, bundling and runtime performance.
 
 ## Browser compatibility
 
