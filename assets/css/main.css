@@ -526,17 +526,13 @@ hr {
 }
 
 .footer p {
-	font-size: 1.7em;
+	font-size: 1.5em;
+	line-height: 1.5;
 	max-width: 660px;
 	margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
-}
-
-.footer a {
-	display: inline-block;
-	margin-right: 7px;
-	margin-left: 7px;
+    font-family: 'Open sans';
 }
 
 /**********************************************************
