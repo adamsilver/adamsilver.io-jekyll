@@ -8,7 +8,7 @@ description: SPAs are full of pitfalls. There are many reasons why.
 
 Single Page Applications (SPAs) have become extremely popular on the web, because they are *supposed* to [provide a more fluid user experience](http://en.wikipedia.org/wiki/Single-page_application). However, there are many UX and technical problems that arise from architecting websites this way. Before getting to them, let's first discuss the difference between an SPA and a traditional multi-page website (MPW).
 
-## What's the difference between a Single Page App and an Multi-page Website?
+## Single Page App versus Multi-page website
 
 Whilst it's common to associate MVC, MVVM, XHR, DOM manipulation (and more) with an SPA, this article doesn't address them because they could *also* be used in an MPW.
 
