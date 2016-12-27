@@ -6,19 +6,19 @@ categories: ux design
 description: Designing true to the platform makes for better experiences. But learn why designers are prone to dishonest design.
 ---
 
-I have been working on websites for over half my life now. During this time I've witnessed designers, developers and businesses designing dishonestly over and over again.
+I've been working on websites for more than half my life. During this time I've witnessed designers, developers and businesses designing dishonestly over and over again.
 
-There are many aspects of dishonest design. This article hones in on just one of these &mdash; the aspect that ignores the platform you are designing for. In the context of the web, I call it &ldquo;bending the web&rdquo;.
+There are many aspects of dishonest design. This article hones in on just one of these. The aspect that ignores the platform you are designing for. In the context of the web, I call it &ldquo;bending the web&rdquo;.
 
 I must admit, I have been known to bend it on more than a few occasions myself over the course of my career. I think that's okay though because only by experiencing or reading about the mistakes we make, can we avoid them in the future. Here are some examples of how I've bent the web:
 
 1. I used tables for layout.
-2. I have given submit buttons the same &ldquo;hand&rdquo; cursor as a link.
-3. I created a custom file input so that it looked &ldquo;nicer&rdquo;.
-4. I have hidden labels to build a "cleaner" UI.
-5. I have used a select box for navigation.
+2. I've given [submit buttons the hand cursor](/articles/buttons-shouldnt-have-a-hand-cursor/).
+3. I've made a custom looking file input to make it look "nicer".
+4. I have hidden labels to "declutter" UI.
+5. I have used a [select box for navigation](/articles/misusing-the-select-control).
 
-&ldquo;A Dao of Web Design&rdquo; written by John Allsopp over one and half decades ago, gives us some timeless insights that tell us why this happens and continues to happen today.
+[A Dao of Web Design](http://alistapart.com/article/dao) written by John Allsopp over one and half decades ago, gives us some timeless insights that tell us why this happens and continues to happen today.
 
 > &ldquo;If you've never watched early television programs, it's instructive viewing. Television was at that time often referred to as &ldquo;radio with pictures,&rdquo; and that's a pretty accurate description. Much of television followed the format of popular radio at that time.&rdquo;
 
@@ -43,7 +43,7 @@ Do you sometimes design without a thought for how the browser does it?
 
 Sometimes a solution works well for a mobile app, but works terribly on the web. I think [infinite scroll](/articles/why-infinite-scrolling-is-probably-a-bad-idea/) is an example of this.
 
-Have you ever used, designed or built a drop down select menu without a submit button? I have. When you select an option, the page refreshes and this simple bending comes with a host of [problems for the user](/articles/misusing-the-select-control/). The point is, a select box is meant to be used for input, not for navigation; that is what links are for.
+Have you ever used, designed or built a drop down select menu without a submit button? I have. When you select an option, the page refreshes and this simple bending comes with a host of problems for the user. The point is, a select box is meant to be used for input, not for navigation; that is what links are for.
 
 Another useful thing about the web, is that browsers and devices get better all the time. When we design honestly, the experience gets better and better all by itself with zero effort from us &mdash; for proof just interact with a form on your phone and notice how it helps you do that.
 
