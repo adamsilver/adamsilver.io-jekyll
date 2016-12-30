@@ -9,7 +9,7 @@ You might be tempted to use placeholders to store hints. Or maybe as a replaceme
 
 ## 1. It's easy to forget
 
-When the user starts typing the placeholder disappears. This makes it easy to forget. The hint is there to guide the user and so should always be available.
+When the user starts typing the placeholder disappears. This makes it easy to forget. The hint is there to guide the user and so it should always be available for reference.
 
 <div class="image">
 	<figure>
@@ -21,6 +21,13 @@ When the user starts typing the placeholder disappears. This makes it easy to fo
 ## 2. Lack of browser support
 
 [Most browsers support the placeholder but some don't](http://caniuse.com/#feat=input-placeholder). For people using an unsupported browser, the placeholder is completely unavailable creating a broken experience.
+
+<div class="image">
+	<figure>
+		<img src="{{ site.url }}/assets/img/placeholders/support.png" alt="Broken for browsers lacking support" width="100%">
+		<figcaption>Broken experience for browsers lacking support</figcaption>
+	</figure>
+</div>
 
 ## 3. Pre-populated forms are hard to use
 
