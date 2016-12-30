@@ -116,6 +116,6 @@ If the placeholder is longer than the size of the field, it will be cut off. Thi
 
 People often ask me if it's okay to use a placeholder in addition to a label. I suggest that if the hint is valuable to the user experience, we should make it easy to read. Putting the hint inside a placeholder doesn't achieve this.
 
-On the other hand, if you're using it as an enhancement, it suggests the hint isn't particularly important. In which case don't bother including at all. Not every field needs a hint.
+On the other hand, if you're using it as an enhancement, it suggests the hint isn't particularly important. In which case don't bother including it at all. Not every field needs a hint.
 
 In any case, these problems are easy to avoid. [Always use a label](/articles/always-use-a-label/). And if necessary, include a hint outside the field too.
