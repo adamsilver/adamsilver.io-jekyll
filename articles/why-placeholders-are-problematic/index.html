@@ -106,11 +106,13 @@
 </nav>
 	    <main class="mainContent">
 			<h1>Why placeholders are problematic</h1>
-	        <p>You might be tempted to use placeholders to store hints. Or maybe as a replacement for labels. Either way, there are many reasons why this is problematic for users.</p>
+	        <p>Since placeholders came along, designers have adopted them as means of storing hints. They’re appeal lies in their minimal aesthetic. Unfortunatley, <a href="http://uxmyths.com/post/115783813605/myth-34-simple-minimal">minimal does not always mean simple</a>.</p>
+
+<p>Some designers have gone one step further, and replaced labels with placeholders. Either way, placeholders are a problematic for many reasons. Here’s why:</p>
 
 <h2 id="its-easy-to-forget">1. It’s easy to forget</h2>
 
-<p>When the user starts typing the placeholder disappears. This makes it easy to forget. The hint is there to guide the user and so it should always be available for reference.</p>
+<p>The placeholder disappears when the user types. Once it’s gone it’s hard to remember.</p>
 
 <div class="image">
 	<figure>
@@ -121,7 +123,7 @@
 
 <h2 id="lack-of-browser-support">2. Lack of browser support</h2>
 
-<p><a href="http://caniuse.com/#feat=input-placeholder">Most browsers support the placeholder but some don’t</a>. For people using an unsupported browser, the placeholder is completely unavailable creating a broken experience.</p>
+<p><a href="http://caniuse.com/#feat=input-placeholder">Not all browsers support the placeholder</a>. In which case, the user will suffer a broken experience.</p>
 
 <div class="image">
 	<figure>
@@ -130,9 +132,9 @@
 	</figure>
 </div>
 
-<h2 id="pre-populated-forms-are-hard-to-use">3. Pre-populated forms are hard to use</h2>
+<h2 id="populated-values-are-hard-understand">3. Populated values are hard understand</h2>
 
-<p>When a form is pre-populated, it’s very difficult to understand. Even if you have label, the hint would still be unavailable.</p>
+<p>Whilst a missing label is fatal, a missing hint is still problematic. The hint is still valuable to a user when editing a field.</p>
 
 <div class="image">
 	<figure>
@@ -143,7 +145,7 @@
 
 <h2 id="reviewing-a-long-form-is-difficult">4. Reviewing a long form is difficult</h2>
 
-<p>In order to verify they have entered the correct values, a user will need to remember what the hints were in the first place. This is because the  value has replaced the hint. This is an unnecessary burden on the user.</p>
+<p>A user will need to memorise all the hints in order to check their form entries before submission. This is because as each form field is filled out, the hint disappears.</p>
 
 <h2 id="errors-are-hard-to-fix">5. Errors are hard to fix</h2>
 
@@ -156,11 +158,11 @@
 	</figure>
 </div>
 
-<p>You might say that you can give the field context by having a more verbose error message e.g. “Expiry date must only contain numbers” instead of “Must be a number”. But this only partially solves the problem.</p>
+<p>You could write a verbose error message. For example “Expiry date must only contain numbers” instead of “Must be a number”. But this doesn’t entirely solve the problem.</p>
 
 <h2 id="some-browsers-hide-the-placeholder-on-focus">6. Some browsers hide the placeholder on focus</h2>
 
-<p>Some browsers hide the placeholder when the user focuses, instead of when they start typing. This means the user has to read ahead of the current field to read the hint. Another unnecessary burden on the user.</p>
+<p>Some browsers hide the placeholder when the user focuses, instead of when they start typing. This means the user has to read ahead of the current field to read the hint.</p>
 
 <div class="image">
 	<figure>
@@ -171,7 +173,7 @@
 
 <h2 id="placeholder-text-may-be-mistaken-for-a-value">7. Placeholder text may be mistaken for a value</h2>
 
-<p>People with a good eye may notice that a placeholder has a lower contrast than a real value. But many people won’t notice it and so they will skip the field thinking it’s already filled in. Then when the user submits the form they will be shown an error.</p>
+<p>People that don’t notice the subtle difference in contrast will skip the field mistaking it for a value. When the user submits the form they will be frustratingly shown an error.</p>
 
 <div class="image">
 	<figure>
@@ -182,16 +184,16 @@
 
 <h2 id="they-have-insufficient-contrast">8. They have insufficient contrast</h2>
 
-<p>Placeholder text is low contrast. So low that people with vision impairments will struggle to read it.</p>
+<p>Placeholder text has a lower contrast to help users realise it’s not a value. Some people will struggle to read the text due to the lack of contrast.</p>
 
 <h2 id="screen-readers-may-not-announce-them">9. Screen readers may not announce them</h2>
 
 <p>Placeholders may not be read out by screen readers which is the visual
-equivalent of a blank box. Labels are <em>always</em> read out.</p>
+equivalent of a blank box.</p>
 
 <h2 id="the-hit-area-is-reduced">10. The hit area is reduced</h2>
 
-<p>Clicking or tapping a label puts the field into focus. This is particularly helpful for people with fine motor skill impairments. If there is a missing label it’s harder to select the field.</p>
+<p>Clicking a label moves the focus to the field. This is helpful to everyone but even moreso to people with fine motor skill impairments. Fields with the label and hint outside, increases the size of the hit area.</p>
 
 <div class="image">
 	<figure>
@@ -202,24 +204,22 @@ equivalent of a blank box. Labels are <em>always</em> read out.</p>
 
 <h2 id="placeholder-text-can-be-cut-off">11. Placeholder text can be cut off</h2>
 
-<p>If the placeholder text is longer than the size of the field, it’s cut off. So you’re constrained as to the size of the hint you put in there. Text outside of a field doesn’t suffer from this problem.</p>
+<p>If the placeholder is longer than the size of the field, it will be cut off. This means you’re unnecessarily constrained to what information you can put inside it.</p>
 
 <div class="image">
 	<figure>
 		<img src="http://adamsilver.io/assets/img/placeholders/11.png" alt="Placeholder copy gets cropped." width="100%" />
-		<figcaption>Long text gets cropped.</figcaption>
+		<figcaption>Long text gets cropped</figcaption>
 	</figure>
 </div>
 
-<h2 id="is-it-okay-to-use-them-in-addition-to-a-label">Is it okay to use them in addition to a label?</h2>
-
-<p>No. If a hint is valuable to the user, then why make it hard to reference? If the hint isn’t vital to the user, then why bother including it all?</p>
-
 <h2 id="summary">Summary</h2>
 
-<p>All of these problems cause friction for real people trying to fill out a form. The sort of friction we can and should eliminate.</p>
+<p>People often ask me if it’s okay to use a placeholder in addition to a label. I suggest that if the hint is valuable to the user experience, we should make it easy to read. Putting the hint inside a placeholder doesn’t achieve this.</p>
 
-<p>If you’re trying to help the user, <a href="/articles/always-use-a-label/">always include a clear, always-visible label</a>. If the field benefits from an additional hint, include that outside the field too.</p>
+<p>On the other hand, if you’re using it as an enhancement, it suggests the hint isn’t particularly important. In which case don’t bother including at all. Not every field needs a hint.</p>
+
+<p>In any case, these problems are easy to avoid. <a href="/articles/always-use-a-label/">Always use a label</a>. And if necessary, include a hint outside the field too.</p>
 
 	    </main>
 		<div class="signUpHero  signUpHero-isArticle ">
