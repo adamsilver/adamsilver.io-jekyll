@@ -106,7 +106,7 @@
 </nav>
 	    <main class="mainContent">
 			<h1>Misusing the select control</h1>
-	        <p>You have most likely seen and used a select control <em>without</em> a submit button. The rationale behind omitting the submit button is normally to declutter the UI and reduce clicks—the latter of which is a common <a href="http://idyeah.com/blog/2012/06/stop-counting-clicks/">UX fallacy</a>. However, this is detrimental to the User Experience.</p>
+	        <p>Designers sometimes omit buttons to declutter the UI and <a href="http://idyeah.com/blog/2012/06/stop-counting-clicks/">reduce clicks</a>, both of which are UX fallacies. This introduces several usability problems which I’ll discuss in this article.</p>
 
 <div class="image" style="max-width: 320px;margin: 0 auto;">
 	<figure>
@@ -114,6 +114,34 @@
 		<figcaption>Sort by select box missing a submit button</figcaption>
 	</figure>
 </div>
+
+<h2 id="keyboard-users-find-them-difficult">1. Keyboard users find them difficult</h2>
+
+<p>When foussed on the select menu, pressing up or down will select the options. In the following video I’m unable to select the 3rd option which creates a broken experience.</p>
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/rnKDDSo9Omk" frameborder="0" allowfullscreen=""></iframe>
+
+<p>If you want to check this out for yourself, visit <a href="http://html.cita.illinois.edu/script/onchange/onchange-example.php">the demo</a> in an offending browser, such as Chrome (Windows), Opera (Windows), IE6, IE7, IE8 and IE9.</p>
+
+<h2 id="screen-reader-users-find-them-difficult">2. Screen reader users find them difficult</h2>
+
+<p>Sarah Miller found that dropdown lists without buttons were confusing because, while the user had to inspect every item in the list, the action of reading an item meant that it was selected so the user would never get past the first item in the list. Again a broken experience.</p>
+
+<h2 id="select-menus-arent-for-navigation">Select menus aren’t for navigation</h2>
+
+<p>We should use links for navigation and forms to submit information. The problem is that it’s a little bit of a grey area.</p>
+
+<p>This is because we might use forms to filter or sort search results for example. The user has selected an option, much like they might select a link. But that’s the end of the similarity.</p>
+
+<p>If you’re going to use a form, then you must include a submit button.</p>
+
+<ol>
+  <li>Select menus are to help users fill in data. Not navigate. Grey area.</li>
+  <li>Selection and submission should be separate.</li>
+  <li>This behaviour relies on Javascript</li>
+  <li>Screen readers have trouble with them</li>
+  <li>Keyboard users have trouble with them</li>
+</ol>
 
 <h2 id="links-are-for-navigation">Links are for navigation.</h2>
 
@@ -133,18 +161,6 @@
 <p>Larry Marinem conducted usability tests and states that sometimes designers try to “over-automate” by reducing combining selection and submission and that dropdown lists are expected to display the selection, not go somewhere.</p>
 
 <p>Users are prone to mis-selecting an option so when it launches them off somewhere else, this can be really disorientating. He added that reducing the number of clicks does not make a site more usable but giving the users appropriate control of their navigation does.</p>
-
-<h2 id="keyboard-users-find-them-troublesome">Keyboard users find them troublesome.</h2>
-
-<p>In the case of keyboard users, tabbing to a select menu and pressing up or down will select different options. In the following video, I am failing in my attempt to select the 3rd <code>option</code> making the experience very frustrating:</p>
-
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/rnKDDSo9Omk" frameborder="0" allowfullscreen=""></iframe>
-
-<p><em>Note: Visit <a href="http://html.cita.illinois.edu/script/onchange/onchange-example.php">the demo</a> in an offending browser, such as Chrome (Windows), Opera (Windows), IE6, IE7, IE8 and IE9—if you come across another offending browser, do let me know</em>.</p>
-
-<h2 id="what-about-screen-readers">What about screen readers?</h2>
-
-<p>Sarah Miller found that dropdown lists without buttons were confusing because, while the user had to inspect every item in the list, the action of reading an item meant that it was selected so the user would never get past the first item in the list, again very frustrating.</p>
 
 <h2 id="what-are-my-options">What are my options?</h2>
 

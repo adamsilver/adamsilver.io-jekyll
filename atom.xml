@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-12-27T08:30:04+00:00</updated>
+	<updated>2016-12-30T15:09:05+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -657,131 +657,113 @@ labels&lt;/a&gt;.&lt;/p&gt;
 			<link href="http://adamsilver.io/articles/why-placeholders-are-problematic/"/>
 			<updated>2016-06-16T10:00:01+01:00</updated>
 			<id>http://adamsilver.io/articles/why-placeholders-are-problematic</id>
-			<content type="html">&lt;p&gt;When browsers implemented the placeholder, designers rapidly adopted them for hints and instructions to help users fill out forms. Whilst this sounds good, it’s actually problematic due to the way the placeholder behaves.&lt;/p&gt;
+			<content type="html">&lt;p&gt;You might be tempted to use placeholders to store hints. Or maybe as a replacement for labels. Either way, there are many reasons why this is problematic for users.&lt;/p&gt;
 
-&lt;p&gt;There’s effectively one ‘space’ containing two values: the hint and the value. It comes down to the fact that the valuable information put in placeholders is not always available to users when they need it. And the problem is exacerbated when placeholders are used as a replacement for labels.&lt;/p&gt;
+&lt;h2 id=&quot;its-easy-to-forget&quot;&gt;1. It’s easy to forget&lt;/h2&gt;
 
-&lt;p&gt;Here’s why the placeholder is problematic:&lt;/p&gt;
-
-&lt;h2 id=&quot;disappearing-placeholder-text-is-easy-to-forget&quot;&gt;1. Disappearing placeholder text is easy to forget&lt;/h2&gt;
-
-&lt;p&gt;Because the placeholder disappears as the user types, they can easily forget the requirements of the field. This is especially the case with more complex fields.&lt;/p&gt;
-
-&lt;p&gt;For a login form, you may be tempted to omit labels because you think the fields are obvious, but why risk making it hard for people to use, in the name of &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;minimalism&lt;/a&gt;? The aim is to make something as easy as possible.&lt;/p&gt;
-
-&lt;h2 id=&quot;not-all-browsers-support-placeholders&quot;&gt;2. Not all browsers support placeholders&lt;/h2&gt;
-
-&lt;p&gt;Whilst the majority of browsers support placeholders, some people use browsers that don’t. The &lt;a href=&quot;https://adactio.com/journal/10665&quot;&gt;web is for everyone&lt;/a&gt; and we shouldn’t forget that. People using a browser without placeholder support, will see a blank box.&lt;/p&gt;
+&lt;p&gt;When the user starts typing the placeholder disappears. This makes it easy to forget. The hint is there to guide the user and so should always be available.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/2.jpeg&quot; alt=&quot;Caniuse.com Placeholder support&quot; width=&quot;100%&quot; /&gt;
-		&lt;figcaption&gt;Caniuse.com Placeholder support&lt;/figcaption&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/forget.png&quot; alt=&quot;Placeholder disappears when typing&quot; width=&quot;100%&quot; /&gt;
+		&lt;figcaption&gt;Placeholder text disappears as you type&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;pre-populated-values-are-hard-to-understand&quot;&gt;3. Pre-populated values are hard to understand&lt;/h2&gt;
+&lt;h2 id=&quot;lack-of-browser-support&quot;&gt;2. Lack of browser support&lt;/h2&gt;
 
-&lt;p&gt;When a form is pre-populated—as is the case with an &lt;em&gt;edit details&lt;/em&gt; form— it’s very difficult to understand what the value means without a label. See the example below:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://caniuse.com/#feat=input-placeholder&quot;&gt;Most browsers support the placeholder but some don’t&lt;/a&gt;. For people using an unsupported browser, the placeholder is completely unavailable creating a broken experience.&lt;/p&gt;
+
+&lt;h2 id=&quot;pre-populated-forms-are-hard-to-use&quot;&gt;3. Pre-populated forms are hard to use&lt;/h2&gt;
+
+&lt;p&gt;When a form is pre-populated, it’s very difficult to understand. Even if you have label, the hint would still be unavailable.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/3.png&quot; alt=&quot;Pre-populated values without labels are hard to understand&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
-		&lt;figcaption&gt;Pre-populated values without labels are hard to understand&lt;/figcaption&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/populated.png&quot; alt=&quot;Populated field are hard to use&quot; width=&quot;100%&quot; /&gt;
+		&lt;figcaption&gt;Populated field are hard to use&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
 &lt;h2 id=&quot;reviewing-a-long-form-is-difficult&quot;&gt;4. Reviewing a long form is difficult&lt;/h2&gt;
 
-&lt;p&gt;If a user has filled in a long form and wants to go back to review what they entered, they’ll need to have remembered what each field wanted. Also, some browsers autocomplete entries incorrectly which can exacerbate the problem.&lt;/p&gt;
+&lt;p&gt;In order to verify they have entered the correct values, a user will need to remember what the hints were in the first place. This is because the  value has replaced the hint. This is an unnecessary burden on the user.&lt;/p&gt;
 
-&lt;h2 id=&quot;erroneous-fields-are-harder-to-fix&quot;&gt;5. Erroneous fields are harder to fix&lt;/h2&gt;
+&lt;h2 id=&quot;errors-are-hard-to-fix&quot;&gt;5. Errors are hard to fix&lt;/h2&gt;
 
-&lt;p&gt;A form containing errors is now harder to fix, because the information lacks
-context without labels. For example, see the field below:&lt;/p&gt;
-
-&lt;div class=&quot;image&quot;&gt;
-	&lt;figure&gt;
-		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/5.png&quot; alt=&quot;Error message lacks context when the label is missing.&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
-		&lt;figcaption&gt;Error message lacks context when the label is missing.&lt;/figcaption&gt;
-	&lt;/figure&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The error message explains that a number is required, but not the &lt;em&gt;type&lt;/em&gt; of number. In this case the error message needs to be unnecessarily verbose i.e. “&lt;em&gt;Expiry date must use numbers only&lt;/em&gt;”.&lt;/p&gt;
-
-&lt;p&gt;However, a field with a label doesn’t suffer from such problems:&lt;/p&gt;
+&lt;p&gt;Errors are hard to fix because the message and the value lack context. And the hint may contain information to help fix the error.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/5b.png&quot; alt=&quot;Error message with a label for context.&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
-		&lt;figcaption&gt;Error message with a label for context.&lt;/figcaption&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/2.png&quot; alt=&quot;Error message with a label for context.&quot; width=&quot;100%&quot; /&gt;
+		&lt;figcaption&gt;Different hint patterns when there are errors&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;some-browsers-will-remove-placeholder-text-on-focus&quot;&gt;6. Some browsers will remove placeholder text on focus&lt;/h2&gt;
+&lt;p&gt;You might say that you can give the field context by having a more verbose error message e.g. “Expiry date must only contain numbers” instead of “Must be a number”. But this only partially solves the problem.&lt;/p&gt;
 
-&lt;p&gt;When browsers first implemented placeholders, they would disappear as soon as the user focused on the control. This meant the user would have no time to read the instructions before typing. This resulted in users having to read &lt;em&gt;ahead&lt;/em&gt; of the currently focused input.&lt;/p&gt;
+&lt;h2 id=&quot;some-browsers-hide-the-placeholder-on-focus&quot;&gt;6. Some browsers hide the placeholder on focus&lt;/h2&gt;
 
-&lt;p&gt;Whilst most browsers only hide the placeholder when the user starts &lt;em&gt;typing&lt;/em&gt;, some browsers still have this original behaviour.&lt;/p&gt;
+&lt;p&gt;Some browsers hide the placeholder when the user focuses, instead of when they start typing. This means the user has to read ahead of the current field to read the hint. Another unnecessary burden on the user.&lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/disappearing.png&quot; alt=&quot;Placeholders disappear on focus&quot; width=&quot;100%&quot; /&gt;
+		&lt;figcaption&gt;Placeholders disappear on focus&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;placeholder-text-may-be-mistaken-for-a-value&quot;&gt;7. Placeholder text may be mistaken for a value&lt;/h2&gt;
 
-&lt;p&gt;People scan empty fields to know what they have missed, but the difference in placeholder contrast is so subtle that it can make a field &lt;em&gt;appear&lt;/em&gt; complete. This can result in a user skipping a required field, only to be shown an error later once they submit the form.&lt;/p&gt;
+&lt;p&gt;People with a good eye may notice that a placeholder has a lower contrast than a real value. But many people won’t notice it and so they will skip the field thinking it’s already filled in. Then when the user submits the form they will be shown an error.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/7.png&quot; alt=&quot;The difference between a placeholder and a value is subtle&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
-		&lt;figcaption&gt;The difference between a placeholder and a value is subtle&lt;/figcaption&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/empty.png&quot; alt=&quot;Placeholders mistaken for real values&quot; width=&quot;100%&quot; /&gt;
+		&lt;figcaption&gt;Placeholders might be mistaken for real values&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
 &lt;h2 id=&quot;they-have-insufficient-contrast&quot;&gt;8. They have insufficient contrast&lt;/h2&gt;
 
-&lt;p&gt;Placeholder copy is afforded by being slightly greyed out which is problematic for two reasons. First, it’s hard to notice the difference in colour. Second, the colours are of insufficient contrast making it hard to read for people with vision impairments.&lt;/p&gt;
+&lt;p&gt;Placeholder text is low contrast. So low that people with vision impairments will struggle to read it.&lt;/p&gt;
 
 &lt;h2 id=&quot;screen-readers-may-not-announce-them&quot;&gt;9. Screen readers may not announce them&lt;/h2&gt;
 
 &lt;p&gt;Placeholders may not be read out by screen readers which is the visual
 equivalent of a blank box. Labels are &lt;em&gt;always&lt;/em&gt; read out.&lt;/p&gt;
 
-&lt;h2 id=&quot;a-missing-label-reduces-the-size-of-the-hit-area&quot;&gt;10. A missing label reduces the size of the hit area&lt;/h2&gt;
+&lt;h2 id=&quot;the-hit-area-is-reduced&quot;&gt;10. The hit area is reduced&lt;/h2&gt;
 
-&lt;p&gt;This means that people with fine motor skill impairments will find it harder to apply focus to a field with their finger or mouse.&lt;/p&gt;
+&lt;p&gt;Clicking or tapping a label puts the field into focus. This is particularly helpful for people with fine motor skill impairments. If there is a missing label it’s harder to select the field.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/10.png&quot; alt=&quot;No label means a smaller hit area.&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/10.png&quot; alt=&quot;No label means a smaller hit area.&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;No label means a smaller hit area.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;placeholder-text-is-limited-to-the-size-of-the-field&quot;&gt;11. Placeholder text is limited to the size of the field&lt;/h2&gt;
+&lt;h2 id=&quot;placeholder-text-can-be-cut-off&quot;&gt;11. Placeholder text can be cut off&lt;/h2&gt;
 
-&lt;p&gt;Placeholder text is cut off if it goes beyond the size of the field so you’re constrained as to what kind of hint or instruction to put there. Labels don’t suffer from this problem.&lt;/p&gt;
+&lt;p&gt;If the placeholder text is longer than the size of the field, it’s cut off. So you’re constrained as to the size of the hint you put in there. Text outside of a field doesn’t suffer from this problem.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/11.png&quot; alt=&quot;Placeholder copy gets cropped.&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
-		&lt;figcaption&gt;Placeholder copy gets cropped.&lt;/figcaption&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/11.png&quot; alt=&quot;Placeholder copy gets cropped.&quot; width=&quot;100%&quot; /&gt;
+		&lt;figcaption&gt;Long text gets cropped.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;is-it-okay-if-theyre-used-in-addition-to-labels&quot;&gt;Is it okay if they’re used in addition to labels?&lt;/h2&gt;
+&lt;h2 id=&quot;is-it-okay-to-use-them-in-addition-to-a-label&quot;&gt;Is it okay to use them in addition to a label?&lt;/h2&gt;
 
-&lt;p&gt;Not particularly. Its certainly better but it’s still problematic.&lt;/p&gt;
-
-&lt;p&gt;If a piece of text adds value to the user—in this case by helping the user fill out a form, either by showing an additional hint, input format or example of what goes in the field—then it would be better if it was always available for the user to refer to.&lt;/p&gt;
-
-&lt;p&gt;On the other hand, if the placeholder is used in addition to a label, and doesn’t contain any vital information, then I wonder why you’d include it in the first place. It’s clearly not adding value.&lt;/p&gt;
+&lt;p&gt;No. If a hint is valuable to the user, then why make it hard to reference? If the hint isn’t vital to the user, then why bother including it all?&lt;/p&gt;
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
-&lt;p&gt;Each of the problems discussed above cause friction for people trying to fill in a form — the sort of friction that drains peoples energy — the sort of friction that a great user experience strives to eliminate.&lt;/p&gt;
+&lt;p&gt;All of these problems cause friction for real people trying to fill out a form. The sort of friction we can and should eliminate.&lt;/p&gt;
 
-&lt;p&gt;If you’re trying to help the user, the best place to start is to &lt;a href=&quot;/articles/always-use-a-label/&quot;&gt;always include a clear, always-visible label&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;On occasion, a placeholder — in &lt;em&gt;addition&lt;/em&gt; to label — &lt;em&gt;might&lt;/em&gt; be helpful, but use them judiciously and if in doubt, test with different people, under
-different circumstances and different browsers.&lt;/p&gt;
+&lt;p&gt;If you’re trying to help the user, &lt;a href=&quot;/articles/always-use-a-label/&quot;&gt;always include a clear, always-visible label&lt;/a&gt;. If the field benefits from an additional hint, include that outside the field too.&lt;/p&gt;
 </content>
 		</entry>
 	
@@ -1707,11 +1689,7 @@ Or should I try filtering instead?&lt;br /&gt;&lt;/p&gt;
 			<link href="http://adamsilver.io/articles/designing-a-bad-experience-on-purpose/"/>
 			<updated>2015-11-14T09:00:01+00:00</updated>
 			<id>http://adamsilver.io/articles/designing-a-bad-experience-on-purpose</id>
-			<content type="html">&lt;p&gt;I once worked on a successful e-commerce website. The business wanted us to design something that was hard-to-use on purpose. Can you believe it?&lt;/p&gt;
-
-&lt;p&gt;They wanted users to be able to pay by PayPal. And, just as we started development, the business stopped us because they had concerns about our design solution.&lt;/p&gt;
-
-&lt;p&gt;Specifically, they were concerned with how easy it was to choose Paypal. This is what it looked like:&lt;/p&gt;
+			<content type="html">&lt;p&gt;Who, in their right mind would design something that’s hard-to-use on purpose? That’s what happened to me once. Let’s just say the website sold stuff. And they wanted users to be able to pay using PayPal. Here’s the design that the business blocked:&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
@@ -1720,48 +1698,41 @@ Or should I try filtering instead?&lt;br /&gt;&lt;/p&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;The issue was that when users paid by card, we received fifty pence as a
-transaction fee. If the user paid by Paypal we would get nothing.&lt;/p&gt;
+&lt;p&gt;The problem with this design is that it was too simple. The reason this was a problem for the business was because when users paid by card, they received fifty pence as a transaction fee. If the user paid by Paypal they would get nothing.&lt;/p&gt;
 
-&lt;p&gt;If the business takes 750,000 orders per week, fifty pence is a lot to lose.&lt;/p&gt;
+&lt;p&gt;The business took about 750,000 orders per week, which made fifty pence a big deal. The business wanted us to make PayPal hard to find. Perhaps by hiding it behind an expand or collapse panel or something.&lt;/p&gt;
 
-&lt;p&gt;The business wanted us to hide Paypal behind some sort of expand/collapse panel. In other words, to make Paypal hard to find.&lt;/p&gt;
+&lt;p&gt;I just thought, why bother providing a feature if we don’t want people to use it. We knew our users &lt;em&gt;wanted&lt;/em&gt; PayPal and many people &lt;em&gt;only&lt;/em&gt; shop with PayPal for security and convenience reasons.&lt;/p&gt;
 
-&lt;p&gt;But why give users the choice at all?&lt;/p&gt;
+&lt;p&gt;We also knew that users drop off during checkout for many reasons. Each order lost costs the business a lot more than fifty pence.&lt;/p&gt;
 
-&lt;p&gt;We knew our users &lt;em&gt;wanted&lt;/em&gt; PayPal and many people &lt;em&gt;only&lt;/em&gt; shop with PayPal for security &lt;em&gt;and&lt;/em&gt; convenience reasons.&lt;/p&gt;
-
-&lt;p&gt;We also knew that users drop off during checkout for many reasons. Each person that drops off costs the business a lot more than fifty pence. The average order value was about £20.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-would-happen-if-we-added-paypal-as-originally-designed&quot;&gt;&lt;strong&gt;What would happen if we added PayPal as originally designed?&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;what-if-we-added-paypal-as-originally-designed&quot;&gt;What if we added PayPal as originally designed?&lt;/h2&gt;
 
 &lt;p&gt;It’s hard to know but I think that:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;a small percentage of existing users would’ve started using PayPal&lt;/li&gt;
-  &lt;li&gt;and we would’ve attracted new users to the site.&lt;/li&gt;
+  &lt;li&gt;a small percentage of existing users would’ve started using PayPal; and&lt;/li&gt;
+  &lt;li&gt;we would’ve attracted new users to the site.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;If lots of people switched over to Paypal, I would assume they did so because it’s their preference. Because it’s easier for them. In which case they would be happier customers.&lt;/p&gt;
 
-&lt;p&gt;A happy customer is one that purchases more frequently. Or at least continues to use the service at the same frequency.&lt;/p&gt;
-
-&lt;p&gt;Also, a happy user is more likely to recommend the service to friends. That must be worth massive amounts in marketing terms.&lt;/p&gt;
+&lt;p&gt;A happy customer is one that purchases more frequently. Or at least continues to use the service at the same frequency. Also, a happy user is more likely to recommend the service to friends. That must be worth massive amounts in marketing terms.&lt;/p&gt;
 
 &lt;p&gt;Mid-to-late adopters need a nudge before they make the jump. PayPal could’ve
 provided a welcome tipping point to attract new users.&lt;/p&gt;
 
 &lt;p&gt;And, if our competitors offered PayPal, users may decide to switch.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;So to sum up: keep users happy (+ attract new users) = business longevity&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Keep users happy (plus attract new users), business thrives.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;what-if-the-worst-happened&quot;&gt;What if the worst happened?&lt;/h2&gt;
 
 &lt;p&gt;The worse case scenario might include:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;all existing users switching to Paypal (no transaction free received).&lt;/li&gt;
-  &lt;li&gt;and no new users signing up&lt;/li&gt;
+  &lt;li&gt;all existing users switching to Paypal (no transaction free received); and&lt;/li&gt;
+  &lt;li&gt;no new users signing up.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;First, both of these points contradict each other. If Paypal makes existing
@@ -1774,7 +1745,7 @@ switched.&lt;/p&gt;
 
 &lt;p&gt;Fourth, the checkout flow is even easier to use as there is no choice in payment type. This would likely result in an uptick in conversion.&lt;/p&gt;
 
-&lt;p&gt;All of this to say, this is worth a lot more than 50p per order.&lt;/p&gt;
+&lt;p&gt;All of this to say, this is worth a lot more than fifty pence per order.&lt;/p&gt;
 
 &lt;p&gt;If you’re going to provide a feature, always make it easy-to-use. Or don’t bother.&lt;/p&gt;
 </content>
@@ -1785,21 +1756,21 @@ switched.&lt;/p&gt;
 			<link href="http://adamsilver.io/articles/designing-honestly-for-the-web/"/>
 			<updated>2015-10-09T10:00:01+01:00</updated>
 			<id>http://adamsilver.io/articles/designing-honestly-for-the-web</id>
-			<content type="html">&lt;p&gt;I have been working on websites for over half my life now. During this time I’ve witnessed designers, developers and businesses designing dishonestly over and over again.&lt;/p&gt;
+			<content type="html">&lt;p&gt;I’ve been working on websites for more than half my life. During this time I’ve witnessed designers, developers and businesses designing dishonestly over and over again.&lt;/p&gt;
 
-&lt;p&gt;There are many aspects of dishonest design. This article hones in on just one of these — the aspect that ignores the platform you are designing for. In the context of the web, I call it “bending the web”.&lt;/p&gt;
+&lt;p&gt;There are many aspects of dishonest design. This article hones in on just one of these. The aspect that ignores the platform you are designing for. In the context of the web, I call it “bending the web”.&lt;/p&gt;
 
 &lt;p&gt;I must admit, I have been known to bend it on more than a few occasions myself over the course of my career. I think that’s okay though because only by experiencing or reading about the mistakes we make, can we avoid them in the future. Here are some examples of how I’ve bent the web:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;I used tables for layout.&lt;/li&gt;
-  &lt;li&gt;I have given submit buttons the same “hand” cursor as a link.&lt;/li&gt;
-  &lt;li&gt;I created a custom file input so that it looked “nicer”.&lt;/li&gt;
-  &lt;li&gt;I have hidden labels to build a “cleaner” UI.&lt;/li&gt;
-  &lt;li&gt;I have used a select box for navigation.&lt;/li&gt;
+  &lt;li&gt;I’ve given &lt;a href=&quot;/articles/buttons-shouldnt-have-a-hand-cursor/&quot;&gt;submit buttons the hand cursor&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;I’ve made a custom looking file input to make it look “nicer”.&lt;/li&gt;
+  &lt;li&gt;I have hidden labels to “declutter” UI.&lt;/li&gt;
+  &lt;li&gt;I have used a &lt;a href=&quot;/articles/misusing-the-select-control&quot;&gt;select box for navigation&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;“A Dao of Web Design” written by John Allsopp over one and half decades ago, gives us some timeless insights that tell us why this happens and continues to happen today.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://alistapart.com/article/dao&quot;&gt;A Dao of Web Design&lt;/a&gt; written by John Allsopp over one and half decades ago, gives us some timeless insights that tell us why this happens and continues to happen today.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;“If you’ve never watched early television programs, it’s instructive viewing. Television was at that time often referred to as “radio with pictures,” and that’s a pretty accurate description. Much of television followed the format of popular radio at that time.”&lt;/p&gt;
@@ -1828,7 +1799,7 @@ Do you sometimes design without a thought for how the browser does it?&lt;/p&gt;
 
 &lt;p&gt;Sometimes a solution works well for a mobile app, but works terribly on the web. I think &lt;a href=&quot;/articles/why-infinite-scrolling-is-probably-a-bad-idea/&quot;&gt;infinite scroll&lt;/a&gt; is an example of this.&lt;/p&gt;
 
-&lt;p&gt;Have you ever used, designed or built a drop down select menu without a submit button? I have. When you select an option, the page refreshes and this simple bending comes with a host of &lt;a href=&quot;/articles/misusing-the-select-control/&quot;&gt;problems for the user&lt;/a&gt;. The point is, a select box is meant to be used for input, not for navigation; that is what links are for.&lt;/p&gt;
+&lt;p&gt;Have you ever used, designed or built a drop down select menu without a submit button? I have. When you select an option, the page refreshes and this simple bending comes with a host of problems for the user. The point is, a select box is meant to be used for input, not for navigation; that is what links are for.&lt;/p&gt;
 
 &lt;p&gt;Another useful thing about the web, is that browsers and devices get better all the time. When we design honestly, the experience gets better and better all by itself with zero effort from us — for proof just interact with a form on your phone and notice how it helps you do that.&lt;/p&gt;
 
@@ -2728,7 +2699,7 @@ anotherSelector {
 			<link href="http://adamsilver.io/articles/misusing-the-select-control/"/>
 			<updated>2014-09-17T00:00:00+01:00</updated>
 			<id>http://adamsilver.io/articles/misusing-the-select-control</id>
-			<content type="html">&lt;p&gt;You have most likely seen and used a select control &lt;em&gt;without&lt;/em&gt; a submit button. The rationale behind omitting the submit button is normally to declutter the UI and reduce clicks—the latter of which is a common &lt;a href=&quot;http://idyeah.com/blog/2012/06/stop-counting-clicks/&quot;&gt;UX fallacy&lt;/a&gt;. However, this is detrimental to the User Experience.&lt;/p&gt;
+			<content type="html">&lt;p&gt;Designers sometimes omit buttons to declutter the UI and &lt;a href=&quot;http://idyeah.com/blog/2012/06/stop-counting-clicks/&quot;&gt;reduce clicks&lt;/a&gt;, both of which are UX fallacies. This introduces several usability problems which I’ll discuss in this article.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot; style=&quot;max-width: 320px;margin: 0 auto;&quot;&gt;
 	&lt;figure&gt;
@@ -2736,6 +2707,34 @@ anotherSelector {
 		&lt;figcaption&gt;Sort by select box missing a submit button&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
+
+&lt;h2 id=&quot;keyboard-users-find-them-difficult&quot;&gt;1. Keyboard users find them difficult&lt;/h2&gt;
+
+&lt;p&gt;When foussed on the select menu, pressing up or down will select the options. In the following video I’m unable to select the 3rd option which creates a broken experience.&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/rnKDDSo9Omk&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;If you want to check this out for yourself, visit &lt;a href=&quot;http://html.cita.illinois.edu/script/onchange/onchange-example.php&quot;&gt;the demo&lt;/a&gt; in an offending browser, such as Chrome (Windows), Opera (Windows), IE6, IE7, IE8 and IE9.&lt;/p&gt;
+
+&lt;h2 id=&quot;screen-reader-users-find-them-difficult&quot;&gt;2. Screen reader users find them difficult&lt;/h2&gt;
+
+&lt;p&gt;Sarah Miller found that dropdown lists without buttons were confusing because, while the user had to inspect every item in the list, the action of reading an item meant that it was selected so the user would never get past the first item in the list. Again a broken experience.&lt;/p&gt;
+
+&lt;h2 id=&quot;select-menus-arent-for-navigation&quot;&gt;Select menus aren’t for navigation&lt;/h2&gt;
+
+&lt;p&gt;We should use links for navigation and forms to submit information. The problem is that it’s a little bit of a grey area.&lt;/p&gt;
+
+&lt;p&gt;This is because we might use forms to filter or sort search results for example. The user has selected an option, much like they might select a link. But that’s the end of the similarity.&lt;/p&gt;
+
+&lt;p&gt;If you’re going to use a form, then you must include a submit button.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Select menus are to help users fill in data. Not navigate. Grey area.&lt;/li&gt;
+  &lt;li&gt;Selection and submission should be separate.&lt;/li&gt;
+  &lt;li&gt;This behaviour relies on Javascript&lt;/li&gt;
+  &lt;li&gt;Screen readers have trouble with them&lt;/li&gt;
+  &lt;li&gt;Keyboard users have trouble with them&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h2 id=&quot;links-are-for-navigation&quot;&gt;Links are for navigation.&lt;/h2&gt;
 
@@ -2755,18 +2754,6 @@ anotherSelector {
 &lt;p&gt;Larry Marinem conducted usability tests and states that sometimes designers try to “over-automate” by reducing combining selection and submission and that dropdown lists are expected to display the selection, not go somewhere.&lt;/p&gt;
 
 &lt;p&gt;Users are prone to mis-selecting an option so when it launches them off somewhere else, this can be really disorientating. He added that reducing the number of clicks does not make a site more usable but giving the users appropriate control of their navigation does.&lt;/p&gt;
-
-&lt;h2 id=&quot;keyboard-users-find-them-troublesome&quot;&gt;Keyboard users find them troublesome.&lt;/h2&gt;
-
-&lt;p&gt;In the case of keyboard users, tabbing to a select menu and pressing up or down will select different options. In the following video, I am failing in my attempt to select the 3rd &lt;code&gt;option&lt;/code&gt; making the experience very frustrating:&lt;/p&gt;
-
-&lt;iframe width=&quot;100%&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/rnKDDSo9Omk&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;em&gt;Note: Visit &lt;a href=&quot;http://html.cita.illinois.edu/script/onchange/onchange-example.php&quot;&gt;the demo&lt;/a&gt; in an offending browser, such as Chrome (Windows), Opera (Windows), IE6, IE7, IE8 and IE9—if you come across another offending browser, do let me know&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-about-screen-readers&quot;&gt;What about screen readers?&lt;/h2&gt;
-
-&lt;p&gt;Sarah Miller found that dropdown lists without buttons were confusing because, while the user had to inspect every item in the list, the action of reading an item meant that it was selected so the user would never get past the first item in the list, again very frustrating.&lt;/p&gt;
 
 &lt;h2 id=&quot;what-are-my-options&quot;&gt;What are my options?&lt;/h2&gt;
 
