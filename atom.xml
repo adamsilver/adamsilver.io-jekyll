@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-12-30T17:13:25+00:00</updated>
+	<updated>2016-12-30T17:18:37+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -724,7 +724,7 @@ labels&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;placeholder-text-may-be-mistaken-for-a-value&quot;&gt;7. Placeholder text may be mistaken for a value&lt;/h2&gt;
 
-&lt;p&gt;People that don’t notice the subtle difference in contrast will skip the field mistaking it for a value. When the user submits the form they will be frustratingly shown an error.&lt;/p&gt;
+&lt;p&gt;People that don’t notice the subtle difference in contrast will skip the field mistaking it for a value. One test showed that &lt;a href=&quot;http://www.uxmatters.com/mt/archives/2010/03/dont-put-hints-inside-text-boxes-in-web-forms.php&quot;&gt;99% of users mistakingly thought they didn’t need to enter a value&lt;/a&gt;. When the user submits the form they will be frustratingly shown an error.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
