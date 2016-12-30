@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-12-30T16:57:50+00:00</updated>
+	<updated>2016-12-30T16:59:10+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -768,7 +768,7 @@ equivalent of a blank box.&lt;/p&gt;
 
 &lt;p&gt;People often ask me if it’s okay to use a placeholder in addition to a label. I suggest that if the hint is valuable to the user experience, we should make it easy to read. Putting the hint inside a placeholder doesn’t achieve this.&lt;/p&gt;
 
-&lt;p&gt;On the other hand, if you’re using it as an enhancement, it suggests the hint isn’t particularly important. In which case don’t bother including at all. Not every field needs a hint.&lt;/p&gt;
+&lt;p&gt;On the other hand, if you’re using it as an enhancement, it suggests the hint isn’t particularly important. In which case don’t bother including it at all. Not every field needs a hint.&lt;/p&gt;
 
 &lt;p&gt;In any case, these problems are easy to avoid. &lt;a href=&quot;/articles/always-use-a-label/&quot;&gt;Always use a label&lt;/a&gt;. And if necessary, include a hint outside the field too.&lt;/p&gt;
 </content>
