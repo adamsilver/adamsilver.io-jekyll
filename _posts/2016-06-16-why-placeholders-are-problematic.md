@@ -72,7 +72,7 @@ Some browsers hide the placeholder when the user focuses, instead of when they s
 
 ## 7. Placeholder text may be mistaken for a value
 
-People that don't notice the subtle difference in contrast will skip the field mistaking it for a value. When the user submits the form they will be frustratingly shown an error.
+People that don't notice the subtle difference in contrast will skip the field mistaking it for a value. One test showed that [99% of users mistakingly thought they didn't need to enter a value](http://www.uxmatters.com/mt/archives/2010/03/dont-put-hints-inside-text-boxes-in-web-forms.php). When the user submits the form they will be frustratingly shown an error.
 
 <div class="image">
 	<figure>
