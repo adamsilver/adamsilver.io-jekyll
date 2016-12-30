@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-12-30T15:09:05+00:00</updated>
+	<updated>2016-12-30T15:27:33+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -661,7 +661,7 @@ labels&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;its-easy-to-forget&quot;&gt;1. It’s easy to forget&lt;/h2&gt;
 
-&lt;p&gt;When the user starts typing the placeholder disappears. This makes it easy to forget. The hint is there to guide the user and so should always be available.&lt;/p&gt;
+&lt;p&gt;When the user starts typing the placeholder disappears. This makes it easy to forget. The hint is there to guide the user and so it should always be available for reference.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
@@ -673,6 +673,13 @@ labels&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;lack-of-browser-support&quot;&gt;2. Lack of browser support&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://caniuse.com/#feat=input-placeholder&quot;&gt;Most browsers support the placeholder but some don’t&lt;/a&gt;. For people using an unsupported browser, the placeholder is completely unavailable creating a broken experience.&lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/support.png&quot; alt=&quot;Broken for browsers lacking support&quot; width=&quot;100%&quot; /&gt;
+		&lt;figcaption&gt;Broken experience for browsers lacking support&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;pre-populated-forms-are-hard-to-use&quot;&gt;3. Pre-populated forms are hard to use&lt;/h2&gt;
 
