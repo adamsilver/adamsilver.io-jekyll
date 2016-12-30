@@ -112,6 +112,10 @@ If the placeholder is longer than the size of the field, it will be cut off. Thi
 	</figure>
 </div>
 
+## 12. Some browsers don't translate them
+
+For example, when Chrome translates a web page, it will fail to translate the text inside a placeholder.
+
 ## Summary
 
 People often ask me if it's okay to use a placeholder in addition to a label. I suggest that if the hint is valuable to the user experience, we should make it easy to read. Putting the hint inside a placeholder doesn't achieve this.
