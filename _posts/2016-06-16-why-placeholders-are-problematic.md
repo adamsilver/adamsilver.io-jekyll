@@ -5,9 +5,9 @@ date: 2016-06-16 09:00:01
 categories: design ux
 ---
 
-Since placeholders came along, designers have adopted them as means of storing hints. Their appeal lies in their minimal aesthetic. Unfortunatley, [minimal does not always mean simple](http://uxmyths.com/post/115783813605/myth-34-simple-minimal).
+Since placeholders came along, designers have adopted them as means of storing hints. Their appeal lies in their minimal aesthetic. But [minimal does not always mean simple](http://uxmyths.com/post/115783813605/myth-34-simple-minimal).
 
-Some designers have gone one step further, and replaced labels with placeholders. Either way, placeholders are a problematic for many reasons. Here's why:
+Some designers go gone one step further, and replace labels with placeholders. Either way, placeholders are a problematic for users. Here's why:
 
 ## 1. It's easy to forget
 
@@ -116,10 +116,14 @@ If the placeholder is longer than the size of the field, it will be cut off. Thi
 
 For example, when Chrome translates a web page, it will fail to translate the text inside a placeholder.
 
+## 13. Browser auto-complete exacerbates the problem
+
+The browser's auto-completion routine populates the fields automatically. This means the placeholder text disappears making it difficult for the user to check the values against what the fields intended.
+
 ## Summary
 
-People often ask me if it's okay to use a placeholder in addition to a label. I suggest that if the hint is valuable to the user experience, we should make it easy to read. Putting the hint inside a placeholder doesn't achieve this.
+Some people ask me if it's okay to use a placeholder in addition to a label. I say that if the hint is valuable to the user, we should make it easy-to-read and readily accessible. The placeholder doesn't work well for this.
 
-On the other hand, if you're using it as an enhancement, it suggests the hint isn't particularly important. In which case don't bother including it at all. Not every field needs a hint.
+Others say that the placeholder is just an enhancement and not essential to the user. To this I say that if the hint is not essential then don't bother including it. Not every field needs a hint.
 
-In any case, these problems are easy to avoid. [Always use a label](/articles/always-use-a-label/). And if necessary, include a hint outside the field too.
+In any case, these problems are easy to avoid. [Always use a label](/articles/always-use-a-label/). And if the user would benefit from an additional hint, place one next to the field.
