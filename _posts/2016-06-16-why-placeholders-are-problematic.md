@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Why placeholders are problematic
+title: Placeholders are problematic
 date: 2016-06-16 09:00:01
 categories: design ux
 ---
@@ -126,4 +126,4 @@ Some people ask me if it's okay to use a placeholder in addition to a label. I s
 
 Others say that the placeholder is just an enhancement and not essential to the user. To this I say that if the hint is not essential then don't bother including it. Not every field needs a hint.
 
-In any case, these problems are easy to avoid. [Always use a label](/articles/always-use-a-label/). And if the user would benefit from an additional hint, place one next to the field.
+In any case, these problems are easy to avoid. [Always use a label](/articles/always-use-a-label/). And if you need a hint, put it next to the field so that users can reference it easily.
