@@ -7,7 +7,7 @@ categories: design ux
 
 Since placeholders came along, designers have adopted them as means of storing hints. Their appeal lies in their minimal aesthetic. But [minimal does not always mean simple](http://uxmyths.com/post/115783813605/myth-34-simple-minimal).
 
-Some designers go gone one step further, and replace labels with placeholders. Either way, placeholders are a problematic for users. Here's why:
+Some designers go gone one step further, and replace labels with placeholders. Either way, the placeholder is an Inclusive Design anti-pattern which causes problems for users. Here's why:
 
 ## 1. It's easy to forget
 
