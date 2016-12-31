@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-12-31T11:33:21+00:00</updated>
+	<updated>2016-12-31T11:36:18+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -659,7 +659,7 @@ labels&lt;/a&gt;.&lt;/p&gt;
 			<id>http://adamsilver.io/articles/why-placeholders-are-problematic</id>
 			<content type="html">&lt;p&gt;Since placeholders came along, designers have adopted them as means of storing hints. Their appeal lies in their minimal aesthetic. But &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;minimal does not always mean simple&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Some designers go gone one step further, and replace labels with placeholders. Either way, placeholders are a problematic for users. Here’s why:&lt;/p&gt;
+&lt;p&gt;Some designers go gone one step further, and replace labels with placeholders. Either way, the placeholder is an Inclusive Design anti-pattern which causes problems for users. Here’s why:&lt;/p&gt;
 
 &lt;h2 id=&quot;its-easy-to-forget&quot;&gt;1. It’s easy to forget&lt;/h2&gt;
 
