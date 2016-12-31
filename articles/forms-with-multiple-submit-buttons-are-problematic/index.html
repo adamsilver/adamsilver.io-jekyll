@@ -106,9 +106,9 @@
 </nav>
 	    <main class="mainContent">
 			<h1>Forms with multiple submit buttons are problematic</h1>
-	        <p>Forms with multiple submit buttons are problematic for keyboard users because of the way submission works. When a user fills out a form, they can submit that form by pressing enter, even if the focus is within a field.</p>
+	        <p>Forms with multiple submit buttons are problematic for keyboard users because of how submission works. A user can submit a form by pressing <em>enter</em>, when the focus is within a field (as opposed to a button).</p>
 
-<p>When there are multiple buttons, the form submits as if the <em>first</em> button was pressed. This is problematic because if there are multiple buttons it’s impossible to know which of them the user intends to press. For example, you might have an address form with a postcode look-up.</p>
+<p>If there are multiple buttons, the form will behave as if the user pressed the <em>first</em> button. This is not always desirable. For example, you might have an address form with a postcode look-up.</p>
 
 <div class="image" style="max-width: 320px;margin: 0 auto;">
 	<figure>
@@ -116,27 +116,27 @@
 	</figure>
 </div>
 
-<p>Pressing enter will always perform a postcode look-up because it’s first in the document flow.</p>
+<p>Pressing enter will always perform a postcode look-up because it’s first in the document flow. There are two solutions at our disposal.</p>
 
-<h2 id="split-up-the-forms">Split up the forms</h2>
+<h2 id="split-up-the-forms">1. Split up the forms</h2>
 
-<p>The best course of action would be to split your forms so that there is only one submit button. Then there is no ambiguity in the act of submission.</p>
+<p>The best course of action is to split your form into two. This means each form will have a single button removing any ambiguity during submission.</p>
 
-<p>In the example above, one form would perform the look-up. Another would save the users address.</p>
+<p>All users benefit from this approach, not just keyboard users. Breaking down one big form into two small ones reduces the cognitive load on users. And having one call-to-action helps users make the next step.</p>
 
-<p>This pattern is not only beneficial to keyboard users. This pattern is inclusive to all types of users. It’s a better experience because a big task is broken down into two. This reduces the cognitive load on users.</p>
+<p>If for some reason, you can’t split up your forms then there is another, less-than-ideal option.</p>
 
-<p>If you can’t split your forms up then there is another option.</p>
+<h2 id="choose-a-primary-button">2. Choose a primary button</h2>
 
-<h2 id="choose-a-primary-button">Choose a primary button</h2>
+<p>If you <em>really</em> can’t split the forms into two, then you’ll need to choose a primary action. This isn’t always easy because some forms have two buttons with similar weighting.</p>
 
-<p>If you <em>really</em> can’t split up your forms, then you’ll have to choose a primary action. This isn’t always easy, because some forms have two buttons with similar weighting.</p>
+<p>If the primary button doesn’t naturally come first then, if possible, you should modify the design so it does. If it doesn’t come first, then you’ll need to duplicate it and place it at the top of the form.</p>
 
-<p>If the form’s primary action doesn’t come first, then you’ll have to modify the design which isn’t always possible. Or you’ll need to add a duplicate button to the top of the form and hide it visually with CSS.</p>
+<p>You’ll need to ensure it is visually hidden with CSS but this is problematic. As the user tabs to the hidden button, the UI will seem unresponsive. This is because the button is in focus, but is visually hidden. This can  disorientate users.</p>
 
-<p>However, when the user tabs via keyboard to the hidden button, the UI will appear unresponsive. That’s because the button is focused but off-screen. This is an undesirable experience that can disorientate users.</p>
+<h2 id="summary">Summary</h2>
 
-<p>If at all possible, split up the forms.</p>
+<p>Forms with multiple submit buttons are problematic. But it’s easy to design this problem out of the system. To do this, split the large form into separate smaller forms. In doing so each form has a single call-to-action which will help users progress easily, whether they use the keyboard or otherwise.</p>
 
 	    </main>
 		<div class="signUpHero  signUpHero-isArticle ">
