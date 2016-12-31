@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-12-31T11:36:18+00:00</updated>
+	<updated>2016-12-31T11:46:15+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -653,10 +653,10 @@ labels&lt;/a&gt;.&lt;/p&gt;
 		</entry>
 	
 		<entry>
-			<title>Why placeholders are problematic</title>
-			<link href="http://adamsilver.io/articles/why-placeholders-are-problematic/"/>
+			<title>Placeholders are problematic</title>
+			<link href="http://adamsilver.io/articles/placeholders-are-problematic/"/>
 			<updated>2016-06-16T10:00:01+01:00</updated>
-			<id>http://adamsilver.io/articles/why-placeholders-are-problematic</id>
+			<id>http://adamsilver.io/articles/placeholders-are-problematic</id>
 			<content type="html">&lt;p&gt;Since placeholders came along, designers have adopted them as means of storing hints. Their appeal lies in their minimal aesthetic. But &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;minimal does not always mean simple&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Some designers go gone one step further, and replace labels with placeholders. Either way, the placeholder is an Inclusive Design anti-pattern which causes problems for users. Here’s why:&lt;/p&gt;
@@ -778,7 +778,7 @@ equivalent of a blank box.&lt;/p&gt;
 
 &lt;p&gt;Others say that the placeholder is just an enhancement and not essential to the user. To this I say that if the hint is not essential then don’t bother including it. Not every field needs a hint.&lt;/p&gt;
 
-&lt;p&gt;In any case, these problems are easy to avoid. &lt;a href=&quot;/articles/always-use-a-label/&quot;&gt;Always use a label&lt;/a&gt;. And if the user would benefit from an additional hint, place one next to the field.&lt;/p&gt;
+&lt;p&gt;In any case, these problems are easy to avoid. &lt;a href=&quot;/articles/always-use-a-label/&quot;&gt;Always use a label&lt;/a&gt;. And if you need a hint, put it next to the field so that users can reference it easily.&lt;/p&gt;
 </content>
 		</entry>
 	
