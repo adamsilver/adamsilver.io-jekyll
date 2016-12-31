@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-12-31T11:46:15+00:00</updated>
+	<updated>2016-12-31T15:32:20+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -2714,81 +2714,57 @@ anotherSelector {
 			<link href="http://adamsilver.io/articles/misusing-the-select-control/"/>
 			<updated>2014-09-17T00:00:00+01:00</updated>
 			<id>http://adamsilver.io/articles/misusing-the-select-control</id>
-			<content type="html">&lt;p&gt;Designers sometimes omit buttons to declutter the UI and &lt;a href=&quot;http://idyeah.com/blog/2012/06/stop-counting-clicks/&quot;&gt;reduce clicks&lt;/a&gt;, both of which are UX fallacies. This introduces several usability problems which I’ll discuss in this article.&lt;/p&gt;
+			<content type="html">&lt;p&gt;I’ve seen many designers misuse the select menu by using it as a form of navigation. One example of this approach is with a Sort By form which many ecommerce sites use to allow users to sort a list of products.&lt;/p&gt;
 
-&lt;div class=&quot;image&quot; style=&quot;max-width: 320px;margin: 0 auto;&quot;&gt;
+&lt;!-- &lt;div class=&quot;image&quot; style=&quot;max-width: 320px;margin: 0 auto;&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;/assets/img/sortby.png&quot; alt=&quot;Sort by select&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;/assets/img/sortby.png&quot; alt=&quot;Sort by select&quot; width=&quot;100%&quot;&gt;
 		&lt;figcaption&gt;Sort by select box missing a submit button&lt;/figcaption&gt;
 	&lt;/figure&gt;
-&lt;/div&gt;
+&lt;/div&gt; --&gt;
+
+&lt;p&gt;This technique is appealing because removing the button declutters the UI. And submitting the form when the user changes selection saves the user an extra click.&lt;/p&gt;
+
+&lt;p&gt;Whilst this seems sensible it’s actually problematic. And in fact aiming for a &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;minimal UI&lt;/a&gt; and &lt;a href=&quot;http://idyeah.com/blog/2012/06/stop-counting-clicks/&quot;&gt;counting clicks&lt;/a&gt; doesn’t always lead to an agreeable User Experience. Here’s why:&lt;/p&gt;
 
 &lt;h2 id=&quot;keyboard-users-find-them-difficult&quot;&gt;1. Keyboard users find them difficult&lt;/h2&gt;
 
-&lt;p&gt;When foussed on the select menu, pressing up or down will select the options. In the following video I’m unable to select the 3rd option which creates a broken experience.&lt;/p&gt;
+&lt;p&gt;Some browsers will immediately submit the form when the user selects an option. As a user moves from the first to the second option, the form will submit before the user had a chance to move further down the list.&lt;/p&gt;
 
-&lt;iframe width=&quot;100%&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/rnKDDSo9Omk&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;If you want to check this out for yourself, visit &lt;a href=&quot;http://html.cita.illinois.edu/script/onchange/onchange-example.php&quot;&gt;the demo&lt;/a&gt; in an offending browser, such as Chrome (Windows), Opera (Windows), IE6, IE7, IE8 and IE9.&lt;/p&gt;
+&lt;p&gt;To experience this for yourself visit &lt;a href=&quot;http://html.cita.illinois.edu/script/onchange/onchange-example.php&quot;&gt;the demo&lt;/a&gt; in an offending browser such as:
+Chrome (Windows), Opera (Windows), IE6, IE7, IE8 or IE9.&lt;/p&gt;
 
 &lt;h2 id=&quot;screen-reader-users-find-them-difficult&quot;&gt;2. Screen reader users find them difficult&lt;/h2&gt;
 
-&lt;p&gt;Sarah Miller found that dropdown lists without buttons were confusing because, while the user had to inspect every item in the list, the action of reading an item meant that it was selected so the user would never get past the first item in the list. Again a broken experience.&lt;/p&gt;
+&lt;p&gt;Sarah Miller’s research showed that dropdown lists without submit buttons were confusing to screen reader users. The act of reading an option meant that it was selected. Therefore the user could never get past the first option.&lt;/p&gt;
 
-&lt;h2 id=&quot;select-menus-arent-for-navigation&quot;&gt;Select menus aren’t for navigation&lt;/h2&gt;
+&lt;h2 id=&quot;users-expect-to-use-links-for-navigation&quot;&gt;3. Users expect to use links for navigation&lt;/h2&gt;
 
-&lt;p&gt;We should use links for navigation and forms to submit information. The problem is that it’s a little bit of a grey area.&lt;/p&gt;
+&lt;p&gt;Links are for navigation. Forms are for submitting data—in our case filtering a set of search results. We should use the right element. In doing so we conform to the third of Henny Swan’s UX principles, &lt;em&gt;design with familiarity in mind&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;This is because we might use forms to filter or sort search results for example. The user has selected an option, much like they might select a link. But that’s the end of the similarity.&lt;/p&gt;
+&lt;h2 id=&quot;users-expect-selection-and-submission-to-be-separate&quot;&gt;4. Users expect selection and submission to be separate&lt;/h2&gt;
 
-&lt;p&gt;If you’re going to use a form, then you must include a submit button.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Select menus are to help users fill in data. Not navigate. Grey area.&lt;/li&gt;
-  &lt;li&gt;Selection and submission should be separate.&lt;/li&gt;
-  &lt;li&gt;This behaviour relies on Javascript&lt;/li&gt;
-  &lt;li&gt;Screen readers have trouble with them&lt;/li&gt;
-  &lt;li&gt;Keyboard users have trouble with them&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;links-are-for-navigation&quot;&gt;Links are for navigation.&lt;/h2&gt;
-
-&lt;p&gt;Select menus are to help users fill in data. They are &lt;em&gt;not&lt;/em&gt; meant to be used for navigation; that’s what links are for. They can be used as a means of changing the data that is displayed on a page. Think search results or filtering but that’s it.&lt;/p&gt;
-
-&lt;h2 id=&quot;inputting-data-versus-submitting-data&quot;&gt;Inputting data versus submitting data.&lt;/h2&gt;
-
-&lt;p&gt;There should be a difference between selection and &lt;em&gt;submission&lt;/em&gt;. Combining the two into a single interaction causes usability issues (which I will show later).&lt;/p&gt;
+&lt;p&gt;There is a difference between selecting something and submitting it to the server for processing. Users can check and amend their entries before submitting them. In fact this is a WCAG 2.0 recommendation:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;“Changing the setting of any user interface component does not automatically cause a change of context”
-&lt;br /&gt;—&lt;cite&gt;WCAG 2.0 Guidelines&lt;/cite&gt;&lt;/p&gt;
+  &lt;p&gt;“Changing the setting of any user interface component does not automatically cause a change of context”&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;generally-difficult-to-use&quot;&gt;Generally difficult to use.&lt;/h2&gt;
+&lt;p&gt;The button invites the user to make an explicit action at their convenience, and therefore conforms to the second of Henny Swan’s UX principles, &lt;em&gt;to give users control&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Larry Marinem conducted usability tests and states that sometimes designers try to “over-automate” by reducing combining selection and submission and that dropdown lists are expected to display the selection, not go somewhere.&lt;/p&gt;
+&lt;h2 id=&quot;users-find-it-disorientating&quot;&gt;5. Users find it disorientating&lt;/h2&gt;
 
-&lt;p&gt;Users are prone to mis-selecting an option so when it launches them off somewhere else, this can be really disorientating. He added that reducing the number of clicks does not make a site more usable but giving the users appropriate control of their navigation does.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-are-my-options&quot;&gt;What are my options?&lt;/h2&gt;
-
-&lt;p&gt;Adding the submit button back works beautifully and puts the user firmly back in control. Alternatively, you can make each option a link as follows:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&quot;/whatever/?sort=popularity&quot;&amp;gt;Popularity&amp;lt;/a&amp;gt;
-&amp;lt;a href=&quot;/whatever/?sort=location&quot;&amp;gt;Location&amp;lt;/a&amp;gt;
-&amp;lt;a href=&quot;/whatever/?sort=etc&quot;&amp;gt;Etc&amp;lt;/a&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Which reduces the clicks, exposes the options and doesn’t have usability problems.&lt;/p&gt;
+&lt;p&gt;Larry Marinem’s usability research found that users are prone to mis-selecting an option. So when it launches them off somewhere else, users found this disorientating.&lt;/p&gt;
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
-&lt;p&gt;UX is about creating human-friendly experiences. Reducing clicks and decluttering the UI might be the result of a solution but they should not be considered &lt;em&gt;objectives&lt;/em&gt; in and of themselves.&lt;/p&gt;
+&lt;p&gt;Reducing clicks and decluttering a UI &lt;em&gt;might&lt;/em&gt; be the results of a well-designed solution, but they should not be objectives in and of themselves.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;“Everything should be made as simple as it needs to be, and no simpler.”
-&lt;br /&gt;— &lt;cite&gt;Albert Einstein&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;We should consider people with different preferences and browsers so that they can effectively use the websites we put in front of them.&lt;/p&gt;
+
+&lt;p&gt;Our solutions should be familiar wherever possible and keep the user in control of their actions. In this case, we must always include a button.&lt;/p&gt;
+
+&lt;!-- &lt;iframe width=&quot;100%&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/rnKDDSo9Omk&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt; --&gt;
 </content>
 		</entry>
 	
