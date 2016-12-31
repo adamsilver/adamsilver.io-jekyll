@@ -5,73 +5,56 @@ categories: forms ux a11y
 description: Sometimes designers and developers misuse the select drop down control. Find out about the problems and how to solve in this article.
 ---
 
-Designers sometimes omit buttons to declutter the UI and [reduce clicks](http://idyeah.com/blog/2012/06/stop-counting-clicks/), both of which are UX fallacies. This introduces several usability problems which I'll discuss in this article.
+I've seen many designers misuse the select menu by using it as a form of navigation. One example of this approach is with a Sort By form which many ecommerce sites use to allow users to sort a list of products.
 
-<div class="image" style="max-width: 320px;margin: 0 auto;">
+<!-- <div class="image" style="max-width: 320px;margin: 0 auto;">
 	<figure>
 		<img src="/assets/img/sortby.png" alt="Sort by select" width="100%">
 		<figcaption>Sort by select box missing a submit button</figcaption>
 	</figure>
-</div>
+</div> -->
+
+This technique is appealing because removing the button declutters the UI. And submitting the form when the user changes selection saves the user an extra click.
+
+Whilst this seems sensible it's actually problematic. And in fact aiming for a [minimal UI](http://uxmyths.com/post/115783813605/myth-34-simple-minimal) and [counting clicks](http://idyeah.com/blog/2012/06/stop-counting-clicks/) doesn't always lead to an agreeable User Experience. Here's why:
 
 ## 1. Keyboard users find them difficult
 
-When foussed on the select menu, pressing up or down will select the options. In the following video I'm unable to select the 3rd option which creates a broken experience.
+Some browsers will immediately submit the form when the user selects an option. As a user moves from the first to the second option, the form will submit before the user had a chance to move further down the list.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/rnKDDSo9Omk" frameborder="0" allowfullscreen></iframe>
-
-If you want to check this out for yourself, visit [the demo](http://html.cita.illinois.edu/script/onchange/onchange-example.php) in an offending browser, such as Chrome (Windows), Opera (Windows), IE6, IE7, IE8 and IE9.
-
+To experience this for yourself visit [the demo](http://html.cita.illinois.edu/script/onchange/onchange-example.php) in an offending browser such as:
+Chrome (Windows), Opera (Windows), IE6, IE7, IE8 or IE9.
 
 ## 2. Screen reader users find them difficult
 
-Sarah Miller found that dropdown lists without buttons were confusing because, while the user had to inspect every item in the list, the action of reading an item meant that it was selected so the user would never get past the first item in the list. Again a broken experience.
+Sarah Miller's research showed that dropdown lists without submit buttons were confusing to screen reader users. The act of reading an option meant that it was selected. Therefore the user could never get past the first option.
 
-## Select menus aren't for navigation
+## 3. Users expect to use links for navigation
 
-We should use links for navigation and forms to submit information. The problem is that it's a little bit of a grey area.
+Links are for navigation. Forms are for submitting data&mdash;in our case filtering a set of search results. We should use the right element. In doing so we conform to the third of Henny Swan's UX principles, *design with familiarity in mind*.
 
-This is because we might use forms to filter or sort search results for example. The user has selected an option, much like they might select a link. But that's the end of the similarity.
+## 4. Users expect selection and submission to be separate
 
-If you're going to use a form, then you must include a submit button.
-
-1. Select menus are to help users fill in data. Not navigate. Grey area.
-2. Selection and submission should be separate.
-3. This behaviour relies on Javascript
-4. Screen readers have trouble with them
-5. Keyboard users have trouble with them
-
-
-## Links are for navigation.
-
-Select menus are to help users fill in data. They are *not* meant to be used for navigation; that's what links are for. They can be used as a means of changing the data that is displayed on a page. Think search results or filtering but that's it.
-
-## Inputting data versus submitting data.
-
-There should be a difference between selection and *submission*. Combining the two into a single interaction causes usability issues (which I will show later).
+There is a difference between selecting something and submitting it to the server for processing. Users can check and amend their entries before submitting them. In fact this is a WCAG 2.0 recommendation:
 
 > &ldquo;Changing the setting of any user interface component does not automatically cause a change of context&rdquo;
-> <br>&mdash;<cite>WCAG 2.0 Guidelines</cite>
 
-## Generally difficult to use.
+The button invites the user to make an explicit action at their convenience, and therefore conforms to the second of Henny Swan's UX principles, *to give users control*.
 
-Larry Marinem conducted usability tests and states that sometimes designers try to "over-automate" by reducing combining selection and submission and that dropdown lists are expected to display the selection, not go somewhere.
+## 5. Users find it disorientating
 
-Users are prone to mis-selecting an option so when it launches them off somewhere else, this can be really disorientating. He added that reducing the number of clicks does not make a site more usable but giving the users appropriate control of their navigation does.
-
-## What are my options?
-
-Adding the submit button back works beautifully and puts the user firmly back in control. Alternatively, you can make each option a link as follows:
-
-	<a href="/whatever/?sort=popularity">Popularity</a>
-	<a href="/whatever/?sort=location">Location</a>
-	<a href="/whatever/?sort=etc">Etc</a>
-
-Which reduces the clicks, exposes the options and doesn't have usability problems.
+Larry Marinem's usability research found that users are prone to mis-selecting an option. So when it launches them off somewhere else, users found this disorientating.
 
 ## Summary
 
-UX is about creating human-friendly experiences. Reducing clicks and decluttering the UI might be the result of a solution but they should not be considered *objectives* in and of themselves.
+Reducing clicks and decluttering a UI *might* be the results of a well-designed solution, but they should not be objectives in and of themselves.
 
-> &ldquo;Everything should be made as simple as it needs to be, and no simpler.&rdquo;
-> <br>&mdash; <cite>Albert Einstein</cite>
+We should consider people with different preferences and browsers so that they can effectively use the websites we put in front of them.
+
+Our solutions should be familiar wherever possible and keep the user in control of their actions. In this case, we must always include a button.
+
+
+
+
+
+<!-- <iframe width="100%" height="315" src="https://www.youtube.com/embed/rnKDDSo9Omk" frameborder="0" allowfullscreen></iframe> -->
