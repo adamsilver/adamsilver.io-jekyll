@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2016-12-31T16:51:19+00:00</updated>
+	<updated>2017-01-01T11:28:41+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -567,88 +567,62 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 			<link href="http://adamsilver.io/articles/always-use-a-label/"/>
 			<updated>2016-07-01T10:00:01+01:00</updated>
 			<id>http://adamsilver.io/articles/always-use-a-label</id>
-			<content type="html">&lt;p&gt;Sometimes designers oversimplify a form by removing labels. This is problematic because &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;minimal does not always mean simple&lt;/a&gt;. When it comes to labels, this definitely applies. Labels, in fact, are an essential part of designing easy-to-use forms. Here’s why:&lt;/p&gt;
+			<content type="html">&lt;p&gt;You might be tempted to remove labels from certain form controls to create a minimal aesthetic. This is a common &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;UX fallacy&lt;/a&gt; which can lead to subpar experiences.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;A) Sighted users will see the instructions&lt;/strong&gt; and know what to do. Without a
-label this is challenging at best.&lt;/p&gt;
+&lt;p&gt;Labels are essential because:&lt;/p&gt;
 
-&lt;div class=&quot;image&quot;&gt;
-	&lt;figure&gt;
-		&lt;img src=&quot;http://adamsilver.io/assets/img/labels/1.png&quot; alt=&quot;The visual label helps sighted users understand what to type&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
-		&lt;figcaption&gt;The visual label helps sighted users understand what to type&lt;/figcaption&gt;
-	&lt;/figure&gt;
-&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;em&gt;sighted&lt;/em&gt; users will be able to see the instructions;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;visually-impaired&lt;/em&gt; users will hear the instructions when using a screen reader; and&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;motor-impaired&lt;/em&gt; users will find it easier to select a field thanks to the larger hit area. This is because clicking a label will move focus to the control.&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;&lt;strong&gt;B) Visually-impaired users will hear the instructions&lt;/strong&gt; when using a
-screen reader. Without a label this is impossible.&lt;/p&gt;
+&lt;p&gt;Let’s take a look at two examples whereby designers frequently ditch the label.&lt;/p&gt;
 
-&lt;div class=&quot;image&quot;&gt;
-	&lt;figure&gt;
-		&lt;img src=&quot;http://adamsilver.io/assets/img/labels/2.png&quot; alt=&quot;“Username” will be read out by screen readers&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
-		&lt;figcaption&gt;“Username” will be read out by screen readers&lt;/figcaption&gt;
-	&lt;/figure&gt;
-&lt;/div&gt;
+&lt;h2 id=&quot;add-to-basket-form&quot;&gt;1. Add to basket form&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;C) Motor-impaired users will find it easier&lt;/strong&gt; to activate a control using a
-mouse or finger, due to the hit region increasing in size. This is because
-clicking (or tapping) a label acts as if the user clicked the control itself.&lt;/p&gt;
-
-&lt;div class=&quot;image&quot;&gt;
-	&lt;figure&gt;
-		&lt;img src=&quot;http://adamsilver.io/assets/img/labels/3.png&quot; alt=&quot;Larger hit area helps motor-impaired users activate a control&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
-		&lt;figcaption&gt;Larger hit area helps motor-impaired users activate a control&lt;/figcaption&gt;
-	&lt;/figure&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;but-sortsizecolourquantity-menus-dont-need-labels-do-they&quot;&gt;But sort/size/colour/quantity menus don’t need labels do they?&lt;/h2&gt;
-
-&lt;p&gt;They do and unfortunately, it’s rather common to find missing labels on product forms.
-&lt;a href=&quot;http://www.asos.com/ASOS/ASOS-Oversized-Long-Sleeve-T-Shirt-With-Mock-Underlayer/Prod/pgeproduct.aspx?iid=6593813&amp;amp;cid=13084&amp;amp;sh=0&amp;amp;pge=0&amp;amp;pgesize=36&amp;amp;sort=-1&amp;amp;clr=Grey&amp;amp;totalstyles=604&amp;amp;gridsize=3&quot;&gt;ASOS&lt;/a&gt; suffers from this problem as you can see below:&lt;/p&gt;
+&lt;p&gt;When a form uses a select menu, designers sometimes rely on the first option in the list to denote meaning. Take a look at ASOS’s &lt;em&gt;add to basket&lt;/em&gt; form.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
 		&lt;img src=&quot;http://adamsilver.io/assets/img/labels/asos.jpeg&quot; alt=&quot;ASOS’ product form omits labels on drop downs&quot; width=&quot;100%&quot; style=&quot;max-width: 350px&quot; /&gt;
-		&lt;figcaption&gt;ASOS’ product form omits labels on drop downs&lt;/figcaption&gt;
+		&lt;figcaption&gt;The menus are mising labels&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Instead of a label, they rely on the first &lt;em&gt;option&lt;/em&gt; in the menu to provide meaning. Whilst this is &lt;em&gt;sort of&lt;/em&gt; okay for &lt;em&gt;visual&lt;/em&gt; users in the non-selected state, it &lt;em&gt;does&lt;/em&gt; suffer from points B and C — &lt;em&gt;and&lt;/em&gt; A when a value has been selected — as is the case with the colour menu as shown above.&lt;/p&gt;
+&lt;h3 id=&quot;notes&quot;&gt;Notes&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.houseoffraser.co.uk/Polo+Ralph+Lauren+Short-Sleeve+V-Neck+T-Shirt/233780500,default,pd.html&quot;&gt;House of Fraser&lt;/a&gt; shows a label next to the quantity menu improving usabilty for everyone:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;This is &lt;em&gt;okay&lt;/em&gt; for visual users when an option hasn’t been selected yet. But, if one has been selected, it’s hard to understand, as is the case with the colour menu shown above.&lt;/li&gt;
+  &lt;li&gt;Motor-impaired users will find it harder to select the field due to the smaller hit area.&lt;/li&gt;
+  &lt;li&gt;Screen reader users won’t understand the values that are being read out. And when they are read out it will be disorientating for the values to be read out as “Select size, Small, Medium, Large”. One is the instruction, and one is a value.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;div class=&quot;image&quot;&gt;
-	&lt;figure&gt;
-		&lt;img src=&quot;http://adamsilver.io/assets/img/labels/hof.jpeg&quot; alt=&quot;House of Fraser has a label for their quantity menu&quot; width=&quot;100%&quot; style=&quot;max-width: 350px&quot; /&gt;
-		&lt;figcaption&gt;House of Fraser has a label for their quantity menu&lt;/figcaption&gt;
-	&lt;/figure&gt;
-&lt;/div&gt;
+&lt;h2 id=&quot;search-form&quot;&gt;2. Search form&lt;/h2&gt;
 
-&lt;h2 id=&quot;but-a-simple-search-form-doesnt-need-a-label-does-it&quot;&gt;But a simple search form doesn’t need a label does it?&lt;/h2&gt;
-
-&lt;p&gt;It does and unfortunately, search forms are often designed without a label. For example, &lt;a href=&quot;http://www.selfridges.com/&quot;&gt;Selfridges’&lt;/a&gt; search form is missing a label:&lt;/p&gt;
+&lt;p&gt;When a form has just one field—as would be the case with a search form—designers rely on placeholder text and the submit button to denote meaning. Take a look at &lt;a href=&quot;http://www.selfridges.com/&quot;&gt;Selfridges’&lt;/a&gt; search form.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
 		&lt;img src=&quot;http://adamsilver.io/assets/img/labels/selfridges.png&quot; alt=&quot;Selfridges’ search form omits the label&quot; width=&quot;100%&quot; style=&quot;max-width: 350px;&quot; /&gt;
-		&lt;figcaption&gt;Selfridges’ search form omits the label&lt;/figcaption&gt;
+		&lt;figcaption&gt;The search field is missing a label&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Instead of a label, they rely on the submit button (in this case a magnifying glass) and the placeholder to provide meaning. But this is unnecessarily difficult to use for less abled people — and of course — &lt;a href=&quot;/articles/why-placeholders-are-problematic&quot;&gt;placeholders should not be used as a replacement for
-labels&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;notes-1&quot;&gt;Notes&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.smashingmagazine.com/author/adamsilver/&quot;&gt;Smashing Magazine&lt;/a&gt; shows that including a label can be beautiful &lt;em&gt;and&lt;/em&gt; functional at the same time:&lt;/p&gt;
-
-&lt;div class=&quot;image&quot;&gt;
-	&lt;figure&gt;
-		&lt;img src=&quot;http://adamsilver.io/assets/img/labels/smashing.jpeg&quot; alt=&quot;Smashing Magazine’s search form uses a label&quot; width=&quot;100%&quot; style=&quot;max-width: 350px;&quot; /&gt;
-		&lt;figcaption&gt;Smashing Magazine’s search form uses a label&lt;/figcaption&gt;
-	&lt;/figure&gt;
-&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;Visual users will be okay to begin with due to the placeholder. But &lt;a href=&quot;/articles/why-placeholders-are-problematic&quot;&gt; placeholders are problematic&lt;/a&gt; for many reasons. One example is that once the user starts typing the instruction disappears.&lt;/li&gt;
+  &lt;li&gt;Motor-impaired users again will find it harder to select the field.&lt;/li&gt;
+  &lt;li&gt;Screen reader users will find it difficult because the placeholder is not announced.&lt;/li&gt;
+  &lt;li&gt;If a foreigner wants to translate the page using the browser’s translation routine, the placeholder is ignored which causes confusion.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
-&lt;p&gt;Accommodating labels into a visual design can be challenging but &lt;a href=&quot;https://medium.com/simple-human/the-design-challenge-6b2d5346da7a&quot;&gt;shying away from the challenge&lt;/a&gt; is not the answer. Embrace the challenge, don’t over simplify. And of course, &lt;strong&gt;always use a label.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;It’s easy for a visual designer who has good vision to discard the label in pursuit of a minimal aesthetic. But as we’ve seen this causes problems for others.&lt;/p&gt;
+
+&lt;p&gt;Accomodating a visual label might be a &lt;a href=&quot;/articles/the-design-challenge/&quot;&gt;challenge&lt;/a&gt;, but it’s a challenge that we should embrace, not avoid. By including a label we can ensure our forms are easy to use for all sorts of people.&lt;/p&gt;
 </content>
 		</entry>
 	
