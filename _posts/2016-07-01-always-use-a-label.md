@@ -5,85 +5,53 @@ date: 2016-07-01 09:00:01
 categories: design ux
 ---
 
-Sometimes designers oversimplify a form by removing labels. This is problematic because [minimal does not always mean simple](http://uxmyths.com/post/115783813605/myth-34-simple-minimal). When it comes to labels, this definitely applies. Labels, in fact, are an essential part of designing easy-to-use forms. Here’s why:
+You might be tempted to remove labels from certain form controls to create a minimal aesthetic. This is a common [UX fallacy](http://uxmyths.com/post/115783813605/myth-34-simple-minimal) which can lead to subpar experiences.
 
-**A) Sighted users will see the instructions** and know what to do. Without a
-label this is challenging at best.
+Labels are essential because:
 
-<div class="image">
-	<figure>
-		<img src="{{ site.url }}/assets/img/labels/1.png" alt="The visual label helps sighted users understand what to type" width="100%" style="max-width: 400px;">
-		<figcaption>The visual label helps sighted users understand what to type</figcaption>
-	</figure>
-</div>
+1. *sighted* users will be able to see the instructions;
+2. *visually-impaired* users will hear the instructions when using a screen reader; and
+3. *motor-impaired* users will find it easier to select a field thanks to the larger hit area. This is because clicking a label will move focus to the control.
 
-**B) Visually-impaired users will hear the instructions** when using a
-screen reader. Without a label this is impossible.
+Let's take a look at two examples whereby designers frequently ditch the label.
 
-<div class="image">
-	<figure>
-		<img src="{{ site.url }}/assets/img/labels/2.png" alt="“Username” will be read out by screen readers" width="100%" style="max-width: 400px;">
-		<figcaption>“Username” will be read out by screen readers</figcaption>
-	</figure>
-</div>
+## 1. Add to basket form
 
-**C) Motor-impaired users will find it easier** to activate a control using a
-mouse or finger, due to the hit region increasing in size. This is because
-clicking (or tapping) a label acts as if the user clicked the control itself.
-
-<div class="image">
-	<figure>
-		<img src="{{ site.url }}/assets/img/labels/3.png" alt="Larger hit area helps motor-impaired users activate a control" width="100%" style="max-width: 400px;">
-		<figcaption>Larger hit area helps motor-impaired users activate a control</figcaption>
-	</figure>
-</div>
-
-## But sort/size/colour/quantity menus don’t need labels do they?
-
-They do and unfortunately, it’s rather common to find missing labels on product forms.
-[ASOS](http://www.asos.com/ASOS/ASOS-Oversized-Long-Sleeve-T-Shirt-With-Mock-Underlayer/Prod/pgeproduct.aspx?iid=6593813&cid=13084&sh=0&pge=0&pgesize=36&sort=-1&clr=Grey&totalstyles=604&gridsize=3) suffers from this problem as you can see below:
+When a form uses a select menu, designers sometimes rely on the first option in the list to denote meaning. Take a look at ASOS's *add to basket* form.
 
 <div class="image">
 	<figure>
 		<img src="{{ site.url }}/assets/img/labels/asos.jpeg" alt="ASOS’ product form omits labels on drop downs" width="100%" style="max-width: 350px">
-		<figcaption>ASOS’ product form omits labels on drop downs</figcaption>
+		<figcaption>The menus are mising labels</figcaption>
 	</figure>
 </div>
 
-Instead of a label, they rely on the first *option* in the menu to provide meaning. Whilst this is *sort of* okay for *visual* users in the non-selected state, it *does* suffer from points B and C — *and* A when a value has been selected — as is the case with the colour menu as shown above.
+### Notes
 
-[House of Fraser](http://www.houseoffraser.co.uk/Polo+Ralph+Lauren+Short-Sleeve+V-Neck+T-Shirt/233780500,default,pd.html) shows a label next to the quantity menu improving usabilty for everyone:
+* This is *okay* for visual users when an option hasn't been selected yet. But, if one has been selected, it's hard to understand, as is the case with the colour menu shown above.
+* Motor-impaired users will find it harder to select the field due to the smaller hit area.
+* Screen reader users won't understand the values that are being read out. And when they are read out it will be disorientating for the values to be read out as "Select size, Small, Medium, Large". One is the instruction, and one is a value.
 
-<div class="image">
-	<figure>
-		<img src="{{ site.url }}/assets/img/labels/hof.jpeg" alt="House of Fraser has a label for their quantity menu" width="100%" style="max-width: 350px">
-		<figcaption>House of Fraser has a label for their quantity menu</figcaption>
-	</figure>
-</div>
+## 2. Search form
 
-## But a simple search form doesn’t need a label does it?
-
-It does and unfortunately, search forms are often designed without a label. For example, [Selfridges'](http://www.selfridges.com/) search form is missing a label:
+When a form has just one field&mdash;as would be the case with a search form&mdash;designers rely on placeholder text and the submit button to denote meaning. Take a look at [Selfridges'](http://www.selfridges.com/) search form.
 
 <div class="image">
 	<figure>
 		<img src="{{ site.url }}/assets/img/labels/selfridges.png" alt="Selfridges’ search form omits the label" width="100%" style="max-width: 350px;">
-		<figcaption>Selfridges’ search form omits the label</figcaption>
+		<figcaption>The search field is missing a label</figcaption>
 	</figure>
 </div>
 
-Instead of a label, they rely on the submit button (in this case a magnifying glass) and the placeholder to provide meaning. But this is unnecessarily difficult to use for less abled people — and of course — [placeholders should not be used as a replacement for
-labels](/articles/why-placeholders-are-problematic).
+### Notes
 
-[Smashing Magazine](https://www.smashingmagazine.com/author/adamsilver/) shows that including a label can be beautiful *and* functional at the same time:
-
-<div class="image">
-	<figure>
-		<img src="{{ site.url }}/assets/img/labels/smashing.jpeg" alt="Smashing Magazine’s search form uses a label" width="100%" style="max-width: 350px;">
-		<figcaption>Smashing Magazine’s search form uses a label</figcaption>
-	</figure>
-</div>
+* Visual users will be okay to begin with due to the placeholder. But [ placeholders are problematic](/articles/why-placeholders-are-problematic) for many reasons. One example is that once the user starts typing the instruction disappears.
+* Motor-impaired users again will find it harder to select the field.
+* Screen reader users will find it difficult because the placeholder is not announced.
+* If a foreigner wants to translate the page using the browser's translation routine, the placeholder is ignored which causes confusion.
 
 ## Summary
 
-Accommodating labels into a visual design can be challenging but [shying away from the challenge](https://medium.com/simple-human/the-design-challenge-6b2d5346da7a) is not the answer. Embrace the challenge, don’t over simplify. And of course, **always use a label.**
+It's easy for a visual designer who has good vision to discard the label in pursuit of a minimal aesthetic. But as we've seen this causes problems for others.
+
+Accomodating a visual label might be a [challenge](/articles/the-design-challenge/), but it's a challenge that we should embrace, not avoid. By including a label we can ensure our forms are easy to use for all sorts of people.
