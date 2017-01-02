@@ -5,7 +5,7 @@ date: 2016-07-01 09:00:01
 categories: design ux
 ---
 
-You might be tempted to remove labels from certain form controls to create a minimal aesthetic and save space. But it's a [UX myth](http://uxmyths.com/post/115783813605/myth-34-simple-minimal) that saving space and minimalist design equates to better experiences.
+You might be tempted to remove labels from some form controls to create a minimal aesthetic and save space. But it's a [UX myth](http://uxmyths.com/post/115783813605/myth-34-simple-minimal) that saving space and minimalist design equates to better experiences.
 
 Labels are essential because:
 
@@ -30,7 +30,7 @@ When a form uses a select menu, designers sometimes rely on the first option in 
 
 * This is *okay* for visual users when an option hasn't been selected yet. But, if one has been selected, it's hard to understand, as is the case with the colour menu shown above.
 * Motor-impaired users will find it harder to select the field due to the smaller hit area.
-* Screen reader users won't understand the values that are being read out. And when they are read out it will be disorientating for the values to be read out as "Select size, Small, Medium, Large". One is the instruction, and one is a value.
+* Screen reader users will struggle to understand what's going on. The values will be announced as "Select size, Small, Medium, Large"&mdash;that is, they're a mix of instructions and options to pick.
 
 ## 2. Search form
 
@@ -52,6 +52,6 @@ When a form has just one field&mdash;as would be the case with a search form&mda
 
 ## Summary
 
-Trying to declutter an interface and reduce noise is a noble goal. But labels aren't noise. Removing labels to save space and create a minimal aesthetic causes unnecessary usability problems.
+Trying to declutter an interface to reduce noise is a noble goal. But labels aren't noise. Removing labels to save space causes unnecessary usability problems.
 
-Accomodating a visual label might be a [design challenge](/articles/the-design-challenge/), but we should embrace this challenge by prioritising their inclusion during the design. This ensures our forms are user-friendly for everyone.
+Accomodating a visual label might be a [design challenge](/articles/the-design-challenge/), but we should embrace this challenge by prioritising their inclusion during the early stages of design. This ensures our forms are user-friendly.
