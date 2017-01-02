@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-01-01T11:28:41+00:00</updated>
+	<updated>2017-01-02T09:07:11+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -567,7 +567,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 			<link href="http://adamsilver.io/articles/always-use-a-label/"/>
 			<updated>2016-07-01T10:00:01+01:00</updated>
 			<id>http://adamsilver.io/articles/always-use-a-label</id>
-			<content type="html">&lt;p&gt;You might be tempted to remove labels from certain form controls to create a minimal aesthetic. This is a common &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;UX fallacy&lt;/a&gt; which can lead to subpar experiences.&lt;/p&gt;
+			<content type="html">&lt;p&gt;You might be tempted to remove labels from certain form controls to create a minimal aesthetic and save space. It’s a &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;UX myth&lt;/a&gt; that saving space and minimalism design equates to better experiences.&lt;/p&gt;
 
 &lt;p&gt;Labels are essential because:&lt;/p&gt;
 
@@ -620,9 +620,9 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
-&lt;p&gt;It’s easy for a visual designer who has good vision to discard the label in pursuit of a minimal aesthetic. But as we’ve seen this causes problems for others.&lt;/p&gt;
+&lt;p&gt;Trying to declutter an interface and reduce noise is a noble goal. But labels aren’t noise. Removing labels to save space and create a minimal aesthetic causes unnecessary usability problems.&lt;/p&gt;
 
-&lt;p&gt;Accomodating a visual label might be a &lt;a href=&quot;/articles/the-design-challenge/&quot;&gt;challenge&lt;/a&gt;, but it’s a challenge that we should embrace, not avoid. By including a label we can ensure our forms are easy to use for all sorts of people.&lt;/p&gt;
+&lt;p&gt;Accomodating a visual label might be a &lt;a href=&quot;/articles/the-design-challenge/&quot;&gt;design challenge&lt;/a&gt;, but we should embrace this challenge by prioritising their inclusion during the design. This ensures our forms are user-friendly for everyone.&lt;/p&gt;
 </content>
 		</entry>
 	
@@ -631,9 +631,9 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 			<link href="http://adamsilver.io/articles/placeholders-are-problematic/"/>
 			<updated>2016-06-16T10:00:01+01:00</updated>
 			<id>http://adamsilver.io/articles/placeholders-are-problematic</id>
-			<content type="html">&lt;p&gt;Since placeholders came along, designers have adopted them as means of storing hints. Their appeal lies in their minimal aesthetic. But &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;minimal does not always mean simple&lt;/a&gt;.&lt;/p&gt;
+			<content type="html">&lt;p&gt;Since placeholders came along, designers have adopted them as means of storing hints. Their appeal lies in their minimal aesthetic and the fact they save space.&lt;/p&gt;
 
-&lt;p&gt;Some designers go gone one step further, and replace labels with placeholders. Either way, the placeholder is an Inclusive Design anti-pattern which causes problems for users. Here’s why:&lt;/p&gt;
+&lt;p&gt;Some designers go one one step further, and replace labels with placeholders. Either way, the placeholder is an Inclusive Design anti-pattern which causes problems for users. Here’s why:&lt;/p&gt;
 
 &lt;h2 id=&quot;its-easy-to-forget&quot;&gt;1. It’s easy to forget&lt;/h2&gt;
 
@@ -657,9 +657,9 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;populated-values-are-hard-understand&quot;&gt;3. Populated values are hard understand&lt;/h2&gt;
+&lt;h2 id=&quot;populated-values-lack-clarity&quot;&gt;3. Populated values lack clarity&lt;/h2&gt;
 
-&lt;p&gt;Whilst a missing label is fatal, a missing hint is still problematic. The hint is still valuable to a user when editing a field.&lt;/p&gt;
+&lt;p&gt;It’s obvious that a missing label is fatal. But if the hint is missing, a user will find it harder to provide an answer.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
@@ -668,9 +668,9 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;reviewing-a-long-form-is-difficult&quot;&gt;4. Reviewing a long form is difficult&lt;/h2&gt;
+&lt;h2 id=&quot;reviewing-entries-before-submission-is-difficult&quot;&gt;4. Reviewing entries before submission is difficult&lt;/h2&gt;
 
-&lt;p&gt;A user will need to memorise all the hints in order to check their form entries before submission. This is because as each form field is filled out, the hint disappears.&lt;/p&gt;
+&lt;p&gt;A user will need to memorise all the hints in order to check their form entries before submission. This is because as each form field is filled out, the hint disappears. The more fields there are the bigger the problem.&lt;/p&gt;
 
 &lt;h2 id=&quot;errors-are-hard-to-fix&quot;&gt;5. Errors are hard to fix&lt;/h2&gt;
 
@@ -683,7 +683,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;You could write a verbose error message. For example “Expiry date must only contain numbers” instead of “Must be a number”. But this doesn’t entirely solve the problem.&lt;/p&gt;
+&lt;p&gt;You could write a verbose error message. For example &lt;em&gt;“Your password must be at least 8 characters”&lt;/em&gt; instead of &lt;em&gt;“Must be at least 8 characters”&lt;/em&gt;. But this doesn’t entirely solve the problem.&lt;/p&gt;
 
 &lt;h2 id=&quot;some-browsers-hide-the-placeholder-on-focus&quot;&gt;6. Some browsers hide the placeholder on focus&lt;/h2&gt;
 
@@ -748,11 +748,11 @@ equivalent of a blank box.&lt;/p&gt;
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
-&lt;p&gt;Some people ask me if it’s okay to use a placeholder in addition to a label. I say that if the hint is valuable to the user, we should make it easy-to-read and readily accessible. The placeholder doesn’t work well for this.&lt;/p&gt;
+&lt;p&gt;Some people ask me if it’s okay to use a placeholder in addition to a label. I say that if the hint is valuable to the user, we should make it easy-to-read and readily accessible. The placeholder doesn’t meet these requirements.&lt;/p&gt;
 
-&lt;p&gt;Others say that the placeholder is just an enhancement and not essential to the user. To this I say that if the hint is not essential then don’t bother including it. Not every field needs a hint.&lt;/p&gt;
+&lt;p&gt;Others say that the placeholder is just an enhancement and not essential to the user. To this I say that if the hint isn’t essential then don’t include it. Content is not an enhancement.&lt;/p&gt;
 
-&lt;p&gt;In any case, these problems are easy to avoid. &lt;a href=&quot;/articles/always-use-a-label/&quot;&gt;Always use a label&lt;/a&gt;. And if you need a hint, put it next to the field so that users can reference it easily.&lt;/p&gt;
+&lt;p&gt;It’s clear—at least in the case of placeholders—that &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;minimal does not mean simple&lt;/a&gt;. Avoid placeholders. &lt;a href=&quot;/articles/always-use-a-label/&quot;&gt;Always use a label&lt;/a&gt;. And if you need a hint, put it next to the field so that it’s easy to reference.&lt;/p&gt;
 </content>
 		</entry>
 	
