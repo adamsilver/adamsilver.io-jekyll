@@ -5,7 +5,7 @@ date: 2016-07-01 09:00:01
 categories: design ux
 ---
 
-You might be tempted to remove labels from certain form controls to create a minimal aesthetic and save space. It's a [UX myth](http://uxmyths.com/post/115783813605/myth-34-simple-minimal) that saving space and minimalism design equates to better experiences.
+You might be tempted to remove labels from certain form controls to create a minimal aesthetic and save space. But it's a [UX myth](http://uxmyths.com/post/115783813605/myth-34-simple-minimal) that saving space and minimalist design equates to better experiences.
 
 Labels are essential because:
 
