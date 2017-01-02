@@ -5,7 +5,7 @@ date: 2016-07-01 09:00:01
 categories: design ux
 ---
 
-You might be tempted to remove labels from certain form controls to create a minimal aesthetic. This is a common [UX fallacy](http://uxmyths.com/post/115783813605/myth-34-simple-minimal) which can lead to subpar experiences.
+You might be tempted to remove labels from certain form controls to create a minimal aesthetic and save space. It's a [UX myth](http://uxmyths.com/post/115783813605/myth-34-simple-minimal) that saving space and minimalism design equates to better experiences.
 
 Labels are essential because:
 
@@ -52,6 +52,6 @@ When a form has just one field&mdash;as would be the case with a search form&mda
 
 ## Summary
 
-It's easy for a visual designer who has good vision to discard the label in pursuit of a minimal aesthetic. But as we've seen this causes problems for others.
+Trying to declutter an interface and reduce noise is a noble goal. But labels aren't noise. Removing labels to save space and create a minimal aesthetic causes unnecessary usability problems.
 
-Accomodating a visual label might be a [challenge](/articles/the-design-challenge/), but it's a challenge that we should embrace, not avoid. By including a label we can ensure our forms are easy to use for all sorts of people.
+Accomodating a visual label might be a [design challenge](/articles/the-design-challenge/), but we should embrace this challenge by prioritising their inclusion during the design. This ensures our forms are user-friendly for everyone.
