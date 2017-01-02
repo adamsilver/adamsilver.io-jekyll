@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-01-02T09:07:11+00:00</updated>
+	<updated>2017-01-02T09:08:48+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -567,7 +567,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 			<link href="http://adamsilver.io/articles/always-use-a-label/"/>
 			<updated>2016-07-01T10:00:01+01:00</updated>
 			<id>http://adamsilver.io/articles/always-use-a-label</id>
-			<content type="html">&lt;p&gt;You might be tempted to remove labels from certain form controls to create a minimal aesthetic and save space. It’s a &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;UX myth&lt;/a&gt; that saving space and minimalism design equates to better experiences.&lt;/p&gt;
+			<content type="html">&lt;p&gt;You might be tempted to remove labels from certain form controls to create a minimal aesthetic and save space. But it’s a &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;UX myth&lt;/a&gt; that saving space and minimalist design equates to better experiences.&lt;/p&gt;
 
 &lt;p&gt;Labels are essential because:&lt;/p&gt;
 
