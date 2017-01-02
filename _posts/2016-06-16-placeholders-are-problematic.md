@@ -5,9 +5,9 @@ date: 2016-06-16 09:00:01
 categories: design ux
 ---
 
-Since placeholders came along, designers have adopted them as means of storing hints. Their appeal lies in their minimal aesthetic. But [minimal does not always mean simple](http://uxmyths.com/post/115783813605/myth-34-simple-minimal).
+Since placeholders came along, designers have adopted them as means of storing hints. Their appeal lies in their minimal aesthetic and the fact they save space.
 
-Some designers go gone one step further, and replace labels with placeholders. Either way, the placeholder is an Inclusive Design anti-pattern which causes problems for users. Here's why:
+Some designers go one one step further, and replace labels with placeholders. Either way, the placeholder is an Inclusive Design anti-pattern which causes problems for users. Here's why:
 
 ## 1. It's easy to forget
 
@@ -31,9 +31,9 @@ The placeholder disappears when the user types. Once it's gone it's hard to reme
 	</figure>
 </div>
 
-## 3. Populated values are hard understand
+## 3. Populated values lack clarity
 
-Whilst a missing label is fatal, a missing hint is still problematic. The hint is still valuable to a user when editing a field.
+It's obvious that a missing label is fatal. But if the hint is missing, a user will find it harder to provide an answer.
 
 <div class="image">
 	<figure>
@@ -42,9 +42,9 @@ Whilst a missing label is fatal, a missing hint is still problematic. The hint i
 	</figure>
 </div>
 
-## 4. Reviewing a long form is difficult
+## 4. Reviewing entries before submission is difficult
 
-A user will need to memorise all the hints in order to check their form entries before submission. This is because as each form field is filled out, the hint disappears.
+A user will need to memorise all the hints in order to check their form entries before submission. This is because as each form field is filled out, the hint disappears. The more fields there are the bigger the problem.
 
 ## 5. Errors are hard to fix
 
@@ -57,7 +57,7 @@ Errors are hard to fix because the message and the value lack context. And the h
 	</figure>
 </div>
 
-You could write a verbose error message. For example "Expiry date must only contain numbers" instead of "Must be a number". But this doesn't entirely solve the problem.
+You could write a verbose error message. For example *"Your password must be at least 8 characters"* instead of *"Must be at least 8 characters"*. But this doesn't entirely solve the problem.
 
 ## 6. Some browsers hide the placeholder on focus
 
@@ -122,8 +122,8 @@ The browser's auto-completion routine populates the fields automatically. This m
 
 ## Summary
 
-Some people ask me if it's okay to use a placeholder in addition to a label. I say that if the hint is valuable to the user, we should make it easy-to-read and readily accessible. The placeholder doesn't work well for this.
+Some people ask me if it's okay to use a placeholder in addition to a label. I say that if the hint is valuable to the user, we should make it easy-to-read and readily accessible. The placeholder doesn't meet these requirements.
 
-Others say that the placeholder is just an enhancement and not essential to the user. To this I say that if the hint is not essential then don't bother including it. Not every field needs a hint.
+Others say that the placeholder is just an enhancement and not essential to the user. To this I say that if the hint isn't essential then don't include it. Content is not an enhancement.
 
-In any case, these problems are easy to avoid. [Always use a label](/articles/always-use-a-label/). And if you need a hint, put it next to the field so that users can reference it easily.
+It's clear&mdash;at least in the case of placeholders&mdash;that [minimal does not mean simple](http://uxmyths.com/post/115783813605/myth-34-simple-minimal). Avoid placeholders. [Always use a label](/articles/always-use-a-label/). And if you need a hint, put it next to the field so that it's easy to reference.
