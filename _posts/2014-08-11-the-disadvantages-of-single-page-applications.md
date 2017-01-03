@@ -39,32 +39,32 @@ Therefore the application will need to differentiate between a user changing the
 
 ## 2. Remembering scroll position
 
-Browsers conveniently remember the scroll position of pages you have visited. Daniel Puplus explains that:
+Browsers conveniently remember the scroll position of pages you have visited. Daniel Puplus explains how SPAs tend to have trouble with this:
 
 > &ldquo;Lots of sites get this wrong and it’s really annoying. When the user navigates using the browser’s forward or back button the scroll position should be the same as it was last time they were on the page. This sometimes works correctly on Facebook but sometimes doesn’t. Google+ always seems to lose your scroll position.&rdquo;
 
-Clicking forward or back should remember the scroll position. But as SPAs rely on faux navigation, the application will need to reimplement it. To do this it will need a mechanism to store the scroll position, and retrieve and set it accordingly.
+Because SPAs rely on faux navigation, they need a mechanism of their own to store the scroll position, and to retrieve and set it accordingly.
 
 ## 3. Cancelling navigation
 
 Consider what a browser gives us for free:
 
 1. If a user clicks the *cancel* button, the browser will stop any in-flight requests.
-2. If a user clicks a link, the browser will cancel any in-flight request and start the new request.
+2. If a user clicks a link, the browser will again, stop any in-flight requests and make the new one.
 
-As SPAs retrieve pages with AJAX, several page requests could be in-flight at the same time. The first page request could be loaded last, even though the browser would normally cancel it when a user makes a subsequent request. A user may even click (and therefore request) the same link twice.
+As SPAs retrieve pages via AJAX, there could be several requests in-flight simultaneously. The first page request could be loaded last. A user may even click (and therefore request) the same link twice.
 
 This is problematic because:
 
 - it's inefficient;
 - the user's data allowance is eaten up unnecessarily; and
-- it causes visual glitches as subsequent requests finish and the DOM updates.
+- it causes visual glitches as a page request finishes.
 
-You'll need to recreate this browser functionality somehow. First you'll need to expose a cancel button, which is obviously undesirable. And the application will have to handle duplicate requests.
+You'll need to reimplement the browser's functionality in Javascript. First you'll need to expose a cancel button, which is obviously undesirable. And second you'll need to handle duplicate requests.
 
 ## 4. Navigation and data loss
 
-We may want to warn users about losing unsaved changes. We can use the `beforeunload` event to do this which the browser provides for free. But, with SPAs, the Javascript handles the routing. This means you'll need to replicate this functionality i.e. `beforeRouting`.
+We may want to warn users about losing unsaved changes. The browser provides the `beforeunload` event to do this. But, an SPA will need to recreate this functionality in Javascript perhaps with a `beforeRouting` event.
 
 ## 5. Search engine ranking
 
