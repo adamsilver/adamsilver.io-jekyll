@@ -6,28 +6,36 @@ categories: js spas featured
 description: SPAs are full of pitfalls. There are many reasons why.
 ---
 
-Single Page Applications (SPAs) have become extremely popular on the web, because they *supposedly* [provide a more fluid experience](http://en.wikipedia.org/wiki/Single-page_application). The thing is, SPAs introduce a host of problems. Before explaining what these are I first want to make clear what a Single Page Application actually is.
+Single Page Applications (SPAs) supposedly provide a better, more fluid experience. Having built several SPAs over the years I've found there to be many problems with them, from both a technical and usability perspective.
+
+Before we discuss the problems, let's first define what an SPA is or perhaps more importantly, what it is not.
 
 ## What exactly is an SPA?
 
-You may associate MVC, MVVM, AJAX and client-side templating with SPAs. But, you would be confused because you can use all of these techniques to build a traditional multi-page, ROCA website.
+You may be tempted to associate certain technologies or patterns with an SPA, such as MVC, MVVM, AJAX and client-side templates. But we can use these technologies and patterns to build multi-page, ROCA-style web applications.
 
-What really defines an SPA is the fact that client-side Javascript code manages the routing behaviour instead of the browser. And this is the root cause of all the problems inherent to SPAs. Let's take a look now.
+What *really* defines an SPA is the fact that client-side Javascript handles the routing, instead of the server. That is, the the browser no longer handles the *browsing*.
+
+When you put it like that, it should be of no surprise as to why SPAs are so problematic. Let's find out why that is.
 
 ## 1. Navigation and fast back
 
-Browsers store history, meaning pages load quickly when the user presses the *back* button. SPAs need to recreate this functionality. As [Daniel Puplus says in his article](https://medium.com/joys-of-javascript/4353246f4480):
+Browsers store history so that pages load quickly when the user presses the *back* button. Daniel Puplus explains in [Building Single Page Applications](https://medium.com/joys-of-javascript/4353246f4480) that:
 
 > &ldquo;Back should be quick; users don’t expect data to have changed much.<br><br>
 > &ldquo;When a user presses the browser’s back button they expect the change to happen quickly and for the page to be in a similar state to how it was last time they saw it.<br><br>
 > &ldquo;In the traditional web model the browser will typically be able use a cached version of the page and linked resources.<br><br>
 > &ldquo;In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.&rdquo;
 
-When 'navigating', the application will need a way of storing and retrieving 'pages' from a cache. Unless you want to slow down the loading of 'pages'. But isn't that meant to be one of the benefits? Storage options include memory, local (or session) storage, client-side database and cookies.
+One of the apparent benefits to SPAs is their speed. So if you don't want users to experience slow loading pages, you'll need to recreate the native browser behaviour in Javascript.
 
-*The words 'navigating' and 'pages' are in quotes because SPAs, by definition, don't have the concept of navigation and pages in the traditional sense. I'll stop quoting these words for brevity.*
+To do this the application will need a mechanism to store and retrieve 'pages' from a cache. Your options may include memory, local or session storage, client-side databases or cookies.
 
-The application also needs to determine *when* to store and retrieve pages from the cache. Navigation typically uses *pushState* or *hashchange*. Therefore the application will need to differentiate between a user changing the URL (by clicking a link or typing a URL in the location bar) or [manually pressing back or forward, which is not straightforward](http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button).
+*The words 'navigating' and 'pages' are in quotes because SPAs, by definition, don't have the concept of navigation and pages in the traditional sense. I'll stop quoting these words for brevity from now on.*
+
+The application also needs to determine *when* to store and retrieve pages from the cache. Navigation typically uses `pushState` or `hashchange`.
+
+Therefore the application will need to differentiate between a user changing the URL (by clicking a link or typing a URL in the location bar) or [manually pressing back or forward, which is not simple](http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button).
 
 ## 2. Remembering scroll position
 
@@ -35,7 +43,7 @@ Browsers conveniently remember the scroll position of pages you have visited. Da
 
 > &ldquo;Lots of sites get this wrong and it’s really annoying. When the user navigates using the browser’s forward or back button the scroll position should be the same as it was last time they were on the page. This sometimes works correctly on Facebook but sometimes doesn’t. Google+ always seems to lose your scroll position.&rdquo;
 
-Clicking forward or back should remember the scroll position. But as SPAs rely on faux navigation, this functionality is lost. To reimplement it, the application will need to store the scroll position. Then later the position will need to be retrieved and applied accordingly.
+Clicking forward or back should remember the scroll position. But as SPAs rely on faux navigation, the application will need to reimplement it. To do this it will need a mechanism to store the scroll position, and retrieve and set it accordingly.
 
 ## 3. Cancelling navigation
 
@@ -49,7 +57,7 @@ As SPAs retrieve pages with AJAX, several page requests could be in-flight at th
 This is problematic because:
 
 - it's inefficient;
-- the user's data allowance is eaten up unnecessarily; and 
+- the user's data allowance is eaten up unnecessarily; and
 - it causes visual glitches as subsequent requests finish and the DOM updates.
 
 You'll need to recreate this browser functionality somehow. First you'll need to expose a cancel button, which is obviously undesirable. And the application will have to handle duplicate requests.

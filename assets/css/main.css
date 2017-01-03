@@ -129,130 +129,156 @@ hr {
 }
 
 .mainContent h1 {
-	margin: 0 20px 15px;
-	font-size: 3.1em;
-	line-height: 1.25em;
+	font-size: 3em;
+	line-height: 1.2;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 20px 20px;
+	color: #222;
+	letter-spacing: -0.01em;
 	font-family: 'Open sans';
 }
 
 @media(min-width: 600px) {
 	.mainContent h1 {
-		font-size: 3.8em;
+		font-size: 4.5em;
 	}
 }
 
 .mainContent h2 {
-	margin: 0 20px 10px;
-	font-size: 2.3em;
-	line-height: 1.5;
-	letter-spacing: 0.01em;
+	font-size: 2.2em;
+	line-height: 1.2;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	padding: 0 20px;
+	color: #222;
+	letter-spacing: -0.001em;
 	font-family: 'Open sans';
 }
 
 @media(min-width: 600px) {
 	.mainContent h2 {
-		font-size: 2.9em;
-		margin-bottom: 5px;
-		line-height: 1.5;
+		font-size: 2.5em;
+		margin-bottom: 15px;
 	}
 }
 
 .mainContent h3 {
-	margin: 0 20px 10px;
 	font-size: 1.6em;
-	line-height: 1.4;
+	line-height: 1.2;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	padding: 0 20px;
+	color: #222;
 	text-transform: uppercase;
-	letter-spacing: 0.03em;
 	font-family: 'Open sans';
 }
 
 @media(min-width: 600px) {
 	.mainContent h3 {
 		font-size: 1.9em;
+		margin-bottom: 15px;
 	}
 }
 
 .mainContent p {
-	margin: 0 20px 20px;
-	font-size: 1.7em;
-	line-height: 1.8;
+	font-size: 1.8em;
+	line-height: 1.7em;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	padding: 0 20px 10px;
+	color: #222;
 }
 
 @media(min-width: 600px) {
 	.mainContent p {
-		font-size: 1.9em;
-		margin-bottom: 25px;
-	}
-}
-
-.mainContent p code {
-	background: #fafafa;
-	font-size: 1.3em;
-}
-
-.mainContent pre {
-	font-family: Monaco,'Courier New','Courier',monospace;
-	font-size: 1.9em;
-	background-color: #fafafa;
-	margin-bottom: 20px;
-	padding: 20px;
-	white-space: pre-wrap;       /* css-3 */
-	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-	white-space: -pre-wrap;      /* Opera 4-6 */
-	white-space: -o-pre-wrap;    /* Opera 7 */
-	word-wrap: break-word;       /* Internet Explorer 5.5+ */
-}
-
-@media(min-width: 600px) {
-	.mainContent pre {
-		font-size: 2.6em;
+		font-size: 2.2em;
 		margin-bottom: 30px;
 	}
 }
 
-.mainContent blockquote {
-	margin: 0 20px 35px;
-	font-style: italic;
-	border-left: 4px solid #333;
-}
-
-.mainContent blockquote p {
-	font-size: 1.6em;
+.mainContent ol,
+.mainContent ul {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 25px;
+	padding: 0 20px 10px;
+	color: #222;
 }
 
 @media(min-width: 600px) {
-	.mainContent blockquote p {
-		font-size: 1.9em;
+	.mainContent ol,
+	.mainContent ul {
+		margin-bottom: 30px;
 	}
+}
+
+.mainContent ol li,
+.mainContent ul li {
+	font-size: 1.8em;
+	line-height: 1.7em;
+	margin-left: 30px;
+	margin-bottom: 5px;
+}
+
+@media(min-width: 600px) {
+	.mainContent ol li,
+	.mainContent ul li {
+		font-size: 2.2em;
+		margin-bottom: 10px;
+	}
+}
+
+.mainContent blockquote {
+	font-style: italic;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	padding: 0 20px;
+	color: #222;
 }
 
 .mainContent blockquote cite {
 	font-weight: bold;
 }
 
-.mainContent ol,
-.mainContent ul {
-	margin: 0 20px 30px 50px;
+.mainContent p code,
+.mainContent ul code,
+.mainContent li code {
+	font-size: 1.3em;
+	color: #0074D9;
+}
+
+.mainContent pre {
+	font-family: Monaco,'Courier New','Courier',monospace;
+	font-size: 2.3em;
+	color: #222;
+	background-color: #fffee1;
+	margin-bottom: 30px;
+	padding: 20px;
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @media(min-width: 600px) {
-	.mainContent ol,
-	.mainContent ul {
+	.mainContent pre {
+		font-size: 2.7em;
 		margin-bottom: 45px;
-		margin-right: 60px;
-	}
-}
-
-.mainContent ol li,
-.mainContent ul li {
-	font-size: 1.6em;
-	line-height: 1.8;
-}
-
-@media(min-width: 600px) {
-	.mainContent ol li,
-	.mainContent ul li {
-		font-size: 1.9em;
 	}
 }
 
@@ -322,6 +348,7 @@ hr {
 	letter-spacing: 0.01em;
 	text-transform: uppercase;
 	color: #0074D9;
+	font-family: 'Open sans';
 }
 
 @media(min-width: 600px) {
@@ -332,14 +359,19 @@ hr {
 }
 
 .signUpHero-description {
-	margin-bottom: 25px;
-	font-size: 1.6em;
-	line-height: 1.8;
+	font-size: 1.8em;
+	line-height: 1.7;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	color: #222;
 }
 
 @media(min-width: 600px) {
 	.signUpHero-description {
-		font-size: 1.9em;
+		font-size: 2.2em;
+		margin-bottom: 30px;
 	}
 }
 
@@ -387,10 +419,10 @@ hr {
 
 .mainContent .articleList-articleTitle {
 	max-width: 400px;
-	margin: 0 20px;
+	margin: 0;
 	font-size: 1.8em;
 	line-height: 1.5;
-	letter-spacing: 0.03em;
+	letter-spacing: -0.01em;
 }
 
 @media(min-width: 600px) {
@@ -413,7 +445,7 @@ hr {
 **********************************************************/
 
 .mainContent .meta {
-	margin: 0 20px;
+	margin: 0;
 	font-size: 1.3em;
 	line-height: 1.7em;
 	letter-spacing: 0.02em;
@@ -448,8 +480,9 @@ hr {
 	display: inline-block;
     margin-left: 7px;
     margin-right: 7px;
-    font-size: 1.7em;
+    font-size: 1.5em;
     margin-bottom: 10px;
+    font-family: 'Open sans';
 }
 
 .nav ul li:first-child {
@@ -493,17 +526,13 @@ hr {
 }
 
 .footer p {
-	font-size: 1.7em;
+	font-size: 1.5em;
+	line-height: 1.5;
 	max-width: 660px;
 	margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
-}
-
-.footer a {
-	display: inline-block;
-	margin-right: 7px;
-	margin-left: 7px;
+    font-family: 'Open sans';
 }
 
 /**********************************************************
@@ -632,8 +661,8 @@ hr {
 
 .signUpForm-label,
 .signUpHero-label {
-	font-size: 1.6em;
-	line-height: 1.8;
+	font-size: 1.8em;
+	line-height: 1.5;
 	margin-bottom: 5px;
 	display: block;
 }
@@ -641,7 +670,7 @@ hr {
 @media(min-width: 600px) {
 	.signUpForm-label,
 	.signUpHero-label {
-		font-size: 1.9em;
+		font-size: 2.2em;
 	}
 }
 
@@ -649,7 +678,7 @@ hr {
 .signUpHero-email {
 	font-size: 1.6em;
 	width: 100%;
-	padding: 10px 10px;
+	padding: 10px;
 	margin-right: 5px;
 	margin-bottom: 15px;
 	box-sizing: border-box;

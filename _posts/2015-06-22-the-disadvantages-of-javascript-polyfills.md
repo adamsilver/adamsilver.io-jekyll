@@ -6,101 +6,108 @@ categories: js polyfills
 description: Javascript polyfills are ever-present in the front end industry, but they are very problematic and unnecessary.
 ---
 
-A polyfill, also known as a shim, is a user defined implementation of an API that a developer expects a browser to provide natively, normalising browser differences.
+A polyfill, also known as a shim, is a user-defined implementation of an API that some browsers provide natively, normalising browser differences.
 
-As a huge proponent of the outside-in approach to development, I can see the lure to try to develop web applications as if all browsers are the same.
+As a huge proponent of the [outside-in approach to development](/articles/developing-templates-using-an-outside-in-approach), I see the lure of trying to develop websites as if all browsers are the same.
 
-However, this article discusses the problems you face when attempting to tame browsers in this way, which ultimately results in unreliable Javascript, unreliable web pages and of course, unhappy *users*.
+However, this article discusses the problems we face when attempting to tame browsers in this way, which ultimately results in unreliable Javascript, unreliable web pages and of course, unhappy users.
 
-## 1. Augmenting host objects is a bad idea.
+## 1. Augmenting host objects is a bad idea
 
-Polyfills *must* augment host and native objects in order to plug missing gaps. The problem being that augmenting host objects and (to a slightly lesser extent) native objects is ill-advised and has been for well over a decade by experts including Richard Cornford, David Mark, Thomas Lahn and Kangax&mdash;the latter of which published two dedicated articles on the subject entitled [What's wrong with extending the DOM?](http://perfectionkills.com/whats-wrong-with-extending-the-dom/) and [Extending native built-ins](http://perfectionkills.com/extending-native-builtins/). Here is a choice snippet below, but I highly advise reading the entire article:
+Polyfills must augment host and native objects. Experts such as Richard Cornford, David Mark, Thomas Lahn and Kangax have all told us this is a bad idea. The latter of which published two dedicated articles on the matter:
 
-> &ldquo;In fact, DOM extension seemed so temptingly useful [...]. But what hides behind this seemingly innocuous practice is a huge load of trouble. [...] the downsides of this approach far outweigh any benefits.&rdquo;
+* [What's wrong with extending the DOM?](http://perfectionkills.com/whats-wrong-with-extending-the-dom/); and
+* [Extending native built-ins](http://perfectionkills.com/extending-native-builtins/).
 
-## 2. Feature detection is not enough.
+Here's a choice snippet if you don't have time to read the articles:
 
-As Peter Michaux demonstrates in [Feature Detection: State of the art browser scripting](http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting), the mere presence of an API is not necessarily enough to determine reliable usage. This is where feature *testing* comes in.
+> &ldquo;DOM extension seemed so temptingly useful [...]. But what hides behind this seemingly innocuous practice is a huge load of trouble. [...] the downsides of this approach far outweigh any benefits.&rdquo;
 
-Polyfills *tend* to just detect the presence of an API; they do not iron out the bugs or inconsistencies found across the breadth of browsers; even if they did, they would have to override the original, whereby the override may contain a reference to the original&mdash;a dangerous and unnecessary way to go. This is why facades are useful as we will see later on.
+## 2. Feature detection is not enough
 
-## 3. Decoupling browser and application logic is advisable.
+As Peter Michaux shows us in [Feature Detection: State of the art browser scripting](http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting), the mere presence of an API is not necessarily enough to determine reliable usage. This is where feature *testing* comes in.
 
-As Nicholas Zakas presents in [Scalable JavaScript Application Architecture](https://www.youtube.com/watch?v=vXjVFPosQHw), it is important to decouple application and browser logic. He states:
+Polyfills tend to just detect the presence of an API; they do not iron out the bugs or inconsistencies found in different browsers. Even if they did, they would have to override the original, whereby the override may contain a reference to the original. This is a dangerous and unnecessary way to go. This is why we should use facades as we'll see later.
+
+## 3. We should decouple browser and application logic
+
+As Nicholas Zakas says in [Scalable JavaScript Application Architecture](https://www.youtube.com/watch?v=vXjVFPosQHw), it is important to decouple application and browser logic. He states:
 
 > &ldquo;Application logic should be written one way for all browsers in order to keep the code maintainable. If you’re using native APIs in your application logic, you can’t help but know what browser is being used because you need to account for browser differences. That means your application logic will always need to be updated as new browsers and new browser versions are released. **That’s a recipe for disaster**&rdquo;.
 
-## 4. Context context context.
+## 4. You may not need the full API
 
-You may not need the full API to solve your problem; you may not even be *able* to implement a polyfill because there's just no way to do it. This is why context is important, which is something Javascript expert David Mark expresses frequently.
+You may not need the full API to solve your problem. You may not even be *able* to implement a polyfill because there's just no way to do it. This is why context is important.
 
-What exactly does David mean by context? You would have to ask David to be completely sure but I will hazard a guess that, *first* it's vital to understand the problem of exactly what you're trying to solve. *Second*, implement an appropriate solution for that problem. Specifically don't do *more* than solve the problem (YAGNI).
+We should first understand the exact problem we're trying to solve. And only then solve that problem. We shouldn't do more than solve that problem.
 
-This seems sensible doesn't it? It is. With polyfills it's all or nothing, whereby you rarely need *all* of the API and the solution is anything but lean.
+With polyfills it's all or nothing. We rarely need *all* of an API and the solution is rarely lean.
 
-## 5. Polyfills suffer from caveats.
+## 5. Polyfills suffer from caveats
 
-It doesn't take much effort to find examples of problematic polyfills. Take the [ES5 Shim](https://github.com/es-shims/es5-shim) project documentation. In describing the `Object.create` polyfill it states:
+It doesn't take much effort to find examples of problematic polyfills. Take the [ES5 Shim](https://github.com/es-shims/es5-shim) documentation. In describing the `Object.create` polyfill it states:
 
 > &ldquo;For the case of simply "begetting" an object that inherits prototypically from another, this **should** work fine across legacy engines.&rdquo;
 
-The word "should" doesn't instill confidence does it? Personally, I like to build on top of reliable foundations. As David Mark says, you're only as reliable as your lowest level function(s). So in the case of polyfills that would be, not very. Unfortunately, it continues:
+The word "should" doesn't instill confidence does it? Personally, I like to build on top of reliable foundations. You're only as reliable as your lowest level function(s). So in the case of polyfills that would be, not very. It continues:
 
 > &ldquo;The second argument is passed to Object.defineProperties which will **probably fail either silently or with extreme prejudice**.&rdquo;
 
-Does any of this sound like something you want to add to your codebase? I would hope not. Providing code for your team to use, whereby they can't reliably use the fully exposed API without severe recourse, can only be interpreted as a bad idea. And it should go without saying that it doesn't matter how good the application code is on top of these foundations, as the saying goes, you're simply polishing a turd.
+Do you want your team want to rely on code like this? Of course not. Any code you write atop of this is just polishing a turd, as the saying goes.
 
-## What to do instead?
+## What should we do instead?
 
-A facade, a form of wrapper, is a design pattern that normally provides a simplified interface to something more complex. This allows you to completely abstract away the differing browser implementations and bugs, with the flexibility to provide a suitable solution and a simplified method signature.
+A facade, a form of wrapper, is a design pattern that simplifies an interface to something more complex. This allows you to completely abstract away the differing browser implementations and bugs. And with the added bonus of being able to simplify the method signature.
 
-Inside the facade there is nothing to stop you using portions of the API, and feature testing various implementations and acting accordingly, much like Peter Michaux demonstrates in his other brilliant article [Cross browser Widgets](http://peter.michaux.ca/articles/cross-browser-widgets).
+Inside the facade there is nothing to stop you using portions of an API, and feature testing various implementations and acting accordingly, much like Peter Michaux shows us in his other brilliant article [Cross browser Widgets](http://peter.michaux.ca/articles/cross-browser-widgets).
 
 Cloning an object is pertinent to this article because `Object.create` is a useful API to solve this problem. If you just wanted to support "modern" browsers i.e ones that provide `Object.create`, then an implementation might be as follows:
 
 	var lib = {};
 	if(Object.create) {
-		lib.cloneObject = function(obj) {
-			return Object.create(obj);
-		};
+	  lib.cloneObject = function(obj) {
+	    return Object.create(obj);
+	  };
 	}
 
-Note there is only one argument. This facade uses a smaller part of an API, exposing a simpler method signature creating a lean solution to our problem in the process. What about browsers lacking `Object.create`? Simply add a second fork:
+Note there is only one argument. This facade uses a smaller part of an API, exposing a simpler method signature creating a lean solution to our problem in the process. What about browsers lacking `Object.create`?
+
+If you want to degrade gracefully, you don't have to do anything. If you want to support other browsers you can add a second fork as follows:
 
 	// Code credited to David Mark. Thanks.
 	var lib = {};
 	if(Object.create) {
-		lib.cloneObject = function(obj) {
-			return Object.create(obj);
-		};
+	  lib.cloneObject = function(obj) {
+        return Object.create(obj);
+	  };
 	} else {
-		lib.cloneObject = (function() {
-			var Fn = function() {};
-			return function(obj) {
-				Fn.prototype = obj;
-				return new Fn();
-			};
-		})();
+      lib.cloneObject = (function() {
+        var Fn = function() {};
+          return function(obj) {
+            Fn.prototype = obj;
+            return new Fn();
+        };
+      })();
 	}
 
-The context of the problem changed; it got a little harder &mdash;  but the implementation is still lean and method signature still what we need. What we most certainly didn't need to do, was to worry about recreating `Object.create` in its entirety.
+The context of the problem changed. It got a little harder &mdash; but the implementation is still lean and the method signature still works well. But, we didn't need to worry about recreating `Object.create` in its entirety.
 
-With that said, what if you did need the full functionality this API can provide? Well you would only need two simple edits: change the name of the function to be appropriate and expand the method signature to allow for property descriptors:
+But, what if you did need the full API? We would need two simple edits: change the name of the function to something more appropriate and expand the method signature to allow for property descriptors:
 
 	var lib = {};
 	if(Object.create) {
-		lib.createObject = function(obj, props) {
-			return Object.create(obj, props);
-		};
+	  lib.createObject = function(obj, props) {
+        return Object.create(obj, props);
+	  };
 	}
 
-But what about browsers lacking `Object.create`? Nothing happens. The user gets the degraded experience as the browser doesn't cut the mustard. This is the very essence of Progressive Enhancement and why it is so important in producing reliable front-end code.
+What about browsers lacking `Object.create`? Same as before. Either degrade gracefully or add another fork. This is the very essence of Progressive Enhancement.
 
 ## Summary
 
-At first polyfills seem like a great idea. Having explored the intricacies of this technique, it's clear that at best, polyfills are harder to implement and cause application and browser logic to be tightly coupled, which is costly.
+At first polyfills seem like a good idea. But now that we have explored the intricacies of this technique, it's clear that at best, polyfills are harder to implement and cause application and browser logic to be tightly coupled, which is costly.
 
-At their worst they come with highly problematic caveats that cause pain for the developer &mdash; ultimately resulting in unreliable software and unhappy users. The answer is to use facades, enabling the abstracting away of complexity into reliable and lean software.
+At their worst they come with highly problematic caveats that cause pain for the developer. But even worse than that, they result in unreliable software and unhappy users. Instead, we should use facades, which allows us to build reliable, lean and Progressively Enhanced websites.
 
 <!--
 
