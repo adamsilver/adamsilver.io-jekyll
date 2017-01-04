@@ -6,17 +6,17 @@ categories: js spas featured
 description: SPAs are full of pitfalls. There are many reasons why.
 ---
 
-Single Page Applications (SPAs) supposedly provide a better and more fluid experience. Having built several SPAs over the years I've found there to be many problems with them, from both a technical and usability perspective.
+Many people think Single Page Applications (SPAs) provide a better user experience. They are said to be faster and more app-like. But shouldn't websites be web-like? Oh dear, I've already gone off on a tangent.
 
-Before we discuss the problems, let's first define what an SPA is or perhaps more importantly, what it is *not*.
+What was I saying? Oh yes. SPAs, by their very nature introduce many problems. Before we get to them, I want to first explain what an SPA is.
 
 ## What exactly is an SPA?
 
-An SPA may well use MVC, MVVM, AJAX and client-side templating, but these elements cannot be used to class an application as an SPA. In fact we can use all of these things to build rich, ROCA-style websites.
+You might associate MVC, MVVM, AJAX and client-side templating with an SPA. But these characteristics are not the defining factors of an SPA. In fact, we can use all of these things (and more) to build a ROCA-style website.
 
-What makes an SPA unique is this. Instead of the browser managing the browsing, developer-written Javascript handles it. That is a client-side router replaces all the inherent features a browser gives us for free.
+What really defines an SPA as such, is the fact that client-side Javascript handles the routing instead of the browser. That is, the application hijacks the behaviour that browsers provide for free.
 
-When you put it like that, it's of little surprise as to why they're so problematic. Let's discuss each problem in turn.
+It's hardy surprising then, that this causes problems. Let's discuss each one in turn.
 
 ## 1. History and fast back
 
@@ -27,7 +27,7 @@ Browsers store history so that pages load quickly when the user presses the *bac
 > &ldquo;In the traditional web model the browser will typically be able use a cached version of the page and linked resources.<br><br>
 > &ldquo;In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.&rdquo;
 
-One of the apparent benefits to SPAs is their speed. So if you don't want users to experience slow loading pages, the application will need a mechanism to store and retrieve pages from a cache. Options include memory, local or session storage, client-side databases or cookies.
+One of the supposed benefits to SPAs is speed. So if you want users to enjoy a fast experience, the application will need to cache page requests. Options include memory, local or session storage, client-side databases or cookies.
 
 The application also needs to determine *when* to store and retrieve pages from the cache. Navigation typically uses `pushState` or `hashchange` which introduces another problem. It will have to be able to differentiate between:
 
@@ -40,7 +40,9 @@ Browsers remember the scroll position of pages you have visited. In the same art
 
 > &ldquo;Lots of sites get this wrong and it’s really annoying. When the user navigates using the browser’s forward or back button the scroll position should be the same as it was last time they were on the page. This sometimes works correctly on Facebook but sometimes doesn’t. Google+ always seems to lose your scroll position.&rdquo;
 
-Because SPAs rely on faux navigation, they need a mechanism of their own to store the scroll position, and to retrieve and set it accordingly.
+SPAs must recreate this functionality by storing the scroll position. Then, when the user hits back or forward the scroll position much be reinstated.
+
+SPAs don't navigate in the traditional sense. This means they must store the scroll position and reinstate it when the user hits back or forward.
 
 ## 3. Cancelling navigation
 
@@ -49,7 +51,7 @@ Consider what a browser gives us for free on this:
 1. If a user clicks the *cancel* button, the browser will stop any in-flight requests.
 2. If a user clicks a link, the browser will again, stop any in-flight requests and make the new one.
 
-As SPAs retrieve pages via AJAX, there could be several requests in-flight. The first page request could be loaded last. A user may even click (and therefore request) the same link twice.
+As SPAs retrieve pages via AJAX, there could be several requests in-flight. The first page request could finish last. A user may even click (and therefore request) the same link twice.
 
 This is problematic because:
 
