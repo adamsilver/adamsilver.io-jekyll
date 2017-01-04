@@ -98,8 +98,8 @@ When a page is loading, a browser provides a loading indicator. With AJAX, the a
 
 SPAs are harder to design, harder to build, and they typically result in subpar experiences for users.
 
-[Twitter](https://blog.twitter.com/2012/improving-performance-on-twittercom), [Lifehacker](http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs) and more recently [Delicious](http://blog.delicious.com/2016/01/delicious-changes/) have experienced many of these issues and have reverted to more traditional archictures with excellent results.
+[Twitter](https://blog.twitter.com/2012/improving-performance-on-twittercom), [Lifehacker](http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs) and more recently [Delicious](http://blog.delicious.com/2016/01/delicious-changes/) have experienced many of these issues and have reverted to more traditional architectures with excellent results.
 
 Javascript is never going to beat the browser at what it does best&mdash;*browsing*. We can still give users rich and enhanced experiences without cramming an entire site into one document.
 
-We should let the browser manage browser, and spend our time solving *real* user problems.
+We should let the browser manage the browsing experience, and spend our time solving *real* user problems.
