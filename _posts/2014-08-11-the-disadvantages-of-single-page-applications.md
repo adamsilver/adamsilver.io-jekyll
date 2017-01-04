@@ -87,7 +87,7 @@ Pages are "long lived" increasing the chance of memory leak issues. This can deg
 
 When a page is loading, a browser provides a loading indicator. With AJAX, the application will need to provide a custom one that displays itself accordingly. Despite the extra design and development effort, there are two other issues:
 
-1. The browser's loading indicator displays *progress* as it has access to this information under the hood. Javascript doesn't have access to the same information so can only show that something is loading or not.
+1. The browser's loading indicator displays *progress*. That is, a user can tell how long left the request is going to take. Javascript can't provide the same level of feedback. This is why users fear the dreaded spinner.
 2. User's find *their* browser's loading indicator familiar. No matter what website they are using, the loading indicator will appear in the same place and behave in the same predictable way. When we use Javascript to do this, we lose this familiarity which breaks the third of Henny Swan’s UX principles, *design with familiarity in mind*.
 
 ## 11. It's going to fail!
@@ -96,10 +96,10 @@ When a page is loading, a browser provides a loading indicator. With AJAX, the a
 
 ## Summary
 
-SPAs are meant to provide a better experience. Not only are SPAs harder to design and build, they result in subpar experiences for users.
+SPAs are harder to design, harder to build, and they typically result in subpar experiences for users.
 
-Javascript is never going to beat the browser at what it does best&mdash;*browsing*. You can still have enhanced experiences without cramming an entire site into one document.
+[Twitter](https://blog.twitter.com/2012/improving-performance-on-twittercom), [Lifehacker](http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs) and more recently [Delicious](http://blog.delicious.com/2016/01/delicious-changes/) have experienced many of these issues and have reverted to more traditional archictures with excellent results.
 
-Sites such as [Twitter](https://blog.twitter.com/2012/improving-performance-on-twittercom), [Lifehacker](http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs) and more recently [Delicious](http://blog.delicious.com/2016/01/delicious-changes/) have experienced many of these issues and have since reverted to more traditional archictures with positive results.
+Javascript is never going to beat the browser at what it does best&mdash;*browsing*. We can still give users rich and enhanced experiences without cramming an entire site into one document.
 
-Solve real problems. Let the browser handle the browsing.
+We should let the browser manage browser, and spend our time solving *real* user problems.
