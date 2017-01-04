@@ -6,19 +6,19 @@ categories: js spas featured
 description: SPAs are full of pitfalls. There are many reasons why.
 ---
 
-Single Page Applications (SPAs) supposedly provide a better, more fluid experience. Having built several SPAs over the years I've found there to be many problems with them, from both a technical and usability perspective.
+Single Page Applications (SPAs) supposedly provide a better and more fluid experience. Having built several SPAs over the years I've found there to be many problems with them, from both a technical and usability perspective.
 
-Before we discuss the problems, let's first define what an SPA is or perhaps more importantly, what it is not.
+Before we discuss the problems, let's first define what an SPA is or perhaps more importantly, what it is *not*.
 
 ## What exactly is an SPA?
 
-You may be tempted to associate certain technologies or patterns with an SPA, such as MVC, MVVM, AJAX and client-side templates. But we can use these technologies and patterns to build multi-page, ROCA-style web applications.
+An SPA may well use MVC, MVVM, AJAX and client-side templating, but these elements cannot be used to class an application as an SPA. In fact we can use all of these things to build rich, ROCA-style websites.
 
-What *really* defines an SPA is the fact that client-side Javascript handles the routing, instead of the server. That is, the the browser no longer handles the *browsing*.
+What makes an SPA unique is this. Instead of the browser managing the browsing, developer-written Javascript handles it instead. That is a client-side router replaces all the inherent features a browser gives us for free.
 
-When you put it like that, it should be of no surprise as to why SPAs are so problematic. Let's find out why that is.
+When you put it like that, it's of little surprise as to why they're so problematic. Let's discuss each problem in turn.
 
-## 1. Navigation and fast back
+## 1. History and fast back
 
 Browsers store history so that pages load quickly when the user presses the *back* button. Daniel Puplus explains in [Building Single Page Applications](https://medium.com/joys-of-javascript/4353246f4480) that:
 
@@ -27,19 +27,16 @@ Browsers store history so that pages load quickly when the user presses the *bac
 > &ldquo;In the traditional web model the browser will typically be able use a cached version of the page and linked resources.<br><br>
 > &ldquo;In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.&rdquo;
 
-One of the apparent benefits to SPAs is their speed. So if you don't want users to experience slow loading pages, you'll need to recreate the native browser behaviour in Javascript.
+One of the apparent benefits to SPAs is their speed. So if you don't want users to experience slow loading pages, the application will need a mechanism to store and retrieve pages from a cache. Options include memory, local or session storage, client-side databases or cookies.
 
-To do this the application will need a mechanism to store and retrieve 'pages' from a cache. Your options may include memory, local or session storage, client-side databases or cookies.
+The application also needs to determine *when* to store and retrieve pages from the cache. Navigation typically uses `pushState` or `hashchange` which introduces another problem. It will have to be able to differentiate between:
 
-*The words 'navigating' and 'pages' are in quotes because SPAs, by definition, don't have the concept of navigation and pages in the traditional sense. I'll stop quoting these words for brevity from now on.*
+* a user changing the URL (by clicking a link or typing a URL in the location bar); or
+* [manually pressing back or forward, which is not simple](http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button).
 
-The application also needs to determine *when* to store and retrieve pages from the cache. Navigation typically uses `pushState` or `hashchange`.
+## 2. Scroll position
 
-Therefore the application will need to differentiate between a user changing the URL (by clicking a link or typing a URL in the location bar) or [manually pressing back or forward, which is not simple](http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button).
-
-## 2. Remembering scroll position
-
-Browsers conveniently remember the scroll position of pages you have visited. Daniel Puplus explains how SPAs tend to have trouble with this:
+Browsers remember the scroll position of pages you have visited. In the same article, Daniel Puplus explains how SPAs have trouble here:
 
 > &ldquo;Lots of sites get this wrong and it’s really annoying. When the user navigates using the browser’s forward or back button the scroll position should be the same as it was last time they were on the page. This sometimes works correctly on Facebook but sometimes doesn’t. Google+ always seems to lose your scroll position.&rdquo;
 
@@ -47,55 +44,55 @@ Because SPAs rely on faux navigation, they need a mechanism of their own to stor
 
 ## 3. Cancelling navigation
 
-Consider what a browser gives us for free:
+Consider what a browser gives us for free on this:
 
 1. If a user clicks the *cancel* button, the browser will stop any in-flight requests.
 2. If a user clicks a link, the browser will again, stop any in-flight requests and make the new one.
 
-As SPAs retrieve pages via AJAX, there could be several requests in-flight simultaneously. The first page request could be loaded last. A user may even click (and therefore request) the same link twice.
+As SPAs retrieve pages via AJAX, there could be several requests in-flight. The first page request could be loaded last. A user may even click (and therefore request) the same link twice.
 
 This is problematic because:
 
 - it's inefficient;
-- the user's data allowance is eaten up unnecessarily; and
-- it causes visual glitches as a page request finishes.
+- the user's data allowance could be eaten up unnecessarily; and
+- it causes visual glitches as a page request finishes (when it should have been cancelled).
 
-You'll need to reimplement the browser's functionality in Javascript. First you'll need to expose a cancel button, which is obviously undesirable. And second you'll need to handle duplicate requests.
+The application will need a way to do this. First the UI needs a cancel button, which is obviously undesirable. And second the application should handle duplicate requests.
 
-## 4. Navigation and data loss
+## 4. Unsaved changes
 
-We may want to warn users about losing unsaved changes. The browser provides the `beforeunload` event to do this. But, an SPA will need to recreate this functionality in Javascript perhaps with a `beforeRouting` event.
+On occasion an application will warn users about losing unsaved changes, when they navigate away from a page. The browser provides the `beforeunload` event to do this. An SPA will need to recreate this behaviour with a hook before routing takes place.
 
 ## 5. Search engine ranking
 
-Not all SPAs need SEO. But if yours does, then the [solutions aren't simple to implement](http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo).
+Not all SPAs need SEO. But when they do, [it's not easy to do](http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo).
 
 ## 6. Loading CSS &amp; Javascript
 
-If an SPA grows to a significant size, loading the entire application on page load may be detrimental to the experience because it's akin to loading all pages of a website when the user only asked for the home page. Unfortunately, this leads to conditionally loading CSS and JS with script. [Script loading is notoriously difficult and contains unreliable hacks](http://blog.getify.com/labjs-script-loading-the-way-it-should-be/) which is fatal to the reliability of the application.
+If an SPA grows to a significant size, loading the entire application on page load will be slow. Unfortunately, this leads to conditionally loading CSS and JS with script. [Script loading is notoriously difficult and contains unreliable hacks](http://blog.getify.com/labjs-script-loading-the-way-it-should-be/) which is threat to the application's reliability.
 
-## 7. Analytics is harder to implement
+## 7. Analytics
 
-Analytics tools will track page views by default. But because an SPA page isn't really a page, tracking page views is more difficult. To do this the router will need to log the event somehow.
+Analytics tools track page views by default. But because an SPA page isn't really a page, tracking page views now requires extra work.
 
 ## 8. Automated functional testing
 
-It's harder to test SPAs. Tools like Selenium don't know when AJAX requests finish. Testers will need to handle timeouts and execution speed will be slower.
+Selenium has dedicated hooks to know when a page finishes loading. There is no such hooks to know when an AJAX request finishes. As SPA pages are loaded in this way, testers will need to handle timeouts and it will be slower to run the tests.
 
 ## 9. Performance
 
-Pages are "long lived" increasing the chance of exposing a memory leak. This can degrade UX and cause battery drain on mobile devices.
+Pages are "long lived" increasing the chance of memory leak issues. This can degrade UX and cause battery drain on mobile devices.
 
 ## 10. Loading indicators
 
-With AJAX, you'll need to implement your own loading indicator. This suffers from two problems:
+When a page is loading, a browser provides a loading indicator. With AJAX, the application will need to provide a custom one that displays itself accordingly. Despite the extra design and development effort, there are two other issues:
 
-1. The browser's loading indicator can display *progress* as it has access to this information under the hood. Javascript doesn't have access to the same information so can only show that something is loading or not.
-2. User's find *their* browser's loading indicator familiar. No matter what website, the loading indicator will appear in the same place. When we use Javascript to do this, we lose this familiarity which in turn breaks the third of Henny Swan’s UX principles, *design with familiarity in mind*.
+1. The browser's loading indicator displays *progress* as it has access to this information under the hood. Javascript doesn't have access to the same information so can only show that something is loading or not.
+2. User's find *their* browser's loading indicator familiar. No matter what website they are using, the loading indicator will appear in the same place and behave in the same predictable way. When we use Javascript to do this, we lose this familiarity which breaks the third of Henny Swan’s UX principles, *design with familiarity in mind*.
 
 ## 11. It's going to fail!
 
-[Everyone has Javascript, Right?](http://kryogenix.org/code/browser/everyonehasjs.html) Wrong. It's going to fail and because SPAs *depend* on many different Javascript enhancements, when it does fail it will do so in a fatal way as they tend not to [conform to Progressive Enhancement](/articles/writing-javascript-that-conforms-to-progressive-enhancement/).
+[Everyone has Javascript, Right?](http://kryogenix.org/code/browser/everyonehasjs.html) Wrong. Because SPAs *depend* on many different enhancements, when it does fail it will do so in a fatal way as they tend not to [conform to Progressive Enhancement](/articles/writing-javascript-that-conforms-to-progressive-enhancement/).
 
 ## Summary
 
