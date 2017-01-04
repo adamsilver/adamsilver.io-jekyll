@@ -106,19 +106,19 @@
 </nav>
 	    <main class="mainContent">
 			<h1>The disadvantages of Single Page Applications</h1>
-	        <p>Single Page Applications (SPAs) have become extremely popular on the web, because they are <em>supposed</em> to <a href="http://en.wikipedia.org/wiki/Single-page_application">provide a more fluid user experience</a>. However, there are many UX and technical problems that arise from architecting websites this way. Before getting to them, let’s first discuss the difference between an SPA and a traditional multi-page website (MPW).</p>
+	        <p>Many people think Single Page Applications (SPAs) provide a better user experience. On the contrary, not only do they cause problems for users, but they are significantly harder to design and build. Before getting into the issues, let’s first clarify what an SPA is.</p>
 
-<h2 id="single-page-app-versus-multi-page-website">Single Page App versus Multi-page website</h2>
+<h2 id="what-exactly-is-an-spa">What exactly is an SPA?</h2>
 
-<p>Whilst it’s common to associate MVC, MVVM, XHR, DOM manipulation (and more) with an SPA, this article doesn’t address them because they could <em>also</em> be used in an MPW.</p>
+<p>You might associate MVC, AJAX and client-side templating with an SPA. But these are not characteristics that define an SPA. In fact, we can use all of these things to build <a href="http://roca-style.org/">ROCA-style</a> websites.</p>
 
-<p>What <em>really</em> defines an SPA is the fact that the <strong>routing is handled by the client-side application using Javascript, instead of the server</strong>.</p>
+<p>What really defines an SPA as such, is the fact that client-side Javascript handles the routing <em>instead</em> of the browser. That is, the application hijacks the behaviour that browsers provide natively.</p>
 
-<p>This means the application handles the browsing instead of the browser. Attempting to mimic the browser using Javascript is what causes these self-induced issues. Let’s take a look.</p>
+<p>It’s hardly surprising then that this causes the following problems:</p>
 
-<h2 id="navigation-and-fast-back">1. Navigation and fast back</h2>
+<h2 id="history-and-fast-back">1. History and fast back</h2>
 
-<p>Browsers store history, meaning pages load quickly when the user presses the <em>back</em> button. SPAs need to recreate this functionality. As <a href="https://medium.com/joys-of-javascript/4353246f4480">Daniel Puplus says in his article</a>:</p>
+<p>Browsers store history so that pages load quickly when the user clicks <em>back</em>. Daniel Puplus explains in <a href="https://medium.com/joys-of-javascript/4353246f4480">Building Single Page Applications</a> that:</p>
 
 <blockquote>
   <p>“Back should be quick; users don’t expect data to have changed much.<br /><br />
@@ -127,73 +127,97 @@
 “In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.”</p>
 </blockquote>
 
-<p>When ‘navigating’, the application will need a method of storing and retrieving ‘pages’ from a cache. Unless of course you want to slow down the loading ‘pages’, which is meant to be a significant benefit of SPAs. Storage options could include memory, local (or session) storage, client-side database and cookies.</p>
+<p>One of the supposed benefits to SPAs is speed. So if you want users to enjoy a fast experience, the application will need to cache pages, using memory, local storage, client-side databases or cookies.</p>
 
-<p><strong>Note: The words ‘navigating’ and ‘pages’ are in quotes because SPAs, by definition, don’t have the concept of navigation and pages in the traditional sense. Quotes will be discarded going forward for brevity.</strong></p>
+<p>The application also needs to determine <em>when</em> to store and retrieve thiese pages from the cache. The application will also have to differentiate between:</p>
 
-<p>The application will also need to determine <em>when</em> to store and retrieve pages from the cache. Navigation typically utilises <em>pushState</em> or <em>hashchange</em> and the application will need to differentiate between the user changing the URL (via clicking a link or typing a URL in the location bar) or <a href="http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button">manually hitting back/forward, which is not straightforward</a>.</p>
+<ul>
+  <li>a user changing the URL (by clicking a link or typing a URL in the location bar); and</li>
+  <li><a href="http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button">manually pressing back or forward</a> which is not easy to solve.</li>
+</ul>
 
-<h2 id="navigation-and-remembering-scroll-history-position">2. Navigation and remembering scroll history position</h2>
+<h2 id="scroll-position">2. Scroll position</h2>
 
-<p>Browsers conveniently remember the scroll position of pages you have visited and as Daniel Puplus says in his article:</p>
+<p>Browsers remember the scroll position of pages you have visited. Daniel Puplus explains how SPAs have trouble here:</p>
 
 <blockquote>
   <p>“Lots of sites get this wrong and it’s really annoying. When the user navigates using the browser’s forward or back button the scroll position should be the same as it was last time they were on the page. This sometimes works correctly on Facebook but sometimes doesn’t. Google+ always seems to lose your scroll position.”</p>
 </blockquote>
 
-<p>Clicking forward or back should remember the scroll position, but unfortunately, as SPAs rely on faux navigation, this functionality is lost. Upon navigation, the application will need to remember the scroll position so that it can be retrieved later. This is a topic heavily related to “Navigation and fast back” discussed previously.</p>
+<p>SPAs don’t navigate in the traditional sense. Therefore the application must store the scroll position and apply it when the user hits back or forward.</p>
 
 <h2 id="cancelling-navigation">3. Cancelling navigation</h2>
 
-<p>The browser provides a <em>cancel</em> button which when pressed, cancels the loading of the requested page. If a user clicks another link, the browser will cancel the previous request if one is in progress. This is useful for performance and also ensures the user’s internet data allowance isn’t eaten up unnecessarily.</p>
+<p>Consider what a browser gives us for free:</p>
 
-<p>SPA pages are likely to be retrieved via XHR, meaning several requests could be in progress at the same time; the first page request might be loaded last, even though it should have been cancelled out by the second page request. Also, the same link could be clicked twice, meaning the page will be requested (and loaded) twice, which is not efficient and could also cause visual glitches.</p>
+<ul>
+  <li>When a user clicks the <em>cancel</em> button, the browser will stop any in-flight requests.</li>
+  <li>When a user clicks a link, the browser will again, stop any in-flight requests and make a new request.</li>
+</ul>
 
-<p>The application will need to handle this functionality too. This means exposing a custom <em>cancel</em> button (undesirable), and the duplicate requests need handling as well as cancelling all previous in-progress requests.</p>
+<p>As SPAs retrieve pages via AJAX, there could be several requests in-flight. The first page request could finish last. And, a user may click (and therefore request) the same link twice. This is problematic because:</p>
 
-<h2 id="navigation-and-data-loss">4. Navigation and data loss</h2>
+<ul>
+  <li>it’s inefficient;</li>
+  <li>the user’s data allowance could be eaten up unnecessarily; and</li>
+  <li>it causes visual glitches as a subsequent page request finishes (when the browser would normally have cancelled it).</li>
+</ul>
 
-<p>Browsers normally provide the <em>beforeunload</em> event which allows the application to warn against losing unsaved changes. The application router will need to provide a hook to replicate this functionality i.e. ‘beforeRouting’.</p>
+<p>The application will need to handle duplicate requests. And the UI will need a cancel button, which is highly undesirable.</p>
+
+<h2 id="unsaved-changes">4. Unsaved changes</h2>
+
+<p>On occasion an application, upon leaving the page, will warn users about losing any unsaved changes. The browser’s <code>beforeunload</code> event enables this behaviour.</p>
+
+<p>However, the application cannot tap into this event because users don’t request real pages. Meaning, the application will need to reimplement this behaviour if needed.</p>
 
 <h2 id="search-engine-ranking">5. Search engine ranking</h2>
 
-<p>Whilst some SPAs don’t require SEO, for those that do <a href="http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo">solutions aren’t straightforward</a>.</p>
+<p>Not all SPAs need SEO. But when they do, <a href="http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo">it’s not easy to solve</a>.</p>
 
 <h2 id="loading-css-amp-javascript">6. Loading CSS &amp; Javascript</h2>
 
-<p>If an SPA grows to a significant size, loading the entire application on page load may be detrimental to the experience because it’s akin to loading all pages of a website when only the home page was requested. Unfortunately, this leads to attempting to load CSS and JS for certain pages. <a href="http://blog.getify.com/labjs-script-loading-the-way-it-should-be/">Script loading is notoriously difficult and contains unreliable hacks</a> which can can be fatal to the reliability of the application.</p>
+<p>If an SPA grows to a significant size, loading the entire application on page load will be slow. This leads to conditionally loading CSS and JS with a script loader.</p>
 
-<h2 id="analytics-is-harder-to-implement">7. Analytics is harder to implement</h2>
+<p>The problem is that <a href="http://blog.getify.com/labjs-script-loading-the-way-it-should-be/">script loading is notoriously difficult and contains unreliable hacks</a> which slows down development and reduces the reliability of the application.</p>
 
-<p>Analytics tools will normally track page views and related tools without any extra effort but because an SPA page isn’t really a page, this has to be handled with extra script which is triggered by the application router.</p>
+<h2 id="analytics">7. Analytics</h2>
+
+<p>Analytics tools track page views by default. But SPA pages aren’t really pages. This means the application will have to notify the analytics tool that a pseudo page has been loaded.</p>
 
 <h2 id="automated-functional-testing">8. Automated functional testing</h2>
 
-<p>Whilst you can use Selenium (and other equivalents) to test SPAs, extra effort is required to handle timeouts of XHR calls because there is no signal to Selenium that an XHR call has finished, like there is when a real page finishes loading. This leads to more questions and problems; <em>How long should the timeout be? What happens if it takes longer than normal?</em> The test execution will likely be slower too.</p>
+<p>Selenium knows when a page has finished loading. However, SPAs load pages with AJAX. This means that:</p>
 
-<h2 id="performance-problems">9. Performance problems</h2>
+<ul>
+  <li>tests are more complicated and must handle timeouts; and</li>
+  <li>the tests will be slower to execute.</li>
+</ul>
 
-<p>Pages are “long lived” increasing the chance of exposing a memory leak due to lack of page reloads. This is known to degrade UX and cause battery drain on mobile devices.</p>
+<h2 id="performance">9. Performance</h2>
 
-<h2 id="loading-indicator-issues">10. Loading indicator issues</h2>
+<p>Pages are “long lived” increasing the chance of memory leak issues. This can degrade UX and cause battery drain on mobile devices.</p>
 
-<p>When a traditional page is requested, the browser shows a loading indicator custom to <em>that</em> browser. This provides the most accurate indication of when a page will finish loading. With client-side routing, you have to implement your own loading indicator which is detrimental to the User Experience for two reasons:</p>
+<h2 id="loading-indicators">10. Loading indicators</h2>
 
-<p>First, the Javascript implemented loading indicator is inaccurate in terms of progress, because it doesn’t have access to progress information like the browser does and second, it’s disorientating to the user because the individual gets used to the behaviour of <em>their</em> chosen browser and unconsciously and intuitively understands where to look for this information. A Javascript solution is always different.</p>
+<p>When a page is loading, a browser shows a loading indicator. With AJAX, the application will need to show a custom one at the appropriate time. Despite the extra design and development effort, there are two further problems with this:</p>
 
-<h2 id="its-going-to-fail">11. It’s going to fail!</h2>
+<ol>
+  <li>The browser’s loading indicator displays <em>progress</em>. That is, a user can tell how long left the request is going to take. Javascript can’t provide the same level of feedback. This is why users fear the dreaded spinner.</li>
+  <li>The user’s browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use Javascript to do this, we  break the third of Henny Swan’s UX principles, <em>design with familiarity in mind</em>.</li>
+</ol>
 
-<p><a href="http://kryogenix.org/code/browser/everyonehasjs.html">Everyone has Javascript, Right?</a> Wrong. It’s going to fail and because SPAs <em>depend</em> on many different Javascript enhancements, when it does fail it will do so in a fatal way as they tend not to <a href="/articles/writing-javascript-that-conforms-to-progressive-enhancement/">conform to Progressive Enhancement</a>.</p>
+<h2 id="its-going-to-fail">11. It’s going to fail</h2>
+
+<p><a href="http://kryogenix.org/code/browser/everyonehasjs.html">Everyone has Javascript, Right?</a> Wrong. SPAs <em>depend</em> on many different enhancements, and because they tend not to conform to <a href="/articles/writing-javascript-that-conforms-to-progressive-enhancement/">Progressive Enhancement</a>, the experience will be very broken.</p>
 
 <h2 id="summary">Summary</h2>
 
-<p>Whilst SPAs are meant to provide a better experience, it’s clear and ironic that they are much harder to design and build with a result that is detrimental to the user.</p>
+<p>Ironically, SPAs are harder to design and harder to build. And yet, they typically produce slow, disagreeable experiences for users. <a href="https://blog.twitter.com/2012/improving-performance-on-twittercom">Twitter</a>, <a href="http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs">Lifehacker</a> and <a href="http://blog.delicious.com/2016/01/delicious-changes/">Delicious</a> have all reverted to traditional architectures with excellent results.</p>
 
-<p>Javascript is never going to beat the browser at what it does best — <em>browsing</em>. You can still have beautifully rich, enhanced experiences without cramming an entire site into one document.</p>
+<p>Javascript is never going to beat the browser at what it does best—<em>browsing</em>. We can still give users rich and enhanced experiences without cramming an entire site into one document.</p>
 
-<p>It’s interesting to note that sites such as <a href="https://blog.twitter.com/2012/improving-performance-on-twittercom">Twitter</a>, <a href="http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs">Lifehacker</a> and more recently <a href="http://blog.delicious.com/2016/01/delicious-changes/">Delicious</a> have also experienced many of these issues and have since reverted to more traditional archictures with great results.</p>
-
-<p>Instead of solving self-induced problems that are already solved by browsers, it’s better to spend your time solving <em>real</em> problems.</p>
+<p>We should let the browser manage the browsing experience, and spend our time solving <em>real</em> user problems.</p>
 
 	    </main>
 		<div class="signUpHero  signUpHero-isArticle ">
