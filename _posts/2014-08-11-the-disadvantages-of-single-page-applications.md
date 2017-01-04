@@ -14,7 +14,7 @@ Before we discuss the problems, let's first define what an SPA is or perhaps mor
 
 An SPA may well use MVC, MVVM, AJAX and client-side templating, but these elements cannot be used to class an application as an SPA. In fact we can use all of these things to build rich, ROCA-style websites.
 
-What makes an SPA unique is this. Instead of the browser managing the browsing, developer-written Javascript handles it instead. That is a client-side router replaces all the inherent features a browser gives us for free.
+What makes an SPA unique is this. Instead of the browser managing the browsing, developer-written Javascript handles it. That is a client-side router replaces all the inherent features a browser gives us for free.
 
 When you put it like that, it's of little surprise as to why they're so problematic. Let's discuss each problem in turn.
 
