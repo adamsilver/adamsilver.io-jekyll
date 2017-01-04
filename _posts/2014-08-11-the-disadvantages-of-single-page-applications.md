@@ -6,72 +6,70 @@ categories: js spas featured
 description: SPAs are full of pitfalls. There are many reasons why.
 ---
 
-Many people think Single Page Applications (SPAs) provide a better user experience. They are said to be faster and more app-like. But shouldn't websites be web-like? Oh dear, I've already gone off on a tangent.
-
-What was I saying? Oh yes. SPAs, by their very nature introduce many problems. Before we get to them, I want to first explain what an SPA is.
+Many people think Single Page Applications (SPAs) provide a better user experience. On the contrary, not only do they cause problems for users, but they are significantly harder to design and build. Before getting into the issues, let's first clarify what an SPA is.
 
 ## What exactly is an SPA?
 
-You might associate MVC, MVVM, AJAX and client-side templating with an SPA. But these characteristics are not the defining factors of an SPA. In fact, we can use all of these things (and more) to build a ROCA-style website.
+You might associate MVC, AJAX and client-side templating with an SPA. But these are not characteristics that define an SPA. In fact, we can use all of these things to build [ROCA-style](http://roca-style.org/) websites.
 
-What really defines an SPA as such, is the fact that client-side Javascript handles the routing instead of the browser. That is, the application hijacks the behaviour that browsers provide for free.
+What really defines an SPA as such, is the fact that client-side Javascript handles the routing *instead* of the browser. That is, the application hijacks the behaviour that browsers provide natively.
 
-It's hardy surprising then, that this causes problems. Let's discuss each one in turn.
+It's hardly surprising then that this causes the following problems:
 
 ## 1. History and fast back
 
-Browsers store history so that pages load quickly when the user presses the *back* button. Daniel Puplus explains in [Building Single Page Applications](https://medium.com/joys-of-javascript/4353246f4480) that:
+Browsers store history so that pages load quickly when the user clicks *back*. Daniel Puplus explains in [Building Single Page Applications](https://medium.com/joys-of-javascript/4353246f4480) that:
 
 > &ldquo;Back should be quick; users don’t expect data to have changed much.<br><br>
 > &ldquo;When a user presses the browser’s back button they expect the change to happen quickly and for the page to be in a similar state to how it was last time they saw it.<br><br>
 > &ldquo;In the traditional web model the browser will typically be able use a cached version of the page and linked resources.<br><br>
 > &ldquo;In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.&rdquo;
 
-One of the supposed benefits to SPAs is speed. So if you want users to enjoy a fast experience, the application will need to cache page requests. Options include memory, local or session storage, client-side databases or cookies.
+One of the supposed benefits to SPAs is speed. So if you want users to enjoy a fast experience, the application will need to cache pages, using memory, local storage, client-side databases or cookies.
 
-The application also needs to determine *when* to store and retrieve pages from the cache. Navigation typically uses `pushState` or `hashchange` which introduces another problem. It will have to be able to differentiate between:
+The application also needs to determine *when* to store and retrieve thiese pages from the cache. The application will also have to differentiate between:
 
-* a user changing the URL (by clicking a link or typing a URL in the location bar); or
-* [manually pressing back or forward, which is not simple](http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button).
+* a user changing the URL (by clicking a link or typing a URL in the location bar); and
+* [manually pressing back or forward](http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button) which is not easy to solve.
 
 ## 2. Scroll position
 
-Browsers remember the scroll position of pages you have visited. In the same article, Daniel Puplus explains how SPAs have trouble here:
+Browsers remember the scroll position of pages you have visited. Daniel Puplus explains how SPAs have trouble here:
 
 > &ldquo;Lots of sites get this wrong and it’s really annoying. When the user navigates using the browser’s forward or back button the scroll position should be the same as it was last time they were on the page. This sometimes works correctly on Facebook but sometimes doesn’t. Google+ always seems to lose your scroll position.&rdquo;
 
-SPAs must recreate this functionality by storing the scroll position. Then, when the user hits back or forward the scroll position much be reinstated.
-
-SPAs don't navigate in the traditional sense. This means they must store the scroll position and reinstate it when the user hits back or forward.
+SPAs don't navigate in the traditional sense. Therefore the application must store the scroll position and apply it when the user hits back or forward.
 
 ## 3. Cancelling navigation
 
-Consider what a browser gives us for free on this:
+Consider what a browser gives us for free:
 
-1. If a user clicks the *cancel* button, the browser will stop any in-flight requests.
-2. If a user clicks a link, the browser will again, stop any in-flight requests and make the new one.
+1. When a user clicks the *cancel* button, the browser will stop any in-flight requests.
+2. When a user clicks a link, the browser will again, stop any in-flight requests and make a new request.
 
-As SPAs retrieve pages via AJAX, there could be several requests in-flight. The first page request could finish last. A user may even click (and therefore request) the same link twice.
-
-This is problematic because:
+As SPAs retrieve pages via AJAX, there could be several requests in-flight. The first page request could finish last. And, a user may click (and therefore request) the same link twice. This is problematic because:
 
 - it's inefficient;
 - the user's data allowance could be eaten up unnecessarily; and
-- it causes visual glitches as a page request finishes (when it should have been cancelled).
+- it causes visual glitches as a subsequent page request finishes (when the browser would normally have cancelled it).
 
-The application will need a way to do this. First the UI needs a cancel button, which is obviously undesirable. And second the application should handle duplicate requests.
+The application will need to handle duplicate requests. And the UI will need a cancel button, which is highly undesirable.
 
 ## 4. Unsaved changes
 
-On occasion an application will warn users about losing unsaved changes, when they navigate away from a page. The browser provides the `beforeunload` event to do this. An SPA will need to recreate this behaviour with a hook before routing takes place.
+On occasion an application, upon leaving the page, will warn users about losing any unsaved changes. The browser's `beforeunload` event enables this behaviour.
+
+However, the application cannot tap into this event because users don't request real pages. Meaning, the application will need to reimplement this behaviour if needed.
 
 ## 5. Search engine ranking
 
-Not all SPAs need SEO. But when they do, [it's not easy to do](http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo).
+Not all SPAs need SEO. But when they do, [it's not easy to solve](http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo).
 
 ## 6. Loading CSS &amp; Javascript
 
-If an SPA grows to a significant size, loading the entire application on page load will be slow. Unfortunately, this leads to conditionally loading CSS and JS with script. [Script loading is notoriously difficult and contains unreliable hacks](http://blog.getify.com/labjs-script-loading-the-way-it-should-be/) which is threat to the application's reliability.
+If an SPA grows to a significant size, loading the entire application on page load will be slow. This leads to conditionally loading CSS and JS with script.
+
+The problem is that [script loading is notoriously difficult and contains unreliable hacks](http://blog.getify.com/labjs-script-loading-the-way-it-should-be/) which slows down development and threatens the reliability of the application.
 
 ## 7. Analytics
 
