@@ -88,7 +88,7 @@ Pages are "long lived" increasing the chance of memory leak issues. This can deg
 When a page is loading, a browser provides a loading indicator. With AJAX, the application will need to provide a custom one that displays itself accordingly. Despite the extra design and development effort, there are two other issues:
 
 1. The browser's loading indicator displays *progress*. That is, a user can tell how long left the request is going to take. Javascript can't provide the same level of feedback. This is why users fear the dreaded spinner.
-2. User's find *their* browser's loading indicator familiar. No matter what website they are using, the loading indicator will appear in the same place and behave in the same predictable way. When we use Javascript to do this, we lose this familiarity which breaks the third of Henny Swan’s UX principles, *design with familiarity in mind*.
+2. The user's browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use Javascript to do this, we  break the third of Henny Swan’s UX principles, *design with familiarity in mind*.
 
 ## 11. It's going to fail!
 
