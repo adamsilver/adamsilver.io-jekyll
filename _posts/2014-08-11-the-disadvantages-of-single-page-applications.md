@@ -10,7 +10,7 @@ Many people think Single Page Applications (SPAs) provide a better user experien
 
 ## What exactly is an SPA?
 
-You might associate MVC, AJAX and client-side templating with an SPA. But these are not characteristics that define an SPA. In fact, we can use all of these things to build [ROCA-style](http://roca-style.org/) websites.
+You might associate MVC, AJAX and client-side templating with an SPA. But these are not the defining characteristics. In fact, we can use all of these things to build [ROCA-style](http://roca-style.org/) websites.
 
 What really defines an SPA as such, is the fact that client-side Javascript handles the routing *instead* of the browser. That is, the application hijacks the behaviour that browsers provide natively.
 
@@ -27,7 +27,7 @@ Browsers store history so that pages load quickly when the user clicks *back*. D
 
 One of the supposed benefits to SPAs is speed. So if you want users to enjoy a fast experience, the application will need to cache pages, using memory, local storage, client-side databases or cookies.
 
-The application also needs to determine *when* to store and retrieve these pages from the cache. The application will also have to differentiate between:
+Also, the application needs to determine *when* to retrieve these pages. To do this it will need to differentiate between:
 
 * a user changing the URL (by clicking a link or typing a URL in the location bar); and
 * [manually pressing back or forward](http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button) which is not easy to solve.
@@ -59,7 +59,7 @@ The application will need to handle duplicate requests. And the UI will need a c
 
 On occasion an application, upon leaving the page, will warn users about losing any unsaved changes. The browser's `beforeunload` event enables this behaviour.
 
-However, the application cannot tap into this event because users don't request real pages. Meaning, the application will need to reimplement this behaviour if needed.
+However, the application cannot use this feature because users don't request real pages. Meaning, the application will need to reimplement this behaviour if needed.
 
 ## 5. Search engine ranking
 
@@ -69,7 +69,7 @@ Not all SPAs need SEO. But when they do, [it's not easy to solve](http://stackov
 
 If an SPA grows to a significant size, loading the entire application on page load will be slow. This leads to conditionally loading CSS and JS with a script loader.
 
-The problem is that [script loading is notoriously difficult and contains unreliable hacks](http://blog.getify.com/labjs-script-loading-the-way-it-should-be/) which slows down development and reduces the reliability of the application.
+The problem is that [script loading is notoriously difficult and contains  hacks](http://blog.getify.com/labjs-script-loading-the-way-it-should-be/). This slows down development and reduces the reliability of the application.
 
 ## 7. Analytics
 
