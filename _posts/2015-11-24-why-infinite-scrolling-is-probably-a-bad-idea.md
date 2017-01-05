@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Why Infinite Scrolling is probably a bad idea
+title: Why infinite scrolling is probably a bad idea
 date: 2015-11-24 09:00:01
 categories: ux design
-description: Infinite Scrolling is a trendy thing but it's probably a bad idea. Find out all the reasons why.
+description: Infinite scrolling is a popular UI pattern but find out why it's probably a bad idea in this article.
 ---
 
-On more than one occasion I have found myself trying to convince team-mates that Infinite Scrolling and its close relative *Show More* is more likely to degrade the experience than improve upon it. I thought I would jot down my notes on the matter and share them with you. Here they are:
+On more than one occasion I have found myself trying to convince team-mates that infinite scrolling and its close relative *show more* is more likely to degrade the experience than improve upon it. I thought I would jot down my notes on the matter and share them with you. Here they are:
 
 ## 1. The footer becomes unusable
 
