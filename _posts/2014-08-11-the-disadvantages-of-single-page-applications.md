@@ -99,7 +99,11 @@ When a page is loading, a browser shows a loading indicator. With AJAX, the appl
 
 ## Summary
 
-Ironically, SPAs are harder to design and harder to build. And yet, they typically produce slow, disagreeable experiences for users. [Twitter](https://blog.twitter.com/2012/improving-performance-on-twittercom), [Lifehacker](http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs) and [Delicious](http://blog.delicious.com/2016/01/delicious-changes/) have all reverted to traditional architectures with excellent results.
+Ironically, SPAs are harder to design and harder to build. And yet, they typically produce slow, disagreeable experiences for users. Twitter, Lifehacker and Delicious have reverted to traditional architectures because of these issues. You can read about their experiences in:
+
+- [Improving performance on Twitter](https://blog.twitter.com/2012/improving-performance-on-twittercom);
+- [Breaking The Web With Hash Bangs](http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs); and
+- [Delicious changes](http://blog.delicious.com/2016/01/delicious-changes/);
 
 Javascript is never going to beat the browser at what it does best&mdash;*browsing*. We can still give users rich and enhanced experiences without cramming an entire site into one document.
 
