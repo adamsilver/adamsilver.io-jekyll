@@ -90,7 +90,7 @@ Pages are "long lived" increasing the chance of memory leak issues. This can deg
 
 Browsers show a loading indicator when a page is loading. SPAs use AJAX to load pages and so they must show a custom one. This requires extra work.
 
-Also, the browser's indicator displays *progress*. That is, a user can tell how long left the request is going to take. Javascript can only state that something is loading, not how long left there is. This leads users requesting the link again.
+Also, the browser's indicator displays *progress*. That is, a user can tell how long left the request is going to take. Javascript can only state that something is loading, not how long left there is. This leads users to request the link again.
 
 Furthermore, the user's browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use Javascript to do this, we break the third of Henny Swan’s UX principles, *design with familiarity in mind*.
 
