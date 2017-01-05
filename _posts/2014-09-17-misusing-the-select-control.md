@@ -27,7 +27,7 @@ Chrome (Windows), Opera (Windows), IE6, IE7, IE8 or IE9.
 
 ## 2. Screen reader users find them difficult
 
-Sarah Miller's research showed that dropdown lists without submit buttons were confusing to screen reader users. The act of reading an option meant that it was selected. Therefore the user could never get past the first option.
+Sarah Miller's research found that dropdown lists without submit buttons were confusing to screen reader users. The act of reading an option meant that it was selected. Therefore the user could never get past the first option.
 
 ## 3. Users expect to use links for navigation
 
