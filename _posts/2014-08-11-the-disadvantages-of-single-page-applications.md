@@ -103,7 +103,7 @@ Ironically, SPAs are harder to design and harder to build. And yet, they typical
 
 - [Improving performance on Twitter](https://blog.twitter.com/2012/improving-performance-on-twittercom);
 - [Breaking The Web With Hash Bangs](http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs); and
-- [Delicious changes](http://blog.delicious.com/2016/01/delicious-changes/);
+- [Delicious changes](http://blog.del.icio.us/?p=1174);
 
 Javascript is never going to beat the browser at what it does best&mdash;*browsing*. We can still give users rich and enhanced experiences without cramming an entire site into one document.
 
