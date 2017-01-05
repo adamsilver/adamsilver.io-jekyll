@@ -95,7 +95,7 @@ When a page is loading, a browser shows a loading indicator. With AJAX, the appl
 
 ## 11. It's going to fail
 
-[Everyone has Javascript, Right?](http://kryogenix.org/code/browser/everyonehasjs.html) Wrong. SPAs *depend* on many different enhancements, and because they tend not to conform to [Progressive Enhancement](/articles/writing-javascript-that-conforms-to-progressive-enhancement/), the experience will be very broken.
+[Everyone has Javascript, Right?](http://kryogenix.org/code/browser/everyonehasjs.html) explains that Javascript loading or executing will fail. SPAs *depend* on many different enhancements, and they tend not to conform to [Progressive Enhancement](/articles/writing-javascript-that-conforms-to-progressive-enhancement/). This means when it does fail, the resulting experience will likely the blank screen of death.
 
 ## Summary
 
