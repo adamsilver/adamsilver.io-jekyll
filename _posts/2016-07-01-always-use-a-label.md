@@ -45,7 +45,7 @@ When a form has just one field&mdash;as would be the case with a search form&mda
 
 ### Notes
 
-* Visual users will be okay to begin with due to the placeholder. But [ placeholders are problematic](/articles/why-placeholders-are-problematic) for many reasons. One example is that once the user starts typing the instruction disappears.
+* Visual users will be okay to begin with due to the placeholder. But [ placeholders are problematic](/articles/placeholders-are-problematic) for many reasons. One example is that once the user starts typing the instruction disappears.
 * Motor-impaired users again will find it harder to select the field.
 * Screen reader users will find it difficult because the placeholder is not announced.
 * If a foreigner wants to translate the page using the browser's translation routine, the placeholder is ignored which causes confusion.
