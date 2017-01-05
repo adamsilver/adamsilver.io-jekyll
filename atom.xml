@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-01-04T19:07:01+00:00</updated>
+	<updated>2017-01-05T07:04:15+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -2856,7 +2856,7 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 
 &lt;p&gt;One of the supposed benefits to SPAs is speed. So if you want users to enjoy a fast experience, the application will need to cache pages, using memory, local storage, client-side databases or cookies.&lt;/p&gt;
 
-&lt;p&gt;The application also needs to determine &lt;em&gt;when&lt;/em&gt; to store and retrieve thiese pages from the cache. The application will also have to differentiate between:&lt;/p&gt;
+&lt;p&gt;The application also needs to determine &lt;em&gt;when&lt;/em&gt; to store and retrieve these pages from the cache. The application will also have to differentiate between:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;a user changing the URL (by clicking a link or typing a URL in the location bar); and&lt;/li&gt;
