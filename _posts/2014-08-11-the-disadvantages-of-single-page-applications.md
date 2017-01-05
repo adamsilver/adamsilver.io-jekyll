@@ -6,7 +6,7 @@ categories: js spas featured
 description: SPAs are full of pitfalls. There are many reasons why.
 ---
 
-Many people think Single Page Applications (SPAs) provide a better user experience. On the contrary, not only do they cause problems for users, but they are significantly harder to design and build. Before getting into the issues, let's first clarify what an SPA is.
+Many people think single page applications (SPAs) provide a better user experience. On the contrary, not only do they cause problems for users, but they are significantly harder to design and build. Before getting into the issues, let's first clarify what an SPA is.
 
 ## What exactly is an SPA?
 
@@ -82,16 +82,17 @@ Selenium knows when a page has finished loading. However, SPAs load pages with A
 * tests are more complicated and must handle timeouts; and
 * the tests will be slower to execute.
 
-## 9. Performance
+## 9. Memory leaks
 
 Pages are "long lived" increasing the chance of memory leak issues. This can degrade UX and cause battery drain on mobile devices.
 
 ## 10. Loading indicators
 
-When a page is loading, a browser shows a loading indicator. With AJAX, the application will need to show a custom one at the appropriate time. Despite the extra design and development effort, there are two further problems with this:
+Browsers show a loading indicator when a page is loading. SPAs use AJAX to load pages and so they must show a custom one. This requires extra work.
 
-1. The browser's loading indicator displays *progress*. That is, a user can tell how long left the request is going to take. Javascript can't provide the same level of feedback. This is why users fear the dreaded spinner.
-2. The user's browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use Javascript to do this, we  break the third of Henny Swan’s UX principles, *design with familiarity in mind*.
+Also, the browser's indicator displays *progress*. That is, a user can tell how long left the request is going to take. Javascript can only state that something is loading, not how long left there is. Thus degrading the experience.
+
+Furthermore, the user's browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use Javascript to do this, we break the third of Henny Swan’s UX principles, *design with familiarity in mind*.
 
 ## 11. It's going to fail
 
