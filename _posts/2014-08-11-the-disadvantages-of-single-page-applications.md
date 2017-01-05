@@ -27,7 +27,7 @@ Browsers store history so that pages load quickly when the user clicks *back*. D
 
 One of the supposed benefits to SPAs is speed. So if you want users to enjoy a fast experience, the application will need to cache pages, using memory, local storage, client-side databases or cookies.
 
-The application also needs to determine *when* to store and retrieve thiese pages from the cache. The application will also have to differentiate between:
+The application also needs to determine *when* to store and retrieve these pages from the cache. The application will also have to differentiate between:
 
 * a user changing the URL (by clicking a link or typing a URL in the location bar); and
 * [manually pressing back or forward](http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button) which is not easy to solve.
