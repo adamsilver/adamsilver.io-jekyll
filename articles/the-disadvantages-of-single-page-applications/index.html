@@ -106,11 +106,11 @@
 </nav>
 	    <main class="mainContent">
 			<h1>The disadvantages of Single Page Applications</h1>
-	        <p>Many people think Single Page Applications (SPAs) provide a better user experience. On the contrary, not only do they cause problems for users, but they are significantly harder to design and build. Before getting into the issues, let’s first clarify what an SPA is.</p>
+	        <p>Many people think single page applications (SPAs) provide a better user experience. On the contrary, not only do they cause problems for users, but they are significantly harder to design and build. Before getting into the issues, let’s first clarify what an SPA is.</p>
 
 <h2 id="what-exactly-is-an-spa">What exactly is an SPA?</h2>
 
-<p>You might associate MVC, AJAX and client-side templating with an SPA. But these are not characteristics that define an SPA. In fact, we can use all of these things to build <a href="http://roca-style.org/">ROCA-style</a> websites.</p>
+<p>You might associate MVC, AJAX and client-side templating with an SPA. But these are not the defining characteristics. In fact, we can use all of these things to build <a href="http://roca-style.org/">ROCA-style</a> websites.</p>
 
 <p>What really defines an SPA as such, is the fact that client-side Javascript handles the routing <em>instead</em> of the browser. That is, the application hijacks the behaviour that browsers provide natively.</p>
 
@@ -129,7 +129,7 @@
 
 <p>One of the supposed benefits to SPAs is speed. So if you want users to enjoy a fast experience, the application will need to cache pages, using memory, local storage, client-side databases or cookies.</p>
 
-<p>The application also needs to determine <em>when</em> to store and retrieve these pages from the cache. The application will also have to differentiate between:</p>
+<p>Also, the application needs to determine <em>when</em> to retrieve these pages. To do this it will need to differentiate between:</p>
 
 <ul>
   <li>a user changing the URL (by clicking a link or typing a URL in the location bar); and</li>
@@ -169,7 +169,7 @@
 
 <p>On occasion an application, upon leaving the page, will warn users about losing any unsaved changes. The browser’s <code>beforeunload</code> event enables this behaviour.</p>
 
-<p>However, the application cannot tap into this event because users don’t request real pages. Meaning, the application will need to reimplement this behaviour if needed.</p>
+<p>However, the application cannot use this feature because users don’t request real pages. Meaning, the application will need to reimplement this behaviour if needed.</p>
 
 <h2 id="search-engine-ranking">5. Search engine ranking</h2>
 
@@ -179,7 +179,7 @@
 
 <p>If an SPA grows to a significant size, loading the entire application on page load will be slow. This leads to conditionally loading CSS and JS with a script loader.</p>
 
-<p>The problem is that <a href="http://blog.getify.com/labjs-script-loading-the-way-it-should-be/">script loading is notoriously difficult and contains unreliable hacks</a> which slows down development and reduces the reliability of the application.</p>
+<p>The problem is that <a href="http://blog.getify.com/labjs-script-loading-the-way-it-should-be/">script loading is notoriously difficult and contains  hacks</a>. This slows down development and reduces the reliability of the application.</p>
 
 <h2 id="analytics">7. Analytics</h2>
 
@@ -194,26 +194,31 @@
   <li>the tests will be slower to execute.</li>
 </ul>
 
-<h2 id="performance">9. Performance</h2>
+<h2 id="memory-leaks">9. Memory leaks</h2>
 
 <p>Pages are “long lived” increasing the chance of memory leak issues. This can degrade UX and cause battery drain on mobile devices.</p>
 
 <h2 id="loading-indicators">10. Loading indicators</h2>
 
-<p>When a page is loading, a browser shows a loading indicator. With AJAX, the application will need to show a custom one at the appropriate time. Despite the extra design and development effort, there are two further problems with this:</p>
+<p>Browsers show a loading indicator when a page is loading. SPAs use AJAX to load pages and so they must show a custom one. This requires extra work.</p>
 
-<ol>
-  <li>The browser’s loading indicator displays <em>progress</em>. That is, a user can tell how long left the request is going to take. Javascript can’t provide the same level of feedback. This is why users fear the dreaded spinner.</li>
-  <li>The user’s browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use Javascript to do this, we  break the third of Henny Swan’s UX principles, <em>design with familiarity in mind</em>.</li>
-</ol>
+<p>Also, the browser’s indicator displays <em>progress</em>. That is, a user can tell how long left the request is going to take. Javascript can only state that something is loading, not how long left there is. This leads users to request the link again.</p>
+
+<p>Furthermore, the user’s browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use Javascript to do this, we break the third of Henny Swan’s UX principles, <em>design with familiarity in mind</em>.</p>
 
 <h2 id="its-going-to-fail">11. It’s going to fail</h2>
 
-<p><a href="http://kryogenix.org/code/browser/everyonehasjs.html">Everyone has Javascript, Right?</a> Wrong. SPAs <em>depend</em> on many different enhancements, and because they tend not to conform to <a href="/articles/writing-javascript-that-conforms-to-progressive-enhancement/">Progressive Enhancement</a>, the experience will be very broken.</p>
+<p><a href="http://kryogenix.org/code/browser/everyonehasjs.html">Everyone has Javascript, Right?</a> explains that Javascript loading or executing will fail. SPAs <em>depend</em> on many different enhancements, and they tend not to conform to <a href="/articles/writing-javascript-that-conforms-to-progressive-enhancement/">Progressive Enhancement</a>. This means when it does fail, the resulting experience will be a blank page.</p>
 
 <h2 id="summary">Summary</h2>
 
-<p>Ironically, SPAs are harder to design and harder to build. And yet, they typically produce slow, disagreeable experiences for users. <a href="https://blog.twitter.com/2012/improving-performance-on-twittercom">Twitter</a>, <a href="http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs">Lifehacker</a> and <a href="http://blog.delicious.com/2016/01/delicious-changes/">Delicious</a> have all reverted to traditional architectures with excellent results.</p>
+<p>Ironically, SPAs are harder to design and harder to build. And yet, they typically produce slow, disagreeable experiences for users. Twitter, Lifehacker and Delicious have reverted to traditional architectures because of these issues. You can read about their experiences in:</p>
+
+<ul>
+  <li><a href="https://blog.twitter.com/2012/improving-performance-on-twittercom">Improving performance on Twitter</a>;</li>
+  <li><a href="http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs">Breaking The Web With Hash Bangs</a>; and</li>
+  <li><a href="http://blog.del.icio.us/?p=1174">Delicious changes</a>.</li>
+</ul>
 
 <p>Javascript is never going to beat the browser at what it does best—<em>browsing</em>. We can still give users rich and enhanced experiences without cramming an entire site into one document.</p>
 

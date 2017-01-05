@@ -3,12 +3,183 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-01-05T07:04:15+00:00</updated>
+	<updated>2017-01-05T18:25:03+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
 	</author>
 
+	
+		<entry>
+			<title>Don't initialise Javascript automagically</title>
+			<link href="http://adamsilver.io/articles/dont-initialise-javascript-automagically/"/>
+			<updated>2017-01-06T09:00:01+00:00</updated>
+			<id>http://adamsilver.io/articles/dont-initialise-javascript-automagically</id>
+			<content type="html">&lt;p&gt;I used to write Javascript that initialises components automagically. Don’t
+worry I’ll explain what I mean. Take a look below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var datepickers = document.getElementsByClassName(‘datepicker’);
+for(var i = 0; i &amp;lt; datepickers.length; i++) {
+  new DatePicker(datepickers[i]);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The technique works by looping over every element with a particular behavioural
+class name. If the Document contains the class name several times, the script
+creates several instances. With no Javascript changes at all. That’s the
+automagical bit.&lt;/p&gt;
+
+&lt;p&gt;Developers commend this technique because there’s only four lines of code. Less
+if using a library. And it never needs updating. If you want another date
+picker, just add a class of date picker. Job done.&lt;/p&gt;
+
+&lt;p&gt;This approach is problematic for many reasons. Here’s why:&lt;/p&gt;
+
+&lt;h2 id=&quot;its-harder-to-understand-the-codebase-at-a-glance&quot;&gt;1. It’s harder to understand the codebase at a glance&lt;/h2&gt;
+
+&lt;p&gt;To understand the codebase at a glance, you need to know what behaviour exists
+and where.&lt;/p&gt;
+
+&lt;p&gt;The loop doesn’t tell you how many date pickers there are. There could be a
+thousand instances or there could be one (or none) — in which case the loop is
+misleading. Either way you don’t know.&lt;/p&gt;
+
+&lt;h2 id=&quot;you-might-apply-behaviour-by-accident&quot;&gt;2. You might apply behaviour by accident&lt;/h2&gt;
+
+&lt;p&gt;If you happen to use a class that corresponds to a component, then you might
+accidentally initialise behaviour.&lt;/p&gt;
+
+&lt;h2 id=&quot;its-difficult-to-estimate-stories&quot;&gt;3. It’s difficult to estimate stories&lt;/h2&gt;
+
+&lt;p&gt;If you can’t document what you’re changing and where, it’s difficult to define
+and estimate a story.&lt;/p&gt;
+
+&lt;h2 id=&quot;its-difficult-to-qa&quot;&gt;4. It’s difficult to QA&lt;/h2&gt;
+
+&lt;p&gt;After modifying a date picker, a tester will ask you what parts of the system
+you’ve affected. The loop doesn’t help you answer this question.&lt;/p&gt;
+
+&lt;h2 id=&quot;its-harder-to-debug&quot;&gt;5. It’s harder to debug&lt;/h2&gt;
+
+&lt;p&gt;If there’s a problem with one date picker, finding and debugging it is more
+tricky. You will have to find the problematic instance by searching the HTML
+templates. Then you will need to step through the loop until you find the
+erroneous one.&lt;/p&gt;
+
+&lt;h2 id=&quot;its-harder-to-delete&quot;&gt;6. It’s harder to delete&lt;/h2&gt;
+
+&lt;p&gt;As you don’t know where the loop is executing, you can’t delete code in
+confidence. Thus, the code stays in the codebase for a long time.&lt;/p&gt;
+
+&lt;h2 id=&quot;its-hard-to-determine-behaviour&quot;&gt;7. It’s hard to determine behaviour&lt;/h2&gt;
+
+&lt;p&gt;This approach forces you to store behaviour in HTML attributes. This isn’t an
+elegant way to define behavioural relationships. HTML becomes bloated and hard
+to read. Every attribute value is a string, when you might, for example, want a
+number.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&quot;datepicker otherComponent&quot; data-datepicker-attr=&quot;etc&quot; data-datapicker-event=&quot;listener&quot; data-othercomponent-attr=&quot;blah&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;its-painful-to-customise&quot;&gt;8. It’s painful to customise&lt;/h2&gt;
+
+&lt;p&gt;When you need to use models and XHR etc, it becomes painful to work with this
+approach.&lt;/p&gt;
+
+&lt;p&gt;I’ll give you an example. Imagine you have a form with two date pickers: a
+start-date and end-date.&lt;/p&gt;
+
+&lt;p&gt;When the user chooses a start-date, the end-date values update. This is to
+ensure the end-date is always after the start-date.&lt;/p&gt;
+
+&lt;p&gt;This is hard to define in HTML. In Javascript it’s easy:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var startDate = new DatePicker();
+var endDate = new DatePicker();
+startDate.on(&#39;changed&#39;, function() { endDate.whatever(); });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;its-painful-to-infer-behaviour-from-html&quot;&gt;9. It’s painful to infer behaviour from HTML&lt;/h2&gt;
+
+&lt;p&gt;The loop doesn’t allow you to customise an instance by passing in options. Instead, you have to store behaviour in HTML. When you change behaviour, you must update the HTML. This goes against recommended​ &lt;a href=&quot;https://en.wikipedia.org/wiki/Separation_of_concerns&quot;&gt;practices&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;its-painful-to-override-behaviour&quot;&gt;10. It’s painful to override behaviour&lt;/h2&gt;
+
+&lt;p&gt;To override behaviour, you will need to add an extra class to the HTML. Then the date picker (or the loop) will determine the override by checking for this extra class. At this point, the component (or the loop) is no longer generic.​&lt;/p&gt;
+
+&lt;h2 id=&quot;its-hard-to-destroy-instances&quot;&gt;11. It’s hard to destroy instances&lt;/h2&gt;
+
+&lt;p&gt;It’s easy to store the instances during initialisation. But, determining and
+retrieving one later so you can destroy it, is harder this way.&lt;/p&gt;
+
+&lt;h2 id=&quot;it-increases-the-chance-of-performance-issues&quot;&gt;12. It increases the chance of performance issues&lt;/h2&gt;
+
+&lt;p&gt;This approach means the Javascript has to crawl the DOM a lot more than is
+otherwise necessary. First to find elements that need enhancing, and second to
+determine behaviour from attributes.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.nczonline.net/blog/2009/02/03/speed-up-your-javascript-part-4/&quot;&gt;Touching the DOM is expensive&lt;/a&gt;, which increases the risk of performance issues. The risk increases further when you have many components and many instances of a component.&lt;/p&gt;
+
+&lt;h2 id=&quot;its-harder-to-unit-test&quot;&gt;13. It’s harder to unit test&lt;/h2&gt;
+
+&lt;p&gt;It’s difficult to unit test behaviour when you store behaviour in HTML. You
+might then decide to use HTML fixtures. But they are slow and you’re no longer
+writing unit tests. You &lt;em&gt;could&lt;/em&gt; mock the DOM but this is tedious and
+problematic. The less you store in HTML the easier it is to test.&lt;/p&gt;
+
+&lt;h2 id=&quot;but-i-dont-want-to-update-javascript-every-time-i-want-a-new-instance&quot;&gt;“But I don’t want to update Javascript every time I want a new instance?”&lt;/h2&gt;
+
+&lt;p&gt;I fail to see why updating Javascript is a problem. In fact, I would &lt;em&gt;expect&lt;/em&gt;
+you to change Javascript when updating behaviour. Updating HTML instead of
+Javascript is not better.&lt;/p&gt;
+
+&lt;h2 id=&quot;is-this-necessaryit--feels-like-code-bloat&quot;&gt;“Is this necessary—it  feels like code bloat?”&lt;/h2&gt;
+
+&lt;p&gt;If code is valuable, it’s not code bloat.&lt;/p&gt;
+
+&lt;h2 id=&quot;but-the-javascript-will-have-a-lot-more-code&quot;&gt;“But the Javascript will have a lot more code.”&lt;/h2&gt;
+
+&lt;p&gt;Maybe. Maybe not. It depends on your architecture and your requirements. Even if
+it did, good code is not just determined by the number of lines.&lt;/p&gt;
+
+&lt;h2 id=&quot;but-lets-at-least-use-it-for-simple-components&quot;&gt;“But let’s at least use it for simple components.”&lt;/h2&gt;
+
+&lt;p&gt;Even if it did work for simple components, you have to draw a line between
+simple and complex. This is arbitrary and having two ways of doing the same
+thing makes code inconsistent.&lt;/p&gt;
+
+&lt;h2 id=&quot;its-easier-for-backend-developers-to-add-behaviour-in-html&quot;&gt;“It’s easier for &lt;strong&gt;backend developers to add behaviour in HTML.&lt;/strong&gt;”&lt;/h2&gt;
+
+&lt;p&gt;You need to decide whether backend developers should be writing Javascript or
+not. If they should be writing it, then help them do it right. They are software
+engineers. Trust them.&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;Good code is not about number of lines.&lt;/p&gt;
+
+&lt;p&gt;Good code is not about how easy it is to write the first time.&lt;/p&gt;
+
+&lt;p&gt;Good code is easy to reason about. &lt;/p&gt;
+
+&lt;p&gt;Good code is easy to update.&lt;/p&gt;
+
+&lt;p&gt;Good code is consistent.&lt;/p&gt;
+
+&lt;p&gt;Good code is easy to unit test.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to.&quot;&gt;Good code is easy to delete.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Bad code is easy to write but hard to delete. Bad code is magical. Magic is
+entertaining. Code shouldn’t be entertaining.&lt;/p&gt;
+
+&lt;p&gt;Automagical loops obfuscate complexity. They make things appear simple when
+they’re not.&lt;/p&gt;
+
+&lt;p&gt;Help future-you by writing Javascript that doesn’t suffer from these problems.
+HTML isn’t good at defining behaviour. But Javascript is.&lt;/p&gt;
+</content>
+		</entry>
 	
 		<entry>
 			<title>Less but better</title>
@@ -612,7 +783,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 &lt;h3 id=&quot;notes-1&quot;&gt;Notes&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Visual users will be okay to begin with due to the placeholder. But &lt;a href=&quot;/articles/why-placeholders-are-problematic&quot;&gt; placeholders are problematic&lt;/a&gt; for many reasons. One example is that once the user starts typing the instruction disappears.&lt;/li&gt;
+  &lt;li&gt;Visual users will be okay to begin with due to the placeholder. But &lt;a href=&quot;/articles/placeholders-are-problematic&quot;&gt; placeholders are problematic&lt;/a&gt; for many reasons. One example is that once the user starts typing the instruction disappears.&lt;/li&gt;
   &lt;li&gt;Motor-impaired users again will find it harder to select the field.&lt;/li&gt;
   &lt;li&gt;Screen reader users will find it difficult because the placeholder is not announced.&lt;/li&gt;
   &lt;li&gt;If a foreigner wants to translate the page using the browser’s translation routine, the placeholder is ignored which causes confusion.&lt;/li&gt;
@@ -1614,11 +1785,11 @@ Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a h
 		</entry>
 	
 		<entry>
-			<title>Why Infinite Scrolling is probably a bad idea</title>
+			<title>Why infinite scrolling is probably a bad idea</title>
 			<link href="http://adamsilver.io/articles/why-infinite-scrolling-is-probably-a-bad-idea/"/>
 			<updated>2015-11-24T09:00:01+00:00</updated>
 			<id>http://adamsilver.io/articles/why-infinite-scrolling-is-probably-a-bad-idea</id>
-			<content type="html">&lt;p&gt;On more than one occasion I have found myself trying to convince team-mates that Infinite Scrolling and its close relative &lt;em&gt;Show More&lt;/em&gt; is more likely to degrade the experience than improve upon it. I thought I would jot down my notes on the matter and share them with you. Here they are:&lt;/p&gt;
+			<content type="html">&lt;p&gt;On more than one occasion I have found myself trying to convince team-mates that infinite scrolling and its close relative &lt;em&gt;show more&lt;/em&gt; is more likely to degrade the experience than improve upon it. I thought I would jot down my notes on the matter and share them with you. Here they are:&lt;/p&gt;
 
 &lt;h2 id=&quot;the-footer-becomes-unusable&quot;&gt;1. The footer becomes unusable&lt;/h2&gt;
 
@@ -2710,7 +2881,7 @@ Chrome (Windows), Opera (Windows), IE6, IE7, IE8 or IE9.&lt;/p&gt;
 
 &lt;h2 id=&quot;screen-reader-users-find-them-difficult&quot;&gt;2. Screen reader users find them difficult&lt;/h2&gt;
 
-&lt;p&gt;Sarah Miller’s research showed that dropdown lists without submit buttons were confusing to screen reader users. The act of reading an option meant that it was selected. Therefore the user could never get past the first option.&lt;/p&gt;
+&lt;p&gt;Sarah Miller’s research found that dropdown lists without submit buttons were confusing to screen reader users. The act of reading an option meant that it was selected. Therefore the user could never get past the first option.&lt;/p&gt;
 
 &lt;h2 id=&quot;users-expect-to-use-links-for-navigation&quot;&gt;3. Users expect to use links for navigation&lt;/h2&gt;
 
@@ -2833,11 +3004,11 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 			<link href="http://adamsilver.io/articles/the-disadvantages-of-single-page-applications/"/>
 			<updated>2014-08-11T10:00:01+01:00</updated>
 			<id>http://adamsilver.io/articles/the-disadvantages-of-single-page-applications</id>
-			<content type="html">&lt;p&gt;Many people think Single Page Applications (SPAs) provide a better user experience. On the contrary, not only do they cause problems for users, but they are significantly harder to design and build. Before getting into the issues, let’s first clarify what an SPA is.&lt;/p&gt;
+			<content type="html">&lt;p&gt;Many people think single page applications (SPAs) provide a better user experience. On the contrary, not only do they cause problems for users, but they are significantly harder to design and build. Before getting into the issues, let’s first clarify what an SPA is.&lt;/p&gt;
 
 &lt;h2 id=&quot;what-exactly-is-an-spa&quot;&gt;What exactly is an SPA?&lt;/h2&gt;
 
-&lt;p&gt;You might associate MVC, AJAX and client-side templating with an SPA. But these are not characteristics that define an SPA. In fact, we can use all of these things to build &lt;a href=&quot;http://roca-style.org/&quot;&gt;ROCA-style&lt;/a&gt; websites.&lt;/p&gt;
+&lt;p&gt;You might associate MVC, AJAX and client-side templating with an SPA. But these are not the defining characteristics. In fact, we can use all of these things to build &lt;a href=&quot;http://roca-style.org/&quot;&gt;ROCA-style&lt;/a&gt; websites.&lt;/p&gt;
 
 &lt;p&gt;What really defines an SPA as such, is the fact that client-side Javascript handles the routing &lt;em&gt;instead&lt;/em&gt; of the browser. That is, the application hijacks the behaviour that browsers provide natively.&lt;/p&gt;
 
@@ -2856,7 +3027,7 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 
 &lt;p&gt;One of the supposed benefits to SPAs is speed. So if you want users to enjoy a fast experience, the application will need to cache pages, using memory, local storage, client-side databases or cookies.&lt;/p&gt;
 
-&lt;p&gt;The application also needs to determine &lt;em&gt;when&lt;/em&gt; to store and retrieve these pages from the cache. The application will also have to differentiate between:&lt;/p&gt;
+&lt;p&gt;Also, the application needs to determine &lt;em&gt;when&lt;/em&gt; to retrieve these pages. To do this it will need to differentiate between:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;a user changing the URL (by clicking a link or typing a URL in the location bar); and&lt;/li&gt;
@@ -2896,7 +3067,7 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 
 &lt;p&gt;On occasion an application, upon leaving the page, will warn users about losing any unsaved changes. The browser’s &lt;code&gt;beforeunload&lt;/code&gt; event enables this behaviour.&lt;/p&gt;
 
-&lt;p&gt;However, the application cannot tap into this event because users don’t request real pages. Meaning, the application will need to reimplement this behaviour if needed.&lt;/p&gt;
+&lt;p&gt;However, the application cannot use this feature because users don’t request real pages. Meaning, the application will need to reimplement this behaviour if needed.&lt;/p&gt;
 
 &lt;h2 id=&quot;search-engine-ranking&quot;&gt;5. Search engine ranking&lt;/h2&gt;
 
@@ -2906,7 +3077,7 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 
 &lt;p&gt;If an SPA grows to a significant size, loading the entire application on page load will be slow. This leads to conditionally loading CSS and JS with a script loader.&lt;/p&gt;
 
-&lt;p&gt;The problem is that &lt;a href=&quot;http://blog.getify.com/labjs-script-loading-the-way-it-should-be/&quot;&gt;script loading is notoriously difficult and contains unreliable hacks&lt;/a&gt; which slows down development and reduces the reliability of the application.&lt;/p&gt;
+&lt;p&gt;The problem is that &lt;a href=&quot;http://blog.getify.com/labjs-script-loading-the-way-it-should-be/&quot;&gt;script loading is notoriously difficult and contains  hacks&lt;/a&gt;. This slows down development and reduces the reliability of the application.&lt;/p&gt;
 
 &lt;h2 id=&quot;analytics&quot;&gt;7. Analytics&lt;/h2&gt;
 
@@ -2921,26 +3092,31 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
   &lt;li&gt;the tests will be slower to execute.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;performance&quot;&gt;9. Performance&lt;/h2&gt;
+&lt;h2 id=&quot;memory-leaks&quot;&gt;9. Memory leaks&lt;/h2&gt;
 
 &lt;p&gt;Pages are “long lived” increasing the chance of memory leak issues. This can degrade UX and cause battery drain on mobile devices.&lt;/p&gt;
 
 &lt;h2 id=&quot;loading-indicators&quot;&gt;10. Loading indicators&lt;/h2&gt;
 
-&lt;p&gt;When a page is loading, a browser shows a loading indicator. With AJAX, the application will need to show a custom one at the appropriate time. Despite the extra design and development effort, there are two further problems with this:&lt;/p&gt;
+&lt;p&gt;Browsers show a loading indicator when a page is loading. SPAs use AJAX to load pages and so they must show a custom one. This requires extra work.&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;The browser’s loading indicator displays &lt;em&gt;progress&lt;/em&gt;. That is, a user can tell how long left the request is going to take. Javascript can’t provide the same level of feedback. This is why users fear the dreaded spinner.&lt;/li&gt;
-  &lt;li&gt;The user’s browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use Javascript to do this, we  break the third of Henny Swan’s UX principles, &lt;em&gt;design with familiarity in mind&lt;/em&gt;.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;Also, the browser’s indicator displays &lt;em&gt;progress&lt;/em&gt;. That is, a user can tell how long left the request is going to take. Javascript can only state that something is loading, not how long left there is. This leads users to request the link again.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, the user’s browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use Javascript to do this, we break the third of Henny Swan’s UX principles, &lt;em&gt;design with familiarity in mind&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;its-going-to-fail&quot;&gt;11. It’s going to fail&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://kryogenix.org/code/browser/everyonehasjs.html&quot;&gt;Everyone has Javascript, Right?&lt;/a&gt; Wrong. SPAs &lt;em&gt;depend&lt;/em&gt; on many different enhancements, and because they tend not to conform to &lt;a href=&quot;/articles/writing-javascript-that-conforms-to-progressive-enhancement/&quot;&gt;Progressive Enhancement&lt;/a&gt;, the experience will be very broken.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://kryogenix.org/code/browser/everyonehasjs.html&quot;&gt;Everyone has Javascript, Right?&lt;/a&gt; explains that Javascript loading or executing will fail. SPAs &lt;em&gt;depend&lt;/em&gt; on many different enhancements, and they tend not to conform to &lt;a href=&quot;/articles/writing-javascript-that-conforms-to-progressive-enhancement/&quot;&gt;Progressive Enhancement&lt;/a&gt;. This means when it does fail, the resulting experience will be a blank page.&lt;/p&gt;
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
-&lt;p&gt;Ironically, SPAs are harder to design and harder to build. And yet, they typically produce slow, disagreeable experiences for users. &lt;a href=&quot;https://blog.twitter.com/2012/improving-performance-on-twittercom&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs&quot;&gt;Lifehacker&lt;/a&gt; and &lt;a href=&quot;http://blog.delicious.com/2016/01/delicious-changes/&quot;&gt;Delicious&lt;/a&gt; have all reverted to traditional architectures with excellent results.&lt;/p&gt;
+&lt;p&gt;Ironically, SPAs are harder to design and harder to build. And yet, they typically produce slow, disagreeable experiences for users. Twitter, Lifehacker and Delicious have reverted to traditional architectures because of these issues. You can read about their experiences in:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.twitter.com/2012/improving-performance-on-twittercom&quot;&gt;Improving performance on Twitter&lt;/a&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs&quot;&gt;Breaking The Web With Hash Bangs&lt;/a&gt;; and&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.del.icio.us/?p=1174&quot;&gt;Delicious changes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Javascript is never going to beat the browser at what it does best—&lt;em&gt;browsing&lt;/em&gt;. We can still give users rich and enhanced experiences without cramming an entire site into one document.&lt;/p&gt;
 

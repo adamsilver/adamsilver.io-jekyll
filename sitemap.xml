@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>http://adamsilver.io/articles/dont-initialise-javascript-automagically/</loc>
+    </url>
+    
+    <url>
         <loc>http://adamsilver.io/articles/less-but-better/</loc>
     </url>
     
@@ -134,7 +138,7 @@
     
     
     <url>
-        <loc>http://adamsilver.io/404/</loc>
+        <loc>http://adamsilver.io/404.html</loc>
     </url>
     
     
