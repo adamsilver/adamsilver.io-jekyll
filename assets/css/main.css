@@ -64,7 +64,7 @@ body {
 	font-family: 'PT serif', Lato, arial, sans-serif;
     text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-    font-size: 62.5%;
+    font-size: 100%;
     color: #333333;
 }
 
@@ -117,21 +117,21 @@ hr {
 
 .mainContent {
 	padding-top: 30px;
-	max-width: 700px;
+	max-width: 43.75em;
 	padding-bottom: 20px;
 	margin: 0 auto 0px;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.mainContent {
 		padding-top: 40px;
 	}
 }
 
 .mainContent h1 {
-	font-size: 3em;
+	font-size: 1.88em;
 	line-height: 1.2;
-	max-width: 700px;
+	max-width: 43.75em;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0 20px 20px;
@@ -140,16 +140,16 @@ hr {
 	font-family: 'Open sans';
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.mainContent h1 {
-		font-size: 4.5em;
+		font-size: 2.8em;
 	}
 }
 
 .mainContent h2 {
-	font-size: 2.2em;
+	font-size: 1.38em;
 	line-height: 1.2;
-	max-width: 700px;
+	max-width: 43.75em;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 10px;
@@ -159,17 +159,17 @@ hr {
 	font-family: 'Open sans';
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.mainContent h2 {
-		font-size: 2.5em;
+		font-size: 1.56em;
 		margin-bottom: 15px;
 	}
 }
 
 .mainContent h3 {
-	font-size: 1.6em;
+	font-size: 1em;
 	line-height: 1.2;
-	max-width: 700px;
+	max-width: 43.75em;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 10px;
@@ -179,17 +179,17 @@ hr {
 	font-family: 'Open sans';
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.mainContent h3 {
-		font-size: 1.9em;
+		font-size: 1.19em;
 		margin-bottom: 15px;
 	}
 }
 
 .mainContent p {
-	font-size: 1.8em;
+	font-size: 1.13em;
 	line-height: 1.7em;
-	max-width: 700px;
+	max-width: 43.75em;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 20px;
@@ -197,16 +197,16 @@ hr {
 	color: #222;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.mainContent p {
-		font-size: 2.2em;
+		font-size: 1.375em;
 		margin-bottom: 30px;
 	}
 }
 
 .mainContent ol,
 .mainContent ul {
-	max-width: 700px;
+	max-width: 43.75em;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 25px;
@@ -214,7 +214,7 @@ hr {
 	color: #222;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.mainContent ol,
 	.mainContent ul {
 		margin-bottom: 30px;
@@ -223,23 +223,23 @@ hr {
 
 .mainContent ol li,
 .mainContent ul li {
-	font-size: 1.8em;
+	font-size: 1.13em;
 	line-height: 1.7em;
 	margin-left: 30px;
 	margin-bottom: 5px;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.mainContent ol li,
 	.mainContent ul li {
-		font-size: 2.2em;
+		font-size: 1.38em;
 		margin-bottom: 10px;
 	}
 }
 
 .mainContent blockquote {
 	font-style: italic;
-	max-width: 700px;
+	max-width: 43.75em;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 30px;
@@ -254,13 +254,13 @@ hr {
 .mainContent p code,
 .mainContent ul code,
 .mainContent li code {
-	font-size: 1.3em;
+	font-size: 0.81em;
 	color: #0074D9;
 }
 
 .mainContent pre {
 	font-family: Monaco,'Courier New','Courier',monospace;
-	font-size: 2.3em;
+	font-size: 1.44em;
 	color: #222;
 	background-color: #fffee1;
 	margin-bottom: 30px;
@@ -270,14 +270,14 @@ hr {
 	white-space: -pre-wrap;      /* Opera 4-6 */
 	white-space: -o-pre-wrap;    /* Opera 7 */
 	word-wrap: break-word;       /* Internet Explorer 5.5+ */
-	max-width: 700px;
+	max-width: 43.75em;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.mainContent pre {
-		font-size: 2.7em;
+		font-size: 1.69em;
 		margin-bottom: 45px;
 	}
 }
@@ -286,7 +286,7 @@ hr {
 	margin-bottom: 30px;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.mainContent figure {
 		margin-bottom: 45px;
 	}
@@ -300,15 +300,15 @@ hr {
 }
 
 .mainContent figure figcaption {
-	font-size: 1.3em;
+	font-size: 0.81em;
 	text-align: center;
 	padding-left: 20px;
 	padding-right: 20px;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.mainContent figure figcaption {
-		font-size: 1.5em;
+		font-size: 1em;
 	}
 }
 
@@ -316,7 +316,7 @@ hr {
 	margin-bottom: 30px;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.mainContent iframe {
 		margin-bottom: 45px;
 	}
@@ -329,7 +329,7 @@ hr {
 .signUpHero {
 	padding-bottom: 20px;
 	margin: 0 auto;
-	max-width: 660px;
+	max-width: 41.25em;
 	padding-left: 20px;
 	padding-right: 20px;
 }
@@ -343,7 +343,7 @@ hr {
 
 .signUpHero-heading {
 	margin-bottom: 10px;
-	font-size: 1.8em;
+	font-size: 1.13em;
 	line-height: 1.5;
 	letter-spacing: 0.01em;
 	text-transform: uppercase;
@@ -351,26 +351,26 @@ hr {
 	font-family: 'Open sans';
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.signUpHero-heading {
-		font-size: 2.1em;
+		font-size: 1.31em;
 		margin-bottom: 5px;
 	}
 }
 
 .signUpHero-description {
-	font-size: 1.8em;
+	font-size: 1.13em;
 	line-height: 1.7;
-	max-width: 700px;
+	max-width: 43.75em;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 20px;
 	color: #222;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.signUpHero-description {
-		font-size: 2.2em;
+		font-size: 1.38em;
 		margin-bottom: 30px;
 	}
 }
@@ -385,11 +385,11 @@ hr {
 
 .articleList {
 	padding-top: 30px;
-	max-width: 700px;
+	max-width: 43.75em;
 	margin: 0 auto 0px;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.articleList {
 		padding-top: 40px;
 	}
@@ -401,7 +401,7 @@ hr {
 	line-height: 1.25em;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.articleList h1 {
 		font-size: 3.8em;
 	}
@@ -411,23 +411,23 @@ hr {
 	margin-bottom: 30px;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.articleList-article {
 		margin-bottom: 45px;
 	}
 }
 
 .mainContent .articleList-articleTitle {
-	max-width: 400px;
+	max-width: 25em;
 	margin: 0;
-	font-size: 1.8em;
+	font-size: 1.13em;
 	line-height: 1.5;
 	letter-spacing: -0.01em;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.mainContent .articleList-articleTitle {
-		font-size: 2.2em;
+		font-size: 1.38em;
 	}
 }
 
@@ -446,14 +446,14 @@ hr {
 
 .mainContent .meta {
 	margin: 0;
-	font-size: 1.3em;
+	font-size: 0.81em;
 	line-height: 1.7em;
 	letter-spacing: 0.02em;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.mainContent .meta {
-		font-size: 1.6em;
+		font-size: 1em;
 	}
 }
 
@@ -468,7 +468,7 @@ hr {
 }
 
 .nav ul {
-	max-width: 660px;
+	max-width: 41.25em;
     list-style: none;
     margin-left: auto;
     margin-right: auto;
@@ -480,7 +480,7 @@ hr {
 	display: inline-block;
     margin-left: 7px;
     margin-right: 7px;
-    font-size: 1.5em;
+    font-size: 0.93em;
     margin-bottom: 10px;
     font-family: 'Open sans';
 }
@@ -526,9 +526,9 @@ hr {
 }
 
 .footer p {
-	font-size: 1.5em;
+	font-size: 1em;
 	line-height: 1.5;
-	max-width: 660px;
+	max-width: 41.25em;
 	margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
@@ -540,7 +540,7 @@ hr {
 **********************************************************/
 
 .nowRead {
-	max-width: 660px;
+	max-width: 41.25em;
 	margin: 0 auto;
 	margin-bottom: 40px;
 	padding-left: 30px;
@@ -549,20 +549,20 @@ hr {
 
 .nowRead:before {
 	content: '...';
-	font-size: 1.6em;
+	font-size: 1em;
 	margin-bottom: 15px;
 	display: block;
 	letter-spacing: 0.3em;
 }
 
 .nowRead p {
-	font-size: 1.6em;
+	font-size: 1em;
 	line-height: 1.8;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.nowRead p {
-		font-size: 1.9em;
+		font-size: 1.19em;
 		margin-bottom: 45px;
 	}
 }
@@ -572,14 +572,14 @@ hr {
 **********************************************************/
 
 .share {
-	max-width: 660px;
+	max-width: 41.25em;
 	margin: 0 auto 30px;
 	padding-top: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.share {
 		margin-bottom: 40px;
 	}
@@ -590,7 +590,7 @@ hr {
 	border-radius: 30px;
 	text-transform: uppercase;
 	padding: 17px 30px;
-	font-size: 1.3em;
+	font-size: 0.81em;
 	border: 1px solid #0074D9;
 	font-weight: bold;
 	letter-spacing: 0.04em;
@@ -608,9 +608,9 @@ hr {
 	line-height: 1.7em;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.share p {
-		font-size: 2.1em;
+		font-size: 1.31em;
 		margin-bottom: 45px;
 	}
 }
@@ -620,12 +620,12 @@ hr {
 **********************************************************/
 
 .signUpForm {
-	max-width: 660px;
+	max-width: 41.25em;
 	margin: 0 auto 40px;
 	padding: 0 20px;
 }
 
-@media(min-width: 800px) {
+@media(min-width: 50em) {
 	.signUpForm {
 		margin: 0 auto 40px;
 	}
@@ -633,50 +633,50 @@ hr {
 
 .signUpForm-heading {
 	margin-bottom: 10px;
-	font-size: 2.3em;
+	font-size: 1.44em;
 	line-height: 1.5;
 	letter-spacing: 0.01em;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.signUpForm-heading {
-		font-size: 2.9em;
+		font-size: 1.81em;
 		margin-bottom: 5px;
 		line-height: 1.5;
 	}
 }
 
 .signUpForm-description {
-	font-size: 1.6em;
+	font-size: 1em;
 	line-height: 1.8;
 	margin-bottom: 25px;
 	display: block;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.signUpForm-description {
-		font-size: 1.9em;
+		font-size: 1.19em;
 	}
 }
 
 .signUpForm-label,
 .signUpHero-label {
-	font-size: 1.8em;
+	font-size: 1.13em;
 	line-height: 1.5;
 	margin-bottom: 5px;
 	display: block;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 37.5em) {
 	.signUpForm-label,
 	.signUpHero-label {
-		font-size: 2.2em;
+		font-size: 1.38em;
 	}
 }
 
 .signUpForm-email,
 .signUpHero-email {
-	font-size: 1.6em;
+	font-size: 1em;
 	width: 100%;
 	padding: 10px;
 	margin-right: 5px;
@@ -684,7 +684,7 @@ hr {
 	box-sizing: border-box;
 	background-color: #fff;
 	border: 1px solid #333;
-	max-width: 288px;
+	max-width: 18em;
 	display: inline-block;
 }
 
@@ -696,7 +696,7 @@ hr {
 
 .signUpForm-button,
 .signUpHero-button {
-	font-size: 1.5em;
+	font-size: 1em;
 	padding: 12px 22px;
 	display: block;
 	background-color: #0074D9;
