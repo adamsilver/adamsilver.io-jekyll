@@ -1,20 +1,22 @@
 ---
 layout: post
-title:  "The disadvantages of Single Page Applications"
+title:  "The disadvantages of single page applications"
 date:   2014-08-11 09:00:01
 categories: js spas featured
 description: SPAs are full of pitfalls. There are many reasons why.
 ---
 
-Many people think single page applications (SPAs) provide a better user experience. On the contrary, not only do they cause problems for users, but they are significantly harder to design and build. Before getting into the issues, let's first clarify what an SPA is.
+Many people think single page applications (SPAs) provide a better user experience. But, not only do they cause usability problems, they are significantly harder to design and build.
+
+Before getting into the issues, let's first clarify what an SPA is.
 
 ## What exactly is an SPA?
 
-You might associate MVC, AJAX and client-side templating with an SPA. But these are not the defining characteristics. In fact, we can use all of these things to build [ROCA-style](http://roca-style.org/) websites.
+We might associate MVC, AJAX and client-side templating with an SPA. But these are not the defining characteristics of an SPA. We can use all of these things to build a rich, [ROCA-style](http://roca-style.org/) website.
 
-What really defines an SPA as such, is the fact that client-side Javascript handles the routing *instead* of the browser. That is, the application hijacks the behaviour that browsers provide natively.
+What really defines an SPA as such, is the fact that client-side Javascript handles the routing *instead* of the browser. That is, the application hijacks the behaviour that browsers inherently provide natively for *free*.
 
-It's hardly surprising then that this causes the following problems:
+When it's put like that, it's hardly surprising they cause so many problems:
 
 ## 1. History and fast back
 
@@ -25,9 +27,9 @@ Browsers store history so that pages load quickly when the user clicks *back*. D
 > &ldquo;In the traditional web model the browser will typically be able use a cached version of the page and linked resources.<br><br>
 > &ldquo;In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.&rdquo;
 
-One of the supposed benefits to SPAs is speed. So if you want users to enjoy a fast experience, the application will need to cache pages, using memory, local storage, client-side databases or cookies.
+If we want users to enjoy the same, fast experience, we'll need to mimic the native browser behaviour in Javascript. The application will need to store pages in a cache by using memory, local storage, client-side databases or cookies.
 
-Also, the application needs to determine *when* to retrieve these pages. To do this it will need to differentiate between:
+The application will also need to determine *when* to retrieve these pages. As part of this it will need to differentiate between:
 
 * a user changing the URL (by clicking a link or typing a URL in the location bar); and
 * [manually pressing back or forward](http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button) which is not easy to solve.
@@ -57,7 +59,7 @@ The application will need to handle duplicate requests. And the UI will need a c
 
 ## 4. Unsaved changes
 
-On occasion an application, upon leaving the page, will warn users about losing any unsaved changes. The browser's `beforeunload` event enables this behaviour.
+On occasion an application, upon leaving the page, will warn users about losing any unsaved changes. The browser allows us to use the `beforeunload` event to do just this.
 
 However, the application cannot use this feature because users don't request real pages. Meaning, the application will need to reimplement this behaviour if needed.
 
@@ -100,7 +102,9 @@ Furthermore, the user's browser provides a predictable and familiar loading indi
 
 ## Summary
 
-Ironically, SPAs are harder to design and harder to build. And yet, they typically produce slow, disagreeable experiences for users. Twitter, Lifehacker and Delicious have reverted to traditional architectures because of these issues. You can read about their experiences in:
+Ironically, SPAs are harder to design and harder to build. And yet, they typically produce slow, disagreeable experiences for users.
+
+Twitter, Lifehacker and Delicious have reverted to traditional architectures because of these issues which you can read about in:
 
 - [Improving performance on Twitter](https://blog.twitter.com/2012/improving-performance-on-twittercom);
 - [Breaking The Web With Hash Bangs](http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs); and
