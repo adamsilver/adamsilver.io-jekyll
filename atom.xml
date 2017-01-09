@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-01-08T15:55:48+00:00</updated>
+	<updated>2017-01-09T18:24:44+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -869,7 +869,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;h2 id=&quot;placeholder-text-may-be-mistaken-for-a-value&quot;&gt;7. Placeholder text may be mistaken for a value&lt;/h2&gt;
 
-&lt;p&gt;People that don’t notice the subtle difference in contrast will skip the field mistaking it for a value. One test showed that &lt;a href=&quot;http://www.uxmatters.com/mt/archives/2010/03/dont-put-hints-inside-text-boxes-in-web-forms.php&quot;&gt;99% of users mistakingly thought they didn’t need to enter a value&lt;/a&gt;. When the user submits the form they will be frustratingly shown an error.&lt;/p&gt;
+&lt;p&gt;People that don’t notice the subtle difference in contrast will skip the field mistaking it for a value. One test showed that &lt;a href=&quot;http://www.uxmatters.com/mt/archives/2010/03/dont-put-hints-inside-text-boxes-in-web-forms.php&quot;&gt;99% of users thought they didn’t need to enter a value&lt;/a&gt;. When the user submits the form they will be frustratingly shown an error.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
@@ -3000,19 +3000,21 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 		</entry>
 	
 		<entry>
-			<title>The disadvantages of Single Page Applications</title>
+			<title>The disadvantages of single page applications</title>
 			<link href="http://adamsilver.io/articles/the-disadvantages-of-single-page-applications/"/>
 			<updated>2014-08-11T10:00:01+01:00</updated>
 			<id>http://adamsilver.io/articles/the-disadvantages-of-single-page-applications</id>
-			<content type="html">&lt;p&gt;Many people think single page applications (SPAs) provide a better user experience. On the contrary, not only do they cause problems for users, but they are significantly harder to design and build. Before getting into the issues, let’s first clarify what an SPA is.&lt;/p&gt;
+			<content type="html">&lt;p&gt;Many people think single page applications (SPAs) provide a better user experience. But, not only do they cause usability problems, they are significantly harder to design and build.&lt;/p&gt;
+
+&lt;p&gt;Before getting into the issues, let’s first clarify what an SPA is.&lt;/p&gt;
 
 &lt;h2 id=&quot;what-exactly-is-an-spa&quot;&gt;What exactly is an SPA?&lt;/h2&gt;
 
-&lt;p&gt;You might associate MVC, AJAX and client-side templating with an SPA. But these are not the defining characteristics. In fact, we can use all of these things to build &lt;a href=&quot;http://roca-style.org/&quot;&gt;ROCA-style&lt;/a&gt; websites.&lt;/p&gt;
+&lt;p&gt;We might associate MVC, AJAX and client-side templating with an SPA. But these are not the defining characteristics of an SPA. We can use all of these things to build a rich, &lt;a href=&quot;http://roca-style.org/&quot;&gt;ROCA-style&lt;/a&gt; website.&lt;/p&gt;
 
-&lt;p&gt;What really defines an SPA as such, is the fact that client-side Javascript handles the routing &lt;em&gt;instead&lt;/em&gt; of the browser. That is, the application hijacks the behaviour that browsers provide natively.&lt;/p&gt;
+&lt;p&gt;What really defines an SPA as such, is the fact that client-side Javascript handles the routing &lt;em&gt;instead&lt;/em&gt; of the browser. That is, the application hijacks the behaviour that browsers inherently provide natively for &lt;em&gt;free&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;It’s hardly surprising then that this causes the following problems:&lt;/p&gt;
+&lt;p&gt;When it’s put like that, it’s hardly surprising they cause so many problems:&lt;/p&gt;
 
 &lt;h2 id=&quot;history-and-fast-back&quot;&gt;1. History and fast back&lt;/h2&gt;
 
@@ -3025,9 +3027,9 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 “In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.”&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;One of the supposed benefits to SPAs is speed. So if you want users to enjoy a fast experience, the application will need to cache pages, using memory, local storage, client-side databases or cookies.&lt;/p&gt;
+&lt;p&gt;If we want users to enjoy the same, fast experience, we’ll need to mimic the native browser behaviour in Javascript. The application will need to store pages in a cache by using memory, local storage, client-side databases or cookies.&lt;/p&gt;
 
-&lt;p&gt;Also, the application needs to determine &lt;em&gt;when&lt;/em&gt; to retrieve these pages. To do this it will need to differentiate between:&lt;/p&gt;
+&lt;p&gt;The application will also need to determine &lt;em&gt;when&lt;/em&gt; to retrieve these pages. As part of this it will need to differentiate between:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;a user changing the URL (by clicking a link or typing a URL in the location bar); and&lt;/li&gt;
@@ -3065,7 +3067,7 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 
 &lt;h2 id=&quot;unsaved-changes&quot;&gt;4. Unsaved changes&lt;/h2&gt;
 
-&lt;p&gt;On occasion an application, upon leaving the page, will warn users about losing any unsaved changes. The browser’s &lt;code&gt;beforeunload&lt;/code&gt; event enables this behaviour.&lt;/p&gt;
+&lt;p&gt;On occasion an application, upon leaving the page, will warn users about losing any unsaved changes. The browser allows us to use the &lt;code&gt;beforeunload&lt;/code&gt; event to do just this.&lt;/p&gt;
 
 &lt;p&gt;However, the application cannot use this feature because users don’t request real pages. Meaning, the application will need to reimplement this behaviour if needed.&lt;/p&gt;
 
@@ -3110,7 +3112,9 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
-&lt;p&gt;Ironically, SPAs are harder to design and harder to build. And yet, they typically produce slow, disagreeable experiences for users. Twitter, Lifehacker and Delicious have reverted to traditional architectures because of these issues. You can read about their experiences in:&lt;/p&gt;
+&lt;p&gt;Ironically, SPAs are harder to design and harder to build. And yet, they typically produce slow, disagreeable experiences for users.&lt;/p&gt;
+
+&lt;p&gt;Twitter, Lifehacker and Delicious have reverted to traditional architectures because of these issues which you can read about in:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://blog.twitter.com/2012/improving-performance-on-twittercom&quot;&gt;Improving performance on Twitter&lt;/a&gt;;&lt;/li&gt;

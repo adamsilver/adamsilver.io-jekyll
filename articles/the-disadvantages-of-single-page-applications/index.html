@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html dir="ltr" lang="en">
 	<head>
-	    <title>The disadvantages of Single Page Applications | Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
+	    <title>The disadvantages of single page applications | Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <meta name="viewport" content="initial-scale=1.0">
 <meta name="Author" content="Adam Silver">
@@ -29,7 +29,7 @@
 <meta property="og:type" content="website">
 
 
-	<meta content="The disadvantages of Single Page Applications" property="og:title">
+	<meta content="The disadvantages of single page applications" property="og:title">
 
 
 
@@ -48,10 +48,10 @@
 	<meta name="twitter:description" content="SPAs are full of pitfalls. There are many reasons why.">
 
 
-<meta name="twitter:title" content="The disadvantages of Single Page Applications -  Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.">
+<meta name="twitter:title" content="The disadvantages of single page applications -  Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.">
 
 
-	<meta content="The disadvantages of Single Page Applications" name="twitter:title">
+	<meta content="The disadvantages of single page applications" name="twitter:title">
 
 
 <meta name="twitter:site" content="@adambsilver">
@@ -62,7 +62,7 @@
 	<meta itemprop="description" content="SPAs are full of pitfalls. There are many reasons why.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.fc7935d3.css" media="all">
+<link rel="stylesheet" href="/assets/css/main.min.11903f6b.css" media="all">
 
 <!--[if IE 8]>
 <link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
@@ -103,16 +103,18 @@
 	</ul>
 </nav>
 	    <main class="mainContent">
-			<h1>The disadvantages of Single Page Applications</h1>
-	        <p>Many people think single page applications (SPAs) provide a better user experience. On the contrary, not only do they cause problems for users, but they are significantly harder to design and build. Before getting into the issues, let’s first clarify what an SPA is.</p>
+			<h1>The disadvantages of single page applications</h1>
+	        <p>Many people think single page applications (SPAs) provide a better user experience. But, not only do they cause usability problems, they are significantly harder to design and build.</p>
+
+<p>Before getting into the issues, let’s first clarify what an SPA is.</p>
 
 <h2 id="what-exactly-is-an-spa">What exactly is an SPA?</h2>
 
-<p>You might associate MVC, AJAX and client-side templating with an SPA. But these are not the defining characteristics. In fact, we can use all of these things to build <a href="http://roca-style.org/">ROCA-style</a> websites.</p>
+<p>We might associate MVC, AJAX and client-side templating with an SPA. But these are not the defining characteristics of an SPA. We can use all of these things to build a rich, <a href="http://roca-style.org/">ROCA-style</a> website.</p>
 
-<p>What really defines an SPA as such, is the fact that client-side Javascript handles the routing <em>instead</em> of the browser. That is, the application hijacks the behaviour that browsers provide natively.</p>
+<p>What really defines an SPA as such, is the fact that client-side Javascript handles the routing <em>instead</em> of the browser. That is, the application hijacks the behaviour that browsers inherently provide natively for <em>free</em>.</p>
 
-<p>It’s hardly surprising then that this causes the following problems:</p>
+<p>When it’s put like that, it’s hardly surprising they cause so many problems:</p>
 
 <h2 id="history-and-fast-back">1. History and fast back</h2>
 
@@ -125,9 +127,9 @@
 “In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.”</p>
 </blockquote>
 
-<p>One of the supposed benefits to SPAs is speed. So if you want users to enjoy a fast experience, the application will need to cache pages, using memory, local storage, client-side databases or cookies.</p>
+<p>If we want users to enjoy the same, fast experience, we’ll need to mimic the native browser behaviour in Javascript. The application will need to store pages in a cache by using memory, local storage, client-side databases or cookies.</p>
 
-<p>Also, the application needs to determine <em>when</em> to retrieve these pages. To do this it will need to differentiate between:</p>
+<p>The application will also need to determine <em>when</em> to retrieve these pages. As part of this it will need to differentiate between:</p>
 
 <ul>
   <li>a user changing the URL (by clicking a link or typing a URL in the location bar); and</li>
@@ -165,7 +167,7 @@
 
 <h2 id="unsaved-changes">4. Unsaved changes</h2>
 
-<p>On occasion an application, upon leaving the page, will warn users about losing any unsaved changes. The browser’s <code>beforeunload</code> event enables this behaviour.</p>
+<p>On occasion an application, upon leaving the page, will warn users about losing any unsaved changes. The browser allows us to use the <code>beforeunload</code> event to do just this.</p>
 
 <p>However, the application cannot use this feature because users don’t request real pages. Meaning, the application will need to reimplement this behaviour if needed.</p>
 
@@ -210,7 +212,9 @@
 
 <h2 id="summary">Summary</h2>
 
-<p>Ironically, SPAs are harder to design and harder to build. And yet, they typically produce slow, disagreeable experiences for users. Twitter, Lifehacker and Delicious have reverted to traditional architectures because of these issues. You can read about their experiences in:</p>
+<p>Ironically, SPAs are harder to design and harder to build. And yet, they typically produce slow, disagreeable experiences for users.</p>
+
+<p>Twitter, Lifehacker and Delicious have reverted to traditional architectures because of these issues which you can read about in:</p>
 
 <ul>
   <li><a href="https://blog.twitter.com/2012/improving-performance-on-twittercom">Improving performance on Twitter</a>;</li>
