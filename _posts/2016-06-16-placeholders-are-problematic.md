@@ -126,4 +126,4 @@ Some people ask me if it's okay to use a placeholder in addition to a label. I s
 
 Others say that the placeholder is just an enhancement and not essential to the user. To this I say that if the hint isn't essential then don't include it. Content is not an enhancement.
 
-It's clear&mdash;at least in the case of placeholders&mdash;that [minimal does not mean simple](http://uxmyths.com/post/115783813605/myth-34-simple-minimal). Avoid placeholders. [Always use a label](/articles/always-use-a-label/). And if you need a hint, put it next to the field so that it's easy to reference.
+It's clear&mdash;at least in the case of placeholders&mdash;that [minimal does not mean simple](http://uxmyths.com/post/115783813605/myth-34-simple-minimal). Avoid placeholders. [Always use a label](/articles/always-use-a-label/). And, if you do need a hint, place it outside the field.

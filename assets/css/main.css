@@ -158,10 +158,15 @@ hr {
 	max-width: 43.75em;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0 20px 20px;
+	padding: 0 20px;
+	margin-bottom: 20px;
 	color: #222;
 	letter-spacing: -0.01em;
 	font-family: 'Open sans';
+}
+
+.mainContent .article-heading {
+	margin-bottom: 0;
 }
 
 @media(min-width: 37.5em) {
@@ -468,16 +473,17 @@ hr {
 * Meta
 **********************************************************/
 
-.mainContent .meta {
-	margin: 0;
+.meta {
 	font-size: 0.81em;
 	line-height: 1.7em;
 	letter-spacing: 0.02em;
+	padding: 0 20px;
+	margin-bottom: 20px;
 }
 
 @media(min-width: 37.5em) {
-	.mainContent .meta {
-		font-size: 1em;
+	.meta {
+		font-size: 1.1em;
 	}
 }
 
