@@ -3,6 +3,7 @@ layout: post
 title: Placeholders are problematic
 date: 2016-06-16 09:00:01
 categories: design ux
+description: Placeholders have 13 problems and one simple solution. Find out everything you need to know in this article.
 ---
 
 Since placeholders came along, designers have adopted them as means of storing hints. Their appeal lies in their minimal aesthetic and the fact they save space.
