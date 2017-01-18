@@ -3,6 +3,7 @@ layout: post
 title: Always use a label
 date: 2016-07-01 09:00:01
 categories: design ux
+description: Fields with missing labels cause problems. And yet, designers omit them all the time. Why?
 ---
 
 You might be tempted to remove labels from some form controls to create a minimal aesthetic and save space. But it's a [UX myth](http://uxmyths.com/post/115783813605/myth-34-simple-minimal) that saving space and minimalist design equates to better experiences.

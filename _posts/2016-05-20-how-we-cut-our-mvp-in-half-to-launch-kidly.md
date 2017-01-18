@@ -3,6 +3,7 @@ layout: post
 title: How we cut our MVP in half to launch KIDLY
 date: 2016-05-20 09:00:01
 categories: design startup
+description: Find out how Kidly sped up their launch date by unforgivingly cuting their MVP in half.
 ---
 
 <div class="image">

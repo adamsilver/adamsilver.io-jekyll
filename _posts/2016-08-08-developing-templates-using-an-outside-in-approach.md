@@ -3,6 +3,7 @@ layout: post
 title: Developing templates using an outside-in approach
 date: 2016-08-08 09:00:01
 categories: development html
+description: When backend developers have their way, HTML templates are a breeding ground for complexity. We should strive to develop templates using an outside-in perspective.
 ---
 
 When we design websites, we start with a user problem and translate that into a set of screens and flows.

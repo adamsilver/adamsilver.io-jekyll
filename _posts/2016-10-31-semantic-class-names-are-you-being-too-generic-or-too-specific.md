@@ -3,6 +3,7 @@ layout: post
 title: "Semantic class names: are you being too generic or too specific?"
 date: 2016-10-31 09:00:01
 categories: css
+description: Most CSS developers I know don't think too hard about their choice of class names. In this article we'll take a good look at the impact of our choices.
 ---
 
 Even if you’re completely sold on [semantic class names](http://maintainablecss.com/chapters/semantics/) and avoid stylistic and behavioural class names altogether, choosing a good class name is hard.

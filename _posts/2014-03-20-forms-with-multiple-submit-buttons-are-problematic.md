@@ -3,7 +3,7 @@ layout: post
 title: Forms with multiple submit buttons are problematic
 date:   2014-03-20 09:00:01
 categories: forms a11y ux
-description: Forms with multiple submit buttons have both UX problems and technical problems all of which is discussed in this article.
+description: Keyboard users find forms with multiple buttons problematic. Find out why in this article.
 ---
 
 Forms with multiple submit buttons are problematic for keyboard users because of how submission works. A user can submit a form by pressing *enter*, when the focus is within a field (as opposed to a button).

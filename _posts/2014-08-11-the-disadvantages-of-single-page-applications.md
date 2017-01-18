@@ -3,7 +3,7 @@ layout: post
 title:  "The disadvantages of single page applications"
 date:   2014-08-11 09:00:01
 categories: js spas featured
-description: SPAs are full of pitfalls. There are many reasons why.
+description: Single page applications promise a better experience. This is rarely the case. Find out why in this article.
 ---
 
 Many people think single page applications (SPAs) provide a better user experience. But, not only do they cause usability problems, they are significantly harder to design and build.

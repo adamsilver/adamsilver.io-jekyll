@@ -3,6 +3,7 @@ layout: post
 title: Hello UX designer
 date: 2016-05-17 09:00:01
 categories: ux
+description: Everyone's responsible for UX. You are too.
 ---
 
 I always get a bit frustrated if an individual thinks they're solely responsible for UX because that’s not true. Design is always better when people work together.

@@ -3,6 +3,7 @@ layout: post
 title: Less but better
 date: 2016-11-18 09:00:01
 categories: design ux development
+description: Practicing Less But Better in design, development, delivery  and life.
 ---
 
 There are times in life when you learn something new — a moment that sets you off down a different path. Maybe you always had it “in” you, but something triggered it. Maybe it was a culmination of things or maybe something else entirely.

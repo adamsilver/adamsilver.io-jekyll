@@ -3,6 +3,7 @@ layout: post
 title: Don't initialise Javascript automagically
 date: 2017-01-06 09:00:01
 categories: js
+description: Front-end devs are seduced by complexity. One way this manifests itself is in the magical looping over behavioural classes.
 ---
 
 I used to write Javascript that initialises components automagically. Don’t

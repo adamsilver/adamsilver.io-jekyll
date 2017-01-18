@@ -3,6 +3,7 @@ layout: post
 title: Buttons shouldn't have a hand cursor
 date: 2016-07-15 09:00:01
 categories: design ux
+description: Designers are confused about the meaning of the hand cursor. Find out all the details in this article.
 ---
 
 There is this belief that the hand cursor means 'clickable', but this is incorrect and potentially problematic. My hope is that by the end of the article, you’ll never want to use the hand cursor for buttons ever again.

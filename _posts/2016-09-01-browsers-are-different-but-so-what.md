@@ -3,6 +3,7 @@ layout: post
 title: Browsers are different but so what?
 date: 2016-09-01 09:00:01
 categories: development html
+description: Browsers behave differently to each other. People often think this is a problem. It's not. 
 ---
 
 
