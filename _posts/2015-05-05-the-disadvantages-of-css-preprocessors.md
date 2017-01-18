@@ -6,72 +6,60 @@ categories: css sass less
 description: CSS preprocessors have obvious advantages but they also come with a host of problems. Learn about these to avoid pain for you and your team.
 ---
 
-CSS preprocessors have many benefits because they provide features that plain old CSS doesn't, such as variables, nesting, partials, mixins, inheritance and operators. However, CSS processors have several *disadvantages* which I discuss here for your consideration:
+The benefits of CSS preprocessors are well lauded in our industry. But, like all technology at our disposal, they come with trade-offs that we should consider before accepting the added complexity they bring.
 
 ## 1. Debugging is harder
 
-Due to having a compilation step, the browser is not interpreting the source files, meaning the CSS line numbers are now irrelevant when trying to debug. This makes debugging a lot harder.
+Preprocessors have a compilation step, meaning that CSS line numbers are irrelevant when trying to debug our code.
 
 > &ldquo;Debugging is twice as hard as programming&rdquo;
 > <br>&mdash; <cite>Brian Kernighan</cite>
 
-[Source maps](http://thesassway.com/intermediate/using-source-maps-with-sass) provide one solution but this requires setup and only works in a limited set of *modern* browsers. Developers who care about users also test in *older* browsers.
+[Source maps](http://thesassway.com/intermediate/using-source-maps-with-sass) provide a solution they require setup and they only work in a limited set of *modern* browsers. Quite often bugs crop up in *old* browsers.
 
-Alternatively, you can hunt down styles via abstract portions of rules, which is horrid. Brian Kernighan said "debugging is twice as hard as programming" and it's our duty to ensure this is as easy as possible.
+Without source maps, we can search for a group of rules in the hope that we find what we're looking for. But all in all, this becomes very painful indeed.
 
-## 2. Compilation time slows down development
+## 2. Compilation slows down development
 
-Compilation can be quick but it can also be slow, *very* slow. I have frequently found myself *saving* and *refreshing* before compilation time finishes&mdash;even using CLI tooling on the latest Macbook Pro. *Your* mileage may vary.
+Compilation times can be *painfully* slow, even when using the fastest techniques on a cutting edge machine. You know that feeling you get when you refresh and don't see any changes. That.
 
 ## 3. Performance is compromised
 
-[Source file size can be deceiving](http://jaketrent.com/post/cons-css-preprocessors/) because the generated CSS is likely to be significantly larger than the source file, potentially causing [performance problems](http://blog.millermedeiros.com/the-problem-with-css-pre-processors/). Ultimately, what is generated is out of your control and *some* responsibility is handed over to your chosen CSS preprocessor.
+Source files may be small, but the [generated CSS could be huge](http://jaketrent.com/post/cons-css-preprocessors/). And it's the generated CSS that counts toward the user experience. We must be aware that in using a CSS preprocessor, we're handing over some control.
 
-## 4. Maintainence
+## 4. Maintainence and overengineering
 
-Maintainability can sometimes be compromised. As an example, I have seen `@brandRed` (instead of `#ff0000`) sprinkled across various CSS files which isn't really advantageous. If the colour changes to something that isn't a red, then you have to do a *search and replace* anyway (which by the way isn't exactly difficult).
+It's common to find a `red` variable for example. But this is of little value in terms of maintainability. If the colour changes, then we need to update the name and the value, making the abstraction pointless. And, many problems are solveable with *search and replace* anyway.
 
-## 5. Tooling can constrain developer choice
+## 5. Tooling and developer convenience
 
-Extra tooling (CLI, GUI, plugins) is required. Developers shouldn't be *too* constrained in their choice of development setups and with every tool added, there is something that needs setting up, working with, upgrading and maintaining which increases the chance of issues.
+CSS preprocessors require extra tooling. Firstly, developers shouldn't be forced to use a particular editor just to be able to use tooling. That's the tail wagging the dog. 
 
-CSS linters and text editor highlighting (CLI or plugins) are commonly available. CSS preprocessors are not *as* readily available. If they *are* available, they need setting up (and the rules need sharing with other developers easily).
-
-If they aren't available then your remaining options are to either, find another editor or forget about linting, either way, not ideal.
+Secondly, extra stuff adds complexity, which needs working with, understanding, upgrading and maintaining all of which increases cost and the chance of issues.
 
 ## 6. Saving generated files (or not)
 
-Whilst I firmly believe that you *shouldn't* save generated files to source control, I (and I am not the only one to) have experienced opinions to the [contrary](http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo) and in this case prepare for  [Concenus Driven Development](http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/).
+Should we save the generated files or not? [We don't agree on the answer to this question](http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo). In this case we must prepare ourselves for [Concensus Driven Development](http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/).
 
-## 7. Onboarding and recruitment is harder
+## 7. Capability and understanding
 
-Candidates that *don't* have knowledge of CSS preprocessors (or the workflows around them) become more costly when onboarding. If you really want someone that has suitable knowledge then the pool of candidates is reduced. Whilst it's not a steep learning curve, and more developers are aquiring these skills, it's still something you might want to consider.
+CSS preprocessors and the workflows around them have become widespread. But due to their complexity there is still a knowledge gap, even if we're talking about a lack of understanding of the trade-offs.
 
-## But what about variables, mixins, and nesting?
+Is it a massive deal? No. Is it worth considering. That's up to you.
 
-**Variables** can be achieved by using comma-delimited CSS selectors, as follows:
+## But what about variables, mixins, and nesting etc?
 
-	selector,
-	anotherSelector {
-	    color: red;
-	}
+A solid approach to writing [maintainable CSS](http://maintainablecss.com) solves most problems.
 
-**Mixins** can be achieved the same way, by using comma-delimited CSS selectors, as follows:
+We can mimick *variables* and *mixins* by using comma-delimited CSS selectors:
 
 	selector,
 	anotherSelector {
-	    border-radius: 3px;
-	    -webkit-border-radius: 3px;
+	  /* common rules */
 	}
 
-**Nesting** can't quite be achieved. However, that's not so bad because nesting can cause performance problems and is ill-advised for most situations. Instead, [use a convention](http://maintainablecss.com) that groups module components together:
-
-	.someModule {}
-
-	.someModule-someComponent {}
-
-	.someModule-someOtherComponent {}
+We can nest in CSS but it's not completely DRY and it can cause performance issues. Instead, [use a convention](http://maintainablecss.com/chapters/conventions/).
 
 ## Summary
 
-Whilst CSS preprocessors have several advantages, they also have several disadvantages. Only you can decide the trade-offs you're willing to make for your situation&mdash;I simply urge you to make sure that the decision is a *conscious* one.
+It's *easy* to add a CSS preprocessor to the tech stack. But, it's not easy to remove it down the line, should we so choose. It's our responsibility to consider deeply the impact they have on our work flow before making the *easy* decision to install one.
