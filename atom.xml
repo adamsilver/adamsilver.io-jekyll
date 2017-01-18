@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-01-18T17:42:22+00:00</updated>
+	<updated>2017-01-18T18:13:59+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -2516,9 +2516,9 @@ if(Object.create) {
 &lt;br /&gt;— &lt;cite&gt;Brian Kernighan&lt;/cite&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://thesassway.com/intermediate/using-source-maps-with-sass&quot;&gt;Source maps&lt;/a&gt; provide one solution, but this needs extra work to setup setup. Plus they only work in a limited set of &lt;em&gt;modern&lt;/em&gt; browsers. But, as we know, bugs often crop up in &lt;em&gt;old&lt;/em&gt; browsers.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://thesassway.com/intermediate/using-source-maps-with-sass&quot;&gt;Source maps&lt;/a&gt; provide one solution, but this needs extra work to setup. Plus they only work in a limited set of &lt;em&gt;modern&lt;/em&gt; browsers. But, as we know, bugs often crop up in &lt;em&gt;old&lt;/em&gt; browsers.&lt;/p&gt;
 
-&lt;p&gt;Without source maps, we are left to search for rules in the hope that we find what we’re looking for. All in all, this is painful.&lt;/p&gt;
+&lt;p&gt;Without source maps, we are left to search for rules in the hope that we find what we’re looking for.&lt;/p&gt;
 
 &lt;h2 id=&quot;compilation-slows-down-development&quot;&gt;2. Compilation slows down development&lt;/h2&gt;
 
@@ -2526,9 +2526,9 @@ if(Object.create) {
 
 &lt;h2 id=&quot;performance-is-compromised&quot;&gt;3. Performance is compromised&lt;/h2&gt;
 
-&lt;p&gt;Source files may be small, but the &lt;a href=&quot;http://jaketrent.com/post/cons-css-preprocessors/&quot;&gt;generated CSS could be huge&lt;/a&gt;. And it’s the generated CSS that counts toward the user experience.&lt;/p&gt;
+&lt;p&gt;Source files may be small, but the &lt;a href=&quot;http://jaketrent.com/post/cons-css-preprocessors/&quot;&gt;generated CSS could be huge&lt;/a&gt;. And it’s the generated CSS that counts.&lt;/p&gt;
 
-&lt;p&gt;We should be aware that in using a CSS preprocessor, we’re losing over some inportant control.&lt;/p&gt;
+&lt;p&gt;We should be aware that in using a CSS preprocessor, we’re losing some inportant control.&lt;/p&gt;
 
 &lt;h2 id=&quot;maintainence-and-overengineering&quot;&gt;4. Maintainence and overengineering&lt;/h2&gt;
 
@@ -2536,25 +2536,25 @@ if(Object.create) {
 
 &lt;p&gt;If the colour changes, then we need to update the name and the value, making the abstraction pointless.&lt;/p&gt;
 
-&lt;p&gt;There are alternatives (which we’ll cover later) and a search and replace maybe all we need.&lt;/p&gt;
+&lt;p&gt;Not only are there alternatives to variables and mixins (which we’ll cover later), but a search and replace maybe all we need.&lt;/p&gt;
 
 &lt;h2 id=&quot;tooling-and-developer-convenience&quot;&gt;5. Tooling and developer convenience&lt;/h2&gt;
 
-&lt;p&gt;CSS preprocessors require extra tooling. Firstly, developers shouldn’t be forced to use a particular editor just to be able to use the tool. That’s the tail wagging the dog.&lt;/p&gt;
+&lt;p&gt;CSS preprocessors require extra tooling. Developers shouldn’t be forced to use a particular editor just to be able to use the tool. That’s the tail wagging the dog.&lt;/p&gt;
 
-&lt;p&gt;Secondly, extra stuff adds complexity. This needs to be understood, upgraded and maintained—all of which increases cost and the chance of issues.&lt;/p&gt;
+&lt;p&gt;Also, extra stuff adds complexity. This needs to be understood, upgraded and maintained—all of which increases cost and the chance of issues.&lt;/p&gt;
 
 &lt;h2 id=&quot;saving-generated-files-or-not&quot;&gt;6. Saving generated files (or not)&lt;/h2&gt;
 
-&lt;p&gt;Should we save the generated files or not? &lt;a href=&quot;http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo&quot;&gt;Not sure, but we don’t agree on the answer&lt;/a&gt;. In this case,  prepare for &lt;a href=&quot;http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/&quot;&gt;Concensus Driven Development&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Whether we should &lt;a href=&quot;http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo&quot;&gt;save the generated CSS&lt;/a&gt; or not is something we don’t agree on as a community. In which case, it’s time for some &lt;a href=&quot;http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/&quot;&gt;Concensus Driven Development&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;capability-and-understanding&quot;&gt;7. Capability and understanding&lt;/h2&gt;
 
-&lt;p&gt;CSS preprocessors and the workflows around them have become widespread.&lt;/p&gt;
+&lt;p&gt;Whilst CSS preprocessors and the workflows around them have become widespread, there is still a knowledge gap. Particularly, when it comes to understanding the trade-offs.&lt;/p&gt;
 
-&lt;p&gt;However, due to their complexity there is still a knowledge gap especially in terms of the trade-offs discussed here. Is it a massive deal? No. Is it worth considering. That’s up to you.&lt;/p&gt;
+&lt;p&gt;There’s a big difference between understanding a tool, and using it effectively without introducing other problems.&lt;/p&gt;
 
-&lt;h2 id=&quot;but-what-about-variables-mixins-and-nesting-etc&quot;&gt;But what about variables, mixins, and nesting etc?&lt;/h2&gt;
+&lt;h2 id=&quot;what-about-variables-mixins-and-nesting&quot;&gt;What about variables, mixins, and nesting?&lt;/h2&gt;
 
 &lt;p&gt;A solid approach to writing &lt;a href=&quot;http://maintainablecss.com&quot;&gt;maintainable CSS&lt;/a&gt; solves most problems. In anycase, we can mimick &lt;em&gt;variables&lt;/em&gt; and &lt;em&gt;mixins&lt;/em&gt; by using comma-delimited CSS selectors:&lt;/p&gt;
 
@@ -2564,7 +2564,7 @@ anotherSelector {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;And, we can nest in CSS but it’s not completely DRY and it can cause performance issues. Instead, we should &lt;a href=&quot;http://maintainablecss.com/chapters/conventions/&quot;&gt;use a convention&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;And, whilst we can repetitively qualify our selectors to mimick &lt;em&gt;nesting&lt;/em&gt;, it’s not something that makes for performant CSS. Instead, we should &lt;a href=&quot;http://maintainablecss.com/chapters/conventions/&quot;&gt;use a convention&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 

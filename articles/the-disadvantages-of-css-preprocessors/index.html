@@ -125,9 +125,9 @@
 <br />— <cite>Brian Kernighan</cite></p>
 </blockquote>
 
-<p><a href="http://thesassway.com/intermediate/using-source-maps-with-sass">Source maps</a> provide one solution, but this needs extra work to setup setup. Plus they only work in a limited set of <em>modern</em> browsers. But, as we know, bugs often crop up in <em>old</em> browsers.</p>
+<p><a href="http://thesassway.com/intermediate/using-source-maps-with-sass">Source maps</a> provide one solution, but this needs extra work to setup. Plus they only work in a limited set of <em>modern</em> browsers. But, as we know, bugs often crop up in <em>old</em> browsers.</p>
 
-<p>Without source maps, we are left to search for rules in the hope that we find what we’re looking for. All in all, this is painful.</p>
+<p>Without source maps, we are left to search for rules in the hope that we find what we’re looking for.</p>
 
 <h2 id="compilation-slows-down-development">2. Compilation slows down development</h2>
 
@@ -135,9 +135,9 @@
 
 <h2 id="performance-is-compromised">3. Performance is compromised</h2>
 
-<p>Source files may be small, but the <a href="http://jaketrent.com/post/cons-css-preprocessors/">generated CSS could be huge</a>. And it’s the generated CSS that counts toward the user experience.</p>
+<p>Source files may be small, but the <a href="http://jaketrent.com/post/cons-css-preprocessors/">generated CSS could be huge</a>. And it’s the generated CSS that counts.</p>
 
-<p>We should be aware that in using a CSS preprocessor, we’re losing over some inportant control.</p>
+<p>We should be aware that in using a CSS preprocessor, we’re losing some inportant control.</p>
 
 <h2 id="maintainence-and-overengineering">4. Maintainence and overengineering</h2>
 
@@ -145,25 +145,25 @@
 
 <p>If the colour changes, then we need to update the name and the value, making the abstraction pointless.</p>
 
-<p>There are alternatives (which we’ll cover later) and a search and replace maybe all we need.</p>
+<p>Not only are there alternatives to variables and mixins (which we’ll cover later), but a search and replace maybe all we need.</p>
 
 <h2 id="tooling-and-developer-convenience">5. Tooling and developer convenience</h2>
 
-<p>CSS preprocessors require extra tooling. Firstly, developers shouldn’t be forced to use a particular editor just to be able to use the tool. That’s the tail wagging the dog.</p>
+<p>CSS preprocessors require extra tooling. Developers shouldn’t be forced to use a particular editor just to be able to use the tool. That’s the tail wagging the dog.</p>
 
-<p>Secondly, extra stuff adds complexity. This needs to be understood, upgraded and maintained—all of which increases cost and the chance of issues.</p>
+<p>Also, extra stuff adds complexity. This needs to be understood, upgraded and maintained—all of which increases cost and the chance of issues.</p>
 
 <h2 id="saving-generated-files-or-not">6. Saving generated files (or not)</h2>
 
-<p>Should we save the generated files or not? <a href="http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo">Not sure, but we don’t agree on the answer</a>. In this case,  prepare for <a href="http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/">Concensus Driven Development</a>.</p>
+<p>Whether we should <a href="http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo">save the generated CSS</a> or not is something we don’t agree on as a community. In which case, it’s time for some <a href="http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/">Concensus Driven Development</a>.</p>
 
 <h2 id="capability-and-understanding">7. Capability and understanding</h2>
 
-<p>CSS preprocessors and the workflows around them have become widespread.</p>
+<p>Whilst CSS preprocessors and the workflows around them have become widespread, there is still a knowledge gap. Particularly, when it comes to understanding the trade-offs.</p>
 
-<p>However, due to their complexity there is still a knowledge gap especially in terms of the trade-offs discussed here. Is it a massive deal? No. Is it worth considering. That’s up to you.</p>
+<p>There’s a big difference between understanding a tool, and using it effectively without introducing other problems.</p>
 
-<h2 id="but-what-about-variables-mixins-and-nesting-etc">But what about variables, mixins, and nesting etc?</h2>
+<h2 id="what-about-variables-mixins-and-nesting">What about variables, mixins, and nesting?</h2>
 
 <p>A solid approach to writing <a href="http://maintainablecss.com">maintainable CSS</a> solves most problems. In anycase, we can mimick <em>variables</em> and <em>mixins</em> by using comma-delimited CSS selectors:</p>
 
@@ -173,7 +173,7 @@ anotherSelector {
 }
 </code></pre>
 
-<p>And, we can nest in CSS but it’s not completely DRY and it can cause performance issues. Instead, we should <a href="http://maintainablecss.com/chapters/conventions/">use a convention</a>.</p>
+<p>And, whilst we can repetitively qualify our selectors to mimick <em>nesting</em>, it’s not something that makes for performant CSS. Instead, we should <a href="http://maintainablecss.com/chapters/conventions/">use a convention</a>.</p>
 
 <h2 id="summary">Summary</h2>
 
