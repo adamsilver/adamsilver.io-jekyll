@@ -15,9 +15,9 @@ Preprocessors have a compilation step, meaning that CSS line numbers are irrelev
 > &ldquo;Debugging is twice as hard as programming&rdquo;
 > <br>&mdash; <cite>Brian Kernighan</cite>
 
-[Source maps](http://thesassway.com/intermediate/using-source-maps-with-sass) provide one solution, but this needs extra work to setup setup. Plus they only work in a limited set of *modern* browsers. But, as we know, bugs often crop up in *old* browsers.
+[Source maps](http://thesassway.com/intermediate/using-source-maps-with-sass) provide one solution, but this needs extra work to setup. Plus they only work in a limited set of *modern* browsers. But, as we know, bugs often crop up in *old* browsers.
 
-Without source maps, we are left to search for rules in the hope that we find what we're looking for. All in all, this is painful.
+Without source maps, we are left to search for rules in the hope that we find what we're looking for.
 
 ## 2. Compilation slows down development
 
@@ -25,9 +25,9 @@ Compilation times can be *painfully* slow, even when using the fastest technique
 
 ## 3. Performance is compromised
 
-Source files may be small, but the [generated CSS could be huge](http://jaketrent.com/post/cons-css-preprocessors/). And it's the generated CSS that counts toward the user experience.
+Source files may be small, but the [generated CSS could be huge](http://jaketrent.com/post/cons-css-preprocessors/). And it's the generated CSS that counts.
 
-We should be aware that in using a CSS preprocessor, we're losing over some inportant control.
+We should be aware that in using a CSS preprocessor, we're losing some inportant control.
 
 ## 4. Maintainence and overengineering
 
@@ -35,25 +35,25 @@ It's common to see developers employing a `red` variable, for example. But this 
 
 If the colour changes, then we need to update the name and the value, making the abstraction pointless.
 
-There are alternatives (which we'll cover later) and a search and replace maybe all we need.
+Not only are there alternatives to variables and mixins (which we'll cover later), but a search and replace maybe all we need.
 
 ## 5. Tooling and developer convenience
 
-CSS preprocessors require extra tooling. Firstly, developers shouldn't be forced to use a particular editor just to be able to use the tool. That's the tail wagging the dog.
+CSS preprocessors require extra tooling. Developers shouldn't be forced to use a particular editor just to be able to use the tool. That's the tail wagging the dog.
 
-Secondly, extra stuff adds complexity. This needs to be understood, upgraded and maintained&mdash;all of which increases cost and the chance of issues.
+Also, extra stuff adds complexity. This needs to be understood, upgraded and maintained&mdash;all of which increases cost and the chance of issues.
 
 ## 6. Saving generated files (or not)
 
-Should we save the generated files or not? [Not sure, but we don't agree on the answer](http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo). In this case,  prepare for [Concensus Driven Development](http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/).
+Whether we should [save the generated CSS](http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo) or not is something we don't agree on as a community. In which case, it's time for some [Concensus Driven Development](http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/).
 
 ## 7. Capability and understanding
 
-CSS preprocessors and the workflows around them have become widespread.
+Whilst CSS preprocessors and the workflows around them have become widespread, there is still a knowledge gap. Particularly, when it comes to understanding the trade-offs.
 
-However, due to their complexity there is still a knowledge gap especially in terms of the trade-offs discussed here. Is it a massive deal? No. Is it worth considering. That's up to you.
+There's a big difference between understanding a tool, and using it effectively without introducing other problems.
 
-## But what about variables, mixins, and nesting etc?
+## What about variables, mixins, and nesting?
 
 A solid approach to writing [maintainable CSS](http://maintainablecss.com) solves most problems. In anycase, we can mimick *variables* and *mixins* by using comma-delimited CSS selectors:
 
@@ -62,7 +62,7 @@ A solid approach to writing [maintainable CSS](http://maintainablecss.com) solve
 	  /* common rules */
 	}
 
-And, we can nest in CSS but it's not completely DRY and it can cause performance issues. Instead, we should [use a convention](http://maintainablecss.com/chapters/conventions/).
+And, whilst we can repetitively qualify our selectors to mimick *nesting*, it's not something that makes for performant CSS. Instead, we should [use a convention](http://maintainablecss.com/chapters/conventions/).
 
 ## Summary
 
