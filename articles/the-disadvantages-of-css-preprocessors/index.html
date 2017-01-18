@@ -114,54 +114,58 @@
 	  
 	</span>
 </div>
-	        <p>The benefits of CSS preprocessors are well lauded in our industry. But, like all technology at our disposal, they come with trade-offs that we should consider before accepting the added complexity they bring.</p>
+	        <p>CSS preprocessors are well lauded in our industry. But, like all technology on offer, it comes with trade-offs. Trade-offs that need our consideration before accepting the added complexity they bring.</p>
 
 <h2 id="debugging-is-harder">1. Debugging is harder</h2>
 
-<p>Preprocessors have a compilation step, meaning that CSS line numbers are irrelevant when trying to debug our code.</p>
+<p>Preprocessors have a compilation step, meaning that CSS line numbers are irrelevant when trying to debug our code. But debugging is twice as hard as programming, so this alone is a <em>huge</em> downside.</p>
 
 <blockquote>
   <p>“Debugging is twice as hard as programming”
 <br />— <cite>Brian Kernighan</cite></p>
 </blockquote>
 
-<p><a href="http://thesassway.com/intermediate/using-source-maps-with-sass">Source maps</a> provide a solution they require setup and they only work in a limited set of <em>modern</em> browsers. Quite often bugs crop up in <em>old</em> browsers.</p>
+<p><a href="http://thesassway.com/intermediate/using-source-maps-with-sass">Source maps</a> provide one solution, but this needs extra work to setup setup. Plus they only work in a limited set of <em>modern</em> browsers. But, as we know, bugs often crop up in <em>old</em> browsers.</p>
 
-<p>Without source maps, we can search for a group of rules in the hope that we find what we’re looking for. But all in all, this becomes very painful indeed.</p>
+<p>Without source maps, we are left to search for rules in the hope that we find what we’re looking for. All in all, this is painful.</p>
 
 <h2 id="compilation-slows-down-development">2. Compilation slows down development</h2>
 
-<p>Compilation times can be <em>painfully</em> slow, even when using the fastest techniques on a cutting edge machine. You know that feeling you get when you refresh and don’t see any changes. That.</p>
+<p>Compilation times can be <em>painfully</em> slow, even when using the fastest techniques on a cutting edge machine. You know that feeling you get when you refresh and don’t see any changes? <em>That</em>.</p>
 
 <h2 id="performance-is-compromised">3. Performance is compromised</h2>
 
-<p>Source files may be small, but the <a href="http://jaketrent.com/post/cons-css-preprocessors/">generated CSS could be huge</a>. And it’s the generated CSS that counts toward the user experience. We must be aware that in using a CSS preprocessor, we’re handing over some control.</p>
+<p>Source files may be small, but the <a href="http://jaketrent.com/post/cons-css-preprocessors/">generated CSS could be huge</a>. And it’s the generated CSS that counts toward the user experience.</p>
+
+<p>We should be aware that in using a CSS preprocessor, we’re losing over some inportant control.</p>
 
 <h2 id="maintainence-and-overengineering">4. Maintainence and overengineering</h2>
 
-<p>It’s common to find a <code>red</code> variable for example. But this is of little value in terms of maintainability. If the colour changes, then we need to update the name and the value, making the abstraction pointless. And, many problems are solveable with <em>search and replace</em> anyway.</p>
+<p>It’s common to see developers employing a <code>red</code> variable, for example. But this is of little value in terms of maintainability.</p>
+
+<p>If the colour changes, then we need to update the name and the value, making the abstraction pointless.</p>
+
+<p>There are alternatives (which we’ll cover later) and a search and replace maybe all we need.</p>
 
 <h2 id="tooling-and-developer-convenience">5. Tooling and developer convenience</h2>
 
-<p>CSS preprocessors require extra tooling. Firstly, developers shouldn’t be forced to use a particular editor just to be able to use tooling. That’s the tail wagging the dog. </p>
+<p>CSS preprocessors require extra tooling. Firstly, developers shouldn’t be forced to use a particular editor just to be able to use the tool. That’s the tail wagging the dog.</p>
 
-<p>Secondly, extra stuff adds complexity, which needs working with, understanding, upgrading and maintaining all of which increases cost and the chance of issues.</p>
+<p>Secondly, extra stuff adds complexity. This needs to be understood, upgraded and maintained—all of which increases cost and the chance of issues.</p>
 
 <h2 id="saving-generated-files-or-not">6. Saving generated files (or not)</h2>
 
-<p>Should we save the generated files or not? <a href="http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo">We don’t agree on the answer to this question</a>. In this case we must prepare ourselves for <a href="http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/">Concensus Driven Development</a>.</p>
+<p>Should we save the generated files or not? <a href="http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo">Not sure, but we don’t agree on the answer</a>. In this case,  prepare for <a href="http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/">Concensus Driven Development</a>.</p>
 
 <h2 id="capability-and-understanding">7. Capability and understanding</h2>
 
-<p>CSS preprocessors and the workflows around them have become widespread. But due to their complexity there is still a knowledge gap, even if we’re talking about a lack of understanding of the trade-offs.</p>
+<p>CSS preprocessors and the workflows around them have become widespread.</p>
 
-<p>Is it a massive deal? No. Is it worth considering. That’s up to you.</p>
+<p>However, due to their complexity there is still a knowledge gap especially in terms of the trade-offs discussed here. Is it a massive deal? No. Is it worth considering. That’s up to you.</p>
 
 <h2 id="but-what-about-variables-mixins-and-nesting-etc">But what about variables, mixins, and nesting etc?</h2>
 
-<p>A solid approach to writing <a href="http://maintainablecss.com">maintainable CSS</a> solves most problems.</p>
-
-<p>We can mimick <em>variables</em> and <em>mixins</em> by using comma-delimited CSS selectors:</p>
+<p>A solid approach to writing <a href="http://maintainablecss.com">maintainable CSS</a> solves most problems. In anycase, we can mimick <em>variables</em> and <em>mixins</em> by using comma-delimited CSS selectors:</p>
 
 <pre><code>selector,
 anotherSelector {
@@ -169,11 +173,13 @@ anotherSelector {
 }
 </code></pre>
 
-<p>We can nest in CSS but it’s not completely DRY and it can cause performance issues. Instead, <a href="http://maintainablecss.com/chapters/conventions/">use a convention</a>.</p>
+<p>And, we can nest in CSS but it’s not completely DRY and it can cause performance issues. Instead, we should <a href="http://maintainablecss.com/chapters/conventions/">use a convention</a>.</p>
 
 <h2 id="summary">Summary</h2>
 
-<p>It’s <em>easy</em> to add a CSS preprocessor to the tech stack. But, it’s not easy to remove it down the line, should we so choose. It’s our responsibility to consider deeply the impact they have on our work flow before making the <em>easy</em> decision to install one.</p>
+<p>It’s <em>easy</em> to add a CSS preprocessor to the tech stack. But, it’s not easy to remove it down the line, should we so choose.</p>
+
+<p>It’s our responsibility to consider the impact they have on our work flow before making the <em>easy</em> decision to install one.</p>
 
 	    </main>
 		<div class="signUpHero  signUpHero-isArticle ">
