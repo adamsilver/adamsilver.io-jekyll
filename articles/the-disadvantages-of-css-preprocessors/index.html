@@ -114,80 +114,66 @@
 	  
 	</span>
 </div>
-	        <p>CSS preprocessors have many benefits because they provide features that plain old CSS doesn’t, such as variables, nesting, partials, mixins, inheritance and operators. However, CSS processors have several <em>disadvantages</em> which I discuss here for your consideration:</p>
+	        <p>The benefits of CSS preprocessors are well lauded in our industry. But, like all technology at our disposal, they come with trade-offs that we should consider before accepting the added complexity they bring.</p>
 
 <h2 id="debugging-is-harder">1. Debugging is harder</h2>
 
-<p>Due to having a compilation step, the browser is not interpreting the source files, meaning the CSS line numbers are now irrelevant when trying to debug. This makes debugging a lot harder.</p>
+<p>Preprocessors have a compilation step, meaning that CSS line numbers are irrelevant when trying to debug our code.</p>
 
 <blockquote>
   <p>“Debugging is twice as hard as programming”
 <br />— <cite>Brian Kernighan</cite></p>
 </blockquote>
 
-<p><a href="http://thesassway.com/intermediate/using-source-maps-with-sass">Source maps</a> provide one solution but this requires setup and only works in a limited set of <em>modern</em> browsers. Developers who care about users also test in <em>older</em> browsers.</p>
+<p><a href="http://thesassway.com/intermediate/using-source-maps-with-sass">Source maps</a> provide a solution they require setup and they only work in a limited set of <em>modern</em> browsers. Quite often bugs crop up in <em>old</em> browsers.</p>
 
-<p>Alternatively, you can hunt down styles via abstract portions of rules, which is horrid. Brian Kernighan said “debugging is twice as hard as programming” and it’s our duty to ensure this is as easy as possible.</p>
+<p>Without source maps, we can search for a group of rules in the hope that we find what we’re looking for. But all in all, this becomes very painful indeed.</p>
 
-<h2 id="compilation-time-slows-down-development">2. Compilation time slows down development</h2>
+<h2 id="compilation-slows-down-development">2. Compilation slows down development</h2>
 
-<p>Compilation can be quick but it can also be slow, <em>very</em> slow. I have frequently found myself <em>saving</em> and <em>refreshing</em> before compilation time finishes—even using CLI tooling on the latest Macbook Pro. <em>Your</em> mileage may vary.</p>
+<p>Compilation times can be <em>painfully</em> slow, even when using the fastest techniques on a cutting edge machine. You know that feeling you get when you refresh and don’t see any changes. That.</p>
 
 <h2 id="performance-is-compromised">3. Performance is compromised</h2>
 
-<p><a href="http://jaketrent.com/post/cons-css-preprocessors/">Source file size can be deceiving</a> because the generated CSS is likely to be significantly larger than the source file, potentially causing <a href="http://blog.millermedeiros.com/the-problem-with-css-pre-processors/">performance problems</a>. Ultimately, what is generated is out of your control and <em>some</em> responsibility is handed over to your chosen CSS preprocessor.</p>
+<p>Source files may be small, but the <a href="http://jaketrent.com/post/cons-css-preprocessors/">generated CSS could be huge</a>. And it’s the generated CSS that counts toward the user experience. We must be aware that in using a CSS preprocessor, we’re handing over some control.</p>
 
-<h2 id="maintainence">4. Maintainence</h2>
+<h2 id="maintainence-and-overengineering">4. Maintainence and overengineering</h2>
 
-<p>Maintainability can sometimes be compromised. As an example, I have seen <code>@brandRed</code> (instead of <code>#ff0000</code>) sprinkled across various CSS files which isn’t really advantageous. If the colour changes to something that isn’t a red, then you have to do a <em>search and replace</em> anyway (which by the way isn’t exactly difficult).</p>
+<p>It’s common to find a <code>red</code> variable for example. But this is of little value in terms of maintainability. If the colour changes, then we need to update the name and the value, making the abstraction pointless. And, many problems are solveable with <em>search and replace</em> anyway.</p>
 
-<h2 id="tooling-can-constrain-developer-choice">5. Tooling can constrain developer choice</h2>
+<h2 id="tooling-and-developer-convenience">5. Tooling and developer convenience</h2>
 
-<p>Extra tooling (CLI, GUI, plugins) is required. Developers shouldn’t be <em>too</em> constrained in their choice of development setups and with every tool added, there is something that needs setting up, working with, upgrading and maintaining which increases the chance of issues.</p>
+<p>CSS preprocessors require extra tooling. Firstly, developers shouldn’t be forced to use a particular editor just to be able to use tooling. That’s the tail wagging the dog. </p>
 
-<p>CSS linters and text editor highlighting (CLI or plugins) are commonly available. CSS preprocessors are not <em>as</em> readily available. If they <em>are</em> available, they need setting up (and the rules need sharing with other developers easily).</p>
-
-<p>If they aren’t available then your remaining options are to either, find another editor or forget about linting, either way, not ideal.</p>
+<p>Secondly, extra stuff adds complexity, which needs working with, understanding, upgrading and maintaining all of which increases cost and the chance of issues.</p>
 
 <h2 id="saving-generated-files-or-not">6. Saving generated files (or not)</h2>
 
-<p>Whilst I firmly believe that you <em>shouldn’t</em> save generated files to source control, I (and I am not the only one to) have experienced opinions to the <a href="http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo">contrary</a> and in this case prepare for  <a href="http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/">Concenus Driven Development</a>.</p>
+<p>Should we save the generated files or not? <a href="http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo">We don’t agree on the answer to this question</a>. In this case we must prepare ourselves for <a href="http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/">Concensus Driven Development</a>.</p>
 
-<h2 id="onboarding-and-recruitment-is-harder">7. Onboarding and recruitment is harder</h2>
+<h2 id="capability-and-understanding">7. Capability and understanding</h2>
 
-<p>Candidates that <em>don’t</em> have knowledge of CSS preprocessors (or the workflows around them) become more costly when onboarding. If you really want someone that has suitable knowledge then the pool of candidates is reduced. Whilst it’s not a steep learning curve, and more developers are aquiring these skills, it’s still something you might want to consider.</p>
+<p>CSS preprocessors and the workflows around them have become widespread. But due to their complexity there is still a knowledge gap, even if we’re talking about a lack of understanding of the trade-offs.</p>
 
-<h2 id="but-what-about-variables-mixins-and-nesting">But what about variables, mixins, and nesting?</h2>
+<p>Is it a massive deal? No. Is it worth considering. That’s up to you.</p>
 
-<p><strong>Variables</strong> can be achieved by using comma-delimited CSS selectors, as follows:</p>
+<h2 id="but-what-about-variables-mixins-and-nesting-etc">But what about variables, mixins, and nesting etc?</h2>
 
-<pre><code>selector,
-anotherSelector {
-    color: red;
-}
-</code></pre>
+<p>A solid approach to writing <a href="http://maintainablecss.com">maintainable CSS</a> solves most problems.</p>
 
-<p><strong>Mixins</strong> can be achieved the same way, by using comma-delimited CSS selectors, as follows:</p>
+<p>We can mimick <em>variables</em> and <em>mixins</em> by using comma-delimited CSS selectors:</p>
 
 <pre><code>selector,
 anotherSelector {
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
+  /* common rules */
 }
 </code></pre>
 
-<p><strong>Nesting</strong> can’t quite be achieved. However, that’s not so bad because nesting can cause performance problems and is ill-advised for most situations. Instead, <a href="http://maintainablecss.com">use a convention</a> that groups module components together:</p>
-
-<pre><code>.someModule {}
-
-.someModule-someComponent {}
-
-.someModule-someOtherComponent {}
-</code></pre>
+<p>We can nest in CSS but it’s not completely DRY and it can cause performance issues. Instead, <a href="http://maintainablecss.com/chapters/conventions/">use a convention</a>.</p>
 
 <h2 id="summary">Summary</h2>
 
-<p>Whilst CSS preprocessors have several advantages, they also have several disadvantages. Only you can decide the trade-offs you’re willing to make for your situation—I simply urge you to make sure that the decision is a <em>conscious</em> one.</p>
+<p>It’s <em>easy</em> to add a CSS preprocessor to the tech stack. But, it’s not easy to remove it down the line, should we so choose. It’s our responsibility to consider deeply the impact they have on our work flow before making the <em>easy</em> decision to install one.</p>
 
 	    </main>
 		<div class="signUpHero  signUpHero-isArticle ">
