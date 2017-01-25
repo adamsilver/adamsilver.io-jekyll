@@ -8,16 +8,11 @@ description: Javascript polyfills are ever-present in the front end industry, bu
 
 A polyfill, also known as a shim, is a user-defined implementation of an API that some browsers provide natively, normalising browser differences.
 
-As a proponent of [outside-in development](/articles/developing-templates-using-an-outside-in-approach), I see the lure of trying to develop websites as if all browsers are the same.
-
-The problem is that [browsers are not the same](/articles/browsers-are-different-but-so-what/). And tackling the "problem" with a polyfill is problematic for several reasons. Here's why:
+As a proponent of [outside-in development](/articles/developing-templates-using-an-outside-in-approach), I see the lure of trying to develop websites as if all browsers are the same. The problem is that [browsers are not the same](/articles/browsers-are-different-but-so-what/). And tackling the "problem" with a polyfill is problematic. Here's why:
 
 ## 1. They augmenting host objects
 
-Polyfills augment host and native objects. Experts such as Richard Cornford, David Mark, Thomas Lahn and Kangax have told us this is a bad idea. The latter of which published two articles on the matter:
-
-* [What's wrong with extending the DOM?](http://perfectionkills.com/whats-wrong-with-extending-the-dom/); and
-* [Extending native built-ins](http://perfectionkills.com/extending-native-builtins/).
+Polyfills augment host and native objects. Experts such as Richard Cornford, David Mark, Thomas Lahn and Kangax have told us this is a bad idea. The latter of which published two articles on the matter: [What's wrong with extending the DOM?](http://perfectionkills.com/whats-wrong-with-extending-the-dom/) and [Extending native built-ins](http://perfectionkills.com/extending-native-builtins/).
 
 Here's a choice snippet if you don't have time to read the articles:
 
@@ -39,9 +34,7 @@ As Nicholas Zakas says in [Scalable JavaScript Application Architecture](https:/
 
 We may not need the full API to solve the problem. We may not even be *able* to implement a polyfill because there's just no way to do it. This is why context is important.
 
-We should first look to understand the problem precisely. And then solve *that* problem. We shouldn't do more than that. We rarely need *all* of an API as we'll discuss shortly.
-
-With polyfills it's all or nothing.
+We should first look to understand the problem precisely. And then solve *that* problem only. We rarely need *all* of an API, which is something we'll discuss shortly. With polyfills it's all or nothing.
 
 ## 5. They come with caveats
 
@@ -49,7 +42,7 @@ It takes little effort to find problematic polyfills. Take the [ES5 Shim](https:
 
 > &ldquo;For the case of simply "begetting" an object that inherits prototypically from another, this **should** work fine across legacy engines.&rdquo;
 
-The word *should* doesn't instill confidence. We should build atop of reliable foundations. We are only as good as our lowest level functions. It continues:
+Emphasis mine. The word *should* doesn't instill confidence. We should, of course, build atop of reliable foundations&mdash;we are only as good as our lowest level functions. It continues:
 
 > &ldquo;The second argument is passed to Object.defineProperties which will **probably fail either silently or with extreme prejudice**.&rdquo;
 
@@ -70,7 +63,7 @@ Cloning an object is pertinent to this article because `Object.create` solves th
 	  };
 	}
 
-Note there is only one argument. This facade uses a small part of the API, exposing a simpler method signature creating a lean solution to our problem in the process. What about browsers lacking `Object.create`?
+As this implementation only uses a small part of the entire API, the exposed method signature has just one argument, solving the precise problem and no more. But what about browsers lacking `Object.create`?
 
 If we want to degrade gracefully, we don't have to do anything. If we want to support other browsers add a second fork as follows:
 
