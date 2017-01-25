@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-01-25T16:54:06+00:00</updated>
+	<updated>2017-01-25T17:04:31+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -2376,18 +2376,11 @@ Mosaic, but there are front-end engineering approaches that ensure “any” bro
 			<id>http://adamsilver.io/articles/the-disadvantages-of-javascript-polyfills</id>
 			<content type="html">&lt;p&gt;A polyfill, also known as a shim, is a user-defined implementation of an API that some browsers provide natively, normalising browser differences.&lt;/p&gt;
 
-&lt;p&gt;As a proponent of &lt;a href=&quot;/articles/developing-templates-using-an-outside-in-approach&quot;&gt;outside-in development&lt;/a&gt;, I see the lure of trying to develop websites as if all browsers are the same.&lt;/p&gt;
-
-&lt;p&gt;The problem is that &lt;a href=&quot;/articles/browsers-are-different-but-so-what/&quot;&gt;browsers are not the same&lt;/a&gt;. And tackling the “problem” with a polyfill is problematic for several reasons. Here’s why:&lt;/p&gt;
+&lt;p&gt;As a proponent of &lt;a href=&quot;/articles/developing-templates-using-an-outside-in-approach&quot;&gt;outside-in development&lt;/a&gt;, I see the lure of trying to develop websites as if all browsers are the same. The problem is that &lt;a href=&quot;/articles/browsers-are-different-but-so-what/&quot;&gt;browsers are not the same&lt;/a&gt;. And tackling the “problem” with a polyfill is problematic. Here’s why:&lt;/p&gt;
 
 &lt;h2 id=&quot;they-augmenting-host-objects&quot;&gt;1. They augmenting host objects&lt;/h2&gt;
 
-&lt;p&gt;Polyfills augment host and native objects. Experts such as Richard Cornford, David Mark, Thomas Lahn and Kangax have told us this is a bad idea. The latter of which published two articles on the matter:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://perfectionkills.com/whats-wrong-with-extending-the-dom/&quot;&gt;What’s wrong with extending the DOM?&lt;/a&gt;; and&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://perfectionkills.com/extending-native-builtins/&quot;&gt;Extending native built-ins&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Polyfills augment host and native objects. Experts such as Richard Cornford, David Mark, Thomas Lahn and Kangax have told us this is a bad idea. The latter of which published two articles on the matter: &lt;a href=&quot;http://perfectionkills.com/whats-wrong-with-extending-the-dom/&quot;&gt;What’s wrong with extending the DOM?&lt;/a&gt; and &lt;a href=&quot;http://perfectionkills.com/extending-native-builtins/&quot;&gt;Extending native built-ins&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Here’s a choice snippet if you don’t have time to read the articles:&lt;/p&gt;
 
@@ -2413,9 +2406,7 @@ Mosaic, but there are front-end engineering approaches that ensure “any” bro
 
 &lt;p&gt;We may not need the full API to solve the problem. We may not even be &lt;em&gt;able&lt;/em&gt; to implement a polyfill because there’s just no way to do it. This is why context is important.&lt;/p&gt;
 
-&lt;p&gt;We should first look to understand the problem precisely. And then solve &lt;em&gt;that&lt;/em&gt; problem. We shouldn’t do more than that. We rarely need &lt;em&gt;all&lt;/em&gt; of an API as we’ll discuss shortly.&lt;/p&gt;
-
-&lt;p&gt;With polyfills it’s all or nothing.&lt;/p&gt;
+&lt;p&gt;We should first look to understand the problem precisely. And then solve &lt;em&gt;that&lt;/em&gt; problem only. We rarely need &lt;em&gt;all&lt;/em&gt; of an API, which is something we’ll discuss shortly. With polyfills it’s all or nothing.&lt;/p&gt;
 
 &lt;h2 id=&quot;they-come-with-caveats&quot;&gt;5. They come with caveats&lt;/h2&gt;
 
@@ -2425,7 +2416,7 @@ Mosaic, but there are front-end engineering approaches that ensure “any” bro
   &lt;p&gt;“For the case of simply “begetting” an object that inherits prototypically from another, this &lt;strong&gt;should&lt;/strong&gt; work fine across legacy engines.”&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;The word &lt;em&gt;should&lt;/em&gt; doesn’t instill confidence. We should build atop of reliable foundations. We are only as good as our lowest level functions. It continues:&lt;/p&gt;
+&lt;p&gt;Emphasis mine. The word &lt;em&gt;should&lt;/em&gt; doesn’t instill confidence. We should, of course, build atop of reliable foundations—we are only as good as our lowest level functions. It continues:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;“The second argument is passed to Object.defineProperties which will &lt;strong&gt;probably fail either silently or with extreme prejudice&lt;/strong&gt;.”&lt;/p&gt;
@@ -2449,7 +2440,7 @@ if(Object.create) {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Note there is only one argument. This facade uses a small part of the API, exposing a simpler method signature creating a lean solution to our problem in the process. What about browsers lacking &lt;code&gt;Object.create&lt;/code&gt;?&lt;/p&gt;
+&lt;p&gt;As this implementation only uses a small part of the entire API, the exposed method signature has just one argument, solving the precise problem and no more. But what about browsers lacking &lt;code&gt;Object.create&lt;/code&gt;?&lt;/p&gt;
 
 &lt;p&gt;If we want to degrade gracefully, we don’t have to do anything. If we want to support other browsers add a second fork as follows:&lt;/p&gt;
 

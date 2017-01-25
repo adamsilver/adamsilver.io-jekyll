@@ -116,18 +116,11 @@
 </div>
 	        <p>A polyfill, also known as a shim, is a user-defined implementation of an API that some browsers provide natively, normalising browser differences.</p>
 
-<p>As a proponent of <a href="/articles/developing-templates-using-an-outside-in-approach">outside-in development</a>, I see the lure of trying to develop websites as if all browsers are the same.</p>
-
-<p>The problem is that <a href="/articles/browsers-are-different-but-so-what/">browsers are not the same</a>. And tackling the “problem” with a polyfill is problematic for several reasons. Here’s why:</p>
+<p>As a proponent of <a href="/articles/developing-templates-using-an-outside-in-approach">outside-in development</a>, I see the lure of trying to develop websites as if all browsers are the same. The problem is that <a href="/articles/browsers-are-different-but-so-what/">browsers are not the same</a>. And tackling the “problem” with a polyfill is problematic. Here’s why:</p>
 
 <h2 id="they-augmenting-host-objects">1. They augmenting host objects</h2>
 
-<p>Polyfills augment host and native objects. Experts such as Richard Cornford, David Mark, Thomas Lahn and Kangax have told us this is a bad idea. The latter of which published two articles on the matter:</p>
-
-<ul>
-  <li><a href="http://perfectionkills.com/whats-wrong-with-extending-the-dom/">What’s wrong with extending the DOM?</a>; and</li>
-  <li><a href="http://perfectionkills.com/extending-native-builtins/">Extending native built-ins</a>.</li>
-</ul>
+<p>Polyfills augment host and native objects. Experts such as Richard Cornford, David Mark, Thomas Lahn and Kangax have told us this is a bad idea. The latter of which published two articles on the matter: <a href="http://perfectionkills.com/whats-wrong-with-extending-the-dom/">What’s wrong with extending the DOM?</a> and <a href="http://perfectionkills.com/extending-native-builtins/">Extending native built-ins</a>.</p>
 
 <p>Here’s a choice snippet if you don’t have time to read the articles:</p>
 
@@ -153,9 +146,7 @@
 
 <p>We may not need the full API to solve the problem. We may not even be <em>able</em> to implement a polyfill because there’s just no way to do it. This is why context is important.</p>
 
-<p>We should first look to understand the problem precisely. And then solve <em>that</em> problem. We shouldn’t do more than that. We rarely need <em>all</em> of an API as we’ll discuss shortly.</p>
-
-<p>With polyfills it’s all or nothing.</p>
+<p>We should first look to understand the problem precisely. And then solve <em>that</em> problem only. We rarely need <em>all</em> of an API, which is something we’ll discuss shortly. With polyfills it’s all or nothing.</p>
 
 <h2 id="they-come-with-caveats">5. They come with caveats</h2>
 
@@ -165,7 +156,7 @@
   <p>“For the case of simply “begetting” an object that inherits prototypically from another, this <strong>should</strong> work fine across legacy engines.”</p>
 </blockquote>
 
-<p>The word <em>should</em> doesn’t instill confidence. We should build atop of reliable foundations. We are only as good as our lowest level functions. It continues:</p>
+<p>Emphasis mine. The word <em>should</em> doesn’t instill confidence. We should, of course, build atop of reliable foundations—we are only as good as our lowest level functions. It continues:</p>
 
 <blockquote>
   <p>“The second argument is passed to Object.defineProperties which will <strong>probably fail either silently or with extreme prejudice</strong>.”</p>
@@ -189,7 +180,7 @@ if(Object.create) {
 }
 </code></pre>
 
-<p>Note there is only one argument. This facade uses a small part of the API, exposing a simpler method signature creating a lean solution to our problem in the process. What about browsers lacking <code>Object.create</code>?</p>
+<p>As this implementation only uses a small part of the entire API, the exposed method signature has just one argument, solving the precise problem and no more. But what about browsers lacking <code>Object.create</code>?</p>
 
 <p>If we want to degrade gracefully, we don’t have to do anything. If we want to support other browsers add a second fork as follows:</p>
 
