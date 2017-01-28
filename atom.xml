@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-01-25T17:04:31+00:00</updated>
+	<updated>2017-01-28T10:53:46+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -798,10 +798,10 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 		</entry>
 	
 		<entry>
-			<title>Placeholders are problematic</title>
-			<link href="http://adamsilver.io/articles/placeholders-are-problematic/"/>
+			<title>Placeholders: minimal does not mean simple</title>
+			<link href="http://adamsilver.io/articles/placeholders-minimal-does-not-mean-simple/"/>
 			<updated>2016-06-16T10:00:01+01:00</updated>
-			<id>http://adamsilver.io/articles/placeholders-are-problematic</id>
+			<id>http://adamsilver.io/articles/placeholders-minimal-does-not-mean-simple</id>
 			<content type="html">&lt;p&gt;Since placeholders came along, designers have adopted them as means of storing hints. Their appeal lies in their minimal aesthetic and the fact they save space.&lt;/p&gt;
 
 &lt;p&gt;Some designers go one one step further, and replace labels with placeholders. Either way, the placeholder is an Inclusive Design anti-pattern which causes problems for users. Here’s why:&lt;/p&gt;
