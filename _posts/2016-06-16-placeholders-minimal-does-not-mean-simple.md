@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Placeholders are problematic
+title: "Placeholders: minimal does not mean simple"
 date: 2016-06-16 09:00:01
 categories: design ux
 description: Placeholders have 13 problems and one simple solution. Find out everything you need to know in this article.
