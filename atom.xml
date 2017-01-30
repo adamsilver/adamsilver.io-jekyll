@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-01-28T10:53:46+00:00</updated>
+	<updated>2017-01-30T17:17:22+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -3006,8 +3006,7 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 &lt;p&gt;Browsers store history so that pages load quickly when the user clicks &lt;em&gt;back&lt;/em&gt;. Daniel Puplus explains in &lt;a href=&quot;https://medium.com/joys-of-javascript/4353246f4480&quot;&gt;Building Single Page Applications&lt;/a&gt; that:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;“Back should be quick; users don’t expect data to have changed much.&lt;br /&gt;&lt;br /&gt;
-“When a user presses the browser’s back button they expect the change to happen quickly and for the page to be in a similar state to how it was last time they saw it.&lt;br /&gt;&lt;br /&gt;
+  &lt;p&gt;“When a user presses the browser’s back button they expect the change to happen quickly and for the page to be in a similar state to how it was last time they saw it.&lt;br /&gt;&lt;br /&gt;
 “In the traditional web model the browser will typically be able use a cached version of the page and linked resources.&lt;br /&gt;&lt;br /&gt;
 “In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.”&lt;/p&gt;
 &lt;/blockquote&gt;
