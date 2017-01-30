@@ -22,7 +22,6 @@ When it's put like that, it's hardly surprising they cause so many problems:
 
 Browsers store history so that pages load quickly when the user clicks *back*. Daniel Puplus explains in [Building Single Page Applications](https://medium.com/joys-of-javascript/4353246f4480) that:
 
-> &ldquo;Back should be quick; users don’t expect data to have changed much.<br><br>
 > &ldquo;When a user presses the browser’s back button they expect the change to happen quickly and for the page to be in a similar state to how it was last time they saw it.<br><br>
 > &ldquo;In the traditional web model the browser will typically be able use a cached version of the page and linked resources.<br><br>
 > &ldquo;In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.&rdquo;
