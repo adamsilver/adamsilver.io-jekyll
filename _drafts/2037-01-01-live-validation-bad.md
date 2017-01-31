@@ -5,13 +5,26 @@ date: 2037-01-01 09:00:01
 categories
 ---
 
-The idea behind live validation is good. It's good because the idea is to help users fix any problems as soon as possible, in context and just after they have made a mistake. If a user fills out a long form and only gets told after submission (some time after they filled out the field), then it may have a burden on them.
+The idea behind live validation is to help users fix errors as soon as they occur. If the user fills out a long form and the form is only validated later onsubmit, then they may have lost some context of the erroneous field.
+
+But is this really a problem? Firstly, there is often opportunity in form design to make forms shorter, or to split long forms up over many pages (see One Thing Per Page). Secondly, even if a form is long this is probably of little issue&mdash;as long as fixing the error is easy.
+
+What does *easy* mean though? Easy means helping the user understand they have a problem and explaining clearly how to fix it. If we get this right, live validation or not, a form is going to be easy to use (all things being equal).
+
+
+Live validation itself actually has problems. And if we consider the problems with the overall picture it's easy to see that this often touted UX recommendation is probably best avoided. Let's take a look at some of the problems now:
+
+1. Onblur is too late and disrupts the flow of moving to the next field
+
+2. Onkeyup is too early and interupts the user
+
+3. Inconsistency
+
+---
 
 But what is really the problem here. Firstly as long as the user knows how to fix a problem then bringing the user back to context is not a big deal. Imagine a long form where the first field is a credit card number. The user makes their way through this form and presses submit. All fields are correct, except the credit card number.
 
 The error reads "Your credit card number is missing a number." Even though it's been a minute since the user typed out credit card number, understanding the problem and fixing it is a simple one isn't it. And this logic follows for many live validation examples.
-
-But if we can design our validation to improve the experience just a teeny tiny amount shouldn't we? Normally speaking we should of course. But when it comes to live validation it's not as simple as that. Live validation causes several problems for what is seemingly a small and potential gain. And it could even result in a worse experience.
 
 Here's why:
 
@@ -23,20 +36,15 @@ There is also an inconstency with validating fields this way or through submit, 
 
 Not all fields can be validated this way causing further inconsitency. Radios, checkboxes, and select boxes all feel different to the user. Say for example with a set of radios, do you blur on the last input or every input?
 
-## 2. What do you do when in error state?
+## . What do you do when in error state?
 
 When a field is in an error state, do you then switch to keyup or keep the error there until blur. Same for keyup validation for known lengths.
 
-## 3. Showing an error once the user blurs is too late
+## . Showing an error once the user blurs is too late
 
-Once you leave the field, ur focusing on the next one. Then the previous message comes up. Too late in fact.
+Once you leave the field, your focusing on the next one. Then the previous message comes up. Too late in fact.
 
-## 4. Cross field?
-
-Password & confirm password — think — i think fine.
-Choose one if something else checked — think — i think fine.
-
-## 5. Messy and complex rules for length of at least X
+## . Messy and complex rules for length of at least X
 
 Some validation requirements mean that something should be at least X characters in length. 
 
@@ -53,13 +61,6 @@ Maybe you need a rule to say “did the user get past 6 characters and then redu
 Whilst typing or when bluring.
 
 Whilst typing the error appears and hides as the user types the correct and incorrect thing. Often when we fix a typo, we move the cursor all the way back to the beginning. Quicker than moving the cursor to the correct spot for some people.
-
-
- just as the user is going 
-
-## 6. Complex to build
-
-All of this to say is that is fairly complex to build and configure.
 
 ## But like Heydon says we can do something once we know fields are in an error state.
 
