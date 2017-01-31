@@ -48,6 +48,15 @@ Let's take an example. Let's say we configure a field to validate after 6 charac
 
 Maybe you need a rule to say “did the user get past 6 characters and then reduce the characters” but you see how complex this can get.
 
+## 6. Page jumps around
+
+Whilst typing or when bluring.
+
+Whilst typing the error appears and hides as the user types the correct and incorrect thing. Often when we fix a typo, we move the cursor all the way back to the beginning. Quicker than moving the cursor to the correct spot for some people.
+
+
+ just as the user is going 
+
 ## 6. Complex to build
 
 All of this to say is that is fairly complex to build and configure.
@@ -61,6 +70,8 @@ He says:
 > Not wanting to be the overbearing restaurant waiter continually interrupting customers to check in with them, we didn't flag errors on first run. Instead, only where errors are present after attempted submission do we begin informing the user.
 
 > Once the user is actively engaged in correcting errors, I think it helpful to reward their efforts as they work. For fields now marked invalid, we could run our validation routine on each input event, switching aria-invalid from false to true where applicable.
+
+But the problem still stands because the user is interupted when they are trying to fix the thing and onblur is too late.
 
 ## Summary
 
