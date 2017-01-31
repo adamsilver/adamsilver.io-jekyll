@@ -48,9 +48,19 @@ Let's take an example. Let's say we configure a field to validate after 6 charac
 
 Maybe you need a rule to say “did the user get past 6 characters and then reduce the characters” but you see how complex this can get.
 
-## Complex to build
+## 6. Complex to build
 
 All of this to say is that is fairly complex to build and configure.
+
+## But like Heydon says we can do something once we know fields are in an error state.
+
+He says:
+
+> Some fancy form validation scripts give you live feedback as you type your text entries, letting you know whether what you type is valid as you type it. This can become very difficult to manage. For entries that require a certain number of characters, the first few keystrokes always going to constitute an invalid entry. So, when do we send feedback to the user and how frequently?
+
+> Not wanting to be the overbearing restaurant waiter continually interrupting customers to check in with them, we didn't flag errors on first run. Instead, only where errors are present after attempted submission do we begin informing the user.
+
+> Once the user is actively engaged in correcting errors, I think it helpful to reward their efforts as they work. For fields now marked invalid, we could run our validation routine on each input event, switching aria-invalid from false to true where applicable.
 
 ## Summary
 
