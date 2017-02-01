@@ -48,7 +48,7 @@ Consider what a browser gives us for free:
 * When a user clicks the *cancel* button, the browser will stop any in-flight requests.
 * When a user clicks a link, the browser will again, stop any in-flight requests and make a new request.
 
-As SPAs retrieve pages via AJAX, there could be several requests in-flight. The first page request could finish last. And, a user may click (and therefore request) the same link twice. This is problematic because:
+As SPAs retrieve pages (or data for a page) via AJAX, there could be several requests in-flight. The first page request could finish last. And, a user may click (and therefore request) the same link twice. This is problematic because:
 
 - it's inefficient;
 - the user's data allowance could be eaten up unnecessarily; and
