@@ -5,7 +5,9 @@ date: 2037-01-01 09:00:01
 categories: js
 ---
 
-Live validation (or feedback) enables users to know whether what they type into a text box is valid *as they type*. The theory is that it's better to know about errors as soon as they occur. The thing is, on balance, live validation produces more problems than it solves.
+Live validation is also known as inline validation and live feedback. It enables users to know whether what they type into a text box is valid *as they type*.
+
+The theory is that it's better to know about errors as soon as they occur. The thing is, on balance, live validation produces more problems than it solves.
 
 ## 1. Interupting the user
 
@@ -19,9 +21,9 @@ Heydon talks about a hybrid approach, which is to enable live feedback after the
 
 ## 2. Visual glitches
 
-Depending on the visual design, the page could judder fields becomes switch between valid and invalid states. That is the error appears and disappears while typing, which can disorientate users.
+Depending on the visual design, the page could judder. This is because a field switches between valid and invalid states, the error appears and disappears respectively. This can be disorientating for low confidence  users. Here's an example:
 
-![Live feedback can cause the page to judder](https://cdn-images-1.medium.com/max/1600/1*XBGf_n7pIbd0fXxN4KfLNQ.gif)
+![Live feedback can cause the page to judder](/assets/img/live.gif)
 
 ## 3. Inconsistency
 
