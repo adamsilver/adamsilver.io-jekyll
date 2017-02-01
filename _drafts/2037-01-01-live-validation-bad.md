@@ -17,14 +17,14 @@ We could wait until the user has entered enough characters before showing an err
 
 We could provide feedback when the user leaves the field (onblur) but this is too late. The user has already finished with that field and is preparing for the next one.
 
-Another option would be to enable live feedback after the user first submits the form. The idea here is that once the user is actively fixing errors, live feedback becomes more useful and less problematic. Credit to Heydon for his idea.
+Another option would be to enable live feedback after the user first submits the form. The idea here is that once the user is actively fixing errors, live feedback becomes more useful and less problematic. Thanks to Heydon for this idea of his.
 
-However, the problem still stands because whilst the user is fixing the error, the user is still interrupted. And again onblur is still too late!
+However, the problem still stands because whilst the user is fixing the error, they will still be interrupted. And again onblur is still too late!
 
 That's not all though. Depending on the visual design of the error messages, the page could judder as errors appear and disappear while the user types which is disorientating. And can be particularly problematic when using a mouse, as the elements move in response to blurring the field.
 
 ![Live feedback can cause the page to judder](https://cdn-images-1.medium.com/max/1600/1*XBGf_n7pIbd0fXxN4KfLNQ.gif)
 
-And some fields, such as checkboxes, can't be validated like this. And some validation routines can only be ran on the server (via submission), such as checking login credentials. This inconsistency in behaviour could be confusing for users.
+Some fields, such as checkboxes, can't be validated like this. And some validation routines can only be ran on the server (via submission), such as checking login credentials. This inconsistency in behaviour could be confusing for users.
 
-If we validate onsubmit these problems fade away. By keeping things consistent we keep things familiar which obviously helps. Moreover by not interupting users, they can stay on task and complete a form with ease.
+If we validate onsubmit these problems fade away. By keeping things consistent we make things familiar. Moreover by not interupting users, they stay on-task and complete a form with ease.
