@@ -64,7 +64,7 @@ However, the application cannot use this feature because users don't request rea
 
 ## 5. Search engine ranking
 
-Not all SPAs need SEO. But when they do, [it's not easy to solve](http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo).
+For many SPAs SEO is an afterthought, which is problematic because retro fitting server side rendering is not trivial. The alternative is to create a *special* website just for bots which isn't ideal either. Either way, it's another problem that needs consideration and action.
 
 ## 6. Loading CSS &amp; Javascript
 
