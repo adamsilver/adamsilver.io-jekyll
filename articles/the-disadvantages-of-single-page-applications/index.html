@@ -164,7 +164,7 @@
   <li>When a user clicks a link, the browser will again, stop any in-flight requests and make a new request.</li>
 </ul>
 
-<p>As SPAs retrieve pages via AJAX, there could be several requests in-flight. The first page request could finish last. And, a user may click (and therefore request) the same link twice. This is problematic because:</p>
+<p>As SPAs retrieve pages (or data for a page) via AJAX, there could be several requests in-flight. The first page request could finish last. And, a user may click (and therefore request) the same link twice. This is problematic because:</p>
 
 <ul>
   <li>it’s inefficient;</li>
@@ -182,7 +182,7 @@
 
 <h2 id="search-engine-ranking">5. Search engine ranking</h2>
 
-<p>Not all SPAs need SEO. But when they do, <a href="http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo">it’s not easy to solve</a>.</p>
+<p>For many SPAs SEO is an afterthought, which is problematic because retro fitting server side rendering is not trivial. The alternative is to create a <em>special</em> website just for bots which isn’t ideal either. Either way, it’s another problem that needs consideration and action.</p>
 
 <h2 id="loading-css-amp-javascript">6. Loading CSS &amp; Javascript</h2>
 

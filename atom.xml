@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-01-30T17:17:22+00:00</updated>
+	<updated>2017-02-01T19:32:13+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -783,7 +783,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 &lt;h3 id=&quot;notes-1&quot;&gt;Notes&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Visual users will be okay to begin with due to the placeholder. But &lt;a href=&quot;/articles/placeholders-are-problematic&quot;&gt; placeholders are problematic&lt;/a&gt; for many reasons. One example is that once the user starts typing the instruction disappears.&lt;/li&gt;
+  &lt;li&gt;Visual users will be okay to begin with due to the placeholder. But &lt;a href=&quot;/articles/placeholders-minimal-does-not-mean-simple&quot;&gt; placeholders are problematic&lt;/a&gt; for many reasons. One example is that once the user starts typing the instruction disappears.&lt;/li&gt;
   &lt;li&gt;Motor-impaired users again will find it harder to select the field.&lt;/li&gt;
   &lt;li&gt;Screen reader users will find it difficult because the placeholder is not announced.&lt;/li&gt;
   &lt;li&gt;If a foreigner wants to translate the page using the browser’s translation routine, the placeholder is ignored which causes confusion.&lt;/li&gt;
@@ -3039,7 +3039,7 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
   &lt;li&gt;When a user clicks a link, the browser will again, stop any in-flight requests and make a new request.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;As SPAs retrieve pages via AJAX, there could be several requests in-flight. The first page request could finish last. And, a user may click (and therefore request) the same link twice. This is problematic because:&lt;/p&gt;
+&lt;p&gt;As SPAs retrieve pages (or data for a page) via AJAX, there could be several requests in-flight. The first page request could finish last. And, a user may click (and therefore request) the same link twice. This is problematic because:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;it’s inefficient;&lt;/li&gt;
@@ -3057,7 +3057,7 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 
 &lt;h2 id=&quot;search-engine-ranking&quot;&gt;5. Search engine ranking&lt;/h2&gt;
 
-&lt;p&gt;Not all SPAs need SEO. But when they do, &lt;a href=&quot;http://stackoverflow.com/questions/7549306/single-page-js-websites-and-seo&quot;&gt;it’s not easy to solve&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For many SPAs SEO is an afterthought, which is problematic because retro fitting server side rendering is not trivial. The alternative is to create a &lt;em&gt;special&lt;/em&gt; website just for bots which isn’t ideal either. Either way, it’s another problem that needs consideration and action.&lt;/p&gt;
 
 &lt;h2 id=&quot;loading-css-amp-javascript&quot;&gt;6. Loading CSS &amp;amp; Javascript&lt;/h2&gt;
 
