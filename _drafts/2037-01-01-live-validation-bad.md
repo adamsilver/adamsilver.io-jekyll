@@ -21,7 +21,7 @@ Heydon talks about a hybrid approach, which is to enable live feedback after the
 
 ## 2. Visual glitches
 
-Depending on the visual design, the page could judder. This is because a field switches between valid and invalid states, the error appears and disappears respectively. This can be disorientating for low confidence  users. Here's an example:
+Depending on the visual design, the page could judder. This is because as a field switches between valid and invalid states, the error appears and disappears respectively. This can be disorientating for low confidence  users. Here's an example:
 
 ![Live feedback can cause the page to judder](/assets/img/live.gif)
 
@@ -29,14 +29,16 @@ Depending on the visual design, the page could judder. This is because a field s
 
 Live validation is not suitable for checkboxes, for example. Consider a rule whereby one or more checkboxes must be selected. Providing feedback as the user moves between checkboxes is hard to manage and behaves differently to a textbox.
 
+If the user is being shown errors throughout the form, only to be shown errors on submit for fields that cannot be validated this way, it could be confusing and frustrating.
+
 Also, some validation routines can only be performed on the server, via submission, such as checking login credentials. This inconsistency in behaviour could confuse users unnecessarily.
 
 ## Summary
 
 I would go as far to say that getting live validation right is nigh on impossible. Any potential benefit is outweighed by the problems introduced by the feature itself.
 
-There are better ways to improve the usability on forms. Firstly we can shorten forms by removing fields or chunking them using the One Thing Per Page pattern.
+There are better ways to improve the form usability. Firstly we can shorten forms by removing fields or chunking them using the One Thing Per Page pattern.
 
-Secondly, if we ensure messaging is clear and easy to act upon then fixing errors and completing the form is going to be easy regardless.
+Secondly, if we ensure errors are clear and simple to remedy then fixing errors and completing the form is going to be easy regardless.
 
 If we validate `onsubmit` these problems fade away. By keeping things consistent we make things familiar. Without interuption, users can focus on the task at hand, with errors being shown when users most expect them.
