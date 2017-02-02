@@ -7,7 +7,7 @@ categories: js
 
 Live validation (also known as inline validation and live feedback) enables users to know whether what they type into a text box is valid *as they type*. The theory is that it's easier to fix errors as soon as they occur. The thing is, live validation introduces more problems than it solves. Here's why:
 
-## 1. Interuption causes friction
+## 1. Interruption causes friction
 
 The problem, for example, is that for entries that require a certain number of characters, the first keystroke is always going to constitute an invalid entry. This means users will be interrupted early and often.
 
