@@ -5,8 +5,7 @@ date: 2037-01-01 09:00:01
 categories: js
 ---
 
-Live validation (also known as inline validation and live feedback) enables users to know whether what they type into a text box is valid *as they type*.
-The theory is that it's easier to fix errors as soon as they occur. The thing is, live validation introduces more problems than it solves. Here's why:
+Live validation (also known as inline validation and live feedback) enables users to know whether what they type into a text box is valid *as they type*. The theory is that it's easier to fix errors as soon as they occur. The thing is, live validation introduces more problems than it solves. Here's why:
 
 ## 1. Interuption causes friction
 
