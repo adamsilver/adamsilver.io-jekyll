@@ -15,7 +15,7 @@ We could wait until the user has entered enough characters before showing an err
 
 Alternatively, we could provide feedback when the user leaves the field (`onblur`) but this is too late. The user has already started to mentally prepare for (and to fill out) the next field.
 
-Heydon talks about a hybrid approach, which provides live feedback *after* the user first submits the form. The idea being that once the user is actively fixing errors, live feedback becomes less troublesome. However, the problem still stands because whilst the user is fixing the error, they will still be interrupted.
+Heydon mentions a hybrid approach. It provides live feedback *after* the user first submits the form. The idea being that once the user is actively fixing errors, live feedback becomes less troublesome. However, the problem still exists because whilst the user is fixing the error, they will still be interrupted.
 
 ## 2. Visual glitches are disorientating
 
