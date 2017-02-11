@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Don't initialise Javascript automagically
-date: 2017-01-06 09:00:01
+date: 2016-12-06 09:00:01
 categories: js
 description: Front-end devs are seduced by complexity. One way this manifests itself is in the magical looping over behavioural classes.
 ---
@@ -148,7 +148,7 @@ Good code is not about number of lines.
 
 Good code is not about how easy it is to write the first time.
 
-Good code is easy to reason about. 
+Good code is easy to reason about.
 
 Good code is easy to update.
 
