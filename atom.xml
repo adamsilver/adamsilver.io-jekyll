@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-02-03T12:13:45+00:00</updated>
+	<updated>2017-02-11T09:00:07+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -13,7 +13,7 @@
 		<entry>
 			<title>Year in review 2016</title>
 			<link href="http://adamsilver.io/articles/year-in-review-2016/"/>
-			<updated>2017-02-01T09:00:01+00:00</updated>
+			<updated>2017-01-01T09:00:01+00:00</updated>
 			<id>http://adamsilver.io/articles/year-in-review-2016</id>
 			<content type="html">&lt;p&gt;&lt;em&gt;First sent to my &lt;a href=&quot;/signup&quot;&gt;private mailing list&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
@@ -181,7 +181,7 @@
 		<entry>
 			<title>Don't initialise Javascript automagically</title>
 			<link href="http://adamsilver.io/articles/dont-initialise-javascript-automagically/"/>
-			<updated>2017-01-06T09:00:01+00:00</updated>
+			<updated>2016-12-06T09:00:01+00:00</updated>
 			<id>http://adamsilver.io/articles/dont-initialise-javascript-automagically</id>
 			<content type="html">&lt;p&gt;I used to write Javascript that initialises components automagically. Don’t
 worry I’ll explain what I mean. Take a look below:&lt;/p&gt;
@@ -328,7 +328,7 @@ engineers. Trust them.&lt;/p&gt;
 
 &lt;p&gt;Good code is not about how easy it is to write the first time.&lt;/p&gt;
 
-&lt;p&gt;Good code is easy to reason about. &lt;/p&gt;
+&lt;p&gt;Good code is easy to reason about.&lt;/p&gt;
 
 &lt;p&gt;Good code is easy to update.&lt;/p&gt;
 
@@ -966,10 +966,10 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 		</entry>
 	
 		<entry>
-			<title>Placeholders: minimal does not mean simple</title>
-			<link href="http://adamsilver.io/articles/placeholders-minimal-does-not-mean-simple/"/>
+			<title>Placeholders are problematic</title>
+			<link href="http://adamsilver.io/articles/placeholders-are-problematic/"/>
 			<updated>2016-06-16T10:00:01+01:00</updated>
-			<id>http://adamsilver.io/articles/placeholders-minimal-does-not-mean-simple</id>
+			<id>http://adamsilver.io/articles/placeholders-are-problematic</id>
 			<content type="html">&lt;p&gt;Since placeholders came along, designers have adopted them as means of storing hints. Their appeal lies in their minimal aesthetic and the fact they save space.&lt;/p&gt;
 
 &lt;p&gt;Some designers go one one step further, and replace labels with placeholders. Either way, the placeholder is an Inclusive Design anti-pattern which causes problems for users. Here’s why:&lt;/p&gt;
