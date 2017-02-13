@@ -34,7 +34,7 @@ The same goes for any computer you've ever used. You can tap, drag, select, pres
 
 Affordance is provided by the way something looks regardless of the cursor. Remember, the cursor is only available when hovering with a pointing device such as a mouse.
 
-This is why, for example, [checkboxes are never round](http://danieldelaney.net/checkboxes) (and radios are never square). This is also why links are typically underlined. This is why links do, in fact, have a hand cursor.
+This is why, for example, [checkboxes are never round](http://danieldelaney.net/checkboxes) (and radios are never square). This is also why [links are typically underlined](http://adrianroselli.com/2016/06/on-link-underlines.html). This is why links do, in fact, have a hand cursor.
 
 ## What the authorities say
 
