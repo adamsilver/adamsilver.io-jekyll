@@ -5,7 +5,7 @@ date: 2038-01-01 09:00:01
 categories: js
 ---
 
-Whenever I tell people about the problems associated with placeholders, they normally respond by telling me about the floating label pattern. Whilst it's novel it's a pattern that has several usability problems. Here's why:
+Whenever I tell people about the problems associated with placeholders, they normally respond by telling me about the floating label pattern. Whilst this pattern may be novel, more importantly it has several usability problems. Here's why:
 
 ## 1. There is no space for an actual hint
 
