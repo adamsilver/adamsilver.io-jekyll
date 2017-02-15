@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-02-12T09:01:51+00:00</updated>
+	<updated>2017-02-15T16:28:44+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -860,7 +860,7 @@ separation of concerns between back-end and front-end. You don’t need to use a
 
 &lt;p&gt;Affordance is provided by the way something looks regardless of the cursor. Remember, the cursor is only available when hovering with a pointing device such as a mouse.&lt;/p&gt;
 
-&lt;p&gt;This is why, for example, &lt;a href=&quot;http://danieldelaney.net/checkboxes&quot;&gt;checkboxes are never round&lt;/a&gt; (and radios are never square). This is also why links are typically underlined. This is why links do, in fact, have a hand cursor.&lt;/p&gt;
+&lt;p&gt;This is why, for example, &lt;a href=&quot;http://danieldelaney.net/checkboxes&quot;&gt;checkboxes are never round&lt;/a&gt; (and radios are never square). This is also why &lt;a href=&quot;http://adrianroselli.com/2016/06/on-link-underlines.html&quot;&gt;links are typically underlined&lt;/a&gt;. This is why links do, in fact, have a hand cursor.&lt;/p&gt;
 
 &lt;h2 id=&quot;what-the-authorities-say&quot;&gt;What the authorities say&lt;/h2&gt;
 
@@ -2411,10 +2411,10 @@ room, the links are simply put into two columns.&lt;/p&gt;
 		</entry>
 	
 		<entry>
-			<title>Writing Javascript that conforms to Progressive Enhancement</title>
-			<link href="http://adamsilver.io/articles/writing-javascript-that-conforms-to-progressive-enhancement/"/>
+			<title>Progressively enhanced Javascript</title>
+			<link href="http://adamsilver.io/articles/progressively-enhanced-javascript/"/>
 			<updated>2015-08-16T10:00:01+01:00</updated>
-			<id>http://adamsilver.io/articles/writing-javascript-that-conforms-to-progressive-enhancement</id>
+			<id>http://adamsilver.io/articles/progressively-enhanced-javascript</id>
 			<content type="html">&lt;p&gt;The Javascript element of Progressive Enhancement, is quite possibly the most important and misunderstood aspect of client-side Javascript development, period.&lt;/p&gt;
 
 &lt;p&gt;This article addresses these misunderstandings and provides techniques that can be considered cutting-edge, even though they have been around for a very long time and have been forgotten.&lt;/p&gt;
