@@ -11,23 +11,23 @@ Whenever I tell people about the problems associated with placeholders, they nor
 
 Not all fields require a hint, but for those that do, the floating label pattern is unnecessarily constraining. The floating label begins its life inside the control leaving no space for an additional hint.
 
-## 2. They are hard to read
+## 2. They are small and hard-to-read
 
-A floating label is normally small, so that when it animates outside of the field, it takes up a small amount of space. But small text is hard to read.
+A floating label is normally small. This is so that as it moves outside of the field, it takes up a small amount of space. But small text is hard-to-read.
 
-## 3. They need landing space to fly in to
+## 3. They need landing space to move into
 
-A floated label needs space to fly in to. Meaning, that if labels were of a usable size (see previous point) there would be no saved space anyway (just more white space).
+A floated label needs space to move into. This means that, if labels were of a usable size (see previous point) there would be no saved space anyway (just more white space).
 
 Alternatively, we could create space *as* the label moves into position, but this causes the page to judder creating a disorientating experience in the process as the user types.
 
 ## 4. The animation is problematic
 
-Users may find the animation, which is often janky, to be disorientating and distracting. Particularly low confidence or visually impaired users. Also for people who zoom in, the label might float offscreen, meaning the user loses context.
+Animation itself is quite often janky. That aside, some users may find it distracting and disorientating. This is particularly applicable to low confidence or visually-impaired users. For people who zoom in, the label may float offscreen causing the user to lose context.
 
 ## 5. They have poor contrast
 
-A floating label has low contrast to make it look different to a real value. Low contrast text is hard to read. As the label floats out of the field, it will need to change colour to make it look like a label otherwise the text could be completely lost.
+A floating label has low contrast to make it look different to a real value. Low contrast text is hard-to-read. As the label floats out of the field, it will need to change colour to make it look like a label otherwise the text could be "lost" against the background.
 
 ## 6. It may be mistaken for a value
 
@@ -47,7 +47,7 @@ Putting aside for the moment that placeholders themselves are problematic. If yo
 
 ## 10. They require more work
 
-All of this to say that designing and building the floating label pattern is more work. More code brings more to maintain and more problems.
+All of this to say that designing and building the floating label pattern is more work. More code brings more to maintain and more problems. All of which we have introduced ourselves.
 
 ## Summary
 

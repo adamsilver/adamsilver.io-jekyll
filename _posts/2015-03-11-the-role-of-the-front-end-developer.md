@@ -49,7 +49,7 @@ It is important Front-end developers understand various facets of performance en
 
 Front-end developers should endeavour to test in as many browsers as is reasonable when developing, but will understand there is a balance to be had, as testing all browsers, in all compatibilities, on all devices is a sisyphean task.
 
-The balance can only be struck through experience of knowing which spread of browsers should be tested and at which frequency. Leaning on [cross-browser scripting](/articles/writing-javascript-that-conforms-to-progressive-enhancement/) minimises the worry behind a lack of manual browser testing coverage.
+The balance can only be struck through experience of knowing which spread of browsers should be tested and at which frequency. Leaning on [cross-browser scripting](/articles/progressively-enhanced-javascript/) minimises the worry behind a lack of manual browser testing coverage.
 
 ## Development process and methodologies
 
