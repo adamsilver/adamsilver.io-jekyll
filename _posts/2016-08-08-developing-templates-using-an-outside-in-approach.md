@@ -235,7 +235,7 @@ Instead, continue to use the approach used in the previous example by explicitly
 
 This way templates are consistent, and the logic behind the conditionality can evolve over time without having to change the template — perhaps the restaurants are only shown to authenticated users for example.
 
-### Summary
+## Summary
 
 Ultimately, templates should be easy-to-read and consist mostly of HTML and just enough information in order to support the display-logic. They shouldn’t have to infer display-logic from other properties and they shouldn’t have to care where this data comes from.
 
