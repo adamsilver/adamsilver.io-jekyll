@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-02-15T16:29:14+00:00</updated>
+	<updated>2017-02-19T06:55:00+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -612,11 +612,11 @@ The “problem” is that when the file can’t be found, FireFox displays a “
 &lt;a href=&quot;http://maintainablecss.com/chapters/modules/&quot;&gt;modules&lt;/a&gt; and components.&lt;/p&gt;
 
 &lt;p&gt;After this, we integrate data and logic into a template to be displayed to the user on-screen. The object that contains this data and logic is called a
-&lt;em&gt;View-Model&lt;/em&gt; — it’s a Model designed &lt;em&gt;for&lt;/em&gt; the View.&lt;/p&gt;
+&lt;em&gt;view-model&lt;/em&gt; — it’s a Model designed &lt;em&gt;for&lt;/em&gt; the View.&lt;/p&gt;
 
-&lt;p&gt;You can’t design a View-Model without first understanding the requirements of the View itself. And you can’t understand the requirements of the View without first understanding the visual and interaction design requirements et cetera.&lt;/p&gt;
+&lt;p&gt;You can’t design a view-model without first understanding the requirements of the View itself. And you can’t understand the requirements of the View without first understanding the visual and interaction design requirements et cetera.&lt;/p&gt;
 
-&lt;p&gt;Sometimes, a View-Model is poorly designed, neglected or designed from the
+&lt;p&gt;Sometimes, a view-model is poorly designed, neglected or designed from the
 inside-out. This often means it exposes too much low-level logic — something
 which makes a template unnecessarily difficult to work with. This is best
 demonstrated with a simple example.&lt;/p&gt;
@@ -631,21 +631,21 @@ demonstrated with a simple example.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;http://adamsilver.io/assets/img/templates/anon.png&quot; alt=&quot;Anonymous user&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/templates/anon.png&quot; alt=&quot;Anonymous user&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Anonymous user&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;http://adamsilver.io/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated with a name&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated with a name&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Authenticated with a name&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;http://adamsilver.io/assets/img/templates/recognised-no-name.png&quot; alt=&quot;Authenticated without a name&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/templates/recognised-no-name.png&quot; alt=&quot;Authenticated without a name&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Authenticated without a name&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -690,31 +690,31 @@ order to do its job. It’s been designed from little pieces, from the inside-ou
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The View-Model has been designed from the outside-in; it contains just what the template needs in order to render itself. And because there is always a message and a link, there is no need for conditionality. This template is dumb-by-design, and leaves complex logic to reside somewhere more appropriate in the stack.&lt;/p&gt;
+&lt;p&gt;The view-model has been designed from the outside-in; it contains just what the template needs in order to render itself. And because there is always a message and a link, there is no need for conditionality. This template is dumb-by-design, and leaves complex logic to reside somewhere more appropriate in the stack.&lt;/p&gt;
 
 &lt;p&gt;In comparison to the original, this template is just four lines compared to 18 and consists mostly of HTML, making this template much easier to work with. As an added bonus, the logic that no-longer resides in the template can be unit-tested. For example, we can now test that the message is “Welcome &lt;name&gt;” when the user is authenticated.&lt;/name&gt;&lt;/p&gt;
 
-&lt;p&gt;This gives a glimpse as to the impact a well-designed View-Model can have on the maintainability of a template.&lt;/p&gt;
+&lt;p&gt;This gives a glimpse as to the impact a well-designed view-model can have on the maintainability of a template.&lt;/p&gt;
 
 &lt;p&gt;With this in-mind let’s have a look at the common scenarios we need to design for when developing a template.&lt;/p&gt;
 
-&lt;h3 id=&quot;when-a-module-has-dynamic-properties&quot;&gt;1. When a module has dynamic properties&lt;/h3&gt;
+&lt;h2 id=&quot;when-a-module-has-dynamic-properties&quot;&gt;1. When a module has dynamic properties&lt;/h2&gt;
 
 &lt;p&gt;When data or text is dynamic it will reside somewhere else in a system e.g. a database. In fact, even if it is &lt;em&gt;static&lt;/em&gt; it may still reside somewhere else for internationalisation or maintenance purposes.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;What’s important is that the template should not concern itself with where
-this data comes from — it’s just information exposed via the View-Model.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;What’s important is that the template should not concern itself with where
+this data comes from — it’s just information exposed via the view-model.&lt;/p&gt;
 
 &lt;p&gt;Taking the design as follows:&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;http://adamsilver.io/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated with a name&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated with a name&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Authenticated with a name&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;The View-Model would be:&lt;/p&gt;
+&lt;p&gt;The view-model would be:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
   message: &quot;Hello Adam Silver&quot;,
@@ -733,25 +733,25 @@ this data comes from — it’s just information exposed via the View-Model.&lt;
 &lt;p&gt;The message consists of text that may ultimately be retrieved from resource
 files and a database. Perhaps the link’s href property could come from a routes configuration object etc.&lt;/p&gt;
 
-&lt;p&gt;Regardless, the template doesn’t care — it leaves this responsibility to other parts of the system. The View-Model is lean and provides just enough information for the View to render itself.&lt;/p&gt;
+&lt;p&gt;Regardless, the template doesn’t care — it leaves this responsibility to other parts of the system. The view-model is lean and provides just enough information for the View to render itself.&lt;/p&gt;
 
-&lt;h3 id=&quot;when-a-module-has-conditionality&quot;&gt;2. When a module has conditionality&lt;/h3&gt;
+&lt;h2 id=&quot;when-a-module-has-conditionality&quot;&gt;2. When a module has conditionality&lt;/h2&gt;
 
 &lt;p&gt;Conditionally showing a portion of a View involves display-logic. The simplest of its type is based on a condition: if-this-show-that.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;The important thing to remember, is that a template shouldn’t have to know why something is shown or not. It should just know whether it should.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The important thing to remember, is that a template shouldn’t have to know why something is shown or not. It should just know whether it should.&lt;/p&gt;
 
-&lt;p&gt;We’ll modify the original requirements so that it &lt;em&gt;only&lt;/em&gt; displays a welcome
+&lt;p&gt;We’ll modify the original requirements so that it  only* displays a welcome
 message when the the user is authenticated and has supplied their name:&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;http://adamsilver.io/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated and name is supplied&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated and name is supplied&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Authenticated and name is supplied&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;When the message should be shown, the View-Model would be:&lt;/p&gt;
+&lt;p&gt;When the message should be shown, the view-model would be:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
   showMessage: true,
@@ -760,7 +760,7 @@ message when the the user is authenticated and has supplied their name:&lt;/p&gt
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;When the message is hidden the View-Model would be:&lt;/p&gt;
+&lt;p&gt;When the message is hidden the view-model would be:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
   showMessage: false
@@ -780,11 +780,11 @@ message when the the user is authenticated and has supplied their name:&lt;/p&gt
 &lt;p&gt;Here the explicit boolean property determines whether it’s shown. Don’t be
 tempted to expose lower-level logic that the template uses to infer visibility.&lt;/p&gt;
 
-&lt;h3 id=&quot;when-showing-a-collection-of-items&quot;&gt;3. When showing a collection of items&lt;/h3&gt;
+&lt;h2 id=&quot;when-showing-a-collection-of-items&quot;&gt;3. When showing a collection of items&lt;/h2&gt;
 
 &lt;p&gt;When showing a number of similar items you will need to loop over a collection or array. As an example, let’s display a list of restaurants by area.&lt;/p&gt;
 
-&lt;p&gt;The View-Model would be:&lt;/p&gt;
+&lt;p&gt;The view-model would be:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
   restaurants: [{
@@ -816,14 +816,14 @@ Instead, continue to use the approach used in the previous example by explicitly
 
 &lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
 
-&lt;p&gt;Ultimately, templates should be easy-to-read and consist mostly of HTML and just enough information in order to support the display-logic. They shouldn’t have to infer display-logic from other properties and they shouldn’t have to care where this data comes from such as a database or cookie.&lt;/p&gt;
+&lt;p&gt;Ultimately, templates should be easy-to-read and consist mostly of HTML and just enough information in order to support the display-logic. They shouldn’t have to infer display-logic from other properties and they shouldn’t have to care where this data comes from.&lt;/p&gt;
 
 &lt;p&gt;Architecting a system is difficult and sometimes that difficulty bleeds out into the template. This creates problems for the developers who maintain them (mostly front-end developers).&lt;/p&gt;
 
 &lt;p&gt;This is why logic-less templates are popular. They attempt to enforce the
-separation of concerns between back-end and front-end. You don’t need to use a logic-less template engine to reap the benefits. You can architect your View-Models in much the same way regardless.&lt;/p&gt;
+separation of concerns between back-end and front-end. You don’t need to use a logic-less template engine to reap the benefits. You can architect your view-models in much the same way regardless.&lt;/p&gt;
 
-&lt;p&gt;Designing a View-Model &lt;em&gt;for&lt;/em&gt; the View allows more logic to be unit-tested and drastically improves the maintainability of your templates.&lt;/p&gt;
+&lt;p&gt;Designing a view-model &lt;em&gt;for&lt;/em&gt; the View allows more logic to be unit-tested and drastically improves the maintainability of your templates.&lt;/p&gt;
 </content>
 		</entry>
 	
@@ -2962,7 +2962,7 @@ anotherSelector {
 
 &lt;p&gt;Front-end developers should endeavour to test in as many browsers as is reasonable when developing, but will understand there is a balance to be had, as testing all browsers, in all compatibilities, on all devices is a sisyphean task.&lt;/p&gt;
 
-&lt;p&gt;The balance can only be struck through experience of knowing which spread of browsers should be tested and at which frequency. Leaning on &lt;a href=&quot;/articles/writing-javascript-that-conforms-to-progressive-enhancement/&quot;&gt;cross-browser scripting&lt;/a&gt; minimises the worry behind a lack of manual browser testing coverage.&lt;/p&gt;
+&lt;p&gt;The balance can only be struck through experience of knowing which spread of browsers should be tested and at which frequency. Leaning on &lt;a href=&quot;/articles/progressively-enhanced-javascript/&quot;&gt;cross-browser scripting&lt;/a&gt; minimises the worry behind a lack of manual browser testing coverage.&lt;/p&gt;
 
 &lt;h2 id=&quot;development-process-and-methodologies&quot;&gt;Development process and methodologies&lt;/h2&gt;
 

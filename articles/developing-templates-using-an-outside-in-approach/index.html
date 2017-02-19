@@ -120,11 +120,11 @@
 <a href="http://maintainablecss.com/chapters/modules/">modules</a> and components.</p>
 
 <p>After this, we integrate data and logic into a template to be displayed to the user on-screen. The object that contains this data and logic is called a
-<em>View-Model</em> — it’s a Model designed <em>for</em> the View.</p>
+<em>view-model</em> — it’s a Model designed <em>for</em> the View.</p>
 
-<p>You can’t design a View-Model without first understanding the requirements of the View itself. And you can’t understand the requirements of the View without first understanding the visual and interaction design requirements et cetera.</p>
+<p>You can’t design a view-model without first understanding the requirements of the View itself. And you can’t understand the requirements of the View without first understanding the visual and interaction design requirements et cetera.</p>
 
-<p>Sometimes, a View-Model is poorly designed, neglected or designed from the
+<p>Sometimes, a view-model is poorly designed, neglected or designed from the
 inside-out. This often means it exposes too much low-level logic — something
 which makes a template unnecessarily difficult to work with. This is best
 demonstrated with a simple example.</p>
@@ -139,21 +139,21 @@ demonstrated with a simple example.</p>
 
 <div class="image">
 	<figure>
-		<img src="http://adamsilver.io/assets/img/templates/anon.png" alt="Anonymous user" width="100%" style="max-width: 400px;" />
+		<img src="http://adamsilver.io/assets/img/templates/anon.png" alt="Anonymous user" width="100%" />
 		<figcaption>Anonymous user</figcaption>
 	</figure>
 </div>
 
 <div class="image">
 	<figure>
-		<img src="http://adamsilver.io/assets/img/templates/recognised-with-name.png" alt="Authenticated with a name" width="100%" style="max-width: 400px;" />
+		<img src="http://adamsilver.io/assets/img/templates/recognised-with-name.png" alt="Authenticated with a name" width="100%" />
 		<figcaption>Authenticated with a name</figcaption>
 	</figure>
 </div>
 
 <div class="image">
 	<figure>
-		<img src="http://adamsilver.io/assets/img/templates/recognised-no-name.png" alt="Authenticated without a name" width="100%" style="max-width: 400px;" />
+		<img src="http://adamsilver.io/assets/img/templates/recognised-no-name.png" alt="Authenticated without a name" width="100%" />
 		<figcaption>Authenticated without a name</figcaption>
 	</figure>
 </div>
@@ -198,31 +198,31 @@ order to do its job. It’s been designed from little pieces, from the inside-ou
 &lt;/div&gt;
 </code></pre>
 
-<p>The View-Model has been designed from the outside-in; it contains just what the template needs in order to render itself. And because there is always a message and a link, there is no need for conditionality. This template is dumb-by-design, and leaves complex logic to reside somewhere more appropriate in the stack.</p>
+<p>The view-model has been designed from the outside-in; it contains just what the template needs in order to render itself. And because there is always a message and a link, there is no need for conditionality. This template is dumb-by-design, and leaves complex logic to reside somewhere more appropriate in the stack.</p>
 
 <p>In comparison to the original, this template is just four lines compared to 18 and consists mostly of HTML, making this template much easier to work with. As an added bonus, the logic that no-longer resides in the template can be unit-tested. For example, we can now test that the message is “Welcome <name>” when the user is authenticated.</name></p>
 
-<p>This gives a glimpse as to the impact a well-designed View-Model can have on the maintainability of a template.</p>
+<p>This gives a glimpse as to the impact a well-designed view-model can have on the maintainability of a template.</p>
 
 <p>With this in-mind let’s have a look at the common scenarios we need to design for when developing a template.</p>
 
-<h3 id="when-a-module-has-dynamic-properties">1. When a module has dynamic properties</h3>
+<h2 id="when-a-module-has-dynamic-properties">1. When a module has dynamic properties</h2>
 
 <p>When data or text is dynamic it will reside somewhere else in a system e.g. a database. In fact, even if it is <em>static</em> it may still reside somewhere else for internationalisation or maintenance purposes.</p>
 
-<p><strong>What’s important is that the template should not concern itself with where
-this data comes from — it’s just information exposed via the View-Model.</strong></p>
+<p>What’s important is that the template should not concern itself with where
+this data comes from — it’s just information exposed via the view-model.</p>
 
 <p>Taking the design as follows:</p>
 
 <div class="image">
 	<figure>
-		<img src="http://adamsilver.io/assets/img/templates/recognised-with-name.png" alt="Authenticated with a name" width="100%" style="max-width: 400px;" />
+		<img src="http://adamsilver.io/assets/img/templates/recognised-with-name.png" alt="Authenticated with a name" width="100%" />
 		<figcaption>Authenticated with a name</figcaption>
 	</figure>
 </div>
 
-<p>The View-Model would be:</p>
+<p>The view-model would be:</p>
 
 <pre><code>{
   message: "Hello Adam Silver",
@@ -241,25 +241,25 @@ this data comes from — it’s just information exposed via the View-Model.</st
 <p>The message consists of text that may ultimately be retrieved from resource
 files and a database. Perhaps the link’s href property could come from a routes configuration object etc.</p>
 
-<p>Regardless, the template doesn’t care — it leaves this responsibility to other parts of the system. The View-Model is lean and provides just enough information for the View to render itself.</p>
+<p>Regardless, the template doesn’t care — it leaves this responsibility to other parts of the system. The view-model is lean and provides just enough information for the View to render itself.</p>
 
-<h3 id="when-a-module-has-conditionality">2. When a module has conditionality</h3>
+<h2 id="when-a-module-has-conditionality">2. When a module has conditionality</h2>
 
 <p>Conditionally showing a portion of a View involves display-logic. The simplest of its type is based on a condition: if-this-show-that.</p>
 
-<p><strong>The important thing to remember, is that a template shouldn’t have to know why something is shown or not. It should just know whether it should.</strong></p>
+<p>The important thing to remember, is that a template shouldn’t have to know why something is shown or not. It should just know whether it should.</p>
 
-<p>We’ll modify the original requirements so that it <em>only</em> displays a welcome
+<p>We’ll modify the original requirements so that it  only* displays a welcome
 message when the the user is authenticated and has supplied their name:</p>
 
 <div class="image">
 	<figure>
-		<img src="http://adamsilver.io/assets/img/templates/recognised-with-name.png" alt="Authenticated and name is supplied" width="100%" style="max-width: 400px;" />
+		<img src="http://adamsilver.io/assets/img/templates/recognised-with-name.png" alt="Authenticated and name is supplied" width="100%" />
 		<figcaption>Authenticated and name is supplied</figcaption>
 	</figure>
 </div>
 
-<p>When the message should be shown, the View-Model would be:</p>
+<p>When the message should be shown, the view-model would be:</p>
 
 <pre><code>{
   showMessage: true,
@@ -268,7 +268,7 @@ message when the the user is authenticated and has supplied their name:</p>
 }
 </code></pre>
 
-<p>When the message is hidden the View-Model would be:</p>
+<p>When the message is hidden the view-model would be:</p>
 
 <pre><code>{
   showMessage: false
@@ -288,11 +288,11 @@ message when the the user is authenticated and has supplied their name:</p>
 <p>Here the explicit boolean property determines whether it’s shown. Don’t be
 tempted to expose lower-level logic that the template uses to infer visibility.</p>
 
-<h3 id="when-showing-a-collection-of-items">3. When showing a collection of items</h3>
+<h2 id="when-showing-a-collection-of-items">3. When showing a collection of items</h2>
 
 <p>When showing a number of similar items you will need to loop over a collection or array. As an example, let’s display a list of restaurants by area.</p>
 
-<p>The View-Model would be:</p>
+<p>The view-model would be:</p>
 
 <pre><code>{
   restaurants: [{
@@ -324,14 +324,14 @@ Instead, continue to use the approach used in the previous example by explicitly
 
 <h3 id="summary">Summary</h3>
 
-<p>Ultimately, templates should be easy-to-read and consist mostly of HTML and just enough information in order to support the display-logic. They shouldn’t have to infer display-logic from other properties and they shouldn’t have to care where this data comes from such as a database or cookie.</p>
+<p>Ultimately, templates should be easy-to-read and consist mostly of HTML and just enough information in order to support the display-logic. They shouldn’t have to infer display-logic from other properties and they shouldn’t have to care where this data comes from.</p>
 
 <p>Architecting a system is difficult and sometimes that difficulty bleeds out into the template. This creates problems for the developers who maintain them (mostly front-end developers).</p>
 
 <p>This is why logic-less templates are popular. They attempt to enforce the
-separation of concerns between back-end and front-end. You don’t need to use a logic-less template engine to reap the benefits. You can architect your View-Models in much the same way regardless.</p>
+separation of concerns between back-end and front-end. You don’t need to use a logic-less template engine to reap the benefits. You can architect your view-models in much the same way regardless.</p>
 
-<p>Designing a View-Model <em>for</em> the View allows more logic to be unit-tested and drastically improves the maintainability of your templates.</p>
+<p>Designing a view-model <em>for</em> the View allows more logic to be unit-tested and drastically improves the maintainability of your templates.</p>
 
 	    </main>
 		<div class="signUpHero  signUpHero-isArticle ">
