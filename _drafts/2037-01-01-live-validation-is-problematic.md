@@ -5,7 +5,7 @@ date: 2037-01-01 09:00:01
 categories: js
 ---
 
-Live inline validation (or feedback) enables users to know whether what they type into a text box is valid *as they type*. The theory is that it's easier to fix errors as soon as they occur. The thing is, live validation introduces more problems than it solves. Here's why:
+Live inline validation (or feedback) enables users to know whether what they type into a text box is valid *as they type*. The theory is that it's easier to fix errors as soon as they occur which sounds sensible. The thing is, live validation introduces more problems than it solves.
 
 ## 1. Interruption causes friction
 
@@ -13,9 +13,9 @@ For entries that require a certain number of characters, the first keystroke wil
 
 We could wait until the user has entered enough characters before showing an error. But this means the only way in which a user will get feedback is after they have completed the field successfully which is pointless.
 
-We could provide feedback when the user leaves the field (`onblur`) but this is too late. The user has already started to mentally prepare for (and to fill out) the next field.
+Alternatively, we could provide feedback when the user leaves the field (`onblur`) but this is too late. The user has already started to mentally prepare for (and to fill out) the next field.
 
-Also, users may switch windows or use a password manager to fill out particular fields. But leaving the field will cause an error to show, even though the user hadn't finished yet.
+Another problem with triggering the feedback `onblur` is that many people switch windows or use a password manager to assist in filling out forms. But leaving the field will cause an error to show prematurely when the user hadn't finished yet.
 
 ## 2. Visual glitches are disorientating
 
@@ -23,15 +23,17 @@ When a field switches between valid and invalid states, the error appears and di
 
 ![Live feedback can cause the page to judder](/assets/img/live.gif)
 
-Errors should be removed as the user starts to fix an error (`onfocus` or `keypress`). This means the page judders not only on error, but on fixing the error too.
+Best practice states that any error message should be removed as the user starts to fix the field&mdash;either `onfocus` or `onkeypress`. The problem being that this causes the page to judder more often&mdash;when the user enters an erroenous field *and* when they leave a field in an invalid state.
 
 ## 3. Inconsistency in behaviour
 
-Live validation as a technique can't be applied to other types of field. This includes radios, a date field or checkboxes.
+Live validation as a technique can't be applied to other types of field. This includes radios, a date field (that is split into day month or year) or checkboxes.
 
-Take checkboxes for example whereby the user must select at least one. Providing feedback as the user moves between checkboxes is hard to manage and is inconsistent with textbox (`keypress`) behaviour.
+The problem with these fields as that each of the separate controls needs to be considered as a whole. For example imagine a group of checkboxes whereby the user must check at least two. 
 
-Some validation routines can only be executed on the server (via submission), such as checking someone's login credentials. This inconsistency in behaviour could confuse users unnecessarily.
+As the user checks and leaves the first checkbox, it's impossible to know that this constitutes and error.
+
+Also, some validation routines can only be executed on the server (via submission), such as checking someone's login credentials. This inconsistency in behaviour can confuse users unnecessarily.
 
 ## 4. False positives
 
@@ -51,12 +53,12 @@ However, this again causes inconsistency issues and is rarely applicable for the
 
 ## Summary
 
-In *Inclusive Design Patterns*, Heydon talks of a hybrid approach which provides feedback *after* the user first submits the form. The idea being that, once the user is actively fixing errors, live validation becomes less troublesome. 
+In *Inclusive Design Patterns*, Heydon talks of a hybrid approach which provides feedback *after* the user first submits the form. The idea being that once the user is actively fixing errors, live validation becomes less troublesome. 
 
 This is certainly true, but many of the problems we've discussed still apply. For example, whilst the user fixes the error, they will be interrupted too early or too late regardless.
 
-I would go as far to say that designing the *perfect* live validation behaviour is nigh on impossible. And any usability benefit is outweighed by the problems it introduces.
+I would go as far to say that designing the *perfect* live validation behaviour is nigh on impossible. And any potential usability benefit is outweighed by the problems it introduces.
 
 There are easier and better ways to improve form usability. We can shorten forms by removing superfluous fields. And we can split long forms up with a One Thing Per Page approach.
 
-As long as we ensure errors are easy to fix (with clear messaging), users won't have trouble anyway. And if we validate `onsubmit` we avoid the problems above, whilst keeping the form experience consistent, familiar and friendly.
+As long as we ensure our forms have sufficient labelling&mdash;and as long as we ensure errors are easy to fix (with clear messaging)&mdash;users will have little trouble. If we validate `onsubmit` we avoid all the problems discussed here, whilst keeping the form experience consistent, familiar and friendly.
