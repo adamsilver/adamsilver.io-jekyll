@@ -29,7 +29,7 @@ Best practice states that any error message should be removed as the user starts
 
 Live validation as a technique can't be applied to other types of field. This includes radios, a date field (that is split into day month or year) or checkboxes.
 
-The problem with these fields as that each of the separate controls needs to be considered as a whole. For example imagine a group of checkboxes whereby the user must check at least two. 
+The problem with these fields as that each of the separate controls needs to be considered as a whole. For example imagine a group of checkboxes whereby the user must check at least two.
 
 As the user checks and leaves the first checkbox, it's impossible to know that this constitutes and error.
 
@@ -47,13 +47,13 @@ Pre-populated fields cause further issue. Should we display them in the 'success
 
 ## 6. Validation inconsistency
 
-On occasion we can validate some fields before leaving the field on `keypress`. For example if somebody types a letter in a numerical field, we can show an error instantly. 
+On occasion we can validate some fields before leaving the field on `keypress`. For example if somebody types a letter in a numerical field, we can show an error instantly.
 
-However, this again causes inconsistency issues and is rarely applicable for the slew of fields requiring various different validation routines. 
+However, this again causes inconsistency issues and is rarely applicable for the slew of fields requiring various different validation routines.
 
 ## Summary
 
-In *Inclusive Design Patterns*, Heydon talks of a hybrid approach which provides feedback *after* the user first submits the form. The idea being that once the user is actively fixing errors, live validation becomes less troublesome. 
+In *Inclusive Design Patterns*, Heydon talks of a hybrid approach which provides feedback *after* the user first submits the form. The idea being that once the user is actively fixing errors, live validation becomes less troublesome.
 
 This is certainly true, but many of the problems we've discussed still apply. For example, whilst the user fixes the error, they will be interrupted too early or too late regardless.
 
@@ -62,3 +62,8 @@ I would go as far to say that designing the *perfect* live validation behaviour 
 There are easier and better ways to improve form usability. We can shorten forms by removing superfluous fields. And we can split long forms up with a One Thing Per Page approach.
 
 As long as we ensure our forms have sufficient labelling&mdash;and as long as we ensure errors are easy to fix (with clear messaging)&mdash;users will have little trouble. If we validate `onsubmit` we avoid all the problems discussed here, whilst keeping the form experience consistent, familiar and friendly.
+
+---
+
+To do it the recommended way you gotta apply onblur/onkeypress on a RULE basis, not just a FIELD basis.
+
