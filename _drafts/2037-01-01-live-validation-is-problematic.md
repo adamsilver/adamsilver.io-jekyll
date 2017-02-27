@@ -9,47 +9,51 @@ Live inline validation (or feedback) enables users to know whether what they typ
 
 ## 1. Interruption causes friction
 
-For entries that require a certain number of characters, the first keystroke is always going to constitute an invalid entry. This means users will be interrupted early and often.
+For entries that require a certain number of characters, the first keystroke will always constitute an invalid entry. This means users will be interrupted early and often.
 
-We could wait until the user has entered enough characters before showing an error. But this means the only way in which a user will get live feedback is after they have completed the field successfully which is pointless.
+We could wait until the user has entered enough characters before showing an error. But this means the only way in which a user will get feedback is after they have completed the field successfully which is pointless.
 
-Alternatively, we could provide feedback when the user leaves the field (`onblur`) but this is too late. The user has already started to mentally prepare for (and to fill out) the next field.
+We could provide feedback when the user leaves the field (`onblur`) but this is too late. The user has already started to mentally prepare for (and to fill out) the next field.
 
-Also, users switch windows or use a password manager to help them fill out the form. When this happens the field will blur causing an error when the user wasn't finished yet.
-
-In Inclusive Design Patterns, Heydon talks of a hybrid approach which provides feedback *after* the user first submits the form. The idea being that, once the user is actively fixing errors, live validation becomes less troublesome. However, the problem still exists because whilst the user is fixing the error, they will still be interrupted.
+Also, users may switch windows or use a password manager to fill out particular fields. But leaving the field will cause an error to show, even though the user hadn't finished yet.
 
 ## 2. Visual glitches are disorientating
 
-When the field switches between valid and invalid states, the error appears and disappears respectively, causing the page to judder. This can be disorientating, particularly for low confidence users. Here's an example:
+When a field switches between valid and invalid states, the error appears and disappears respectively. This causes the page to judder which is disorientating, particularly for low-confidence users. Here's an example:
 
 ![Live feedback can cause the page to judder](/assets/img/live.gif)
 
-This problem is exacerbated when a user goes back to an erroneous field onblur. Because at this point it's advisable to hide the error, otherwise users will try and fix an error when there isn't one.
+Errors should be removed as the user starts to fix an error (`onfocus` or `keypress`). This means the page judders not only on error, but on fixing the error too.
 
-## 3. Inconsistency with other fields
+## 3. Inconsistency in behaviour
 
-Live validation as a technique can't be applied to other fields. Take checkboxes for example whereby the user must select at least one. Providing feedback as the user moves between checkboxes is hard to manage and is inconsistent with textbox (`keypress`) behaviour.
+Live validation as a technique can't be applied to other types of field. This includes radios, a date field or checkboxes.
 
-Also, some validation routines can only be performed on the server, via submission, such as checking user's login credentials. This inconsistency in behaviour could confuse users unnecessarily.
+Take checkboxes for example whereby the user must select at least one. Providing feedback as the user moves between checkboxes is hard to manage and is inconsistent with textbox (`keypress`) behaviour.
+
+Some validation routines can only be executed on the server (via submission), such as checking someone's login credentials. This inconsistency in behaviour could confuse users unnecessarily.
 
 ## 4. False positives
 
-Often live validation is used to show a *green tick* when the user successfully fills out a field. This may provide a sense of progression and stop low-confidence users feeling like they need to check through their answers.
+Live validation is sometimes used to show a positive message or *green tick* when the user successfully fills out a field. This may provide a sense of progression and stop people feeling like they need to check through their answers.
 
-Typically, however, client-side validation checks the format. That is, that once the user goes to submit the form, whilst it was formatted correctly, they may be shown an error later on.
-
-This, not only provides further inconsistency, but causes the experience to be an untrustworthy one.
+However, client-side validation typically checks the *format*. This means that a correctly formatted field may still be erroneous. This, not only provides further inconsistency, but makes the experience an untrustworthy one.
 
 ## 5. Pre-populated fields
 
-Pre-populated fields cause further complexity. Should the fields be loaded in a positive state, even though the user has not interacted yet? Does this mean they should be validated as the user types instead of blurring?
+Pre-populated fields cause further issue. Should we display them in the 'successful' state? If they appear to have been validated already, should we then hide the success message until they have left the field again? It's involved and there is no perfect answer.
 
 ## 6. Validation inconsistency
 
-On occasion we could validate some fields before they leave the field (onblur). For example if somebody types a letter in a numerical field, we can show an error. However, this again causes inconsistency issues and is rarely applicable for the slew of fields an validation routines which need to be applied. 
+On occasion we can validate some fields before leaving the field on `keypress`. For example if somebody types a letter in a numerical field, we can show an error instantly. 
+
+However, this again causes inconsistency issues and is rarely applicable for the slew of fields requiring various different validation routines. 
 
 ## Summary
+
+In *Inclusive Design Patterns*, Heydon talks of a hybrid approach which provides feedback *after* the user first submits the form. The idea being that, once the user is actively fixing errors, live validation becomes less troublesome. 
+
+This is certainly true, but many of the problems we've discussed still apply. For example, whilst the user fixes the error, they will be interrupted too early or too late regardless.
 
 I would go as far to say that designing the *perfect* live validation behaviour is nigh on impossible. And any usability benefit is outweighed by the problems it introduces.
 
