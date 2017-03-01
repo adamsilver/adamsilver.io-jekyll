@@ -3,12 +3,129 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-02-19T06:55:35+00:00</updated>
+	<updated>2017-03-01T19:26:18+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
 	</author>
 
+	
+		<entry>
+			<title>Designing inclusively</title>
+			<link href="http://adamsilver.io/articles/designing-inclusively/"/>
+			<updated>2017-02-15T09:00:01+00:00</updated>
+			<id>http://adamsilver.io/articles/designing-inclusively</id>
+			<content type="html">&lt;p&gt;&lt;em&gt;First sent to my &lt;a href=&quot;/signup&quot;&gt;private mailing list&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Whilst the web is still young, it’s been around long enough for us to know about its power and its constraints. We know what these constraints are now because we’ve bent them so much over the years.&lt;/p&gt;
+
+&lt;p&gt;Before CSS we used tables and spacer gifs for layout. Before border-radius we used background images for rounded corners.&lt;/p&gt;
+
+&lt;p&gt;We use pre-existing mediums as a guide for how a new medium should work. We take our preconceptions and apply them as we see fit.&lt;/p&gt;
+
+&lt;p&gt;Whilst we’re better now at embracing the web, we still make plenty of &lt;a href=&quot;https://resilientwebdesign.com/chapter7/#Assumptions&quot;&gt;assumptions&lt;/a&gt; about it. And those assumptions get shattered down the line.&lt;/p&gt;
+
+&lt;p&gt;We used to think all viewports were 640 pixels wide. We used to think all computers had a keyboard and mouse.&lt;/p&gt;
+
+&lt;p&gt;Now, we think small screens mean swipe-able, and big screens equate to mouse users. These are also assumptions. These assumptions are wrong.&lt;/p&gt;
+
+&lt;p&gt;We need to embrace the fact that we don’t know what users are doing. We don’t know their capability and we don’t know their preferences. We don’t know much. And that’s okay.&lt;/p&gt;
+
+&lt;p&gt;We need to design inclusive experiences that embrace these constraints. This is neither boring nor easy.&lt;/p&gt;
+
+&lt;p&gt;Designing a great and inclusive experience on the open web is a delicate challenge that we need to step up to.&lt;/p&gt;
+
+&lt;p&gt;We can’t be creative without constraint anyway. Only with constraint can we design something truly brilliant.&lt;/p&gt;
+
+&lt;p&gt;In order to be creative we need to know what these constraints are. So I’ve jotted them down so we can remember them easily. Here they are:&lt;/p&gt;
+
+&lt;h2 id=&quot;human-outlook-and-understanding&quot;&gt;1. Human outlook and understanding&lt;/h2&gt;
+
+&lt;p&gt;Everybody’s different. How people think and see the world is unique to the individual.&lt;/p&gt;
+
+&lt;p&gt;We’re influenced by our environment, upbringing and the people we spend most time with. And we speak different languages.&lt;/p&gt;
+
+&lt;h2 id=&quot;disability&quot;&gt;2. Disability&lt;/h2&gt;
+
+&lt;p&gt;My left eye sucks (it won’t move left) and so I have to turn my head to use it properly.&lt;/p&gt;
+
+&lt;p&gt;That’s just me — an estimated &lt;a href=&quot;http://www.serviceandinclusion.org/index.php?page=basic&quot;&gt;48.9 million people suffer from disabilities&lt;/a&gt;. Disabilities that affect &lt;a href=&quot;https://the-pastry-box-project.net/anne-gibson/2014-July-31&quot;&gt;mobility, hearing and eyesight&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, many disabilities are temporary. Even a mother holding a baby in one arm, is one arm down.&lt;/p&gt;
+
+&lt;p&gt;If we can create something great for people with one arm, then we’ll be creating something even better for people with two.&lt;/p&gt;
+
+&lt;h2 id=&quot;preference&quot;&gt;3. Preference&lt;/h2&gt;
+
+&lt;p&gt;Even someone who is fully-abled (should such a person exist), still has preferences. And those preferences can change under different circumstances.&lt;/p&gt;
+
+&lt;p&gt;My two year old boy, for example, can’t understand why nothing happens when he touches the screen of my Macbook. If it had a touch screen, that’s how he would use it. I prefer using keyboard myself but sometimes the mouse is better.&lt;/p&gt;
+
+&lt;p&gt;Even people use screen readers in different ways. Users may navigate by heading. Or they may navigate by landmark. They may use braille displays and keyboards.&lt;/p&gt;
+
+&lt;p&gt;And whilst I rarely print pages, not everyone is like me. Ensuring pages are easy to read when printed is something we must also consider.&lt;/p&gt;
+
+&lt;h2 id=&quot;internet-speed-and-connectivity&quot;&gt;4. Internet speed and connectivity&lt;/h2&gt;
+
+&lt;p&gt;We (people who work in the industry) tend to have fast connections. But many people out there are not like us.&lt;/p&gt;
+
+&lt;p&gt;We must consider performance and connectivity from the beginning. Make the slow fast, and the fast faster.&lt;/p&gt;
+
+&lt;h2 id=&quot;screen-size&quot;&gt;5. Screen size&lt;/h2&gt;
+
+&lt;p&gt;People use all sorts of devices, from watches to huge TVs, and everything in between. We need to consider how things work across the board.&lt;/p&gt;
+
+&lt;p&gt;Responsive design isn’t about 3 different sized containers according to device. It’s about fixing content where it breaks (if at all).&lt;/p&gt;
+
+&lt;h2 id=&quot;browser-capability&quot;&gt;6. Browser capability&lt;/h2&gt;
+
+&lt;p&gt;The devices and browsers people use have varying capabilities. This impacts what they can do and the features we offer them.&lt;/p&gt;
+
+&lt;p&gt;We should deliver a core experience, and &lt;a href=&quot;/articles/progressively-enhanced-javascript/&quot;&gt;enhance only when the feature is available&lt;/a&gt;. Everything but content is an enhancement.&lt;/p&gt;
+
+&lt;h2 id=&quot;internet-data-cost&quot;&gt;7. Internet data cost&lt;/h2&gt;
+
+&lt;p&gt;Again whilst you and I may have expensive data contracts, many people do not. And even if it’s cheap, data can run out. Either way, we must think about this when we want to design inclusive experiences.&lt;/p&gt;
+
+&lt;p&gt;This is not just about making lightweight experiences (though that’s essential). Breaking up content across pages allows people to load content as they see fit.&lt;/p&gt;
+
+&lt;h2 id=&quot;environment&quot;&gt;8. Environment&lt;/h2&gt;
+
+&lt;p&gt;Experiences are affected by low lighting and screen glare. Or being outside in the cold wearing touch-screen friendly winter gloves. Or choosing to interact verbally. Or turning down brightness to save battery.&lt;/p&gt;
+
+&lt;p&gt;Either way, we need to test our designs in the real world.&lt;/p&gt;
+
+&lt;h2 id=&quot;standards-and-conventions&quot;&gt;9. Standards and conventions&lt;/h2&gt;
+
+&lt;p&gt;Android and IOS have standards and guides for designing apps. These guides act as constraints. This ensures we solve the same problems in the same way.&lt;/p&gt;
+
+&lt;p&gt;The same applies to web design.&lt;/p&gt;
+
+&lt;p&gt;When websites use the same patterns and conventions, interfaces become familiar. Familiar is better.&lt;/p&gt;
+
+&lt;p&gt;You can &lt;a href=&quot;https://medium.com/@mibosc/responsive-design-why-and-how-we-ditched-the-good-old-select-element-bc190d62eff5#.8m0u1kb7p&quot;&gt;break conventions&lt;/a&gt; but you need a good reason for doing so.&lt;/p&gt;
+
+&lt;h2 id=&quot;interoperability&quot;&gt;10. Interoperability&lt;/h2&gt;
+
+&lt;p&gt;People don’t just consume content directly through websites. They use Safari’s reading mode or a feed reader. And they rely on how Google displays a search result.&lt;/p&gt;
+
+&lt;p&gt;Therefore, we need to design experiences that are interoperable because this is how people use our products.&lt;/p&gt;
+
+&lt;h2 id=&quot;configuration&quot;&gt;11. Configuration&lt;/h2&gt;
+
+&lt;p&gt;People customise their phone and their browser to their liking. They may add plugins, or adjust the font size.&lt;/p&gt;
+
+&lt;p&gt;Building experiences that honour people’s configuration and ability to choose is a vital aspect of designing inclusive experiences.&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;Each of these constraints elevate the needs of users to the number one spot. They influence everything from our choice of words and interaction design, to the code we use behind the scenes.&lt;/p&gt;
+
+&lt;p&gt;Simply put, exclusive experiences ignore people. And there’s a lot be said for design that ignores people. People ignore it.&lt;/p&gt;
+
+&lt;p&gt;Let’s not ignore people. Let’s design with these constraints at the fore. And in turn design better experiences for everyone.&lt;/p&gt;
+</content>
+		</entry>
 	
 		<entry>
 			<title>Year in review 2016</title>
