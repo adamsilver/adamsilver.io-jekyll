@@ -727,7 +727,7 @@ hr {
 .signUpForm-button,
 .signUpHero-button {
 	font-size: 1em;
-	padding: 12px 22px;
+	padding: 11px 22px;
 	display: block;
 	background-color: #0074D9;
 	color: #fff;
@@ -735,7 +735,7 @@ hr {
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 0.03em;
-	border-radius: 2px;
+	border-radius: 8px;
 	display: inline-block;
 	font-family: 'Open sans';
 }
