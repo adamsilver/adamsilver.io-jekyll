@@ -65,5 +65,8 @@ As long as we ensure our forms have sufficient labelling&mdash;and as long as we
 
 ---
 
+- Problem with https://www.wayfair.co.uk/v/checkout/authentication/register
+- Two fields validate on blur. blur first field causes error when u tab into the next field, you then tab back or move to first field in order to fix and you now have done next to nothing and have two errors to fix. GAH.
+
 To do it the recommended way you gotta apply onblur/onkeypress on a RULE basis, not just a FIELD basis.
 
