@@ -3,7 +3,7 @@
 	<title>Adam Silver | UX design, Front-end Engineering and Strategy | London, UK.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-03-01T19:26:18+00:00</updated>
+	<updated>2017-03-11T07:18:46+00:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -300,7 +300,9 @@
 			<link href="http://adamsilver.io/articles/dont-initialise-javascript-automagically/"/>
 			<updated>2016-12-06T09:00:01+00:00</updated>
 			<id>http://adamsilver.io/articles/dont-initialise-javascript-automagically</id>
-			<content type="html">&lt;p&gt;I used to write Javascript that initialises components automagically. Don’t
+			<content type="html">&lt;p&gt;&lt;em&gt;First sent to my &lt;a href=&quot;/signup&quot;&gt;private mailing list&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I used to write Javascript that initialises components automagically. Don’t
 worry I’ll explain what I mean. Take a look below:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;var datepickers = document.getElementsByClassName(‘datepicker’);
@@ -471,7 +473,9 @@ HTML isn’t good at defining behaviour. But Javascript is.&lt;/p&gt;
 			<link href="http://adamsilver.io/articles/less-but-better/"/>
 			<updated>2016-11-18T09:00:01+00:00</updated>
 			<id>http://adamsilver.io/articles/less-but-better</id>
-			<content type="html">&lt;p&gt;There are times in life when you learn something new — a moment that sets you off down a different path. Maybe you always had it “in” you, but something triggered it. Maybe it was a culmination of things or maybe something else entirely.&lt;/p&gt;
+			<content type="html">&lt;p&gt;&lt;em&gt;First sent to my &lt;a href=&quot;/signup&quot;&gt;private mailing list&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;There are times in life when you learn something new — a moment that sets you off down a different path. Maybe you always had it “in” you, but something triggered it. Maybe it was a culmination of things or maybe something else entirely.&lt;/p&gt;
 
 &lt;p&gt;I think it happened to me when I was working with &lt;a href=&quot;http://theluckystrike.co.uk/&quot;&gt;Mark
 Jenkins&lt;/a&gt; in the UX team at &lt;a href=&quot;http://just-eat.co.uk/&quot;&gt;Just
@@ -579,7 +583,9 @@ day&lt;/a&gt;.&lt;/p&gt;
 			<link href="http://adamsilver.io/articles/semantic-class-names-are-you-being-too-generic-or-too-specific/"/>
 			<updated>2016-10-31T09:00:01+00:00</updated>
 			<id>http://adamsilver.io/articles/semantic-class-names-are-you-being-too-generic-or-too-specific</id>
-			<content type="html">&lt;p&gt;Even if you’re completely sold on &lt;a href=&quot;http://maintainablecss.com/chapters/semantics/&quot;&gt;semantic class names&lt;/a&gt; and avoid stylistic and behavioural class names altogether, choosing a good class name is hard.&lt;/p&gt;
+			<content type="html">&lt;p&gt;&lt;em&gt;First sent to my &lt;a href=&quot;/signup&quot;&gt;private mailing list&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Even if you’re completely sold on &lt;a href=&quot;http://maintainablecss.com/chapters/semantics/&quot;&gt;semantic class names&lt;/a&gt; and avoid stylistic and behavioural class names altogether, choosing a good class name is hard.&lt;/p&gt;
 
 &lt;p&gt;The problem boils down to naming your classes either too generically or too specifically. Both of which have pros and cons. But I like to think we can choose a class name without any cons. Let’s see.&lt;/p&gt;
 
@@ -676,7 +682,9 @@ day&lt;/a&gt;.&lt;/p&gt;
 			<link href="http://adamsilver.io/articles/browsers-are-different-but-so-what/"/>
 			<updated>2016-09-01T10:00:01+01:00</updated>
 			<id>http://adamsilver.io/articles/browsers-are-different-but-so-what</id>
-			<content type="html">&lt;p&gt;You know, it’s funny, when the web came along, we used the medium of print to set expectations for how things should be.&lt;/p&gt;
+			<content type="html">&lt;p&gt;&lt;em&gt;First sent to my &lt;a href=&quot;/signup&quot;&gt;private mailing list&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;You know, it’s funny, when the web came along, we used the medium of print to set expectations for how things should be.&lt;/p&gt;
 
 &lt;p&gt;When you print out a business card it always looks the same, no matter who you are or where you are. It’s a physical thing.&lt;/p&gt;
 
@@ -949,7 +957,9 @@ separation of concerns between back-end and front-end. You don’t need to use a
 			<link href="http://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor/"/>
 			<updated>2016-07-15T10:00:01+01:00</updated>
 			<id>http://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor</id>
-			<content type="html">&lt;p&gt;There is this belief that the hand cursor means ‘clickable’, but this is incorrect and potentially problematic. My hope is that by the end of the article, you’ll never want to use the hand cursor for buttons ever again.&lt;/p&gt;
+			<content type="html">&lt;p&gt;&lt;em&gt;First sent to my &lt;a href=&quot;/signup&quot;&gt;private mailing list&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;There is this belief that the hand cursor means ‘clickable’, but this is incorrect and potentially problematic. My hope is that by the end of the article, you’ll never want to use the hand cursor for buttons ever again.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-hand-doesnt-mean-clickable&quot;&gt;The hand doesn’t mean clickable&lt;/h2&gt;
 
@@ -1023,7 +1033,9 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 			<link href="http://adamsilver.io/articles/always-use-a-label/"/>
 			<updated>2016-07-01T10:00:01+01:00</updated>
 			<id>http://adamsilver.io/articles/always-use-a-label</id>
-			<content type="html">&lt;p&gt;You might be tempted to remove labels from some form controls to create a minimal aesthetic and save space. But it’s a &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;UX myth&lt;/a&gt; that saving space and minimalist design equates to better experiences.&lt;/p&gt;
+			<content type="html">&lt;p&gt;&lt;em&gt;First sent to my &lt;a href=&quot;/signup&quot;&gt;private mailing list&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;You might be tempted to remove labels from some form controls to create a minimal aesthetic and save space. But it’s a &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;UX myth&lt;/a&gt; that saving space and minimalist design equates to better experiences.&lt;/p&gt;
 
 &lt;p&gt;Labels are essential because:&lt;/p&gt;
 
