@@ -6,6 +6,8 @@ categories: design ux
 description: Fields with missing labels cause problems. And yet, designers omit them all the time. Why?
 ---
 
+*First sent to my [private mailing list](/signup).*
+
 You might be tempted to remove labels from some form controls to create a minimal aesthetic and save space. But it's a [UX myth](http://uxmyths.com/post/115783813605/myth-34-simple-minimal) that saving space and minimalist design equates to better experiences.
 
 Labels are essential because:

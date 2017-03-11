@@ -6,6 +6,8 @@ categories: js
 description: Front-end devs are seduced by complexity. One way this manifests itself is in the magical looping over behavioural classes.
 ---
 
+*First sent to my [private mailing list](/signup).*
+
 I used to write Javascript that initialises components automagically. Don’t
 worry I’ll explain what I mean. Take a look below:
 
