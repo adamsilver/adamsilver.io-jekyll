@@ -75,4 +75,6 @@ As long as we ensure our forms have sufficient labelling&mdash;and as long as we
 
 <!--
 E.g. blur tab error issue https://www.wayfair.co.uk/v/checkout/authentication/register
+
+If going to do Ajax then it's not instant and could slow users down. And then user has to do two server calls. One for Ajax for each field and one for whole submission.
 -->
