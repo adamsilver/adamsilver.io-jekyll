@@ -144,6 +144,7 @@ hr {
 	max-width: 43.75em;
 	padding-bottom: 20px;
 	margin: 0 auto 0px;
+	display: block;
 }
 
 @media(min-width: 37.5em) {
