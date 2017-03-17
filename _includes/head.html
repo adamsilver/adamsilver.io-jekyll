@@ -1,3 +1,13 @@
+{% if page.title %}
+	{% if page.layout == "post" %}
+		<title>{{ page.title }} by Adam Silver</title>
+	{% else %}
+		<title>{{ page.title }}</title>
+	{% endif %}
+{% else %}
+	<title>{{ site.name }}</title>
+{% endif %}
+
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <meta name="viewport" content="initial-scale=1.0">
 <meta name="Author" content="Adam Silver">
@@ -7,10 +17,14 @@
 <meta property="og:locale" content="en_GB">
 <meta property="og:type" content="website">
 
-{% if page.layout == "post" %}
-	<meta content="{{ page.title }}" property="og:title">
+{% if page.title %}
+	{% if page.layout == "post" %}
+		<meta content="{{ page.title }} by Adam Silver" property="og:title">
+	{% else %}
+		<meta content="{{ page.title }}" property="og:title">
+	{% endif %}
 {% else %}
- 	<meta content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}" property="og:title">
+	<meta content="{{ site.name }}" property="og:title">
 {% endif %}
 
 {% if page.description %}

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About me
+title: "About Adam Silver: a designer and front-end developer, based in London, England."
 id: about
 permalink: /about/
 ---

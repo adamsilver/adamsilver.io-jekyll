@@ -1,7 +1,7 @@
 ---
 layout: newsletter
 id: signup
-title: Sign up for updates
+title: Join my newsletter, by me, Adam Silver. It's all about designing simple, human and inclusive websites.
 permalink: /signup/
 ---
 
