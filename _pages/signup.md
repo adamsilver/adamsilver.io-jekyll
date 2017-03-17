@@ -2,6 +2,7 @@
 layout: newsletter
 id: signup
 title: Join my newsletter, by me, Adam Silver. It's all about designing simple, human and inclusive websites.
+description: Sign up and receive my newsletter, which comes out once a month. It's all about designing and coding simple, human and inclusive experiences on the web. Get all the good stuff before anyone else does.
 permalink: /signup/
 ---
 
