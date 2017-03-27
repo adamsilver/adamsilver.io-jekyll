@@ -11,13 +11,35 @@ Whenever I tell people about the [problems with placeholders](/articles/placehol
 
 Not all fields require a hint, but for those that do, the floating label pattern is unnecessarily constraining. The floating label begins its life inside the control leaving no space for an additional hint.
 
+<div class="image">
+	<figure>
+		<img src="{{ site.url }}/assets/img/floatinglabels/1-hint.png" alt="Alt" width="100%" style="max-width: 500px;">
+		<figcaption>Caption</figcaption>
+	</figure>
+</div>
+
 ## 2. They are small and hard-to-read
 
 A floating label is normally small. This is so that as it moves outside of the field, it takes up a small amount of space. But small text is hard-to-read.
 
+<div class="image">
+	<figure>
+		<img src="{{ site.url }}/assets/img/floatinglabels/2-readability.png" alt="Alt" width="100%" style="max-width: 500px;">
+		<figcaption>Caption</figcaption>
+	</figure>
+</div>
+
+
 ## 3. They need landing space to move into
 
 A floated label needs space to move into. This means that, if labels are a usable size (as per the previous point), there would be no saved space anyway&mdash;just more *white* space.
+
+<div class="image">
+	<figure>
+		<img src="{{ site.url }}/assets/img/floatinglabels/3-space.png" alt="Alt" width="100%" style="max-width: 500px;">
+		<figcaption>Caption</figcaption>
+	</figure>
+</div>
 
 Alternatively, we could create space *as* the label moves into position. But this causes the page to judder creating a disorientating experience as the user types the first character.
 
@@ -28,6 +50,13 @@ Animation itself is quite often janky. That aside, some users may find it distra
 ## 5. They have poor contrast and related issues
 
 Like regular placeholder text, a floating label has low contrast to make it look different to a real value. Low contrast text is hard-to-read.
+
+<div class="image">
+	<figure>
+		<img src="{{ site.url }}/assets/img/floatinglabels/5-contrast.png" alt="Alt" width="100%" style="max-width: 500px;">
+		<figcaption>Caption</figcaption>
+	</figure>
+</div>
 
 And, as the label floats out of the field, it will need to change colour to make it look like a label. Otherwise the text could be "lost" against the background colour.
 
@@ -41,11 +70,25 @@ As radios, checkboxes and select boxes will have fixed labels (and legends) user
 
 For example, when looking at a textbox the user has to look *inside* the control for the label. Whereas for a select box they have to look *outside* the control.
 
+<div class="image">
+	<figure>
+		<img src="{{ site.url }}/assets/img/floatinglabels/7-consistency.png" alt="Alt" width="100%" style="max-width: 500px;">
+		<figcaption>Caption</figcaption>
+	</figure>
+</div>
+
 Sticking to standard labels and legends that are positioned outside the field creates a consistent and familiar user experience. Two qualities often found in well-designed UIs.
 
 ## 8. The label may get cut off
 
 If the floating label is longer than the size of the field, it will get cut off. By using this pattern we unnecessarily constrain ourselves as to the length of the label itself.
+
+<div class="image">
+	<figure>
+		<img src="{{ site.url }}/assets/img/floatinglabels/8-cutoff.png" alt="Alt" width="100%" style="max-width: 500px;">
+		<figcaption>Caption</figcaption>
+	</figure>
+</div>
 
 ## 9. It's a misuse of the standards
 
