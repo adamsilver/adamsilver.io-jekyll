@@ -3,7 +3,7 @@
 	<title>Adam Silver: Designing simple, human and inclusive websites.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-03-28T18:11:34+01:00</updated>
+	<updated>2017-03-28T19:58:59+01:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -1174,7 +1174,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
 		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/forget.png&quot; alt=&quot;Placeholder disappears when typing&quot; width=&quot;100%&quot; /&gt;
-		&lt;figcaption&gt;Placeholder text disappears as you type&lt;/figcaption&gt;
+		&lt;figcaption&gt;Placeholder text disappears as you type.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -1185,7 +1185,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
 		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/support.png&quot; alt=&quot;Broken for browsers lacking support&quot; width=&quot;100%&quot; /&gt;
-		&lt;figcaption&gt;Broken experience for browsers lacking support&lt;/figcaption&gt;
+		&lt;figcaption&gt;Broken experience for browsers lacking support.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -1196,7 +1196,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
 		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/populated.png&quot; alt=&quot;Populated field are hard to use&quot; width=&quot;100%&quot; /&gt;
-		&lt;figcaption&gt;Populated field are hard to use&lt;/figcaption&gt;
+		&lt;figcaption&gt;Populated fields are hard to use.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -1211,7 +1211,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
 		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/2.png&quot; alt=&quot;Error message with a label for context.&quot; width=&quot;100%&quot; /&gt;
-		&lt;figcaption&gt;Different hint patterns when there are errors&lt;/figcaption&gt;
+		&lt;figcaption&gt;Different hint patterns when there are errors.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -1224,7 +1224,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
 		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/disappearing.png&quot; alt=&quot;Placeholders disappear on focus&quot; width=&quot;100%&quot; /&gt;
-		&lt;figcaption&gt;Placeholders disappear on focus&lt;/figcaption&gt;
+		&lt;figcaption&gt;Placeholders disappear on focus.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -1235,7 +1235,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
 		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/empty.png&quot; alt=&quot;Placeholders mistaken for real values&quot; width=&quot;100%&quot; /&gt;
-		&lt;figcaption&gt;Placeholders might be mistaken for real values&lt;/figcaption&gt;
+		&lt;figcaption&gt;Placeholders might be mistaken for real values.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -1255,7 +1255,7 @@ equivalent of a blank box.&lt;/p&gt;
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
 		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/10.png&quot; alt=&quot;No label means a smaller hit area.&quot; width=&quot;100%&quot; /&gt;
-		&lt;figcaption&gt;No label means a smaller hit area.&lt;/figcaption&gt;
+		&lt;figcaption&gt;No label means a smaller hit area..&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -1266,7 +1266,7 @@ equivalent of a blank box.&lt;/p&gt;
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
 		&lt;img src=&quot;http://adamsilver.io/assets/img/placeholders/11.png&quot; alt=&quot;Placeholder copy gets cropped.&quot; width=&quot;100%&quot; /&gt;
-		&lt;figcaption&gt;Long text gets cropped&lt;/figcaption&gt;
+		&lt;figcaption&gt;Long text gets cropped.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -2205,15 +2205,15 @@ Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a h
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;/assets/img/hover1.jpg&quot; alt=&quot;Hover&quot; width=&quot;100%&quot; /&gt;
-		&lt;figcaption&gt;The menu accidentally closes when you move directly from Companies to the latest article&lt;/figcaption&gt;
+		&lt;img src=&quot;/assets/img/hover1.jpg&quot; alt=&quot;Hover&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;figcaption&gt;The menu accidentally closes when you move directly from Companies to the latest article.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;/assets/img/hover2.jpg&quot; alt=&quot;Hover&quot; width=&quot;100%&quot; /&gt;
-		&lt;figcaption&gt;To keep the menu open, you must move the mouse carefully down and then across&lt;/figcaption&gt;
+		&lt;img src=&quot;/assets/img/hover2.jpg&quot; alt=&quot;Hover&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;figcaption&gt;To keep the menu open, you must move the mouse carefully down and then across.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -2227,15 +2227,15 @@ Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a h
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;/assets/img/hover3.jpg&quot; alt=&quot;Hover&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;/assets/img/hover3.jpg&quot; alt=&quot;Hover&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
 		&lt;figcaption&gt;User wants to click link below the menu but...&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;/assets/img/hover4.jpg&quot; alt=&quot;Hover&quot; width=&quot;100%&quot; /&gt;
-		&lt;figcaption&gt;...the menu opens accidentally so the user clicks &quot;Energy&quot; instead&lt;/figcaption&gt;
+		&lt;img src=&quot;/assets/img/hover4.jpg&quot; alt=&quot;Hover&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;figcaption&gt;...the menu opens accidentally so the user clicks &quot;Energy&quot; instead.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -3714,9 +3714,10 @@ zoo.information = {
 
 &lt;p&gt;If there are multiple buttons, the form will behave as if the user pressed the &lt;em&gt;first&lt;/em&gt; button. This is not always desirable. For example, you might have an address form with a postcode look-up.&lt;/p&gt;
 
-&lt;div class=&quot;image&quot; style=&quot;max-width: 320px;margin: 0 auto;&quot;&gt;
+&lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;/assets/img/multiplesubmit.png&quot; alt=&quot;Delivery address form&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;/assets/img/multiplesubmit.png&quot; alt=&quot;Delivery address form&quot; width=&quot;100%&quot; style=&quot;max-width: 320px;&quot; /&gt;
+		&lt;figcaption&gt;Delivery address form with multiple submit buttons.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
