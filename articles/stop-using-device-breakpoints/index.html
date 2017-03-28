@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en">
+	<head>
+	    
+	
+		<title>Stop using device breakpoints by Adam Silver</title>
+	
+
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+
+<link rel="apple-touch-icon" sizes="57x57" href="http://adamsilver.io/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://adamsilver.io/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://adamsilver.io/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://adamsilver.io/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://adamsilver.io/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://adamsilver.io/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://adamsilver.io/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://adamsilver.io/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://adamsilver.io/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="http://adamsilver.io/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="http://adamsilver.io/manifest.json">
+<link rel="mask-icon" href="http://adamsilver.io/safari-pinned-tab.svg" color="#001f3f">
+<meta name="msapplication-TileColor" content="#001F3F">
+<meta name="msapplication-TileImage" content="http://adamsilver.io/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+
+
+	
+		<meta content="Stop using device breakpoints by Adam Silver" property="og:title">
+	
+
+
+
+	<meta property="og:description" content="Hello, I am Adam Silver, I specialise in UX, Front-end Engineering and Strategy. I help companies and people design simple, human and inclusive websites. Based in London.">
+
+
+<meta property="og:url" content="http://adamsilver.io/articles/stop-using-device-breakpoints/">
+<meta property="og:site_name" content="Adamsilver.io">
+<meta property="og:image" content="http://adamsilver.io/assets/img/card.png">
+<meta property="og:image:width" content="181">
+<meta property="og:image:height" content="181">
+
+<meta name="twitter:card" content="summary">
+
+
+	<meta name="twitter:description" content="Hello, I am Adam Silver, I specialise in UX, Front-end Engineering and Strategy. I help companies and people design simple, human and inclusive websites. Based in London.">
+
+
+<meta name="twitter:title" content="Stop using device breakpoints -  Adam Silver: Designing simple, human and inclusive websites.">
+
+
+	<meta content="Stop using device breakpoints" name="twitter:title">
+
+
+<meta name="twitter:site" content="@adambsilver">
+<meta name="twitter:creator" content="@adambsilver">
+<meta property="twitter:image" content="http://adamsilver.io/assets/img/card.png">
+
+
+	<meta itemprop="description" content="Hello, I am Adam Silver, I specialise in UX, Front-end Engineering and Strategy. I help companies and people design simple, human and inclusive websites. Based in London.">
+
+
+<link rel="stylesheet" href="/assets/css/main.min.c0ffc2c3.css" media="all">
+
+<!--[if IE 8]>
+<link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
+<![endif]-->
+
+<!--[if IE 7]>
+<link rel="stylesheet" href="/assets/css/ie7.min.d41d8cd9.css" media="all">
+<![endif]-->
+
+
+<!--[if IE 6]>
+<link rel="stylesheet" href="/assets/css/ie6.min.2d22a25b.css" media="all">
+<![endif]-->
+
+
+<link rel="canonical" href="http://adamsilver.io/articles/stop-using-device-breakpoints/">
+<link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47311666-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	</head>
+	<body>
+	    <nav class="nav">
+	<ul>
+		<li><a class="" href="/">Home</a></li>
+		<li><a class="nav-active" href="/articles/">Articles</a></li>
+		<li><a class="" href="/about/">About</a></li>
+		<li><a class="" href="/signup/">Newsletter</a></li>
+	</ul>
+</nav>
+	    <main class="mainContent">
+			<h1 class="article-heading">Stop using device breakpoints</h1>
+			<!-- <div class="meta">
+	<time class="meta-date" date-time="2017-03-28">28 March 2017</time> <span class="meta-divider">&#183;</span>
+	<span class="meta-readingTime" title="Estimated read time">
+	  
+
+	  
+	    3 minute read
+	  
+	</span>
+</div> -->
+	        <p><em>First sent to my <a href="/signup">private mailing list</a>.</em></p>
+
+<p>I see it all the time. Designers, and developers alike, setting breakpoints according to their favourite device. When will we learn from our past mistakes?</p>
+
+<p>When the web came along we settled on 640 pixel widths. Then a few years later, when larger monitors came to market, we settled on 960 pixels. We no longer cared about people with smaller monitors.</p>
+
+<p>Then more years passed. The mobile web was born. Or more accurately, we could consume websites on our phones, which happen to have small screens. A million browsers came out. A million devices came out. And browsers gave us media queries.</p>
+
+<p>At about this time, we decided to use 320 pixels for mobile. Why? Because a lot of us had the iPhone, and this was its width in portrait.</p>
+
+<p>Then landscape mode. Then tablet (that’s still mobile right?). Then desktop. Then big desktop like super size thunder screens or whatever the hell they’re called. (I’m not Googling it because you know what I mean). Then TV. Then wristwatch and then…</p>
+
+<p>You get the point. The web is not print. The web is the web and we have no idea what size screen our users have. We just can’t control that. And even if we could, the proliferation of devices means that designing for them is futile.</p>
+
+<p>But there’s a few things we do know. We know our brand and our design. And, more importantly, we know our content.</p>
+
+<p>We should always start with content. Without content, design is meaningless. We design to help users consume content. We don’t use content to help users enjoy our designs.</p>
+
+<p>We often start designing with a box. And then we put smaller boxes inside it. Then later we fill in these boxes with actual content.</p>
+
+<p>As Frank Chimero beautifully explains in <a href="https://www.frankchimero.com/writing/the-webs-grain/">The Web’s Grain</a>, this is just about the worst thing we can do.</p>
+
+<p>How can we possibly design something until we know what the content is?</p>
+
+<p>I’ve witnessed designers finish their mock-ups and ask the resident content designer to make the content fit. Maybe even ask them to shorten their user-friendly content to make sure it doesn’t wrap and so forth. It may help the designer. It doesn’t help the user.</p>
+
+<p>And when they check their design on landscape or on a device they don’t own, they get flustered. What they see as control, is really an unnecessary constraint on their design to a known set of device sizes.</p>
+
+<p>Instead we should let content be our guide. We should set a breakpoint when and if the content requires it. We can call them content breakpoints or what Frank refers to as points of reassembly.</p>
+
+<p>Take for example the subscribe form on <a href="http://maintainablecss.com">MaintainableCSS</a>. Taking a content-led, small-screen first approach, the button sits under the text box. And when there’s room, they sit along side each other.</p>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/breakpoints/maintainablecss.png" alt="MaintainableCSS subscribe form" width="100%" />
+		<figcaption>MaintainableCSS' responsive subscribe form</figcaption>
+	</figure>
+</div>
+
+<p>The media query uses a breakpoint of 36em. Why? Because that’s when there is an opportunity for content reassembly. The button and text control lose their affordance when they get really wide on bigger screens. So we can fix that.</p>
+
+<p>And it’s only relevant to the subscribe form. There is no blanket rule that states that 36em means “big”. The breakpoint reflects the need of the module and content in question.</p>
+
+<p>Technically it’s just a media query. But the mindset and the approach is what sets it apart. The design supports the content. Not the other way around.</p>
+
+<p>This is why <a href="http://getbootstrap.com/css/">CSS frameworks</a> cause problems by unnecessarily constraining our content to fit into a predefined grid. How can a CSS framework know what our content is? It can’t.</p>
+
+<p>The term mobile first encourages us to think in terms of device. But the web isn’t a set of devices. The web is a continuum of edgelessness. That’s the coolest sentence I’ve ever written.</p>
+
+<p>What it means is this. There is absolutely no point —  whatsoever — in trying to work out the size of a particular device, in order to then define a codified responsive grid.</p>
+
+<p>At best it’s constraining and at its worst, it causes problems.</p>
+
+<p>Instead, let the content be your guide. If and when it breaks we can reassemble it with the necessary content breakpoint.</p>
+
+<p>Responsive design frees us from the shackles of designing based on devices, which is impossible to get a handle on. Content breakpoints give people better experiences no matter what size device they have.</p>
+
+	    </main>
+		<div class="signUpHero  signUpHero-isArticle ">
+	<h2 class="signUpHero-heading">Join my newsletter</h2>
+	<p class="signUpHero-description">If you want to read about designing inclusive, simple and human experiences on the web, you'll probably love my newsletter.</p>
+	<form action="//adamsilver.us9.list-manage.com/subscribe/post?u=b8fb04f39bf86109693e00ba5&amp;id=441c045a36" method="post">
+		<input type="hidden" name="b_b8fb04f39bf86109693e00ba5_441c045a36" value="">
+		<input type="hidden" name="SITE" value="http://adamsilver.io">
+		<input type="hidden" name="LOCATION" value="/articles/stop-using-device-breakpoints/">
+		<label for="mce-EMAIL" class="signUpHero-label">Your email address</label>
+		<input type="email" name="EMAIL" id="mce-EMAIL" class="signUpHero-email" required>
+		<input class="signUpHero-button" type="submit" value="Sign up" name="subscribe">
+	</form>
+</div>
+		<footer class="footer">
+	<p>You can find me on <a href="http://www.twitter.com/adambsilver/">Twitter</a>, <a href="http://www.github.com/adamsilver/">Github</a>, <a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a> and <a href="http://medium.com/@adambsilver">Medium</a>.
+	</p>
+</footer>
+	</body>
+</html>

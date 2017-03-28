@@ -3,12 +3,76 @@
 	<title>Adam Silver: Designing simple, human and inclusive websites.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-03-27T18:00:59+01:00</updated>
+	<updated>2017-03-28T18:11:34+01:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
 	</author>
 
+	
+		<entry>
+			<title>Stop using device breakpoints</title>
+			<link href="http://adamsilver.io/articles/stop-using-device-breakpoints/"/>
+			<updated>2017-03-28T10:00:01+01:00</updated>
+			<id>http://adamsilver.io/articles/stop-using-device-breakpoints</id>
+			<content type="html">&lt;p&gt;&lt;em&gt;First sent to my &lt;a href=&quot;/signup&quot;&gt;private mailing list&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I see it all the time. Designers, and developers alike, setting breakpoints according to their favourite device. When will we learn from our past mistakes?&lt;/p&gt;
+
+&lt;p&gt;When the web came along we settled on 640 pixel widths. Then a few years later, when larger monitors came to market, we settled on 960 pixels. We no longer cared about people with smaller monitors.&lt;/p&gt;
+
+&lt;p&gt;Then more years passed. The mobile web was born. Or more accurately, we could consume websites on our phones, which happen to have small screens. A million browsers came out. A million devices came out. And browsers gave us media queries.&lt;/p&gt;
+
+&lt;p&gt;At about this time, we decided to use 320 pixels for mobile. Why? Because a lot of us had the iPhone, and this was its width in portrait.&lt;/p&gt;
+
+&lt;p&gt;Then landscape mode. Then tablet (that’s still mobile right?). Then desktop. Then big desktop like super size thunder screens or whatever the hell they’re called. (I’m not Googling it because you know what I mean). Then TV. Then wristwatch and then…&lt;/p&gt;
+
+&lt;p&gt;You get the point. The web is not print. The web is the web and we have no idea what size screen our users have. We just can’t control that. And even if we could, the proliferation of devices means that designing for them is futile.&lt;/p&gt;
+
+&lt;p&gt;But there’s a few things we do know. We know our brand and our design. And, more importantly, we know our content.&lt;/p&gt;
+
+&lt;p&gt;We should always start with content. Without content, design is meaningless. We design to help users consume content. We don’t use content to help users enjoy our designs.&lt;/p&gt;
+
+&lt;p&gt;We often start designing with a box. And then we put smaller boxes inside it. Then later we fill in these boxes with actual content.&lt;/p&gt;
+
+&lt;p&gt;As Frank Chimero beautifully explains in &lt;a href=&quot;https://www.frankchimero.com/writing/the-webs-grain/&quot;&gt;The Web’s Grain&lt;/a&gt;, this is just about the worst thing we can do.&lt;/p&gt;
+
+&lt;p&gt;How can we possibly design something until we know what the content is?&lt;/p&gt;
+
+&lt;p&gt;I’ve witnessed designers finish their mock-ups and ask the resident content designer to make the content fit. Maybe even ask them to shorten their user-friendly content to make sure it doesn’t wrap and so forth. It may help the designer. It doesn’t help the user.&lt;/p&gt;
+
+&lt;p&gt;And when they check their design on landscape or on a device they don’t own, they get flustered. What they see as control, is really an unnecessary constraint on their design to a known set of device sizes.&lt;/p&gt;
+
+&lt;p&gt;Instead we should let content be our guide. We should set a breakpoint when and if the content requires it. We can call them content breakpoints or what Frank refers to as points of reassembly.&lt;/p&gt;
+
+&lt;p&gt;Take for example the subscribe form on &lt;a href=&quot;http://maintainablecss.com&quot;&gt;MaintainableCSS&lt;/a&gt;. Taking a content-led, small-screen first approach, the button sits under the text box. And when there’s room, they sit along side each other.&lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/breakpoints/maintainablecss.png&quot; alt=&quot;MaintainableCSS subscribe form&quot; width=&quot;100%&quot; /&gt;
+		&lt;figcaption&gt;MaintainableCSS&#39; responsive subscribe form&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The media query uses a breakpoint of 36em. Why? Because that’s when there is an opportunity for content reassembly. The button and text control lose their affordance when they get really wide on bigger screens. So we can fix that.&lt;/p&gt;
+
+&lt;p&gt;And it’s only relevant to the subscribe form. There is no blanket rule that states that 36em means “big”. The breakpoint reflects the need of the module and content in question.&lt;/p&gt;
+
+&lt;p&gt;Technically it’s just a media query. But the mindset and the approach is what sets it apart. The design supports the content. Not the other way around.&lt;/p&gt;
+
+&lt;p&gt;This is why &lt;a href=&quot;http://getbootstrap.com/css/&quot;&gt;CSS frameworks&lt;/a&gt; cause problems by unnecessarily constraining our content to fit into a predefined grid. How can a CSS framework know what our content is? It can’t.&lt;/p&gt;
+
+&lt;p&gt;The term mobile first encourages us to think in terms of device. But the web isn’t a set of devices. The web is a continuum of edgelessness. That’s the coolest sentence I’ve ever written.&lt;/p&gt;
+
+&lt;p&gt;What it means is this. There is absolutely no point —  whatsoever — in trying to work out the size of a particular device, in order to then define a codified responsive grid.&lt;/p&gt;
+
+&lt;p&gt;At best it’s constraining and at its worst, it causes problems.&lt;/p&gt;
+
+&lt;p&gt;Instead, let the content be your guide. If and when it breaks we can reassemble it with the necessary content breakpoint.&lt;/p&gt;
+
+&lt;p&gt;Responsive design frees us from the shackles of designing based on devices, which is impossible to get a handle on. Content breakpoints give people better experiences no matter what size device they have.&lt;/p&gt;
+</content>
+		</entry>
 	
 		<entry>
 			<title>Designing inclusively</title>
