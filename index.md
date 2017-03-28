@@ -11,6 +11,12 @@ id: home
 
 My mission is to enhance people's lives by designing [simple](/articles/embracing-simplicity/), human and [inclusive experiences](/articles/designing-inclusively/) on the web.
 
+## Join my newsletter
+
+If you like designing simple, human and inclusive experiences on the web, sign up for my private mailing list. I'll send you something useful once a month.
+
+{% include signUpForm.html %}
+
 ## Books
 
 I've written a little book about maintainable css and because I'm so creative I called it [MaintainableCSS](http://maintainablecss.com) :). And I'm in the middle of writing my next book so stay tuned.
@@ -26,3 +32,5 @@ My skills can be briefly broken down into the following:
 ## Say hello
 
 If you want to chat with me about any of this [send me a message](mailto:adam+hello@adamsilver.io).
+
+

@@ -89,7 +89,6 @@ body {
     text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
     font-size: 100%;
-    color: #333333;
 }
 
 a:link,
@@ -314,6 +313,7 @@ hr {
 
 .mainContent figure {
 	margin-bottom: 30px;
+	padding: 0 20px;
 }
 
 @media(min-width: 37.5em) {
@@ -323,17 +323,13 @@ hr {
 }
 
 .mainContent figure img {
-	margin-bottom: 4px;
+	margin-bottom: 5px;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .mainContent figure figcaption {
 	font-size: 0.81em;
-	text-align: center;
-	padding-left: 20px;
-	padding-right: 20px;
+	font-style: italic;
 }
 
 @media(min-width: 37.5em) {

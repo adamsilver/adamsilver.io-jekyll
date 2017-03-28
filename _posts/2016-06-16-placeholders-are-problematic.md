@@ -17,7 +17,7 @@ The placeholder disappears when the user types. Once it's gone it's hard to reme
 <div class="image">
 	<figure>
 		<img src="{{ site.url }}/assets/img/placeholders/forget.png" alt="Placeholder disappears when typing" width="100%">
-		<figcaption>Placeholder text disappears as you type</figcaption>
+		<figcaption>Placeholder text disappears as you type.</figcaption>
 	</figure>
 </div>
 
@@ -28,7 +28,7 @@ The placeholder disappears when the user types. Once it's gone it's hard to reme
 <div class="image">
 	<figure>
 		<img src="{{ site.url }}/assets/img/placeholders/support.png" alt="Broken for browsers lacking support" width="100%">
-		<figcaption>Broken experience for browsers lacking support</figcaption>
+		<figcaption>Broken experience for browsers lacking support.</figcaption>
 	</figure>
 </div>
 
@@ -39,7 +39,7 @@ It's obvious that a missing label is fatal. But if the hint is missing, a user w
 <div class="image">
 	<figure>
 		<img src="{{ site.url }}/assets/img/placeholders/populated.png" alt="Populated field are hard to use" width="100%">
-		<figcaption>Populated field are hard to use</figcaption>
+		<figcaption>Populated fields are hard to use.</figcaption>
 	</figure>
 </div>
 
@@ -54,7 +54,7 @@ Errors are hard to fix because the message and the value lack context. And the h
 <div class="image">
 	<figure>
 		<img src="{{ site.url }}/assets/img/placeholders/2.png" alt="Error message with a label for context." width="100%">
-		<figcaption>Different hint patterns when there are errors</figcaption>
+		<figcaption>Different hint patterns when there are errors.</figcaption>
 	</figure>
 </div>
 
@@ -67,7 +67,7 @@ Some browsers hide the placeholder when the user focuses, instead of when they s
 <div class="image">
 	<figure>
 		<img src="{{ site.url }}/assets/img/placeholders/disappearing.png" alt="Placeholders disappear on focus" width="100%">
-		<figcaption>Placeholders disappear on focus</figcaption>
+		<figcaption>Placeholders disappear on focus.</figcaption>
 	</figure>
 </div>
 
@@ -78,7 +78,7 @@ People that don't notice the subtle difference in contrast will skip the field m
 <div class="image">
 	<figure>
 		<img src="{{ site.url }}/assets/img/placeholders/empty.png" alt="Placeholders mistaken for real values" width="100%">
-		<figcaption>Placeholders might be mistaken for real values</figcaption>
+		<figcaption>Placeholders might be mistaken for real values.</figcaption>
 	</figure>
 </div>
 
@@ -98,7 +98,7 @@ Clicking a label moves the focus to the field. This is helpful to everyone but e
 <div class="image">
 	<figure>
 		<img src="{{ site.url }}/assets/img/placeholders/10.png" alt="No label means a smaller hit area." width="100%">
-		<figcaption>No label means a smaller hit area.</figcaption>
+		<figcaption>No label means a smaller hit area..</figcaption>
 	</figure>
 </div>
 
@@ -109,7 +109,7 @@ If the placeholder is longer than the size of the field, it will be cut off. Thi
 <div class="image">
 	<figure>
 		<img src="{{ site.url }}/assets/img/placeholders/11.png" alt="Placeholder copy gets cropped." width="100%">
-		<figcaption>Long text gets cropped</figcaption>
+		<figcaption>Long text gets cropped.</figcaption>
 	</figure>
 </div>
 

@@ -14,15 +14,15 @@ When a user opens a menu, they can't intuitively move the mouse directly to a su
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/hover1.jpg" alt="Hover" width="100%">
-		<figcaption>The menu accidentally closes when you move directly from Companies to the latest article</figcaption>
+		<img src="/assets/img/hover1.jpg" alt="Hover" width="100%" style="max-width: 500px;">
+		<figcaption>The menu accidentally closes when you move directly from Companies to the latest article.</figcaption>
 	</figure>
 </div>
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/hover2.jpg" alt="Hover" width="100%">
-		<figcaption>To keep the menu open, you must move the mouse carefully down and then across</figcaption>
+		<img src="/assets/img/hover2.jpg" alt="Hover" width="100%" style="max-width: 500px;">
+		<figcaption>To keep the menu open, you must move the mouse carefully down and then across.</figcaption>
 	</figure>
 </div>
 
@@ -36,15 +36,15 @@ Also, if a user intends to click a link within a page, when the menu pops open j
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/hover3.jpg" alt="Hover" width="100%">
+		<img src="/assets/img/hover3.jpg" alt="Hover" width="100%" style="max-width: 500px;">
 		<figcaption>User wants to click link below the menu but...</figcaption>
 	</figure>
 </div>
 
 <div class="image">
 	<figure>
-		<img src="/assets/img/hover4.jpg" alt="Hover" width="100%">
-		<figcaption>...the menu opens accidentally so the user clicks "Energy" instead</figcaption>
+		<img src="/assets/img/hover4.jpg" alt="Hover" width="100%" style="max-width: 500px;">
+		<figcaption>...the menu opens accidentally so the user clicks "Energy" instead.</figcaption>
 	</figure>
 </div>
 

@@ -10,9 +10,10 @@ Forms with multiple submit buttons are problematic for keyboard users because of
 
 If there are multiple buttons, the form will behave as if the user pressed the *first* button. This is not always desirable. For example, you might have an address form with a postcode look-up.
 
-<div class="image" style="max-width: 320px;margin: 0 auto;">
+<div class="image">
 	<figure>
-		<img src="/assets/img/multiplesubmit.png" alt="Delivery address form" width="100%">
+		<img src="/assets/img/multiplesubmit.png" alt="Delivery address form" width="100%" style="max-width: 320px;">
+		<figcaption>Delivery address form with multiple submit buttons.</figcaption>
 	</figure>
 </div>
 
