@@ -19,7 +19,7 @@ Then landscape mode. Then tablet (that’s still mobile right?). Then desktop. T
 
 You get the point. The web is not print. The web is the web and we have no idea what size screen our users have. We just can’t control that. And even if we could, the proliferation of devices means that designing for them is futile.
 
-But there’s a few things we do know. We know our brand and our design. And, more importantly, we know our content.
+But there’s a few things we do know. We know our brand and our design. And, more importantly, we know our content. Content isn’t just paragraphs of text. It’s *the things that are held or included in something*.
 
 We should always start with content. Without content, design is meaningless. We design to help users consume content. We don’t use content to help users enjoy our designs.
 
