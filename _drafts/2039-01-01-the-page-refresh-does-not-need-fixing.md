@@ -1,8 +1,8 @@
 ---
 layout: post
-title: The page refresh doesn't need fixing
+title: Making web pages fast
 date: 2039-01-01 09:00:01
-categories: 
+categories:
 ---
 
 Often, we cram too much into a single page. This causes the page to load slower. This leads to people blaming the page refresh for performance problems.
@@ -11,12 +11,10 @@ All to often they'll then suggest using AJAX.
 
 AJAX, however, still needs to render new (parts of) screens. More crucially, it still has to make a request to the server.
 
-And that’s not all. There are penalties in using AJAX. 
+And that’s not all. There are penalties in using AJAX.
 
 1. We have to send more code to the user to make an AJAX request and handle errors causing slow page-load times.
-
 2. As we have engineered away what the browser does for free with chunking and progressive rendering we have to hack and stuff.
-
 3. We need to implement a custom loading indicator, aka a spinner, which is problematic because it's not familiar or accurate.
 
 Loading indicators, by the way, are a problem because they aren’t accurate, unlike the browser’s native implementation. And they aren’t familiar to the user — that is, they are always custom to the site implementing them. But familiarity is a UX convention that we should only break if we really really have to.
@@ -47,7 +45,7 @@ So how do we make pages fast?
 - smush the shit
 - show thumbnails first and load all images like rightmove
 - or querystring to let user decide.
-- or prove that 
+- or prove that
 
 Got high Res images. Do u really need them? If so make sure u a) smush the shit out of them b) ask the user to download them thru a query string or send them to a dedicated page after displaying low Res thumbnails.  Old school technique. Good user experience. Test this though. But test it fairly. Don't compare this to large images on iPhone 79 on high speed world western web connections.
 
@@ -64,6 +62,10 @@ Got high Res images. Do u really need them? If so make sure u a) smush the shit 
 - Edge caching
 - Chunking (Jake)
 - [Prefetch](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf)
+- lower down the stack
+- service workers?
+- http2?
+- revving assets etc
 
 ## Summary
 
@@ -94,4 +96,4 @@ Tabs js is an anti pattern. It's not mobile first friendly  .Encourages more. An
 Links:
 
 - https://boagworld.com/marketing/users-will-always-choose-the-easiest-option-so-if-we-want-a-competitive-advantage-we-must-focus-on-simplicity/
-
+- reference twitter and other articles moving away from client-side render.
