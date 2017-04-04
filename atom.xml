@@ -3,7 +3,7 @@
 	<title>Adam Silver: Designing simple, human and inclusive websites.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-03-28T20:07:36+01:00</updated>
+	<updated>2017-04-04T13:07:51+01:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -29,7 +29,7 @@
 
 &lt;p&gt;You get the point. The web is not print. The web is the web and we have no idea what size screen our users have. We just can’t control that. And even if we could, the proliferation of devices means that designing for them is futile.&lt;/p&gt;
 
-&lt;p&gt;But there’s a few things we do know. We know our brand and our design. And, more importantly, we know our content.&lt;/p&gt;
+&lt;p&gt;But there’s a few things we do know. We know our brand and our design. And, more importantly, we know our content. Content isn’t just paragraphs of text. It’s &lt;em&gt;the things that are held or included in something&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;We should always start with content. Without content, design is meaningless. We design to help users consume content. We don’t use content to help users enjoy our designs.&lt;/p&gt;
 
@@ -139,7 +139,7 @@
 
 &lt;p&gt;People use all sorts of devices, from watches to huge TVs, and everything in between. We need to consider how things work across the board.&lt;/p&gt;
 
-&lt;p&gt;Responsive design isn’t about 3 different sized containers according to device. It’s about fixing content where it breaks (if at all).&lt;/p&gt;
+&lt;p&gt;Responsive design isn’t about 3 different sized containers according to device. It’s about &lt;a href=&quot;/articles/stop-using-device-breakpoints/&quot;&gt;fixing content where it breaks&lt;/a&gt; (if at all).&lt;/p&gt;
 
 &lt;h2 id=&quot;browser-capability&quot;&gt;6. Browser capability&lt;/h2&gt;
 
@@ -173,7 +173,7 @@
 
 &lt;p&gt;People don’t just consume content directly through websites. They use Safari’s reading mode or a feed reader. And they rely on how Google displays a search result.&lt;/p&gt;
 
-&lt;p&gt;Therefore, we need to design experiences that are interoperable because this is how people use our products.&lt;/p&gt;
+&lt;p&gt;Therefore, we need to design experiences that are interoperable because this is how people use our services.&lt;/p&gt;
 
 &lt;h2 id=&quot;configuration&quot;&gt;11. Configuration&lt;/h2&gt;
 
