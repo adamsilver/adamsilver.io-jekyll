@@ -94,6 +94,6 @@ Tabs: penalty - load up all the stuff that goes into each tab. Need script to ru
 Tabs js is an anti pattern. It's not mobile first friendly  .Encourages more. And thinks there is a fold that needs dealing with.
 
 Links:
-
+-https://alistapart.com/article/planning-for-performance
 - https://boagworld.com/marketing/users-will-always-choose-the-easiest-option-so-if-we-want-a-competitive-advantage-we-must-focus-on-simplicity/
 - reference twitter and other articles moving away from client-side render.
