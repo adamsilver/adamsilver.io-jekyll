@@ -11,9 +11,7 @@ id: home
 
 My mission is to enhance people's lives by designing [simple](/articles/embracing-simplicity/), human and [inclusive experiences](/articles/designing-inclusively/) on the web.
 
-## Join my newsletter
-
-If you like designing simple, human and inclusive experiences on the web, sign up for my private mailing list. I'll send you something useful once a month.
+I write about this stuff once-a-month, and I send it straight to your inbox so that we can continue the conversation. Sign up below:
 
 {% include signUpForm.html %}
 

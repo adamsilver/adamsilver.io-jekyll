@@ -69,7 +69,7 @@ We must consider performance and connectivity from the beginning. Make the slow 
 
 People use all sorts of devices, from watches to huge TVs, and everything in between. We need to consider how things work across the board.
 
-Responsive design isn’t about 3 different sized containers according to device. It’s about fixing content where it breaks (if at all).
+Responsive design isn’t about 3 different sized containers according to device. It’s about [fixing content where it breaks](/articles/stop-using-device-breakpoints/) (if at all).
 
 
 ## 6. Browser capability
@@ -106,7 +106,7 @@ You can [break conventions](https://medium.com/@mibosc/responsive-design-why-and
 
 People don’t just consume content directly through websites. They use Safari’s reading mode or a feed reader. And they rely on how Google displays a search result.
 
-Therefore, we need to design experiences that are interoperable because this is how people use our products.
+Therefore, we need to design experiences that are interoperable because this is how people use our services.
 
 ## 11. Configuration
 
