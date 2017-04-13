@@ -13,12 +13,12 @@ permalink: /about/
 
 My name is Adam and my mission is to enhance people's lives, by designing and building delightful experiences on the web.
 
-I have been doing this since I can remember (15+ years) and in that time I have built countless large-scale websites for huge house-hold names such as Tesco, BBC, Argos, Boots, Just Eat, News Corp, Selfridges, Financial Times, T-Mobile and so many others.
+I have been doing this since I can remember (15+ years) and in that time I have built countless large-scale websites for huge house-hold names such as Tesco, BBC, Argos, Boots, Just Eat, News Corp, Selfridges, Financial Times, T-Mobile and many others.
 
-I love working in teams solving *real* problems in a simple and human way which always works out best for the user. I've learnt so much from "doing" and so much from other great people in the industry and ultimately, I get my kicks helping others avoid all my past mistakes.
+I believe design is a team sport. And I love working together to solve *real* problems, led by user needs. I've learnt from *doing* and from working with other great people in the industry. Ultimately, I get satisfaction helping others avoid all my past mistakes.
 
-I have also written a little book that seriously helps you build modular, scalable and maintainable websites called [MaintainableCSS](http://maintainablecss.com) which has had over 250,000 readers to date and has been translated to several other languages.
+I've also written a little book about maintainable CSS. Because I'm so creative I called it [MaintainableCSS](http://maintainablecss.com) :-).
 
-When I am not doing this stuff, you can find me running outside, playing sport and spending precious time with my beautiful wife and little boy.
+When I am not doing this stuff, you can find me running outside, playing tennis and spending time with my family.
 
 Have a question? [Get in touch](mailto:adam@adamsilver.io).
