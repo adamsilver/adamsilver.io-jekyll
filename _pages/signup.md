@@ -8,7 +8,7 @@ permalink: /signup/
 
 # Join my newsletter
 
-I write for [Smashing Magazine](https://www.smashingmagazine.com/2016/06/improving-ux-for-color-blind-users/) and the [Simple=Human](http://medium.com/simple-human) Medium publication which I setup with my friend [Mark Jenkins](http://theluckystrike.co.uk). Some of my articles have also been featured on the front-page of Hacker News.
+I write for [Smashing Magazine](https://www.smashingmagazine.com/author/adamsilver/), [Net Magazine](http://www.creativebloq.com/net-magazine), [MarvelApp](https://blog.marvelapp.com/author/adam-silver/) and  [Simple=Human](http://medium.com/simple-human). Some of my articles have  been featured on the front-page of Hacker News too.
 
 You can expect an email once-a-month ish. You'll get the best of what I've got before anyone else. You can unsubscribe at any time but don't do that. I have feelings you know :).
 
