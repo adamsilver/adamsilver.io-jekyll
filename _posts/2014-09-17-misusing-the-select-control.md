@@ -31,7 +31,7 @@ Sarah Miller's research found that dropdown lists without submit buttons were co
 
 ## 3. Users expect to use links for navigation
 
-Links are for navigation. Forms are for submitting data&mdash;in our case filtering a set of search results. We should use the right element. In doing so we conform to the third of Henny Swan's UX principles, *design with familiarity in mind*.
+Links are for navigation. Forms are for submitting data&mdash;in our case filtering a set of search results. We should use the right element. In doing so we conform to the third of Henny Swan's [UX principles](https://www.smashingmagazine.com/2015/02/bbc-iplayer-accessibility-case-study/#ux-principles), *design with familiarity in mind*.
 
 ## 4. Users expect selection and submission to be separate
 

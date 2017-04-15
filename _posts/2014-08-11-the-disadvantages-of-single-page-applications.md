@@ -93,7 +93,7 @@ Browsers show a loading indicator during page load. SPAs use AJAX to load pages 
 
 Also, the browser's indicator displays *progress*. That is, a user can tell how long until the request finishes. Javascript can only state that something is loading, not how long left there is. This leads users to request the link again.
 
-Furthermore, the user's browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use Javascript to do this, we break the third of Henny Swan’s UX principles, *design with familiarity in mind*.
+Furthermore, the user's browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use Javascript to do this, we break the third of Henny Swan’s [UX principles](https://www.smashingmagazine.com/2015/02/bbc-iplayer-accessibility-case-study/#ux-principles), *design with familiarity in mind*.
 
 ## 11. It's going to fail
 
