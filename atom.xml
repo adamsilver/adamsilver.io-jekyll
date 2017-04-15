@@ -3,7 +3,7 @@
 	<title>Adam Silver: Designing simple, human and inclusive websites.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-04-13T15:55:32+01:00</updated>
+	<updated>2017-04-15T17:31:54+01:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -3408,7 +3408,7 @@ Chrome (Windows), Opera (Windows), IE6, IE7, IE8 or IE9.&lt;/p&gt;
 
 &lt;h2 id=&quot;users-expect-to-use-links-for-navigation&quot;&gt;3. Users expect to use links for navigation&lt;/h2&gt;
 
-&lt;p&gt;Links are for navigation. Forms are for submitting data—in our case filtering a set of search results. We should use the right element. In doing so we conform to the third of Henny Swan’s UX principles, &lt;em&gt;design with familiarity in mind&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Links are for navigation. Forms are for submitting data—in our case filtering a set of search results. We should use the right element. In doing so we conform to the third of Henny Swan’s &lt;a href=&quot;https://www.smashingmagazine.com/2015/02/bbc-iplayer-accessibility-case-study/#ux-principles&quot;&gt;UX principles&lt;/a&gt;, &lt;em&gt;design with familiarity in mind&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;users-expect-selection-and-submission-to-be-separate&quot;&gt;4. Users expect selection and submission to be separate&lt;/h2&gt;
 
@@ -3626,7 +3626,7 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 
 &lt;p&gt;Also, the browser’s indicator displays &lt;em&gt;progress&lt;/em&gt;. That is, a user can tell how long until the request finishes. Javascript can only state that something is loading, not how long left there is. This leads users to request the link again.&lt;/p&gt;
 
-&lt;p&gt;Furthermore, the user’s browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use Javascript to do this, we break the third of Henny Swan’s UX principles, &lt;em&gt;design with familiarity in mind&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Furthermore, the user’s browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use Javascript to do this, we break the third of Henny Swan’s &lt;a href=&quot;https://www.smashingmagazine.com/2015/02/bbc-iplayer-accessibility-case-study/#ux-principles&quot;&gt;UX principles&lt;/a&gt;, &lt;em&gt;design with familiarity in mind&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;its-going-to-fail&quot;&gt;11. It’s going to fail&lt;/h2&gt;
 
