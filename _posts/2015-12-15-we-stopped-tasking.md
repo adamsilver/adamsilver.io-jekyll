@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Why we stopped tasking
+title:  We stopped tasking
 date:   2015-12-15 09:00:01
 categories: agile
 #image: tasks.jpg

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Why infinite scrolling is probably a bad idea
+title: Infinite scrolling is probably a bad idea
 date: 2015-11-24 09:00:01
 categories: ux design
 description: Infinite scrolling is a popular UI pattern but find out why it's probably a bad idea in this article.
