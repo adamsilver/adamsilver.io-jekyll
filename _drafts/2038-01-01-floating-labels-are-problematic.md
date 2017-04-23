@@ -5,7 +5,7 @@ date: 2038-01-01 09:00:01
 categories: js
 ---
 
-Whenever I tell people about the [problems with placeholders](/articles/placeholders-are-problematic/), they normally respond by telling me about the floating label pattern. We are often seduced by novel design patterns that save space. In this case, though, they come with many usability problems:
+After writing [Placeholders Are Problematic](/articles/placeholders-are-problematic/), some people suggested the floating label as a solution. We are often seduced by novel design patterns that save space. In this case, though, the floating label pattern has several problems:
 
 ## 1. There is no space for an actual hint
 
@@ -14,7 +14,7 @@ Not all fields require a hint, but for those that do, the floating label pattern
 <div class="image">
 	<figure>
 		<img src="{{ site.url }}/assets/img/floatinglabels/1-hint.png" alt="Alt" width="100%" style="max-width: 500px;">
-		<figcaption>Caption</figcaption>
+		<figcaption>No space for hint</figcaption>
 	</figure>
 </div>
 
@@ -25,7 +25,7 @@ A floating label is normally small. This is so that as it moves outside of the f
 <div class="image">
 	<figure>
 		<img src="{{ site.url }}/assets/img/floatinglabels/2-readability.png" alt="Alt" width="100%" style="max-width: 500px;">
-		<figcaption>Caption</figcaption>
+		<figcaption>Small text is hard to read</figcaption>
 	</figure>
 </div>
 
@@ -37,7 +37,7 @@ A floated label needs space to move into. This means that, if labels are a usabl
 <div class="image">
 	<figure>
 		<img src="{{ site.url }}/assets/img/floatinglabels/3-space.png" alt="Alt" width="100%" style="max-width: 500px;">
-		<figcaption>Caption</figcaption>
+		<figcaption>They need landing space</figcaption>
 	</figure>
 </div>
 
@@ -45,7 +45,7 @@ Alternatively, we could create space *as* the label moves into position. But thi
 
 ## 4. The animation is problematic
 
-Animation itself is quite often janky. That aside, some users may find it distracting and disorientating. This is particularly applicable to low confidence or visually-impaired users. For people who zoom in, the label may float off-screen causing the user to lose context.
+Exusing the fact that web animations are often janky, they could be distracting and disorientating for users. Particularly for low confidence or visually-impaired users. And when zooming in, the label may disappear off screen.
 
 ## 5. They have poor contrast and related issues
 
@@ -54,7 +54,7 @@ Like regular placeholder text, a floating label has low contrast to make it look
 <div class="image">
 	<figure>
 		<img src="{{ site.url }}/assets/img/floatinglabels/5-contrast.png" alt="Alt" width="100%" style="max-width: 500px;">
-		<figcaption>Caption</figcaption>
+		<figcaption>They have poor contrast</figcaption>
 	</figure>
 </div>
 
@@ -73,7 +73,7 @@ For example, when looking at a textbox the user has to look *inside* the control
 <div class="image">
 	<figure>
 		<img src="{{ site.url }}/assets/img/floatinglabels/7-consistency.png" alt="Alt" width="100%" style="max-width: 500px;">
-		<figcaption>Caption</figcaption>
+		<figcaption>Inconsistent description location</figcaption>
 	</figure>
 </div>
 
@@ -86,7 +86,7 @@ If the floating label is longer than the size of the field, it will get cut off.
 <div class="image">
 	<figure>
 		<img src="{{ site.url }}/assets/img/floatinglabels/8-cutoff.png" alt="Alt" width="100%" style="max-width: 500px;">
-		<figcaption>Caption</figcaption>
+		<figcaption>The label may get cut off</figcaption>
 	</figure>
 </div>
 
