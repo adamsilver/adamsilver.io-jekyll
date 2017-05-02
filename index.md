@@ -7,9 +7,9 @@ id: home
   	<img src="/assets/img/adam2.jpg" alt="" width="85" height="85">
 </div>
 
-# Hi, I'm Adam.
+# Hi, I'm Adam and I design simple, human and inclusive websites.
 
-I design and build [simple](/articles/embracing-simplicity/), human and [inclusive](/articles/designing-inclusively/) websites. I send an email once a month to my subscribers. It helps them avoid all the mistakes I've made in the past. Sound good? Sign up below:
+I send an email to my subscribers every month (or so) about all this. Normally I write about my past mistakes and how you can avoid them :). If that sounds good, sign up below. See you on the other side.
 
 {% include signUpForm.html %}
 
