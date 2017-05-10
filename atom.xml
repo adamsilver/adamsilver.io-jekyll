@@ -3,7 +3,7 @@
 	<title>Adam Silver: Designing simple, human and inclusive websites.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-05-02T18:10:48+01:00</updated>
+	<updated>2017-05-10T18:13:53+01:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -2125,26 +2125,23 @@ He talked to experts in other high-risk professions, such as aviation.
 			<link href="http://adamsilver.io/articles/the-design-challenge/"/>
 			<updated>2016-01-08T09:00:01+00:00</updated>
 			<id>http://adamsilver.io/articles/the-design-challenge</id>
-			<content type="html">&lt;p&gt;In &lt;a href=&quot;https://medium.com/intercom-inside/how-to-hire-designers-960663e3a3e6#.5het3jvgw&quot;&gt;How to hire designers&lt;/a&gt;, Paul Adams explains that there are four major design disciplines: outcome, system, interaction and visual.&lt;/p&gt;
+			<content type="html">&lt;p&gt;In &lt;a href=&quot;https://medium.com/intercom-inside/how-to-hire-designers-960663e3a3e6#.5het3jvgw&quot;&gt;How To Hire Designers&lt;/a&gt; Paul Adams the four main aspects of design: outcome, system, interaction and visual.&lt;/p&gt;
 
-&lt;p&gt;Whilst all four disciplines need our consideration, in my experience most designers get caught up on the visual side of design. And in doing so, the overall design is worse off.&lt;/p&gt;
+&lt;p&gt;We often spend too much time obsessing over the visual aspect. So much so that it becomes detrimental to the resulting experience.&lt;/p&gt;
 
-&lt;p&gt;Here are some examples that I’ve had to deal with over the years:&lt;/p&gt;
+&lt;p&gt;Here are some real examples:&lt;/p&gt;
 
-&lt;h2 id=&quot;buttons-and-links-should-look-the-same-minimalist-design-ftw&quot;&gt;1. “Buttons and links should look the same. Minimalist design FTW.”&lt;/h2&gt;
+&lt;h2 id=&quot;buttons-and-links-should-look-the-same&quot;&gt;1. “Buttons and links should look the same.”&lt;/h2&gt;
 
 &lt;p&gt;Clarity trumps minimalism every time. &lt;a href=&quot;/articles/buttons-shouldnt-have-a-hand-cursor&quot;&gt;Buttons and links are different&lt;/a&gt;. We should design to accomodate those differences. Not ignore them.&lt;/p&gt;
 
-&lt;h2 id=&quot;remove-the-outline-when-the-user-focuses-on-an-element-it-doesnt-look-nice-most-people-dont-use-their-keyboard-anyway-we-cant-legislate-for-all-users-be-realastic&quot;&gt;2. “Remove the outline when the user focuses on an element. It doesn’t look nice. Most people don’t use their keyboard anyway. We can’t legislate for all users. Be realastic.”&lt;/h2&gt;
+&lt;h2 id=&quot;remove-the-outline-when-the-user-focuses-on-an-element-it-doesnt-look-good-most-people-dont-use-their-keyboard-anyway-we-cant-legislate-for-all-users-be-realastic&quot;&gt;2. “Remove the outline when the user focuses on an element. It doesn’t look good. Most people don’t use their keyboard anyway. We can’t legislate for all users. Be realastic.”&lt;/h2&gt;
 
-&lt;p&gt;If you know there are people that use a keyboard then design for
-them. It’s not just about how something looks, it’s about how it works.&lt;/p&gt;
+&lt;p&gt;If we know there are people that use the keyboard then we should design for them. It’s not just about how something looks, it’s about how it works.&lt;/p&gt;
 
-&lt;h2 id=&quot;most-people-with-large-screens-use-a-mouse-therefore-we-dont-need-to-make-big-screens-touch-friendly&quot;&gt;3. “Most people with large screens use a mouse. Therefore we don’t need to make big screens touch-friendly.”&lt;/h2&gt;
+&lt;h2 id=&quot;most-people-with-large-screens-use-a-mouse-so-we-dont-need-to-make-it-touch-friendly&quot;&gt;3. “Most people with large screens use a mouse so we don’t need to make it touch friendly.”&lt;/h2&gt;
 
-&lt;p&gt;Designers often infer that a device is touch-enabled if the screen is small. This is wrong. Take a look a the Surface or iPad Pro.&lt;/p&gt;
-
-&lt;p&gt;If you design large targets, it helps people who use a mouse &lt;em&gt;and&lt;/em&gt; people who use their finger.&lt;/p&gt;
+&lt;p&gt;Maybe more people use a mouse. But some people have large touch-enabled screens. Why not design the hit area so it is good for everyone? Then if they use a mouse it’s easy, if they use touch it’s easy.&lt;/p&gt;
 
 &lt;h2 id=&quot;for-small-screens-lets-hide-the-arrow-buttons-on-the-carousel-small-screen-devices-allow-the-user-to-swipe&quot;&gt;4. “For small screens, let’s hide the arrow buttons on the carousel. Small screen devices allow the user to swipe.”&lt;/h2&gt;
 
@@ -2152,9 +2149,9 @@ them. It’s not just about how something looks, it’s about how it works.&lt;/
 
 &lt;h2 id=&quot;mobile-users-swipe-desktop-users-dont&quot;&gt;5. “Mobile users swipe, desktop users don’t”&lt;/h2&gt;
 
-&lt;p&gt;There’s no desktop, there’s no mobile. There are browsers of varying sizes and capabilities. There are people with different preferences and abilities. They need your help and consideration.&lt;/p&gt;
+&lt;p&gt;There is no desktop, there is no mobile. There are browsers of varying sizes and capabilities. There are people with different preferences and abilities. They need our help and consideration.&lt;/p&gt;
 
-&lt;h2 id=&quot;i-think-the-colour-contrasts-are-fine-they-work-great-on-most-new-devices-and-thats-our-target-audience&quot;&gt;6. “I think the colour contrasts are fine, they work great on most new devices and that’s our target audience”&lt;/h2&gt;
+&lt;h2 id=&quot;the-colour-contrasts-are-fine-they-work-great-on-most-new-devices-and-thats-our-target-audience&quot;&gt;6. “The colour contrasts are fine, they work great on most new devices and that’s our target audience”&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://backchannel.com/how-the-web-became-unreadable-a781ddc711b6#.c9zxfsiep&quot;&gt;You’re making the web unreadable&lt;/a&gt;. Your challenge is to use visually pleasing acceptable contrasts.&lt;/p&gt;
 
@@ -2162,11 +2159,11 @@ them. It’s not just about how something looks, it’s about how it works.&lt;/
 
 &lt;h2 id=&quot;a-select-box-without-a-label-is-fine-its-unnecessary-clutter&quot;&gt;7. “A select box without a label is fine, it’s unnecessary clutter.”&lt;/h2&gt;
 
-&lt;p&gt;Every &lt;a href=&quot;/articles/always-use-a-label/&quot;&gt;form field needs a label&lt;/a&gt;; there are good reasons why. Legislate for this and make the design look good as well.&lt;/p&gt;
+&lt;p&gt;Every &lt;a href=&quot;/articles/always-use-a-label/&quot;&gt;form field needs a label&lt;/a&gt;. There are good reasons why. Legislate for this and make the design look good as well.&lt;/p&gt;
 
-&lt;h2 id=&quot;most-users-are-on-a-fast-connection-its-important-that-we-have-10-high-quality-images-on-one-page&quot;&gt;8. “Most users are on a fast connection, it’s important that we have 10 high quality images on one page.”&lt;/h2&gt;
+&lt;h2 id=&quot;most-users-are-on-a-fast-connection-10-high-resolution-images-on-one-page-is-essential&quot;&gt;8. “Most users are on a fast connection, 10 high resolution images on one page is essential”&lt;/h2&gt;
 
-&lt;p&gt;People on low-speed connections don’t want to wait. Design with performance in-mind from the beginning. Trim the fat for everyone and everyone wins. Faster connections become super fast, slow connections become satisfactory.&lt;/p&gt;
+&lt;p&gt;People on low-speed connections don’t want to wait. Consider performance and how we can trim the fat for all. Faster connections become super fast, slow connections become satisfactory.&lt;/p&gt;
 
 &lt;h2 id=&quot;fix-it-with-javascript-we-dont-need-to-worry-about-the-1-of-users-without-it-its-important-that-the-design-looks-good-for-the-99&quot;&gt;9. “Fix it with Javascript. We don’t need to worry about the 1% of users without it. It’s important that the design looks good for the 99%.”&lt;/h2&gt;
 
@@ -2184,11 +2181,15 @@ Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a h
 
 &lt;h2 id=&quot;website-x-does-it-so-we-should-do-it&quot;&gt;12. “Website X does it, so we should do it.”&lt;/h2&gt;
 
-&lt;p&gt;Just because someone else does it, doesn’t mean it’s good. You’re probably testing the website in a cutting edge browser and you’re you. &lt;a href=&quot;http://uxmyths.com/post/715988395/myth-you-are-like-your-users&quot;&gt;You’re not your users&lt;/a&gt;. Take the opportunity to do it better. Test with users.&lt;/p&gt;
+&lt;p&gt;Sometimes website X does things, sometimes those things are ill-advised. Take this opportunity to do it better. You’re probably testing the website in a cutting edge browser and &lt;a href=&quot;http://uxmyths.com/post/715988395/myth-you-are-like-your-users&quot;&gt;you’re not your users&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;isnt-this-our-challenge&quot;&gt;Isn’t this our challenge?&lt;/h2&gt;
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
-&lt;p&gt;By default, anyone with a browser can use your website. That’s what makes the web so amazing. Our challenge is to design a website that doesn’t break the web. Understand the platform. Design for everyone. Isn’t that what our job is?&lt;/p&gt;
+&lt;p&gt;Isn’t this our challenge?&lt;/p&gt;
+
+&lt;p&gt;The web has been designed so that anyone with an Internet connection and a browser can access your content/application. That’s the essence of the web — that’s a huge part of the web’s success.&lt;/p&gt;
+
+&lt;p&gt;Design for everyone. Legislate for all kinds of devices, screen sizes, capabilities, people with different abilities and interaction preferences. Isn’t this the challenge we face as designers and engineers?&lt;/p&gt;
 </content>
 		</entry>
 	
