@@ -8,8 +8,13 @@ permalink: /signup/
 
 # Join my newsletter
 
-I write for [Smashing Magazine](https://www.smashingmagazine.com/author/adamsilver/), [Net Magazine](http://www.creativebloq.com/net-magazine), [MarvelApp](https://blog.marvelapp.com/author/adam-silver/) and  [Simple=Human](http://medium.com/simple-human). Some of my articles have  been featured on the front-page of Hacker News too.
+Some of my subscribers send me messages:
 
-You can expect an email once-a-month ish. You'll get the best of what I've got before anyone else. You can unsubscribe at any time but don't do that. I have feelings you know :).
+> “Your newsletter is one of the most interesting and on-point things I like to read these days”
+
+
+I sometimes write for [Smashing Magazine](https://www.smashingmagazine.com/author/adamsilver/), [Net Magazine](http://www.creativebloq.com/net-magazine), [MarvelApp](https://blog.marvelapp.com/author/adam-silver/) and  [Simple=Human](http://medium.com/simple-human) about designing simple, human and inclusive websites.
+
+But mostly I write one article a month and share it with my mailing list. If you want an example you should read [Stop Using Device Breakpoints](/articles/stop-using-device-breakpoints/).
 
 {% include signUpForm.html %}

@@ -7,11 +7,13 @@ id: home
   	<img src="/assets/img/adam2.jpg" alt="" width="85" height="85">
 </div>
 
-# Hi, I'm Adam and I design simple, human and inclusive websites.
+# I'm Adam Silver. I design simple, human and inclusive websites.
 
-I send an email to my subscribers every month (or so) about all this. Normally I write about my past mistakes and how you can avoid them :). If that sounds good, sign up below. See you on the other side.
+I write for [Smashing Magazine](https://www.smashingmagazine.com/author/adamsilver/), [Net Magazine](http://www.creativebloq.com/net-magazine), [MarvelApp](https://blog.marvelapp.com/author/adam-silver/) and  [Simple=Human](http://medium.com/simple-human). But I share my newest articles with my mailing list first. No spam and definitely no popups. Just one article a month, straight to your inbox. Sign up below:
 
 {% include signUpForm.html %}
+
+<!-- <br><br>
 
 ## What I can do for you
 
@@ -21,6 +23,6 @@ I send an email to my subscribers every month (or so) about all this. Normally I
 
 ## Say hello
 
-If you want to chat with me about any of this [send me a message](mailto:adam+hello@adamsilver.io).
+If you want to chat with me about any of this [send me a message](mailto:adam+hello@adamsilver.io). -->
 
 
