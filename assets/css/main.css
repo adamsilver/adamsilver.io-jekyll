@@ -165,10 +165,6 @@ hr {
 	font-family: 'Open sans';
 }
 
-.mainContent .article-heading {
-	margin-bottom: 0;
-}
-
 @media(min-width: 37.5em) {
 	.mainContent h1 {
 		font-size: 2.8em;
