@@ -5,11 +5,11 @@ date: 2038-01-01 09:00:01
 categories: js
 ---
 
-After writing [Placeholders Are Problematic](/articles/placeholders-are-problematic/), some people suggested the floating label as a solution. We are often seduced by novel design patterns that save space. In this case, though, the floating label pattern has several problems:
+When I wrote [Placeholders are Problematic](/articles/placeholders-are-problematic/) many people suggested the floating label pattern as a solution. We are often seduced by novel patterns that save space. The thing is, this pattern is problematic. Here's why:
 
 ## 1. There is no space for an actual hint
 
-Not all fields require a hint, but for those that do, the floating label pattern is unnecessarily constraining. The floating label begins its life inside the control leaving no space for an additional hint.
+Not all fields require a hint. For those that do, the floating label is unnecessarily constraining. The floating label starts inside the control leaving no space for an additional hint.
 
 <div class="image">
 	<figure>
@@ -32,7 +32,7 @@ A floating label is normally small. This is so that as it moves outside of the f
 
 ## 3. They need landing space to move into
 
-A floated label needs space to move into. This means that, if labels are a usable size (as per the previous point), there would be no saved space anyway&mdash;just more *white* space.
+A floating label needs space to move into. This means that, if labels are a usable size (see previous point), there would be no saved space anyway&mdash;just more *white* space.
 
 <div class="image">
 	<figure>
@@ -41,13 +41,13 @@ A floated label needs space to move into. This means that, if labels are a usabl
 	</figure>
 </div>
 
-Alternatively, we could create space *as* the label moves into position. But this causes the page to judder creating a disorientating experience as the user types the first character.
+Alternatively, we could create space *as* the label moves into position. But this causes the page to judder creating a disorientating experience as the user starts typing.
 
 ## 4. The animation is problematic
 
 Exusing the fact that web animations are often janky, they could be distracting and disorientating for users. Particularly for low confidence or visually-impaired users. And when zooming in, the label may disappear off screen.
 
-## 5. They have poor contrast and related issues
+## 5. They have poor contrast
 
 Like regular placeholder text, a floating label has low contrast to make it look different to a real value. Low contrast text is hard-to-read.
 
@@ -60,11 +60,11 @@ Like regular placeholder text, a floating label has low contrast to make it look
 
 And, as the label floats out of the field, it will need to change colour to make it look like a label. Otherwise the text could be "lost" against the background colour.
 
-## 6. It may be mistaken for a value
+## 6. They may be mistaken for a value
 
 People that don’t notice the subtle difference in contrast, may skip the field mistaking it for a value. When this happens, the user goes on to submit the form only to be shown an error&mdash;all of which is unnecessarily frustrating and time consuming.
 
-## 7. Inconsistent behaviour
+## 7. They are located inconsistently
 
 As radios, checkboxes and select boxes will have fixed labels (and legends) users will endure an inconsistent experience.
 
@@ -96,11 +96,11 @@ Putting aside for the moment that placeholders themselves are problematic. If yo
 
 ## 10. They require more work
 
-All of this to say that designing and building the floating label pattern is more work. More code brings more to maintain and more problems. All of which we've frustratingly introduced ourselves.
+All of this to say that designing and building the floating label pattern is more work. More code means more problems. All of which we've introduced ourselves.
 
 ## Summary
 
-A floating label won't delight users. At most they delight designers. But of course we design for users, not for ourselves. This pattern is a solution that is quite desperately looking for a problem.
+A floating label won't delight users. At most they delight designers. But we are not our users. This pattern is a solution that is desperately looking for a problem.
 
 We should design with familiarity and consistency in-mind whenever possible. Nobody wants to use the forms that we design&mdash;they are not a form of entertainment&mdash;users only desire the outcome.
 
