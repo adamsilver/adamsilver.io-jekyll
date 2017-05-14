@@ -688,6 +688,9 @@ hr {
 	line-height: 1.5;
 	margin-bottom: 5px;
 	display: block;
+	font-family: 'Open sans';
+	font-weight: bold;
+	color: #0074D9;
 }
 
 @media(min-width: 37.5em) {
@@ -702,19 +705,20 @@ hr {
 	font-size: 1em;
 	width: 100%;
 	padding: 10px;
-	margin-right: 5px;
 	margin-bottom: 15px;
 	box-sizing: border-box;
 	background-color: #fff;
-	border: 1px solid #333;
-	max-width: 18em;
+	border: 3px solid #0074D9;
 	display: inline-block;
+	vertical-align: top;
 }
 
-.signUpForm-email:focus,
-.signUpHero-email:focus {
-	outline: 3px solid #0074D9;
-	border: 1px solid #0074D9;
+@media(min-width: 37em) {
+	.signUpForm-email,
+	.signUpHero-email {
+		max-width: 21em;
+		border-right: 0px;
+	}
 }
 
 .signUpForm-button,
@@ -731,9 +735,19 @@ hr {
 	border-radius: 8px;
 	display: inline-block;
 	font-family: 'Open sans';
+	vertical-align: middle;
+}
+
+@media(min-width: 37em) {
+	.signUpForm-button,
+	.signUpHero-button {
+		display: inline-block;
+		border-radius: 0 8px 8px 0;
+	}
 }
 
 .signUpForm-button:hover,
 .signUpHero-button:hover {
 	background-color: #0267BF;
+	background-color: #0056a0;
 }
