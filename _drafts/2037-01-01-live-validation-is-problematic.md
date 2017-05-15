@@ -81,7 +81,7 @@ I would go as far to say that designing the *perfect* live validation experience
 
 There are easier and better ways to improve forms. We can shorten forms by removing superfluous fields. And we can split long forms up using the [One Thing Per Page]() design pattern.
 
-As long as we ensure our forms have sufficient labelling&mdash;and as long as we ensure errors are easy to fix (with clear messaging)&mdash;users will have little trouble. Validating `onsubmit` avoids many problems and keeps the experience consistent, familiar and friendly.
+As long as we ensure our forms have sufficient labelling&mdash;and as long as we ensure errors are easy to fix&mdash;users will have little trouble. Validating `onsubmit` avoids many problems and keeps the experience consistent, familiar and friendly.
 
 <!--
 E.g. blur tab error issue https://www.wayfair.co.uk/v/checkout/authentication/register
