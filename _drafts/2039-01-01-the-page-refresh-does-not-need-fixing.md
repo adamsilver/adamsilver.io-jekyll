@@ -5,35 +5,41 @@ date: 2039-01-01 09:00:01
 categories:
 ---
 
-Often, we cram too much into a single page. This causes the page to load slower. This leads to people blaming the page refresh for performance problems.
+Often, we cram too much into a single page making pages load slower. Then people start blaming the page refresh as the cause of all performance problems. Then they'll suggest AJAX is the solution.
 
-All to often they'll then suggest using AJAX.
+AJAX, however, we still need to render new (parts of) screens. More crucially we still have to make a request to the server. And, there are penalties in using AJAX.
 
-AJAX, however, still needs to render new (parts of) screens. More crucially, it still has to make a request to the server.
+First, we have to send more Javascript code to be able to make AJAX calls, handle responses, inject responses and manage errors. This is more stuff, and more stuff makes the page load slower.
 
-And that’s not all. There are penalties in using AJAX.
+Second, we've engineered away stuff that the browser does for free such as chunking and progressive rendering. To get this back we need hacks and yet more code.
 
-1. We have to send more code to the user to make an AJAX request and handle errors causing slow page-load times.
-2. As we have engineered away what the browser does for free with chunking and progressive rendering we have to hack and stuff.
-3. We need to implement a custom loading indicator, aka a spinner, which is problematic because it's not familiar or accurate.
+Third, we need to design and implement custom loading spinners which are problematic. They aren't accurate, unlike the browser’s native implementation.
 
-Loading indicators, by the way, are a problem because they aren’t accurate, unlike the browser’s native implementation. And they aren’t familiar to the user — that is, they are always custom to the site implementing them. But familiarity is a UX convention that we should only break if we really really have to.
+And they aren’t familiar to the user — that is, they are always custom to the site implementing them. But familiarity is a UX convention that we should only break if we really have to.
 
-This is not to say that AJAX is “bad”. AJAX is a useful enhancement in some situations as it avoids the need to request and reevaluating the same assets over and over.
+This is not to say that AJAX is *bad*. AJAX is a useful enhancement in some situations as it avoids the need to request and reevaluating the same assets over and over.
 
-However, it's not a solution to slow-loading pages. The real problem is that we've design a huge page that can never be fast.
-
-So how do we make pages fast?
+However, it's not a solution to slow-loading pages. The real problem is that we've design a huge page that can never be fast. So how do we make pages fast?
 
 ## 1. Write less damn code
 
-- tabs
-- grids
-- carousels
-- see heydon article
-- etc etc
+In Write Less Damn Code, Heydon Pickering shows how to write less damn code, by literally choosing *not* to implement certain features. As I was watching the video, I couldn't help but nod my head ferociously until I felt sick.
+
+In the video he says blah and blah. I would extend this to blah and blah.
+
+- tabs (just make things stack, less hide and show is good, scrolling easy, tap tappy not so much)
+- grids (who needs a grid) https://github.com/Heydon/fukol-grids
+- carousels (really?)
 
 ## 2. Chunk information across pages
+
+If you still need the feature then consider chunking up big tasks into smaller tasks. Form design has one thing per page as a design pattern. But we can extend this to other examples.
+
+Everytime I go onto a site with an image gallery, like Ebary, or Amazon, or Rightmove or Zoopla, or ASOS, I have to wait for images to load, the swiping is always a friggin pain and the page takes a long time to load.
+
+I've built these things many times myself. Designers hate the idea of splitting information across pages and as I said above, the page refresh scares the shit out of them.
+
+But actually, Yaron shows that even a page refresh to reveal a menu is no issue whatsoeevr. And it's a good way of designing an inclusive menu[^ heydowns menu component article].
 
 - one thing per page
 - image example
@@ -62,9 +68,9 @@ Got high Res images. Do u really need them? If so make sure u a) smush the shit 
 - Edge caching
 - Chunking (Jake)
 - [Prefetch](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf)
-- lower down the stack
+- lower down the stack quote
 - service workers?
-- http2?
+- http2 is faster
 - revving assets etc
 
 ## Summary

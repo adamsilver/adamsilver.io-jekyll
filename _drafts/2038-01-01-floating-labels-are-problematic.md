@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Floating labels are problematic
+title: Floating labels are a bad idea
 date: 2038-01-01 09:00:01
 categories: js
 ---
 
-After writing [Placeholders are Problematic](/articles/placeholders-are-problematic/) some suggested the floating label pattern. We are often seduced by novel patterns that save space. The thing is, this pattern is problematic. Here's why:
+After writing [Placeholders are Problematic](/articles/placeholders-are-problematic/) some suggested the floating label pattern. We are often seduced by novel patterns that save space but this pattern is a bad idea. Here's why:
 
 ## 1. There is no space for a hint
 
@@ -18,9 +18,9 @@ Floating labels start inside the text box leaving no space for an additional hin
 	</figure>
 </div>
 
-## 2. They are small and hard-to-read
+## 2. They are hard-to-read
 
-Floating labels typically have a small text, so that as it floats, it takes up a small amount of space. But small text is hard-to-read.
+Floating labels typically have small text, so that as it floats, it takes up a small amount of space. But small text is hard-to-read.
 
 <div class="image">
 	<figure>
@@ -41,7 +41,7 @@ Floating labels needs space to move into. If label text is friendly (see previou
 	</figure>
 </div>
 
-Alternatively, we could create space *as* the label moves into position. But this makes the page to judder, creating a disorientating experience as the user starts typing.
+Alternatively, we could create space *as* the label moves into position. But this makes the page judder, creating a disorientating experience as the user starts typing.
 
 ## 4. The animation is problematic
 
@@ -79,7 +79,7 @@ When looking at a text box, for example, the user has to look *inside* the contr
 
 ## 8. The label may get cropped
 
-If the floating label is longer than the size of the field, it will be cut off by the field. We should [design for content](/articles/stop-using-device-breakpoints/), we shouldn't shave our content to fit the design.
+If the floating label is longer than the size of the field, it will be cut off by the field. We should [design for content](/articles/stop-using-device-breakpoints/), we shouldn't make content fit the design.
 
 <div class="image">
 	<figure>
@@ -88,7 +88,7 @@ If the floating label is longer than the size of the field, it will be cut off b
 	</figure>
 </div>
 
-## 9. It's a misuse of the standards
+## 9. It ignores the standards
 
 We know placeholders are problematic anyway. However, if we're going to put text inside a text box, it should be a hint, not a label.
 

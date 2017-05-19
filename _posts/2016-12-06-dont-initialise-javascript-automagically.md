@@ -117,6 +117,10 @@ might then decide to use HTML fixtures. But they are slow and you’re no longer
 writing unit tests. You *could* mock the DOM but this is tedious and
 problematic. The less you store in HTML the easier it is to test.
 
+## 14. It exposes a security hole
+
+You can read about the [security hole here](https://githubengineering.com/githubs-csp-journey/#object-src).
+
 ## “But I don’t want to update Javascript every time I want a new instance?”
 
 I fail to see why updating Javascript is a problem. In fact, I would *expect*
