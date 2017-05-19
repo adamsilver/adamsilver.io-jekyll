@@ -117,69 +117,63 @@
 	  
 
 	  
-	    4 minute read
+	    3 minute read
 	  
 	</span>
 </div> -->
-	        <p>You may be trying to reduce page-load time by using <a href="https://developer.akamai.com/stuff/Caching/Content_Caching.html">content caching</a> to improve UX.</p>
+	        <p><a href="https://developer.akamai.com/stuff/Caching/Content_Caching.html">Content caching</a> is a useful technique to increase the loading speed of a page. If the page has personalised content this technique doesn’t work. This is is because one user may receive another user’s personalised content which is insecure and undesirable.</p>
 
-<p>If your page contains personalised content this technique doesn’t work. This is because one user may receive another user’s personalised content. This is obviously dangerous and no good.</p>
-
-<p>Next, somebody says we should use AJAX to pull in the personalised content. This is problematic for many reasons. Before discussing them, let’s first discuss exactly what personalised content is.</p>
+<p>The problem comes when someone suggests using AJAX to request the personalised content as a separate request. Before discussing the problem let’s define exactly what personalised content is.</p>
 
 <h2 id="what-is-personalised-content">What is personalised content?</h2>
 
 <p>Personalised content is content that is specific to a user. The most basic example would be a “Logout” link. This is because the page knows that <em>you</em> are logged in and that <em>you</em> may want to logout.</p>
 
-<p>Even though this is personal, this can be cached because you can group users into two buckets: logged out users and logged in users. So you can serve the correct cached page to each bucket.</p>
+<p>Even though this is personal it’s cacheable because we can have two groups of users: logged out and logged in users. In which case, we can serve the correct cached page to each group with a cookie check.</p>
 
-<p>Personalised content that can’t be cached is content that is unique to a specific user. For example, a users name or the contents of their shopping basket.</p>
+<p>Specific information, such as a user’s name, or the contents of their shopping basket can’t be cached.</p>
 
-<p>Okay, so now we’ve cleared that up. What’s the problem with using AJAX to load in personalised content?</p>
+<p>Now that’s clear, we can discuss the issues with using AJAX to request personalised content:</p>
 
 <h2 id="the-architecture-becomes-complex">1. The architecture becomes complex</h2>
 
-<p>What seems like a simple use of AJAX has a significant effect on architecture.</p>
+<p>Using AJAX has a significant impact on architecture.</p>
 
 <ul>
   <li>Is there one extra request for personalised content or multiple?</li>
-  <li>Do you serve it as JSON and then parse that on the client?</li>
-  <li>How do you organise your scripts for this?</li>
-  <li>How do you organise the view partials for this on the server?</li>
-  <li>At what point is personalised content not essential to the UX and how does that affect architecture?</li>
+  <li>Do we serve it as JSON and then parse that on the client?</li>
+  <li>How do we organise and initialise scripts?</li>
+  <li>How do we organise partials?</li>
+  <li>At what point is personalised content not essential to the experience?</li>
 </ul>
 
 <h2 id="some-people-will-have-a-broken-experience">2. Some people will have a broken experience</h2>
 
-<p>If the user doesn’t have Javascript (and there are <a href="http://kryogenix.org/code/browser/everyonehasjs.html">many reasons why they won’t</a>), then they’ll get an incomplete and broken web page. Not being able to logout, or not being able to see their basket equates to a broken experience.</p>
+<p>If the user doesn’t have Javascript (and there are <a href="http://kryogenix.org/code/browser/everyonehasjs.html">many reasons why they won’t</a>), they’ll get an incomplete or broken page. Not being able to logout, or not being able to see their basket is an example.</p>
 
 <p>This goes against Progressive Enhancement which in-turn goes against the spirit of the web. We shouldn’t unnecessarily exclude people.</p>
 
 <h2 id="replacing-browser-behaviour-degrades-the-experience">3. Replacing browser behaviour degrades the experience</h2>
 
-<p>When we use AJAX to load in content, we stop using the inherent functionality browsers provide for free. This functionality is an intuitive aspect of the browsing experience.</p>
+<p>Using AJAX to load content stops us using the inherent functionality browsers provide for free. This functionality is an intuitive aspect of the browsing experience.</p>
 
 <p>This includes displaying a loading indicator that accurately indicates the progress of the request. It also includes handling response and timeout errors.</p>
 
-<p>Using AJAX and content-caching like this, means at first the page is only half rendered. Then, sometime later, the personalised content is injected into the page. This will be at least a little bit jarring as the page fills in the gaps.</p>
+<p>Using AJAX and content-caching like this, means at first the page is only half rendered. Then, sometime later, the personalised content is injected into the page. This is, at least a little jarring as the page fills in the gaps.</p>
 
-<p>You’ll need to implement loading spinners, and hide content, and show the content perhaps with a transition. These things are rarely smooth and they differ from site to site. All of which does not help the user.</p>
+<p>We’ll need to implement loading spinners, and hide content, and show the content perhaps with a transition. These things are often janky and they differ from site to site making for a low quality experience.</p>
 
-<p>Sometimes the second request might finish after the user has scrolled down the page and started interacting. This means the user may not notice this new personalised content.</p>
+<p>Moreover, the request may finish after scrolling down the page. This means the user may not notice this new personalised content and the page may jump unexpectedly.</p>
 
 <h2 id="extra-work-is-needed">4. Extra work is needed</h2>
 
-<p>First, a designed needs to provide a loading indicator. Then they might need to design transitions.</p>
-
-<p>Second, developers will need to implement this functionality and ensure this content is accessible to screen readers.</p>
-
-<p>Third testers will need to test all this and using AJAX makes functional tests harder to write.</p>
+<p>First, a designer needs to design a loading spinner and transitions. Second, developers need to implement this functionality in good order for browsers and assistive technology. Third, testers will need to test and AJAX makes functional tests harder to write.</p>
 
 <h2 id="performance-actually-degrades">5. Performance actually degrades</h2>
 
-<p>Instead of a single HTTP request that contains the whole response there will now be multiple. The first would be for the Document containing non-personalised content. The subsequent request will be via AJAX and <em>will</em> hit your web server, therefore subject to the same latency as always.</p>
+<p>Instead of a single HTTP request containing the whole response, there will now be multiple. The first would be for the Document containing non-personalised content. The next request(s) will be via AJAX and <em>will</em> hit the web server, therefore subject to the same latency as always.</p>
 
-<p>And any performance increase is negated by the extra JS and CSS which needs to download and execute (reflows and repaints) in the browser. This includes:</p>
+<p>And any performance increase is negated by the extra JS and CSS which needs to download and execute, including reflows and repaints in the browser. This includes:</p>
 
 <ul>
   <li>making a JSON request;</li>
@@ -195,9 +189,9 @@
 
 <p>Content-caching <em>is</em> a very useful technique when used responsibly and for pages that don’t contain personalised content. For pages that <em>do</em> contain personalised content, a <a href="https://blogs.akamai.com/2014/05/and-you-thought-your-page-could-not-be-cached.html">cookie check can determine whether the cached version should be served or not</a>.</p>
 
-<p>It is ill-advised to misuse Javascript in this way as there are several negative side effects in doing so. AJAX should not break the web, it should enhance the experience where necessary.</p>
+<p>Enhancements should not break the web, and make the experience worse. It should enhance the experience where it is valuable to do so.</p>
 
-<p>AJAX seems like an innocent and beneficial solution, but in reality it encourages bad practice that creates several self-induced problems for users and the development team.</p>
+<p>AJAX seems like an innocent and beneficial solution, but it encourages bad practice that creates several self-induced problems for users and the development team.</p>
 
 <!--
 
