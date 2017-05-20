@@ -37,9 +37,9 @@ What these design patterns have in common is that they hide stuff. Designers are
 
 If a page only contains the essential, then there is nothing we need to bother hide. Designing fully responsive and inclusive components like these take much effort, much testing and send a whole load of code to the user that they rarely appreciate.
 
-Don't bother.
+They rarely appreciate because all this shit makes the page load slow, and hides stuff they want to see. Don't bother.
 
-Heydon Pickering describes this approach as Unprogressive Non-enhancement. This is how he describes the term:
+Heydon Pickering coined Unprogressive Non-enhancement as an design approach. This is how he expains it:
 
 > You take some structured content, which follows the vertical flow of the document in a way that everyone understands.
 
@@ -47,23 +47,35 @@ Heydon Pickering describes this approach as Unprogressive Non-enhancement. This 
 
 > Or if they're using a touch device, simply flicking backwards and forwards in that easy way that we've all become used to. What you do is you take that, and you fucking well leave it alone.
 
-It's not just about letting things stack but it's about using pages as a form of progressive disclosure. There is a dedicated pattern called One Thing Per Page which works superbly well for forms, but there is no reason not to extend this to other types of chunking.
+Letting things stack naturally like this is an excellent first move. Not only does it embrace the workings of a web page, and not only does it expose the content that users are looking for, but it's also extremely performant.
 
-For tabs, instead of stacking, just have a page refresh that goes to a dedicated page.
+But this is not just about letting things stack. It's about chunking stuff across multiple pages. You see once pages have little on them, the page refresh issue disappears. Pages become fast by default.
 
-For an image gallery, just show one high quality to keep the inital page loading fast and offer a "view all" dedicated page. In fact this is always a better experience for sites that offer it, such as RightMove.co.uk.
+With regards to long complex forms (or even shortish ones for that matter) there is a design pattern called One Thing Per Page. I've spoken and written about this before.
 
-You could even [put the menu to a dedicated page](http://yaronschoen.com/table-of-contents/) if you felt brave, which is exactly what Yaron does on his site.
+In fact, I talk about it so much at work, that I'm even starting to do my own head in with it. I dread to ask my colleagues what they think of my repetitive verbal abuse.
 
-Modal windows are a prime example, of putting too much on a single page. Normally the stuff shoved inside one, takes up the whole screen, particualrly on mobile. Just put it on a separate page.
+But I go on about it for good reason. If you're not aware of it, go have a read. It's worth it. I'll still be here, when you come back.
 
-When pages are light and well built, the page refresh problem is simply not a problem and not something users will notice or care about.
+But this pattern shouldn't be reserved for forms. We can use it for other types of interface and just regular content.
 
-Then these other features that you should just not use: scroll jacking, floating labels or adding stuff a browser does for free such as text resizing and complex grid layouts.
+For example, let's say you have a product page. It contains 25 high resolution images, a description, an add to basket form, extra details, dimensions, shipping information, related products, ratings, comments, and reviews or what have you.
 
-I could go on forever, but I'm forcing myself to stop.
+Typically, the 25 high resolution images are collapsed down into a Carousel. I know, I just mentioned carousels again. But why not just load up one high resolution image, and include a *show all* link. Clicking it will show a simple page with 25 high resolution images.
 
-TODO: And it's a good way of designing an inclusive menu[^ heydowns menu component article].
+The beauty here is that it keeps the product page fast. It also speeds up the image page as it only contains images. This is good because the user asked to see them all. The user will expect it to take a longer time. But also, it gives users choice, another quality of well-designed experiences.
+
+Users visit the product page for many different reasons. Perhaps to check washing information, or to check the price, or perhaps on this occasion they want to scroll through each and every high resolution image.
+
+Splitting the page up also gives users the ability to choose. Another quality that crops up often in well-designed interfaces. People on data contracts get to choose if they want to see those images, or wait for another time when they are connected to WIFI.
+
+The same goes for tabs. Do you really need the stuff inside the tabs, if it's hidden. If not, get rid. If it's a little bit of information, just stack it. If not link out to separate pages again.
+
+If you're brave, like Yaron, you might put the navigation menu on a page of it's own. Heydon also mentions is a useful accessible pattern in Menu Buttons[^].
+
+And modal windows. The amount of times I see the model take up the entire screen, particularly on mobile. Just put it on a separate page. No need for extra code and complexity. Keep things fast, keep things simple.
+
+This is just the beginning. Scrolling jacking—good bye. Floating labels—be gone. Resize widgets—browsers do that.
 
 ## 2. Code
 
