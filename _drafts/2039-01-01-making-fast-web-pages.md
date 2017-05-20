@@ -7,69 +7,67 @@ categories: ux performance
 
 This is how it goes. We cram a load of shit onto a single web page. This makes the page slow. Slow to load, slow to render. Slow.
 
-Instead of getting rid of the shit, people blame the page refresh for causing all these problems. Typically, they'll suggest loading stuff up later (after page load) with AJAX.
+Instead of getting rid of the shit, we blame the page refresh. There's only one way to avoid the page refresh and that's AJAX.
 
-AJAX, however, still needs to render new (parts of) screens. More crucially it still has to make a request to the server. That's not all&mdash;there are penalties in using AJAX.
+However, AJAX still needs to render new (parts of) screens. More crucially it still has to make a request to the server. That's not all&mdash;there are penalties in using AJAX.
 
-First, we have to send more code to the client. We need to make requests, handle responses, traverse the Document, build and inject HTML, and manage errors when stuff goes wrong.
+First, in order to: make requests, handle different responses, traverse the Document and inject HTML requires more code which needs to be sent, evaluated and executed on the client.
 
-Second, using AJAX means engineering away stuff the browser does for free, such as chunking/progressive rendering. To get this back we need hacks and even more code. More on progressive rendering later.
+Second, we end up engineering away things the browser does for free, such as chunking/progressive rendering (more on this later). To keep this benefit we must resort to hacks that need even more code.
 
-Third, we need to design and implement custom loading spinners which is yet more work but more importantly, they aren't accurate, unlike the browser’s native implementation.
+Third, we need to design and build our own loading spinner. Not only is this more work and code but they are a poor replacement for the ones provided by the browser.
 
-They aren’t familiar to the user either&mdash;they are always custom to the website. But familiarity is a UX convention that we should only break if we really have to.
+This is because they display progress leading to the dreaded infinite spinner. And they're also unfamiliar. Browser loading indicators appear in the same spot on every website they visit. Familiarity and accuracy are two qualities often found in a well-designed interface.
 
-This is not to say that AJAX is *bad*. AJAX is a useful enhancement depending on the occasion as it avoids the need to request and reevaluate the same assets repetitively.
+This is not to say that AJAX is *bad*. AJAX is a useful enhancement depending on the situation because it avoids repetitively requesting and re-evaluating client-side assets.
 
-However, it's not a solution to slow-loading pages. The real problem is that we've design a huge page that can never be fast. So how can we make pages fast?
+With that said, it's not a solution to slow-loading pages. At most it patches over the real problems that lie beneath.
 
-## 1. Less UI
+The real problem is that we have designed something that can never be fast. The real question is how do we make sure our websites are fast?
 
-The fastest way to make web pages fast is to literally not add shit onto the page. Obvious. And yet, go and browser the Internet to see what I mean.
+## 1. UI
 
-Back? Good. Let's continue.
+The best way to make fast pages is to have less on it. It's so obvious and yet we keep piling on the pounds. Go and browse the Internet and you'll see what I mean.
 
-Tabs. Instead split onto two separate pages or let the content stack beneath each other. Scrolling is easier than tapping. Anything more than two tabs works shitty on small screens anyway. If tabs are split across pages then easier to bookmark and keeps both pages smaller. Get rid.
+Do we really need hero images, background videos and social media buttons plastered everywhere or modal dialogs? The answer from the people is resounding *no*. The fastest feature is the one you never built.
 
-Carousels. Should I use a carousel. Again, no. Making carousels responsive, touch friendly and fully accessible is hard work and a lot of code. Nobody wants to use your carousel anyway. Kill it.
+That's the obvious stuff out of the way, but what about the way we design interfaces: hamburger menus, tabs, carousels, accordions, image galleries and expanding panels.
 
-If you have a carousel of images, like a typically ecommerce site or property site. Just show one decent quality image, and allow the user to view more on another page. Another page means link friendly, share friendly, and fast. It also means the user has chosen to look at images, meaning they'll expect a longer loading time.
+What these design patterns have in common is that they hide stuff. Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity.
 
-So much better than waiting for the carousel to automatically move, or to work out that the little fucking dots are or aren't tapable. Or to hope that a swipe gesture is actually going to do something.
+If a page only contains the essential, then there is nothing we need to bother hide. Designing fully responsive and inclusive components like these take much effort, much testing and send a whole load of code to the user that they rarely appreciate.
 
-Carousels, tabs, accordions and expanding panels all have the same thing in common. They hide shit from the user.
+Don't bother.
 
-Heydon Pickering has coined a term called Unprogressive Non-enhancement. He explains:
+Heydon Pickering describes this approach as Unprogressive Non-enhancement. This is how he describes the term:
 
 > You take some structured content, which follows the vertical flow of the document in a way that everyone understands.
 
->Which people traverse easily by either dragging their scroll bar with their mouse, or operating the keyboard using the up and down keys, or using the spacebar.
+> Which people traverse easily by either dragging their scroll bar with their mouse, or operating the keyboard using the up and down keys, or using the spacebar.
 
 > Or if they're using a touch device, simply flicking backwards and forwards in that easy way that we've all become used to. What you do is you take that, and you fucking well leave it alone.
 
-Here's a few more.
+It's not just about letting things stack but it's about using pages as a form of progressive disclosure. There is a dedicated pattern called One Thing Per Page which works superbly well for forms, but there is no reason not to extend this to other types of chunking.
 
-Scroll jacking. This makes your page feel completely broken.
+For tabs, instead of stacking, just have a page refresh that goes to a dedicated page.
 
-Background video. Nobody gives a shit. Get rid.
+For an image gallery, just show one high quality to keep the inital page loading fast and offer a "view all" dedicated page. In fact this is always a better experience for sites that offer it, such as RightMove.co.uk.
 
-Social media buttons. Leave it out.
+You could even [put the menu to a dedicated page](http://yaronschoen.com/table-of-contents/) if you felt brave, which is exactly what Yaron does on his site.
 
-Modal windows. Fuck. Off.
+Modal windows are a prime example, of putting too much on a single page. Normally the stuff shoved inside one, takes up the whole screen, particualrly on mobile. Just put it on a separate page.
 
-Floating labels: nobody wants to use the forms you've built.
+When pages are light and well built, the page refresh problem is simply not a problem and not something users will notice or care about.
 
-How about reimplemeting stuff the browser does such as a text resizer. CMD+ does it. etc. Also just make sure the text is a decent size. Too many sites don't do this. Build something better, need less configuraiton.
+Then these other features that you should just not use: scroll jacking, floating labels or adding stuff a browser does for free such as text resizing and complex grid layouts.
 
-Don't offer grid view list view. Test properly and do one properly if at all possible. Less UI again.
+I could go on forever, but I'm forcing myself to stop.
 
-And on and on and on.
+TODO: And it's a good way of designing an inclusive menu[^ heydowns menu component article].
 
-## 2. Less code
+## 2. Code
 
-If you've followed rule number 1, you'll already be producing better experiences, and writing far less code.
-
-But we can write less code more literally speaking.
+Number 1 is the most important, because not doing something requires not even writing code but there are things around the code itself.
 
 - grids (who needs a grid) https://github.com/Heydon/fukol-grids. Better if you don't have things in grids. Not talking visual grids. Talking about multiple columns. The code for a grid if you need for a product list is tiny.
 
@@ -79,19 +77,9 @@ But we can write less code more literally speaking.
 
 - break points. If you don't use device breakpoints, then you'll only add break points when the content breaks. That's less code.
 
-## 3. Chunk information across pages
+## 3. Architecture
 
-If you still need the feature then consider chunking up big tasks into smaller tasks. Form design has one thing per page as a design pattern. But we can extend this to other examples.
-
-Everytime I go onto a site with an image gallery, like Ebary, or Amazon, or Rightmove or Zoopla, or ASOS, I have to wait for images to load, the swiping is always a friggin pain and the page takes a long time to load.
-
-I've built these things many times myself. Designers hate the idea of splitting information across pages and as I said above, the page refresh scares the shit out of them.
-
-But actually, Yaron shows that even a page refresh to reveal a menu is no issue whatsoeevr. And it's a good way of designing an inclusive menu[^ heydowns menu component article].
-
-- one thing per page
-- image example
-- nav example (http://yaronschoen.com/table-of-contents/)
+---
 
 ## 4. Images
 
@@ -170,4 +158,8 @@ It's why people ignore banner ads and second and third columns. More on that lat
 It's not just the *amount* of things, but its the things themselves. Quite often it's form over function. More literally speaking, we're prone to dumping several high resolution images on a single page.
 
 Sometimes we even go one step further and put background videos on the screen; to make an impact; to be different; to separate us from the competition. These sorts of things are not the mark of a positive user experience.
+
+---
+
+If you have a carousel of images, like a typically ecommerce site or property site. Just show one decent quality image, and allow the user to view more on another page. Another page means link friendly, share friendly, and fast. It also means the user has chosen to look at images, meaning they'll expect a longer loading time.
 
