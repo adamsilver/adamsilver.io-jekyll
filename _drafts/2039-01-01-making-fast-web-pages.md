@@ -1,37 +1,85 @@
 ---
 layout: post
-title: Making web pages fast
+title: Making websites fast
 date: 2039-01-01 09:00:01
-categories:
+categories: ux performance
 ---
 
-Often, we cram too much into a single page making pages load slower. Then people start blaming the page refresh as the cause of all performance problems. Then they'll suggest AJAX is the solution.
+This is how it goes. We cram a load of shit onto a single web page. This makes the page slow. Slow to load, slow to render. Slow.
 
-AJAX, however, we still need to render new (parts of) screens. More crucially we still have to make a request to the server. And, there are penalties in using AJAX.
+Instead of getting rid of the shit, people blame the page refresh for causing all these problems. Typically, they'll suggest loading stuff up later (after page load) with AJAX.
 
-First, we have to send more Javascript code to be able to make AJAX calls, handle responses, inject responses and manage errors. This is more stuff, and more stuff makes the page load slower.
+AJAX, however, still needs to render new (parts of) screens. More crucially it still has to make a request to the server. That's not all&mdash;there are penalties in using AJAX.
 
-Second, we've engineered away stuff that the browser does for free such as chunking and progressive rendering. To get this back we need hacks and yet more code.
+First, we have to send more code to the client. We need to make requests, handle responses, traverse the Document, build and inject HTML, and manage errors when stuff goes wrong.
 
-Third, we need to design and implement custom loading spinners which are problematic. They aren't accurate, unlike the browser’s native implementation.
+Second, using AJAX means engineering away stuff the browser does for free, such as chunking/progressive rendering. To get this back we need hacks and even more code. More on progressive rendering later.
 
-And they aren’t familiar to the user — that is, they are always custom to the site implementing them. But familiarity is a UX convention that we should only break if we really have to.
+Third, we need to design and implement custom loading spinners which is yet more work but more importantly, they aren't accurate, unlike the browser’s native implementation.
 
-This is not to say that AJAX is *bad*. AJAX is a useful enhancement in some situations as it avoids the need to request and reevaluating the same assets over and over.
+They aren’t familiar to the user either&mdash;they are always custom to the website. But familiarity is a UX convention that we should only break if we really have to.
 
-However, it's not a solution to slow-loading pages. The real problem is that we've design a huge page that can never be fast. So how do we make pages fast?
+This is not to say that AJAX is *bad*. AJAX is a useful enhancement depending on the occasion as it avoids the need to request and reevaluate the same assets repetitively.
 
-## 1. Write less damn code
+However, it's not a solution to slow-loading pages. The real problem is that we've design a huge page that can never be fast. So how can we make pages fast?
 
-In Write Less Damn Code, Heydon Pickering shows how to write less damn code, by literally choosing *not* to implement certain features. As I was watching the video, I couldn't help but nod my head ferociously until I felt sick.
+## 1. Less UI
 
-In the video he says blah and blah. I would extend this to blah and blah.
+The fastest way to make web pages fast is to literally not add shit onto the page. Obvious. And yet, go and browser the Internet to see what I mean.
 
-- tabs (just make things stack, less hide and show is good, scrolling easy, tap tappy not so much)
-- grids (who needs a grid) https://github.com/Heydon/fukol-grids
-- carousels (really?)
+Back? Good. Let's continue.
 
-## 2. Chunk information across pages
+Tabs. Instead split onto two separate pages or let the content stack beneath each other. Scrolling is easier than tapping. Anything more than two tabs works shitty on small screens anyway. If tabs are split across pages then easier to bookmark and keeps both pages smaller. Get rid.
+
+Carousels. Should I use a carousel. Again, no. Making carousels responsive, touch friendly and fully accessible is hard work and a lot of code. Nobody wants to use your carousel anyway. Kill it.
+
+If you have a carousel of images, like a typically ecommerce site or property site. Just show one decent quality image, and allow the user to view more on another page. Another page means link friendly, share friendly, and fast. It also means the user has chosen to look at images, meaning they'll expect a longer loading time.
+
+So much better than waiting for the carousel to automatically move, or to work out that the little fucking dots are or aren't tapable. Or to hope that a swipe gesture is actually going to do something.
+
+Carousels, tabs, accordions and expanding panels all have the same thing in common. They hide shit from the user.
+
+Heydon Pickering has coined a term called Unprogressive Non-enhancement. He explains:
+
+> You take some structured content, which follows the vertical flow of the document in a way that everyone understands.
+
+>Which people traverse easily by either dragging their scroll bar with their mouse, or operating the keyboard using the up and down keys, or using the spacebar.
+
+> Or if they're using a touch device, simply flicking backwards and forwards in that easy way that we've all become used to. What you do is you take that, and you fucking well leave it alone.
+
+Here's a few more.
+
+Scroll jacking. This makes your page feel completely broken.
+
+Background video. Nobody gives a shit. Get rid.
+
+Social media buttons. Leave it out.
+
+Modal windows. Fuck. Off.
+
+Floating labels: nobody wants to use the forms you've built.
+
+How about reimplemeting stuff the browser does such as a text resizer. CMD+ does it. etc. Also just make sure the text is a decent size. Too many sites don't do this. Build something better, need less configuraiton.
+
+Don't offer grid view list view. Test properly and do one properly if at all possible. Less UI again.
+
+And on and on and on.
+
+## 2. Less code
+
+If you've followed rule number 1, you'll already be producing better experiences, and writing far less code.
+
+But we can write less code more literally speaking.
+
+- grids (who needs a grid) https://github.com/Heydon/fukol-grids. Better if you don't have things in grids. Not talking visual grids. Talking about multiple columns. The code for a grid if you need for a product list is tiny.
+
+- social media scripts. Heydon shows that the code should be a few bytes, but the Twitter embed script is 50k. Just because you didn't write it, doesn't mean it's not your fault.
+
+- Using aria instead of using the right element. Use a heading for a heading, and a button for a button etc.
+
+- break points. If you don't use device breakpoints, then you'll only add break points when the content breaks. That's less code.
+
+## 3. Chunk information across pages
 
 If you still need the feature then consider chunking up big tasks into smaller tasks. Form design has one thing per page as a design pattern. But we can extend this to other examples.
 
@@ -73,17 +121,29 @@ Got high Res images. Do u really need them? If so make sure u a) smush the shit 
 - http2 is faster
 - revving assets etc
 
+- abstract all the common parts. In conjunction with previous point, put button in to a module of its own. Same class used everywhere. Good for gzip and CSS stays the same size. The module is reused.
+
+## What about *perceived* performance?
+
+And that’s not all. Unlike aiming for ‘perceived’ performance gains — where you still send the same quantity of code but you chew it up first (ed: seriously) — you can actually make your Web Stuff cheaper to use. My data contract doesn’t care whether you send small chunks or one large chunk; it all adds up the same.
+
+My favorite thing about aiming to have less stuff is this: you finish up with only the stuff you really need — only the stuff your user actually wants.
+
 ## Summary
 
-TODO
+- TODO
+
+Less weight, less complexity, less distraction, less bother, less bullshit.
+
+---
+
+youmightnotneedjs.com
 
 ## Other bits
 
 It's like when someone tidys there house and puts shit in cupboards but the shit is all still there. They haven't decluttered. They have organised. But for pages to be fast they need to be decluttered.
 
 If something can be done lower down the stack it should. We control the speed of our servers. Not the speed of peoples devices and connections.
-
-One thing per page branching bit with two drop downs. People expect a page to LOAD. But not for a second drop down to load after selecting an item in the first.
 
 My site. Experience at DT making an app.
 
@@ -92,8 +152,6 @@ Tesco list page.
 http://openmymind.net/2012/5/30/Client-Side-vs-Server-Side-Rendering/
 
 https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf
-
-Ask Raj about perf.
 
 Tabs: penalty - load up all the stuff that goes into each tab. Need script to run and enhance. Instead, just make it look like a tab or make it a link. Perhaps.
 
@@ -129,16 +187,3 @@ More interestingly though is *why* do we do this. As I have an unhealthy obsessi
 Whatever the reason, we end up having to come up with clever ways to make slow pages faster. It's like eating donuts ever day, putting on five stone in weight, and then coming up with innovative ways to make a fat man run fast. I'm thinking rocket boots, do you have any better ideas?
 
 *Innovation* by the way is a dirty word. Most often, it's seen as a license to spend a lot of time solving problems that are typically introduced by the same person trying to solve them.
-
-Ultimately, somebody announces *the page refresh is the problem*. To get rid of the page refresh we can put everything on a single page and use AJAX. But this is rather obviously not solving the actual problem. AJAX doesn't avert the server-side round trip. It just avoids the page refresh.
-
-Even with AJAX, the page still needs to repaint. It still has to make requests to the server. That's not all. There are penalties in using AJAX. We need to send more code to the user to do this fancy stuff and we need to write more code to handle errors and to show a custom loading indicator.
-
-Loading indicators, by the way, are a problem because they aren't accurate, like the browser's native implementation. And they aren't familiar to the user&mdash;that is, they are always custom to the site implementing them. But familiarity is a UX convention that we should only break if we really really have to.
-
-It's clear that in many ways by trying to improve the experience we've created a poorer one. The problem isn't that the page is slow, the real problem is designing a page that cannot be fast.
-
-Notes:
-
-- keep design simple
-- abstract all the common parts. In conjunction with previous point, put button in to a module of its own. Same class used everywhere. Good for gzip and CSS stays the same size. The module is reused.
