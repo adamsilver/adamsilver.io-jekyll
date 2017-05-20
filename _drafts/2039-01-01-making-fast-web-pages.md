@@ -75,21 +75,52 @@ If you're brave, like Yaron, you might put the navigation menu on a page of it's
 
 And modal windows. The amount of times I see the model take up the entire screen, particularly on mobile. Just put it on a separate page. No need for extra code and complexity. Keep things fast, keep things simple.
 
-This is just the beginning. Scrolling jacking—good bye. Floating labels—be gone. Resize widgets—browsers do that.
+This is a great start. But feel free to carry on. Scroll jacking: see ya. Floating labels: goodbye. Resize widgets: browsers have those&mdash;it's called <kbd>CMD+</kbd>. 29 different custom fonts: kill.
+
+TODO: tesco product list, lots of ajax calls versus form multi checkbox and a single submit.
+
+TODO: columns
 
 ## 2. Code
 
-Number 1 is the most important, because not doing something requires not even writing code but there are things around the code itself.
+We've made excellent progress so far. And by removing or simplifying features we've drastically reduced the code already. But we can do more.
+
+As Heydon explains in the same talk, Twitter's share script weighs in at 50k. But we only need a few bytes of HTML:
+
+	<a href="https://twitter.com/share?source=tweetbutton&text=&quot;Article title&quot;&via=adambsilver&url=http://adamsilver.io/">Tweet</a>
+
+I even took Heydon's advice and got rid of the share links altogether.
 
 - grids (who needs a grid) https://github.com/Heydon/fukol-grids. Better if you don't have things in grids. Not talking visual grids. Talking about multiple columns. The code for a grid if you need for a product list is tiny.
-
-- social media scripts. Heydon shows that the code should be a few bytes, but the Twitter embed script is 50k. Just because you didn't write it, doesn't mean it's not your fault.
 
 - Using aria instead of using the right element. Use a heading for a heading, and a button for a button etc.
 
 - break points. If you don't use device breakpoints, then you'll only add break points when the content breaks. That's less code.
 
+- sass
+
+- overly verbose CSS class names
+
+- If the page is simple, the design system can be simple and you might even to use an even leaner CSS architecture such as Heydon's. I promise this article is not *just* about Heydon.
+
+- Then there is the amount of js u need. Do u really need that framework. Sometimes you really might need it but I'm willing to bet that most of the time you don't.
+
+- abstract all the common parts. In conjunction with previous point, put button in to a module of its own. Same class used everywhere. Good for gzip and CSS stays the same size. The module is reused.
+
+- Using a CSS preprocessor.  I count tell u the amount of times I've witnessed them used badly.  They make for a very bloated page. I'm not blaming the tool. It's the usage but it's still a cause of the problem. We take less responsible for what these things spit out the other end.
+
 ## 3. Architecture
+
+- CQRS
+- CAP
+- Edge caching
+- Chunking (Jake)
+- [Prefetch](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf)
+- lower down the stack quote
+- service workers?
+- http2 is faster
+- revving assets etc
+- gzip (design and code techniques help this technique, everything together helps)
 
 ---
 
@@ -103,26 +134,6 @@ Number 1 is the most important, because not doing something requires not even wr
 
 Got high Res images. Do u really need them? If so make sure u a) smush the shit out of them b) ask the user to download them thru a query string or send them to a dedicated page after displaying low Res thumbnails.  Old school technique. Good user experience. Test this though. But test it fairly. Don't compare this to large images on iPhone 79 on high speed world western web connections.
 
-## 4. Do you really need that tool (sass) or framework (js)
-
-- Then there is the amount of js u need. Do u really need that framework. Sometimes you really might need it but I'm willing to bet that most of the time you don't.
-
-- Using a CSS preprocessor.  I count tell u the amount of times I've witnessed them used badly.  They make for a very bloated page. I'm not blaming the tool. It's the usage but it's still a cause of the problem. We take less responsible for what these things spit out the other end.
-
-## 5. Performance techniques
-
-- CQRS
-- CAP
-- Edge caching
-- Chunking (Jake)
-- [Prefetch](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf)
-- lower down the stack quote
-- service workers?
-- http2 is faster
-- revving assets etc
-
-- abstract all the common parts. In conjunction with previous point, put button in to a module of its own. Same class used everywhere. Good for gzip and CSS stays the same size. The module is reused.
-
 ## What about *perceived* performance?
 
 And that’s not all. Unlike aiming for ‘perceived’ performance gains — where you still send the same quantity of code but you chew it up first (ed: seriously) — you can actually make your Web Stuff cheaper to use. My data contract doesn’t care whether you send small chunks or one large chunk; it all adds up the same.
@@ -131,47 +142,20 @@ My favorite thing about aiming to have less stuff is this: you finish up with on
 
 ## Summary
 
-- TODO
-
 Less weight, less complexity, less distraction, less bother, less bullshit.
 
----
+## Links
 
-youmightnotneedjs.com
-
-uncrate.com
-
-## Other bits
-
-It's like when someone tidys there house and puts shit in cupboards but the shit is all still there. They haven't decluttered. They have organised. But for pages to be fast they need to be decluttered.
-
-If something can be done lower down the stack it should. We control the speed of our servers. Not the speed of peoples devices and connections.
-
-My site. Experience at DT making an app.
-
-Tesco list page.
-
-http://openmymind.net/2012/5/30/Client-Side-vs-Server-Side-Rendering/
-
-https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf
-
-Links:
+- youmightnotneedjs.com
+- uncrate.com
+- http://openmymind.net/2012/5/30/Client-Side-vs-Server-Side-Rendering/
+- https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf
 -https://alistapart.com/article/planning-for-performance
 - https://boagworld.com/marketing/users-will-always-choose-the-easiest-option-so-if-we-want-a-competitive-advantage-we-must-focus-on-simplicity/
 - reference twitter and other articles moving away from client-side render.
 
----
-
-Browse the Internet. I'll wait here while you do that. Back? Cool. You will have noticed that most websites are cram-packed with stuff you just don't need and that your eyes have learnt to glaze over. Even well-known successful websites suffer from this problem.
+## Other notes
 
 It's why people ignore banner ads and second and third columns. More on that later.
 
-
-It's not just the *amount* of things, but its the things themselves. Quite often it's form over function. More literally speaking, we're prone to dumping several high resolution images on a single page.
-
 Sometimes we even go one step further and put background videos on the screen; to make an impact; to be different; to separate us from the competition. These sorts of things are not the mark of a positive user experience.
-
----
-
-If you have a carousel of images, like a typically ecommerce site or property site. Just show one decent quality image, and allow the user to view more on another page. Another page means link friendly, share friendly, and fast. It also means the user has chosen to look at images, meaning they'll expect a longer loading time.
-
