@@ -83,39 +83,46 @@ By removing and drastically simplifying features we've already reduced the code 
 
 ### Use the right element
 
-<button> vs role=button
+The first thing we can do is use the right element. The right element often yields less code:
+
+Here's an example:
+
+	<button>
+	<div role="button" tabindex="0">
+
+Also pressing <kbd>enter</kbd> while focussed on a `button` will trigger the elements click event. Not so with the `div`.
+
+### Bloated HTML
+
+Don't use extra elements. overly verbose CSS class names.
+
+If the page is simple, the design system can be simple and you might even to use an even leaner CSS architecture such as Heydon's.
 
 ### Third party scripts
 
-- twitter share
-- js frameworks
-- js libraries
-
-### Grids
-
-### Breakpoints
-
-### Preprocessors
-
-As Heydon explains in the same talk, Twitter's share script weighs in at 50k. But we only need a few bytes of HTML:
+Twitter's tweet button script is 50k. We don't even need that script. We can use a link coming in at a few bytes.
 
 	<a href="https://twitter.com/share?source=tweetbutton&text=&quot;Article title&quot;&via=adambsilver&url=http://adamsilver.io/">Tweet</a>
 
-- grids (who needs a grid) https://github.com/Heydon/fukol-grids. Better if you don't have things in grids. Not talking visual grids. Talking about multiple columns. The code for a grid if you need for a product list is tiny.
+Often, we start with libraries and frameworks before we understand the problem we're solving. These libraries and frameworks not only weigh a lot, but they need evaluating and executing.
 
-- Using aria instead of using the right element. Use a heading for a heading, and a button for a button etc.
+But just as often we don't actually need the thing. Get rid and only add something when you need it.
 
-- break points. If you don't use device breakpoints, then you'll only add break points when the content breaks. That's less code.
+### Grids
 
-- overly verbose CSS class names
+(who needs a grid) https://github.com/Heydon/fukol-grids. Better if you don't have things in grids. Not talking visual grids. Talking about multiple columns. The code for a grid if you need for a product list is tiny
 
-- If the page is simple, the design system can be simple and you might even to use an even leaner CSS architecture such as Heydon's. I promise this article is not *just* about Heydon.
+### Breakpoints
 
-- Then there is the amount of js u need. Do u really need that framework. Sometimes you really might need it but I'm willing to bet that most of the time you don't.
+If you don't use device breakpoints, then you'll only add break points when the content breaks. That's less code.
 
-- abstract all the common parts. In conjunction with previous point, put button in to a module of its own. Same class used everywhere. Good for gzip and CSS stays the same size. The module is reused.
+### Preprocessors
 
-- Using a CSS preprocessor.  I count tell u the amount of times I've witnessed them used badly.  They make for a very bloated page. I'm not blaming the tool. It's the usage but it's still a cause of the problem. We take less responsible for what these things spit out the other end.
+I count tell u the amount of times I've witnessed them used badly.  They make for a very bloated page. I'm not blaming the tool. It's the usage but it's still a cause of the problem. We take less responsible for what these things spit out the other end.
+
+### Design system
+
+Abstract all the common parts. In conjunction with previous point, put button in to a module of its own. Same class used everywhere. Good for gzip and CSS stays the same size. The module is reused.
 
 ## 3. Architecture
 
