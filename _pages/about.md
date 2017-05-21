@@ -11,14 +11,14 @@ permalink: /about/
 
 # Adam Silver who?
 
-My name is Adam and my mission is to enhance people's lives, by designing and building delightful experiences on the web.
+I get my kicks by designing simple, human and inclusive experiences that make people feel awesome.
 
 I have been doing this since I can remember (15+ years) and in that time I have built countless large-scale websites for huge house-hold names such as Tesco, BBC, Argos, Boots, Just Eat, News Corp, Selfridges, Financial Times, T-Mobile and many others.
 
-I believe design is a team sport. And I love working together to solve *real* problems, led by user needs. I've learnt from *doing* and from working with other great people in the industry. Ultimately, I get satisfaction helping others avoid all my past mistakes.
+Design is a team sport&mdash;I love working with other people to solve *real* problems that help users. Ultimately, I get satisfaction helping others avoid all my past mistakes.
 
-I've also written a little book about maintainable CSS. Because I'm so creative I called it [MaintainableCSS](http://maintainablecss.com) :-).
+I've also written a little book about maintainable CSS. Because I'm so creative I called it [MaintainableCSS](http://maintainablecss.com).
 
-When I am not doing this stuff, you can find me running outside, playing tennis and spending time with my family.
+When I am not doing this, you'll find me running, playing tennis and spending time with my family.
 
 Have a question? [Get in touch](mailto:adam@adamsilver.io).

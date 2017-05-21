@@ -356,30 +356,6 @@ hr {
 	padding-right: 20px;
 }
 
-.signUpHero-isArticle {
-	background-color: #fafafa;
-	margin-bottom: 30px;
-	padding-top: 30px;
-	padding-bottom: 30px;
-}
-
-.signUpHero-heading {
-	margin-bottom: 10px;
-	font-size: 1.13em;
-	line-height: 1.5;
-	letter-spacing: 0.01em;
-	text-transform: uppercase;
-	color: #0074D9;
-	font-family: 'Open sans';
-}
-
-@media(min-width: 37.5em) {
-	.signUpHero-heading {
-		font-size: 1.31em;
-		margin-bottom: 5px;
-	}
-}
-
 .signUpHero-description {
 	font-size: 1.13em;
 	line-height: 1.7;
@@ -394,6 +370,7 @@ hr {
 	.signUpHero-description {
 		font-size: 1.38em;
 		margin-bottom: 30px;
+		font-style: italic;
 	}
 }
 
