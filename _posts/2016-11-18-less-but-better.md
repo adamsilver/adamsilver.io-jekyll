@@ -3,6 +3,7 @@ layout: post
 title: Less but better
 date: 2016-11-18 09:00:01
 categories: design ux development
+published: false
 description: Practicing Less But Better in design, development, delivery  and life.
 ---
 
