@@ -71,33 +71,41 @@ Splitting the page up also gives users the ability to choose. Another quality th
 
 The same goes for tabs. Do you really need the stuff inside the tabs, if it's hidden. If not, get rid. If it's a little bit of information, just stack it. If not link out to separate pages again.
 
-If you're brave, like Yaron, you might put the navigation menu on a page of it's own. Heydon also mentions is a useful accessible pattern in Menu Buttons[^].
+If you're brave, like Yaron, you might put the navigation menu on a page of it's own.
 
 And modal windows. The amount of times I see the model take up the entire screen, particularly on mobile. Just put it on a separate page. No need for extra code and complexity. Keep things fast, keep things simple.
 
 This is a great start. But feel free to carry on. Scroll jacking: see ya. Floating labels: goodbye. Resize widgets: browsers have those&mdash;it's called <kbd>CMD+</kbd>. 29 different custom fonts: kill.
 
-TODO: tesco product list, lots of ajax calls versus form multi checkbox and a single submit.
-
-TODO: columns
-
 ## 2. Code
 
-We've made excellent progress so far. And by removing or simplifying features we've drastically reduced the code already. But we can do more.
+By removing and drastically simplifying features we've already reduced the code by orders of magnitude. But if we really want to include a feature we can make sure our code is lean. There are a few tips:
+
+### Use the right element
+
+<button> vs role=button
+
+### Third party scripts
+
+- twitter share
+- js frameworks
+- js libraries
+
+### Grids
+
+### Breakpoints
+
+### Preprocessors
 
 As Heydon explains in the same talk, Twitter's share script weighs in at 50k. But we only need a few bytes of HTML:
 
 	<a href="https://twitter.com/share?source=tweetbutton&text=&quot;Article title&quot;&via=adambsilver&url=http://adamsilver.io/">Tweet</a>
-
-I even took Heydon's advice and got rid of the share links altogether.
 
 - grids (who needs a grid) https://github.com/Heydon/fukol-grids. Better if you don't have things in grids. Not talking visual grids. Talking about multiple columns. The code for a grid if you need for a product list is tiny.
 
 - Using aria instead of using the right element. Use a heading for a heading, and a button for a button etc.
 
 - break points. If you don't use device breakpoints, then you'll only add break points when the content breaks. That's less code.
-
-- sass
 
 - overly verbose CSS class names
 
@@ -159,3 +167,9 @@ Less weight, less complexity, less distraction, less bother, less bullshit.
 It's why people ignore banner ads and second and third columns. More on that later.
 
 Sometimes we even go one step further and put background videos on the screen; to make an impact; to be different; to separate us from the competition. These sorts of things are not the mark of a positive user experience.
+
+## TODO
+
+-tesco product list, lots of ajax calls versus form multi checkbox and a single submit.
+- columns
+- checkout heydonws menu article
