@@ -27,74 +27,75 @@ The real problem is that we have designed something that can never be fast. The 
 
 ## 1. UI
 
-The best way to make fast pages is to have less on it. It's so obvious and yet we keep piling on the pounds. Go and browse the Internet and you'll see what I mean.
+The best way to make fast pages is to have less on them. It's so obvious and yet websites keep piling on the pounds.
 
-Do we really need hero images, background videos and social media buttons plastered everywhere or modal dialogs? The answer from the people is resounding *no*. The fastest feature is the one you never built.
+Do we really need hero images, background videos and social media buttons plastered everywhere? The answer from the people is a resounding *no*. The fastest feature is the one we never even built.
 
 That's the obvious stuff out of the way, but what about the way we design interfaces: hamburger menus, tabs, carousels, accordions, image galleries and expanding panels.
 
-What these design patterns have in common is that they hide stuff. Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity.
+What do these design patterns have in common? They hide stuff. Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity.
 
-If a page only contains the essential, then there is nothing we need to bother hide. Designing fully responsive and inclusive components like these take much effort, much testing and send a whole load of code to the user that they rarely appreciate.
+If a page only contains the essential, then there is nothing to hide. And despite the work involved, making this stuff fully responsive and inclusive requires yet more code.
 
-They rarely appreciate because all this shit makes the page load slow, and hides stuff they want to see. Don't bother.
+More code that users rarely appreciate. This is because this stuff makes the page slower. And hiding stuff means users needing to exert thought and energy in order to reveal it.
 
-Heydon Pickering coined Unprogressive Non-enhancement as an design approach. This is how he expains it:
+Heydon Pickering coined the seemingly satirical term *Unprogressive Non-enhancement*. This is how he expains it:
 
 > You take some structured content, which follows the vertical flow of the document in a way that everyone understands.
 
 > Which people traverse easily by either dragging their scroll bar with their mouse, or operating the keyboard using the up and down keys, or using the spacebar.
 
-> Or if they're using a touch device, simply flicking backwards and forwards in that easy way that we've all become used to. What you do is you take that, and you fucking well leave it alone.
+> Or if they're using a touch device, simply flicking backwards and forwards in that easy way that we've all become used to. **What you do is you take that, and you fucking well leave it alone.**
 
-Letting things stack naturally like this is an excellent first move. Not only does it embrace the workings of a web page, and not only does it expose the content that users are looking for, but it's also extremely performant.
+Letting things stack naturally like this is an excellent start. Not only does this embrace the way the web works&mdash;not only does it make access remarkably easy&mdash;it's also extremely performant.
 
-But this is not just about letting things stack. It's about chunking stuff across multiple pages. You see once pages have little on them, the page refresh issue disappears. Pages become fast by default.
+But letting things stack isn't our only option. We can chunk stuff across multiple pages. Once pages have little on them, the page refresh "problem" is no longer a problem. Pages are fast by default and by design.
 
-With regards to long complex forms (or even shortish ones for that matter) there is a design pattern called One Thing Per Page. I've spoken and written about this before.
+With regards to long complex forms (or even shortish ones for that matter) there is the [One Thing Per Page](https://www.smashingmagazine.com/2017/05/better-form-design-one-thing-per-page/) pattern which I've spoken and written about before.
 
-In fact, I talk about it so much at work, that I'm even starting to do my own head in with it. I dread to ask my colleagues what they think of my repetitive verbal abuse.
+In fact I talk about it so much at work, that I'm even starting to do my own head in with it. I dread to ask my colleagues what they think of my repetitive verbal abuse.
 
-But I go on about it for good reason. If you're not aware of it, go have a read. It's worth it. I'll still be here, when you come back.
+But I go on about it for good reason. If you're not aware of it, go have a read. It's worth it. Importantly, this pattern shouldn't be reserved for forms. We can use it for other things too.
 
-But this pattern shouldn't be reserved for forms. We can use it for other types of interface and just regular content.
+For example, imagine a product page containing 10 high-res photos, a description, an add to basket form, dimensions, shipping information, related products, ratings, comments, and reviews or what have you.
 
-For example, let's say you have a product page. It contains 25 high resolution images, a description, an add to basket form, extra details, dimensions, shipping information, related products, ratings, comments, and reviews or what have you.
+Typically, the images are collapsed down into a carousel. Instead, load up one image and include a *show all* link. Clicking this link would naturally show a page with all the images on it.
 
-Typically, the 25 high resolution images are collapsed down into a Carousel. I know, I just mentioned carousels again. But why not just load up one high resolution image, and include a *show all* link. Clicking it will show a simple page with 25 high resolution images.
+This keeps the product page lightning fast. No images, means no need for a carousel. No carousel means far less code.
 
-The beauty here is that it keeps the product page fast. It also speeds up the image page as it only contains images. This is good because the user asked to see them all. The user will expect it to take a longer time. But also, it gives users choice, another quality of well-designed experiences.
+Also, the image page is as fast as it can be. Once again no carousel is needed.
 
-Users visit the product page for many different reasons. Perhaps to check washing information, or to check the price, or perhaps on this occasion they want to scroll through each and every high resolution image.
+Not only is this in all likeliness easier to use, but the user will expect *this* page to take a little longer to load. It contains images afterall.
 
-Splitting the page up also gives users the ability to choose. Another quality that crops up often in well-designed interfaces. People on data contracts get to choose if they want to see those images, or wait for another time when they are connected to WIFI.
+Users don't always come to a product page and view everything. Giving users the choice to drill down quickly is another quality of well-designed experiences.
 
-The same goes for tabs. Do you really need the stuff inside the tabs, if it's hidden. If not, get rid. If it's a little bit of information, just stack it. If not link out to separate pages again.
+People on expensive data contracts benefit here too. They can choose to see the images or wait until they are connected to WI-FI.
 
-If you're brave, like Yaron, you might put the navigation menu on a page of it's own.
+It's also easier to share. Imagine sending the user to the product page in order for them to look at a particular photo within the carousel. When they arrive at the page that image won't be there. They'll have to swipe to discover it.
 
-And modal windows. The amount of times I see the model take up the entire screen, particularly on mobile. Just put it on a separate page. No need for extra code and complexity. Keep things fast, keep things simple.
+The same goes for tabs. If stuff is hidden by default, I would question just how important it is to the page. If the tab contains a little bit of content, just stack it. If not perhaps linking to a separate page will work well.
 
-This is a great start. But feel free to carry on. Scroll jacking: see ya. Floating labels: goodbye. Resize widgets: browsers have those&mdash;it's called <kbd>CMD+</kbd>. 29 different custom fonts: kill.
+If you're brave, like Yaron, you could place your site's [menu on a separate page](http://yaronschoen.com/table-of-contents/) too.
+
+Similarly, modal windows often take up the entire screen, particularly on mobile. Put the content on the separate page, don't break the button, and keep the page fast by once again requiring no code. Fast, simple.
+
+Scroll jacking? Floating labels? Resize widgets? Umpteen custom fonts. Kill them all.
+
+Okay if I'm honest, that was therapeutic for me. I hope it felt good for yout too, haha.
 
 ## 2. Code
 
-By removing and drastically simplifying features we've already reduced the code by orders of magnitude. But if we really want to include a feature we can make sure our code is lean. There are a few tips:
+Technically speaking, we've already been attending to the size of code, but we've done so by just not coding things at all&mdash;my favourite way to do things. But what if we have to code stuff?
 
 ### Use the right element
 
-The first thing we can do is use the right element. The right element often yields less code:
-
-Here's an example:
-
-	<button>
-	<div role="button" tabindex="0">
-
-Also pressing <kbd>enter</kbd> while focussed on a `button` will trigger the elements click event. Not so with the `div`.
+They are free, accessible and performant by default. An example: `<button>` vs `<div role="button" tabindex="0">`. Not only is `<button>` less than half the size of the `<div>`, it doesn't require any extra code to make it accessible.
 
 ### Bloated HTML
 
-Don't use extra elements. overly verbose CSS class names.
+One thing
+
+Don't use extra elements or overly class names.
 
 If the page is simple, the design system can be simple and you might even to use an even leaner CSS architecture such as Heydon's.
 
