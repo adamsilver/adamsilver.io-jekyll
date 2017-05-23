@@ -3,6 +3,7 @@ layout: post
 title: Designing inclusively
 date: 2017-02-15 09:00:01
 categories: design
+description: 11 tips about how to design inclusively.
 ---
 
 *First sent to my [private mailing list](/signup).*

@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Floating labels are a bad idea
-date: 2038-01-01 09:00:01
-categories: js
+date: 2017-05-24 09:00:01
+categories: design patterns forms
+description: We're often seduced by novel patterns that save space such as the floating label. Find out why this is a problem for users.
 ---
 
 After writing [Placeholders are Problematic](/articles/placeholders-are-problematic/) some suggested the floating label pattern. We are often seduced by novel patterns that save space but this pattern is a bad idea. Here's why:
@@ -13,7 +14,7 @@ Floating labels start inside the text box leaving no space for an additional hin
 
 <div class="image">
 	<figure>
-		<img src="{{ site.url }}/assets/img/floatinglabels/1-hint.png" alt="Alt" width="100%" style="max-width: 500px;">
+		<img src="{{ site.url }}/assets/img/floatinglabels/1-hint.png" alt="" width="100%" style="max-width: 500px;">
 		<figcaption>No space for hint</figcaption>
 	</figure>
 </div>
@@ -24,7 +25,7 @@ Floating labels typically have small text, so that as it floats, it takes up a s
 
 <div class="image">
 	<figure>
-		<img src="{{ site.url }}/assets/img/floatinglabels/2-readability.png" alt="Alt" width="100%" style="max-width: 500px;">
+		<img src="{{ site.url }}/assets/img/floatinglabels/2-readability.png" alt="" width="100%" style="max-width: 500px;">
 		<figcaption>Small text is hard-to-read</figcaption>
 	</figure>
 </div>
@@ -36,7 +37,7 @@ Floating labels needs space to move into. If label text is friendly (see previou
 
 <div class="image">
 	<figure>
-		<img src="{{ site.url }}/assets/img/floatinglabels/3-space.png" alt="Alt" width="100%" style="max-width: 500px;">
+		<img src="{{ site.url }}/assets/img/floatinglabels/3-space.png" alt="" width="100%" style="max-width: 500px;">
 		<figcaption>They need space to move into</figcaption>
 	</figure>
 </div>
@@ -53,7 +54,7 @@ Like placeholder text, floating labels have low contrast to differentiate it but
 
 <div class="image">
 	<figure>
-		<img src="{{ site.url }}/assets/img/floatinglabels/5-contrast.png" alt="Alt" width="100%" style="max-width: 500px;">
+		<img src="{{ site.url }}/assets/img/floatinglabels/5-contrast.png" alt="" width="100%" style="max-width: 500px;">
 		<figcaption>They have poor contrast</figcaption>
 	</figure>
 </div>
@@ -72,7 +73,7 @@ When looking at a text box, for example, the user has to look *inside* the contr
 
 <div class="image">
 	<figure>
-		<img src="{{ site.url }}/assets/img/floatinglabels/7-consistency.png" alt="Alt" width="100%" style="max-width: 500px;">
+		<img src="{{ site.url }}/assets/img/floatinglabels/7-consistency.png" alt="" width="100%" style="max-width: 500px;">
 		<figcaption>Inconsistent location</figcaption>
 	</figure>
 </div>
@@ -83,7 +84,7 @@ If the floating label is longer than the size of the field, it will be cut off b
 
 <div class="image">
 	<figure>
-		<img src="{{ site.url }}/assets/img/floatinglabels/8-cutoff.png" alt="Alt" width="100%" style="max-width: 500px;">
+		<img src="{{ site.url }}/assets/img/floatinglabels/8-cutoff.png" alt="" width="100%" style="max-width: 500px;">
 		<figcaption>The label may get cropped</figcaption>
 	</figure>
 </div>

@@ -3,6 +3,7 @@ layout: post
 title: Stop using device breakpoints
 date: 2017-03-28 09:00:01
 categories: design css
+description: Most designers and developers design for certain viewport sizes. Learn about why this is problematic and what to do instead.
 ---
 
 *First sent to my [private mailing list](/signup).*
