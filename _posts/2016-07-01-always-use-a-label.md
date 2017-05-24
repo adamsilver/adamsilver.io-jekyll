@@ -8,13 +8,11 @@ description: Fields with missing labels cause problems. And yet, designers omit 
 
 *First sent to my [private mailing list](/signup).*
 
-You might be tempted to remove labels from some form controls to create a minimal aesthetic and save space. But it's a [UX myth](http://uxmyths.com/post/115783813605/myth-34-simple-minimal) that saving space and minimalist design equates to better experiences.
+Designers often remove labels to create a minimal aesthetic and save space. However, [minimal doesn't always mean simple](http://uxmyths.com/post/115783813605/myth-34-simple-minimal). Labels are essential to the user experience.
 
-Labels are essential because:
-
-1. *sighted* users will be able to see the instructions;
-2. *visually-impaired* users will hear the instructions when using a screen reader; and
-3. *motor-impaired* users will find it easier to select a field thanks to the larger hit area. This is because clicking a label will move focus to the control.
+- Sighted users can see the instructions.
+- Visually-impaired users can hear the instructions when using a screen reader.
+- Motor-impaired users can easily move focus to the field due to the larger hit area. (Clicking a label moves focus to the field).
 
 Let's take a look at two examples whereby designers frequently ditch the label.
 
@@ -48,7 +46,7 @@ When a form has just one field&mdash;as would be the case with a search form&mda
 
 ### Notes
 
-* Visual users will be okay to begin with due to the placeholder. But [ placeholders are problematic](/articles/placeholders-minimal-does-not-mean-simple) for many reasons. One example is that once the user starts typing the instruction disappears.
+* Visual users will be okay to begin with due to the placeholder. But [ placeholders are problematic](/articles/placeholders-are-problematic/) for many reasons. One example is that once the user starts typing the instruction disappears.
 * Motor-impaired users again will find it harder to select the field.
 * Screen reader users will find it difficult because the placeholder is not announced.
 * If a foreigner wants to translate the page using the browser's translation routine, the placeholder is ignored which causes confusion.
