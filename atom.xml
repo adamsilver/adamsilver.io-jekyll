@@ -3,7 +3,7 @@
 	<title>Adam Silver: Designing simple, human and inclusive websites.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-05-24T07:01:17+01:00</updated>
+	<updated>2017-05-24T18:50:28+01:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -926,15 +926,13 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 			<id>http://adamsilver.io/articles/always-use-a-label</id>
 			<content type="html">&lt;p&gt;&lt;em&gt;First sent to my &lt;a href=&quot;/signup&quot;&gt;private mailing list&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;You might be tempted to remove labels from some form controls to create a minimal aesthetic and save space. But it’s a &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;UX myth&lt;/a&gt; that saving space and minimalist design equates to better experiences.&lt;/p&gt;
+&lt;p&gt;Designers often remove labels to create a minimal aesthetic and save space. However, &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;minimal doesn’t always mean simple&lt;/a&gt;. Labels are essential to the user experience.&lt;/p&gt;
 
-&lt;p&gt;Labels are essential because:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;em&gt;sighted&lt;/em&gt; users will be able to see the instructions;&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;visually-impaired&lt;/em&gt; users will hear the instructions when using a screen reader; and&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;motor-impaired&lt;/em&gt; users will find it easier to select a field thanks to the larger hit area. This is because clicking a label will move focus to the control.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;ul&gt;
+  &lt;li&gt;Sighted users can see the instructions.&lt;/li&gt;
+  &lt;li&gt;Visually-impaired users can hear the instructions when using a screen reader.&lt;/li&gt;
+  &lt;li&gt;Motor-impaired users can easily move focus to the field due to the larger hit area. (Clicking a label moves focus to the field).&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Let’s take a look at two examples whereby designers frequently ditch the label.&lt;/p&gt;
 
@@ -971,7 +969,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 &lt;h3 id=&quot;notes-1&quot;&gt;Notes&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Visual users will be okay to begin with due to the placeholder. But &lt;a href=&quot;/articles/placeholders-minimal-does-not-mean-simple&quot;&gt; placeholders are problematic&lt;/a&gt; for many reasons. One example is that once the user starts typing the instruction disappears.&lt;/li&gt;
+  &lt;li&gt;Visual users will be okay to begin with due to the placeholder. But &lt;a href=&quot;/articles/placeholders-are-problematic/&quot;&gt; placeholders are problematic&lt;/a&gt; for many reasons. One example is that once the user starts typing the instruction disappears.&lt;/li&gt;
   &lt;li&gt;Motor-impaired users again will find it harder to select the field.&lt;/li&gt;
   &lt;li&gt;Screen reader users will find it difficult because the placeholder is not announced.&lt;/li&gt;
   &lt;li&gt;If a foreigner wants to translate the page using the browser’s translation routine, the placeholder is ignored which causes confusion.&lt;/li&gt;
