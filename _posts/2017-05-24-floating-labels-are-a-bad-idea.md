@@ -6,7 +6,7 @@ categories: design patterns forms
 description: We're often seduced by novel patterns that save space such as the floating label. Find out why this is a problem for users.
 ---
 
-After writing [Placeholders are Problematic](/articles/placeholders-are-problematic/) some suggested the floating label pattern. We are often seduced by novel patterns that save space but this pattern is a bad idea. Here's why:
+After writing [Placeholders are Problematic](/articles/placeholders-are-problematic/) some people suggested the floating label. We are often seduced by novel patterns that save space but this pattern is a bad idea. Here's why:
 
 ## 1. There is no space for a hint
 
