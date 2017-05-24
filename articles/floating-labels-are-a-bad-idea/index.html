@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en">
+	<head>
+	    
+	
+		<title>Floating labels are a bad idea by Adam Silver</title>
+	
+
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+
+<link rel="apple-touch-icon" sizes="57x57" href="http://adamsilver.io/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://adamsilver.io/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://adamsilver.io/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://adamsilver.io/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://adamsilver.io/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://adamsilver.io/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://adamsilver.io/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://adamsilver.io/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://adamsilver.io/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="http://adamsilver.io/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="http://adamsilver.io/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="http://adamsilver.io/manifest.json">
+<link rel="mask-icon" href="http://adamsilver.io/safari-pinned-tab.svg" color="#001f3f">
+<meta name="msapplication-TileColor" content="#001F3F">
+<meta name="msapplication-TileImage" content="http://adamsilver.io/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+
+
+	
+		<meta content="Floating labels are a bad idea by Adam Silver" property="og:title">
+	
+
+
+
+	<meta property="og:description" content="We're often seduced by novel patterns that save space such as the floating label. Find out why this is a problem for users.">
+
+
+<meta property="og:url" content="http://adamsilver.io/articles/floating-labels-are-a-bad-idea/">
+<meta property="og:site_name" content="Adamsilver.io">
+<meta property="og:image" content="http://adamsilver.io/assets/img/card.png">
+<meta property="og:image:width" content="181">
+<meta property="og:image:height" content="181">
+
+<meta name="twitter:card" content="summary">
+
+
+	<meta name="twitter:description" content="We're often seduced by novel patterns that save space such as the floating label. Find out why this is a problem for users.">
+
+
+<meta name="twitter:title" content="Floating labels are a bad idea -  Adam Silver: Designing simple, human and inclusive websites.">
+
+
+	<meta content="Floating labels are a bad idea" name="twitter:title">
+
+
+<meta name="twitter:site" content="@adambsilver">
+<meta name="twitter:creator" content="@adambsilver">
+<meta property="twitter:image" content="http://adamsilver.io/assets/img/card.png">
+
+
+	<meta itemprop="description" content="We're often seduced by novel patterns that save space such as the floating label. Find out why this is a problem for users.">
+
+
+<link rel="stylesheet" href="/assets/css/main.min.6f5cb3b4.css" media="all">
+
+<!--[if IE 8]>
+<link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
+<![endif]-->
+
+<!--[if IE 7]>
+<link rel="stylesheet" href="/assets/css/ie7.min.d41d8cd9.css" media="all">
+<![endif]-->
+
+
+<!--[if IE 6]>
+<link rel="stylesheet" href="/assets/css/ie6.min.2d22a25b.css" media="all">
+<![endif]-->
+
+
+<link rel="canonical" href="http://adamsilver.io/articles/floating-labels-are-a-bad-idea/">
+<link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47311666-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	</head>
+	<body>
+	    <nav class="nav">
+	<ul>
+		<li><a class="" href="/">Home</a></li>
+		<li><a class="nav-active" href="/articles/">Articles</a></li>
+		<li><a class="" href="/about/">About</a></li>
+		<li><a class="" href="/signup/">Newsletter</a></li>
+	</ul>
+</nav>
+	    <main class="mainContent">
+			<h1 class="article-heading">Floating labels are a bad idea</h1>
+			<!-- <div class="meta">
+	<time class="meta-date" date-time="2017-05-24">24 May 2017</time> <span class="meta-divider">&#183;</span>
+	<span class="meta-readingTime" title="Estimated read time">
+	  
+
+	  
+	    2 minute read
+	  
+	</span>
+</div> -->
+	        <p>After writing <a href="/articles/placeholders-are-problematic/">Placeholders are Problematic</a> some people suggested the floating label. We are often seduced by novel patterns that save space but this pattern is a bad idea. Here’s why:</p>
+
+<h2 id="there-is-no-space-for-a-hint">1. There is no space for a hint</h2>
+
+<p>Floating labels start inside the text box leaving no space for an additional hint.</p>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/floatinglabels/1-hint.png" alt="" width="100%" style="max-width: 500px;" />
+		<figcaption>No space for hint</figcaption>
+	</figure>
+</div>
+
+<h2 id="they-are-hard-to-read">2. They are hard-to-read</h2>
+
+<p>Floating labels typically have small text, so that as it floats, it takes up a small amount of space. But small text is hard-to-read.</p>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/floatinglabels/2-readability.png" alt="" width="100%" style="max-width: 500px;" />
+		<figcaption>Small text is hard-to-read</figcaption>
+	</figure>
+</div>
+
+<h2 id="they-need-space-to-move-into">3. They need space to move into</h2>
+
+<p>Floating labels needs space to move into. If label text is friendly (see previous point), there would be no saved space anyway—just more <em>white</em> space.</p>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/floatinglabels/3-space.png" alt="" width="100%" style="max-width: 500px;" />
+		<figcaption>They need space to move into</figcaption>
+	</figure>
+</div>
+
+<p>Alternatively, we could create space <em>as</em> the label moves into position. But this makes the page judder, creating a disorientating experience as the user starts typing.</p>
+
+<h2 id="the-animation-is-problematic">4. The animation is problematic</h2>
+
+<p>Animation, even if it’s done well, could be distracting and disorientating, particularly for low confidence or visually impaired users. And, when zooming in, the label may disappear off screen.</p>
+
+<h2 id="they-have-poor-contrast">5. They have poor contrast</h2>
+
+<p>Like placeholder text, floating labels have low contrast to differentiate it but low contrast text is hard-to-read.</p>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/floatinglabels/5-contrast.png" alt="" width="100%" style="max-width: 500px;" />
+		<figcaption>They have poor contrast</figcaption>
+	</figure>
+</div>
+
+<p>Depending on the design, when the label floats outside of the field, its colour will need to change. Otherwise the text will be lost against the background colour.</p>
+
+<h2 id="they-may-be-mistaken-for-a-value">6. They may be mistaken for a value</h2>
+
+<p>People may skip the field thinking it’s completed already. When they submit, they will see an error which needs fixing. This is frustrating and time consuming.</p>
+
+<h2 id="they-are-inconsistently-located">7. They are inconsistently located</h2>
+
+<p>Radio buttons, checkboxes and select boxes have static labels and legends. Where as text boxes have floating labels. This creates an inconsistent experience.</p>
+
+<p>When looking at a text box, for example, the user has to look <em>inside</em> the control. For a select box they have to look <em>outside</em> of it.</p>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/floatinglabels/7-consistency.png" alt="" width="100%" style="max-width: 500px;" />
+		<figcaption>Inconsistent location</figcaption>
+	</figure>
+</div>
+
+<h2 id="the-label-may-get-cropped">8. The label may get cropped</h2>
+
+<p>If the floating label is longer than the size of the field, it will be cut off by the field. We should <a href="/articles/stop-using-device-breakpoints/">design for content</a>, we shouldn’t make content fit the design.</p>
+
+<div class="image">
+	<figure>
+		<img src="http://adamsilver.io/assets/img/floatinglabels/8-cutoff.png" alt="" width="100%" style="max-width: 500px;" />
+		<figcaption>The label may get cropped</figcaption>
+	</figure>
+</div>
+
+<h2 id="it-ignores-the-standards">9. It ignores the standards</h2>
+
+<p>We know placeholders are problematic anyway. However, if we’re going to put text inside a text box, it should be a hint, not a label.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>Forms are not a source of entertainment. The floating label won’t make users enjoy using forms. Users don’t care. They just want the outcome.</p>
+
+<p>Static labels and legends positioned outside the field create familiar and consistent experiences. Two qualities often found in well-designed interfaces.</p>
+
+<p>There are better and more productive techniques for improving form design. Let’s spend time and energy on those instead.</p>
+
+	    </main>
+		<div class="signUpHero">
+	<p class="signUpHero-description">I write articles like this and share them with my private mailing list. No spam and definitely no popups. Just one article a month, straight to your inbox. Sign up below:</p>
+	<form action="//adamsilver.us9.list-manage.com/subscribe/post?u=b8fb04f39bf86109693e00ba5&amp;id=441c045a36" method="post">
+		<input type="hidden" name="b_b8fb04f39bf86109693e00ba5_441c045a36" value="">
+		<input type="hidden" name="SITE" value="http://adamsilver.io">
+		<input type="hidden" name="LOCATION" value="/articles/floating-labels-are-a-bad-idea/">
+		<label for="mce-EMAIL" class="signUpHero-label">Your email address</label>
+		<input type="email" name="EMAIL" id="mce-EMAIL" class="signUpHero-email" required><input class="signUpHero-button" type="submit" value="Join 1,000+ others" name="subscribe">
+	</form>
+</div>
+		<footer class="footer">
+	<p>You can find me on <a href="http://www.twitter.com/adambsilver/">Twitter</a>, <a href="http://www.github.com/adamsilver/">Github</a>, <a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a> and <a href="http://medium.com/@adambsilver">Medium</a>.
+	</p>
+</footer>
+	</body>
+</html>

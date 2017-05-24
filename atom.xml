@@ -3,12 +3,113 @@
 	<title>Adam Silver: Designing simple, human and inclusive websites.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-05-21T07:54:24+01:00</updated>
+	<updated>2017-05-24T07:01:17+01:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
 	</author>
 
+	
+		<entry>
+			<title>Floating labels are a bad idea</title>
+			<link href="http://adamsilver.io/articles/floating-labels-are-a-bad-idea/"/>
+			<updated>2017-05-24T10:00:01+01:00</updated>
+			<id>http://adamsilver.io/articles/floating-labels-are-a-bad-idea</id>
+			<content type="html">&lt;p&gt;After writing &lt;a href=&quot;/articles/placeholders-are-problematic/&quot;&gt;Placeholders are Problematic&lt;/a&gt; some people suggested the floating label. We are often seduced by novel patterns that save space but this pattern is a bad idea. Here’s why:&lt;/p&gt;
+
+&lt;h2 id=&quot;there-is-no-space-for-a-hint&quot;&gt;1. There is no space for a hint&lt;/h2&gt;
+
+&lt;p&gt;Floating labels start inside the text box leaving no space for an additional hint.&lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/floatinglabels/1-hint.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;figcaption&gt;No space for hint&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;they-are-hard-to-read&quot;&gt;2. They are hard-to-read&lt;/h2&gt;
+
+&lt;p&gt;Floating labels typically have small text, so that as it floats, it takes up a small amount of space. But small text is hard-to-read.&lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/floatinglabels/2-readability.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;figcaption&gt;Small text is hard-to-read&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;they-need-space-to-move-into&quot;&gt;3. They need space to move into&lt;/h2&gt;
+
+&lt;p&gt;Floating labels needs space to move into. If label text is friendly (see previous point), there would be no saved space anyway—just more &lt;em&gt;white&lt;/em&gt; space.&lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/floatinglabels/3-space.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;figcaption&gt;They need space to move into&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Alternatively, we could create space &lt;em&gt;as&lt;/em&gt; the label moves into position. But this makes the page judder, creating a disorientating experience as the user starts typing.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-animation-is-problematic&quot;&gt;4. The animation is problematic&lt;/h2&gt;
+
+&lt;p&gt;Animation, even if it’s done well, could be distracting and disorientating, particularly for low confidence or visually impaired users. And, when zooming in, the label may disappear off screen.&lt;/p&gt;
+
+&lt;h2 id=&quot;they-have-poor-contrast&quot;&gt;5. They have poor contrast&lt;/h2&gt;
+
+&lt;p&gt;Like placeholder text, floating labels have low contrast to differentiate it but low contrast text is hard-to-read.&lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/floatinglabels/5-contrast.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;figcaption&gt;They have poor contrast&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Depending on the design, when the label floats outside of the field, its colour will need to change. Otherwise the text will be lost against the background colour.&lt;/p&gt;
+
+&lt;h2 id=&quot;they-may-be-mistaken-for-a-value&quot;&gt;6. They may be mistaken for a value&lt;/h2&gt;
+
+&lt;p&gt;People may skip the field thinking it’s completed already. When they submit, they will see an error which needs fixing. This is frustrating and time consuming.&lt;/p&gt;
+
+&lt;h2 id=&quot;they-are-inconsistently-located&quot;&gt;7. They are inconsistently located&lt;/h2&gt;
+
+&lt;p&gt;Radio buttons, checkboxes and select boxes have static labels and legends. Where as text boxes have floating labels. This creates an inconsistent experience.&lt;/p&gt;
+
+&lt;p&gt;When looking at a text box, for example, the user has to look &lt;em&gt;inside&lt;/em&gt; the control. For a select box they have to look &lt;em&gt;outside&lt;/em&gt; of it.&lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/floatinglabels/7-consistency.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;figcaption&gt;Inconsistent location&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;the-label-may-get-cropped&quot;&gt;8. The label may get cropped&lt;/h2&gt;
+
+&lt;p&gt;If the floating label is longer than the size of the field, it will be cut off by the field. We should &lt;a href=&quot;/articles/stop-using-device-breakpoints/&quot;&gt;design for content&lt;/a&gt;, we shouldn’t make content fit the design.&lt;/p&gt;
+
+&lt;div class=&quot;image&quot;&gt;
+	&lt;figure&gt;
+		&lt;img src=&quot;http://adamsilver.io/assets/img/floatinglabels/8-cutoff.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;figcaption&gt;The label may get cropped&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;it-ignores-the-standards&quot;&gt;9. It ignores the standards&lt;/h2&gt;
+
+&lt;p&gt;We know placeholders are problematic anyway. However, if we’re going to put text inside a text box, it should be a hint, not a label.&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;Forms are not a source of entertainment. The floating label won’t make users enjoy using forms. Users don’t care. They just want the outcome.&lt;/p&gt;
+
+&lt;p&gt;Static labels and legends positioned outside the field create familiar and consistent experiences. Two qualities often found in well-designed interfaces.&lt;/p&gt;
+
+&lt;p&gt;There are better and more productive techniques for improving form design. Let’s spend time and energy on those instead.&lt;/p&gt;
+</content>
+		</entry>
 	
 		<entry>
 			<title>Stop using device breakpoints</title>
