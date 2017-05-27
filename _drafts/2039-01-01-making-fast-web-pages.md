@@ -11,33 +11,38 @@ Instead of getting rid of the shit, we blame the page refresh. There's only one 
 
 However, AJAX still needs to render new (parts of) screens. More crucially it still has to make a request to the server. That's not all&mdash;there are penalties in using AJAX.
 
-First, in order to: make requests, handle different responses, traverse the Document and inject HTML requires more code which needs to be sent, evaluated and executed on the client.
+First, making requests, handling different responses, traversing the Document and injecting HTML requires *more* code to be sent initially. This needs to be sent, evaluated and executed on the client.
 
-Second, we end up engineering away things the browser does for free, such as chunking/progressive rendering (more on this later). To keep this benefit we must resort to hacks that need even more code.
+Second, AJAX engineers away things the browser does for free, such as chunking and progressive rendering (more on this later). To avoid this problem we must resort to hacks that need even more code. Plus nobody uses the hack anyway.
 
-Third, we need to design and build our own loading spinner. Not only is this more work and code but they are a poor replacement for the ones provided by the browser.
+Furthermore, we need to design and build a custom loading indicator. Not only is this yet more work and more code but they are a poor replacement for the ones provided by browsers.
 
-This is because they display progress leading to the dreaded infinite spinner. And they're also unfamiliar. Browser loading indicators appear in the same spot on every website they visit. Familiarity and accuracy are two qualities often found in a well-designed interface.
+This is because a brower's indicator displays progress. That is, a user can tell how long until the request finishes. Custom spinners don't display progress, so users get frustrated and click again, causing their experience to slow down further.
+
+Custom indicators are unfamiliar as they lok different per site and are positioned differently. Browser indicators appear in the same place no matter the website. Familiarity and accuracy are two qualities often found in well-designed interfaces.
 
 This is not to say that AJAX is *bad*. AJAX is a useful enhancement depending on the situation because it avoids repetitively requesting and re-evaluating client-side assets.
 
-With that said, it's not a solution to slow-loading pages. At most it patches over the real problems that lie beneath.
+However, it's not a solution to slow-loading pages. At best it patches over the real problems that lie beneath.
 
-The real problem is that we have designed something that can never be fast. The real question is how do we make sure our websites are fast?
+The real problem is that we have designed something that can never be fast. Therefore, the real question is how do we make sure our websites are fast?
 
 ## 1. UI
 
-The best way to make fast pages is to have less on them. It's so obvious and yet websites keep piling on the pounds.
+The best way to make pages fast, is to have less on them. You'd be forgiven for wanting to punch me in the face for this statement as it's so obvious. Yet, look around, web pages keep getting fatter.
 
-Do we really need hero images, background videos and social media buttons plastered everywhere? The answer from the people is a resounding *no*. The fastest feature is the one we never even built.
+Do we really need hero images, background videos and social media buttons plastered everywhere? The answer from the people is a resounding *no*. The fastest feature is the one we never build.
 
-That's the obvious stuff out of the way, but what about the way we design interfaces: hamburger menus, tabs, carousels, accordions, image galleries and expanding panels.
+What about they we design interfaces? Hamburger menus, tabs, carousels, accordions, image galleries and expanding panels.
 
 What do these design patterns have in common? They hide stuff. Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity.
 
-If a page only contains the essential, then there is nothing to hide. And despite the work involved, making this stuff fully responsive and inclusive requires yet more code.
+If pages only contain the essential, then there is often nothing (or much less) that needs to be hidden. And despite the effort, making fully responsive and inclusive interface components is yet *more* code.
 
-More code that users rarely appreciate. This is because this stuff makes the page slower. And hiding stuff means users needing to exert thought and energy in order to reveal it.
+More code that users rarely appreciate. This is because:
+
+- these components cause slow loading and rendering
+- hiding things requires effort to reveal it
 
 Heydon Pickering coined the seemingly satirical term *Unprogressive Non-enhancement*. This is how he expains it:
 
@@ -55,7 +60,7 @@ With regards to long complex forms (or even shortish ones for that matter) there
 
 In fact I talk about it so much at work, that I'm even starting to do my own head in with it. I dread to ask my colleagues what they think of my repetitive verbal abuse.
 
-But I go on about it for good reason. If you're not aware of it, go have a read. It's worth it. Importantly, this pattern shouldn't be reserved for forms. We can use it for other things too.
+But I go on about it for good reason. If you're not aware of it, go have a read. It's worth it. Importantly, this pattern can be extended beyond forms.
 
 For example, imagine a product page containing 10 high-res photos, a description, an add to basket form, dimensions, shipping information, related products, ratings, comments, and reviews or what have you.
 
@@ -69,7 +74,7 @@ Not only is this in all likeliness easier to use, but the user will expect *this
 
 Users don't always come to a product page and view everything. Giving users the choice to drill down quickly is another quality of well-designed experiences.
 
-People on expensive data contracts benefit here too. They can choose to see the images or wait until they are connected to WI-FI.
+People on expensive data contracts benefit too. They can choose to see the images or wait until they are connected to WI-FI.
 
 It's also easier to share. Imagine sending the user to the product page in order for them to look at a particular photo within the carousel. When they arrive at the page that image won't be there. They'll have to swipe to discover it.
 
@@ -77,11 +82,11 @@ The same goes for tabs. If stuff is hidden by default, I would question just how
 
 If you're brave, like Yaron, you could place your site's [menu on a separate page](http://yaronschoen.com/table-of-contents/) too.
 
-Similarly, modal windows often take up the entire screen, particularly on mobile. Put the content on the separate page, don't break the button, and keep the page fast by once again requiring no code. Fast, simple.
+Modal windows, oh modal windows. They often take up the entire screen particularly on small screens. Instead, put the content on a separate page, don't break the back button and keep the experience fast. Less code and less problems equals faster experiences.
 
-Scroll jacking? Floating labels? Resize widgets? Umpteen custom fonts. Kill them all.
+Scroll jacking? [Floating labels](/articles/floating-labels-are-problematic/)? Resize widgets? Custom fonts. Kill.
 
-Okay if I'm honest, that was therapeutic for me. I hope it felt good for yout too, haha.
+Okay breath (that was for me, not for you). That felt good for, did it for you? Let's continue anyway.
 
 ## 2. Code
 
