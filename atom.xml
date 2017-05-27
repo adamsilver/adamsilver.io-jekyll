@@ -3,7 +3,7 @@
 	<title>Adam Silver: Designing simple, human and inclusive websites.</title>
 	<link href="http://adamsilver.io/atom.xml" rel="self"/>
 	<link href="http://adamsilver.io/"/>
-	<updated>2017-05-24T18:50:28+01:00</updated>
+	<updated>2017-05-27T10:32:19+01:00</updated>
 	<id>http://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -11,11 +11,11 @@
 
 	
 		<entry>
-			<title>Floating labels are a bad idea</title>
-			<link href="http://adamsilver.io/articles/floating-labels-are-a-bad-idea/"/>
+			<title>Floating labels are problematic</title>
+			<link href="http://adamsilver.io/articles/floating-labels-are-problematic/"/>
 			<updated>2017-05-24T10:00:01+01:00</updated>
-			<id>http://adamsilver.io/articles/floating-labels-are-a-bad-idea</id>
-			<content type="html">&lt;p&gt;After writing &lt;a href=&quot;/articles/placeholders-are-problematic/&quot;&gt;Placeholders are Problematic&lt;/a&gt; some people suggested the floating label. We are often seduced by novel patterns that save space but this pattern is a bad idea. Here’s why:&lt;/p&gt;
+			<id>http://adamsilver.io/articles/floating-labels-are-problematic</id>
+			<content type="html">&lt;p&gt;After writing &lt;a href=&quot;/articles/placeholders-are-problematic/&quot;&gt;Placeholders are Problematic&lt;/a&gt; some people suggested the floating label. We are often seduced by novel patterns that save space but this pattern is problematic. Here’s why:&lt;/p&gt;
 
 &lt;h2 id=&quot;there-is-no-space-for-a-hint&quot;&gt;1. There is no space for a hint&lt;/h2&gt;
 
