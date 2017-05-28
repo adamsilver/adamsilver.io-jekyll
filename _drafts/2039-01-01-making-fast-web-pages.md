@@ -27,7 +27,7 @@ However, it's not a solution to slow-loading pages. At best it patches over the 
 
 The real problem is that we have designed something that can never be fast. Therefore, the real question is how do we make sure our websites are fast?
 
-## 1. UI
+## 1. Interface
 
 The best way to make pages fast, is to have less on them. You'd be forgiven for wanting to punch me in the face for this statement as it's so obvious. Yet, look around, web pages keep getting fatter.
 
@@ -90,31 +90,31 @@ Calm, relax. That was for me, not for you. I hope you found that as therapeutic 
 
 ## 2. Code techniques
 
-We've already been cutting code down drastically by simplifying the the design of the interface. That's the best way, but at some point we'll need some interface components.
+By simplifying the interface itself, we've drastically reduced the size of the code. But we're going to need to write code in the end. It's how we do this that has a direct impact on performance.
 
-Turns out there's a few things we can do here too:
+We'll want to:
 
-- Use the right element
-- Create lean HTML
-- Use less third party code
-- Use simple CSS grid techniques
-- Use content breakpoints
-- Use preprocessors responsibly
-- Create a design system
+- use the right element
+- create lean HTML
+- use less third party code
+- use simple grid techniques
+- use content breakpoints
+- use preprocessors responsibly
+- create a design system
 
 ### Use the right element
 
-They are free, accessible and performant by default. An example: `<button>` vs `<div role="button" tabindex="0">`. Not only is `<button>` less than half the size of the `<div>`, it doesn't require any extra code to make it accessible.
+A `<button>` is half the size of `<div role="button" tabinidex="0">`, for example. Also, it doesn't require Javascript to make it accessible to keyboards and screen readers. Using the right element for the job often results in more performant code.
 
-### Bloated HTML
+### Create lean HTML
 
-One thing
+More often than not developers shit out extra divs and spans like they're going out of fashion.
 
-Don't use extra elements or overly class names.
+Extra elements have a domino effect in that they make pages slower to parse, slower to traverse with Javascript and slower to render with CSS.
 
-If the page is simple, the design system can be simple and you might even to use an even leaner CSS architecture such as Heydon's.
+Every element added should have a clear reason behind it's existence. Where possible design should be simplified anyway. In doing so, we'll need [less class names](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/) which speeds things up.
 
-### Third party scripts
+### Use less third party code
 
 Twitter's tweet button script is 50k. We don't even need that script. We can use a link coming in at a few bytes.
 
@@ -140,7 +140,7 @@ I count tell u the amount of times I've witnessed them used badly.  They make fo
 
 Abstract all the common parts. In conjunction with previous point, put button in to a module of its own. Same class used everywhere. Good for gzip and CSS stays the same size. The module is reused.
 
-## 3. Architecture
+## 3. Other
 
 - CQRS
 - CAP
@@ -195,3 +195,5 @@ Sometimes we even go one step further and put background videos on the screen; t
 -tesco product list, lots of ajax calls versus form multi checkbox and a single submit.
 - columns
 - checkout heydonws menu article
+- not atomic, it's about lightweight html, because that's not cachable. It's dynamic and personalised.
+- visually controlled js implemented select box (features of highly effective forms aaron gust)
