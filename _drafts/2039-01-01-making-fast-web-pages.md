@@ -19,7 +19,7 @@ Furthermore, we need to design and build a custom loading indicator. Not only is
 
 This is because a brower's indicator displays progress. That is, a user can tell how long until the request finishes. Custom spinners don't display progress, so users get frustrated and click again, causing their experience to slow down further.
 
-Custom indicators are unfamiliar as they lok different per site and are positioned differently. Browser indicators appear in the same place no matter the website. Familiarity and accuracy are two qualities often found in well-designed interfaces.
+Custom indicators are unfamiliar as they look different per site and are positioned differently. Browser indicators appear in the same place no matter the website. Familiarity and accuracy are two qualities often found in well-designed interfaces.
 
 This is not to say that AJAX is *bad*. AJAX is a useful enhancement depending on the situation because it avoids repetitively requesting and re-evaluating client-side assets.
 
@@ -84,13 +84,23 @@ If you're brave, like Yaron, you could place your site's [menu on a separate pag
 
 Modal windows, oh modal windows. They often take up the entire screen particularly on small screens. Instead, put the content on a separate page, don't break the back button and keep the experience fast. Less code and less problems equals faster experiences.
 
-Scroll jacking? [Floating labels](/articles/floating-labels-are-problematic/)? Resize widgets? Custom fonts. Kill.
+Scroll jacking, [floating labels](/articles/floating-labels-are-problematic/), [font-size widgets](http://adrianroselli.com/2016/12/dont-re-create-browser-features.html), custom fonts. Kill.
 
-Okay breath (that was for me, not for you). That felt good for, did it for you? Let's continue anyway.
+Calm, relax. That was for me, not for you. I hope you found that as therapeutic as I did. Let's continue.
 
-## 2. Code
+## 2. Code techniques
 
-Technically speaking, we've already been attending to the size of code, but we've done so by just not coding things at all&mdash;my favourite way to do things. But what if we have to code stuff?
+We've already been cutting code down drastically by simplifying the the design of the interface. That's the best way, but at some point we'll need some interface components.
+
+Turns out there's a few things we can do here too:
+
+- Use the right element
+- Create lean HTML
+- Use less third party code
+- Use simple CSS grid techniques
+- Use content breakpoints
+- Use preprocessors responsibly
+- Create a design system
 
 ### Use the right element
 
@@ -137,11 +147,10 @@ Abstract all the common parts. In conjunction with previous point, put button in
 - Edge caching
 - Chunking (Jake)
 - [Prefetch](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf)
-- lower down the stack quote
-- service workers?
 - http2 is faster
 - revving assets etc
 - gzip (design and code techniques help this technique, everything together helps)
+- lower down the stack quote
 
 ---
 
