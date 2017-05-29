@@ -1,7 +1,7 @@
 name: "Adam Silver: Designing simple, human and inclusive websites."
 markdown: kramdown
 permalink: /articles/:title/
-url: //adamsilver.io
+url: https://adamsilver.io
 include: ['_pages']
 description: Hello, I am Adam Silver, I specialise in UX, Front-end Engineering and Strategy. I help companies and people design simple, human and inclusive websites. Based in London.
 future: true
