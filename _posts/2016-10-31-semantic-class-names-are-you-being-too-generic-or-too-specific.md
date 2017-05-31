@@ -6,8 +6,6 @@ categories: css
 description: Most CSS developers I know don't think too hard about their choice of class names. In this article we'll take a good look at the impact of our choices.
 ---
 
-*First sent to my [private mailing list](/signup).*
-
 Even if you’re completely sold on [semantic class names](http://maintainablecss.com/chapters/semantics/) and avoid stylistic and behavioural class names altogether, choosing a good class name is hard.
 
 The problem boils down to naming your classes either too generically or too specifically. Both of which have pros and cons. But I like to think we can choose a class name without any cons. Let's see.

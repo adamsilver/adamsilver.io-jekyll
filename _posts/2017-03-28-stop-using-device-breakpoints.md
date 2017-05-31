@@ -6,8 +6,6 @@ categories: design css
 description: Most designers and developers design for certain viewport sizes. Learn about why this is problematic and what to do instead.
 ---
 
-*First sent to my [private mailing list](/signup).*
-
 I see it all the time. Designers, and developers alike, setting breakpoints according to their favourite device. When will we learn from our past mistakes?
 
 When the web came along we settled on 640 pixel widths. Then a few years later, when larger monitors came to market, we settled on 960 pixels. We no longer cared about people with smaller monitors.

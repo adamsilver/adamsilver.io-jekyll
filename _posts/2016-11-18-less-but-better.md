@@ -7,8 +7,6 @@ published: false
 description: Practicing Less But Better in design, development, delivery  and life.
 ---
 
-*First sent to my [private mailing list](/signup).*
-
 There are times in life when you learn something new — a moment that sets you off down a different path. Maybe you always had it “in” you, but something triggered it. Maybe it was a culmination of things or maybe something else entirely.
 
 I think it happened to me when I was working with [Mark

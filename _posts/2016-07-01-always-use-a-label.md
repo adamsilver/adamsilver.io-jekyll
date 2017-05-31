@@ -6,8 +6,6 @@ categories: design ux
 description: Fields with missing labels cause problems. And yet, designers omit them all the time. Why?
 ---
 
-*First sent to my [private mailing list](/signup).*
-
 Designers often remove labels to create a minimal aesthetic and save space. However, [minimal doesn't always mean simple](http://uxmyths.com/post/115783813605/myth-34-simple-minimal). Labels are essential to the user experience.
 
 - Sighted users can see the instructions.

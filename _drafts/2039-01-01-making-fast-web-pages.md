@@ -90,33 +90,35 @@ Calm, relax. That was for me, not for you. I hope you found that as therapeutic 
 
 ## 2. Code techniques
 
-By simplifying the interface itself, we've drastically reduced the size of the code. But we're going to need to write code in the end. It's how we do this that has a direct impact on performance.
+By simplifying the interface itself, we've already  reduced the size of the code significantly. But We can go further.
 
 We'll want to:
 
-- use the right element
-- create lean HTML
 - use less third party code
 - use simple grid techniques
 - use content breakpoints
 - use preprocessors responsibly
 - create a design system
 
-### Use the right element
+### 1. Use the right element
 
-A `<button>` is half the size of `<div role="button" tabinidex="0">`, for example. Also, it doesn't require Javascript to make it accessible to keyboards and screen readers. Using the right element for the job often results in more performant code.
+For some reason, of which I can never understand, developers use the wrong element for the job. In doing so not only do they make interfaces less accessible, but they end up having to write more code to fix this.
 
-### Create lean HTML
+A `<button>`, for example, is not only half the size of `<div role="button" tabinidex="0">`. It doesn't require script to make it accessible again. Less code of course makes for better performance.
 
-More often than not developers shit out extra divs and spans like they're going out of fashion.
+### 2. Create lean HTML
 
-Extra elements have a domino effect in that they make pages slower to parse, slower to traverse with Javascript and slower to render with CSS.
+[Divitus](https://csscreator.com/divitis) is an antiquated buzzword, but its meaning is still prevalent today. Using the right element goes along way but it's too easy to unnecessarily add [extra elements](http://getbootstrap.com/components/#navbar-brand-image).
 
-Every element added should have a clear reason behind it's existence. Where possible design should be simplified anyway. In doing so, we'll need [less class names](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/) which speeds things up.
+Extra elements have a domino effect in that they make pages slower to parse, document trees slower to traverse and the screen slower to render. We should have a good reason for the existence of each element.
 
-### Use less third party code
+Like divitus, there is classitus. This means using too many classes which is normally an indicator of [non semantic class names](http://maintainablecss.com/chapters/semantics/).
 
-Twitter's tweet button script is 50k. We don't even need that script. We can use a link coming in at a few bytes.
+Where possible, we should simplify the design. In doing so we may be able to go further and [avoid class names](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/). In practice I've found this difficult but it's somethign to chew on.
+
+### 3. Use less third party code
+
+Twitter's tweet button script is 50k. We don't even need that script. Instead, a link is all we need to do the same thing and is a few bytes:
 
 	<a href="https://twitter.com/share?source=tweetbutton&text=&quot;Article title&quot;&via=adambsilver&url=http://adamsilver.io/">Tweet</a>
 

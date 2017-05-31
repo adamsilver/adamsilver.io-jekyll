@@ -6,8 +6,6 @@ categories: development html
 description: Browsers behave differently to each other. People often think this is a problem. It's not.
 ---
 
-*First sent to my [private mailing list](/signup).*
-
 You know, it’s funny, when the web came along, we used the medium of print to set expectations for how things should be.
 
 When you print out a business card it always looks the same, no matter who you are or where you are. It’s a physical thing.

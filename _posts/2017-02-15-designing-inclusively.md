@@ -6,8 +6,6 @@ categories: design
 description: 11 tips about how to design inclusively.
 ---
 
-*First sent to my [private mailing list](/signup).*
-
 Whilst the web is still young, it’s been around long enough for us to know about its power and its constraints. We know what these constraints are now because we’ve bent them so much over the years.
 
 Before CSS we used tables and spacer gifs for layout. Before border-radius we used background images for rounded corners.
