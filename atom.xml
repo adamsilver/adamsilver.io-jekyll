@@ -3,7 +3,7 @@
 	<title>Adam Silver: Designing simple, human and inclusive websites.</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2017-05-29T08:34:10+01:00</updated>
+	<updated>2017-05-31T21:00:12+01:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -116,9 +116,7 @@
 			<link href="https://adamsilver.io/articles/stop-using-device-breakpoints/"/>
 			<updated>2017-03-28T10:00:01+01:00</updated>
 			<id>https://adamsilver.io/articles/stop-using-device-breakpoints</id>
-			<content type="html">&lt;p&gt;&lt;em&gt;First sent to my &lt;a href=&quot;/signup&quot;&gt;private mailing list&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;I see it all the time. Designers, and developers alike, setting breakpoints according to their favourite device. When will we learn from our past mistakes?&lt;/p&gt;
+			<content type="html">&lt;p&gt;I see it all the time. Designers, and developers alike, setting breakpoints according to their favourite device. When will we learn from our past mistakes?&lt;/p&gt;
 
 &lt;p&gt;When the web came along we settled on 640 pixel widths. Then a few years later, when larger monitors came to market, we settled on 960 pixels. We no longer cared about people with smaller monitors.&lt;/p&gt;
 
@@ -180,9 +178,7 @@
 			<link href="https://adamsilver.io/articles/designing-inclusively/"/>
 			<updated>2017-02-15T09:00:01+00:00</updated>
 			<id>https://adamsilver.io/articles/designing-inclusively</id>
-			<content type="html">&lt;p&gt;&lt;em&gt;First sent to my &lt;a href=&quot;/signup&quot;&gt;private mailing list&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Whilst the web is still young, it’s been around long enough for us to know about its power and its constraints. We know what these constraints are now because we’ve bent them so much over the years.&lt;/p&gt;
+			<content type="html">&lt;p&gt;Whilst the web is still young, it’s been around long enough for us to know about its power and its constraints. We know what these constraints are now because we’ve bent them so much over the years.&lt;/p&gt;
 
 &lt;p&gt;Before CSS we used tables and spacer gifs for layout. Before border-radius we used background images for rounded corners.&lt;/p&gt;
 
@@ -297,9 +293,7 @@
 			<link href="https://adamsilver.io/articles/dont-initialise-javascript-automagically/"/>
 			<updated>2016-12-06T09:00:01+00:00</updated>
 			<id>https://adamsilver.io/articles/dont-initialise-javascript-automagically</id>
-			<content type="html">&lt;p&gt;&lt;em&gt;First sent to my &lt;a href=&quot;/signup&quot;&gt;private mailing list&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;I used to write Javascript that initialises components automagically. Don’t
+			<content type="html">&lt;p&gt;I used to write Javascript that initialises components automagically. Don’t
 worry I’ll explain what I mean. Take a look below:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;var datepickers = document.getElementsByClassName(‘datepicker’);
@@ -474,9 +468,7 @@ HTML isn’t good at defining behaviour. But Javascript is.&lt;/p&gt;
 			<link href="https://adamsilver.io/articles/semantic-class-names-are-you-being-too-generic-or-too-specific/"/>
 			<updated>2016-10-31T09:00:01+00:00</updated>
 			<id>https://adamsilver.io/articles/semantic-class-names-are-you-being-too-generic-or-too-specific</id>
-			<content type="html">&lt;p&gt;&lt;em&gt;First sent to my &lt;a href=&quot;/signup&quot;&gt;private mailing list&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Even if you’re completely sold on &lt;a href=&quot;http://maintainablecss.com/chapters/semantics/&quot;&gt;semantic class names&lt;/a&gt; and avoid stylistic and behavioural class names altogether, choosing a good class name is hard.&lt;/p&gt;
+			<content type="html">&lt;p&gt;Even if you’re completely sold on &lt;a href=&quot;http://maintainablecss.com/chapters/semantics/&quot;&gt;semantic class names&lt;/a&gt; and avoid stylistic and behavioural class names altogether, choosing a good class name is hard.&lt;/p&gt;
 
 &lt;p&gt;The problem boils down to naming your classes either too generically or too specifically. Both of which have pros and cons. But I like to think we can choose a class name without any cons. Let’s see.&lt;/p&gt;
 
@@ -573,9 +565,7 @@ HTML isn’t good at defining behaviour. But Javascript is.&lt;/p&gt;
 			<link href="https://adamsilver.io/articles/browsers-are-different-but-so-what/"/>
 			<updated>2016-09-01T10:00:01+01:00</updated>
 			<id>https://adamsilver.io/articles/browsers-are-different-but-so-what</id>
-			<content type="html">&lt;p&gt;&lt;em&gt;First sent to my &lt;a href=&quot;/signup&quot;&gt;private mailing list&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;You know, it’s funny, when the web came along, we used the medium of print to set expectations for how things should be.&lt;/p&gt;
+			<content type="html">&lt;p&gt;You know, it’s funny, when the web came along, we used the medium of print to set expectations for how things should be.&lt;/p&gt;
 
 &lt;p&gt;When you print out a business card it always looks the same, no matter who you are or where you are. It’s a physical thing.&lt;/p&gt;
 
@@ -848,9 +838,7 @@ separation of concerns between back-end and front-end. You don’t need to use a
 			<link href="https://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor/"/>
 			<updated>2016-07-15T10:00:01+01:00</updated>
 			<id>https://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor</id>
-			<content type="html">&lt;p&gt;&lt;em&gt;First sent to my &lt;a href=&quot;/signup&quot;&gt;private mailing list&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;There is this belief that the hand cursor means ‘clickable’, but this is incorrect and potentially problematic. My hope is that by the end of the article, you’ll never want to use the hand cursor for buttons ever again.&lt;/p&gt;
+			<content type="html">&lt;p&gt;There is this belief that the hand cursor means ‘clickable’, but this is incorrect and potentially problematic. My hope is that by the end of the article, you’ll never want to use the hand cursor for buttons ever again.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-hand-doesnt-mean-clickable&quot;&gt;The hand doesn’t mean clickable&lt;/h2&gt;
 
@@ -924,9 +912,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 			<link href="https://adamsilver.io/articles/always-use-a-label/"/>
 			<updated>2016-07-01T10:00:01+01:00</updated>
 			<id>https://adamsilver.io/articles/always-use-a-label</id>
-			<content type="html">&lt;p&gt;&lt;em&gt;First sent to my &lt;a href=&quot;/signup&quot;&gt;private mailing list&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Designers often remove labels to create a minimal aesthetic and save space. However, &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;minimal doesn’t always mean simple&lt;/a&gt;. Labels are essential to the user experience.&lt;/p&gt;
+			<content type="html">&lt;p&gt;Designers often remove labels to create a minimal aesthetic and save space. However, &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;minimal doesn’t always mean simple&lt;/a&gt;. Labels are essential to the user experience.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Sighted users can see the instructions.&lt;/li&gt;
