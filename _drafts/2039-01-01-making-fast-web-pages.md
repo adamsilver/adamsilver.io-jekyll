@@ -11,13 +11,13 @@ Instead of getting rid of the shit, we blame the page refresh. There's only one 
 
 However, AJAX still needs to render new (parts of) screens. More crucially it still has to make a request to the server. That's not all&mdash;there are penalties in using AJAX.
 
-First, making requests, handling different responses, traversing the Document and injecting HTML requires *more* code to be sent initially. This needs to be sent, evaluated and executed on the client.
+First, making requests, handling different responses, traversing the Document and injecting HTML requires *more* code to be sent initially. This also needs to be evaluated and executed on the client.
 
-Second, AJAX engineers away things the browser does for free, such as chunking and progressive rendering (more on this later). To avoid this problem we must resort to hacks that need even more code. Plus nobody uses the hack anyway.
+Second, AJAX engineers away things the browser does for free, such as progressive rendering (more on this later). To avoid this problem we must resort to hacks that need even more code. Plus nobody uses the hack anyway.
 
 Furthermore, we need to design and build a custom loading indicator. Not only is this yet more work and more code but they are a poor replacement for the ones provided by browsers.
 
-This is because a brower's indicator displays progress. That is, a user can tell how long until the request finishes. Custom spinners don't display progress, so users get frustrated and click again, causing their experience to slow down further.
+This is because a brower's indicator displays progress. That is, a user can tell how long until the request finishes. Custom spinners don't display progress, so users get frustrated and click again, causing further delays.
 
 Custom indicators are unfamiliar as they look different per site and are positioned differently. Browser indicators appear in the same place no matter the website. Familiarity and accuracy are two qualities often found in well-designed interfaces.
 
@@ -29,7 +29,7 @@ The real problem is that we have designed something that can never be fast. Ther
 
 ## 1. Simplify the interface
 
-The best way to make pages fast, is to have less on them. You'd be forgiven for wanting to punch me in the face for this statement as it's so obvious. Yet, look around, [web pages keep getting fatter](https://www.keycdn.com/support/the-growth-of-web-page-size/).
+The best way to make pages fast, is to have less on them. You'd be forgiven for wanting to punch me in the face as this is an obvious statement. Yet, look around, [web pages keep getting fatter](https://www.keycdn.com/support/the-growth-of-web-page-size/).
 
 Do we really need hero images, background videos and social media buttons plastered everywhere? The answer from the people is a resounding *no*. The fastest feature is the one we never build.
 
@@ -37,14 +37,11 @@ What about they way we design interfaces? Hamburger menus, tabs, carousels, acco
 
 What do these design patterns have in common? They hide stuff. Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity.
 
-If pages only contain the essential, then there is often nothing (or much less) that needs to be hidden. And despite the effort, making fully responsive and inclusive interface components is yet *more* code.
+If pages only contain the essential, then there is often nothing (or much less) that needs to be hidden. And despite the effort, making fully responsive and inclusive components is even *more* code.
 
-More code that users rarely appreciate. This is because:
+More code that users rarely appreciate anyway because the components cause performance issues and require the user to exert energy to reveal it.
 
-- these components cause slow loading and rendering
-- hiding things requires effort to reveal it
-
-Heydon Pickering coined the seemingly satirical term *Unprogressive Non-enhancement*. This is how he expains it:
+Heydon Pickering coined the seemingly satirical term *Unprogressive Non-enhancement*. This is how he explains it:
 
 > You take some structured content, which follows the vertical flow of the document in a way that everyone understands.
 
@@ -58,17 +55,15 @@ But letting things stack isn't our only option. We can chunk stuff across multip
 
 With regards to long complex forms (or even shortish ones for that matter) there is the [One Thing Per Page](https://www.smashingmagazine.com/2017/05/better-form-design-one-thing-per-page/) pattern which I've spoken and written about before.
 
-In fact I talk about it so much at work, that I'm even starting to do my own head in with it. I dread to ask my colleagues what they think of my repetitive verbal abuse.
-
-But I go on about it for good reason. If you're not aware of it, go have a read. It's worth it. Importantly, this pattern can be extended beyond forms.
+In fact I talk about it so much at work, that I'm even starting to do my own head in with it. I dread to ask my colleagues what they think of my repetitive verbal abuse. Importantly this pattern isn't reserved for forms.
 
 For example, imagine a product page containing 10 high-res photos, a description, an add to basket form, dimensions, shipping information, related products, ratings, comments, and reviews or what have you.
 
-Typically, the images are collapsed down into a carousel. Instead, load up one image and include a *show all* link. Clicking this link would naturally show a page with all the images on it.
+Typically, the images are collapsed down into a carousel. Instead, load up one image and include a *show all* link. Clicking this link would naturally show a page with all the images on it. This uses the natural building blocks of the web as a form of [progressive disclosure](https://medium.muz.li/design-technique-progressive-disclosure-1980def8dc97?gi=361cf4735361).
 
-This keeps the product page lightning fast. No images, means no need for a carousel. No carousel means far less code.
+This keeps the product page fast. No images, means no need for a carousel. No carousel means far less code.
 
-Also, the image page is as fast as it can be. Once again no carousel is needed.
+The image page is fast too. And again no carousel is needed. Use the inherent scrolling behaviour to browse the images with ease.
 
 Not only is this in all likeliness easier to use, but the user will expect *this* page to take a little longer to load. It contains images afterall.
 
@@ -76,7 +71,7 @@ Users don't always come to a product page and view everything. Giving users the 
 
 People on expensive data contracts benefit too. They can choose to see the images or wait until they are connected to WI-FI.
 
-It's also easier to share. Imagine sending the user to the product page in order for them to look at a particular photo within the carousel. When they arrive at the page that image won't be there. They'll have to swipe to discover it.
+It's easier to share too. Trying to share an image that resides within the third panel of a carousel is disorientating. They may have to swipe to see it which is a big ask.
 
 The same goes for tabs. If stuff is hidden by default, I would question just how important it is to the page. If the tab contains a little bit of content, just stack it. If not perhaps linking to a separate page will work well.
 
