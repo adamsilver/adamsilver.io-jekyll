@@ -29,11 +29,11 @@ The real problem is that we have designed something that can never be fast. Ther
 
 ## 1. Interface
 
-The best way to make pages fast, is to have less on them. You'd be forgiven for wanting to punch me in the face for this statement as it's so obvious. Yet, look around, web pages keep getting fatter.
+The best way to make pages fast, is to have less on them. You'd be forgiven for wanting to punch me in the face for this statement as it's so obvious. Yet, look around, [web pages keep getting fatter](https://www.keycdn.com/support/the-growth-of-web-page-size/).
 
 Do we really need hero images, background videos and social media buttons plastered everywhere? The answer from the people is a resounding *no*. The fastest feature is the one we never build.
 
-What about they we design interfaces? Hamburger menus, tabs, carousels, accordions, image galleries and expanding panels.
+What about they way we design interfaces? Hamburger menus, tabs, carousels, accordions, image galleries and expanding panels.
 
 What do these design patterns have in common? They hide stuff. Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity.
 
@@ -90,31 +90,34 @@ Calm, relax. That was for me, not for you. I hope you found that as therapeutic 
 
 ## 2. Code techniques
 
-By simplifying the interface itself, we've already  reduced the size of the code significantly. But We can go further.
-
-We'll want to:
+By simplifying the interface itself, we've already  reduced the size of the code significantly. But we can do more:
 
 - use less third party code
 - use simple grid techniques
 - use content breakpoints
 - use preprocessors responsibly
-- create a design system
 
-### 1. Use the right element
+### 1. Create lean HTML
 
-For some reason, of which I can never understand, developers use the wrong element for the job. In doing so not only do they make interfaces less accessible, but they end up having to write more code to fix this.
+For some reason, of which I can never understand, developers use the wrong element for the job. In doing so not only do they make interfaces inaccessible, but they fix this by writing yet more code.
 
-A `<button>`, for example, is not only half the size of `<div role="button" tabinidex="0">`. It doesn't require script to make it accessible again. Less code of course makes for better performance.
-
-### 2. Create lean HTML
+A `<button>`, for example, is not only half the size of `<div role="button" tabinidex="0">`. It doesn't require script and ARIA to make it accessible again. Less code of course makes for better performance.
 
 [Divitus](https://csscreator.com/divitis) is an antiquated buzzword, but its meaning is still prevalent today. Using the right element goes along way but it's too easy to unnecessarily add [extra elements](http://getbootstrap.com/components/#navbar-brand-image).
 
 Extra elements have a domino effect in that they make pages slower to parse, document trees slower to traverse and the screen slower to render. We should have a good reason for the existence of each element.
 
-Like divitus, there is classitus. This means using too many classes which is normally an indicator of [non semantic class names](http://maintainablecss.com/chapters/semantics/).
+Like divitus, there is classitus&mdash;which is the use of many [non-semantic class names](http://maintainablecss.com/chapters/semantics/) this is problematic for many reasons, not least of which it bloats HTML.
 
-Where possible, we should simplify the design. In doing so we may be able to go further and [avoid class names](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/). In practice I've found this difficult but it's somethign to chew on.
+Then there is the overzealous use of other attributes like [`<title>`](https://silktide.com/i-thought-title-text-improved-accessibility-i-was-wrong/). Then there is ARIA which we discussed just before. The first rule is not to use it. Not using it is less code.
+
+Using [HTML attributes to automagically initialise script](/articles/dont-initialise-javascript-automagically/) also increases the size of HTML (and has other problems too). I'm seeing a theme here.
+
+### 2. Simplify your design system
+
+If possible, simplifying the design system, may allow us to avoid [class names altogether]().
+
+For example, the design of public facing government services often have a very simple UI. Everything is aligned left, everything stacks, and there's very little going on. In this case, we can [avoid CSS classes](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/), further improving performance.
 
 ### 3. Use less third party code
 
@@ -138,10 +141,6 @@ If you don't use device breakpoints, then you'll only add break points when the 
 
 I count tell u the amount of times I've witnessed them used badly.  They make for a very bloated page. I'm not blaming the tool. It's the usage but it's still a cause of the problem. We take less responsible for what these things spit out the other end.
 
-### Design system
-
-Abstract all the common parts. In conjunction with previous point, put button in to a module of its own. Same class used everywhere. Good for gzip and CSS stays the same size. The module is reused.
-
 ## 3. Other
 
 - CQRS
@@ -152,6 +151,9 @@ Abstract all the common parts. In conjunction with previous point, put button in
 - http2 is faster
 - revving assets etc
 - gzip (design and code techniques help this technique, everything together helps)
+
+Abstract all the common parts. In conjunction with previous point, put button in to a module of its own. Same class used everywhere. Good for gzip and CSS stays the same size. The module is reused.
+
 - lower down the stack quote
 
 ---
@@ -194,6 +196,7 @@ Sometimes we even go one step further and put background videos on the screen; t
 
 ## TODO
 
+- death by a thousand cuts ben frain
 -tesco product list, lots of ajax calls versus form multi checkbox and a single submit.
 - columns
 - checkout heydonws menu article
