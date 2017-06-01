@@ -113,13 +113,17 @@ Then there is the overzealous use of other attributes like [`<title>`](https://s
 
 Using [HTML attributes to automagically initialise script](/articles/dont-initialise-javascript-automagically/) also increases the size of HTML (and has other problems too). I'm seeing a theme here.
 
+And whilst a codified grid system is rarely needed and often problematic in practice, if you need one you may consider far [more minimal approach](https://github.com/Heydon/fukol-grids).
+
 ### 2. Simplify your design system
 
-If possible, simplifying the design system, may allow us to avoid [class names altogether]().
+For example, the design of public-facing government services have a simple interface. Everything is aligned left and everything stacks naturally. In this case, we may be able to [avoid CSS classes altogether](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/). A simple interface is a performant one.
 
-For example, the design of public facing government services often have a very simple UI. Everything is aligned left, everything stacks, and there's very little going on. In this case, we can [avoid CSS classes](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/), further improving performance.
+### 3. Less script and less CSS
 
-### 3. Use less third party code
+Single page applications have several problems and performance is definitely one of those. See Jake's video for example as to the rendering speed of rendering on the client and requesting a new screen through AJAX.
+
+It's not just the act of rendering, it's the hit on downloading the framework itself too.
 
 Twitter's tweet button script is 50k. We don't even need that script. Instead, a link is all we need to do the same thing and is a few bytes:
 
@@ -128,10 +132,6 @@ Twitter's tweet button script is 50k. We don't even need that script. Instead, a
 Often, we start with libraries and frameworks before we understand the problem we're solving. These libraries and frameworks not only weigh a lot, but they need evaluating and executing.
 
 But just as often we don't actually need the thing. Get rid and only add something when you need it.
-
-### Grids
-
-(who needs a grid) https://github.com/Heydon/fukol-grids. Better if you don't have things in grids. Not talking visual grids. Talking about multiple columns. The code for a grid if you need for a product list is tiny
 
 ### Breakpoints
 
@@ -160,6 +160,7 @@ Abstract all the common parts. In conjunction with previous point, put button in
 
 ## 4. Images
 
+- use the right type of image
 - If you really can't remove
 - smush the shit
 - show thumbnails first and load all images like rightmove
@@ -180,6 +181,8 @@ Less weight, less complexity, less distraction, less bother, less bullshit.
 
 ## Links
 
+- JAKE ARCHIBALD RENDERING ON THE CLIENT GITHUB.
+
 - youmightnotneedjs.com
 - uncrate.com
 - http://openmymind.net/2012/5/30/Client-Side-vs-Server-Side-Rendering/
@@ -187,6 +190,7 @@ Less weight, less complexity, less distraction, less bother, less bullshit.
 -https://alistapart.com/article/planning-for-performance
 - https://boagworld.com/marketing/users-will-always-choose-the-easiest-option-so-if-we-want-a-competitive-advantage-we-must-focus-on-simplicity/
 - reference twitter and other articles moving away from client-side render.
+- who killed my battery.
 
 ## Other notes
 
