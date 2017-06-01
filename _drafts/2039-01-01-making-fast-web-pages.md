@@ -27,7 +27,7 @@ However, it's not a solution to slow-loading pages. At best it patches over the 
 
 The real problem is that we have designed something that can never be fast. Therefore, the real question is how do we make sure our websites are fast?
 
-## 1. Interface
+## 1. Simplify the interface
 
 The best way to make pages fast, is to have less on them. You'd be forgiven for wanting to punch me in the face for this statement as it's so obvious. Yet, look around, [web pages keep getting fatter](https://www.keycdn.com/support/the-growth-of-web-page-size/).
 
@@ -88,14 +88,9 @@ Scroll jacking, [floating labels](/articles/floating-labels-are-problematic/), [
 
 Calm, relax. That was for me, not for you. I hope you found that as therapeutic as I did. Let's continue.
 
-## 2. Code techniques
+## 2. Reduce code
 
 By simplifying the interface itself, we've already  reduced the size of the code significantly. But we can do more:
-
-- use less third party code
-- use simple grid techniques
-- use content breakpoints
-- use preprocessors responsibly
 
 ### 1. Create lean HTML
 
@@ -131,55 +126,47 @@ And whilst a codified grid system is rarely needed and often problematic in prac
 
 For example, the design of public-facing government services have a simple interface. Everything is aligned left and everything stacks naturally. In this case, we may be able to [avoid CSS classes altogether](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/). A simple interface is a performant one.
 
-### 3. Less script and less CSS
+### 3. Use less script
 
-Single page applications have several problems and performance is definitely one of those. See Jake's video for example as to the rendering speed of rendering on the client and requesting a new screen through AJAX.
+I've talked about the [problem with single page applications](/articles/the-disadvantages-of-single-page-applications/) before. Contrary to popular belief, they aren't necessarily faster. Using AJAX engineers away the ability to [chunk responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding#Chunked_encoding). See the video in [Jake's article for evidence](https://jakearchibald.com/2016/fun-hacks-faster-content/).
 
-It's not just the act of rendering, it's the hit on downloading the framework itself too.
+It's not just the act of rendering. The code required to create robust client-side applications is large in size too with all the same problems we've already discussed.
 
-Twitter's tweet button script is 50k. We don't even need that script. Instead, a link is all we need to do the same thing and is a few bytes:
+If we need a library, maybe we don't need the whole library. Don't put that burden on your users. Starting with an entire framework or library puts you on the back foot.
 
-	<a href="https://twitter.com/share?source=tweetbutton&text=&quot;Article title&quot;&via=adambsilver&url=http://adamsilver.io/">Tweet</a>
+Twitter's tweet [button script weighs 50k](http://www.heydonworks.com/article/look-at-this-shitty-tweet-button). We can do the same thing with 0 bytes with a simple href.
 
-Often, we start with libraries and frameworks before we understand the problem we're solving. These libraries and frameworks not only weigh a lot, but they need evaluating and executing.
+### 4. Use preprocessors responsibly
 
-But just as often we don't actually need the thing. Get rid and only add something when you need it.
+[Preprocessors are deceitful](https://jaketrent.com/post/cons-css-preprocessors/#file-size-is-deceiving). What looks like small code to begin with may end up huge after compilation.
 
-### Breakpoints
+### 5. Use content breakpoints
 
-If you don't use device breakpoints, then you'll only add break points when the content breaks. That's less code.
+Designing every screen and module to a predefined set of breakpoints is not only backwards, but it often results in more code.
 
-### Preprocessors
+Many a time, a module needs one breakpoint, or no breakpoints. Designing to predefined breakpoints also encourages the unnecessary tweaking of a design.
 
-I count tell u the amount of times I've witnessed them used badly.  They make for a very bloated page. I'm not blaming the tool. It's the usage but it's still a cause of the problem. We take less responsible for what these things spit out the other end.
+## 3. Optimise images
 
-## 3. Other
+Not everyone surfs the world western web on high quality devices. But if you really need that high resolution image:
 
-- CQRS
-- CAP
-- Edge caching
-- Chunking (Jake)
-- [Prefetch](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf)
-- http2 is faster
-- revving assets etc
-- gzip (design and code techniques help this technique, everything together helps)
+- [use the right image](https://www.sitepoint.com/gif-png-jpg-which-one-to-use/)
+- [smush the shit out of it](https://imageoptim.com/mac)
+- [use progressive rendering](https://blog.codinghorror.com/progressive-image-rendering/)
 
-Abstract all the common parts. In conjunction with previous point, put button in to a module of its own. Same class used everywhere. Good for gzip and CSS stays the same size. The module is reused.
+## 4. The other stuff
 
-- lower down the stack quote
+The following techniques are less to do with the user interface, and more to do with technology lower down the stack.
+
+CQRS makes database queries faster. If you're application is national or even global then users might benefit from edge caching.
+
+Enable chunking to show them what you got. Cache your assets so users don't have to download them again.
+
+Turn on Gzip (using a well-designed design system improves Gzip performance too) and use HTTP2.
+
+- Prefetch
 
 ---
-
-## 4. Images
-
-- use the right type of image
-- If you really can't remove
-- smush the shit
-- show thumbnails first and load all images like rightmove
-- or querystring to let user decide.
-- or prove that
-
-Got high Res images. Do u really need them? If so make sure u a) smush the shit out of them b) ask the user to download them thru a query string or send them to a dedicated page after displaying low Res thumbnails.  Old school technique. Good user experience. Test this though. But test it fairly. Don't compare this to large images on iPhone 79 on high speed world western web connections.
 
 ## What about *perceived* performance?
 
@@ -193,9 +180,6 @@ Less weight, less complexity, less distraction, less bother, less bullshit.
 
 ## Links
 
-- JAKE ARCHIBALD RENDERING ON THE CLIENT GITHUB.
-
-- youmightnotneedjs.com
 - uncrate.com
 - http://openmymind.net/2012/5/30/Client-Side-vs-Server-Side-Rendering/
 - https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf
@@ -204,17 +188,13 @@ Less weight, less complexity, less distraction, less bother, less bullshit.
 - reference twitter and other articles moving away from client-side render.
 - who killed my battery.
 
-## Other notes
+<!--
 
-It's why people ignore banner ads and second and third columns. More on that later.
-
-Sometimes we even go one step further and put background videos on the screen; to make an impact; to be different; to separate us from the competition. These sorts of things are not the mark of a positive user experience.
-
-## TODO
+- Banner blindness. Column blindness.
+http://usabilitygeek.com/ux-designers-ditch-sidebar-2016/
 
 - death by a thousand cuts ben frain
--tesco product list, lots of ajax calls versus form multi checkbox and a single submit.
-- columns
-- checkout heydonws menu article
-- not atomic, it's about lightweight html, because that's not cachable. It's dynamic and personalised.
+
 - visually controlled js implemented select box (features of highly effective forms aaron gust)
+
+-->
