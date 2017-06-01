@@ -141,6 +141,10 @@ Designing every screen and module to a predefined set of breakpoints is not only
 
 Many a time, a module needs one breakpoint, or no breakpoints. Designing to predefined breakpoints also encourages the unnecessary tweaking of a design.
 
+### 6. Place scripts at the bottom
+
+Oldie but goodie. You know what to do.
+
 ## 3. Images
 
 Not everyone surfs the [world western web](https://www.smashingmagazine.com/2017/03/world-wide-web-not-wealthy-western-web-part-1/) on high-end devices. But if you really need that high resolution image:
