@@ -99,19 +99,31 @@ By simplifying the interface itself, we've already  reduced the size of the code
 
 ### 1. Create lean HTML
 
-For some reason, of which I can never understand, developers use the wrong element for the job. In doing so not only do they make interfaces inaccessible, but they fix this by writing yet more code.
+Sometimes developers use the wrong element. A `<button>`, for example, is half the size of `<div role="button" tabinidex="0">` and doesn't require any script to make it accessible.
 
-A `<button>`, for example, is not only half the size of `<div role="button" tabinidex="0">`. It doesn't require script and ARIA to make it accessible again. Less code of course makes for better performance.
+[Divitus](https://csscreator.com/divitis) is an antiquated buzzword, but its meaning is still prevalent today. We often use [additional elements unncessarily](http://getbootstrap.com/components/#navbar-brand-image). Additional elements take longer to request, parse and render. Every element needs justification for its existence.
 
-[Divitus](https://csscreator.com/divitis) is an antiquated buzzword, but its meaning is still prevalent today. Using the right element goes along way but it's too easy to unnecessarily add [extra elements](http://getbootstrap.com/components/#navbar-brand-image).
+Classitus, is the use of extra classes. Extra classes may decrease CSS footprint, but signifcantly increases the HTML. Keeping HTML lean is important because unlike CSS, it can't be cached, because it often contains personalised and dynamic content.
 
-Extra elements have a domino effect in that they make pages slower to parse, document trees slower to traverse and the screen slower to render. We should have a good reason for the existence of each element.
+We may also find ourselves adding various [attributes in the name of accessibility]((https://silktide.com/i-thought-title-text-improved-accessibility-i-was-wrong/)). They aren't always valuable and add further weight to the page.
 
-Like divitus, there is classitus&mdash;which is the use of many [non-semantic class names](http://maintainablecss.com/chapters/semantics/) this is problematic for many reasons, not least of which it bloats HTML.
+Similarly, the first rule of ARIA is not to use it. To associate errors to a form control, we might use `aria-describedby` as follows:
 
-Then there is the overzealous use of other attributes like [`<title>`](https://silktide.com/i-thought-title-text-improved-accessibility-i-was-wrong/). Then there is ARIA which we discussed just before. The first rule is not to use it. Not using it is less code.
+	<label for="age">
+      Age
+	</label>
+	<div id="age_error">Enter your age</div>
+	<input id="age" aria-describedby="age_error">
 
-Using [HTML attributes to automagically initialise script](/articles/dont-initialise-javascript-automagically/) also increases the size of HTML (and has other problems too). I'm seeing a theme here.
+Instead put the error in the label:
+
+	<label for="age">
+      Age
+      <div>Enter your age</div>
+	</label>
+	<input id="age">
+
+Using [HTML attributes to automagically initialise script](/articles/dont-initialise-javascript-automagically/) also increases the size of HTML (and has other problems too).
 
 And whilst a codified grid system is rarely needed and often problematic in practice, if you need one you may consider far [more minimal approach](https://github.com/Heydon/fukol-grids).
 
