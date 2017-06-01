@@ -27,7 +27,7 @@ However, it's not a solution to slow-loading pages. At best it patches over the 
 
 The real problem is that we have designed something that can never be fast. Therefore, the real question is how do we make sure our websites are fast?
 
-## 1. Simplify the interface
+## 1. UI
 
 The best way to make pages fast, is to have less on them. You'd be forgiven for wanting to punch me in the face as this is an obvious statement. Yet, look around, [web pages keep getting fatter](https://www.keycdn.com/support/the-growth-of-web-page-size/).
 
@@ -83,7 +83,7 @@ Scroll jacking, [floating labels](/articles/floating-labels-are-problematic/), [
 
 Calm, relax. That was for me, not for you. I hope you found that as therapeutic as I did. Let's continue.
 
-## 2. Reduce code
+## 2. Code
 
 By simplifying the interface itself, we've already  reduced the size of the code significantly. But we can do more:
 
@@ -141,41 +141,42 @@ Designing every screen and module to a predefined set of breakpoints is not only
 
 Many a time, a module needs one breakpoint, or no breakpoints. Designing to predefined breakpoints also encourages the unnecessary tweaking of a design.
 
-## 3. Optimise images
+## 3. Images
 
-Not everyone surfs the world western web on high quality devices. But if you really need that high resolution image:
+Not everyone surfs the [world western web](https://www.smashingmagazine.com/2017/03/world-wide-web-not-wealthy-western-web-part-1/) on high-end devices. But if you really need that high resolution image:
 
 - [use the right image](https://www.sitepoint.com/gif-png-jpg-which-one-to-use/)
 - [smush the shit out of it](https://imageoptim.com/mac)
 - [use progressive rendering](https://blog.codinghorror.com/progressive-image-rendering/)
 
-## 4. The other stuff
+## 4. Backend
 
-The following techniques are less to do with the user interface, and more to do with technology lower down the stack.
+CQRS makes querying databases fast.
 
-CQRS makes database queries faster. If you're application is national or even global then users might benefit from edge caching.
+Edge caching reduces network latency by physically bringing various assets and pages closer to the user.
 
-Enable chunking to show them what you got. Cache your assets so users don't have to download them again.
+Enable chunking and allow progressive rendering. Don't engineer it away with too much AJAX.
 
-Turn on Gzip (using a well-designed design system improves Gzip performance too) and use HTTP2.
+Cache assets with long expiry dates so that users don't have to download assets again.
 
-- Prefetch
+Use HTTP2 and Gzip. Gzip by the way works better with a well-designed consistent design system.
 
----
-
-## What about *perceived* performance?
-
-And that’s not all. Unlike aiming for ‘perceived’ performance gains — where you still send the same quantity of code but you chew it up first (ed: seriously) — you can actually make your Web Stuff cheaper to use. My data contract doesn’t care whether you send small chunks or one large chunk; it all adds up the same.
-
-My favorite thing about aiming to have less stuff is this: you finish up with only the stuff you really need — only the stuff your user actually wants.
+Addy Osmani discusses the performance benefits of [preload and prefetch](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf): *preload resources you have high-confidence will be used in the current page. Prefetch resources likely to be used for future navigations across multiple navigation boundaries.*
 
 ## Summary
 
-Less weight, less complexity, less distraction, less bother, less bullshit.
+Each of these improvements come together to form a simple experience that is fast. Fast experiences make users feel awesome.
+
+You know what's better than perceived performance? Actual performance. By removing the clutter and optimising the foundations of a system, we nip performance issues in the bud.
+
+We avoid techniques that merely provide a mirage of speed.
+
+Less weight, less complexity, less distraction, less bother, less bull shit. Nice.
+
+<!--
 
 ## Links
 
-- uncrate.com
 - http://openmymind.net/2012/5/30/Client-Side-vs-Server-Side-Rendering/
 - https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf
 -https://alistapart.com/article/planning-for-performance
@@ -183,12 +184,14 @@ Less weight, less complexity, less distraction, less bother, less bullshit.
 - reference twitter and other articles moving away from client-side render.
 - who killed my battery.
 
-<!--
+- uncrate.com
+
+- death by a thousand cuts ben frain
 
 - Banner blindness. Column blindness.
 http://usabilitygeek.com/ux-designers-ditch-sidebar-2016/
 
-- death by a thousand cuts ben frain
+
 
 - visually controlled js implemented select box (features of highly effective forms aaron gust)
 
