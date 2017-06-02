@@ -15,13 +15,13 @@ First, making requests, handling different responses, traversing the Document an
 
 Second, AJAX engineers away things the browser does for free, such as progressive rendering (more on this later). To avoid this problem we must resort to hacks that need even more code. Plus nobody uses the hack anyway.
 
-Furthermore, we need to design and build a custom loading indicator. Not only is this yet more work and more code but they are a poor replacement for the ones provided by browsers.
+And, we need to design and build a custom loading indicator. Not only is this yet more work and more code but they are a poor replacement for the ones provided by browsers.
 
-This is because a brower's indicator displays progress. That is, a user can tell how long until the request finishes. Custom spinners don't display progress, so users get frustrated and click again, causing further delays.
+A brower's indicator displays progress. That is, a user can tell how long until the request finishes. Custom spinners don't display progress, so users get frustrated and click again, causing further delays.
 
 Custom indicators are unfamiliar as they look different per site and are positioned differently. Browser indicators appear in the same place no matter the website. Familiarity and accuracy are two qualities often found in well-designed interfaces.
 
-This is not to say that AJAX is *bad*. AJAX is a useful enhancement depending on the situation because it avoids repetitively requesting and re-evaluating client-side assets.
+This doesn't mean AJAX is *bad*. AJAX is a useful depending on the situation as it avoids repetitively requesting and re-evaluating client-side assets.
 
 However, it's not a solution to slow-loading pages. At best it patches over the real problems that lie beneath.
 
@@ -29,17 +29,15 @@ The real problem is that we have designed something that can never be fast. Ther
 
 ## 1. UI
 
-The best way to make pages fast, is to have less on them. You'd be forgiven for wanting to punch me in the face as this is an obvious statement. Yet, look around, [web pages keep getting fatter](https://www.keycdn.com/support/the-growth-of-web-page-size/).
+The best way to make pages fast, is to have less on them. You'd be forgiven for wanting to punch me in the face as this is obvious. Yet, look around, [web pages keep getting fatter](https://www.keycdn.com/support/the-growth-of-web-page-size/).
 
-Do we really need hero images, background videos and social media buttons plastered everywhere? The answer from the people is a resounding *no*. The fastest feature is the one we never build.
+Do we need hero images, background videos and social media buttons plastered everywhere? The answer from the people is a resounding *no*. The fastest feature is the one we never built.
 
-What about they way we design interfaces? Hamburger menus, tabs, carousels, accordions, image galleries and expanding panels.
+What about the way we design components? Hamburger menus, tabs, carousels, accordions, image galleries and expanding panels. All these things have one thing in common. They hide stuff.
 
-What do these design patterns have in common? They hide stuff. Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity.
+Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity. If pages only contain the essential, then there is nothing (or much less) that needs to be hidden. 
 
-If pages only contain the essential, then there is often nothing (or much less) that needs to be hidden. And despite the effort, making fully responsive and inclusive components is even *more* code.
-
-More code that users rarely appreciate anyway because the components cause performance issues and require the user to exert energy to reveal it.
+And despite the effort, making fully responsive and inclusive components is even *more* code that users rarely appreciate. Afterall, it slows the page down and requires the user to exert energy to reveal the hidden content.
 
 Heydon Pickering coined the seemingly satirical term *Unprogressive Non-enhancement*. This is how he explains it:
 
@@ -49,19 +47,19 @@ Heydon Pickering coined the seemingly satirical term *Unprogressive Non-enhancem
 
 > Or if they're using a touch device, simply flicking backwards and forwards in that easy way that we've all become used to. **What you do is you take that, and you fucking well leave it alone.**
 
-Letting things stack naturally like this is an excellent start. Not only does this embrace the way the web works&mdash;not only does it make access remarkably easy&mdash;it's also extremely performant.
+Letting things stack naturally is an excellent start. Not only does this embrace the way the web works&mdash;and not only does it make access remarkably easy&mdash;it's also performant.
 
 But letting things stack isn't our only option. We can chunk stuff across multiple pages. Once pages have little on them, the page refresh "problem" is no longer a problem. Pages are fast by default and by design.
 
-With regards to long complex forms (or even shortish ones for that matter) there is the [One Thing Per Page](https://www.smashingmagazine.com/2017/05/better-form-design-one-thing-per-page/) pattern which I've spoken and written about before.
+With regards to long complex forms (or even shortish ones for that matter) we can use [One Thing Per Page](https://www.smashingmagazine.com/2017/05/better-form-design-one-thing-per-page/) which I've spoken and written about before.
 
 In fact I talk about it so much at work, that I'm even starting to do my own head in with it. I dread to ask my colleagues what they think of my repetitive verbal abuse. Importantly this pattern isn't reserved for forms.
 
-For example, imagine a product page containing 10 high-res photos, a description, an add to basket form, dimensions, shipping information, related products, ratings, comments, and reviews or what have you.
+For example, imagine a product page containing 10 high-resolution photos, a description, an add to basket form, dimensions, shipping information, related products, ratings, comments, and reviews etc.
 
-Typically, the images are collapsed down into a carousel. Instead, load up one image and include a *show all* link. Clicking this link would naturally show a page with all the images on it. This uses the natural building blocks of the web as a form of [progressive disclosure](https://medium.muz.li/design-technique-progressive-disclosure-1980def8dc97?gi=361cf4735361).
+Typically, the images are collapsed into a carousel. Instead, load up one image and include a *show all* link. Clicking this would show a page with all the images on it. This uses the natural building blocks of the web as a form of [progressive disclosure](https://medium.muz.li/design-technique-progressive-disclosure-1980def8dc97?gi=361cf4735361).
 
-This keeps the product page fast. No images, means no need for a carousel. No carousel means far less code.
+This results in a fast product page as there are less images and no need for a complex code ridden carousel.
 
 The image page is fast too. And again no carousel is needed. Use the inherent scrolling behaviour to browse the images with ease.
 
