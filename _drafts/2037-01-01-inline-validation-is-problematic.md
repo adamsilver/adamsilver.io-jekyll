@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Live validation is problematic
+title: Inline validation is problematic
 date: 2037-01-01 09:00:01
 categories: js
 ---
@@ -17,17 +17,27 @@ We can wait until the user has entered enough characters before showing an error
 
 Alternatively, we can provide feedback when the user leaves the field (`onblur`) but this is too late. The user has already started to mentally prepare for (and to fill out) the next field.
 
-Also many people switch windows or use password managers to assist in filling out forms. Leaving the field (which triggers the blur event) causes an error to show prematurely before the user finishes typing.
+Many people switch windows or use password managers to assist in filling out forms. Leaving the field (which triggers the blur event) causes an error to show prematurely before the user finishes typing.
 
-That's not all. 
+<div class="image">
+	<figure>
+		<img src="{{ site.url }}/assets/img/inline-validation/01-first-key-stroke.gif" alt="" width="100%" style="max-width: 500px;">
+		<figcaption>No space for hint</figcaption>
+	</figure>
+</div>
 
-Tabbing to the next field causes an error in the first. The user is now prompted to fix that error. They leave that field to fix the error in the first. Now the user has two errors to fix and they are not completely to blame.
+Furthermore, tabbing to the next field causes an error in the first. The user is now prompted to fix that error. They leave that field to fix the error in the first. Now the user has two errors to fix and they are not completely to blame.
 
 ## 3. Visual glitches are disorientating
 
 When a field switches between valid and invalid, the error appears and disappears. This causes a page judder which is disorientating, particularly for low-confidence users or those with disabilities. Here's an example:
 
-![Live feedback can cause the page to judder](/assets/img/live.gif)
+<div class="image">
+	<figure>
+		<img src="{{ site.url }}/assets/img/inline-validation/04-judder.gif" alt="" width="100%" style="max-width: 500px;">
+		<figcaption>No space for hint</figcaption>
+	</figure>
+</div>
 
 Ideally error messages should be hidden as the user starts to fix the field&mdash;either `onfocus` or `onkeypress`. However, this causes the page to judder more often&mdash;when the user enters an erroneous field *and* when they leave a field in an invalid state.
 
@@ -39,7 +49,12 @@ The problem is that each of the separate controls needs to be considered as a wh
 
 As the user checks and leaves the first checkbox, it's impossible to know that this constitutes an error. Or a date of birth field as follows:
 
-![Date of birth](/assets/img/dob.png)
+<div class="image">
+	<figure>
+		<img src="{{ site.url }}/assets/img/inline-validation/03-date.png" alt="" width="100%" style="max-width: 500px;">
+		<figcaption>No space for hint</figcaption>
+	</figure>
+</div>
 
 As the user leaves the day box, the field is instantly invalid. You could validate when the last box is blurred but that doesn't entirely solve the problem. What if, for example, someone leaves the first box empty, and then tabs onto month.
 
@@ -69,21 +84,34 @@ Many users have their head down focussed on the keyboard&mdash;that is most peop
 
 Apart from overzealous interruption, live validation causes users to constantly switch mental contexts between *filling in form* and *fixing a form*. This is yet another source of friction.
 
-## A hybrid approach?
+## 10. Marking success is confusing
 
-In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach which provides feedback *after* the user first submits the form. The idea being that once the user is actively fixing errors, live validation becomes less troublesome.
+[Luke Wobrelski's testing](https://alistapart.com/article/inline-validation-in-web-forms) showed that users weren't sure how to interpret a tick. He says the *participants knew we had no way to know their correct name or postal code, so they knew that the green check mark didn’t mean “correct.” But they weren’t sure and that was the problem.*
 
-This is true, but having discussed this with Heydon, we agreed that most of the problems still apply.
+## Inline validation after submitting errors
+
+In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach which shows errors *after* the user first submits the form. The idea being that once the user is actively fixing errors, inline validation is less problematic. This is certainly true, most of the problems still apply.
 
 ## Summary
 
-I would go as far to say that designing the *perfect* live validation experience is nigh on impossible. And any potential benefit is outweighed by the significant problems it causes.
+Whilst there is some evidence that inline validation is helpful in some cases, using it on occasion creates an inconsistency. Whilst consistency is not the only quality in well-design interfaces, this inconsistency is confusing.
 
-There are easier and better ways to improve forms. We can shorten forms by removing superfluous fields. And we can split long forms up using the [One Thing Per Page]() design pattern.
+In any case, designing the *perfect* inline validation experience is nigh on impossible. And any potential benefit is outweighed by the significant problems it creates.
 
-As long as we ensure our forms have sufficient labelling&mdash;and as long as we ensure errors are easy to fix&mdash;users will have little trouble. Validating `onsubmit` avoids many problems and keeps the experience consistent, familiar and friendly.
+If we do everything else right&mdash;remove unnecesary fields, use clear labels, keep forms short with One Thing Per Page etc&mdash;then our forms will have minimum friction anyway.
+
+Validating on submit avoids all these problems and creates a consistent, familiar and friendly experience.
+
+
 
 <!--
+
+“It’s frustrating that you don’t get the chance to put anything in [the field] before it’s flashing red at you.”
+
+“When I clicked in the First Name field, it immediately came up saying that [my first name] is too short. Well of course it is! I haven’t even started!”
+
+“I found it quite annoying how red crosses came up when you hadn’t finished typing. It’s just really distracting.”
+
 E.g. blur tab error issue https://www.wayfair.co.uk/v/checkout/authentication/register
 
 If going to do Ajax then it's not instant and could slow users down. And then user has to do two server calls. One for Ajax for each field and one for whole submission.
