@@ -17,21 +17,19 @@ Second, AJAX engineers away things the browser does for free, such as progressiv
 
 And, we need to design and build a custom loading indicator. Not only is this yet more work and more code but they are a poor replacement for the ones provided by browsers.
 
-A brower's indicator displays progress. That is, a user can tell how long until the request finishes. Custom spinners don't display progress, so users get frustrated and click again, causing further delays.
+A browser's indicator displays progress. That is, a user can tell how long until the request finishes. Custom spinners don't display progress, so users get frustrated and click again causing further delays.
 
 Custom indicators are unfamiliar as they look different per site and are positioned differently. Browser indicators appear in the same place no matter the website. Familiarity and accuracy are two qualities often found in well-designed interfaces.
 
-This doesn't mean AJAX is *bad*. AJAX is a useful depending on the situation as it avoids repetitively requesting and re-evaluating client-side assets.
+This doesn't mean AJAX is *bad*. AJAX is useful depending on the situation as it avoids requesting the same assets over and over. But it's not a solution to slow-loading pages. At best it patches over the problems that lie beneath.
 
-However, it's not a solution to slow-loading pages. At best it patches over the real problems that lie beneath.
-
-The real problem is that we have designed something that can never be fast. Therefore, the real question is how do we make sure our websites are fast?
+The real problem is that we have designed something that can never be fast. Therefore, the question is how do we make sure our websites are fast?
 
 ## 1. UI
 
-The best way to make pages fast, is to have less on them. You'd be forgiven for wanting to punch me in the face as this is obvious. Yet, look around, [web pages keep getting fatter](https://www.keycdn.com/support/the-growth-of-web-page-size/).
+The best way to make pages fast, is to have less on them. You'd be forgiven for wanting to punch me in the face as this is obvious. Yet, [web pages keep getting fatter and fatter](https://www.keycdn.com/support/the-growth-of-web-page-size/).
 
-Do we need hero images, background videos and social media buttons plastered everywhere? The answer from the people is a resounding *no*. The fastest feature is the one we never built.
+Do we need background videos, modal windows and social media buttons plastered everywhere? The answer from the people is a resounding *no*. The fastest feature is the one we never even built.
 
 What about the way we design components? Hamburger menus, tabs, carousels, accordions, image galleries and expanding panels. All these things have one thing in common. They hide stuff.
 
@@ -53,13 +51,13 @@ But letting things stack isn't our only option. We can chunk stuff across multip
 
 With regards to long complex forms (or even shortish ones for that matter) we can use [One Thing Per Page](https://www.smashingmagazine.com/2017/05/better-form-design-one-thing-per-page/) which I've spoken and written about before.
 
-In fact I talk about it so much at work, that I'm even starting to do my own head in with it. I dread to ask my colleagues what they think of my repetitive verbal abuse. Importantly this pattern isn't reserved for forms.
+In fact I talk about it so much at work, that I'm even starting to do my own head in with it. I dread to ask my colleagues what they think of my repetitive drone which they probably see as verbal abuse. 
 
-For example, imagine a product page containing an image carousel with 10 high-resolution photos, a description, an add to basket form, dimensions, shipping information, related products, ratings, comments, and reviews etc.
+Importantly this pattern isn't reserved for forms. Take a product page containing an image carousel with 10 high-resolution photos, a description, an add to basket form, dimensions, shipping information, related products, ratings, comments, and reviews etc.
 
-Users don't always come to a product page and view everything. Instead give users the choice to drill down further. Give users one high quality image and offer a *show all* link. Clicking it would naturally show all the images. And as it's on a page of it's own, there is no need to collapse it.
+Users don't always come to a product page and view everything. Instead give users the choice to drill down further. Give users one high quality image and let users click *show all* which would show all the images. As it's on a page of it's own, there is no need to collapse it.
 
-This uses the natural building blocks of the web as a form of [progressive disclosure](https://medium.muz.li/design-technique-progressive-disclosure-1980def8dc97?gi=361cf4735361). Ultimately this speeds things up drastically and scrolling is the most natural interaction on the web.
+This uses the natural building blocks of the web as a form of [progressive disclosure](https://medium.muz.li/design-technique-progressive-disclosure-1980def8dc97?gi=361cf4735361). Ultimately this speeds things up drastically and scrolling is the most used and natural interaction on the web.
 
 People on expensive data contracts benefit too. They can choose to see all the images or wait until they are connected to WI-FI.
 
