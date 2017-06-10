@@ -33,7 +33,7 @@ Do we need background videos, modal windows and social media buttons plastered e
 
 What about the way we design components? Hamburger menus, tabs, carousels, accordions, image galleries and expanding panels. All these things have one thing in common. They hide stuff.
 
-Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity. If pages only contain the essential, then there is nothing (or much less) that needs to be hidden. 
+Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity. If pages only contain the essential, then there is nothing (or much less) that needs to be hidden.
 
 And despite the effort, making fully responsive and inclusive components is even *more* code that users rarely appreciate. Afterall, it slows the page down and requires the user to exert energy to reveal the hidden content.
 
@@ -45,13 +45,13 @@ Heydon Pickering coined the seemingly satirical term *Unprogressive Non-enhancem
 
 > Or if they're using a touch device, simply flicking backwards and forwards in that easy way that we've all become used to. **What you do is you take that, and you fucking well leave it alone.**
 
-Letting things stack naturally is an excellent start. Not only does this embrace the way the web works&mdash;and not only does it make access remarkably easy&mdash;it's also performant.
+Letting things stack naturally is the perfect start. Not only does this embrace the way the web works&mdash;it makes for a remarkably accessible and fast experience.
 
-But letting things stack isn't our only option. We can chunk stuff across multiple pages. Once pages have little on them, the page refresh "problem" is no longer a problem. Pages are fast by default and by design.
+Letting things stack isn't our only option. We can chunk stuff across multiple pages. Once pages have little on them the page refresh ‘problem’ is no longer a problem. Pages are fast by default and by design.
 
 With regards to long complex forms (or even shortish ones for that matter) we can use [One Thing Per Page](https://www.smashingmagazine.com/2017/05/better-form-design-one-thing-per-page/) which I've spoken and written about before.
 
-In fact I talk about it so much at work, that I'm even starting to do my own head in with it. I dread to ask my colleagues what they think of my repetitive drone which they probably see as verbal abuse. 
+In fact I talk about it so much at work, that I'm even starting to do my own head in with it. I dread to ask my colleagues what they think of my repetitive drone which they probably see as verbal abuse.
 
 Importantly this pattern isn't reserved for forms. Take a product page containing an image carousel with 10 high-resolution photos, a description, an add to basket form, dimensions, shipping information, related products, ratings, comments, and reviews etc.
 
@@ -131,7 +131,7 @@ Many a time, a module needs one breakpoint, or no breakpoints. Designing to pred
 
 ### 6. Place scripts at the bottom
 
-Nothing more to say here.
+Place scripts at the bottom and consider `async` and `defer` attributes ons script tags. Async is good for completley independent scripts that can run later like analytics. Defer is good for X.
 
 ## 3. Images
 
