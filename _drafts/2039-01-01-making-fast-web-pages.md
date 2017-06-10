@@ -75,7 +75,7 @@ Scroll jacking, [floating labels](/articles/floating-labels-are-problematic/), [
 
 By simplifying the interface itself, we've reduced the size of the code significantly. But we can do more:
 
-### 1. Create lean HTML
+### A) Create lean HTML
 
 Sometimes developers use the wrong element. A `<button>`, for example, is half the size of `<div role="button" tabinidex="0">` and doesn't require any script to make it accessible again.
 
@@ -103,13 +103,15 @@ Instead put the error in the label which is much smaller and more inclusive:
 
 Using [HTML attributes to automagically initialise script](/articles/dont-initialise-javascript-automagically/) also increases the size of HTML (and has other problems too).
 
-And whilst a codified grid system is rarely needed, if you need one you may consider a [more minimal approach](https://github.com/Heydon/fukol-grids). You don't need a framework, but more on this shortly.
+Whilst a codified grid system is rarely needed, if you need one you may consider a [more minimal approach](https://github.com/Heydon/fukol-grids). You don't need a framework, but more on this shortly.
 
-### 2. Simplify your design system
+And, on't add hooks in HTML just for automated testing. Use semantic hooks that serve everyone's purpose equally.
+
+### B) Simplify your design system
 
 For example, the design of public-facing government services have a simple interface. Everything is aligned left and everything stacks naturally. In this case, we may be able to [avoid CSS classes altogether](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/). A simple interface is a performant one.
 
-### 3. Use less script
+### C) Use less script
 
 I've talked about the [problem with single page applications](/articles/the-disadvantages-of-single-page-applications/) before. Contrary to popular belief, they aren't necessarily faster. Using AJAX, engineers away [chunk responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding#Chunked_encoding). See [how AJAX requests are slower on Github](https://jakearchibald.com/2016/fun-hacks-faster-content/).
 
@@ -119,17 +121,17 @@ But maybe we don't need the whole library. Don't put that burden on your users. 
 
 [Twitter's tweet button script weighs 50k](http://www.heydonworks.com/article/look-at-this-shitty-tweet-button). We can do the same thing with 0 bytes of script by using a simple link.
 
-### 4. Use preprocessors responsibly
+### D) Use preprocessors responsibly
 
 [Preprocessors deceitful produce large CSS files](https://jaketrent.com/post/cons-css-preprocessors/#file-size-is-deceiving).
 
-### 5. Use content breakpoints
+### E) Use content breakpoints
 
 Designing every screen and module to a predefined set of breakpoints is not only backwards, but it can result in more code.
 
 Many a time, a module needs one breakpoint, or no breakpoints. Designing to predefined breakpoints encourages the unnecessary tweaking of a design.
 
-### 6. Place scripts at the bottom
+### F) Place scripts at the bottom
 
 Place scripts at the bottom and consider `async` and `defer` attributes ons script tags. Async is good for completley independent scripts that can run later like analytics. Defer is good for X.
 
@@ -145,7 +147,11 @@ Not everyone surfs the [world western web](https://www.smashingmagazine.com/2017
 
 CQRS makes querying databases fast.
 
+(Command Query Responsibility Segregation is a recommended architectural pattern for sites that have more reads (GET) than writes (POST). The premise here is that reads are really fast and come from read representations of your data whereas writes are asynchronous meaning that you have to cater for eventual consistency. Eventual consistency (staleness of data) is normally a good trade off for performance and scalability. Some engineers struggle with the idea of having data duplicated across multiple stores - but this architectural pattern promotes multiple read representations of the same data in multiple types of stores. The server should not be working out what to present at run-time, almost every page’s data is saved in a database, typically a key-value store. This keeps the server code very simple (it’s a simple data bind) and you can have all your complex logic in creating those read representations that execute asynchronously whenever you see a change in your domain model (events). This model also works well with edge caching (CDNs) where you can effectively save read representations of your data i.e. web pages closer to the user.)
+
 Edge caching reduces network latency by physically bringing various assets and pages closer to the user.
+
+(Use a CDN (Content Delivery Network) for your static resources and scripts. You can place your webserver behind the CDN and cache almost everything including the generated HTML. Design for browser and edge (CDN) caching your page; set up your server to add HTTP Cache-Control headers and configure your CDN to honour these cache headers. This does not just apply to assets e.g. images, fonts and styles, but the HTML and AJAX responses too. This will ensure a scalable and robust design whereby your web servers will be doing less. You can also cache AJAX responses at the edge for a shorter time again specified by cache control directives.)
 
 Enable chunking and allow progressive rendering. Don't engineer it away by using AJAX.
 
@@ -153,7 +159,17 @@ Cache assets with long expiry dates so that users don't have to download assets 
 
 Use HTTP2 and Gzip. Gzip by the way works better with a well-designed consistent design system, as the more HTML that is repeated the better the compression.
 
+(Use HTTPS (HTTP2 if available) and Gzip compression to optimize download, it’s a no-brainer. Gzip compression can also be enabled on the edge (some CDN solutions provide this).)
+
 Addy Osmani discusses benefits of [preload and prefetch](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf): *preload resources you have high-confidence will be used in the current page. Prefetch resources likely to be used for future navigations across multiple navigation boundaries.*
+
+Stateless backend
+
+(Design the backend to be completely stateless i.e. no session or in-memory state on the server. State is passed back to the browser which is sent to the server on every request - i.e. aiming for a more RESTful design. This also applies to authentication cookies, anti-forgery tokens, etc. This allows the backend to seamlessly scale out or in, horizontally with traffic. If possible, split the backend into micro-sites based on context and employ a reverse proxy - you will find that you may be able to host parts of your site as static. )
+
+Authentication
+
+(Authentication can be handled via OpenID Connect authorization or hybrid flows if you have a backend server that can issue encrypted secure cookies over HTTPS, or implicit flow if you do not have a server and have to adopt the SPA model. With OpenID Connect, depending on what flow you wish to implement, the identity servers issue a code or access and id tokens that are signed and have an expiry. Your server has the responsibility of validating a provided token or exchanging a code for a token, extracting the identity in the form of claims and optionally issuing your own secure cookie for your site. Use an identity server or federate identity to trusted identity providers for authentication/authorization; please, please don’t engineer your own solution for authentication or security.)
 
 ## Summary
 
