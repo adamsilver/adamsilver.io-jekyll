@@ -90,6 +90,10 @@ Apart from overzealous interruption, live validation causes users to constantly 
 
 In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach which shows errors *after* the user first submits the form. The idea being that once the user is actively fixing errors, inline validation is less problematic. This is true, but most of the problems still apply.
 
+## 11. Problems for screen reader users
+
+When someone is using a screen reader they may want to go through the form fields to get a feel for what is coming before attempting to fill each field out. Depending on the implementation, this could cause a form full of errors before the user even decided to start.
+
 ## Summary
 
 Whilst there is some evidence that inline validation is helpful in some cases, using it on occasion creates an inconsistency. Whilst consistency is not the only quality in well-design interfaces, this inconsistency is confusing.
@@ -111,4 +115,6 @@ Validating on submit avoids all these problems and creates a consistent, familia
 E.g. blur tab error issue https://www.wayfair.co.uk/v/checkout/authentication/register
 
 If going to do Ajax then it's not instant and could slow users down. And then user has to do two server calls. One for Ajax for each field and one for whole submission.
+
+https://simplyaccessible.com/article/accessible-forms-angular/
 -->
