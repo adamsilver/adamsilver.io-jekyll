@@ -4,6 +4,12 @@ title: complicated
 date: 2015-01-01 09:00:01
 ---
 
+At school, we're taught to be cleverer.
+
+At school they teach u to advance ur vocab. Using a thesaurus gets you bonus points.
+
+--
+
 More interestingly though is *why* do we do this. As I have an unhealthy obsession for simplicity, I've managed to research and consciously observe people practicing the are of complicating things. Here's some notes on the matter:
 
 1. We, people that is, have a complex about doing more. Mark Jenkins wrote an article about two different designers and how their approach and the resulting contribution sets them apart. In short, we as humans always want to do more and we worry about our own contribution. The more we contribute the better we feel. But this is often counterproductive.
