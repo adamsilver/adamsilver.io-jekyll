@@ -190,7 +190,7 @@ Less weight, less complexity, less distraction, less bother, less bull shit. Nic
 -https://alistapart.com/article/planning-for-performance
 - https://boagworld.com/marketing/users-will-always-choose-the-easiest-option-so-if-we-want-a-competitive-advantage-we-must-focus-on-simplicity/
 - reference twitter and other articles moving away from client-side render.
-- who killed my battery.
+- who killed my battery.http://cdn.oreillystatic.com/en/assets/1/event/79/Who%20Killed%20My%20Battery_%20Analyzing%20Mobile%20Browser%20Energy%20Consumption%20Presentation.pdf
 
 - uncrate.com
 
