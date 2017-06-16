@@ -11,6 +11,12 @@ Inline validation informs users whether what they type is valid as they type. Th
 
 For fields thats require a certain number of characters, the first keystroke will cause an error. Meaning users will be interrupted early and often.
 
+<div class="image">
+	<figure>
+		<img src="{{ site.url }}/assets/img/inline-validation/01-first-key-stroke.gif" alt="" width="100%" style="max-width: 500px;">
+	</figure>
+</div>
+
 We could wait until the user has entered enough characters but this means the only way a user will get feedback is after completing the field successfully which is pointless.
 
 ## 2. Interruption on blur is too late
@@ -21,7 +27,7 @@ Many people switch windows or use password managers to assist in filling out for
 
 <div class="image">
 	<figure>
-		<img src="{{ site.url }}/assets/img/inline-validation/01-first-key-stroke.gif" alt="" width="100%" style="max-width: 500px;">
+		<img src="{{ site.url }}/assets/img/inline-validation/02-blur.gif" alt="" width="100%" style="max-width: 500px;">
 	</figure>
 </div>
 
@@ -91,10 +97,10 @@ When someone is using a screen reader they may want to go through the form field
 
 Inline validation causes many problems and forces users to switch between filling in forms and fixing them.
 
-Inline validation is used to avoid users seeing lots of errors after filling a long form. Assuming this is a big problem, we can solve this by:
+Designers like inline validation because it avoids users seeing lots of errors after filling a long form. Assuming this is a true we can solve this by:
 
 * Removing unnecessary fields
-* Ensuring fields are well-understood (clear guidance)
+* Ensuring fields are well-understood with clear guidance
 * Using [One Thing Per Page](https://www.smashingmagazine.com/2017/05/better-form-design-one-thing-per-page/)
 
 In any case, designing the perfect inline validation experience is nigh on impossible. Any potential benefit is outweighed by the problems it introduces.
