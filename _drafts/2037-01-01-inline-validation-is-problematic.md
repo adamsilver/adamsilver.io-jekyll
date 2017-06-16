@@ -89,13 +89,19 @@ When someone is using a screen reader they may want to go through the form field
 
 ## Summary
 
-Designing the *perfect* inline validation experience is nigh on impossible. And any potential benefit is probably overshadowed by the many problems it creates.
+Inline validation causes many problems and forces users to switch between filling in forms and fixing them.
 
-Designers choose inline validation because they think users don't want to see a lot of errors after filling out a long form. Assuming this is true there are other ways to solve this:
+Inline validation is used to avoid users seeing lots of errors after filling a long form. Assuming this is a big problem, we can solve this by:
 
-* Remove unnecessary fields
-* Ensure fields are well-understood to avoid errors
-* Use [One Thing Per Page]()
+* Removing unnecessary fields
+* Ensuring fields are well-understood (clear guidance)
+* Using [One Thing Per Page](https://www.smashingmagazine.com/2017/05/better-form-design-one-thing-per-page/)
+
+In any case, designing the perfect inline validation experience is nigh on impossible. Any potential benefit is outweighed by the problems it introduces.
+
+
+
+
 
 <!--
 
