@@ -25,7 +25,7 @@ This doesn't mean AJAX is *bad*. AJAX is useful depending on the situation as it
 
 The real problem is that we have designed something that can never be fast. Therefore, the question is how do we make sure our websites are fast?
 
-## 1. UI
+## 1. Simplify the interface
 
 The best way to make pages fast, is to have less on them. You'd be forgiven for wanting to punch me in the face as this is obvious. Yet, [web pages keep getting fatter and fatter](https://www.keycdn.com/support/the-growth-of-web-page-size/).
 
@@ -33,9 +33,9 @@ Do we need background videos, modal windows and social media buttons plastered e
 
 What about the way we design components? Hamburger menus, tabs, carousels, accordions, image galleries and expanding panels. All these things have one thing in common. They hide stuff.
 
-Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity. If pages only contain the essential, then there is nothing (or much less) that needs to be hidden.
+Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity. If pages only contain the essential, then there is nothing, or at least much less that needs to be hidden.
 
-And despite the effort, making fully responsive and inclusive components is even *more* code that users rarely appreciate. Afterall, it slows the page down and requires the user to exert energy to reveal the hidden content.
+And effort aside, making fully responsive and inclusive components is even *more* code that users rarely appreciate. Afterall, it slows the page down and requires the user to exert energy to reveal the hidden content.
 
 Heydon Pickering coined the seemingly satirical term *Unprogressive Non-enhancement*. This is how he explains it:
 
@@ -51,37 +51,41 @@ Letting things stack isn't our only option. We can chunk stuff across multiple p
 
 With regards to long complex forms (or even shortish ones for that matter) we can use [One Thing Per Page](https://www.smashingmagazine.com/2017/05/better-form-design-one-thing-per-page/) which I've spoken and written about before.
 
-In fact I talk about it so much at work, that I'm even starting to do my own head in with it. I dread to ask my colleagues what they think of my repetitive drone which they probably see as verbal abuse.
+And, this pattern isn't reserved for forms. A product page containing an image carousel, description, add to basket form, other details, shipping information, related products, ratings and comments could be split up.
 
-Importantly this pattern isn't reserved for forms. Take a product page containing an image carousel with 10 high-resolution photos, a description, an add to basket form, dimensions, shipping information, related products, ratings, comments, and reviews etc.
+Most users don't read every single aspect of a product each and every time they visit the page. Instead give users the a lightweight, and therefore fast page, with the choice to drill down further.
 
-Users don't always come to a product page and view everything. Instead give users the choice to drill down further. Give users one high quality image and let users click *show all* which would show all the images. As it's on a page of it's own, there is no need to collapse it.
+Give users one high-definition image *without* a carousel. Then let users click *show all* which would show all the images in a page of its own. No Javascript is needed on either page. Just let the content flow naturally.
 
-This uses the natural building blocks of the web as a form of [progressive disclosure](https://medium.muz.li/design-technique-progressive-disclosure-1980def8dc97?gi=361cf4735361). Ultimately this speeds things up drastically and scrolling is the most used and natural interaction on the web.
+This uses the natural building blocks of the web as a form of [progressive disclosure](https://medium.muz.li/design-technique-progressive-disclosure-1980def8dc97?gi=361cf4735361). Ultimately, this speeds things up drastically.
 
 People on expensive data contracts benefit too. They can choose to see all the images or wait until they are connected to WI-FI.
 
-It's easier to share too. Sharing the third image inside a carousel becomes a problem as the user is forced to swipe and hope to find the image in question.
+It's easier to share page content or imagery this way too. Sending users to a page where most of the stuff is hidden is a problem.
 
 The same goes for tabs. If stuff is hidden by default, how important is it to appear on this page? If the tab contains a small amount of content, show it. If not consider a separate page again.
 
-If you're brave like Yaron, you could place your site's [menu on a separate page](http://yaronschoen.com/table-of-contents/) too. The page loads quickly, users may not even realise there was a page refresh.
+If you're brave like Yaron, you could place your site's [menu on a separate page](http://yaronschoen.com/table-of-contents/) too. The menu page loads so quickly, that users may not even notice the refresh.
 
-Modal windows, oh modal windows. They often take up the entire screen particularly on small screens. Again, use a page, don't break the back button and keep the experience fast. Less code and less problems equals faster experiences.
+Modal windows are often used badly. And too often they contain so much content that justifies a new page altogether again.
+
+Again, not only does this improve performance, but it doesn't break the back button. Less code, less problems and a faster, better experience. I'm seeing a theme here.
 
 Scroll jacking, [floating labels](/articles/floating-labels-are-problematic/), [font-size widgets](http://adrianroselli.com/2016/12/dont-re-create-browser-features.html), custom fonts. Kill.
 
-## 2. Code
+## 2. Reduce code
 
-By simplifying the interface itself, we've reduced the size of the code significantly. But we can do more:
+By simplifying the interface we've already reduced the code by literally not writing any. But in coding the features that remain, there is opportunity to reduce the code:
 
-### A) Create lean HTML
+### Create lean HTML
 
-Sometimes developers use the wrong element. A `<button>`, for example, is half the size of `<div role="button" tabinidex="0">` and doesn't require any script to make it accessible again.
+Sometimes developers use the wrong element. A `<button>` is half the size of `<div role="button" tabinidex="0">` and doesn't require any script to make it accessible again.
 
-[Divitus](https://csscreator.com/divitis) is an antiquated buzzword, but its meaning is still prevalent today. We often use [additional elements unncessarily](http://getbootstrap.com/components/#navbar-brand-image). Additional elements take longer to request, parse and render. Every element needs justification for its existence.
+[Divitus](https://csscreator.com/divitis) is an antiquated buzzword but its still prevalent today. We often use [additional elements unncessarily](http://getbootstrap.com/components/#navbar-brand-image). These make the request longer to make, parse and render. Every element needs a reason to exist.
 
-Classitus, is the use of extra classes. Extra classes may decrease CSS footprint, but signifcantly increases the size of HTML. Keeping HTML lean is important because unlike CSS, it can't be cached, because it often contains personalised and dynamic content. This leads to another [misuse of AJAX](/articles/dont-use-ajax-for-personalised-content/).
+Classitus is the use of extra classes. Extra classes may decrease the size of CSS but they signifcantly increase the size of HTML.
+
+Ensuring HTML is small is vital because unlike CSS, it can't be easily cached. This is because it's likely to contain personalised and dynamic content. This in turn encourages the [misuse of AJAX](/articles/dont-use-ajax-for-personalised-content/).
 
 We may also find ourselves adding various [attributes in the name of accessibility]((https://silktide.com/i-thought-title-text-improved-accessibility-i-was-wrong/)). They aren't always valuable and add further weight to the page.
 
@@ -93,7 +97,7 @@ Similarly, the first rule of ARIA is not to use it. To associate errors to a for
 	<div id="age_error">Enter your age</div>
 	<input id="age" aria-describedby="age_error">
 
-Instead put the error in the label which is much smaller and more inclusive:
+But, instead putting the error in the label is more performant and more inclusive:
 
 	<label for="age">
       Age
@@ -103,37 +107,35 @@ Instead put the error in the label which is much smaller and more inclusive:
 
 Using [HTML attributes to automagically initialise script](/articles/dont-initialise-javascript-automagically/) also increases the size of HTML (and has other problems too).
 
-Whilst a codified grid system is rarely needed, if you need one you may consider a [more minimal approach](https://github.com/Heydon/fukol-grids). You don't need a framework, but more on this shortly.
+Whilst a codified grid system is rarely needed, if you need one you may consider a [more minimal approach](https://github.com/Heydon/fukol-grids).
 
-And, on't add hooks in HTML just for automated testing. Use semantic hooks that serve everyone's purpose equally.
+Finally, don't add HTML hooks just for automated functional testing. Semantic hooks serve everyone's purpose equally.
 
-### B) Simplify your design system
+### Simplify your design system
 
-For example, the design of public-facing government services have a simple interface. Everything is aligned left and everything stacks naturally. In this case, we may be able to [avoid CSS classes altogether](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/). A simple interface is a performant one.
+Government services are simple. Most things are left aligned, and compontents stack naturally. In this case we may be able to [avoid CSS classes altogether](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/), proving that a simple interface is a performant one.
 
-### C) Use less script
+### Use less script
 
-I've talked about the [problem with single page applications](/articles/the-disadvantages-of-single-page-applications/) before. Contrary to popular belief, they aren't necessarily faster. Using AJAX, engineers away [chunk responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding#Chunked_encoding). See [how AJAX requests are slower on Github](https://jakearchibald.com/2016/fun-hacks-faster-content/).
+I've talked about the [problem with single page applications](/articles/the-disadvantages-of-single-page-applications/) before. Contrary to popular belief they aren't necessarily faster. AJAX engineers away [chunk responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding#Chunked_encoding) which you can see in Jake Archibalds article [Fun Hacks For Faster Content](https://jakearchibald.com/2016/fun-hacks-faster-content/).
 
-It's not just the act of rendering. The code required to create robust client-side applications is large in size often prompting developers to use a library or framework.
+It's not just the act of rendering. It takes a lot of code to create robust client-side applications that often prompt developers to use a framework.
 
-But maybe we don't need the whole library. Don't put that burden on your users. Starting with an entire framework or library puts you on the back foot.
+But maybe we don't need the whole framework. Don't put that burden on your users. Starting with an entire framework or library puts you on the back foot.
 
 [Twitter's tweet button script weighs 50k](http://www.heydonworks.com/article/look-at-this-shitty-tweet-button). We can do the same thing with 0 bytes of script by using a simple link.
 
-### D) Use preprocessors responsibly
+### Use preprocessors responsibly
 
 [Preprocessors deceitful produce large CSS files](https://jaketrent.com/post/cons-css-preprocessors/#file-size-is-deceiving).
 
-### E) Use content breakpoints
+### Use content breakpoints
 
-Designing every screen and module to a predefined set of breakpoints is not only backwards, but it can result in more code.
+Often a module may need just one breakpoint or even no breakpoints. Designing to a predefined set of breakpoints encourages the unnecessary tweaking of a design that results in more code.
 
-Many a time, a module needs one breakpoint, or no breakpoints. Designing to predefined breakpoints encourages the unnecessary tweaking of a design.
+### Place scripts at the bottom
 
-### F) Place scripts at the bottom
-
-Place scripts at the bottom and consider `async` and `defer` attributes ons script tags. Async is good for completley independent scripts that can run later like analytics. Defer is good for X.
+Place scripts at the bottom and consider using `async` and `defer` attributes. Async is good for completley independent scripts that can run later like analytics.
 
 ## 3. Images
 
