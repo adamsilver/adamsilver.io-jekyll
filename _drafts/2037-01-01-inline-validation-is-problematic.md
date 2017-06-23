@@ -5,7 +5,7 @@ date: 2037-01-01 09:00:01
 categories: js
 ---
 
-Inline validation informs users whether what they type is valid as they type. The theory is that it's easier to fix errors as soon as they occur. The thing is, inline validation causes several problems:
+Inline validation informs users whether what they type is valid as they type. The theory is that it's easier to fix errors as soon as they occur instead of waiting until submission. The thing is, inline validation causes several problems:
 
 ## 1. Interruption causes friction
 
@@ -35,7 +35,7 @@ And tabbing to the next field causes an error in the first. Due to this error, t
 
 ## 3. Visual glitches are disorientating
 
-When a field switches between valid and invalid states, the error appears and disappears respectively. This causes the page to judder which is disorientating and amateurish.
+When a field switches between valid and invalid states, the error appears and disappears respectively. This causes the page to judder which is disorientating and cab cause problems for mouse users.
 
 <div class="image">
 	<figure>
@@ -47,15 +47,21 @@ Ideally error messages should be hidden as the user starts to fix the field&mdas
 
 ## 4. Field groups are inconsistent
 
-Groups of fields need to be considered holistically. Take a group of checkboxes, for example. The user must choose at least two options. As the user checks the first and leaves, is that an error or is it not?
+Groups of fields need to be considered holistically. Take a group of checkboxes, for example. The user must choose at least two options. If the user clicks *yellow* and blurs is that an error?
 
 <div class="image">
 	<figure>
-		<img src="{{ site.url }}/assets/img/inline-validation/03-date.png" alt="" width="100%" style="max-width: 500px;">
+		<img src="{{ site.url }}/assets/img/inline-validation/checkboxes.png" alt=""  style="max-width: 500px;">
 	</figure>
 </div>
 
-Or the date field above. As the user leaves the day box, the field is instantly invalid. You could validate when the last box is blurred but what if, for example, someone leaves the first box empty, and then tabs onto month?
+Or the date field below. As the user leaves the day box, the field is instantly invalid. You could validate when the last box is blurred but what if, for example, someone leaves the first box empty, and then tabs onto month?
+
+<div class="image">
+	<figure>
+		<img src="{{ site.url }}/assets/img/inline-validation/dateofbirth.png" alt="" style="max-width: 500px;">
+	</figure>
+</div>
 
 Designing something that relies on the user doing something in the right order is not ideal. We could validate these fields `onsubmit` but that gives users a false positive as they have grown to expect fields to validate inline.
 
