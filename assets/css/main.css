@@ -743,28 +743,32 @@ hr {
 	}
 
 	.testForm-email {
-		// needed
+
 		display: inline-block;
 		padding: 10px 15px;
 		font-size: 20px;
 		border-radius: 0;
 		-webkit-appearance: none;
-		border: 1px solid black;
+		border: 3px solid #0074D9;
 
-		// optional
-		background-color: lightblue;
+		font-family: 'Open sans';
 	}
 	.testForm-button {
-		// needed
+
 		display: inline-block;
 		padding: 10px 15px;
 		font-size: 20px;
 		border-radius: 0;
 		-webkit-appearance: none;
-		border: 1px solid black;
+		border: 3px solid #0074D9;
+	font-family: 'Open sans';
+	background-color: #0074D9;
+	color: #fff;
+	/*font-weight: bold;*/
 
-		// optional
-		background-color: blue;
-		color: #fff;
+	}
+
+	.testForm-button:hover {
+		background-color: #0056a0;
 	}
 
