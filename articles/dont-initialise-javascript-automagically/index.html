@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en">
+	<head>
+	    
+	
+		<title>Don't initialise Javascript automagically by Adam Silver</title>
+	
+
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://adamsilver.io/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://adamsilver.io/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://adamsilver.io/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://adamsilver.io/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://adamsilver.io/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://adamsilver.io/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://adamsilver.io/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://adamsilver.io/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://adamsilver.io/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="https://adamsilver.io/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://adamsilver.io/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="https://adamsilver.io/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://adamsilver.io/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="https://adamsilver.io/manifest.json">
+<link rel="mask-icon" href="https://adamsilver.io/safari-pinned-tab.svg" color="#001f3f">
+<meta name="msapplication-TileColor" content="#001F3F">
+<meta name="msapplication-TileImage" content="https://adamsilver.io/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+
+
+	
+		<meta content="Don't initialise Javascript automagically by Adam Silver" property="og:title">
+	
+
+
+
+	<meta property="og:description" content="Front-end devs are seduced by complexity. One way this manifests itself is in the magical looping over behavioural classes.">
+
+
+<meta property="og:url" content="https://adamsilver.io/articles/dont-initialise-javascript-automagically/">
+<meta property="og:site_name" content="Adamsilver.io">
+<meta property="og:image" content="https://adamsilver.io/assets/img/card.png">
+<meta property="og:image:width" content="181">
+<meta property="og:image:height" content="181">
+
+<meta name="twitter:card" content="summary">
+
+
+	<meta name="twitter:description" content="Front-end devs are seduced by complexity. One way this manifests itself is in the magical looping over behavioural classes.">
+
+
+<meta name="twitter:title" content="Don't initialise Javascript automagically -  Adam Silver: Designing simple, human and inclusive websites.">
+
+
+	<meta content="Don't initialise Javascript automagically" name="twitter:title">
+
+
+<meta name="twitter:site" content="@adambsilver">
+<meta name="twitter:creator" content="@adambsilver">
+<meta property="twitter:image" content="https://adamsilver.io/assets/img/card.png">
+
+
+	<meta itemprop="description" content="Front-end devs are seduced by complexity. One way this manifests itself is in the magical looping over behavioural classes.">
+
+
+<link rel="stylesheet" href="/assets/css/main.min.14ca9c09.css" media="all">
+
+<!--[if IE 8]>
+<link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
+<![endif]-->
+
+<!--[if IE 7]>
+<link rel="stylesheet" href="/assets/css/ie7.min.d41d8cd9.css" media="all">
+<![endif]-->
+
+
+<!--[if IE 6]>
+<link rel="stylesheet" href="/assets/css/ie6.min.2d22a25b.css" media="all">
+<![endif]-->
+
+
+<link rel="canonical" href="https://adamsilver.io/articles/dont-initialise-javascript-automagically/">
+<link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47311666-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	</head>
+	<body>
+	    <nav class="nav">
+	<ul>
+		<li><a class="" href="/">Home</a></li>
+		<li><a class="nav-active" href="/articles/">Articles</a></li>
+		<li><a class="" href="/about/">About</a></li>
+		<li><a class="" href="/signup/">Newsletter</a></li>
+	</ul>
+</nav>
+	    <main class="mainContent">
+			<h1 class="article-heading">Don't initialise Javascript automagically</h1>
+			<!-- <div class="meta">
+	<time class="meta-date" date-time="2016-12-06">6 December 2016</time> <span class="meta-divider">&#183;</span>
+	<span class="meta-readingTime" title="Estimated read time">
+	  
+
+	  
+	    4 minute read
+	  
+	</span>
+</div> -->
+	        <p>I used to write Javascript that initialises components automagically. Don’t
+worry I’ll explain what I mean. Take a look below:</p>
+
+<pre><code>var datepickers = document.getElementsByClassName(‘datepicker’);
+for(var i = 0; i &lt; datepickers.length; i++) {
+  new DatePicker(datepickers[i]);
+}
+</code></pre>
+
+<p>The technique works by looping over every element with a particular behavioural
+class name. If the Document contains the class name several times, the script
+creates several instances. With no Javascript changes at all. That’s the
+automagical bit.</p>
+
+<p>Developers commend this technique because there’s only four lines of code. Less
+if using a library. And it never needs updating. If you want another date
+picker, just add a class of date picker. Job done.</p>
+
+<p>This approach is problematic for many reasons. Here’s why:</p>
+
+<h2 id="its-harder-to-understand-the-codebase-at-a-glance">1. It’s harder to understand the codebase at a glance</h2>
+
+<p>To understand the codebase at a glance, you need to know what behaviour exists
+and where.</p>
+
+<p>The loop doesn’t tell you how many date pickers there are. There could be a
+thousand instances or there could be one (or none) — in which case the loop is
+misleading. Either way you don’t know.</p>
+
+<h2 id="you-might-apply-behaviour-by-accident">2. You might apply behaviour by accident</h2>
+
+<p>If you happen to use a class that corresponds to a component, then you might
+accidentally initialise behaviour.</p>
+
+<h2 id="its-difficult-to-estimate-stories">3. It’s difficult to estimate stories</h2>
+
+<p>If you can’t document what you’re changing and where, it’s difficult to define
+and estimate a story.</p>
+
+<h2 id="its-difficult-to-qa">4. It’s difficult to QA</h2>
+
+<p>After modifying a date picker, a tester will ask you what parts of the system
+you’ve affected. The loop doesn’t help you answer this question.</p>
+
+<h2 id="its-harder-to-debug">5. It’s harder to debug</h2>
+
+<p>If there’s a problem with one date picker, finding and debugging it is more
+tricky. You will have to find the problematic instance by searching the HTML
+templates. Then you will need to step through the loop until you find the
+erroneous one.</p>
+
+<h2 id="its-harder-to-delete">6. It’s harder to delete</h2>
+
+<p>As you don’t know where the loop is executing, you can’t delete code in
+confidence. Thus, the code stays in the codebase for a long time.</p>
+
+<h2 id="its-hard-to-determine-behaviour">7. It’s hard to determine behaviour</h2>
+
+<p>This approach forces you to store behaviour in HTML attributes. This isn’t an
+elegant way to define behavioural relationships. HTML becomes bloated and hard
+to read. Every attribute value is a string, when you might, for example, want a
+number.</p>
+
+<pre><code>&lt;div class="datepicker otherComponent" data-datepicker-attr="etc" data-datapicker-event="listener" data-othercomponent-attr="blah"&gt;
+</code></pre>
+
+<h2 id="its-painful-to-customise">8. It’s painful to customise</h2>
+
+<p>When you need to use models and XHR etc, it becomes painful to work with this
+approach.</p>
+
+<p>I’ll give you an example. Imagine you have a form with two date pickers: a
+start-date and end-date.</p>
+
+<p>When the user chooses a start-date, the end-date values update. This is to
+ensure the end-date is always after the start-date.</p>
+
+<p>This is hard to define in HTML. In Javascript it’s easy:</p>
+
+<pre><code>var startDate = new DatePicker();
+var endDate = new DatePicker();
+startDate.on('changed', function() { endDate.whatever(); });
+</code></pre>
+
+<h2 id="its-painful-to-infer-behaviour-from-html">9. It’s painful to infer behaviour from HTML</h2>
+
+<p>The loop doesn’t allow you to customise an instance by passing in options. Instead, you have to store behaviour in HTML. When you change behaviour, you must update the HTML. This goes against recommended​ <a href="https://en.wikipedia.org/wiki/Separation_of_concerns">practices</a>.</p>
+
+<h2 id="its-painful-to-override-behaviour">10. It’s painful to override behaviour</h2>
+
+<p>To override behaviour, you will need to add an extra class to the HTML. Then the date picker (or the loop) will determine the override by checking for this extra class. At this point, the component (or the loop) is no longer generic.​</p>
+
+<h2 id="its-hard-to-destroy-instances">11. It’s hard to destroy instances</h2>
+
+<p>It’s easy to store the instances during initialisation. But, determining and
+retrieving one later so you can destroy it, is harder this way.</p>
+
+<h2 id="it-increases-the-chance-of-performance-issues">12. It increases the chance of performance issues</h2>
+
+<p>This approach means the Javascript has to crawl the DOM a lot more than is
+otherwise necessary. First to find elements that need enhancing, and second to
+determine behaviour from attributes.</p>
+
+<p><a href="https://www.nczonline.net/blog/2009/02/03/speed-up-your-javascript-part-4/">Touching the DOM is expensive</a>, which increases the risk of performance issues. The risk increases further when you have many components and many instances of a component.</p>
+
+<h2 id="its-harder-to-unit-test">13. It’s harder to unit test</h2>
+
+<p>It’s difficult to unit test behaviour when you store behaviour in HTML. You
+might then decide to use HTML fixtures. But they are slow and you’re no longer
+writing unit tests. You <em>could</em> mock the DOM but this is tedious and
+problematic. The less you store in HTML the easier it is to test.</p>
+
+<h2 id="it-exposes-a-security-hole">14. It exposes a security hole</h2>
+
+<p>You can read about the <a href="https://githubengineering.com/githubs-csp-journey/#object-src">security hole here</a>.</p>
+
+<h2 id="but-i-dont-want-to-update-javascript-every-time-i-want-a-new-instance">“But I don’t want to update Javascript every time I want a new instance?”</h2>
+
+<p>I fail to see why updating Javascript is a problem. In fact, I would <em>expect</em>
+you to change Javascript when updating behaviour. Updating HTML instead of
+Javascript is not better.</p>
+
+<h2 id="is-this-necessaryit--feels-like-code-bloat">“Is this necessary—it  feels like code bloat?”</h2>
+
+<p>If code is valuable, it’s not code bloat.</p>
+
+<h2 id="but-the-javascript-will-have-a-lot-more-code">“But the Javascript will have a lot more code.”</h2>
+
+<p>Maybe. Maybe not. It depends on your architecture and your requirements. Even if
+it did, good code is not just determined by the number of lines.</p>
+
+<h2 id="but-lets-at-least-use-it-for-simple-components">“But let’s at least use it for simple components.”</h2>
+
+<p>Even if it did work for simple components, you have to draw a line between
+simple and complex. This is arbitrary and having two ways of doing the same
+thing makes code inconsistent.</p>
+
+<h2 id="its-easier-for-backend-developers-to-add-behaviour-in-html">“It’s easier for <strong>backend developers to add behaviour in HTML.</strong>”</h2>
+
+<p>You need to decide whether backend developers should be writing Javascript or
+not. If they should be writing it, then help them do it right. They are software
+engineers. Trust them.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>Good code is not about number of lines.</p>
+
+<p>Good code is not about how easy it is to write the first time.</p>
+
+<p>Good code is easy to reason about.</p>
+
+<p>Good code is easy to update.</p>
+
+<p>Good code is consistent.</p>
+
+<p>Good code is easy to unit test.</p>
+
+<p><a href="http://programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to.">Good code is easy to delete.</a></p>
+
+<p>Bad code is easy to write but hard to delete. Bad code is magical. Magic is
+entertaining. Code shouldn’t be entertaining.</p>
+
+<p>Automagical loops obfuscate complexity. They make things appear simple when
+they’re not.</p>
+
+<p>Help future-you by writing Javascript that doesn’t suffer from these problems.
+HTML isn’t good at defining behaviour. But Javascript is.</p>
+
+	    </main>
+		<div class="signUpHero">
+	<p class="signUpHero-description">I write articles like this and share them with my private mailing list. No spam and definitely no popups. Just one article a month, straight to your inbox. Sign up below:</p>
+	<form action="//adamsilver.us9.list-manage.com/subscribe/post?u=b8fb04f39bf86109693e00ba5&amp;id=441c045a36" method="post">
+		<input type="hidden" name="b_b8fb04f39bf86109693e00ba5_441c045a36" value="">
+		<input type="hidden" name="SITE" value="https://adamsilver.io">
+		<input type="hidden" name="LOCATION" value="/articles/dont-initialise-javascript-automagically/">
+		<label for="mce-EMAIL" class="signUpHero-label">Your email address</label>
+		<input type="email" name="EMAIL" id="mce-EMAIL" class="signUpHero-email" required><input class="signUpHero-button" type="submit" value="Join 1,000+ others" name="subscribe">
+	</form>
+</div>
+		<footer class="footer">
+	<p>You can find me on <a href="http://www.twitter.com/adambsilver/">Twitter</a>, <a href="http://www.github.com/adamsilver/">Github</a>, <a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a> and <a href="http://medium.com/@adambsilver">Medium</a>.
+	</p>
+</footer>
+	</body>
+</html>

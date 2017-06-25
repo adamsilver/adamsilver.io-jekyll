@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en">
+	<head>
+	    
+	
+		<title>Infinite scrolling is probably a bad idea by Adam Silver</title>
+	
+
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://adamsilver.io/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://adamsilver.io/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://adamsilver.io/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://adamsilver.io/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://adamsilver.io/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://adamsilver.io/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://adamsilver.io/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://adamsilver.io/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://adamsilver.io/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="https://adamsilver.io/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://adamsilver.io/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="https://adamsilver.io/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://adamsilver.io/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="https://adamsilver.io/manifest.json">
+<link rel="mask-icon" href="https://adamsilver.io/safari-pinned-tab.svg" color="#001f3f">
+<meta name="msapplication-TileColor" content="#001F3F">
+<meta name="msapplication-TileImage" content="https://adamsilver.io/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+
+
+	
+		<meta content="Infinite scrolling is probably a bad idea by Adam Silver" property="og:title">
+	
+
+
+
+	<meta property="og:description" content="Infinite scrolling is a popular UI pattern but find out why it's probably a bad idea in this article.">
+
+
+<meta property="og:url" content="https://adamsilver.io/articles/infinite-scrolling-is-probably-a-bad-idea/">
+<meta property="og:site_name" content="Adamsilver.io">
+<meta property="og:image" content="https://adamsilver.io/assets/img/card.png">
+<meta property="og:image:width" content="181">
+<meta property="og:image:height" content="181">
+
+<meta name="twitter:card" content="summary">
+
+
+	<meta name="twitter:description" content="Infinite scrolling is a popular UI pattern but find out why it's probably a bad idea in this article.">
+
+
+<meta name="twitter:title" content="Infinite scrolling is probably a bad idea -  Adam Silver: Designing simple, human and inclusive websites.">
+
+
+	<meta content="Infinite scrolling is probably a bad idea" name="twitter:title">
+
+
+<meta name="twitter:site" content="@adambsilver">
+<meta name="twitter:creator" content="@adambsilver">
+<meta property="twitter:image" content="https://adamsilver.io/assets/img/card.png">
+
+
+	<meta itemprop="description" content="Infinite scrolling is a popular UI pattern but find out why it's probably a bad idea in this article.">
+
+
+<link rel="stylesheet" href="/assets/css/main.min.14ca9c09.css" media="all">
+
+<!--[if IE 8]>
+<link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
+<![endif]-->
+
+<!--[if IE 7]>
+<link rel="stylesheet" href="/assets/css/ie7.min.d41d8cd9.css" media="all">
+<![endif]-->
+
+
+<!--[if IE 6]>
+<link rel="stylesheet" href="/assets/css/ie6.min.2d22a25b.css" media="all">
+<![endif]-->
+
+
+<link rel="canonical" href="https://adamsilver.io/articles/infinite-scrolling-is-probably-a-bad-idea/">
+<link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47311666-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	</head>
+	<body>
+	    <nav class="nav">
+	<ul>
+		<li><a class="" href="/">Home</a></li>
+		<li><a class="nav-active" href="/articles/">Articles</a></li>
+		<li><a class="" href="/about/">About</a></li>
+		<li><a class="" href="/signup/">Newsletter</a></li>
+	</ul>
+</nav>
+	    <main class="mainContent">
+			<h1 class="article-heading">Infinite scrolling is probably a bad idea</h1>
+			<!-- <div class="meta">
+	<time class="meta-date" date-time="2015-11-24">24 November 2015</time> <span class="meta-divider">&#183;</span>
+	<span class="meta-readingTime" title="Estimated read time">
+	  
+
+	  
+	    2 minute read
+	  
+	</span>
+</div> -->
+	        <p>On more than one occasion I have found myself trying to convince team-mates that infinite scrolling and its close relative <em>show more</em> is more likely to degrade the experience than improve upon it. I thought I would jot down my notes on the matter and share them with you. Here they are:</p>
+
+<h2 id="the-footer-becomes-unusable">1. The footer becomes unusable</h2>
+
+<p>People understand what a footer is and that it is likely to contain links to important secondary information. Infinite scrolling means the footer keeps getting pushed just out of reach by the freshly loaded content.</p>
+
+<h2 id="performance-degrades">2. Performance degrades</h2>
+
+<p>If you’re using infinite scrolling on a long page, you’re constantly loading more and more content into memory. This will have a negative impact on page performance, since the browser has much more work to do in order to render the page.</p>
+
+<p>Also, the page needs to listen constantly for scroll events which can cause client-side performance problems.</p>
+
+<h2 id="analytics-is-harder-to-implement">3. Analytics is harder to implement</h2>
+
+<p>Due to the way infinite scrolling works, dropping some Google Analytics code into the page isn’t going to give you much insight. Therefore you will need to write your own analytics implementation to track newly loaded content. This is then more costly to develop, maintain and test.</p>
+
+<h2 id="bookmarking-and-the-back-button-become-problematic">4. Bookmarking and the back button become problematic</h2>
+
+<p>You can’t easily bookmark a segment of results to come back to or share with your friends.</p>
+
+<p>Even if you do manage it and you end up bookmarking segment 15 (where each segment is say 40 items) then when you return to that bookmark, you suffer from long page-load times.
+Similarly, you can’t use the back button as it doesn’t go back to the previous segment of results. Instead it goes back to the previous page.</p>
+
+<h2 id="people-may-suffer-from-choice-paralysis">5. People may suffer from choice paralysis</h2>
+
+<p>With very long pages people can feel paralysed by the amount of content and choices—infinite scrolling may well cause inaction and in-turn, lower click through rates. Just see <a href="http://danwin.com/2013/01/infinite-scroll-fail-etsy/">what happened to Etsy</a>.</p>
+
+<h2 id="the-scrollbar-becomes-unusable-and-untrustworthy">6. The scrollbar becomes unusable and untrustworthy</h2>
+
+<p>The scroll bar inevitably becomes very small and hard to use. It’s hard to place your mouse on the scrollbar and the slightest movement might scroll a large part of the page when you only wanted to scroll a little bit.</p>
+
+<p>Even worse, the scrollbar plays a trick on users as it displays the page length inaccurately — the scrollbar will be near the bottom and then suddenly when the items are loaded in, it will jump up and reveal there is now more content to scroll through. <strong>It’s dishonest design to tell people that they’re almost done when they’re not</strong>.</p>
+
+<h2 id="its-generally-hard-to-use">7. It’s generally hard to use</h2>
+
+<p>Design is about communication. When someone arrives at a set of results, they want to instantly be able to understand what’s going on…</p>
+
+<blockquote>
+  <p>What am I looking at?<br />
+How do I get to the next set of results?<br />
+How many results are there?<br />
+How long will it take me to browse through them all?<br />
+Should I bother to browse through them?<br />
+Or should I search again?<br />
+Or should I try filtering instead?<br /></p>
+</blockquote>
+
+<p>If the user doesn’t understand the answers to these questions, they will have a feeling of unrest, uncertainty and disorientation. When they do know the answers to these questions, they can make informed and quick decisions, without losing energy.</p>
+
+<p>With pagination, people can anticipate the effort required to browse through the results. There is a happy sense of completion when a page is finished. There is a clear end. Pagination gives people control to decide whether or not to continue to the next page.</p>
+
+<p>Also, smaller pages, means a faster, more focused, less overwhelming experience with none of the pitfalls described above. People don’t mind clicking links (to new pages) as long as each click is meaningful and leads them closer to their desired goal.</p>
+
+	    </main>
+		<div class="signUpHero">
+	<p class="signUpHero-description">I write articles like this and share them with my private mailing list. No spam and definitely no popups. Just one article a month, straight to your inbox. Sign up below:</p>
+	<form action="//adamsilver.us9.list-manage.com/subscribe/post?u=b8fb04f39bf86109693e00ba5&amp;id=441c045a36" method="post">
+		<input type="hidden" name="b_b8fb04f39bf86109693e00ba5_441c045a36" value="">
+		<input type="hidden" name="SITE" value="https://adamsilver.io">
+		<input type="hidden" name="LOCATION" value="/articles/infinite-scrolling-is-probably-a-bad-idea/">
+		<label for="mce-EMAIL" class="signUpHero-label">Your email address</label>
+		<input type="email" name="EMAIL" id="mce-EMAIL" class="signUpHero-email" required><input class="signUpHero-button" type="submit" value="Join 1,000+ others" name="subscribe">
+	</form>
+</div>
+		<footer class="footer">
+	<p>You can find me on <a href="http://www.twitter.com/adambsilver/">Twitter</a>, <a href="http://www.github.com/adamsilver/">Github</a>, <a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a> and <a href="http://medium.com/@adambsilver">Medium</a>.
+	</p>
+</footer>
+	</body>
+</html>

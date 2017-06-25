@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en">
+	<head>
+	    
+	
+		<title>Misusing the select control by Adam Silver</title>
+	
+
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://adamsilver.io/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://adamsilver.io/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://adamsilver.io/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://adamsilver.io/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://adamsilver.io/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://adamsilver.io/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://adamsilver.io/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://adamsilver.io/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://adamsilver.io/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="https://adamsilver.io/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://adamsilver.io/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="https://adamsilver.io/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://adamsilver.io/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="https://adamsilver.io/manifest.json">
+<link rel="mask-icon" href="https://adamsilver.io/safari-pinned-tab.svg" color="#001f3f">
+<meta name="msapplication-TileColor" content="#001F3F">
+<meta name="msapplication-TileImage" content="https://adamsilver.io/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+
+
+	
+		<meta content="Misusing the select control by Adam Silver" property="og:title">
+	
+
+
+
+	<meta property="og:description" content="Sometimes designers and developers misuse the select drop down control. Find out about the problems and how to solve in this article.">
+
+
+<meta property="og:url" content="https://adamsilver.io/articles/misusing-the-select-control/">
+<meta property="og:site_name" content="Adamsilver.io">
+<meta property="og:image" content="https://adamsilver.io/assets/img/card.png">
+<meta property="og:image:width" content="181">
+<meta property="og:image:height" content="181">
+
+<meta name="twitter:card" content="summary">
+
+
+	<meta name="twitter:description" content="Sometimes designers and developers misuse the select drop down control. Find out about the problems and how to solve in this article.">
+
+
+<meta name="twitter:title" content="Misusing the select control -  Adam Silver: Designing simple, human and inclusive websites.">
+
+
+	<meta content="Misusing the select control" name="twitter:title">
+
+
+<meta name="twitter:site" content="@adambsilver">
+<meta name="twitter:creator" content="@adambsilver">
+<meta property="twitter:image" content="https://adamsilver.io/assets/img/card.png">
+
+
+	<meta itemprop="description" content="Sometimes designers and developers misuse the select drop down control. Find out about the problems and how to solve in this article.">
+
+
+<link rel="stylesheet" href="/assets/css/main.min.14ca9c09.css" media="all">
+
+<!--[if IE 8]>
+<link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
+<![endif]-->
+
+<!--[if IE 7]>
+<link rel="stylesheet" href="/assets/css/ie7.min.d41d8cd9.css" media="all">
+<![endif]-->
+
+
+<!--[if IE 6]>
+<link rel="stylesheet" href="/assets/css/ie6.min.2d22a25b.css" media="all">
+<![endif]-->
+
+
+<link rel="canonical" href="https://adamsilver.io/articles/misusing-the-select-control/">
+<link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47311666-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	</head>
+	<body>
+	    <nav class="nav">
+	<ul>
+		<li><a class="" href="/">Home</a></li>
+		<li><a class="nav-active" href="/articles/">Articles</a></li>
+		<li><a class="" href="/about/">About</a></li>
+		<li><a class="" href="/signup/">Newsletter</a></li>
+	</ul>
+</nav>
+	    <main class="mainContent">
+			<h1 class="article-heading">Misusing the select control</h1>
+			<!-- <div class="meta">
+	<time class="meta-date" date-time="2014-09-17">17 September 2014</time> <span class="meta-divider">&#183;</span>
+	<span class="meta-readingTime" title="Estimated read time">
+	  
+
+	  
+	    2 minute read
+	  
+	</span>
+</div> -->
+	        <p>I’ve seen many designers misuse the select menu by using it as a form of navigation. One example of this approach is with a Sort By form which many ecommerce sites use to allow users to sort a list of products.</p>
+
+<!-- <div class="image" style="max-width: 320px;margin: 0 auto;">
+	<figure>
+		<img src="/assets/img/sortby.png" alt="Sort by select" width="100%">
+		<figcaption>Sort by select box missing a submit button</figcaption>
+	</figure>
+</div> -->
+
+<p>This technique is appealing because removing the button declutters the UI. And submitting the form when the user changes selection saves the user an extra click.</p>
+
+<p>Whilst this seems sensible it’s actually problematic. And in fact aiming for a <a href="http://uxmyths.com/post/115783813605/myth-34-simple-minimal">minimal UI</a> and <a href="http://idyeah.com/blog/2012/06/stop-counting-clicks/">counting clicks</a> doesn’t always lead to an agreeable User Experience. Here’s why:</p>
+
+<h2 id="keyboard-users-find-them-difficult">1. Keyboard users find them difficult</h2>
+
+<p>Some browsers will immediately submit the form when the user selects an option. As a user moves from the first to the second option, the form will submit before the user had a chance to move further down the list.</p>
+
+<p>To experience this for yourself visit <a href="http://html.cita.illinois.edu/script/onchange/onchange-example.php">the demo</a> in an offending browser such as:
+Chrome (Windows), Opera (Windows), IE6, IE7, IE8 or IE9.</p>
+
+<h2 id="screen-reader-users-find-them-difficult">2. Screen reader users find them difficult</h2>
+
+<p>Sarah Miller’s research found that dropdown lists without submit buttons were confusing to screen reader users. The act of reading an option meant that it was selected. Therefore the user could never get past the first option.</p>
+
+<h2 id="users-expect-to-use-links-for-navigation">3. Users expect to use links for navigation</h2>
+
+<p>Links are for navigation. Forms are for submitting data—in our case filtering a set of search results. We should use the right element. In doing so we conform to the third of Henny Swan’s <a href="https://www.smashingmagazine.com/2015/02/bbc-iplayer-accessibility-case-study/#ux-principles">UX principles</a>, <em>design with familiarity in mind</em>.</p>
+
+<h2 id="users-expect-selection-and-submission-to-be-separate">4. Users expect selection and submission to be separate</h2>
+
+<p>There is a difference between selecting something and submitting it to the server for processing. Users can check and amend their entries before submitting them. In fact this is a WCAG 2.0 recommendation:</p>
+
+<blockquote>
+  <p>“Changing the setting of any user interface component does not automatically cause a change of context”</p>
+</blockquote>
+
+<p>The button invites the user to make an explicit action at their convenience, and therefore conforms to the second of Henny Swan’s UX principles, <em>to give users control</em>.</p>
+
+<h2 id="users-find-it-disorientating">5. Users find it disorientating</h2>
+
+<p>Larry Marinem’s usability research found that users are prone to mis-selecting an option. So when it launches them off somewhere else, users found this disorientating.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>Reducing clicks and decluttering a UI <em>might</em> be the results of a well-designed solution, but they should not be objectives in and of themselves.</p>
+
+<p>We should consider people with different preferences and browsers so that they can effectively use the websites we put in front of them.</p>
+
+<p>Our solutions should be familiar wherever possible and keep the user in control of their actions. In this case, we must always include a button.</p>
+
+<!-- <iframe width="100%" height="315" src="https://www.youtube.com/embed/rnKDDSo9Omk" frameborder="0" allowfullscreen></iframe> -->
+
+	    </main>
+		<div class="signUpHero">
+	<p class="signUpHero-description">I write articles like this and share them with my private mailing list. No spam and definitely no popups. Just one article a month, straight to your inbox. Sign up below:</p>
+	<form action="//adamsilver.us9.list-manage.com/subscribe/post?u=b8fb04f39bf86109693e00ba5&amp;id=441c045a36" method="post">
+		<input type="hidden" name="b_b8fb04f39bf86109693e00ba5_441c045a36" value="">
+		<input type="hidden" name="SITE" value="https://adamsilver.io">
+		<input type="hidden" name="LOCATION" value="/articles/misusing-the-select-control/">
+		<label for="mce-EMAIL" class="signUpHero-label">Your email address</label>
+		<input type="email" name="EMAIL" id="mce-EMAIL" class="signUpHero-email" required><input class="signUpHero-button" type="submit" value="Join 1,000+ others" name="subscribe">
+	</form>
+</div>
+		<footer class="footer">
+	<p>You can find me on <a href="http://www.twitter.com/adambsilver/">Twitter</a>, <a href="http://www.github.com/adamsilver/">Github</a>, <a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a> and <a href="http://medium.com/@adambsilver">Medium</a>.
+	</p>
+</footer>
+	</body>
+</html>
