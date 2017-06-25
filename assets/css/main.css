@@ -687,7 +687,7 @@ hr {
 	box-sizing: border-box;
 	background-color: #fff;
 	border: 3px solid #0074D9;
-	display: inline-block;
+	display: block;
 	vertical-align: top;
 }
 
