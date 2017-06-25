@@ -628,6 +628,7 @@ hr {
 @media(min-width: 50em) {
 	.signUpForm {
 		margin: 0 auto 40px;
+		overflow: hidden;
 	}
 }
 
@@ -695,6 +696,7 @@ hr {
 	.signUpHero-email {
 		max-width: 21em;
 		border-right: 0px;
+		float: left;
 	}
 }
 
@@ -718,7 +720,7 @@ hr {
 @media(min-width: 37em) {
 	.signUpForm-button,
 	.signUpHero-button {
-		display: inline-block;
+		float: left;
 		border-radius: 0 8px 8px 0;
 	}
 }
