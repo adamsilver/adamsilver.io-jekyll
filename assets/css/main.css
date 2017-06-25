@@ -639,7 +639,7 @@ hr {
 	letter-spacing: 0.01em;
 }
 
-@media(min-width: 37.5em) {
+@media(min-width: 37em) {
 	.signUpForm-heading {
 		font-size: 1.81em;
 		margin-bottom: 5px;
@@ -654,87 +654,22 @@ hr {
 	display: block;
 }
 
-@media(min-width: 37.5em) {
+@media(min-width: 37em) {
 	.signUpForm-description {
 		font-size: 1.19em;
 	}
-}
-
-.signUpForm-label,
-.signUpHero-label {
-	font-size: 1.13em;
-	line-height: 1.5;
-	margin-bottom: 5px;
-	display: block;
-	font-family: 'Open sans';
-	font-weight: bold;
-	color: #0074D9;
-}
-
-@media(min-width: 37.5em) {
-	.signUpForm-label,
-	.signUpHero-label {
-		font-size: 1.38em;
-	}
-}
-
-.signUpForm-email,
-.signUpHero-email {
-	font-size: 1em;
-	width: 100%;
-	padding: 10px 10px 9.5px;
-	margin-bottom: 15px;
-	box-sizing: border-box;
-	background-color: #fff;
-	border: 3px solid #0074D9;
-	display: block;
-	vertical-align: top;
-}
-
-@media(min-width: 37em) {
-	.signUpForm-email,
-	.signUpHero-email {
-		max-width: 21em;
-		border-right: 0px;
-		float: left;
-	}
-}
-
-.signUpForm-button,
-.signUpHero-button {
-	font-size: 1em;
-	padding: 11px 22px;
-	display: block;
-	background-color: #0074D9;
-	color: #fff;
-	border: none;
-	text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: 0.03em;
-	border-radius: 8px;
-	display: inline-block;
-	font-family: 'Open sans';
-	vertical-align: middle;
-}
-
-@media(min-width: 37em) {
-	.signUpForm-button,
-	.signUpHero-button {
-		float: left;
-		border-radius: 0 8px 8px 0;
-	}
-}
-
-.signUpForm-button:hover,
-.signUpHero-button:hover {
-	background-color: #0267BF;
-	background-color: #0056a0;
 }
 
 .testForm {
 	max-width: 41.25em;
 	margin: 0 auto 40px;
 	padding: 0 20px;
+}
+
+@media(min-width: 37em) {
+	.testForm {
+		margin-bottom: 80px;
+	}
 }
 
 .testForm-label {
@@ -745,6 +680,12 @@ hr {
     font-weight: 700;
     color: #0074D9;
     font-family: 'Open sans';
+}
+
+@media(min-width: 37em) {
+	.testForm-label {
+		font-size: 1.38em;
+	}
 }
 
 .testForm-email {
@@ -783,6 +724,7 @@ hr {
 	background-color: #0074D9;
 	color: #fff;
 	font-weight: bold;
+	text-transform: uppercase;
 }
 
 @media(min-width: 37em) {
@@ -795,5 +737,6 @@ hr {
 
 .testForm-button:hover {
 	background-color: #0056a0;
+	border-color: #0056a0;
 }
 
