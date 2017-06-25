@@ -730,3 +730,41 @@ hr {
 	background-color: #0267BF;
 	background-color: #0056a0;
 }
+
+
+
+
+
+
+
+
+	.testForm-label {
+		display: block;
+	}
+
+	.testForm-email {
+		// needed
+		display: inline-block;
+		padding: 10px 15px;
+		font-size: 20px;
+		border-radius: 0;
+		-webkit-appearance: none;
+		border: 1px solid black;
+
+		// optional
+		background-color: lightblue;
+	}
+	.testForm-button {
+		// needed
+		display: inline-block;
+		padding: 10px 15px;
+		font-size: 20px;
+		border-radius: 0;
+		-webkit-appearance: none;
+		border: 1px solid black;
+
+		// optional
+		background-color: blue;
+		color: #fff;
+	}
+

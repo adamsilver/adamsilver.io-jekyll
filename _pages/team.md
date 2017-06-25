@@ -31,6 +31,19 @@ We think it's better if you take us through the hiring process together. We can'
 
 We're excited to work with you. So please [get in touch](mailto:adambsilver+team@gmail.com) about your next project.
 
+
+<div class="testForm">
+	<form action="//adamsilver.us9.list-manage.com/subscribe/post?u=b8fb04f39bf86109693e00ba5&amp;id=441c045a36" method="post">
+		<input type="hidden" name="b_b8fb04f39bf86109693e00ba5_441c045a36" value="">
+		<input type="hidden" name="SITE" value="{{site.url}}">
+		<input type="hidden" name="LOCATION" value="{{page.url}}">
+		<label for="mce-EMAIL" class="testForm-label">Your email address</label>
+		<input type="email" name="EMAIL" id="mce-EMAIL" class="testForm-email" required><input class="testForm-button" type="submit" value="Join 1,000+ others" name="subscribe">
+	</form>
+</div>
+
+
+
 <!--
 
 https://stripe.com/blog/bring-your-own-team
