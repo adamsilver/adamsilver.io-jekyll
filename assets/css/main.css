@@ -788,6 +788,8 @@ hr {
 @media(min-width: 37em) {
 	.testForm-button {
 		border-radius: 0 8px 8px 0;
+		position: relative;
+		left: -1px;
 	}
 }
 
