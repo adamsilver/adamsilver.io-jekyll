@@ -1,564 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Adam Silver: Designing simple, human and inclusive websites.</title>
-	<link href="//localhost:4000/atom.xml" rel="self"/>
-	<link href="//localhost:4000/"/>
-	<updated>2017-06-25T15:24:53+01:00</updated>
-	<id>//localhost:4000</id>
+	<link href="https://adamsilver.io/atom.xml" rel="self"/>
+	<link href="https://adamsilver.io/"/>
+	<updated>2017-06-25T15:26:25+01:00</updated>
+	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
 	</author>
 
 	
 		<entry>
-			<title>Making websites fast</title>
-			<link href="//localhost:4000/articles/making-fast-web-pages/"/>
-			<updated>2039-01-01T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/making-fast-web-pages</id>
-			<content type="html">&lt;p&gt;This is how it goes. We cram a load of shit onto a single web page. This makes the page slow. Slow to load, slow to render. Slow.&lt;/p&gt;
-
-&lt;p&gt;Instead of getting rid of the shit, we blame the page refresh. There’s only one way to avoid the page refresh and that’s AJAX.&lt;/p&gt;
-
-&lt;p&gt;However, AJAX still needs to render new (parts of) screens. More crucially it still has to make a request to the server. That’s not all—there are penalties in using AJAX.&lt;/p&gt;
-
-&lt;p&gt;First, making requests, handling different responses, traversing the Document and injecting HTML requires &lt;em&gt;more&lt;/em&gt; code to be sent initially. This also needs to be evaluated and executed on the client.&lt;/p&gt;
-
-&lt;p&gt;Second, AJAX engineers away things the browser does for free, such as progressive rendering (more on this later). To avoid this problem we must resort to hacks that need even more code. Plus nobody uses the hack anyway.&lt;/p&gt;
-
-&lt;p&gt;And, we need to design and build a custom loading indicator. Not only is this yet more work and more code but they are a poor replacement for the ones provided by browsers.&lt;/p&gt;
-
-&lt;p&gt;A browser’s indicator displays progress. That is, a user can tell how long until the request finishes. Custom spinners don’t display progress, so users get frustrated and click again causing further delays.&lt;/p&gt;
-
-&lt;p&gt;Custom indicators are unfamiliar as they look different per site and are positioned differently. Browser indicators appear in the same place no matter the website. Familiarity and accuracy are two qualities often found in well-designed interfaces.&lt;/p&gt;
-
-&lt;p&gt;This doesn’t mean AJAX is &lt;em&gt;bad&lt;/em&gt;. AJAX is useful depending on the situation as it avoids requesting the same assets over and over. But it’s not a solution to slow-loading pages. At best it patches over the problems that lie beneath.&lt;/p&gt;
-
-&lt;p&gt;The real problem is that we have designed something that can never be fast. Therefore, the question is how do we make sure our websites are fast?&lt;/p&gt;
-
-&lt;h2 id=&quot;simplify-the-interface&quot;&gt;1. Simplify the interface&lt;/h2&gt;
-
-&lt;p&gt;The best way to make pages fast, is to have less on them. You’d be forgiven for wanting to punch me in the face as this is obvious. Yet, &lt;a href=&quot;https://www.keycdn.com/support/the-growth-of-web-page-size/&quot;&gt;web pages keep getting fatter and fatter&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Do we need background videos, modal windows and social media buttons plastered everywhere? The answer from the people is a resounding &lt;em&gt;no&lt;/em&gt;. The fastest feature is the one we never even built.&lt;/p&gt;
-
-&lt;p&gt;What about the way we design components? Hamburger menus, tabs, carousels, accordions, image galleries and expanding panels. All these things have one thing in common. They hide stuff.&lt;/p&gt;
-
-&lt;p&gt;Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity. If pages only contain the essential, then there is nothing, or at least much less that needs to be hidden.&lt;/p&gt;
-
-&lt;p&gt;And effort aside, making fully responsive and inclusive components is even &lt;em&gt;more&lt;/em&gt; code that users rarely appreciate. Afterall, it slows the page down and requires the user to exert energy to reveal the hidden content.&lt;/p&gt;
-
-&lt;p&gt;Heydon Pickering coined the seemingly satirical term &lt;em&gt;Unprogressive Non-enhancement&lt;/em&gt;. This is how he explains it:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;You take some structured content, which follows the vertical flow of the document in a way that everyone understands.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Which people traverse easily by either dragging their scroll bar with their mouse, or operating the keyboard using the up and down keys, or using the spacebar.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Or if they’re using a touch device, simply flicking backwards and forwards in that easy way that we’ve all become used to. &lt;strong&gt;What you do is you take that, and you fucking well leave it alone.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Letting things stack naturally is the perfect start. Not only does this embrace the way the web works—it makes for a remarkably accessible and fast experience.&lt;/p&gt;
-
-&lt;p&gt;Letting things stack isn’t our only option. We can chunk stuff across multiple pages. Once pages have little on them the page refresh ‘problem’ is no longer a problem. Pages are fast by default and by design.&lt;/p&gt;
-
-&lt;p&gt;With regards to long complex forms (or even shortish ones for that matter) we can use &lt;a href=&quot;https://www.smashingmagazine.com/2017/05/better-form-design-one-thing-per-page/&quot;&gt;One Thing Per Page&lt;/a&gt; which I’ve spoken and written about before.&lt;/p&gt;
-
-&lt;p&gt;And, this pattern isn’t reserved for forms. A product page containing an image carousel, description, add to basket form, other details, shipping information, related products, ratings and comments could be split up.&lt;/p&gt;
-
-&lt;p&gt;Most users don’t read every single aspect of a product each and every time they visit the page. Instead give users the a lightweight, and therefore fast page, with the choice to drill down further.&lt;/p&gt;
-
-&lt;p&gt;Give users one high-definition image &lt;em&gt;without&lt;/em&gt; a carousel. Then let users click &lt;em&gt;show all&lt;/em&gt; which would show all the images in a page of its own. No Javascript is needed on either page. Just let the content flow naturally.&lt;/p&gt;
-
-&lt;p&gt;This uses the natural building blocks of the web as a form of &lt;a href=&quot;https://medium.muz.li/design-technique-progressive-disclosure-1980def8dc97?gi=361cf4735361&quot;&gt;progressive disclosure&lt;/a&gt;. Ultimately, this speeds things up drastically.&lt;/p&gt;
-
-&lt;p&gt;People on expensive data contracts benefit too. They can choose to see all the images or wait until they are connected to WI-FI.&lt;/p&gt;
-
-&lt;p&gt;It’s easier to share page content or imagery this way too. Sending users to a page where most of the stuff is hidden is a problem.&lt;/p&gt;
-
-&lt;p&gt;The same goes for tabs. If stuff is hidden by default, how important is it to appear on this page? If the tab contains a small amount of content, show it. If not consider a separate page again.&lt;/p&gt;
-
-&lt;p&gt;If you’re brave like Yaron, you could place your site’s &lt;a href=&quot;http://yaronschoen.com/table-of-contents/&quot;&gt;menu on a separate page&lt;/a&gt; too. The menu page loads so quickly, that users may not even notice the refresh.&lt;/p&gt;
-
-&lt;p&gt;Modal windows are often used badly. And too often they contain so much content that justifies a new page altogether again.&lt;/p&gt;
-
-&lt;p&gt;Again, not only does this improve performance, but it doesn’t break the back button. Less code, less problems and a faster, better experience. I’m seeing a theme here.&lt;/p&gt;
-
-&lt;p&gt;Scroll jacking, &lt;a href=&quot;/articles/floating-labels-are-problematic/&quot;&gt;floating labels&lt;/a&gt;, &lt;a href=&quot;http://adrianroselli.com/2016/12/dont-re-create-browser-features.html&quot;&gt;font-size widgets&lt;/a&gt;, custom fonts. Kill.&lt;/p&gt;
-
-&lt;h2 id=&quot;reduce-code&quot;&gt;2. Reduce code&lt;/h2&gt;
-
-&lt;p&gt;By simplifying the interface we’ve already reduced the code by literally not writing any. But in coding the features that remain, there is opportunity to reduce the code:&lt;/p&gt;
-
-&lt;h3 id=&quot;create-lean-html&quot;&gt;Create lean HTML&lt;/h3&gt;
-
-&lt;p&gt;Sometimes developers use the wrong element. A &lt;code&gt;&amp;lt;button&amp;gt;&lt;/code&gt; is half the size of &lt;code&gt;&amp;lt;div role=&quot;button&quot; tabinidex=&quot;0&quot;&amp;gt;&lt;/code&gt; and doesn’t require any script to make it accessible again.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://csscreator.com/divitis&quot;&gt;Divitus&lt;/a&gt; is an antiquated buzzword but its still prevalent today. We often use &lt;a href=&quot;http://getbootstrap.com/components/#navbar-brand-image&quot;&gt;additional elements unncessarily&lt;/a&gt;. These make the request longer to make, parse and render. Every element needs a reason to exist.&lt;/p&gt;
-
-&lt;p&gt;Classitus is the use of extra classes. Extra classes may decrease the size of CSS but they signifcantly increase the size of HTML.&lt;/p&gt;
-
-&lt;p&gt;Ensuring HTML is small is vital because unlike CSS, it can’t be easily cached. This is because it’s likely to contain personalised and dynamic content. This in turn encourages the &lt;a href=&quot;/articles/dont-use-ajax-for-personalised-content/&quot;&gt;misuse of AJAX&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;We may also find ourselves adding various &lt;a href=&quot;(https://silktide.com/i-thought-title-text-improved-accessibility-i-was-wrong/)&quot;&gt;attributes in the name of accessibility&lt;/a&gt;. They aren’t always valuable and add further weight to the page.&lt;/p&gt;
-
-&lt;p&gt;Similarly, the first rule of ARIA is not to use it. To associate errors to a form control we might use &lt;code&gt;aria-describedby&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;label for=&quot;age&quot;&amp;gt;
-  Age
-&amp;lt;/label&amp;gt;
-&amp;lt;div id=&quot;age_error&quot;&amp;gt;Enter your age&amp;lt;/div&amp;gt;
-&amp;lt;input id=&quot;age&quot; aria-describedby=&quot;age_error&quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;But, instead putting the error in the label is more performant and more inclusive:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;label for=&quot;age&quot;&amp;gt;
-  Age
-  &amp;lt;div&amp;gt;Enter your age&amp;lt;/div&amp;gt;
-&amp;lt;/label&amp;gt;
-&amp;lt;input id=&quot;age&quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Using &lt;a href=&quot;/articles/dont-initialise-javascript-automagically/&quot;&gt;HTML attributes to automagically initialise script&lt;/a&gt; also increases the size of HTML (and has other problems too).&lt;/p&gt;
-
-&lt;p&gt;Whilst a codified grid system is rarely needed, if you need one you may consider a &lt;a href=&quot;https://github.com/Heydon/fukol-grids&quot;&gt;more minimal approach&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Finally, don’t add HTML hooks just for automated functional testing. Semantic hooks serve everyone’s purpose equally.&lt;/p&gt;
-
-&lt;h3 id=&quot;simplify-your-design-system&quot;&gt;Simplify your design system&lt;/h3&gt;
-
-&lt;p&gt;Government services are simple. Most things are left aligned, and compontents stack naturally. In this case we may be able to &lt;a href=&quot;https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/&quot;&gt;avoid CSS classes altogether&lt;/a&gt;, proving that a simple interface is a performant one.&lt;/p&gt;
-
-&lt;h3 id=&quot;use-less-script&quot;&gt;Use less script&lt;/h3&gt;
-
-&lt;p&gt;I’ve talked about the &lt;a href=&quot;/articles/the-disadvantages-of-single-page-applications/&quot;&gt;problem with single page applications&lt;/a&gt; before. Contrary to popular belief they aren’t necessarily faster. AJAX engineers away &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding#Chunked_encoding&quot;&gt;chunk responses&lt;/a&gt; which you can see in Jake Archibalds article &lt;a href=&quot;https://jakearchibald.com/2016/fun-hacks-faster-content/&quot;&gt;Fun Hacks For Faster Content&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;It’s not just the act of rendering. It takes a lot of code to create robust client-side applications that often prompt developers to use a framework.&lt;/p&gt;
-
-&lt;p&gt;But maybe we don’t need the whole framework. Don’t put that burden on your users. Starting with an entire framework or library puts you on the back foot.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.heydonworks.com/article/look-at-this-shitty-tweet-button&quot;&gt;Twitter’s tweet button script weighs 50k&lt;/a&gt;. We can do the same thing with 0 bytes of script by using a simple link.&lt;/p&gt;
-
-&lt;h3 id=&quot;use-preprocessors-responsibly&quot;&gt;Use preprocessors responsibly&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://jaketrent.com/post/cons-css-preprocessors/#file-size-is-deceiving&quot;&gt;Preprocessors deceitful produce large CSS files&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;use-content-breakpoints&quot;&gt;Use content breakpoints&lt;/h3&gt;
-
-&lt;p&gt;Often a module may need just one breakpoint or even no breakpoints. Designing to a predefined set of breakpoints encourages the unnecessary tweaking of a design that results in more code.&lt;/p&gt;
-
-&lt;h3 id=&quot;place-scripts-at-the-bottom&quot;&gt;Place scripts at the bottom&lt;/h3&gt;
-
-&lt;p&gt;Place scripts at the bottom and consider using &lt;code&gt;async&lt;/code&gt; and &lt;code&gt;defer&lt;/code&gt; attributes. Async is good for completley independent scripts that can run later like analytics.&lt;/p&gt;
-
-&lt;h2 id=&quot;images&quot;&gt;3. Images&lt;/h2&gt;
-
-&lt;p&gt;Not everyone surfs the &lt;a href=&quot;https://www.smashingmagazine.com/2017/03/world-wide-web-not-wealthy-western-web-part-1/&quot;&gt;world western web&lt;/a&gt; on high-end devices. But if you really need that high resolution image:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.sitepoint.com/gif-png-jpg-which-one-to-use/&quot;&gt;use the right image&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://imageoptim.com/mac&quot;&gt;smush the shit out of it&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.codinghorror.com/progressive-image-rendering/&quot;&gt;use progressive rendering&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;backend&quot;&gt;4. Backend&lt;/h2&gt;
-
-&lt;p&gt;CQRS makes querying databases fast.&lt;/p&gt;
-
-&lt;p&gt;(Command Query Responsibility Segregation is a recommended architectural pattern for sites that have more reads (GET) than writes (POST). The premise here is that reads are really fast and come from read representations of your data whereas writes are asynchronous meaning that you have to cater for eventual consistency. Eventual consistency (staleness of data) is normally a good trade off for performance and scalability. Some engineers struggle with the idea of having data duplicated across multiple stores - but this architectural pattern promotes multiple read representations of the same data in multiple types of stores. The server should not be working out what to present at run-time, almost every page’s data is saved in a database, typically a key-value store. This keeps the server code very simple (it’s a simple data bind) and you can have all your complex logic in creating those read representations that execute asynchronously whenever you see a change in your domain model (events). This model also works well with edge caching (CDNs) where you can effectively save read representations of your data i.e. web pages closer to the user.)&lt;/p&gt;
-
-&lt;p&gt;Edge caching reduces network latency by physically bringing various assets and pages closer to the user.&lt;/p&gt;
-
-&lt;p&gt;(Use a CDN (Content Delivery Network) for your static resources and scripts. You can place your webserver behind the CDN and cache almost everything including the generated HTML. Design for browser and edge (CDN) caching your page; set up your server to add HTTP Cache-Control headers and configure your CDN to honour these cache headers. This does not just apply to assets e.g. images, fonts and styles, but the HTML and AJAX responses too. This will ensure a scalable and robust design whereby your web servers will be doing less. You can also cache AJAX responses at the edge for a shorter time again specified by cache control directives.)&lt;/p&gt;
-
-&lt;p&gt;Enable chunking and allow progressive rendering. Don’t engineer it away by using AJAX.&lt;/p&gt;
-
-&lt;p&gt;Cache assets with long expiry dates so that users don’t have to download assets again.&lt;/p&gt;
-
-&lt;p&gt;Use HTTP2 and Gzip. Gzip by the way works better with a well-designed consistent design system, as the more HTML that is repeated the better the compression.&lt;/p&gt;
-
-&lt;p&gt;(Use HTTPS (HTTP2 if available) and Gzip compression to optimize download, it’s a no-brainer. Gzip compression can also be enabled on the edge (some CDN solutions provide this).)&lt;/p&gt;
-
-&lt;p&gt;Addy Osmani discusses benefits of &lt;a href=&quot;https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf&quot;&gt;preload and prefetch&lt;/a&gt;: &lt;em&gt;preload resources you have high-confidence will be used in the current page. Prefetch resources likely to be used for future navigations across multiple navigation boundaries.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Stateless backend&lt;/p&gt;
-
-&lt;p&gt;(Design the backend to be completely stateless i.e. no session or in-memory state on the server. State is passed back to the browser which is sent to the server on every request - i.e. aiming for a more RESTful design. This also applies to authentication cookies, anti-forgery tokens, etc. This allows the backend to seamlessly scale out or in, horizontally with traffic. If possible, split the backend into micro-sites based on context and employ a reverse proxy - you will find that you may be able to host parts of your site as static. )&lt;/p&gt;
-
-&lt;p&gt;Authentication&lt;/p&gt;
-
-&lt;p&gt;(Authentication can be handled via OpenID Connect authorization or hybrid flows if you have a backend server that can issue encrypted secure cookies over HTTPS, or implicit flow if you do not have a server and have to adopt the SPA model. With OpenID Connect, depending on what flow you wish to implement, the identity servers issue a code or access and id tokens that are signed and have an expiry. Your server has the responsibility of validating a provided token or exchanging a code for a token, extracting the identity in the form of claims and optionally issuing your own secure cookie for your site. Use an identity server or federate identity to trusted identity providers for authentication/authorization; please, please don’t engineer your own solution for authentication or security.)&lt;/p&gt;
-
-&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;Each of these improvements come together to form a simple experience that is fast. Fast experiences make users feel awesome.&lt;/p&gt;
-
-&lt;p&gt;You know what’s better than perceived performance? Actual performance. By removing the clutter and optimising the foundations of a system, we nip performance issues in the bud.&lt;/p&gt;
-
-&lt;p&gt;We avoid techniques that merely provide a mirage of speed.&lt;/p&gt;
-
-&lt;p&gt;Less weight, less complexity, less distraction, less bother, less bull shit. Nice.&lt;/p&gt;
-
-&lt;!--
-
-## Links
-
-- http://openmymind.net/2012/5/30/Client-Side-vs-Server-Side-Rendering/
-- https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf
--https://alistapart.com/article/planning-for-performance
-- https://boagworld.com/marketing/users-will-always-choose-the-easiest-option-so-if-we-want-a-competitive-advantage-we-must-focus-on-simplicity/
-- reference twitter and other articles moving away from client-side render.
-- who killed my battery.http://cdn.oreillystatic.com/en/assets/1/event/79/Who%20Killed%20My%20Battery_%20Analyzing%20Mobile%20Browser%20Energy%20Consumption%20Presentation.pdf
-
-- uncrate.com
-
-- death by a thousand cuts ben frain
-
-- Banner blindness. Column blindness.
-http://usabilitygeek.com/ux-designers-ditch-sidebar-2016/
-
-
-
-- visually controlled js implemented select box (features of highly effective forms aaron gust)
-
---&gt;
-</content>
-		</entry>
-	
-		<entry>
-			<title>Inline validation is problematic</title>
-			<link href="//localhost:4000/articles/inline-validation-is-problematic/"/>
-			<updated>2037-01-01T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/inline-validation-is-problematic</id>
-			<content type="html">&lt;p&gt;Inline validation informs users whether what they type is valid as they type. The theory is that it’s easier to fix errors as soon as they occur instead of waiting until submission. The thing is, inline validation causes several problems:&lt;/p&gt;
-
-&lt;h2 id=&quot;interruption-causes-friction&quot;&gt;1. Interruption causes friction&lt;/h2&gt;
-
-&lt;p&gt;For fields thats require a certain number of characters, the first keystroke will cause an error. Meaning users will be interrupted early and often.&lt;/p&gt;
-
-&lt;div class=&quot;image&quot;&gt;
-	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/inline-validation/01-first-key-stroke.gif&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
-	&lt;/figure&gt;
-&lt;/div&gt;
-
-&lt;p&gt;We could wait until the user has entered enough characters but this means the only way a user will get feedback is after completing the field successfully which is pointless.&lt;/p&gt;
-
-&lt;h2 id=&quot;interruption-on-blur-is-too-late&quot;&gt;2. Interruption on blur is too late&lt;/h2&gt;
-
-&lt;p&gt;We could provide feedback when the user leaves the field (&lt;code&gt;onblur&lt;/code&gt;) but this is too late. The user has already started to mentally prepare for, and to fill out the next field.&lt;/p&gt;
-
-&lt;p&gt;Many people switch windows or use password managers to assist in filling out forms. Leaving the field (which triggers the blur event) causes an error to show prematurely before the user finishes typing.&lt;/p&gt;
-
-&lt;div class=&quot;image&quot;&gt;
-	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/inline-validation/02-blur.gif&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
-	&lt;/figure&gt;
-&lt;/div&gt;
-
-&lt;p&gt;And tabbing to the next field causes an error in the first. Due to this error, the user leaves the second field to fix the error in the first. This causes an error in two fields. This sucks.&lt;/p&gt;
-
-&lt;h2 id=&quot;visual-glitches-are-disorientating&quot;&gt;3. Visual glitches are disorientating&lt;/h2&gt;
-
-&lt;p&gt;When a field switches between valid and invalid states, the error appears and disappears respectively. This causes the page to judder which is disorientating and cab cause problems for mouse users.&lt;/p&gt;
-
-&lt;div class=&quot;image&quot;&gt;
-	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/inline-validation/04-judder.gif&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
-	&lt;/figure&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Ideally error messages should be hidden as the user starts to fix the field—either &lt;code&gt;onfocus&lt;/code&gt; or &lt;code&gt;onkeypress&lt;/code&gt;. However, this exacerbates the problem.&lt;/p&gt;
-
-&lt;h2 id=&quot;field-groups-are-inconsistent&quot;&gt;4. Field groups are inconsistent&lt;/h2&gt;
-
-&lt;p&gt;Groups of fields need to be considered holistically. Take a group of checkboxes, for example. The user must choose at least two options. If the user clicks &lt;em&gt;yellow&lt;/em&gt; and blurs is that an error?&lt;/p&gt;
-
-&lt;div class=&quot;image&quot;&gt;
-	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/inline-validation/checkboxes.png&quot; alt=&quot;&quot; style=&quot;max-width: 500px;&quot; /&gt;
-	&lt;/figure&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Or the date field below. As the user leaves the day box, the field is instantly invalid. You could validate when the last box is blurred but what if, for example, someone leaves the first box empty, and then tabs onto month?&lt;/p&gt;
-
-&lt;div class=&quot;image&quot;&gt;
-	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/inline-validation/dateofbirth.png&quot; alt=&quot;&quot; style=&quot;max-width: 500px;&quot; /&gt;
-	&lt;/figure&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Designing something that relies on the user doing something in the right order is not ideal. We could validate these fields &lt;code&gt;onsubmit&lt;/code&gt; but that gives users a false positive as they have grown to expect fields to validate inline.&lt;/p&gt;
-
-&lt;h2 id=&quot;server-side-validation-makes-for-an-inconsistent-experience&quot;&gt;5. Server side validation makes for an inconsistent experience&lt;/h2&gt;
-
-&lt;p&gt;Some validation routines can only be performed on the server via submission. For example, checking someone’s login credentials. This inconsistency in behaviour is confusing.&lt;/p&gt;
-
-&lt;h2 id=&quot;false-positives-are-untrustworthy&quot;&gt;6. False positives are untrustworthy&lt;/h2&gt;
-
-&lt;p&gt;Some implementations use inline validation to show &lt;em&gt;green ticks&lt;/em&gt; when the user fills out a field successfully. This may provide a sense of progression and stop people feeling like they need to check through their answers later on.&lt;/p&gt;
-
-&lt;p&gt;However, inline validation typically checks the &lt;em&gt;format&lt;/em&gt;. This means that a correctly formatted field may still be erroneous once it’s submitted. This not makes the experience untrustworthy and unpleasant.&lt;/p&gt;
-
-&lt;h2 id=&quot;pre-populated-fields-are-tricky&quot;&gt;7. Pre-populated fields are tricky&lt;/h2&gt;
-
-&lt;p&gt;Pre-populated fields cause further issue. Should we display them in the success state, if there is one? If they appear to have been validated already, should we then hide the success message until they have left the field again?&lt;/p&gt;
-
-&lt;h2 id=&quot;validation-inconsistency&quot;&gt;8. Validation inconsistency&lt;/h2&gt;
-
-&lt;p&gt;Some fields can be validated as the user types. For example, if typing a letter in a numerical field. But this causes inconsistency and is rarely applicable to the slew of fields requiring various different validation routines.&lt;/p&gt;
-
-&lt;h2 id=&quot;users-might-not-notice-it&quot;&gt;9. Users might not notice it&lt;/h2&gt;
-
-&lt;p&gt;Many users look at the keyboard as opposed to their screen when typing. In this case users won’t see the error until later or at all.&lt;/p&gt;
-
-&lt;h2 id=&quot;it-forces-users-to-switch-contexts&quot;&gt;10. It forces users to switch contexts&lt;/h2&gt;
-
-&lt;p&gt;Apart from interruption, inline validation causes users to frequently switch between &lt;em&gt;filling in a form&lt;/em&gt; and &lt;em&gt;fixing mistakes&lt;/em&gt; modes. This is a cognitive burden on the user.&lt;/p&gt;
-
-&lt;h2 id=&quot;marking-success-is-confusing&quot;&gt;11. Marking success is confusing&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://alistapart.com/article/inline-validation-in-web-forms&quot;&gt;Luke Wobrelski’s testing&lt;/a&gt; showed that users weren’t sure how to interpret a green tick. He says the &lt;em&gt;participants knew we had no way to know their correct name, so they knew that the green check mark didn’t mean “correct.” But they weren’t sure and that was the problem.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;problems-for-screen-reader-users&quot;&gt;12. Problems for screen reader users&lt;/h2&gt;
-
-&lt;p&gt;When someone is using a screen reader they may want to go through the form fields to get a feel for what is coming before attempting to fill each field out. This could cause errors in all fields before the user even started their journey.&lt;/p&gt;
-
-&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;Inline validation causes many problems and forces users to switch between filling in forms and fixing them.&lt;/p&gt;
-
-&lt;p&gt;Designers like inline validation because it avoids users seeing lots of errors after filling a long form. Assuming this is a true we can solve this by:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Removing unnecessary fields&lt;/li&gt;
-  &lt;li&gt;Ensuring fields are well-understood with clear guidance&lt;/li&gt;
-  &lt;li&gt;Using &lt;a href=&quot;https://www.smashingmagazine.com/2017/05/better-form-design-one-thing-per-page/&quot;&gt;One Thing Per Page&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In any case, designing the perfect inline validation experience is nigh on impossible. Any potential benefit is outweighed by the problems it introduces.&lt;/p&gt;
-
-&lt;!--
-
-“It’s frustrating that you don’t get the chance to put anything in [the field] before it’s flashing red at you.”
-
-“When I clicked in the First Name field, it immediately came up saying that [my first name] is too short. Well of course it is! I haven’t even started!”
-
-“I found it quite annoying how red crosses came up when you hadn’t finished typing. It’s just really distracting.”
-
-E.g. blur tab error issue https://www.wayfair.co.uk/v/checkout/authentication/register
-
-If going to do Ajax then it&#39;s not instant and could slow users down. And then user has to do two server calls. One for Ajax for each field and one for whole submission.
-
-https://simplyaccessible.com/article/accessible-forms-angular/
-
-In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach which shows errors *after* the user first submits the form. The idea being that once the user is actively fixing errors, inline validation is less problematic. This is true, but most of the problems still apply.
---&gt;
-</content>
-		</entry>
-	
-		<entry>
-			<title>How To Interview Front End Developers</title>
-			<link href="//localhost:4000/articles/how-to-interview-front-end-developers/"/>
-			<updated>2027-01-01T00:00:00+00:00</updated>
-			<id>//localhost:4000/articles/how-to-interview-front-end-developers</id>
-			<content type="html">&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Pair&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Don’t ask a one of specific question about one particular API&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Provide a reasonable tech test that actually relates to the skillset you need on your team&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Be careful what questions you ask&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Don’t ask for backend development knowledge in detail unless you are hiring for a full stack developer&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Don’t expect them to do a lot of work in their spare time for the job. You need to give up your time equally. Good developers are sought after. Respect each others time.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Don’t make them come in twice. Wastes there time, and yours and increases the chance they will find another job inbetween int1 and int2.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;DOnt expect the candidates not to have access to google or libraries but it is really important to understand what knowledge they have without google or libraries as to ascertain they are what you need.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Be clear to the developer what it is they are to be tested on. Accessibility or js, or a mixture. Devise a test that encapsulates all the things you are looking for.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Your hirign a front end dev dont test a generic computer science/problem solving test as this is not what they will be doing? If it is then u possibly dont want a front end developer&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Put the developer at ease as much as you can. Sometimes developers want it so bad they mess up, even when they are perfectly capable.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Adjust your interview to the level you require. If someone comes across like a know it all I will ask penetrating questions etc.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</content>
-		</entry>
-	
-		<entry>
-			<title>Why not X</title>
-			<link href="//localhost:4000/articles/why-not-x/"/>
-			<updated>2026-01-01T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/why-not-x</id>
-			<content type="html">&lt;h2 id=&quot;mortgage-driven-development&quot;&gt;Mortgage Driven Development&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;Video&quot;&gt;https://vimeo.com/39660655&lt;/a&gt;
-&lt;a href=&quot;The sad truth&quot;&gt;https://tudorbarbu.ninja/mortgage-driven-development-the-sad-truth/&lt;/a&gt;
-&lt;a href=&quot;MDD&quot;&gt;https://www.infoq.com/presentations/Mortgage-Driven-Development&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;why-not-spa&quot;&gt;Why not SPA&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;Embrace the browser/web&quot;&gt;https://www.youtube.com/watch?v=y8UsGSFz8IQ&lt;/a&gt;
-&lt;a href=&quot;Why I hate your SPA&quot;&gt;https://medium.com/@stilkov/why-i-hate-your-single-page-app-f08bb4ff9134#.ruowrhr1p&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;why-not-libraries&quot;&gt;Why not libraries?&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://groups.google.com/d/topic/comp.lang.javascript/OqCoEHXq4Is/discussion&quot;&gt;1&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/#!searchin/comp.lang.javascript/jquery$20david$20mark/comp.lang.javascript/X8X0PyMVDrw/YhEmEgIP0_cJ&quot;&gt;2&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;why-not-angular&quot;&gt;Why not Angular?&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://medium.com/@mnemon1ck/why-you-should-not-use-angularjs-1df5ddf6fc99&quot;&gt;Why you should not use angular&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.fse.guru/2-years-with-angular&quot;&gt;2 years with it&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://sourcegraph.com/blog/switching-from-angularjs-to-server-side-html&quot;&gt;Why left angular&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://codeofrob.com/entries/you-have-ruined-javascript.html&quot;&gt;You have ruined javascript&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.quirksmode.org/blog/archives/2015/01/the_problem_wit.html&quot;&gt;PPK on Angular&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;why-not-jquery&quot;&gt;Why not jQuery?&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/?fromgroups=#!topic/comp.lang.javascript/b5foNJlmcMM&quot;&gt;Overloading&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://gist.github.com/david-mark/5763027&quot;&gt;Deconstructing jQuery&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://gist.github.com/david-mark/5433074&quot;&gt;jQuery 2.0&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://gist.github.com/david-mark/3445646&quot;&gt;Thoughts on jQuery 2.0&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://modernweb.com/2014/03/10/is-jquery-too-big-for-mobile/&quot;&gt;Is it too big for mobile&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://groups.google.com/d/topic/comp.lang.javascript/ZPW2C1bHVnw/discussion&quot;&gt;Still confused about attributes and properties&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://groups.google.com/d/topic/comp.lang.javascript/y8nLm6N767U/discussion&quot;&gt;Still loopy&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://groups.google.com/d/topic/comp.lang.javascript/cdO4sC0WE1g/discussion&quot;&gt;Has attr really been fixed&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://groups.google.com/d/topic/comp.lang.javascript/sMGaLfB-HO8/discussion&quot;&gt;A very curious snippet&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://groups.google.com/d/topic/comp.lang.javascript/-D7uTHFPxtc/discussion&quot;&gt;Why it wont work for mobile&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://groups.google.com/d/topic/comp.lang.javascript/HIa_41841r4/discussion&quot;&gt;jQuery 1.5&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;why-not-jquery-ui&quot;&gt;Why not jQuery UI?&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/david-mark/9402989&quot;&gt;Worse than imagined&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;why-not-yui&quot;&gt;Why not YUI?&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/?fromgroups=#!searchin/comp.lang.javascript/YUI$20Libraries/comp.lang.javascript/_vzkRWc9cTU/qo-skwSkwnkJ&quot;&gt;General&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/?fromgroups=#!searchin/comp.lang.javascript/yui--competent/comp.lang.javascript/1VM3lQGVHsE/DHRm8mkXt3QJ&quot;&gt;Competent&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/?fromgroups=#!searchin/comp.lang.javascript/yui--doomed/comp.lang.javascript/hFjZEyCMcWQ/GvuVN4hz7SIJ&quot;&gt;Doomed&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;why-not-mootools&quot;&gt;Why not Mootools?&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/david-mark/3310909&quot;&gt;Cowtools&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;why-not-sencha&quot;&gt;Why not Sencha?&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://gist.github.com/david-mark/3279190&quot;&gt;Sencha Touch Still sucks&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://groups.google.com/d/topic/comp.lang.javascript/q3KefNbuePY/discussion&quot;&gt;Support&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;why-not-amdscript-loading&quot;&gt;Why not AMD/script loading?&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/david-mark/2845842&quot;&gt;AMD sucks&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;why-not-hasjsmodernizr&quot;&gt;Why not has.js/modernizr?&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/david-mark/3969573&quot;&gt;What is this has.js&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;why-not-qooxdoo&quot;&gt;Why not Qooxdoo?&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/#!searchin/comp.lang.javascript/jquery$20david$20mark/comp.lang.javascript/CBUXB1NvR0U/7q-OYk1luGIJ&quot;&gt;Qooxdoo strikes back&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://groups.google.com/d/topic/comp.lang.javascript/ZbybkfghPeo/discussion&quot;&gt;Trouble&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</content>
-		</entry>
-	
-		<entry>
 			<title>Floating labels are problematic</title>
-			<link href="//localhost:4000/articles/floating-labels-are-problematic/"/>
+			<link href="https://adamsilver.io/articles/floating-labels-are-problematic/"/>
 			<updated>2017-05-24T10:00:01+01:00</updated>
-			<id>//localhost:4000/articles/floating-labels-are-problematic</id>
+			<id>https://adamsilver.io/articles/floating-labels-are-problematic</id>
 			<content type="html">&lt;p&gt;After writing &lt;a href=&quot;/articles/placeholders-are-problematic/&quot;&gt;Placeholders are Problematic&lt;/a&gt; some people suggested the floating label. We are often seduced by novel patterns that save space but this pattern is problematic. Here’s why:&lt;/p&gt;
 
 &lt;h2 id=&quot;there-is-no-space-for-a-hint&quot;&gt;1. There is no space for a hint&lt;/h2&gt;
@@ -567,7 +23,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/floatinglabels/1-hint.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/floatinglabels/1-hint.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
 		&lt;figcaption&gt;No space for hint&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -578,7 +34,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/floatinglabels/2-readability.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/floatinglabels/2-readability.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
 		&lt;figcaption&gt;Small text is hard-to-read&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -589,7 +45,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/floatinglabels/3-space.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/floatinglabels/3-space.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
 		&lt;figcaption&gt;They need space to move into&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -606,7 +62,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/floatinglabels/5-contrast.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/floatinglabels/5-contrast.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
 		&lt;figcaption&gt;They have poor contrast&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -625,7 +81,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/floatinglabels/7-consistency.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/floatinglabels/7-consistency.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
 		&lt;figcaption&gt;Inconsistent location&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -636,7 +92,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/floatinglabels/8-cutoff.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/floatinglabels/8-cutoff.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
 		&lt;figcaption&gt;The label may get cropped&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -657,9 +113,9 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 	
 		<entry>
 			<title>Stop using device breakpoints</title>
-			<link href="//localhost:4000/articles/stop-using-device-breakpoints/"/>
+			<link href="https://adamsilver.io/articles/stop-using-device-breakpoints/"/>
 			<updated>2017-03-28T10:00:01+01:00</updated>
-			<id>//localhost:4000/articles/stop-using-device-breakpoints</id>
+			<id>https://adamsilver.io/articles/stop-using-device-breakpoints</id>
 			<content type="html">&lt;p&gt;I see it all the time. Designers, and developers alike, setting breakpoints according to their favourite device. When will we learn from our past mistakes?&lt;/p&gt;
 
 &lt;p&gt;When the web came along we settled on 640 pixel widths. Then a few years later, when larger monitors came to market, we settled on 960 pixels. We no longer cared about people with smaller monitors.&lt;/p&gt;
@@ -692,7 +148,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/breakpoints/maintainablecss.png&quot; alt=&quot;MaintainableCSS subscribe form&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/breakpoints/maintainablecss.png&quot; alt=&quot;MaintainableCSS subscribe form&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;MaintainableCSS&#39; responsive subscribe form&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -719,9 +175,9 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 	
 		<entry>
 			<title>Designing inclusively</title>
-			<link href="//localhost:4000/articles/designing-inclusively/"/>
+			<link href="https://adamsilver.io/articles/designing-inclusively/"/>
 			<updated>2017-02-15T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/designing-inclusively</id>
+			<id>https://adamsilver.io/articles/designing-inclusively</id>
 			<content type="html">&lt;p&gt;Whilst the web is still young, it’s been around long enough for us to know about its power and its constraints. We know what these constraints are now because we’ve bent them so much over the years.&lt;/p&gt;
 
 &lt;p&gt;Before CSS we used tables and spacer gifs for layout. Before border-radius we used background images for rounded corners.&lt;/p&gt;
@@ -833,88 +289,10 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 		</entry>
 	
 		<entry>
-			<title>The disadvantages of customising form control design</title>
-			<link href="//localhost:4000/articles/the-disadvantages-of-customising-form-controls/"/>
-			<updated>2017-01-01T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/the-disadvantages-of-customising-form-controls</id>
-			<content type="html">&lt;p&gt;&lt;a href=&quot;http://www.456bereastreet.com/archive/200701/styling_form_controls_with_css_revisited/&quot;&gt;Form controls look different&lt;/a&gt; across browsers and devices because they are integrated deeply with the Operating System. Often, designers want to style form controls to, and I quote, &lt;em&gt;match the brand&lt;/em&gt;. This is problematic for several reasons:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;It’s pretty much impossible&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Using CSS to style form controls to look exactly the same across browsers and platforms is impossible.”
-&lt;br /&gt; — Roger Johansson&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Unlike most HTML elements, form controls are nigh on impossible to style consistently Cross-browser because these components are deeply embedded in to the Operating System and Device. This means browsers ignore some CSS rules that you try and throw at it.&lt;/p&gt;
-
-&lt;p&gt;It takes a grand effort to do so, which is costly to the business.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Users don’t care&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Your users aren’t noticing pixel differences, and they aren’t noticing that form controls are slightly different on their iPhone (for example) compared to their favourite desktop browser.&lt;/p&gt;
-
-&lt;p&gt;Even &lt;em&gt;if&lt;/em&gt; they did notice, they &lt;em&gt;really&lt;/em&gt; don’t care. It’s not going to stop them using your site, consuming content and purchasing items etc — where is there are many reasons worth putting effort into that will!&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;You lose free important UX and accessibility features&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Like mobile&lt;/li&gt;
-  &lt;li&gt;screen reader forms mode&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;It’s costly to build and maintain&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;It is arguably &lt;em&gt;beneficial&lt;/em&gt; that browsers display form controls differently, matching the OS in the process. Because a user uses the same browser repeatedly, there is an inherent expectation of how form controls look and behave. It is wise not to underestimate the importance of consistency in user experience.&lt;/p&gt;
-
-&lt;p&gt;For example, when the user activates a &lt;code&gt;select&lt;/code&gt; menu, on some devices the browser will display a popup [&lt;a href=&quot;#ref3&quot;&gt;3&lt;/a&gt;] which signficantly makes the control easier to interact with. Something you can’t mimic with code, as it’s baked into the native OS.&lt;/p&gt;
-
-&lt;p&gt;The problem is, the only way to truly control the &lt;em&gt;appearance&lt;/em&gt; of a select control, is to recreate it with Javascript. Unfortunately, what you “gain” in &lt;em&gt;look&lt;/em&gt;, you lose in functionality. For example, you lose the popup behaviour; requiring the user to pinch and zoom.&lt;/p&gt;
-
-&lt;p&gt;And, don’t get me wrong, you can make form controls look suitably beautiful without going overboard. Designers must embrace the web and it’s constraints. Use them to the users advantage.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;As Garrett Dimon says:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“There are many things worth investing time to develop and implement. Customising the look and feel of form fields is absolutely not one of them.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Users favour behaviour over pixel-perfect shine and colour every time. Users are comfortable with forms and their natural appearance. It’s important to give away &lt;em&gt;some&lt;/em&gt; control to the natural web. The business and their users will benefit from this.&lt;/p&gt;
-
-&lt;!--
-
-And Nicholas Zakas beautifully points out why in *Progresssive Enhancement 2.0* [[2](#ref2)]. You can go straight to 16 minutes in to skip the history lesson, although that is also very informative.
-
-&lt;dl&gt;
-	&lt;dt class=&quot;citation&quot; id=&quot;ref1&quot;&gt;[1]&lt;/dt&gt;
-	&lt;dd&gt;&lt;a href=&quot;http://dowebsitesneedtolookexactlythesameineverybrowser.com/&quot;&gt;Do websites need to look exactly the same in every browser?&lt;/a&gt;&lt;/dd&gt;
-	&lt;dt class=&quot;citation&quot; id=&quot;ref2&quot;&gt;[2]&lt;/dt&gt;
-	&lt;dd&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=hdTxeR90_1E&quot;&gt;Progressive Enhancement 2.0&lt;/a&gt;&lt;/dd&gt;
-	&lt;dt class=&quot;citation&quot; id=&quot;ref3&quot;&gt;[3]&lt;/dt&gt;
-	&lt;dd&gt;&lt;a href=&quot;http://www.smashingmagazine.com/2010/03/11/forms-on-mobile-devices-modern-solutions/&quot;&gt;Forms on mobile&lt;/a&gt;&lt;/dd&gt;
-&lt;/dl&gt;
-
---&gt;
-</content>
-		</entry>
-	
-		<entry>
 			<title>Don't initialise Javascript automagically</title>
-			<link href="//localhost:4000/articles/dont-initialise-javascript-automagically/"/>
+			<link href="https://adamsilver.io/articles/dont-initialise-javascript-automagically/"/>
 			<updated>2016-12-06T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/dont-initialise-javascript-automagically</id>
+			<id>https://adamsilver.io/articles/dont-initialise-javascript-automagically</id>
 			<content type="html">&lt;p&gt;I used to write Javascript that initialises components automagically. Don’t
 worry I’ll explain what I mean. Take a look below:&lt;/p&gt;
 
@@ -1087,9 +465,9 @@ HTML isn’t good at defining behaviour. But Javascript is.&lt;/p&gt;
 	
 		<entry>
 			<title>Semantic class names: are you being too generic or too specific?</title>
-			<link href="//localhost:4000/articles/semantic-class-names-are-you-being-too-generic-or-too-specific/"/>
+			<link href="https://adamsilver.io/articles/semantic-class-names-are-you-being-too-generic-or-too-specific/"/>
 			<updated>2016-10-31T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/semantic-class-names-are-you-being-too-generic-or-too-specific</id>
+			<id>https://adamsilver.io/articles/semantic-class-names-are-you-being-too-generic-or-too-specific</id>
 			<content type="html">&lt;p&gt;Even if you’re completely sold on &lt;a href=&quot;http://maintainablecss.com/chapters/semantics/&quot;&gt;semantic class names&lt;/a&gt; and avoid stylistic and behavioural class names altogether, choosing a good class name is hard.&lt;/p&gt;
 
 &lt;p&gt;The problem boils down to naming your classes either too generically or too specifically. Both of which have pros and cons. But I like to think we can choose a class name without any cons. Let’s see.&lt;/p&gt;
@@ -1184,9 +562,9 @@ HTML isn’t good at defining behaviour. But Javascript is.&lt;/p&gt;
 	
 		<entry>
 			<title>Browsers are different but so what?</title>
-			<link href="//localhost:4000/articles/browsers-are-different-but-so-what/"/>
+			<link href="https://adamsilver.io/articles/browsers-are-different-but-so-what/"/>
 			<updated>2016-09-01T10:00:01+01:00</updated>
-			<id>//localhost:4000/articles/browsers-are-different-but-so-what</id>
+			<id>https://adamsilver.io/articles/browsers-are-different-but-so-what</id>
 			<content type="html">&lt;p&gt;You know, it’s funny, when the web came along, we used the medium of print to set expectations for how things should be.&lt;/p&gt;
 
 &lt;p&gt;When you print out a business card it always looks the same, no matter who you are or where you are. It’s a physical thing.&lt;/p&gt;
@@ -1231,9 +609,9 @@ The “problem” is that when the file can’t be found, FireFox displays a “
 	
 		<entry>
 			<title>Developing templates using an outside-in approach</title>
-			<link href="//localhost:4000/articles/developing-templates-using-an-outside-in-approach/"/>
+			<link href="https://adamsilver.io/articles/developing-templates-using-an-outside-in-approach/"/>
 			<updated>2016-08-08T10:00:01+01:00</updated>
-			<id>//localhost:4000/articles/developing-templates-using-an-outside-in-approach</id>
+			<id>https://adamsilver.io/articles/developing-templates-using-an-outside-in-approach</id>
 			<content type="html">&lt;p&gt;When we design websites, we start with a user problem and translate that into a set of screens and flows.&lt;/p&gt;
 
 &lt;p&gt;Next, we translate these screens into front-end code. We look at the best way to split up the design into pages,
@@ -1259,21 +637,21 @@ demonstrated with a simple example.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/templates/anon.png&quot; alt=&quot;Anonymous user&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/templates/anon.png&quot; alt=&quot;Anonymous user&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Anonymous user&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated with a name&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated with a name&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Authenticated with a name&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/templates/recognised-no-name.png&quot; alt=&quot;Authenticated without a name&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/templates/recognised-no-name.png&quot; alt=&quot;Authenticated without a name&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Authenticated without a name&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1337,7 +715,7 @@ this data comes from — it’s just information exposed via the view-model.&lt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated with a name&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated with a name&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Authenticated with a name&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1374,7 +752,7 @@ message when the the user is authenticated and has supplied their name:&lt;/p&gt
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated and name is supplied&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated and name is supplied&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Authenticated and name is supplied&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1457,9 +835,9 @@ separation of concerns between back-end and front-end. You don’t need to use a
 	
 		<entry>
 			<title>Buttons shouldn't have a hand cursor</title>
-			<link href="//localhost:4000/articles/buttons-shouldnt-have-a-hand-cursor/"/>
+			<link href="https://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor/"/>
 			<updated>2016-07-15T10:00:01+01:00</updated>
-			<id>//localhost:4000/articles/buttons-shouldnt-have-a-hand-cursor</id>
+			<id>https://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor</id>
 			<content type="html">&lt;p&gt;There is this belief that the hand cursor means ‘clickable’, but this is incorrect and potentially problematic. My hope is that by the end of the article, you’ll never want to use the hand cursor for buttons ever again.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-hand-doesnt-mean-clickable&quot;&gt;The hand doesn’t mean clickable&lt;/h2&gt;
@@ -1468,7 +846,7 @@ separation of concerns between back-end and front-end. You don’t need to use a
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/buttons/chrome.jpeg&quot; alt=&quot;Chrome on Mac OS&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/buttons/chrome.jpeg&quot; alt=&quot;Chrome on Mac OS&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Chrome on Mac OS&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1481,7 +859,7 @@ separation of concerns between back-end and front-end. You don’t need to use a
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/buttons/license.jpeg&quot; alt=&quot;“License Agreement” is a link and uses the hand cursor. The buttons don’t.&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/buttons/license.jpeg&quot; alt=&quot;“License Agreement” is a link and uses the hand cursor. The buttons don’t.&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;“License Agreement” is a link and uses the hand cursor. The buttons don’t.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1531,9 +909,9 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 	
 		<entry>
 			<title>Always use a label</title>
-			<link href="//localhost:4000/articles/always-use-a-label/"/>
+			<link href="https://adamsilver.io/articles/always-use-a-label/"/>
 			<updated>2016-07-01T10:00:01+01:00</updated>
-			<id>//localhost:4000/articles/always-use-a-label</id>
+			<id>https://adamsilver.io/articles/always-use-a-label</id>
 			<content type="html">&lt;p&gt;Designers often remove labels to create a minimal aesthetic and save space. However, &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;minimal doesn’t always mean simple&lt;/a&gt;. Labels are essential to the user experience.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -1550,7 +928,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/labels/asos.jpeg&quot; alt=&quot;ASOS’ product form omits labels on drop downs&quot; width=&quot;100%&quot; style=&quot;max-width: 350px&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/labels/asos.jpeg&quot; alt=&quot;ASOS’ product form omits labels on drop downs&quot; width=&quot;100%&quot; style=&quot;max-width: 350px&quot; /&gt;
 		&lt;figcaption&gt;The menus are mising labels&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1569,7 +947,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/labels/selfridges.png&quot; alt=&quot;Selfridges’ search form omits the label&quot; width=&quot;100%&quot; style=&quot;max-width: 350px;&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/labels/selfridges.png&quot; alt=&quot;Selfridges’ search form omits the label&quot; width=&quot;100%&quot; style=&quot;max-width: 350px;&quot; /&gt;
 		&lt;figcaption&gt;The search field is missing a label&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1593,9 +971,9 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 	
 		<entry>
 			<title>Placeholders are problematic</title>
-			<link href="//localhost:4000/articles/placeholders-are-problematic/"/>
+			<link href="https://adamsilver.io/articles/placeholders-are-problematic/"/>
 			<updated>2016-06-16T10:00:01+01:00</updated>
-			<id>//localhost:4000/articles/placeholders-are-problematic</id>
+			<id>https://adamsilver.io/articles/placeholders-are-problematic</id>
 			<content type="html">&lt;p&gt;Since placeholders came along, designers have adopted them as means of storing hints. Their appeal lies in their minimal aesthetic and the fact they save space.&lt;/p&gt;
 
 &lt;p&gt;Some designers go one one step further, and replace labels with placeholders. Either way, the placeholder is an Inclusive Design anti-pattern which causes problems for users. Here’s why:&lt;/p&gt;
@@ -1606,7 +984,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/placeholders/forget.png&quot; alt=&quot;Placeholder disappears when typing&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/placeholders/forget.png&quot; alt=&quot;Placeholder disappears when typing&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Placeholder text disappears as you type.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1617,7 +995,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/placeholders/support.png&quot; alt=&quot;Broken for browsers lacking support&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/placeholders/support.png&quot; alt=&quot;Broken for browsers lacking support&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Broken experience for browsers lacking support.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1628,7 +1006,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/placeholders/populated.png&quot; alt=&quot;Populated field are hard to use&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/placeholders/populated.png&quot; alt=&quot;Populated field are hard to use&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Populated fields are hard to use.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1643,7 +1021,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/placeholders/2.png&quot; alt=&quot;Error message with a label for context.&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/placeholders/2.png&quot; alt=&quot;Error message with a label for context.&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Different hint patterns when there are errors.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1656,7 +1034,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/placeholders/disappearing.png&quot; alt=&quot;Placeholders disappear on focus&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/placeholders/disappearing.png&quot; alt=&quot;Placeholders disappear on focus&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Placeholders disappear on focus.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1667,7 +1045,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/placeholders/empty.png&quot; alt=&quot;Placeholders mistaken for real values&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/placeholders/empty.png&quot; alt=&quot;Placeholders mistaken for real values&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Placeholders might be mistaken for real values.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1687,7 +1065,7 @@ equivalent of a blank box.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/placeholders/10.png&quot; alt=&quot;No label means a smaller hit area.&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/placeholders/10.png&quot; alt=&quot;No label means a smaller hit area.&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;No label means a smaller hit area..&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1698,7 +1076,7 @@ equivalent of a blank box.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/placeholders/11.png&quot; alt=&quot;Placeholder copy gets cropped.&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/placeholders/11.png&quot; alt=&quot;Placeholder copy gets cropped.&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Long text gets cropped.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1723,12 +1101,12 @@ equivalent of a blank box.&lt;/p&gt;
 	
 		<entry>
 			<title>How we cut our MVP in half to launch KIDLY</title>
-			<link href="//localhost:4000/articles/how-we-cut-our-mvp-in-half-to-launch-kidly/"/>
+			<link href="https://adamsilver.io/articles/how-we-cut-our-mvp-in-half-to-launch-kidly/"/>
 			<updated>2016-05-20T10:00:01+01:00</updated>
-			<id>//localhost:4000/articles/how-we-cut-our-mvp-in-half-to-launch-kidly</id>
+			<id>https://adamsilver.io/articles/how-we-cut-our-mvp-in-half-to-launch-kidly</id>
 			<content type="html">&lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/kidly.jpg&quot; alt=&quot;The team&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/kidly.jpg&quot; alt=&quot;The team&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;The team&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2006,9 +1384,9 @@ space&lt;/a&gt;.&lt;/p&gt;
 	
 		<entry>
 			<title>Hello UX designer</title>
-			<link href="//localhost:4000/articles/hello-ux-designer/"/>
+			<link href="https://adamsilver.io/articles/hello-ux-designer/"/>
 			<updated>2016-05-17T10:00:01+01:00</updated>
-			<id>//localhost:4000/articles/hello-ux-designer</id>
+			<id>https://adamsilver.io/articles/hello-ux-designer</id>
 			<content type="html">&lt;p&gt;I always get a bit frustrated if an individual thinks they’re solely responsible for UX because that’s not true. Design is always better when people work together.&lt;/p&gt;
 
 &lt;p&gt;The world wouldn’t be what it is today if it wasn’t for humans working together to achieve what would previously seem impossible.&lt;/p&gt;
@@ -2050,9 +1428,9 @@ space&lt;/a&gt;.&lt;/p&gt;
 	
 		<entry>
 			<title>Everything I know about speaking at conferences</title>
-			<link href="//localhost:4000/articles/everything-i-know-about-speaking-at-conferences/"/>
+			<link href="https://adamsilver.io/articles/everything-i-know-about-speaking-at-conferences/"/>
 			<updated>2016-04-01T10:00:01+01:00</updated>
-			<id>//localhost:4000/articles/everything-i-know-about-speaking-at-conferences</id>
+			<id>https://adamsilver.io/articles/everything-i-know-about-speaking-at-conferences</id>
 			<content type="html">&lt;p&gt;I spent nearly 2 months preparing to speak at &lt;a href=&quot;http://enhanceconf.com/&quot;&gt;Enhanceconf
 2016&lt;/a&gt; in front of 180 people at the RSA in London.&lt;/p&gt;
 
@@ -2227,16 +1605,16 @@ equivalent.&lt;/li&gt;
 	
 		<entry>
 			<title>Embracing simplicity</title>
-			<link href="//localhost:4000/articles/embracing-simplicity/"/>
+			<link href="https://adamsilver.io/articles/embracing-simplicity/"/>
 			<updated>2016-03-06T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/embracing-simplicity</id>
+			<id>https://adamsilver.io/articles/embracing-simplicity</id>
 			<content type="html">&lt;p&gt;This is the talk I gave at &lt;a href=&quot;http://enhanceconf.com/&quot;&gt;Enhanceconf&lt;/a&gt; 2016, a conference dedicated to Progressive Enhancement.&lt;/p&gt;
 
 &lt;iframe width=&quot;100%&quot; height=&quot;415&quot; src=&quot;https://www.youtube.com/embed/UlzG6-fI00g&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
 &lt;!-- &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/enhanceconf.jpg&quot; alt=&quot;Enhanceconf Q&amp;amp;A&quot; width=&quot;100%&quot;&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/enhanceconf.jpg&quot; alt=&quot;Enhanceconf Q&amp;amp;A&quot; width=&quot;100%&quot;&gt;
 		&lt;figcaption&gt;Photo by &lt;a href=&quot;https://www.flickr.com/photos/psd/&quot;&gt;Paul Downey&lt;/a&gt;&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt; --&gt;
@@ -2255,7 +1633,7 @@ equivalent.&lt;/li&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/bullshit.jpg&quot; alt=&quot;Enhanceconf Q&amp;amp;A&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/bullshit.jpg&quot; alt=&quot;Enhanceconf Q&amp;amp;A&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;&lt;a href=&quot;http://deathtobullshit.com&quot;&gt;Death To Bullshit&lt;/a&gt;&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2280,7 +1658,7 @@ equivalent.&lt;/li&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/desktop.jpg&quot; alt=&quot;My desktop&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/desktop.jpg&quot; alt=&quot;My desktop&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;My desktop&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2291,7 +1669,7 @@ equivalent.&lt;/li&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/homescreen.jpg&quot; alt=&quot;My homescreen&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/homescreen.jpg&quot; alt=&quot;My homescreen&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;My homescreen&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2316,7 +1694,7 @@ equivalent.&lt;/li&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/gawande.jpg&quot; alt=&quot;Atul Gawande&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/gawande.jpg&quot; alt=&quot;Atul Gawande&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Atul Gawande, Professor of Surgery, Harvard Medical School&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2396,7 +1774,7 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/value.jpg&quot; alt=&quot;Value only has a value when it&#39;s value is valued&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/value.jpg&quot; alt=&quot;Value only has a value when it&#39;s value is valued&quot; width=&quot;100%&quot; /&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -2404,7 +1782,7 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/boots.jpg&quot; alt=&quot;Boots logo&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/boots.jpg&quot; alt=&quot;Boots logo&quot; width=&quot;100%&quot; /&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -2414,7 +1792,7 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/boots_single.jpg&quot; alt=&quot;Boots.com single-page checkout diagram&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/boots_single.jpg&quot; alt=&quot;Boots.com single-page checkout diagram&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Boots.com single-page checkout diagram&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2423,7 +1801,7 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/boots_page.jpg&quot; alt=&quot;Boots.com multi-page checkout diagram&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/boots_page.jpg&quot; alt=&quot;Boots.com multi-page checkout diagram&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Boots.com multi-page checkout diagram&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2432,7 +1810,7 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/justeat.jpg&quot; alt=&quot;Just Eat logo&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/justeat.jpg&quot; alt=&quot;Just Eat logo&quot; width=&quot;100%&quot; /&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -2440,7 +1818,7 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/justeat_checkout.jpg&quot; alt=&quot;Multi-page checkout on Just Eat&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/justeat_checkout.jpg&quot; alt=&quot;Multi-page checkout on Just Eat&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Multi-page checkout on Just Eat&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2451,7 +1829,7 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/twomillion.jpg&quot; alt=&quot;Two million extra orders per year&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/twomillion.jpg&quot; alt=&quot;Two million extra orders per year&quot; width=&quot;100%&quot; /&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -2483,7 +1861,7 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/problem.jpg&quot; alt=&quot;Make it your problem, not your users.&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/problem.jpg&quot; alt=&quot;Make it your problem, not your users.&quot; width=&quot;100%&quot; /&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -2507,7 +1885,7 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/essential.jpg&quot; alt=&quot;Mobile first is really just essential only&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/essential.jpg&quot; alt=&quot;Mobile first is really just essential only&quot; width=&quot;100%&quot; /&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -2555,9 +1933,9 @@ He talked to experts in other high-risk professions, such as aviation.
 	
 		<entry>
 			<title>The design challenge</title>
-			<link href="//localhost:4000/articles/the-design-challenge/"/>
+			<link href="https://adamsilver.io/articles/the-design-challenge/"/>
 			<updated>2016-01-08T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/the-design-challenge</id>
+			<id>https://adamsilver.io/articles/the-design-challenge</id>
 			<content type="html">&lt;p&gt;In &lt;a href=&quot;https://medium.com/intercom-inside/how-to-hire-designers-960663e3a3e6#.5het3jvgw&quot;&gt;How To Hire Designers&lt;/a&gt; Paul Adams the four main aspects of design: outcome, system, interaction and visual.&lt;/p&gt;
 
 &lt;p&gt;We often spend too much time obsessing over the visual aspect. So much so that it becomes detrimental to the resulting experience.&lt;/p&gt;
@@ -2628,9 +2006,9 @@ Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a h
 	
 		<entry>
 			<title>Hover menus are problematic</title>
-			<link href="//localhost:4000/articles/hover-menus-are-problematic/"/>
+			<link href="https://adamsilver.io/articles/hover-menus-are-problematic/"/>
 			<updated>2015-12-27T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/hover-menus-are-problematic</id>
+			<id>https://adamsilver.io/articles/hover-menus-are-problematic</id>
 			<content type="html">&lt;p&gt;Designers think hover menus are popular because they &lt;em&gt;aid discoverability&lt;/em&gt; and &lt;em&gt;save users a click&lt;/em&gt;, the latter of which is a common &lt;a href=&quot;http://uxmyths.com/post/654026581/myth-all-pages-should-be-accessible-in-3-clicks&quot;&gt;UX fallacy&lt;/a&gt;. The thing is, hover menus are problematic and here’s why:&lt;/p&gt;
 
 &lt;h2 id=&quot;the-hover-tunnel-and-accidental-deactivation&quot;&gt;1. The hover tunnel and accidental deactivation&lt;/h2&gt;
@@ -2701,9 +2079,9 @@ Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a h
 	
 		<entry>
 			<title>We stopped tasking</title>
-			<link href="//localhost:4000/articles/we-stopped-tasking/"/>
+			<link href="https://adamsilver.io/articles/we-stopped-tasking/"/>
 			<updated>2015-12-15T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/we-stopped-tasking</id>
+			<id>https://adamsilver.io/articles/we-stopped-tasking</id>
 			<content type="html">&lt;p&gt;Scrum advocates breaking down stories into tasks because it:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -2764,9 +2142,9 @@ Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a h
 	
 		<entry>
 			<title>Infinite scrolling is probably a bad idea</title>
-			<link href="//localhost:4000/articles/infinite-scrolling-is-probably-a-bad-idea/"/>
+			<link href="https://adamsilver.io/articles/infinite-scrolling-is-probably-a-bad-idea/"/>
 			<updated>2015-11-24T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/infinite-scrolling-is-probably-a-bad-idea</id>
+			<id>https://adamsilver.io/articles/infinite-scrolling-is-probably-a-bad-idea</id>
 			<content type="html">&lt;p&gt;On more than one occasion I have found myself trying to convince team-mates that infinite scrolling and its close relative &lt;em&gt;show more&lt;/em&gt; is more likely to degrade the experience than improve upon it. I thought I would jot down my notes on the matter and share them with you. Here they are:&lt;/p&gt;
 
 &lt;h2 id=&quot;the-footer-becomes-unusable&quot;&gt;1. The footer becomes unusable&lt;/h2&gt;
@@ -2824,14 +2202,14 @@ Or should I try filtering instead?&lt;br /&gt;&lt;/p&gt;
 	
 		<entry>
 			<title>Designing a bad experience on purpose</title>
-			<link href="//localhost:4000/articles/designing-a-bad-experience-on-purpose/"/>
+			<link href="https://adamsilver.io/articles/designing-a-bad-experience-on-purpose/"/>
 			<updated>2015-11-14T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/designing-a-bad-experience-on-purpose</id>
+			<id>https://adamsilver.io/articles/designing-a-bad-experience-on-purpose</id>
 			<content type="html">&lt;p&gt;Who, in their right mind would design something that’s hard-to-use on purpose? That’s what happened to me once. Let’s just say the website sold stuff. And they wanted users to be able to pay using PayPal. Here’s the design that the business blocked:&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/paymentchoice.png&quot; alt=&quot;Payment choice page&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/paymentchoice.png&quot; alt=&quot;Payment choice page&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
 		&lt;figcaption&gt;Payment choice page&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2891,9 +2269,9 @@ switched.&lt;/p&gt;
 	
 		<entry>
 			<title>Designing honestly for the web</title>
-			<link href="//localhost:4000/articles/designing-honestly-for-the-web/"/>
+			<link href="https://adamsilver.io/articles/designing-honestly-for-the-web/"/>
 			<updated>2015-10-09T10:00:01+01:00</updated>
-			<id>//localhost:4000/articles/designing-honestly-for-the-web</id>
+			<id>https://adamsilver.io/articles/designing-honestly-for-the-web</id>
 			<content type="html">&lt;p&gt;I’ve been working on websites for more than half my life. During this time I’ve witnessed designers, developers and businesses designing dishonestly over and over again.&lt;/p&gt;
 
 &lt;p&gt;There are many aspects of dishonest design. This article hones in on just one of these. The aspect that ignores the platform you are designing for. In the context of the web, I call it “bending the web”.&lt;/p&gt;
@@ -2947,9 +2325,9 @@ Do you sometimes design without a thought for how the browser does it?&lt;/p&gt;
 	
 		<entry>
 			<title>Designing a responsive menu without a hamburger</title>
-			<link href="//localhost:4000/articles/designing-a-responsive-menu-without-a-hamburger/"/>
+			<link href="https://adamsilver.io/articles/designing-a-responsive-menu-without-a-hamburger/"/>
 			<updated>2015-09-14T10:00:01+01:00</updated>
-			<id>//localhost:4000/articles/designing-a-responsive-menu-without-a-hamburger</id>
+			<id>https://adamsilver.io/articles/designing-a-responsive-menu-without-a-hamburger</id>
 			<content type="html">&lt;p&gt;I’m not going to tell you &lt;em&gt;why&lt;/em&gt; the hamburger sucks. James Archer has &lt;a href=&quot;http://deep.design/the-hamburger-menu/&quot;&gt;done that&lt;/a&gt; for me. Instead, I’ll provide some alternative responsive menus that avoid the hamburger.&lt;/p&gt;
 
 &lt;h2 id=&quot;medium&quot;&gt;1. Medium&lt;/h2&gt;
@@ -2958,7 +2336,7 @@ Do you sometimes design without a thought for how the browser does it?&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/hamburger/medium.png&quot; alt=&quot;Medium menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/hamburger/medium.png&quot; alt=&quot;Medium menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
 		&lt;figcaption&gt;Medium&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2975,7 +2353,7 @@ size.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/hamburger/producthunt.png&quot; alt=&quot;Product Hunt menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/hamburger/producthunt.png&quot; alt=&quot;Product Hunt menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
 		&lt;figcaption&gt;Product Hunt&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2991,7 +2369,7 @@ menus”. So, I give you Nodejs.org with &lt;strong&gt;eight&lt;/strong&gt; link
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/hamburger/node.png&quot; alt=&quot;Node menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/hamburger/node.png&quot; alt=&quot;Node menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
 		&lt;figcaption&gt;Node&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -3007,7 +2385,7 @@ room, the links are simply put into two columns.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/hamburger/adamsilver.png&quot; alt=&quot;Adam Silver menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/hamburger/adamsilver.png&quot; alt=&quot;Adam Silver menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
 		&lt;figcaption&gt;Adamsilver.io&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -3018,7 +2396,7 @@ room, the links are simply put into two columns.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/hamburger/googledesign.png&quot; alt=&quot;Google Design menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/hamburger/googledesign.png&quot; alt=&quot;Google Design menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
 		&lt;figcaption&gt;Google Design&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -3031,7 +2409,7 @@ room, the links are simply put into two columns.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;//localhost:4000/assets/img/hamburger/minimalists.png&quot; alt=&quot;The Minimalists&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/hamburger/minimalists.png&quot; alt=&quot;The Minimalists&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
 		&lt;figcaption&gt;The Minimalists&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -3045,9 +2423,9 @@ room, the links are simply put into two columns.&lt;/p&gt;
 	
 		<entry>
 			<title>Progressively enhanced Javascript</title>
-			<link href="//localhost:4000/articles/progressively-enhanced-javascript/"/>
+			<link href="https://adamsilver.io/articles/progressively-enhanced-javascript/"/>
 			<updated>2015-08-16T10:00:01+01:00</updated>
-			<id>//localhost:4000/articles/progressively-enhanced-javascript</id>
+			<id>https://adamsilver.io/articles/progressively-enhanced-javascript</id>
 			<content type="html">&lt;p&gt;The Javascript element of Progressive Enhancement, is quite possibly the most important and misunderstood aspect of client-side Javascript development, period.&lt;/p&gt;
 
 &lt;p&gt;This article addresses these misunderstandings and provides techniques that can be considered cutting-edge, even though they have been around for a very long time and have been forgotten.&lt;/p&gt;
@@ -3263,9 +2641,9 @@ I would add - and with a mobile connection you have no choice but to use the pro
 	
 		<entry>
 			<title>Addendum to the boring front-end developer</title>
-			<link href="//localhost:4000/articles/addendum-to-the-boring-front-end-developer/"/>
+			<link href="https://adamsilver.io/articles/addendum-to-the-boring-front-end-developer/"/>
 			<updated>2015-07-15T10:00:01+01:00</updated>
-			<id>//localhost:4000/articles/addendum-to-the-boring-front-end-developer</id>
+			<id>https://adamsilver.io/articles/addendum-to-the-boring-front-end-developer</id>
 			<content type="html">&lt;p&gt;Thanks to everyone who took the time to read &lt;a href=&quot;/articles/the-boring-front-end-developer/&quot;&gt;The Boring Front-end
 Developer&lt;/a&gt;. There were some outrageous and funny comments which I found entertaining and there were also some points worth addressing.&lt;/p&gt;
 
@@ -3349,9 +2727,9 @@ Mosaic, but there are front-end engineering approaches that ensure “any” bro
 	
 		<entry>
 			<title>The disadvantages of Javascript polyfills</title>
-			<link href="//localhost:4000/articles/the-disadvantages-of-javascript-polyfills/"/>
+			<link href="https://adamsilver.io/articles/the-disadvantages-of-javascript-polyfills/"/>
 			<updated>2015-06-22T10:00:01+01:00</updated>
-			<id>//localhost:4000/articles/the-disadvantages-of-javascript-polyfills</id>
+			<id>https://adamsilver.io/articles/the-disadvantages-of-javascript-polyfills</id>
 			<content type="html">&lt;p&gt;A polyfill, also known as a shim, is a user-defined implementation of an API that some browsers provide natively, normalising browser differences.&lt;/p&gt;
 
 &lt;p&gt;As a proponent of &lt;a href=&quot;/articles/developing-templates-using-an-outside-in-approach&quot;&gt;outside-in development&lt;/a&gt;, I see the lure of trying to develop websites as if all browsers are the same. The problem is that &lt;a href=&quot;/articles/browsers-are-different-but-so-what/&quot;&gt;browsers are not the same&lt;/a&gt;. And tackling the “problem” with a polyfill is problematic. Here’s why:&lt;/p&gt;
@@ -3473,9 +2851,9 @@ if(Object.create) {
 	
 		<entry>
 			<title>The disadvantages of CSS preprocessors</title>
-			<link href="//localhost:4000/articles/the-disadvantages-of-css-preprocessors/"/>
+			<link href="https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/"/>
 			<updated>2015-05-05T10:00:01+01:00</updated>
-			<id>//localhost:4000/articles/the-disadvantages-of-css-preprocessors</id>
+			<id>https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors</id>
 			<content type="html">&lt;p&gt;CSS preprocessors are well lauded in our industry. But, like all technology on offer, it comes with trade-offs. Trade-offs that need our consideration before accepting the added complexity they bring.&lt;/p&gt;
 
 &lt;h2 id=&quot;debugging-is-harder&quot;&gt;1. Debugging is harder&lt;/h2&gt;
@@ -3547,9 +2925,9 @@ anotherSelector {
 	
 		<entry>
 			<title>The role of the Front-end Developer</title>
-			<link href="//localhost:4000/articles/the-role-of-the-front-end-developer/"/>
+			<link href="https://adamsilver.io/articles/the-role-of-the-front-end-developer/"/>
 			<updated>2015-03-11T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/the-role-of-the-front-end-developer</id>
+			<id>https://adamsilver.io/articles/the-role-of-the-front-end-developer</id>
 			<content type="html">&lt;p&gt;The role of the Front-end developer extends far beyond translating  designs into code. They should be heavily involved in many other aspects of the design and development process…&lt;/p&gt;
 
 &lt;h2 id=&quot;user-experience-amp-interaction-design&quot;&gt;User Experience &amp;amp; Interaction Design&lt;/h2&gt;
@@ -3605,9 +2983,9 @@ anotherSelector {
 	
 		<entry>
 			<title>Technical wanking</title>
-			<link href="//localhost:4000/articles/technical-wanking/"/>
+			<link href="https://adamsilver.io/articles/technical-wanking/"/>
 			<updated>2015-02-09T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/technical-wanking</id>
+			<id>https://adamsilver.io/articles/technical-wanking</id>
 			<content type="html">&lt;p&gt;Technical Wanking is the practice of using cool and new technology because — well — it’s &lt;em&gt;cool&lt;/em&gt; and &lt;em&gt;new&lt;/em&gt;. Of course, we should choose technology on its technical merit and technical merit alone.&lt;/p&gt;
 
 &lt;p&gt;I first heard this term in 2010 when I was building my first Single Page Application (SPA). We were using various “cutting-edge” libraries for DOM stuff and client-side templating, and we rolled our own client-side router.&lt;/p&gt;
@@ -3645,330 +3023,10 @@ anotherSelector {
 		</entry>
 	
 		<entry>
-			<title>On Outside-in Development</title>
-			<link href="//localhost:4000/articles/on-outside-in-development/"/>
-			<updated>2015-01-01T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/on-outside-in-development</id>
-			<content type="html">&lt;p&gt;I want to talk about Outside-in Development because for one people don’t talk about it very often. For two, it bares a strinking resemblance to User Centered Design.&lt;/p&gt;
-
-&lt;p&gt;Designers frequently talk about users. If they’re not designing for the user then what are they doing? But developers are more likely to get distracted by problems lower down the technology stack.&lt;/p&gt;
-
-&lt;p&gt;They can become consumed by problems in their own world. And sometimes those problems don’t end up benefiting the user. If developers are solving problems that don’t benefit the user, then what are they doing?&lt;/p&gt;
-
-&lt;p&gt;It’s important to note that even if we remove, just for a moment, the people who &lt;em&gt;use&lt;/em&gt; the product; there are still plenty of &lt;em&gt;people&lt;/em&gt; that need our consideration.&lt;/p&gt;
-
-&lt;p&gt;For example, if you’re a coder, there will be other people that need to work with your code. If your code is easy to understand, then other coders will help you build upon it quicker and more robust.&lt;/p&gt;
-
-&lt;p&gt;Stepping back away from code for a moment. Let’s look at the people involved in order to deliver a web product or service. Users, Product Design, Test Automation, Front-end, Back-end, Database, 3rd party APIs.&lt;/p&gt;
-
-&lt;p&gt;I tend to think of it a bit like this:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Product supports User;&lt;/li&gt;
-  &lt;li&gt;Test Automation supports the Product;&lt;/li&gt;
-  &lt;li&gt;Front-end supports Test Automation;&lt;/li&gt;
-  &lt;li&gt;Back-end supports Front-end; and&lt;/li&gt;
-  &lt;li&gt;Databases and 3rd Party APIs support Back-end&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In reality it’s more nuanced than this. Because everyone is responsible for UX. But you can see the point. Ultimately it all leads back to the user. Like it should.&lt;/p&gt;
-
-&lt;!--Every problem that can be simply pushed back to the level below should be.
-Derek Featherstone said, “If you can solve the problem with a simpler solution lower in the stack, you should--&gt;
-
-&lt;p&gt;In terms of application code, the most outer edge is Front-end. If you’re building a dynamic website, then HTML needs to contain content that originates from somewhere else. This could be an API, database, file store, cookies etc. Or it has logic that depends on the state of this data.&lt;/p&gt;
-
-&lt;p&gt;Regardless, if you’re a front-end developer you shouldn’t necessarily concern yourself about the finer details of these other layers. Obviously knowing about them helps but I mean to the extent that you take on the responsibility in some form or other in the &lt;em&gt;Front-end&lt;/em&gt;. This is something I explain in “Developing better templates with an outside-in approach”.&lt;/p&gt;
-
-&lt;p&gt;In that article I explain that template logic should be just that, and anything more complex should be abstracted away into a View Model. A View Model is something that resides in the back-end.&lt;/p&gt;
-
-&lt;p&gt;This principle should be applied to all levels of the system. For example, let’s say the back-end builds up a View Model from 3 seperate API calls. If at all possible, you would be wise to demand more from the API developers and request that 3 separate calls (expensive and complex) are converted into 1 call (cheap and easy).&lt;/p&gt;
-
-&lt;p&gt;The industry calls this an Orchestration Layer. The reason APIs are designed so generically in the first place is so that once they are written the developers don’t need to touch them again. But this is short-sighted.&lt;/p&gt;
-
-&lt;p&gt;Whilst we all want to provide an API that doesn’t need updating it’s an endeavour that is either impossible or causes much trouble. If you’re going to do this, you might as well creat an API that can read from a database and except an SQL query. This way it’s one end-point with a million different possibilities. Job done.&lt;/p&gt;
-
-&lt;p&gt;I have brushed over these topics and again things are never black and white. But the point is to try and enforce the right separation of concerns. Too often separation of concerns are determined by the lower levels of the system and this causes a lot of trouble for the outer layers.&lt;/p&gt;
-
-&lt;p&gt;Every layer leads to the User. Improve each layer, you’ll ultimately improve the User Experience. This might come in the form of:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;speed of application (if right layer doing the right thing then faster): better to expose dedicated fast api call than have to make 3&lt;/li&gt;
-  &lt;li&gt;easier to maintain: quicker to release new features/improvements&lt;/li&gt;
-  &lt;li&gt;less bugs: if each layer is as simple as possible then less bugs. as per view model.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ultimately, Outside-in Development is a mindset in which to solve a problem. If the layer below is not serving you well, it’s your responsiblility to work out a better solution together.&lt;/p&gt;
-
-&lt;dl&gt;
-	&lt;dt class=&quot;citation&quot; id=&quot;ref0&quot;&gt;[0]&lt;/dt&gt;
-	&lt;dd&gt;&lt;a href=&quot;http://stackoverflow.com/questions/3896730/whats-the-advantage-of-logic-less-template-such-as-mustache&quot;&gt;Logic-less templating discussion&lt;/a&gt;&lt;/dd&gt;
-	&lt;dt class=&quot;citation&quot; id=&quot;ref1&quot;&gt;[1]&lt;/dt&gt;
-	&lt;dd&gt;&lt;a href=&quot;http://thenextweb.com/dd/2013/12/17/future-api-design-orchestration-layer/&quot;&gt;API Orchestration Layer&lt;/a&gt;&lt;/dd&gt;
-	&lt;dt class=&quot;citation&quot; id=&quot;ref2&quot;&gt;[2]&lt;/dt&gt;
-	&lt;dd&gt;&lt;a href=&quot;http://martinfowler.com/bliki/CQRS.html&quot;&gt;CQRS&lt;/a&gt;&lt;/dd&gt;
-&lt;/dl&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;In the old JSP days, it was very common to have JSP files sprinkled with Java code, which made refactoring much harder, since you had your code scattered.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;If you prevent logic in templates by design (like mustache does), you will be obliged to put the logic elsewhere, so your templates will end up uncluttered.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Another advantage is that you are forced to think in terms of separation of concerns: your logic code will have to do the data massaging before sending data to the UI. If you later switch your template for another (let’s say you start using a different templating engine), the transition would be easy because you only had to implement UI details (since there’s no logic on the template, remember).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Now it’s worth noting the developing software from the outside-in is not always possible. The way in which a technology works is a constraint to design. But this doesn’t stop us practicing outside-in development at least by default.&lt;/p&gt;
-
-</content>
-		</entry>
-	
-		<entry>
-			<title>Quotes and thoughts</title>
-			<link href="//localhost:4000/articles/quotes/"/>
-			<updated>2015-01-01T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/quotes</id>
-			<content type="html">&lt;p&gt;Adam:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;When designer says remove widget for smaller screens, you must challenge this or question why it is ever present on larger devices. #rwd
-…if widget should be present on larger screens, it should of course be present on smaller screens. #rwd
-…small screens does not mean the experience should be app-like. #rwd
-Mobile web is not mobile&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Reason IE8 usage is so low and “irrelevant” is because you unnecessarily broke the site for them effectively giving them the finger. :(&lt;/p&gt;
-
-&lt;p&gt;Mark: &lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Every feature that’s squeezed in, in the name of giving your design a competitive edge, has been making your design less competitive.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;David:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Form-related DOM has been standardized + stable for 15 years. Counterproductive to add a flaky, ever-shifting script above it.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;A good way to study history is to ask those who were around for it. A bad way is to poll the man on the street today. ;)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Reducing clicks in itself is silly. That’s like removing steps on a staircase, increasing the risers causing stress and injury #ux&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;““Transparency breeds trust, and trust is the foundation of great teamwork”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;“Responsive design isn’t about mobile, but it’s not about desktop either. It’s about the web” @adactio&lt;/p&gt;
-
-&lt;p&gt;James:&lt;/p&gt;
-
-&lt;p&gt;“it is just astonishing how much complexity people are willing to bear as long &amp;gt; as they invent that complexity”&lt;/p&gt;
-</content>
-		</entry>
-	
-		<entry>
-			<title>Icon fonts</title>
-			<link href="//localhost:4000/articles/dont-use-icon-fonts/"/>
-			<updated>2015-01-01T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/dont-use-icon-fonts</id>
-			<content type="html">&lt;ul&gt;
-  &lt;li&gt;Icon fonts have become popular and in summary, if you don’t know, they are icons embedded in a font, that is embedded in CSS which can be applied to HTML elements via data or class attributes. All sounds quite nice until you analyse the negative impact of them.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;unsemantic-html&quot;&gt;Unsemantic HTML&lt;/h2&gt;
-
-&lt;p&gt;Adding empty spans, aria and data attributes just for an icon:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;span aria-hidden=&quot;true&quot; data-icon=&quot;&amp;amp;#x21dd;&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Decorative images like icons should likely be CSS background images.&lt;/p&gt;
-
-&lt;p&gt;For inline images that provide meaning then:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;img src=&quot;image.png&quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If using class-names like class=”icon-pencil” then you have unsemantic HTML which we all know the benefits of semantics so no need to go into that here. [](/semantic-article/)&lt;/p&gt;
-
-&lt;h2 id=&quot;bloated-css&quot;&gt;Bloated CSS&lt;/h2&gt;
-
-&lt;p&gt;Instead of&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;selector {
-	background: url(path/to/image.png);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You get&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[data-icon]:before {
-	font-family: icons; /* BYO icon font, mapped smartly */
-	content: attr(data-icon);
-	speak: none; /* Not to be trusted, but hey. */
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;[data-blah]&lt;/li&gt;
-  &lt;li&gt;:before&lt;/li&gt;
-  &lt;li&gt;Even the examplified code says “not to be trusted”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;accessibility&quot;&gt;Accessibility&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;(Screen reader) Support for speak: none&lt;/li&gt;
-  &lt;li&gt;(Screen reader) Support for aria attributes (and as filament group says) not even this attributes work in a bullet proof way.&lt;/li&gt;
-  &lt;li&gt;Screen reader interpretation of unicode&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;private-unicode-area&quot;&gt;Private Unicode Area&lt;/h2&gt;
-
-&lt;p&gt;As Ian Feather states in &lt;em&gt;Ten reasons we switched from an icon font to SVG&lt;/em&gt;: &lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I’d heard rumours about devices overriding glyphs in the private unicode area and using them to serve emoji but I hadn’t seen it happen until recently. Emoji was historically stored in the private unicode area, but at different ranges, so it would make sense that there could be conflicts.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I can’t remember which device I was testing on but I saw one of our tick icons replaced with a multi-colour printer. The page looked amateurish and broken and certainly gave us impetus to make this transition.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;cross-browser-support&quot;&gt;Cross-browser support&lt;/h2&gt;
-
-&lt;p&gt;As Ian Feather states:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Font face support and detection is historically quite tricky to get right. &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Basically this technique is not Cross-browser and if developing for the open web then this is clearly very important.&lt;/p&gt;
-
-&lt;p&gt;Issues have been documented in Opera Mini and Chrome.&lt;/p&gt;
-
-&lt;p&gt;Different browsers, devices and OSs render text differently. This is expected and acceptable in text but is likely unacceptable for iconography.&lt;/p&gt;
-
-&lt;p&gt;Font icons work back to IE8. What do you get in that&lt;/p&gt;
-
-&lt;p&gt;As Filament group state support is pretty poor:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Did you know that most methods for including icon fonts don’t accommodate screenreaders very well, and require some specific markup patterns to work well and be accessible? And we discovered that a number of both old (and new!) mobile browsers—specifically Opera Mini, the Nokia XPress Browser, Blackberry 4–5, Android 2.1, and Windows Phone 7–7.8— do not support @font-face at all. With little bit of research, we were surprised to learn that (at time of writing) these browsers serve at least 370 Million users worldwide.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Lack of support then leans on polyfills which of course are JS so relying on the presence of “behavioural” technology for one of style and content.&lt;/p&gt;
-
-&lt;h2 id=&quot;architectural-issues&quot;&gt;Architectural issues&lt;/h2&gt;
-
-&lt;h3 id=&quot;using-the-same-selector-for-more-than-one-thing-like-clearfix-and-icons&quot;&gt;Using the same selector for more than one thing like clearfix and icons&lt;/h3&gt;
-
-&lt;p&gt;As Ian Feather states:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;If you want to use font-icons in css you need to declare them using the content property in generated content. Sometimes you might find yourself having to complicate your code to make this possible i.e. because you are already using the :before and :after pseudo elements on the element or because the element doesn’t support generated content.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;In that case you could choose to render it inline but you then end up with html entities scattered through your markup which can easily be lost or forgotten about within a large application.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;fiddly-to-position&quot;&gt;Fiddly to position&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Admittedly this may be a result of how we created and managed our icon glyphs but we always found them awkward to position exactly how we wanted (and in a consistent fashion cross browser). We resorted to line height hacks and absolute/relative positioning to get them just right and it was difficult to come up with an abstraction that worked consistently.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Fine grained control with a background css rule.&lt;/p&gt;
-
-&lt;h2 id=&quot;design-limitations&quot;&gt;Design limitations&lt;/h2&gt;
-
-&lt;p&gt;Ian feather states:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Font icons are well known to have a single colour limitation. SVGs, on the other hand, can support multiple colours as well as gradients and other graphical features.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;creation-and-maintenance-effort&quot;&gt;Creation and maintenance effort&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Have to create them. Instead of just cropping an image and saving it into your images directory, you now have to save the image to a temporary directory, run it through a generator, choose the custom names and/or codes, save that out and update your CSS appropriately. Then of course apply any HTML hooks to pick up the icons. The same goes with any further updates.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;blocking-css-font-download-perf&quot;&gt;blocking css font download perf&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;FOUT&lt;/li&gt;
-  &lt;li&gt;FOIT&lt;/li&gt;
-  &lt;li&gt;Downloading blocking&lt;/li&gt;
-  &lt;li&gt;One of the two main reasons for using icon fonts is perf. Downloading one font and having access to a range of different fonts (and variants in style) seemed like a boon. But all the trade offs and jumping through hoops (which Filament group talk about) are negating and performance benefits. i.e. more css, more js, more HTML.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;Ultimiately this is not the way to add decorative (or inline) images to a web page meaning that you end up with a lot of trade offs as described in the article. The good news is you can just revert to to tried and tested techniques that work for everybody and have very limited negative aspects. What are the negative aspects as people see them: Maintenance! Maintenance in having more than one size, more than one colour etc and on a whim giving them CSS treatment like shadow, emboldment and animation.&lt;/p&gt;
-
-&lt;h2 id=&quot;citations&quot;&gt;Citations&lt;/h2&gt;
-
-&lt;p&gt;uses polyfills for ie.&lt;/p&gt;
-
-&lt;p&gt;icon loader js - tablet shows nothing as cant render the icon&lt;/p&gt;
-</content>
-		</entry>
-	
-		<entry>
-			<title>complicated</title>
-			<link href="//localhost:4000/articles/why-complicated/"/>
-			<updated>2015-01-01T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/why-complicated</id>
-			<content type="html">&lt;p&gt;At school, we’re taught to be cleverer.&lt;/p&gt;
-
-&lt;p&gt;At school they teach u to advance ur vocab. Using a thesaurus gets you bonus points.&lt;/p&gt;
-
-&lt;p&gt;–&lt;/p&gt;
-
-&lt;p&gt;More interestingly though is &lt;em&gt;why&lt;/em&gt; do we do this. As I have an unhealthy obsession for simplicity, I’ve managed to research and consciously observe people practicing the are of complicating things. Here’s some notes on the matter:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;We, people that is, have a complex about doing more. Mark Jenkins wrote an article about two different designers and how their approach and the resulting contribution sets them apart. In short, we as humans always want to do more and we worry about our own contribution. The more we contribute the better we feel. But this is often counterproductive.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Greg McKeown talks about how success often breed failure because with success comes growth. With growth comes more opportunity, more departments, more people trying to contribute (see previous point). This manifests itself in different departments (marketing, digital, merchandising) vying for space on different parts of a website. Inevitably stuff gets added and pages get bloated.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;We often think that people care about our product as much as we do. We get emotionally invested in the products we design. But most people don’t care about our site like we do. They don’t come for entertainment. They just want the outcome. So &lt;em&gt;we&lt;/em&gt; get bored and &lt;em&gt;we&lt;/em&gt; add more stuff. In many respects we come up with problems to solve.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;More specifically related to this topic is that we think all users must complete tasks within 3 clicks[^] which is a gigantic UX myth. It’s not about clicks (or pages), it’s about users making their way through a process as quickly and as easily as possible.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;We often confuse simplicity for having &lt;em&gt;one&lt;/em&gt; of something[^]. But that’s not necessarily true. Having one of something that is intertwined with many things is far from simple.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;And lastly, we often assume that our users are the same as us. We think they have the same cutting edge devices and the same expensive data contracts. But actually they don’t[^West].&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Whatever the reason, we end up having to come up with clever ways to make slow pages faster. It’s like eating donuts ever day, putting on five stone in weight, and then coming up with innovative ways to make a fat man run fast. I’m thinking rocket boots, do you have any better ideas?&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Innovation&lt;/em&gt; by the way is a dirty word. Most often, it’s seen as a license to spend a lot of time solving problems that are typically introduced by the same person trying to solve them.&lt;/p&gt;
-</content>
-		</entry>
-	
-		<entry>
 			<title>Don't use AJAX for personalised content</title>
-			<link href="//localhost:4000/articles/dont-use-ajax-for-personalised-content/"/>
+			<link href="https://adamsilver.io/articles/dont-use-ajax-for-personalised-content/"/>
 			<updated>2014-12-29T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/dont-use-ajax-for-personalised-content</id>
+			<id>https://adamsilver.io/articles/dont-use-ajax-for-personalised-content</id>
 			<content type="html">&lt;p&gt;&lt;a href=&quot;https://developer.akamai.com/stuff/Caching/Content_Caching.html&quot;&gt;Content caching&lt;/a&gt; is a useful technique to increase the loading speed of a page. If the page has personalised content this technique doesn’t work. This is is because one user may receive another user’s personalised content which is insecure and undesirable.&lt;/p&gt;
 
 &lt;p&gt;The problem comes when someone suggests using AJAX to request the personalised content as a separate request. Before discussing the problem let’s define exactly what personalised content is.&lt;/p&gt;
@@ -4065,9 +3123,9 @@ Mobile web is not mobile&lt;/p&gt;
 	
 		<entry>
 			<title>The boring front-end developer</title>
-			<link href="//localhost:4000/articles/the-boring-front-end-developer/"/>
+			<link href="https://adamsilver.io/articles/the-boring-front-end-developer/"/>
 			<updated>2014-10-01T10:00:01+01:00</updated>
-			<id>//localhost:4000/articles/the-boring-front-end-developer</id>
+			<id>https://adamsilver.io/articles/the-boring-front-end-developer</id>
 			<content type="html">&lt;p&gt;&lt;em&gt;Cool&lt;/em&gt; front-end developers are always &lt;em&gt;pushing the envelope&lt;/em&gt;, jumping out of their seat to use the latest and greatest and shiniest of UI frameworks and libraries.&lt;/p&gt;
 
 &lt;p&gt;They’re often found bridging the gap between native apps and web and so will strive to make the UI look and behave like an app. &lt;em&gt;Which app?&lt;/em&gt; you may ask. &lt;em&gt;iPhone? Android? What version?&lt;/em&gt; All good questions, alas another topic altogether.&lt;/p&gt;
@@ -4133,9 +3191,9 @@ Mobile web is not mobile&lt;/p&gt;
 	
 		<entry>
 			<title>Misusing the select control</title>
-			<link href="//localhost:4000/articles/misusing-the-select-control/"/>
+			<link href="https://adamsilver.io/articles/misusing-the-select-control/"/>
 			<updated>2014-09-17T00:00:00+01:00</updated>
-			<id>//localhost:4000/articles/misusing-the-select-control</id>
+			<id>https://adamsilver.io/articles/misusing-the-select-control</id>
 			<content type="html">&lt;p&gt;I’ve seen many designers misuse the select menu by using it as a form of navigation. One example of this approach is with a Sort By form which many ecommerce sites use to allow users to sort a list of products.&lt;/p&gt;
 
 &lt;!-- &lt;div class=&quot;image&quot; style=&quot;max-width: 320px;margin: 0 auto;&quot;&gt;
@@ -4192,9 +3250,9 @@ Chrome (Windows), Opera (Windows), IE6, IE7, IE8 or IE9.&lt;/p&gt;
 	
 		<entry>
 			<title>Javascript inheritance</title>
-			<link href="//localhost:4000/articles/javascript-inheritance/"/>
+			<link href="https://adamsilver.io/articles/javascript-inheritance/"/>
 			<updated>2014-09-09T10:00:59+01:00</updated>
-			<id>//localhost:4000/articles/javascript-inheritance</id>
+			<id>https://adamsilver.io/articles/javascript-inheritance</id>
 			<content type="html">&lt;p&gt;ECMAScript doesn’t have an &lt;em&gt;inherit&lt;/em&gt; function. But you can mimic the functionality yourself if you need to.&lt;/p&gt;
 
 &lt;p&gt;Here’s a ready made inherit function you can use in your project:&lt;/p&gt;
@@ -4278,9 +3336,9 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 	
 		<entry>
 			<title>The disadvantages of single page applications</title>
-			<link href="//localhost:4000/articles/the-disadvantages-of-single-page-applications/"/>
+			<link href="https://adamsilver.io/articles/the-disadvantages-of-single-page-applications/"/>
 			<updated>2014-08-11T10:00:01+01:00</updated>
-			<id>//localhost:4000/articles/the-disadvantages-of-single-page-applications</id>
+			<id>https://adamsilver.io/articles/the-disadvantages-of-single-page-applications</id>
 			<content type="html">&lt;p&gt;Many people think single page applications (SPAs) provide a better user experience. But, not only do they cause usability problems, they are significantly harder to design and build.&lt;/p&gt;
 
 &lt;p&gt;Before getting into the issues, let’s first clarify what an SPA is.&lt;/p&gt;
@@ -4406,9 +3464,9 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 	
 		<entry>
 			<title>Javascript namespacing</title>
-			<link href="//localhost:4000/articles/javascript-namespacing/"/>
+			<link href="https://adamsilver.io/articles/javascript-namespacing/"/>
 			<updated>2014-07-11T10:00:01+01:00</updated>
-			<id>//localhost:4000/articles/javascript-namespacing</id>
+			<id>https://adamsilver.io/articles/javascript-namespacing</id>
 			<content type="html">&lt;p&gt;Namespaces help you organise code so that it’s easy for others to find their way around it. In Javascript, they also minimise the number of &lt;a href=&quot;http://www.yuiblog.com/blog/2006/06/01/global-domination/&quot;&gt;global variables&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Javascript doesn’t (at the time of writing) have a dedicated way to namespace components. But we can do it using object literals.&lt;/p&gt;
@@ -4461,9 +3519,9 @@ zoo.information = {
 	
 		<entry>
 			<title>Forms with multiple submit buttons are problematic</title>
-			<link href="//localhost:4000/articles/forms-with-multiple-submit-buttons-are-problematic/"/>
+			<link href="https://adamsilver.io/articles/forms-with-multiple-submit-buttons-are-problematic/"/>
 			<updated>2014-03-20T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/forms-with-multiple-submit-buttons-are-problematic</id>
+			<id>https://adamsilver.io/articles/forms-with-multiple-submit-buttons-are-problematic</id>
 			<content type="html">&lt;p&gt;Forms with multiple submit buttons are problematic for keyboard users because of how submission works. A user can submit a form by pressing &lt;em&gt;enter&lt;/em&gt;, when the focus is within a field (as opposed to a button).&lt;/p&gt;
 
 &lt;p&gt;If there are multiple buttons, the form will behave as if the user pressed the &lt;em&gt;first&lt;/em&gt; button. This is not always desirable. For example, you might have an address form with a postcode look-up.&lt;/p&gt;
@@ -4501,9 +3559,9 @@ zoo.information = {
 	
 		<entry>
 			<title>How to create accessible forms</title>
-			<link href="//localhost:4000/articles/how-to-create-accessible-forms/"/>
+			<link href="https://adamsilver.io/articles/how-to-create-accessible-forms/"/>
 			<updated>2014-01-22T09:00:01+00:00</updated>
-			<id>//localhost:4000/articles/how-to-create-accessible-forms</id>
+			<id>https://adamsilver.io/articles/how-to-create-accessible-forms</id>
 			<content type="html">&lt;p&gt;Interacting with forms is one of the most important interactions a person can have on the web. The great news is, forms can be made to be accessible and in-turn more human-friendly with very little effort. This article describes the simple techniques you can utilise to ensure your forms are accessible.&lt;/p&gt;
 
 &lt;h2 id=&quot;labels&quot;&gt;Labels&lt;/h2&gt;
