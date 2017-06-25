@@ -714,7 +714,7 @@ hr {
 	border-radius: 8px;
 	display: inline-block;
 	font-family: 'Open sans';
-	vertical-align: middle;
+	vertical-align: top;
 }
 
 @media(min-width: 37em) {
