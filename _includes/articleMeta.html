@@ -1,0 +1,12 @@
+<div class="meta">
+	<time class="meta-date" date-time="{{include.date | date: "%Y-%m-%d" }}">{{ include.date | date: "%-d %B %Y" }}</time> <span class="meta-divider">&#183;</span>
+	<span class="meta-readingTime" title="Estimated read time">
+	  {% assign words = include.cont | number_of_words %}
+
+	  {% if words < 480 %}
+	    1 minute read
+	  {% else %}
+	    {{ words | divided_by:240 }} minute read
+	  {% endif %}
+	</span>
+</div>
