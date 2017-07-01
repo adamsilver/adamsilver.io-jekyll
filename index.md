@@ -13,6 +13,9 @@ I write for [Smashing Magazine](https://www.smashingmagazine.com/author/adamsilv
 
 {% include signUpForm.html %}
 
+<p>You can also find me on <a href="http://www.twitter.com/adambsilver/">Twitter</a>, <a href="http://www.github.com/adamsilver/">Github</a>, <a href="http://uk.linkedin.com/in/adambsilver/">Linkedin</a> and <a href="http://medium.com/@adambsilver">Medium</a>.
+	</p>
+
 <!-- <br><br>
 
 ## What I can do for you
