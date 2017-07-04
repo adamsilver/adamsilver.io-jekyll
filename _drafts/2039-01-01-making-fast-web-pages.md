@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Making websites fast
+title: Performance by design
 date: 2039-01-01 09:00:01
 categories: ux performance
 ---
@@ -9,33 +9,35 @@ This is how it goes. We cram a load of shit onto a single web page. This makes t
 
 Instead of getting rid of the shit, we blame the page refresh. There's only one way to avoid the page refresh and that's AJAX.
 
-However, AJAX still needs to render new (parts of) screens. More crucially it still has to make a request to the server. That's not all&mdash;there are penalties in using AJAX.
+However, AJAX still needs to render new (parts of) screens. More crucially it still has to make a request to the server. That's not all&mdash;there are penalties for using AJAX.
 
-First, making requests, handling different responses, traversing the Document and injecting HTML requires *more* code to be sent initially. This also needs to be evaluated and executed on the client.
+First, making requests, handling different responses, traversing the document tree and injecting HTML requires *more* code to be sent initially. This also needs to be evaluated and executed on the client.
 
-Second, AJAX engineers away things the browser does for free, such as progressive rendering (more on this later). To avoid this problem we must resort to hacks that need even more code. Plus nobody uses the hack anyway.
+Second, AJAX engineers away progressive rendering&mdash;which by the way, the browser does for free. To reinstate this functionality we resort to hacks that need even more code. (Plus nobody uses the hack anyway.)
 
-And, we need to design and build a custom loading indicator. Not only is this yet more work and more code but they are a poor replacement for the ones provided by browsers.
+That's not the only thing AJAX engineers away. Browsers, by default, provide a loading indicator. This thing tells show users progress of the page they are loading.
 
-A browser's indicator displays progress. That is, a user can tell how long until the request finishes. Custom spinners don't display progress, so users get frustrated and click again causing further delays.
+With AJAX, we need to design and build our own custom one, using HTML, CSS and Javascript. Not only is this more work and more code, but they are an inferior replacement for those provided by browsers.
 
-Custom indicators are unfamiliar as they look different per site and are positioned differently. Browser indicators appear in the same place no matter the website. Familiarity and accuracy are two qualities often found in well-designed interfaces.
+This is because a browser's indicator displays progress. That is, a user can tell how long until the request finishes. Custom loading indicators or *spinners* don't display progress, so users get frustrated and click again which cause further delays.
 
-This doesn't mean AJAX is *bad*. AJAX is useful depending on the situation as it avoids requesting the same assets over and over. But it's not a solution to slow-loading pages. At best it patches over the problems that lie beneath.
+And custom indicators are unfamiliar as their look and placement differs from site to site. Conversely, the browser's indicator appears in the same place and behaves the same for every website the user visits. This creates a familiar and informative experience, that we should be loathed to forgo.
 
-The real problem is that we have designed something that can never be fast. Therefore, the question is how do we make sure our websites are fast?
+This doesn't mean AJAX is *bad*. AJAX is useful depending on the situation as it avoids requesting the same assets over and over and may well render faster if updating a small segment of the page. But it's not a solution to slow-loading pages. At best it patches over the problems that lie beneath.
+
+The real problem is that we've designed something that can never be fast. Therefore, the question is *how do we make sure we design fast websites?*
 
 ## 1. Simplify the interface
 
-The best way to make pages fast, is to have less on them. You'd be forgiven for wanting to punch me in the face as this is obvious. Yet, [web pages keep getting fatter and fatter](https://www.keycdn.com/support/the-growth-of-web-page-size/).
+The best way to make pages fast, is to have less stuff in them. You'd be forgiven for wanting to punch me in the face as this is obvious. And yet [web pages keep getting fatter and fatter](https://www.keycdn.com/support/the-growth-of-web-page-size/).
 
-Do we need background videos, modal windows and social media buttons plastered everywhere? The answer from the people is a resounding *no*. The fastest feature is the one we never even built.
+Do we need background videos, modal dialogs and social media buttons plastered everywhere? The answer from the people is a resounding *no*. The fastest feature is one we never build.
 
 What about the way we design components? Hamburger menus, tabs, carousels, accordions, image galleries and expanding panels. All these things have one thing in common. They hide stuff.
 
-Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity. If pages only contain the essential, then there is nothing, or at least much less that needs to be hidden.
+Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity. If pages only contain the essential, then there is nothing to hide. Or at least there's less.
 
-And effort aside, making fully responsive and inclusive components is even *more* code that users rarely appreciate. Afterall, it slows the page down and requires the user to exert energy to reveal the hidden content.
+Effort aside, making fully responsive and inclusive components takes *more* code. More code that users rarely appreciate. After all, it slows the page down and requires the user to exert energy to reveal the hidden content.
 
 Heydon Pickering coined the seemingly satirical term *Unprogressive Non-enhancement*. This is how he explains it:
 
@@ -45,47 +47,45 @@ Heydon Pickering coined the seemingly satirical term *Unprogressive Non-enhancem
 
 > Or if they're using a touch device, simply flicking backwards and forwards in that easy way that we've all become used to. **What you do is you take that, and you fucking well leave it alone.**
 
-Letting things stack naturally is the perfect start. Not only does this embrace the way the web works&mdash;it makes for a remarkably accessible and fast experience.
+Letting things stack naturally is a superb start. Not only does this embrace the way the web works&mdash;it makes for a remarkably accessible and fast experience.
 
-Letting things stack isn't our only option. We can chunk stuff across multiple pages. Once pages have little on them the page refresh ‘problem’ is no longer a problem. Pages are fast by default and by design.
+But, letting things stack isn't our *only* option. We can chunk stuff across multiple pages. Once pages have little on them the page refresh ‘problem’ is no longer a problem. Pages become fast by default and by design.
 
-With regards to long complex forms (or even shortish ones for that matter) we can use [One Thing Per Page](https://www.smashingmagazine.com/2017/05/better-form-design-one-thing-per-page/) which I've spoken and written about before.
+With regards to long complex forms (or even shortish ones for that matter) there is [One Thing Per Page](https://www.smashingmagazine.com/2017/05/better-form-design-one-thing-per-page/) which I've spoken and written about before.
 
-And, this pattern isn't reserved for forms. A product page containing an image carousel, description, add to basket form, other details, shipping information, related products, ratings and comments could be split up.
+But this pattern isn't reserved for forms. A product page containing an image carousel, description, add to basket form, other details, shipping information, related products, ratings and comments could be split up.
 
-Most users don't read every single aspect of a product each and every time they visit the page. Instead give users the a lightweight, and therefore fast page, with the choice to drill down further.
+Most users don't read every single aspect of a product each and every time they visit the page. Instead give users the a lightweight page with the choice to drill down further.
 
 Give users one high-definition image *without* a carousel. Then let users click *show all* which would show all the images in a page of its own. No Javascript is needed on either page. Just let the content flow naturally.
 
-This uses the natural building blocks of the web as a form of [progressive disclosure](https://medium.muz.li/design-technique-progressive-disclosure-1980def8dc97?gi=361cf4735361). Ultimately, this speeds things up drastically.
+This uses the natural building blocks of the world wide web as a form of [progressive disclosure](https://medium.muz.li/design-technique-progressive-disclosure-1980def8dc97?gi=361cf4735361). Ultimately, this speeds things up drastically.
 
-People on expensive data contracts benefit too. They can choose to see all the images or wait until they are connected to WI-FI.
+People on expensive data contracts benefit too. They can choose to see all the images by following the link or they can wait until later, once they are connected to a WI-FI signal.
 
-It's easier to share page content or imagery this way too. Sending users to a page where most of the stuff is hidden is a problem.
+It's easier to share page content or imagery this way too. Sending users to a page where most of the stuff is hidden is problematic.
 
-The same goes for tabs. If stuff is hidden by default, how important is it to appear on this page? If the tab contains a small amount of content, show it. If not consider a separate page again.
+Tabs. If stuff is hidden by default, how important is its existence on this page? Or if the tab contains a small amount of content just show it. Or consider putting it on a separate page.
 
-If you're brave like Yaron, you could place your site's [menu on a separate page](http://yaronschoen.com/table-of-contents/) too. The menu page loads so quickly, that users may not even notice the refresh.
+If you're brave like Yaron, you could place your site's [menu on a separate page](http://yaronschoen.com/table-of-contents/) too. The menu page loads so quickly, that users may not even notice the refresh. Maybe this is too far. Maybe not.
 
-Modal windows are often used badly. And too often they contain so much content that justifies a new page altogether again.
+Modal windows are often misused. All too often they contain so much content that would be better off as a new page anyway. This improves performance and doesn't break the back button (like a modal often does).
 
-Again, not only does this improve performance, but it doesn't break the back button. Less code, less problems and a faster, better experience. I'm seeing a theme here.
-
-Scroll jacking, [floating labels](/articles/floating-labels-are-problematic/), [font-size widgets](http://adrianroselli.com/2016/12/dont-re-create-browser-features.html), custom fonts. Kill.
+Less code, less problems and a faster, better experience. I'm seeing a theme here. Scroll jacking, [floating labels](/articles/floating-labels-are-problematic/), [font-size widgets](http://adrianroselli.com/2016/12/dont-re-create-browser-features.html), custom fonts. Kill.
 
 ## 2. Reduce code
 
-By simplifying the interface we've already reduced the code by literally not writing any. But in coding the features that remain, there is opportunity to reduce the code:
+By simplifying the interface we've already reduced the code by literally not writing any. But coding the features that remain brings forth a different opportunity&mdash;to write less code.
 
 ### Create lean HTML
 
-Sometimes developers use the wrong element. A `<button>` is half the size of `<div role="button" tabinidex="0">` and doesn't require any script to make it accessible again.
+Sometimes developers use the wrong element. A `<button>` is half the size of `<div role="button" tabinidex="0">` and doesn't require script to make it accessible again.
 
-[Divitus](https://csscreator.com/divitis) is an antiquated buzzword but its still prevalent today. We often use [additional elements unncessarily](http://getbootstrap.com/components/#navbar-brand-image). These make the request longer to make, parse and render. Every element needs a reason to exist.
+[Divitus](https://csscreator.com/divitis) is an antiquated buzzword but its still prevalent today. We often use [additional elements unncessarily](http://getbootstrap.com/components/#navbar-brand-image). These make the request longer to make, parse and render. We should be able to justify the existence of every element.
 
 Classitus is the use of extra classes. Extra classes may decrease the size of CSS but they signifcantly increase the size of HTML.
 
-Ensuring HTML is small is vital because unlike CSS, it can't be easily cached. This is because it's likely to contain personalised and dynamic content. This in turn encourages the [misuse of AJAX](/articles/dont-use-ajax-for-personalised-content/).
+Ensuring HTML is small is important. Unlike CSS, it can't be easily cached. This is because it's likely to contain personalised and dynamic content. This in turn encourages the [misuse of AJAX](/articles/dont-use-ajax-for-personalised-content/).
 
 We may also find ourselves adding various [attributes in the name of accessibility]((https://silktide.com/i-thought-title-text-improved-accessibility-i-was-wrong/)). They aren't always valuable and add further weight to the page.
 
@@ -97,7 +97,7 @@ Similarly, the first rule of ARIA is not to use it. To associate errors to a for
 	<div id="age_error">Enter your age</div>
 	<input id="age" aria-describedby="age_error">
 
-But, instead putting the error in the label is more performant and more inclusive:
+Instead putting the error in the label is more performant and more inclusive:
 
 	<label for="age">
       Age
@@ -105,15 +105,15 @@ But, instead putting the error in the label is more performant and more inclusiv
 	</label>
 	<input id="age">
 
-Using [HTML attributes to automagically initialise script](/articles/dont-initialise-javascript-automagically/) also increases the size of HTML (and has other problems too).
+Using [HTML attributes to automagically initialise script](/articles/dont-initialise-javascript-automagically/) increases the HTML (and has other problems too).
 
-Whilst a codified grid system is rarely needed, if you need one you may consider a [more minimal approach](https://github.com/Heydon/fukol-grids).
+A codified grid system is rarely needed, but if you need one consider a [minimal approach](https://github.com/Heydon/fukol-grids).
 
-Finally, don't add HTML hooks just for automated functional testing. Semantic hooks serve everyone's purpose equally.
+Don't add HTML hooks just for automated functional testing. Semantic hooks serve everyone's purpose equally.
 
 ### Simplify your design system
 
-Government services are simple. Most things are left aligned, and compontents stack naturally. In this case we may be able to [avoid CSS classes altogether](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/), proving that a simple interface is a performant one.
+Government Digital Services design simple websites. Most things are left aligned and stack naturally. In this case we may [avoid CSS classes altogether](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/) proving that a simple interface is a performant one.
 
 ### Use less script
 
