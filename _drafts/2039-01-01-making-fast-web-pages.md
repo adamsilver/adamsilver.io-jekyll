@@ -117,9 +117,8 @@ Government Digital Services design simple websites. Most things are left aligned
 
 ### Use less script
 
-I've talked about the [problem with single page applications](/articles/the-disadvantages-of-single-page-applications/) before. Contrary to popular belief they aren't necessarily faster. AJAX engineers away [chunk responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding#Chunked_encoding) which you can see in Jake Archibalds article [Fun Hacks For Faster Content](https://jakearchibald.com/2016/fun-hacks-faster-content/).
-
-It's not just the act of rendering. It takes a lot of code to create robust client-side applications that often prompt developers to use a framework.
+Single pages applications don't necessarily render faster and come with a whole bunch of problems. But it's not just rendering. It takes a lot of code to create a robust client-side application, that typically prompts developers to use a large framework.
+<!-- [problem with single page applications](/articles/the-disadvantages-of-single-page-applications/) before. Contrary to popular belief they aren't necessarily faster. AJAX engineers away [chunk responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding#Chunked_encoding) which you can see in Jake Archibalds article [Fun Hacks For Faster Content](https://jakearchibald.com/2016/fun-hacks-faster-content/). -->
 
 But maybe we don't need the whole framework. Don't put that burden on your users. Starting with an entire framework or library puts you on the back foot.
 
@@ -149,9 +148,9 @@ Not everyone surfs the [world western web](https://www.smashingmagazine.com/2017
 
 Enable chunking and allow progressive rendering. Don't engineer it away.
 
-Command Query Responsibility Segregation (CQRS) makes database queries fast. It's recommended for sites that have more reads than writes. The idea is that reads are fast and come from read representations of your data.
+Command Query Responsibility Segregation makes database queries fast. It's recommended for sites that have more reads than writes. The idea is that reads are fast and come from read representations of your data.
 
-Use a Content Delivery Network (CDN) for your static resources and scripts. We can also cache HTML and AJAX responses too.
+Use a Content Delivery Network for your static resources and scripts. We can also cache HTML and AJAX responses too.
 
 Cache assets with long expiry dates so that users don't have to download assets again.
 
