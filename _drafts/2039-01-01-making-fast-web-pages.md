@@ -127,7 +127,7 @@ But maybe we don't need the whole framework. Don't put that burden on your users
 
 ### Use preprocessors responsibly
 
-[Preprocessors deceitful produce large CSS files](https://jaketrent.com/post/cons-css-preprocessors/#file-size-is-deceiving).
+[Preprocessors are deceitful because they can generate large CSS](https://jaketrent.com/post/cons-css-preprocessors/#file-size-is-deceiving).
 
 ### Use content breakpoints
 
@@ -147,31 +147,17 @@ Not everyone surfs the [world western web](https://www.smashingmagazine.com/2017
 
 ## 4. Backend
 
-CQRS makes querying databases fast.
+Enable chunking and allow progressive rendering. Don't engineer it away.
 
-(Command Query Responsibility Segregation is a recommended architectural pattern for sites that have more reads (GET) than writes (POST). The premise here is that reads are really fast and come from read representations of your data whereas writes are asynchronous meaning that you have to cater for eventual consistency. Eventual consistency (staleness of data) is normally a good trade off for performance and scalability. Some engineers struggle with the idea of having data duplicated across multiple stores - but this architectural pattern promotes multiple read representations of the same data in multiple types of stores. The server should not be working out what to present at run-time, almost every page’s data is saved in a database, typically a key-value store. This keeps the server code very simple (it’s a simple data bind) and you can have all your complex logic in creating those read representations that execute asynchronously whenever you see a change in your domain model (events). This model also works well with edge caching (CDNs) where you can effectively save read representations of your data i.e. web pages closer to the user.)
+Command Query Responsibility Segregation (CQRS) makes database queries fast. It's recommended for sites that have more reads than writes. The idea is that reads are fast and come from read representations of your data.
 
-Edge caching reduces network latency by physically bringing various assets and pages closer to the user.
-
-(Use a CDN (Content Delivery Network) for your static resources and scripts. You can place your webserver behind the CDN and cache almost everything including the generated HTML. Design for browser and edge (CDN) caching your page; set up your server to add HTTP Cache-Control headers and configure your CDN to honour these cache headers. This does not just apply to assets e.g. images, fonts and styles, but the HTML and AJAX responses too. This will ensure a scalable and robust design whereby your web servers will be doing less. You can also cache AJAX responses at the edge for a shorter time again specified by cache control directives.)
-
-Enable chunking and allow progressive rendering. Don't engineer it away by using AJAX.
+Use a Content Delivery Network (CDN) for your static resources and scripts. We can also cache HTML and AJAX responses too.
 
 Cache assets with long expiry dates so that users don't have to download assets again.
 
-Use HTTP2 and Gzip. Gzip by the way works better with a well-designed consistent design system, as the more HTML that is repeated the better the compression.
-
-(Use HTTPS (HTTP2 if available) and Gzip compression to optimize download, it’s a no-brainer. Gzip compression can also be enabled on the edge (some CDN solutions provide this).)
+Use [HTTPS over HTTP2](https://www.troyhunt.com/i-wanna-go-fast-https-massive-speed-advantage/) with Gzip compression. Gzip by the way works better with a well-designed consistent design system, as the more HTML is repeated the better the compression.
 
 Addy Osmani discusses benefits of [preload and prefetch](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf): *preload resources you have high-confidence will be used in the current page. Prefetch resources likely to be used for future navigations across multiple navigation boundaries.*
-
-Stateless backend
-
-(Design the backend to be completely stateless i.e. no session or in-memory state on the server. State is passed back to the browser which is sent to the server on every request - i.e. aiming for a more RESTful design. This also applies to authentication cookies, anti-forgery tokens, etc. This allows the backend to seamlessly scale out or in, horizontally with traffic. If possible, split the backend into micro-sites based on context and employ a reverse proxy - you will find that you may be able to host parts of your site as static. )
-
-Authentication
-
-(Authentication can be handled via OpenID Connect authorization or hybrid flows if you have a backend server that can issue encrypted secure cookies over HTTPS, or implicit flow if you do not have a server and have to adopt the SPA model. With OpenID Connect, depending on what flow you wish to implement, the identity servers issue a code or access and id tokens that are signed and have an expiry. Your server has the responsibility of validating a provided token or exchanging a code for a token, extracting the identity in the form of claims and optionally issuing your own secure cookie for your site. Use an identity server or federate identity to trusted identity providers for authentication/authorization; please, please don’t engineer your own solution for authentication or security.)
 
 ## Summary
 
