@@ -5,6 +5,8 @@ date: 2039-01-01 09:00:01
 categories: ux performance
 ---
 
+https://ethanmarcotte.com/wrote/designed-lines/
+
 This is how it goes. We cram a load of shit onto a single web page. This makes the page slow. Slow to load, slow to render. Slow.
 
 Instead of getting rid of the shit, we blame the page refresh. There's only one way to avoid the page refresh and that's AJAX.
