@@ -1,33 +1,31 @@
 ---
 layout: post
-title: Performance by design
+title: Designing for performance
 date: 2039-01-01 09:00:01
 categories: ux performance
 ---
 
-https://ethanmarcotte.com/wrote/designed-lines/
-
-This is how it goes. We cram a load of shit onto a single web page. This makes the page slow. Slow to load, slow to render. Slow.
+This is how it goes. We put a load of shit into a single web page. This makes the page slow. Slow to load, slow to render. Slow.
 
 Instead of getting rid of the shit, we blame the page refresh. There's only one way to avoid the page refresh and that's AJAX.
 
-However, AJAX still needs to render new (parts of) screens. More crucially it still has to make a request to the server. That's not all&mdash;there are penalties for using AJAX.
+However, AJAX still needs to render new (parts of) screens. More crucially it still has to make a request to the server. That's not all&mdash;there are penalties in using AJAX and it doesn't necessarily equate to faster experiences.
 
-First, making requests, handling different responses, traversing the document tree and injecting HTML requires *more* code to be sent initially. This also needs to be evaluated and executed on the client.
+First, making requests; handling different responses; traversing the document tree; and injecting HTML requires *more* code to be sent initally. This also needs to be evaluated and executed on the client.
 
-Second, AJAX engineers away progressive rendering&mdash;which by the way, the browser does for free. To reinstate this functionality we resort to hacks that need even more code. (Plus nobody uses the hack anyway.)
+Second, AJAX engineers away progressive rendering&mdash;which by the way&mdash;browsers do for free. To reinstate this functionality we resort to hacks that need yet more code. (Plus nobody uses the hack anyway.)
 
-That's not the only thing AJAX engineers away. Browsers, by default, provide a loading indicator. This thing tells show users progress of the page they are loading.
+That's not the only thing AJAX engineers away. Browsers, by default, provide a loading indicator. This shows users progress of the page they are loading.
 
-With AJAX, we need to design and build our own custom one, using HTML, CSS and Javascript. Not only is this more work and more code, but they are an inferior replacement for those provided by browsers.
+With AJAX, we need to design and build a custom one, using HTML, CSS and Javascript. Not only is this more work and more code, but they are an inferior replacement for those provided by browsers.
 
 This is because a browser's indicator displays progress. That is, a user can tell how long until the request finishes. Custom loading indicators or *spinners* don't display progress, so users get frustrated and click again which cause further delays.
 
-And custom indicators are unfamiliar as their look and placement differs from site to site. Conversely, the browser's indicator appears in the same place and behaves the same for every website the user visits. This creates a familiar and informative experience, that we should be loathed to forgo.
+And custom indicators are unfamiliar as the look and placement differs from site to site. Conversely, the browser's indicator appears in the same place and behaves the same for every website the user visits. This creates a familiar and informative experience, that we should be loathed to forgo.
 
 This doesn't mean AJAX is *bad*. AJAX is useful depending on the situation as it avoids requesting the same assets over and over and may well render faster if updating a small segment of the page. But it's not a solution to slow-loading pages. At best it patches over the problems that lie beneath.
 
-The real problem is that we've designed something that can never be fast. Therefore, the question is *how do we make sure we design fast websites?*
+The real problem is that we've designed something that can never be fast. Therefore the question really is *how do we design for performance?*
 
 ## 1. Simplify the interface
 
@@ -37,9 +35,9 @@ Do we need background videos, modal dialogs and social media buttons plastered e
 
 What about the way we design components? Hamburger menus, tabs, carousels, accordions, image galleries and expanding panels. All these things have one thing in common. They hide stuff.
 
-Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity. If pages only contain the essential, then there is nothing to hide. Or at least there's less.
+Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity. If pages only contain the essential, then there should be little or nothing to hide.
 
-Effort aside, making fully responsive and inclusive components takes *more* code. More code that users rarely appreciate. After all, it slows the page down and requires the user to exert energy to reveal the hidden content.
+Effort aside, designing fully responsive and inclusive components take *more* code. More code that users rarely appreciate. After all, it slows the page down and requires the user to exert energy revealing the hidden content.
 
 Heydon Pickering coined the seemingly satirical term *Unprogressive Non-enhancement*. This is how he explains it:
 
@@ -49,9 +47,11 @@ Heydon Pickering coined the seemingly satirical term *Unprogressive Non-enhancem
 
 > Or if they're using a touch device, simply flicking backwards and forwards in that easy way that we've all become used to. **What you do is you take that, and you fucking well leave it alone.**
 
-Letting things stack naturally is a superb start. Not only does this embrace the way the web works&mdash;it makes for a remarkably accessible and fast experience.
+Letting things stack naturally is a superb start. Not only does this embrace the way the web works&mdash;it makes for a remarkably inclusive and fast experience.
 
-But, letting things stack isn't our *only* option. We can chunk stuff across multiple pages. Once pages have little on them the page refresh ‘problem’ is no longer a problem. Pages become fast by default and by design.
+*A fast experience, by the way, is a vital aspect of designing inclusive experiences. Some people don't have fast connections, and they should not be excluded because of this fact.*
+
+But, letting things stack isn't our *only* option. We can chunk stuff across multiple pages. Once pages have little on them the page refresh ‘problem’ is no longer a problem. Pages are fast by design. Sometimes to the point where the page refresh is hard to spot.
 
 With regards to long complex forms (or even shortish ones for that matter) there is [One Thing Per Page](https://www.smashingmagazine.com/2017/05/better-form-design-one-thing-per-page/) which I've spoken and written about before.
 
@@ -59,11 +59,11 @@ But this pattern isn't reserved for forms. A product page containing an image ca
 
 Most users don't read every single aspect of a product each and every time they visit the page. Instead give users the a lightweight page with the choice to drill down further.
 
-Give users one high-definition image *without* a carousel. Then let users click *show all* which would show all the images in a page of its own. No Javascript is needed on either page. Just let the content flow naturally.
+Give users one high-definition image *without* a carousel. Then let users click *show all* which would show all the images in a page of its own. No Javascript is needed either saving yet more code. Just let the content flow naturally.
 
-This uses the natural building blocks of the world wide web as a form of [progressive disclosure](https://medium.muz.li/design-technique-progressive-disclosure-1980def8dc97?gi=361cf4735361). Ultimately, this speeds things up drastically.
+This uses the natural building blocks of the web as a form of [progressive disclosure](https://medium.muz.li/design-technique-progressive-disclosure-1980def8dc97?gi=361cf4735361). Ultimately, this speeds things up drastically.
 
-People on expensive data contracts benefit too. They can choose to see all the images by following the link or they can wait until later, once they are connected to a WI-FI signal.
+People on expensive data contracts benefit too. They can choose to see all the images by following the link or they can wait until  they are able to connect to WI-FI.
 
 It's easier to share page content or imagery this way too. Sending users to a page where most of the stuff is hidden is problematic.
 
@@ -111,7 +111,7 @@ Using [HTML attributes to automagically initialise script](/articles/dont-initia
 
 A codified grid system is rarely needed, but if you need one consider a [minimal approach](https://github.com/Heydon/fukol-grids).
 
-Don't add HTML hooks just for automated functional testing. Semantic hooks serve everyone's purpose equally.
+Don't add HTML hooks just for automated functional testing. [Semantic hooks serve everyone's purpose equally](https://maintainablecss.com/chapters/semantics/).
 
 ### Simplify your design system
 
@@ -162,13 +162,11 @@ Addy Osmani discusses benefits of [preload and prefetch](https://medium.com/relo
 
 ## Summary
 
-Each of these improvements come together to form a simple experience that is fast. Fast experiences make users feel awesome.
+You know what's better than perceived performance? Actual performance. Avoid techniques that merely provide a mirage of speed.
 
-You know what's better than perceived performance? Actual performance. By removing the clutter and optimising the foundations of a system, we nip performance issues in the bud.
+Instead, declutter and optimise the foundations of a design system that will in turn result in less weight, less complexity, less distraction, less hassle and ultimately, less [bull shit](http://deathtobullshit.com/).
 
-We avoid techniques that merely provide a mirage of speed.
-
-Less weight, less complexity, less distraction, less bother, less bull shit. Nice.
+Together, these techniques produce blazingly fast and simple experiences that make users feel awesome.
 
 <!--
 
@@ -188,7 +186,7 @@ Less weight, less complexity, less distraction, less bother, less bull shit. Nic
 - Banner blindness. Column blindness.
 http://usabilitygeek.com/ux-designers-ditch-sidebar-2016/
 
-
+- https://ethanmarcotte.com/wrote/designed-lines/
 
 - visually controlled js implemented select box (features of highly effective forms aaron gust)
 
