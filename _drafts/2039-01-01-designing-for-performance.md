@@ -37,7 +37,7 @@ What about the way we design components? Hamburger menus, tabs, carousels, accor
 
 Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity. If pages only contain the essential, then there should be little and maybe even nothing to hide.
 
-Effort aside, designing fully responsive and inclusive components take *more* code. More code that users rarely appreciate. After all, it slows the page down and requires the user to exert energy revealing the hidden content.
+Effort aside, designing fully responsive and inclusive components creating *more* code. More code that users rarely appreciate. After all, it slows the page down and requires the user to exert energy revealing the hidden content.
 
 Heydon Pickering coined the seemingly satirical term *Unprogressive Non-enhancement*. This is how he explains it:
 
@@ -51,7 +51,7 @@ Letting things stack naturally is a good start. Not only does this embrace the w
 
 *A fast experience, by the way, is a vital aspect of designing inclusive experiences. Some people don't have fast connections, and they should not be excluded because of this.*
 
-Letting things stack isn't our *only* option. We can chunk stuff across multiple pages. Once pages have little on them the page refresh ‘problem’ is no longer a problem. Pages are fast by design. Sometimes to the point where the [page refresh is unnoticeablestar](http://uncrate.com).
+Letting things stack isn't our *only* option. We can chunk stuff across multiple pages. Once pages have little on them the page refresh ‘problem’ is no longer a problem. Pages are fast by design. Sometimes to the point where the [page refresh is unnoticeable](http://uncrate.com).
 
 With regards to longish complex forms (or even shortish ones) there is [One Thing Per Page](https://www.smashingmagazine.com/2017/05/better-form-design-one-thing-per-page/) which I've spoken and written about before.
 
@@ -67,9 +67,9 @@ People on expensive data contracts benefit too. They can choose to see all the i
 
 It's easier to share page content or imagery this way too. Sending users to a page where most of the stuff is hidden is problematic.
 
-Next up is tab interfaces. If stuff is hidden by default, how important is its existence on this page? Or if the tab contains a small amount of content just show it. Or consider putting it on a separate page.
+Tabs: If stuff is hidden by default, how important is its existence on this page? Or if the tab contains a small amount of content just show it. Or consider putting it on a separate page.
 
-If you're brave like Yaron, you could place your site's [menu on a separate page](http://yaronschoen.com/table-of-contents/) too. The page is so light it load quickly. Maybe this is too far. Maybe not.
+If you're feeling brave, put your site's [navigation menu on a separate page](http://yaronschoen.com/table-of-contents/) too. The page is light and loads quickly. Maybe this is too far. Maybe not.
 
 Modal dialogs are often misused. All too often they contain too much content that would be better off as a new page anyway. This improves performance and doesn't break the back button (like a dialog often does).
 
@@ -109,7 +109,7 @@ Instead putting the error in the label is more performant *and* more inclusive:
 
 Using [HTML attributes to automagically initialise script](/articles/dont-initialise-javascript-automagically/) increases the HTML (and has other problems too).
 
-A [codified grid system is rarely needed](/articles/stop-using-device-breakpoints/), but if you really really need one consider a [minimal approach](https://github.com/Heydon/fukol-grids).
+<!-- A [codified grid system is rarely needed](/articles/stop-using-device-breakpoints/), but if you really really need one consider a [minimal approach](https://github.com/Heydon/fukol-grids). -->
 
 Don't add HTML hooks just for automated functional tests. [Semantic hooks serve everyone's purpose equally](https://maintainablecss.com/chapters/semantics/).
 
@@ -119,7 +119,7 @@ Government Digital Services design simple websites. Most things are left aligned
 
 ### Use less script
 
-[Single pages applications](/articles/the-disadvantages-of-single-page-applications/) [don't necessarily render faster](http://openmymind.net/2012/5/30/Client-Side-vs-Server-Side-Rendering/) and come with a whole bunch of problems. But it's not just rendering. It takes a lot of code to create a robust client-side application, that typically prompts developers to use a large framework. 
+[Single pages applications don't necessarily render faster](http://openmymind.net/2012/5/30/Client-Side-vs-Server-Side-Rendering/) and come with a whole [bunch of problems](/articles/the-disadvantages-of-single-page-applications/). But it's not just rendering. It takes a lot of code to create a robust client-side application, that typically prompts developers to use a large framework.
 
 But maybe we don't need the whole framework. Putting that burden on the user is an act of negligence. Starting with an entire framework or library puts you on the back foot.
 
@@ -133,10 +133,6 @@ But maybe we don't need the whole framework. Putting that burden on the user is 
 
 Often a module may need just one breakpoint or even no breakpoints. Designing to a predefined set of breakpoints encourages the unnecessary tweaking of a design that results in more code.
 
-### Place scripts at the bottom
-
-Place scripts at the bottom and consider using `async` and `defer` attributes. Async is good for completley independent scripts that can run later like analytics.
-
 ## 3. Images
 
 Not everyone has access to the [world western web](https://www.smashingmagazine.com/2017/03/world-wide-web-not-wealthy-western-web-part-1/). Not everybody is on high-end devices either. So, if you really need that high resolution image help the user by:
@@ -147,17 +143,21 @@ Not everyone has access to the [world western web](https://www.smashingmagazine.
 
 ## 4. Backend stuff
 
-Enable [chunking](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding#Chunked_encoding) and allow progressive rendering. Don't engineer it away.
+Enable [chunking](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding#Chunked_encoding) and progressive rendering. Don't engineer it away.
 
-Command Query Responsibility Segregation makes database queries fast. It's good for sites that have more reads than writes. The idea is that reads are fast and come from read representations of your data.
+Consider Command Query Responsibility Segregation. It makes database queries fast and is good for sites that have more reads than writes. The idea is that reads are fast and come from read representations of your data.
 
-Use a Content Delivery Network for your static resources. We can also cache HTML and AJAX responses too.
+Use a Content Delivery Network for your static resources. And cache HTML and AJAX responses too.
 
 Cache assets with long expiry dates so that users don't have to download assets again.
 
-Use [HTTPS over HTTP2](https://www.troyhunt.com/i-wanna-go-fast-https-massive-speed-advantage/) with Gzip compression. Gzip by the way works better with a well-designed consistent design system, as the more HTML is repeated the better the compression.
+Place scripts at the bottom and consider using `async` and `defer` attributes. Async is good for completley independent scripts that can run later like analytics.
 
-Addy Osmani urges us to use [preload and prefetch](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf) where appropriate. He says *preload resources you have high-confidence will be used in the current page. Prefetch resources likely to be used for future navigations across multiple navigation boundaries.*
+Use [HTTPS over HTTP2](https://www.troyhunt.com/i-wanna-go-fast-https-massive-speed-advantage/) with Gzip compression. Gzip by the way works better with a well-designed and consistent design system&mdash;the more HTML is repeated the better the compression.
+
+Use [preload and prefetch](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf) where appropriate. As Addy Osmani says *preload resources you have high-confidence will be used in the current page. Prefetch resources likely to be used for future navigations across multiple navigation boundaries.*
+
+
 
 ## Summary
 
