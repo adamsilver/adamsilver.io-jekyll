@@ -9,17 +9,17 @@ This is how it goes. We put a load of shit into a single web page. This makes th
 
 Instead of getting rid of the shit, we blame the page refresh. There's only one way to avoid the page refresh and that's AJAX.
 
-However, AJAX still needs to render new (parts of) screens. More crucially it still has to make a request to the server. That's not all&mdash;there are penalties in using AJAX and it doesn't necessarily equate to faster experiences.
+However, AJAX still needs to render new (parts of) screens. More crucially it still has to make a request to the server. That's not all&mdash;there are penalties in using AJAX and it doesn't necessarily result in faster experiences.
 
-First, making requests; handling different responses; traversing the document tree; and injecting HTML requires *more* code to be sent initally. This also needs to be evaluated and executed on the client.
+Firstly, making requests; handling different responses; traversing the document tree; and injecting HTML requires *more* code to be sent initally. This also needs to be evaluated and executed on the client.
 
-Second, AJAX engineers away progressive rendering&mdash;which by the way&mdash;browsers do for free. To reinstate this functionality we resort to hacks that need yet more code. (Plus nobody uses the hack anyway.)
+Secondly, AJAX engineers away progressive rendering&mdash;which by the way&mdash;browsers do for free. To reinstate this functionality we resort to hacks that need yet more code. (Plus nobody uses the hack anyway.)
 
-That's not the only thing AJAX engineers away. Browsers, by default, provide a loading indicator. This shows users progress of the page they are loading.
+Thirdly, using AJAX means we have to provide a custom loading indicator. Again, browsers give us a really good one for free.
 
 With AJAX, we need to design and build a custom one, using HTML, CSS and Javascript. Not only is this more work and more code, but they are an inferior replacement for those provided by browsers.
 
-This is because a browser's indicator displays progress. That is, a user can tell how long until the request finishes. Custom loading indicators or *spinners* don't display progress, so users get frustrated and click again which cause further delays.
+This is because a browser's indicator displays progress. That is, a user can tell how long until the request finishes. Custom loading indicators or *spinners* don't display progress, so users get frustrated and click again causing further delays.
 
 And custom indicators are unfamiliar as the look and placement differs from site to site. Conversely, the browser's indicator appears in the same place and behaves the same for every website the user visits. This creates a familiar and informative experience, that we should be loathed to forgo.
 
@@ -51,7 +51,7 @@ Letting things stack naturally is a superb start. Not only does this embrace the
 
 *A fast experience, by the way, is a vital aspect of designing inclusive experiences. Some people don't have fast connections, and they should not be excluded because of this fact.*
 
-But, letting things stack isn't our *only* option. We can chunk stuff across multiple pages. Once pages have little on them the page refresh ‘problem’ is no longer a problem. Pages are fast by design. Sometimes to the point where the page refresh is hard to spot.
+But, letting things stack isn't our *only* option. We can chunk stuff across multiple pages. Once pages have little on them the page refresh ‘problem’ is no longer a problem. Pages are fast by design. Sometimes to the point where the page refresh is unnoticable[^].
 
 With regards to long complex forms (or even shortish ones for that matter) there is [One Thing Per Page](https://www.smashingmagazine.com/2017/05/better-form-design-one-thing-per-page/) which I've spoken and written about before.
 
