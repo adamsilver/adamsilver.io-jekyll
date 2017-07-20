@@ -97,7 +97,7 @@ Furthermore, the user's browser provides a predictable and familiar loading indi
 
 ## 11. It's going to fail
 
-[Everyone has Javascript, Right?](http://kryogenix.org/code/browser/everyonehasjs.html) explains that Javascript loading or executing will fail. SPAs *depend* on many different enhancements, and they tend not to conform to [Progressive Enhancement](/articles/writing-javascript-that-conforms-to-progressive-enhancement/). This means when it does fail, the resulting experience will be a blank page.
+[Everyone has Javascript, Right?](http://kryogenix.org/code/browser/everyonehasjs.html) explains that Javascript loading or executing will fail. SPAs *depend* on many different enhancements, and they tend not to conform to [Progressive Enhancement](/articles/progressively-enhanced-javascript/). This means when it does fail, the resulting experience will be a blank page.
 
 ## Summary
 
