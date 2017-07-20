@@ -3,7 +3,7 @@
 	<title>Adam Silver: Designing simple, human and inclusive websites.</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2017-07-13T13:40:58+01:00</updated>
+	<updated>2017-07-20T09:53:26+01:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -3579,7 +3579,7 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 
 &lt;h2 id=&quot;its-going-to-fail&quot;&gt;11. It’s going to fail&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://kryogenix.org/code/browser/everyonehasjs.html&quot;&gt;Everyone has Javascript, Right?&lt;/a&gt; explains that Javascript loading or executing will fail. SPAs &lt;em&gt;depend&lt;/em&gt; on many different enhancements, and they tend not to conform to &lt;a href=&quot;/articles/writing-javascript-that-conforms-to-progressive-enhancement/&quot;&gt;Progressive Enhancement&lt;/a&gt;. This means when it does fail, the resulting experience will be a blank page.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://kryogenix.org/code/browser/everyonehasjs.html&quot;&gt;Everyone has Javascript, Right?&lt;/a&gt; explains that Javascript loading or executing will fail. SPAs &lt;em&gt;depend&lt;/em&gt; on many different enhancements, and they tend not to conform to &lt;a href=&quot;/articles/progressively-enhanced-javascript/&quot;&gt;Progressive Enhancement&lt;/a&gt;. This means when it does fail, the resulting experience will be a blank page.&lt;/p&gt;
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
