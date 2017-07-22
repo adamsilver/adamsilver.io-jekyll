@@ -145,25 +145,23 @@ Not everyone has access to the [world western web](https://www.smashingmagazine.
 
 Enable [chunking](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding#Chunked_encoding) and progressive rendering. Don't engineer it away.
 
-Consider Command Query Responsibility Segregation. It makes database queries fast and is good for sites that have more reads than writes. The idea is that reads are fast and come from read representations of your data.
+Use Command Query Responsibility Segregation to make database queries fast (good for sites that have more reads than writes). The idea is that reads are fast and come from read representations of your data.
 
 Use a Content Delivery Network for your static resources. And cache HTML and AJAX responses too.
 
 Cache assets with long expiry dates so that users don't have to download assets again.
 
-Place scripts at the bottom and consider using `async` and `defer` attributes. Async is good for completley independent scripts that can run later like analytics.
+Place scripts at the bottom and use `async` and `defer` attributes. Async is good for completley independent scripts that can run later like analytics.
 
-Use [HTTPS over HTTP2](https://www.troyhunt.com/i-wanna-go-fast-https-massive-speed-advantage/) with Gzip compression. Gzip by the way works better with a well-designed and consistent design system&mdash;the more HTML is repeated the better the compression.
+Use [HTTPS over HTTP2](https://www.troyhunt.com/i-wanna-go-fast-https-massive-speed-advantage/) with Gzip compression. Gzip, by the way, works better with a well-designed and consistent design system&mdash;the more HTML is repeated the better the compression.
 
-Use [preload and prefetch](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf) where appropriate. As Addy Osmani says *preload resources you have high-confidence will be used in the current page. Prefetch resources likely to be used for future navigations across multiple navigation boundaries.*
-
-
+Use [preload and prefetch](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf) where appropriate. Addy Osmani says *preload resources you have high-confidence will be used in the current page. Prefetch resources likely to be used for future navigations across multiple navigation boundaries.*
 
 ## Summary
 
 You know what's better than perceived performance? Actual performance. Avoid techniques that merely provide a mirage of speed.
 
-Instead, declutter and optimise the foundations of a design system that will in turn result in less weight, less complexity, less distraction, less hassle and ultimately, less [bull shit](http://deathtobullshit.com/).
+Instead, declutter and optimise the foundations of your design system that will in turn result in less weight, less complexity, less distraction, less hassle and ultimately, less [bull shit](http://deathtobullshit.com/).
 
 Together, these techniques produce fast and simple experiences that make users feel awesome.
 
