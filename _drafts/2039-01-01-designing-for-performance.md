@@ -49,7 +49,7 @@ Heydon Pickering coined the seemingly satirical term *Unprogressive Non-enhancem
 
 Letting things stack naturally is a good start. Not only does this embrace the way the web works&mdash;it makes for a remarkably inclusive and fast experience.
 
-*A fast experience, by the way, is a vital aspect of designing inclusive experiences. Some people don't have fast connections, and they should not be excluded because of this.*
+*A fast experience, by the way, is a vital aspect of designing inclusive experiences. Some people don't have fast connections and this shouldn't cause exclusion.*
 
 Letting things stack isn't our *only* option. We can chunk stuff across multiple pages. Once pages have little on them the page refresh ‘problem’ is no longer a problem. Pages are fast by design. Sometimes to the point where the [page refresh is unnoticeable](http://uncrate.com).
 
@@ -59,7 +59,7 @@ But this pattern isn't reserved for forms. A typical product page contains an im
 
 Most users don't read every single aspect of a product, every time they visit the page. Instead give users a lightweight page and the choice to drill down further.
 
-Give users one high-definition image *without* a carousel. Then let users click *show all* which would show all the images in a page of its own. No Javascript is needed either saving yet more code. Let the content flow.
+Give users one high-definition image *without* a carousel. Then let users click *show all* which would show all the images in a page of its own. No Javascript needed, saving yet more code. Let the content flow.
 
 This uses the natural building blocks of the web as a form of [progressive disclosure](https://medium.muz.li/design-technique-progressive-disclosure-1980def8dc97?gi=361cf4735361). Ultimately, this speeds things up drastically.
 
