@@ -37,7 +37,7 @@ What about the way we design components? Hamburger menus, tabs, carousels, accor
 
 Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity. If pages only contain the essential, then there should be little and maybe even nothing to hide.
 
-Effort aside, designing fully responsive and inclusive components creating *more* code. More code that users rarely appreciate. After all, it slows the page down and requires the user to exert energy revealing the hidden content.
+Effort aside, designing fully responsive and inclusive components results in *more* code. More code that users rarely appreciate. After all, it slows the page down and requires the user to exert energy revealing the hidden content.
 
 Heydon Pickering coined the seemingly satirical term *Unprogressive Non-enhancement*. This is how he explains it:
 
