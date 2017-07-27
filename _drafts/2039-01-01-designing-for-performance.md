@@ -59,7 +59,7 @@ But this pattern isn't reserved for forms. A typical product page contains an im
 
 Most users don't read every single aspect of a product, every time they visit the page. Instead give users a lightweight page and the choice to drill down further.
 
-Give users one high-definition image *without* a carousel. Then let users click *show all* which would show all the images in a page of its own. No Javascript needed, saving yet more code. Let the content flow.
+Give users one high-definition image *without* a carousel. Then let users click *show all* which would show all the images in a page of its own. No Javascript is needed either, saving yet more code. Let the content flow.
 
 This uses the natural building blocks of the web as a form of [progressive disclosure](https://medium.muz.li/design-technique-progressive-disclosure-1980def8dc97?gi=361cf4735361). Ultimately, this speeds things up drastically.
 
@@ -145,7 +145,7 @@ Not everyone has access to the [world western web](https://www.smashingmagazine.
 
 Enable [chunking](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding#Chunked_encoding) and progressive rendering. Don't engineer it away.
 
-Use Command Query Responsibility Segregation to make database queries fast (good for sites that have more reads than writes). The idea is that reads are fast and come from read representations of your data.
+Use Command Query Responsibility Segregation to make database queries fast (good for sites that have more reads than writes).
 
 Use a Content Delivery Network for your static resources. And cache HTML and AJAX responses too.
 
@@ -161,7 +161,7 @@ Use [preload and prefetch](https://medium.com/reloading/preload-prefetch-and-pri
 
 You know what's better than perceived performance? Actual performance. Avoid techniques that merely provide a mirage of speed.
 
-Instead, declutter and optimise the foundations of your design system that will in turn result in less weight, less complexity, less distraction, less hassle and ultimately, less [bull shit](http://deathtobullshit.com/).
+Instead, declutter and optimise the foundations of your design system which will result in less weight, less complexity, less distraction, less hassle and ultimately, less [bull shit](http://deathtobullshit.com/).
 
 Together, these techniques produce fast and simple experiences that make users feel awesome.
 
