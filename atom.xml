@@ -3,7 +3,7 @@
 	<title>Adam Silver: Designing simple, human and inclusive websites.</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2017-07-21T15:46:39+01:00</updated>
+	<updated>2017-07-30T06:03:23+01:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -11,9 +11,193 @@
 
 	
 		<entry>
+			<title>Designing for performance</title>
+			<link href="https://adamsilver.io/articles/designing-for-performance/"/>
+			<updated>2017-07-28T10:00:01+01:00</updated>
+			<id>https://adamsilver.io/articles/designing-for-performance</id>
+			<content type="html">&lt;p&gt;This is how it goes. We put a load of shit into a single web page. This makes the page slow. Slow to load, slow to render. Slow.&lt;/p&gt;
+
+&lt;p&gt;Instead of getting rid of the shit, we blame the page refresh. There’s only one way to avoid the page refresh and that’s AJAX.&lt;/p&gt;
+
+&lt;p&gt;However, AJAX still needs to render new (parts of) screens. More crucially it still has to make a request to the server. That’s not all—there are penalties in using AJAX and it doesn’t necessarily result in faster experiences.&lt;/p&gt;
+
+&lt;p&gt;Firstly, making requests; handling different responses; traversing the document tree; and injecting HTML requires &lt;em&gt;more&lt;/em&gt; code to be sent initally. This also needs to be evaluated and executed on the client.&lt;/p&gt;
+
+&lt;p&gt;Secondly, AJAX engineers away progressive rendering—which by the way—browsers do for free. To reinstate this functionality we resort to &lt;a href=&quot;https://jakearchibald.com/2016/fun-hacks-faster-content/&quot;&gt;hacks&lt;/a&gt; that need yet more code. (Plus nobody uses the hack anyway.)&lt;/p&gt;
+
+&lt;p&gt;Thirdly, using AJAX means we have to give users another way of knowing that something is being loaded. Again, browsers give us a really good loading indicator for free.&lt;/p&gt;
+
+&lt;p&gt;With AJAX, we need to design and build a custom one. Not only is this more work and more code, but they are an inferior replacement for those provided by browsers.&lt;/p&gt;
+
+&lt;p&gt;This is because a browser’s indicator displays progress. That is, a user can tell how long until the request finishes. Custom loading indicators or &lt;em&gt;spinners&lt;/em&gt; don’t display progress, so users get frustrated and click again causing further delays.&lt;/p&gt;
+
+&lt;p&gt;And custom indicators are unfamiliar as the look and placement differs from site to site. Conversely, the browser’s indicator appears in the same place and behaves the same for every website. This creates a familiar and informative experience that we should be loathed to forgo.&lt;/p&gt;
+
+&lt;p&gt;This doesn’t mean AJAX is &lt;em&gt;bad&lt;/em&gt;. AJAX is useful depending on the situation as it avoids requesting the same assets over and over and may well render faster if updating a small segment of the page. But it’s not a solution to slow-loading pages. At best it patches over the problems that lie beneath.&lt;/p&gt;
+
+&lt;p&gt;The real problem is that we’ve designed something that can never be fast. Therefore the question really is &lt;em&gt;how do we design for performance?&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;simplify-the-interface&quot;&gt;1. Simplify the interface&lt;/h2&gt;
+
+&lt;p&gt;The best way to make pages fast, is to have less stuff in them. You’d be forgiven for wanting to punch me in the face as this is obvious. And yet &lt;a href=&quot;https://www.keycdn.com/support/the-growth-of-web-page-size/&quot;&gt;web pages keep getting fatter and fatter&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Do we need background videos, modal dialogs and social media buttons plastered everywhere? The answer from the people is a resounding &lt;em&gt;no&lt;/em&gt;. The fastest feature is one we never build.&lt;/p&gt;
+
+&lt;p&gt;What about the way we design components? Hamburger menus, tabs, carousels, accordions, image galleries and expanding panels. All these things have one thing in common. They hide stuff.&lt;/p&gt;
+
+&lt;p&gt;Designers are obsessed with patterns that save space and look clean. A clean interface is good but not at the cost of clarity. If pages only contain the essential, then there should be little and maybe even nothing to hide.&lt;/p&gt;
+
+&lt;p&gt;Effort aside, designing fully responsive and inclusive components results in &lt;em&gt;more&lt;/em&gt; code. More code that users rarely appreciate. After all, it slows the page down and requires the user to exert energy revealing the hidden content.&lt;/p&gt;
+
+&lt;p&gt;Heydon Pickering coined the seemingly satirical term &lt;em&gt;Unprogressive Non-enhancement&lt;/em&gt;. This is how he explains it:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You take some structured content, which follows the vertical flow of the document in a way that everyone understands.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Which people traverse easily by either dragging their scroll bar with their mouse, or operating the keyboard using the up and down keys, or using the spacebar.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Or if they’re using a touch device, simply flicking backwards and forwards in that easy way that we’ve all become used to. &lt;strong&gt;What you do is you take that, and you fucking well leave it alone.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Letting things stack naturally is a good start. Not only does this embrace the way the web works—it makes for a remarkably inclusive and fast experience.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;A fast experience, by the way, is a vital aspect of designing inclusive experiences. Some people don’t have fast connections and this shouldn’t cause exclusion.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Letting things stack isn’t our &lt;em&gt;only&lt;/em&gt; option. We can chunk stuff across multiple pages. Once pages have little on them the page refresh ‘problem’ is no longer a problem. Pages are fast by design. Sometimes to the point where the &lt;a href=&quot;http://uncrate.com&quot;&gt;page refresh is unnoticeable&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;With regards to longish complex forms (or even shortish ones) there is &lt;a href=&quot;https://www.smashingmagazine.com/2017/05/better-form-design-one-thing-per-page/&quot;&gt;One Thing Per Page&lt;/a&gt; which I’ve spoken and written about before.&lt;/p&gt;
+
+&lt;p&gt;But this pattern isn’t reserved for forms. A typical product page contains an image carousel, description, add to basket form, other details, shipping information, related products, ratings and comments. We can split this up too.&lt;/p&gt;
+
+&lt;p&gt;Most users don’t read every single aspect of a product, every time they visit the page. Instead give users a lightweight page and the choice to drill down further.&lt;/p&gt;
+
+&lt;p&gt;Give users one high-definition image &lt;em&gt;without&lt;/em&gt; a carousel. Then let users click &lt;em&gt;show all&lt;/em&gt; which would show all the images in a page of its own. No Javascript is needed either, saving yet more code. Let the content flow.&lt;/p&gt;
+
+&lt;p&gt;This uses the natural building blocks of the web as a form of &lt;a href=&quot;https://medium.muz.li/design-technique-progressive-disclosure-1980def8dc97?gi=361cf4735361&quot;&gt;progressive disclosure&lt;/a&gt;. Ultimately, this speeds things up drastically.&lt;/p&gt;
+
+&lt;p&gt;People on expensive data contracts benefit too. They can choose to see all the images by following the link or they can wait until they are connected to WI-FI.&lt;/p&gt;
+
+&lt;p&gt;It’s easier to share page content or imagery this way too. Sending users to a page where most of the stuff is hidden is problematic.&lt;/p&gt;
+
+&lt;p&gt;Tabs: If stuff is hidden by default, how important is its existence on this page? Or if the tab contains a small amount of content just show it. Or consider putting it on a separate page.&lt;/p&gt;
+
+&lt;p&gt;If you’re feeling brave, put your site’s &lt;a href=&quot;http://yaronschoen.com/table-of-contents/&quot;&gt;navigation menu on a separate page&lt;/a&gt; too. The page is light and loads quickly. Maybe this is too far. Maybe not.&lt;/p&gt;
+
+&lt;p&gt;Modal dialogs are often misused. All too often they contain too much content that would be better off as a new page anyway. This improves performance and doesn’t break the back button (like a dialog often does).&lt;/p&gt;
+
+&lt;p&gt;Less code, less problems and a faster, better experience. I’m seeing a theme here. Scroll jacking, &lt;a href=&quot;/articles/floating-labels-are-problematic/&quot;&gt;floating labels&lt;/a&gt;, &lt;a href=&quot;http://adrianroselli.com/2016/12/dont-re-create-browser-features.html&quot;&gt;font-size widgets&lt;/a&gt;, &lt;a href=&quot;http://usabilitygeek.com/ux-designers-ditch-sidebar-2016/&quot;&gt;side bars&lt;/a&gt;, custom select boxes—kill.&lt;/p&gt;
+
+&lt;h2 id=&quot;reduce-code&quot;&gt;2. Reduce code&lt;/h2&gt;
+
+&lt;p&gt;By simplifying the interface we’ve already reduced the code by literally not writing any. But coding the remaining features brings forth a different opportunity—to write less code.&lt;/p&gt;
+
+&lt;h3 id=&quot;create-lean-html&quot;&gt;Create lean HTML&lt;/h3&gt;
+
+&lt;p&gt;Sometimes developers use the wrong element. A &lt;code&gt;&amp;lt;button&amp;gt;&lt;/code&gt; is half the size of &lt;code&gt;&amp;lt;div role=&quot;button&quot; tabinidex=&quot;0&quot;&amp;gt;&lt;/code&gt; and doesn’t require script to make it accessible again.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://csscreator.com/divitis&quot;&gt;Divitus&lt;/a&gt; is an antiquated buzzword but its still prevalent today. We often use &lt;a href=&quot;http://getbootstrap.com/components/#navbar-brand-image&quot;&gt;additional elements unncessarily&lt;/a&gt;. These make the request longer to make, parse and render. We should be able to justify the existence of every element.&lt;/p&gt;
+
+&lt;p&gt;Classitus is the use of extra classes. Extra classes may decrease the size of CSS but they signifcantly increase the size of HTML.&lt;/p&gt;
+
+&lt;p&gt;Ensuring HTML is small is important. Unlike CSS, it can’t be easily cached. This is because it’s likely to contain personalised and dynamic content. This in turn encourages the &lt;a href=&quot;/articles/dont-use-ajax-for-personalised-content/&quot;&gt;misuse of AJAX&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We may also find ourselves adding various &lt;a href=&quot;(https://silktide.com/i-thought-title-text-improved-accessibility-i-was-wrong/)&quot;&gt;attributes in the name of accessibility&lt;/a&gt;. But, they aren’t always necessary or valuable, and they add further weight to the page.&lt;/p&gt;
+
+&lt;p&gt;Similarly, the first rule of ARIA is not to use it. To associate errors to a form control we might use &lt;code&gt;aria-describedby&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;label for=&quot;age&quot;&amp;gt;
+  Age
+&amp;lt;/label&amp;gt;
+&amp;lt;div id=&quot;age_error&quot;&amp;gt;Enter your age&amp;lt;/div&amp;gt;
+&amp;lt;input id=&quot;age&quot; aria-describedby=&quot;age_error&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Instead putting the error in the label is more performant &lt;em&gt;and&lt;/em&gt; more inclusive:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;label for=&quot;age&quot;&amp;gt;
+  Age
+  &amp;lt;div&amp;gt;Enter your age&amp;lt;/div&amp;gt;
+&amp;lt;/label&amp;gt;
+&amp;lt;input id=&quot;age&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Using &lt;a href=&quot;/articles/dont-initialise-javascript-automagically/&quot;&gt;HTML attributes to automagically initialise script&lt;/a&gt; increases the HTML (and has other problems too).&lt;/p&gt;
+
+&lt;!-- A [codified grid system is rarely needed](/articles/stop-using-device-breakpoints/), but if you really really need one consider a [minimal approach](https://github.com/Heydon/fukol-grids). --&gt;
+
+&lt;p&gt;Don’t add HTML hooks just for automated functional tests. &lt;a href=&quot;https://maintainablecss.com/chapters/semantics/&quot;&gt;Semantic hooks serve everyone’s purpose equally&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;simplify-your-design-system&quot;&gt;Simplify your design system&lt;/h3&gt;
+
+&lt;p&gt;Government Digital Services design simple websites. Most things are left aligned and stack naturally. In this case we may be able to &lt;a href=&quot;https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/&quot;&gt;avoid CSS classes altogether&lt;/a&gt; which further proves that a simple interface is a performant one.&lt;/p&gt;
+
+&lt;h3 id=&quot;use-less-script&quot;&gt;Use less script&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://openmymind.net/2012/5/30/Client-Side-vs-Server-Side-Rendering/&quot;&gt;Single pages applications don’t necessarily render faster&lt;/a&gt; and come with a whole &lt;a href=&quot;/articles/the-disadvantages-of-single-page-applications/&quot;&gt;bunch of problems&lt;/a&gt;. But it’s not just rendering. It takes a lot of code to create a robust client-side application, that typically prompts developers to use a large framework.&lt;/p&gt;
+
+&lt;p&gt;But maybe we don’t need the whole framework. Putting that burden on the user is an act of negligence. Starting with an entire framework or library puts you on the back foot.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.heydonworks.com/article/look-at-this-shitty-tweet-button&quot;&gt;Twitter’s tweet button script weighs 50k&lt;/a&gt;. We can do the same thing with 0 bytes of script by using a simple link.&lt;/p&gt;
+
+&lt;h3 id=&quot;use-preprocessors-responsibly&quot;&gt;Use preprocessors responsibly&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jaketrent.com/post/cons-css-preprocessors/#file-size-is-deceiving&quot;&gt;Preprocessors are deceitful because they can generate large CSS&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;use-content-breakpoints&quot;&gt;Use content breakpoints&lt;/h3&gt;
+
+&lt;p&gt;Often a module may need just one breakpoint or even no breakpoints. Designing to a predefined set of breakpoints encourages the unnecessary tweaking of a design that results in more code.&lt;/p&gt;
+
+&lt;h2 id=&quot;images&quot;&gt;3. Images&lt;/h2&gt;
+
+&lt;p&gt;Not everyone has access to the &lt;a href=&quot;https://www.smashingmagazine.com/2017/03/world-wide-web-not-wealthy-western-web-part-1/&quot;&gt;world western web&lt;/a&gt;. Not everybody is on high-end devices either. So, if you really need that high resolution image help the user by:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.sitepoint.com/gif-png-jpg-which-one-to-use/&quot;&gt;using the right image&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://imageoptim.com/mac&quot;&gt;smushing the shit out of it&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.codinghorror.com/progressive-image-rendering/&quot;&gt;using progressive rendering&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;backend-stuff&quot;&gt;4. Backend stuff&lt;/h2&gt;
+
+&lt;p&gt;Enable &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding#Chunked_encoding&quot;&gt;chunking&lt;/a&gt; and progressive rendering. Don’t engineer it away.&lt;/p&gt;
+
+&lt;p&gt;Use Command Query Responsibility Segregation to make database queries fast (good for sites that have more reads than writes).&lt;/p&gt;
+
+&lt;p&gt;Use a Content Delivery Network for your static resources. And cache HTML and AJAX responses too.&lt;/p&gt;
+
+&lt;p&gt;Cache assets with long expiry dates so that users don’t have to download assets again.&lt;/p&gt;
+
+&lt;p&gt;Place scripts at the bottom and use &lt;code&gt;async&lt;/code&gt; and &lt;code&gt;defer&lt;/code&gt; attributes. Async is good for completley independent scripts that can run later like analytics.&lt;/p&gt;
+
+&lt;p&gt;Use &lt;a href=&quot;https://www.troyhunt.com/i-wanna-go-fast-https-massive-speed-advantage/&quot;&gt;HTTPS over HTTP2&lt;/a&gt; with Gzip compression. Gzip, by the way, works better with a well-designed and consistent design system—the more HTML is repeated the better the compression.&lt;/p&gt;
+
+&lt;p&gt;Use &lt;a href=&quot;https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf&quot;&gt;preload and prefetch&lt;/a&gt; where appropriate. Addy Osmani says &lt;em&gt;preload resources you have high-confidence will be used in the current page. Prefetch resources likely to be used for future navigations across multiple navigation boundaries.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;You know what’s better than perceived performance? Actual performance. Avoid techniques that merely provide a mirage of speed.&lt;/p&gt;
+
+&lt;p&gt;Instead, declutter and optimise the foundations of your design system which will result in less weight, less complexity, less distraction, less hassle and ultimately, less &lt;a href=&quot;http://deathtobullshit.com/&quot;&gt;bull shit&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Together, these techniques produce fast and simple experiences that make users feel awesome.&lt;/p&gt;
+
+&lt;!--
+- https://alistapart.com/article/planning-for-performance
+- https://boagworld.com/marketing/users-will-always-choose-the-easiest-option-so-if-we-want-a-competitive-advantage-we-must-focus-on-simplicity/
+- who killed my battery.http://cdn.oreillystatic.com/en/assets/1/event/79/Who%20Killed%20My%20Battery_%20Analyzing%20Mobile%20Browser%20Energy%20Consumption%20Presentation.pdf
+- https://ethanmarcotte.com/wrote/designed-lines/
+--&gt;
+</content>
+		</entry>
+	
+		<entry>
 			<title>Inline validation is problematic</title>
 			<link href="https://adamsilver.io/articles/inline-validation-is-problematic/"/>
-			<updated>2037-01-01T09:00:01+00:00</updated>
+			<updated>2017-06-26T10:00:01+01:00</updated>
 			<id>https://adamsilver.io/articles/inline-validation-is-problematic</id>
 			<content type="html">&lt;p&gt;Inline validation informs users whether what they type is valid as they type. The theory is that it’s easier to fix errors as soon as they occur instead of waiting until submission. The thing is, inline validation causes several problems:&lt;/p&gt;
 
