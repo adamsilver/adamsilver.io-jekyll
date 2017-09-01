@@ -10,15 +10,19 @@ Use the following information to accompany any article I write for your publicat
 
 ## First person short description
 
-I'm Adam Silver. I love to design simple, human and inclusive websites that solve real problems. I also wrote a little book called MaintainableCSS. Follow me on Twitter.
+I'm Adam Silver and I design simple, human and inclusive digital services. I wrote a little book called MaintainableCSS. Follow me on Twitter.
+
+## First person long description
+
+I'm Adam Silver and I design simple, human and inclusive digital services. I've worked in London, UK for several well known companies including Tesco, Just Eat, The Financial Times and The Department for Work and Pensions. I also share things about all this stuff in my newsletter&mdash;sign up now.
 
 ## Third person short description
 
-Adam Silver designs simple, human and inclusive websites that solve real problems. He also wrote a little book called MaintainableCSS. Follow him on Twitter.
+Adam Silver designs simple, human and inclusive digital services. He also wrote a little book called MaintainableCSS. Follow him on Twitter.
 
 ## Third person long description
 
-Adam Silver designs simple, human and inclusive websites that solve real problems. Based in London, UK, he's worked on projects for several well known companies such as Tesco, Just Eat, The Financial Times and the Department for Work and Pensions. He also runs a monthly newsletter about user experience design. Sign up so that you can avoid all his past mistakes.
+Adam Silver designs simple, human and inclusive digital services. Based in London, UK, he's worked on projects for several well known companies such as Tesco, Just Eat, The Financial Times and The Department for Work and Pensions. He also shares things about all this stuff in his newsletter&mdash;sign up now.
 
 ## Photo
 
