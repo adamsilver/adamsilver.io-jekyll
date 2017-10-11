@@ -185,12 +185,14 @@ When showing a number of similar items you will need to loop over a collection o
 
 The view-model would be:
 
+{% raw %}
     {
       restaurants: [{
           name: "Pizza House",
           address: "..."
       }, ...]
     }
+{% endraw %}
 
 And the template would be:
 
@@ -208,6 +210,7 @@ And the template would be:
 Often with loops, you will only show the items if there are items in the
 collection. You may be tempted to interrogate the size of the collection in the template as follows:
 
+{% raw %}
 	{% if restaurants.length > 0 %}
 	   <div class="restaurants">
 	       {% for restaurant in restaurants %}
@@ -218,10 +221,12 @@ collection. You may be tempted to interrogate the size of the collection in the 
 	       {% endfor %}
 	   </div>
 	{% endif %}
+{% endraw %}
 
 Whilst this isn’t the end of the world, it can lead to maintenance problems.
 Instead, continue to use the approach used in the previous example by explicitly checking a boolean property *before* iterating over the loop:
 
+{% raw %}
 	{% if showRestaurants %}
 	   <div class="restaurants">
 	       {% for restaurant in restaurants %}
@@ -232,6 +237,7 @@ Instead, continue to use the approach used in the previous example by explicitly
 	       {% endfor %}
 	   </div>
 	{% endif%}
+{% endraw %}
 
 This way templates are consistent, and the logic behind the conditionality can evolve over time without having to change the template — perhaps the restaurants are only shown to authenticated users for example.
 
