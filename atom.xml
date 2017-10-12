@@ -3,7 +3,7 @@
 	<title>Adam Silver: Designing simple, human and inclusive websites.</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2017-09-21T07:53:24+01:00</updated>
+	<updated>2017-10-12T19:46:45+01:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -1131,8 +1131,32 @@ tempted to expose lower-level logic that the template uses to infer visibility.&
 &lt;p&gt;Often with loops, you will only show the items if there are items in the
 collection. You may be tempted to interrogate the size of the collection in the template as follows:&lt;/p&gt;
 
+&lt;pre&gt;&lt;code&gt;{% if restaurants.length &amp;gt; 0 %}
+   &amp;lt;div class=&quot;restaurants&quot;&amp;gt;
+       {% for restaurant in restaurants %}
+           &amp;lt;div class=”restaurant”&amp;gt;
+               &amp;lt;h2&amp;gt;{{restaurant.name}}&amp;lt;/h2&amp;gt;
+               &amp;lt;p&amp;gt;{{restaurant.address}}&amp;lt;/h2&amp;gt;
+           &amp;lt;/div&amp;gt;
+       {% endfor %}
+   &amp;lt;/div&amp;gt;
+{% endif %}
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Whilst this isn’t the end of the world, it can lead to maintenance problems.
 Instead, continue to use the approach used in the previous example by explicitly checking a boolean property &lt;em&gt;before&lt;/em&gt; iterating over the loop:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{% if showRestaurants %}
+   &amp;lt;div class=&quot;restaurants&quot;&amp;gt;
+       {% for restaurant in restaurants %}
+         &amp;lt;div class=”restaurant”&amp;gt;
+               &amp;lt;h2&amp;gt;{{restaurant.name}}&amp;lt;/h2&amp;gt;
+               &amp;lt;p&amp;gt;{{restaurant.address}}&amp;lt;/h2&amp;gt;
+           &amp;lt;/div&amp;gt;
+       {% endfor %}
+   &amp;lt;/div&amp;gt;
+{% endif%}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;This way templates are consistent, and the logic behind the conditionality can evolve over time without having to change the template — perhaps the restaurants are only shown to authenticated users for example.&lt;/p&gt;
 

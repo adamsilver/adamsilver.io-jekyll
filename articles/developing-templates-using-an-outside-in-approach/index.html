@@ -324,8 +324,32 @@ tempted to expose lower-level logic that the template uses to infer visibility.<
 <p>Often with loops, you will only show the items if there are items in the
 collection. You may be tempted to interrogate the size of the collection in the template as follows:</p>
 
+<pre><code>{% if restaurants.length &gt; 0 %}
+   &lt;div class="restaurants"&gt;
+       {% for restaurant in restaurants %}
+           &lt;div class=”restaurant”&gt;
+               &lt;h2&gt;{{restaurant.name}}&lt;/h2&gt;
+               &lt;p&gt;{{restaurant.address}}&lt;/h2&gt;
+           &lt;/div&gt;
+       {% endfor %}
+   &lt;/div&gt;
+{% endif %}
+</code></pre>
+
 <p>Whilst this isn’t the end of the world, it can lead to maintenance problems.
 Instead, continue to use the approach used in the previous example by explicitly checking a boolean property <em>before</em> iterating over the loop:</p>
+
+<pre><code>{% if showRestaurants %}
+   &lt;div class="restaurants"&gt;
+       {% for restaurant in restaurants %}
+         &lt;div class=”restaurant”&gt;
+               &lt;h2&gt;{{restaurant.name}}&lt;/h2&gt;
+               &lt;p&gt;{{restaurant.address}}&lt;/h2&gt;
+           &lt;/div&gt;
+       {% endfor %}
+   &lt;/div&gt;
+{% endif%}
+</code></pre>
 
 <p>This way templates are consistent, and the logic behind the conditionality can evolve over time without having to change the template — perhaps the restaurants are only shown to authenticated users for example.</p>
 
