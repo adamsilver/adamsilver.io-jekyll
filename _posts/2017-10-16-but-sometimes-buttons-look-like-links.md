@@ -13,7 +13,7 @@ When we login, register or add to basket we’re using a form. These buttons are
 
 <div class="image">
 	<figure>
-		<img src="{{ site.url }}/assets/img/buttonslinks/1.png" alt="" width="100%" style="max-width: 500px;">
+		<img src="{{ site.url }}/assets/img/buttonslinks/01-submit.png" alt="" width="100%" style="max-width: 340px;">
 		<figcaption>“Sign in” is a submit button.</figcaption>
 	</figure>
 </div>
@@ -24,7 +24,7 @@ Links let us navigate to pages or locations within a page. Either way, they’re
 
 <div class="image">
 	<figure>
-		<img src="{{ site.url }}/assets/img/buttonslinks/2.png" alt="" width="100%" style="max-width: 500px;">
+		<img src="{{ site.url }}/assets/img/buttonslinks/02-link.png" alt="" width="100%" style="max-width: 340px;">
 		<figcaption>Links are underlined to stand out against copy.</figcaption>
 	</figure>
 </div>
@@ -35,7 +35,7 @@ Buttons (that have type="button") are not submit buttons. Buttons are used to cr
 
 <div class="image">
 	<figure>
-		<img src="{{ site.url }}/assets/img/buttonslinks/3.png" alt="" width="100%" style="max-width: 500px;">
+		<img src="{{ site.url }}/assets/img/buttonslinks/03-button.png" alt="" width="100%" style="max-width: 340px;">
 		<figcaption>The person icon reveals the account menu.</figcaption>
 	</figure>
 </div>
@@ -46,18 +46,18 @@ Call to action buttons often look like buttons to make them prominent in an inte
 
 <div class="image">
 	<figure>
-		<img src="{{ site.url }}/assets/img/buttonslinks/4.png" alt="" width="100%" style="max-width: 500px;">
+		<img src="{{ site.url }}/assets/img/buttonslinks/04-cta.png" alt="" width="100%" style="max-width: 340px;">
 		<figcaption>“Checkout” is a link styled to call users to action.</figcaption>
 	</figure>
 </div>
 
 ## What’s the problem?
 
-In Resilient Web Design Jeremy Keith discusses the idea of material honesty. He says that “one material should not be used as a substitute for another, otherwise the end result is deceptive”.
+In [Resilient Web Design](https://resilientwebdesign.com/) Jeremy Keith discusses the idea of material honesty. He says that “one material should not be used as a substitute for another, otherwise the end result is deceptive”.
 
 Making a link look like a button is materially dishonest. It tells users that links and buttons are the same when they’re not.
 
-In Buttons In Design Systems Nathan Curtis says that we should distinguish links from buttons because “button behaviours bring a whole host of distinct considerations from your simple anchor tag”.
+In [Buttons In Design Systems](https://medium.com/eightshapes-llc/buttons-in-design-systems-eac3acf7e23) Nathan Curtis says that we should distinguish links from buttons because “button behaviours bring a whole host of distinct considerations from your simple anchor tag”.
 
 For example, we can open a link in a new tab, copy the address or bookmark it for later. All of which we can’t do with buttons.
 
@@ -71,7 +71,7 @@ Here’s another example demonstrating the same issue:
 
 <div class="image">
 	<figure>
-		<img src="{{ site.url }}/assets/img/buttonslinks/5.png" alt="" width="100%" style="max-width: 500px;">
+		<img src="{{ site.url }}/assets/img/buttonslinks/05-menu.png" alt="" width="100%" style="max-width: 340px;">
 		<figcaption>“Previous day” and “Next day” are links. “Choose day” is a button styled as a link.</figcaption>
 	</figure>
 </div>
@@ -92,14 +92,14 @@ One example is the Government Digital Service’s ‘start buttons’:
 
 <div class="image">
 	<figure>
-		<img src="{{ site.url }}/assets/img/buttonslinks/6.png" alt="" width="100%" style="max-width: 500px;">
+		<img src="{{ site.url }}/assets/img/buttonslinks/6.png" alt="" width="100%" style="max-width: 340px;">
 		<figcaption>“Start now” is a link styled prominently to call users to action.</figcaption>
 	</figure>
 </div>
 
 Start buttons stand out. They also look different to GDS’s standard submit button. The start button is slightly bigger and has an arrow. The arrow suggests the user is going to be taken to a new flow.
 
-There is a difference, but it’s subtle, and could be lost on users (more on this shortly). First, submit buttons shouldn’t have a hand cursor. In doing so, the hand helps those with a pointing device to promote the affordance of a link.
+There is a difference, but it’s subtle, and could be lost on users (more on this shortly). First, [submit buttons shouldn’t have a hand cursor](/articles/buttons-shouldnd-have-a-hand-cursor/). In doing so, the hand helps those with a pointing device to promote the affordance of a link.
 
 Second, we need to make them less button-y and more link-y. To do this we could use a combination of whitespace, size and other visual treatment to make sure they stand out. Like using the right cursor, an underline would probably help.
 
