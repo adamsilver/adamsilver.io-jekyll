@@ -92,7 +92,7 @@ One example is the Government Digital Service’s ‘start buttons’:
 
 <div class="image">
 	<figure>
-		<img src="{{ site.url }}/assets/img/buttonslinks/6.png" alt="" width="100%" style="max-width: 340px;">
+		<img src="{{ site.url }}/assets/img/buttonslinks/06-start.png" alt="" width="100%" style="max-width: 340px;">
 		<figcaption>“Start now” is a link styled prominently to call users to action.</figcaption>
 	</figure>
 </div>
