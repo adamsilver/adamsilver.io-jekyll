@@ -32,7 +32,7 @@ When given the choice to add a preprocessor (e.g. LESS, SASS, CoffeeScript etc) 
 
 The BFED embraces the constraints and limitations of the browser so that he/she doesn't find him/herself in a world of Adaptive Design and UA sniffing because that world is horrible, ill-advised and costly.
 
-It is best to include the BFED early on in the UX design process to save wasting time designing a UI that should ultimately be avoided (see *[Fixed Position](http://bradfrostweb.com/blog/mobile/fixed-position/)* and *[Misusing The Select Control](/articles/misusing-the-select-control/)* for more on that) and that can likely be designed more simply.
+It is best to include the BFED early on in the UX design process to save wasting time designing a UI that should ultimately be avoided (see *[Fixed Position](http://bradfrostweb.com/blog/mobile/fixed-position/)* and *[Misusing The Select Control](/articles/select-boxes-shouldnt-submit-on-change/)* for more on that) and that can likely be designed more simply.
 
 The BFED will also suggest the use of native form controls realising that browsers will enhance the experience where possible, particularly on mobile, and doesn't try to control the look and feel too much as he/she knows that the brand will *not* suffer because of that decision.
 

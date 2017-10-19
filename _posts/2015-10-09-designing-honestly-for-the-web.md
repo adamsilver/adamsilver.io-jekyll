@@ -16,7 +16,7 @@ I must admit, I have been known to bend it on more than a few occasions myself o
 2. I've given [submit buttons the hand cursor](/articles/buttons-shouldnt-have-a-hand-cursor/).
 3. I've made a custom looking file input to make it look "nicer".
 4. I have hidden labels to "declutter" UI.
-5. I have used a [select box for navigation](/articles/misusing-the-select-control).
+5. I have used a [select box for navigation](/articles/select-boxes-shouldnt-submit-on-change/).
 
 [A Dao of Web Design](http://alistapart.com/article/dao) written by John Allsopp over one and half decades ago, gives us some timeless insights that tell us why this happens and continues to happen today.
 
