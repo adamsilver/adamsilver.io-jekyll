@@ -3,7 +3,7 @@
 	<head>
 	    
 	
-		<title>Misusing the select control by Adam Silver</title>
+		<title>Select boxes shouldn't submit on change by Adam Silver</title>
 	
 
 
@@ -35,15 +35,15 @@
 
 
 	
-		<meta content="Misusing the select control by Adam Silver" property="og:title">
+		<meta content="Select boxes shouldn't submit on change by Adam Silver" property="og:title">
 	
 
 
 
-	<meta property="og:description" content="Sometimes designers and developers misuse the select drop down control. Find out about the problems and how to solve in this article.">
+	<meta property="og:description" content="Sometimes forms submitted when the user selects an option. This is problematic.">
 
 
-<meta property="og:url" content="https://adamsilver.io/articles/misusing-the-select-control/">
+<meta property="og:url" content="https://adamsilver.io/articles/select-boxes-shouldnt-submit-on-change/">
 <meta property="og:site_name" content="Adamsilver.io">
 <meta property="og:image" content="https://adamsilver.io/assets/img/card.png">
 <meta property="og:image:width" content="181">
@@ -52,13 +52,13 @@
 <meta name="twitter:card" content="summary">
 
 
-	<meta name="twitter:description" content="Sometimes designers and developers misuse the select drop down control. Find out about the problems and how to solve in this article.">
+	<meta name="twitter:description" content="Sometimes forms submitted when the user selects an option. This is problematic.">
 
 
-<meta name="twitter:title" content="Misusing the select control -  Adam Silver: Designing simple, human and inclusive websites.">
+<meta name="twitter:title" content="Select boxes shouldn't submit on change -  Adam Silver: Designing simple, human and inclusive websites.">
 
 
-	<meta content="Misusing the select control" name="twitter:title">
+	<meta content="Select boxes shouldn't submit on change" name="twitter:title">
 
 
 <meta name="twitter:site" content="@adambsilver">
@@ -66,10 +66,10 @@
 <meta property="twitter:image" content="https://adamsilver.io/assets/img/card.png">
 
 
-	<meta itemprop="description" content="Sometimes designers and developers misuse the select drop down control. Find out about the problems and how to solve in this article.">
+	<meta itemprop="description" content="Sometimes forms submitted when the user selects an option. This is problematic.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.f4ba4479.css" media="all">
+<link rel="stylesheet" href="/assets/css/main.min.31406f36.css" media="all">
 
 <!--[if IE 8]>
 <link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
@@ -85,7 +85,7 @@
 <![endif]-->
 
 
-<link rel="canonical" href="https://adamsilver.io/articles/misusing-the-select-control/">
+<link rel="canonical" href="https://adamsilver.io/articles/select-boxes-shouldnt-submit-on-change/">
 <link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
 
 <script>
@@ -110,18 +110,18 @@
 	</ul>
 </nav>
 	    <main class="mainContent">
-			<h1 class="article-heading">Misusing the select control</h1>
+			<h1 class="article-heading">Select boxes shouldn't submit on change</h1>
 			<!-- <div class="meta">
 	<time class="meta-date" date-time="2014-09-17">17 September 2014</time> <span class="meta-divider">&#183;</span>
 	<span class="meta-readingTime" title="Estimated read time">
 	  
 
 	  
-	    2 minute read
+	    1 minute read
 	  
 	</span>
 </div> -->
-	        <p>I’ve seen many designers misuse the select menu by using it as a form of navigation. One example of this approach is with a Sort By form which many ecommerce sites use to allow users to sort a list of products.</p>
+	        <p>Some sites will submit the form when the user selects an option in a select box (or drop down menu) <code>onchange</code>. The idea is that removing the button declutters the interface and saves users an extra click. First, <a href="http://uxmyths.com/post/115783813605/myth-34-simple-minimal">minimal does not mean simple</a>, second <a href="http://idyeah.com/blog/2012/06/stop-counting-clicks/">stop counting clicks</a> and third, read on.</p>
 
 <!-- <div class="image" style="max-width: 320px;margin: 0 auto;">
 	<figure>
@@ -130,48 +130,27 @@
 	</figure>
 </div> -->
 
-<p>This technique is appealing because removing the button declutters the UI. And submitting the form when the user changes selection saves the user an extra click.</p>
+<p>Unfortunately, some browsers will fire the <code>onchange</code> event as the user presses <kbd>Down</kbd>. As a user moves from the first to the second option, for example, the <a href="http://html.cita.illinois.edu/script/onchange/onchange-example.php">form will submit before the user had a chance to move further down the list</a>. To my knowledge, this happens in a plethora of Windows browsers including Chrome, Opera, Internet Explorer 9 and below.</p>
 
-<p>Whilst this seems sensible it’s actually problematic. And in fact aiming for a <a href="http://uxmyths.com/post/115783813605/myth-34-simple-minimal">minimal UI</a> and <a href="http://idyeah.com/blog/2012/06/stop-counting-clicks/">counting clicks</a> doesn’t always lead to an agreeable User Experience. Here’s why:</p>
+<p>Screen reader users can struggle too. This is because the act of reading an option, selects it, causing the form to submit. This means users can never get past the first option. Navigating users automatically can also be disorientating as users don’t expect a form control to do this.</p>
 
-<h2 id="keyboard-users-find-them-difficult">1. Keyboard users find them difficult</h2>
-
-<p>Some browsers will immediately submit the form when the user selects an option. As a user moves from the first to the second option, the form will submit before the user had a chance to move further down the list.</p>
-
-<p>To experience this for yourself visit <a href="http://html.cita.illinois.edu/script/onchange/onchange-example.php">the demo</a> in an offending browser such as:
-Chrome (Windows), Opera (Windows), IE6, IE7, IE8 or IE9.</p>
-
-<h2 id="screen-reader-users-find-them-difficult">2. Screen reader users find them difficult</h2>
-
-<p>Sarah Miller’s research found that dropdown lists without submit buttons were confusing to screen reader users. The act of reading an option meant that it was selected. Therefore the user could never get past the first option.</p>
-
-<h2 id="users-expect-to-use-links-for-navigation">3. Users expect to use links for navigation</h2>
-
-<p>Links are for navigation. Forms are for submitting data—in our case filtering a set of search results. We should use the right element. In doing so we conform to the third of Henny Swan’s <a href="https://www.smashingmagazine.com/2015/02/bbc-iplayer-accessibility-case-study/#ux-principles">UX principles</a>, <em>design with familiarity in mind</em>.</p>
-
-<h2 id="users-expect-selection-and-submission-to-be-separate">4. Users expect selection and submission to be separate</h2>
-
-<p>There is a difference between selecting something and submitting it to the server for processing. Users can check and amend their entries before submitting them. In fact this is a WCAG 2.0 recommendation:</p>
+<p>This is hardly surprising given that links are for navigation and forms are for inputting data. Not only is using a select box for navigation <a href="https://resilientwebdesign.com/chapter2/">materially dishonest</a>, but it also fails <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-unpredictable-change.html">Web Content Accessibility Guidelines Success Criteria 3.2.2</a> which says:</p>
 
 <blockquote>
-  <p>“Changing the setting of any user interface component does not automatically cause a change of context”</p>
+  <p>Changing the setting of any user interface component does not automatically cause a change of context</p>
 </blockquote>
 
-<p>The button invites the user to make an explicit action at their convenience, and therefore conforms to the second of Henny Swan’s UX principles, <em>to give users control</em>.</p>
+<p>Designing for inclusion means not excluding users based on their interaction and browser preferences. In this case, it also means giving users control and not over-automating an interface.</p>
 
-<h2 id="users-find-it-disorientating">5. Users find it disorientating</h2>
+<p>Reducing clicks and decluttering an interface may be the result of a well-designed experience, but they should not be objectives in and of themselves.</p>
 
-<p>Larry Marinem’s usability research found that users are prone to mis-selecting an option. So when it launches them off somewhere else, users found this disorientating.</p>
-
-<h2 id="summary">Summary</h2>
-
-<p>Reducing clicks and decluttering a UI <em>might</em> be the results of a well-designed solution, but they should not be objectives in and of themselves.</p>
-
-<p>We should consider people with different preferences and browsers so that they can effectively use the websites we put in front of them.</p>
-
-<p>Our solutions should be familiar wherever possible and keep the user in control of their actions. In this case, we must always include a button.</p>
+<p>Every form—even if it only contains a single select box—should have a submit button.</p>
 
 <!-- <iframe width="100%" height="315" src="https://www.youtube.com/embed/rnKDDSo9Omk" frameborder="0" allowfullscreen></iframe> -->
+
+<!--
+Should a GO Button be Included with a Drop-down List?
+-->
 
 	    </main>
 		<div class="signUpHero">
@@ -182,7 +161,7 @@ Chrome (Windows), Opera (Windows), IE6, IE7, IE8 or IE9.</p>
 	<form action="//adamsilver.us9.list-manage.com/subscribe/post?u=b8fb04f39bf86109693e00ba5&amp;id=441c045a36" method="post">
 		<input type="hidden" name="b_b8fb04f39bf86109693e00ba5_441c045a36" value="">
 		<input type="hidden" name="SITE" value="https://adamsilver.io">
-		<input type="hidden" name="LOCATION" value="/articles/misusing-the-select-control/">
+		<input type="hidden" name="LOCATION" value="/articles/select-boxes-shouldnt-submit-on-change/">
 		<label for="mce-EMAIL" class="testForm-label">Your email address</label>
 		<input type="email" name="EMAIL" id="mce-EMAIL" class="testForm-email" required><input class="testForm-button" type="submit" value="Join 1,000+ others" name="subscribe">
 	</form>
