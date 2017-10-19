@@ -3,7 +3,7 @@
 	<title>Adam Silver: Designing simple, human and inclusive websites.</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2017-10-19T19:48:46+01:00</updated>
+	<updated>2017-10-19T19:57:27+01:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -2782,7 +2782,7 @@ switched.&lt;/p&gt;
   &lt;li&gt;I’ve given &lt;a href=&quot;/articles/buttons-shouldnt-have-a-hand-cursor/&quot;&gt;submit buttons the hand cursor&lt;/a&gt;.&lt;/li&gt;
   &lt;li&gt;I’ve made a custom looking file input to make it look “nicer”.&lt;/li&gt;
   &lt;li&gt;I have hidden labels to “declutter” UI.&lt;/li&gt;
-  &lt;li&gt;I have used a &lt;a href=&quot;/articles/misusing-the-select-control&quot;&gt;select box for navigation&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;I have used a &lt;a href=&quot;/articles/select-boxes-shouldnt-submit-on-change/&quot;&gt;select box for navigation&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://alistapart.com/article/dao&quot;&gt;A Dao of Web Design&lt;/a&gt; written by John Allsopp over one and half decades ago, gives us some timeless insights that tell us why this happens and continues to happen today.&lt;/p&gt;
@@ -3640,7 +3640,7 @@ anotherSelector {
 
 &lt;p&gt;The BFED embraces the constraints and limitations of the browser so that he/she doesn’t find him/herself in a world of Adaptive Design and UA sniffing because that world is horrible, ill-advised and costly.&lt;/p&gt;
 
-&lt;p&gt;It is best to include the BFED early on in the UX design process to save wasting time designing a UI that should ultimately be avoided (see &lt;em&gt;&lt;a href=&quot;http://bradfrostweb.com/blog/mobile/fixed-position/&quot;&gt;Fixed Position&lt;/a&gt;&lt;/em&gt; and &lt;em&gt;&lt;a href=&quot;/articles/misusing-the-select-control/&quot;&gt;Misusing The Select Control&lt;/a&gt;&lt;/em&gt; for more on that) and that can likely be designed more simply.&lt;/p&gt;
+&lt;p&gt;It is best to include the BFED early on in the UX design process to save wasting time designing a UI that should ultimately be avoided (see &lt;em&gt;&lt;a href=&quot;http://bradfrostweb.com/blog/mobile/fixed-position/&quot;&gt;Fixed Position&lt;/a&gt;&lt;/em&gt; and &lt;em&gt;&lt;a href=&quot;/articles/select-boxes-shouldnt-submit-on-change/&quot;&gt;Misusing The Select Control&lt;/a&gt;&lt;/em&gt; for more on that) and that can likely be designed more simply.&lt;/p&gt;
 
 &lt;p&gt;The BFED will also suggest the use of native form controls realising that browsers will enhance the experience where possible, particularly on mobile, and doesn’t try to control the look and feel too much as he/she knows that the brand will &lt;em&gt;not&lt;/em&gt; suffer because of that decision.&lt;/p&gt;
 
@@ -4091,7 +4091,7 @@ zoo.information = {
 
 &lt;h2 id=&quot;dont-abuse-select-controls&quot;&gt;Don’t abuse select controls&lt;/h2&gt;
 
-&lt;p&gt;The select control provides a list of options of which one can be selected for input. An &lt;a href=&quot;/articles/misusing-the-select-control/&quot;&gt;accessibility/usability issue can arise when script is used to submit the form when the select’s change event fires&lt;/a&gt;. Keyboard users may struggle. If a user wants to select the 4th option this would then require 3 form submissions which would be a terribly frustrating experience.&lt;/p&gt;
+&lt;p&gt;The select control provides a list of options of which one can be selected for input. An &lt;a href=&quot;/articles/select-boxes-shouldnt-submit-on-change/&quot;&gt;accessibility/usability issue can arise when script is used to submit the form when the select’s change event fires&lt;/a&gt;. Keyboard users may struggle. If a user wants to select the 4th option this would then require 3 form submissions which would be a terribly frustrating experience.&lt;/p&gt;
 
 &lt;h2 id=&quot;avoid-multiple-select-controls&quot;&gt;Avoid multiple select controls&lt;/h2&gt;
 
