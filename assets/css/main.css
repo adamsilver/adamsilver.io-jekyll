@@ -91,6 +91,13 @@ body {
     font-size: 100%;
 }
 
+kbd {
+  padding: 0.0625rem 0.5rem;
+  border-radius: 0.125rem;
+  border: 1px solid #000;
+  box-shadow: 1px 1px 0 currentColor, 1px 1px 0 currentColor;
+}
+
 a:link,
 a:visited {
 	color: #0074D9;
