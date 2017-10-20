@@ -3,7 +3,7 @@
 	<title>Adam Silver: Designing simple, human and inclusive websites.</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2017-10-19T19:57:27+01:00</updated>
+	<updated>2017-10-20T07:25:42+01:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -50,9 +50,7 @@
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Call to action buttons&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h2 id=&quot;call-to-action-buttons&quot;&gt;4. Call to action buttons&lt;/h2&gt;
 
 &lt;p&gt;Call to action buttons often look like buttons to make them prominent in an interface. There is no dedicated element. They are just regular links styled to call users to action — hence the name.&lt;/p&gt;
 
