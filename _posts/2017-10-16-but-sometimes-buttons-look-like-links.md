@@ -40,7 +40,7 @@ Buttons (that have type="button") are not submit buttons. Buttons are used to cr
 	</figure>
 </div>
 
-4. Call to action buttons
+## 4. Call to action buttons
 
 Call to action buttons often look like buttons to make them prominent in an interface. There is no dedicated element. They are just regular links styled to call users to action — hence the name.
 
