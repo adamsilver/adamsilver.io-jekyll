@@ -6,17 +6,17 @@ categories: js spas featured
 description: Single page applications promise a better experience. This is rarely the case. Find out why in this article.
 ---
 
-Many people think single page applications (SPAs) provide a better user experience. But, not only do they cause usability problems, they are significantly harder to design and build.
+Maybe you think single page applications (SPAs) provide a better user experience. But, not only do they cause usability problems, they are much harder to design and build.
 
-Before getting into the issues, let's first clarify what an SPA is.
+Before getting into the issues, let's clarify what an SPA is.
 
-## What exactly is an SPA?
+## What's an SPA?
 
-We might associate MVC, AJAX and client-side templating with an SPA. But these are not the defining characteristics of an SPA. We can use all of these things to build a rich, [ROCA-style](http://roca-style.org/) website.
+You might associate MVC, AJAX and client-side templating with an SPA. But these are not the defining characteristics of an SPA. We can use all of these things to build a rich, [ROCA-style](http://roca-style.org/) website.
 
-What really defines an SPA as such, is the fact that client-side Javascript handles the routing *instead* of the browser. That is, the application hijacks the behaviour that browsers inherently provide natively for *free*.
+What really defines an SPA as such, is the fact that client-side JS handles the routing *instead* of the browser. That is, the application hijacks the behaviour that browsers inherently provide natively for *free*.
 
-When it's put like that, it's hardly surprising they cause so many problems:
+Put like that, it's hardly surprising that they cause so many problems:
 
 ## 1. History and fast back
 
@@ -26,16 +26,16 @@ Browsers store history so that pages load quickly when the user clicks *back*. D
 > &ldquo;In the traditional web model the browser will typically be able use a cached version of the page and linked resources.<br><br>
 > &ldquo;In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.&rdquo;
 
-If we want users to enjoy the same, fast experience, we'll need to mimic the native browser behaviour in Javascript. The application will need to store pages in a cache by using memory, local storage, client-side databases or cookies.
+If we want users to enjoy the same, fast experience, we need to mimic the native browser behaviour in JS. The application will need to store pages in memory, local storage, client-side databases or cookies.
 
 The application will also need to determine *when* to retrieve these pages. As part of this it will need to differentiate between:
 
 * a user changing the URL (by clicking a link or typing a URL in the location bar); and
-* [manually pressing back or forward](http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button) which is not easy to solve.
+* [manually pressing back or forward](http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button) which isn't simple.
 
 ## 2. Scroll position
 
-Browsers remember the scroll position of pages you have visited. Daniel Puplus explains how SPAs have trouble here:
+Browsers remember the scroll position of pages you have visited. Daniel Puplus explains how SPAs cause trouble:
 
 > &ldquo;Lots of sites get this wrong and it’s really annoying. When the user navigates using the browser’s forward or back button the scroll position should be the same as it was last time they were on the page. This sometimes works correctly on Facebook but sometimes doesn’t. Google+ always seems to lose your scroll position.&rdquo;
 
@@ -54,23 +54,23 @@ As SPAs retrieve pages (or data for a page) via AJAX, there could be several req
 - the user's data allowance could be eaten up unnecessarily; and
 - it causes visual glitches as a subsequent page request finishes (when the browser would normally have cancelled it).
 
-The application will need to handle duplicate requests. And the UI will need a cancel button, which is highly undesirable.
+The application will need to handle duplicate requests. And the interface will need a cancel button, which is obviously undesirable.
 
 ## 4. Unsaved changes
 
-On occasion an application, upon leaving the page, will warn users about losing any unsaved changes. The browser allows us to use the `beforeunload` event to do just this.
+Sometimes an application needs to warn users of losing unsaved changes when they leave a page. The `beforeunload` event lets us do this.
 
-However, the application cannot use this feature because users don't request real pages. Meaning, the application will need to reimplement this behaviour if needed.
+But, the application can't use this because users don't request real pages. This means the app will need to reimplement this behaviour.
 
 ## 5. Search engine ranking
 
-For many SPAs SEO is an afterthought, which is problematic because retro fitting server side rendering is not trivial. The alternative is to create a *special* website just for bots which isn't ideal either. Either way, it's another problem that needs consideration and action.
+For many SPAs, SEO is an afterthought, which is problematic because retro fitting server side rendering is not trivial. The alternative is to create a *special* website just for bots which isn't ideal either. Either way, it's another problem that needs consideration and action.
 
-## 6. Loading CSS &amp; Javascript
+## 6. Loading CSS and JS
 
-If an SPA grows to a significant size, loading the entire application on page load will be slow. This leads to conditionally loading CSS and JS with a script loader.
+If an SPA grows to a significant size, loading the entire application on load will be slow. This leads to conditionally loading CSS and JS with a script loader.
 
-The problem is that [script loading is notoriously difficult and contains  hacks](http://blog.getify.com/labjs-script-loading-the-way-it-should-be/). This slows down development and reduces the reliability of the application.
+The problem is that [script loading is notoriously difficult and contains hacks](http://blog.getify.com/labjs-script-loading-the-way-it-should-be/). This slows down development and reduces the reliability of the application.
 
 ## 7. Analytics
 
@@ -91,13 +91,17 @@ Pages are "long lived" increasing the chance of memory leak issues. This can deg
 
 Browsers show a loading indicator during page load. SPAs use AJAX to load pages and so we need to implement a custom one. This requires extra work.
 
-Also, the browser's indicator displays *progress*. That is, a user can tell how long until the request finishes. Javascript can only state that something is loading, not how long left there is. This leads users to request the link again.
+Also, the browser's indicator displays *progress*. That is, a user can tell how long until the request finishes. JS can only state that something is loading, not how long left there is. This leads users to request the link again.
 
-Furthermore, the user's browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use Javascript to do this, we break the third of Henny Swan’s [UX principles](https://www.smashingmagazine.com/2015/02/bbc-iplayer-accessibility-case-study/#ux-principles), *design with familiarity in mind*.
+Furthermore, the user's browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use JS to do this, we break the third of Henny Swan’s [UX principles](https://www.smashingmagazine.com/2015/02/bbc-iplayer-accessibility-case-study/#ux-principles), *design with familiarity in mind*.
 
 ## 11. It's going to fail
 
-[Everyone has Javascript, Right?](http://kryogenix.org/code/browser/everyonehasjs.html) explains that Javascript loading or executing will fail. SPAs *depend* on many different enhancements, and they tend not to conform to [Progressive Enhancement](/articles/progressively-enhanced-javascript/). This means when it does fail, the resulting experience will be a blank page.
+[Everyone has JS, Right?](http://kryogenix.org/code/browser/everyonehasjs.html) explains that JS can fail in many ways. Maybe it doesn't load. Maybe it the browser doesn't recognise the script and fails. SPAs *depend* on many different enhancements, and they tend not to conform to [Progressive Enhancement](/articles/progressively-enhanced-javascript/). This means when it does fail, the resulting experience will be a blank page.
+
+## 12. They're probably slower
+
+Given that they require a whole load of extra code to load and fix all these issues, it's probably going to be slower. And remember, [AJAX is not always more performant](/articles/designing-for-performance/).
 
 ## Summary
 
