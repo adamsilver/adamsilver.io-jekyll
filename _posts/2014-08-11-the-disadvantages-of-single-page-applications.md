@@ -26,20 +26,20 @@ Browsers store history so that pages load quickly when the user clicks *back*. D
 > &ldquo;In the traditional web model the browser will typically be able use a cached version of the page and linked resources.<br><br>
 > &ldquo;In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.&rdquo;
 
-If we want users to enjoy the same, fast experience, we need to mimic the native browser behaviour in JS. The application will need to store pages in memory, local storage, client-side databases or cookies.
+If we want users to enjoy the same, fast experience, we need to mimic the native browser behaviour in JS. 
 
-The application will also need to determine *when* to retrieve these pages. As part of this it will need to differentiate between:
+First, the application will need to store pages in memory, local storage, client-side databases or cookies. Secon, the application will need to determine *when* to retrieve these pages. As part of this it will need to differentiate between:
 
 * a user changing the URL (by clicking a link or typing a URL in the location bar); and
 * [manually pressing back or forward](http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button) which isn't simple.
 
 ## 2. Scroll position
 
-Browsers remember the scroll position of pages you have visited. Daniel Puplus explains how SPAs cause trouble:
+Browsers remember the scroll position of pages you've visited. Daniel Puplus explains how SPAs cause trouble:
 
 > &ldquo;Lots of sites get this wrong and it’s really annoying. When the user navigates using the browser’s forward or back button the scroll position should be the same as it was last time they were on the page. This sometimes works correctly on Facebook but sometimes doesn’t. Google+ always seems to lose your scroll position.&rdquo;
 
-SPAs don't navigate in the traditional sense. Therefore the application must store the scroll position and apply it when the user hits back or forward.
+SPAs don't navigate in the traditional sense. Therefore the application must store the scroll position and apply it when the user presses *back* or *forward*.
 
 ## 3. Cancelling navigation
 
@@ -48,7 +48,7 @@ Consider what a browser gives us for free:
 * When a user clicks the *cancel* button, the browser will stop any in-flight requests.
 * When a user clicks a link, the browser will again, stop any in-flight requests and make a new request.
 
-As SPAs retrieve pages (or data for a page) via AJAX, there could be several requests in-flight. The first page request could finish last. And, a user may click (and therefore request) the same link twice. This is problematic because:
+As SPAs retrieve whole (data for) pages with AJAX, there could be several requests in-flight. The first page request could finish last. And, a user may click (and therefore request) the same link twice. This is problematic because:
 
 - it's inefficient;
 - the user's data allowance could be eaten up unnecessarily; and
@@ -89,25 +89,25 @@ Pages are "long lived" increasing the chance of memory leak issues. This can deg
 
 ## 10. Loading indicators
 
-Browsers show a loading indicator during page load. SPAs use AJAX to load pages and so we need to implement a custom one. This requires extra work.
+Browsers show a loading indicator when the page is loading. But, SPAs use AJAX to load pages, so we need to implement a custom one which is more work.
 
-Also, the browser's indicator displays *progress*. That is, a user can tell how long until the request finishes. JS can only state that something is loading, not how long left there is. This leads users to request the link again.
+Also, the browser's indicator displays *progress*. That is, a user can tell how long until the page loads. JS can only state that something is loading, not how long left there is. This leads to users clicking the link again which exacerbates problem 3.
 
 Furthermore, the user's browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use JS to do this, we break the third of Henny Swan’s [UX principles](https://www.smashingmagazine.com/2015/02/bbc-iplayer-accessibility-case-study/#ux-principles), *design with familiarity in mind*.
 
 ## 11. It's going to fail
 
-[Everyone has JS, Right?](http://kryogenix.org/code/browser/everyonehasjs.html) explains that JS can fail in many ways. Maybe it doesn't load. Maybe it the browser doesn't recognise the script and fails. SPAs *depend* on many different enhancements, and they tend not to conform to [Progressive Enhancement](/articles/progressively-enhanced-javascript/). This means when it does fail, the resulting experience will be a blank page.
+[Everyone has JS, Right?](http://kryogenix.org/code/browser/everyonehasjs.html) explains that JS can fail in many ways. Maybe it doesn't load. Maybe the browser doesn't recognise the script and fails. SPAs *depend* on many different enhancements, and they tend not to conform to [Progressive Enhancement](/articles/progressively-enhanced-javascript/). This means when it does fail, the resulting experience will be a blank page.
 
 ## 12. They're probably slower
 
-Given that they require a whole load of extra code to load and fix all these issues, it's probably going to be slower. And remember, [AJAX is not always more performant](/articles/designing-for-performance/).
+Given that they require a whole load of extra code to load and fix all these issues, it's probably going to be slower. And [don't assume AJAX is always faster](/articles/designing-for-performance/).
 
 ## Summary
 
-Ironically, SPAs are harder to design and harder to build. And yet, they typically produce slow, disagreeable experiences for users.
+Ironically, SPAs are harder to both design and build. And yet, they typically produce slow, disagreeable and exclusive experiences.
 
-Twitter, Lifehacker and Delicious have reverted to traditional architectures because of these issues which you can read about in:
+Twitter, Lifehacker and Delicious have reverted to traditional architectures because of these issues which you can read in:
 
 - [Improving performance on Twitter](https://blog.twitter.com/2012/improving-performance-on-twittercom);
 - [Breaking The Web With Hash Bangs](http://isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs); and
@@ -115,4 +115,4 @@ Twitter, Lifehacker and Delicious have reverted to traditional architectures bec
 
 Javascript is never going to beat the browser at what it does best&mdash;*browsing*. We can still give users rich and enhanced experiences without cramming an entire site into one document.
 
-We should let the browser manage the browsing experience, and spend our time solving *real* user problems.
+We should let the browser manage the browsing experience, and spend our time solving *real* problems.
