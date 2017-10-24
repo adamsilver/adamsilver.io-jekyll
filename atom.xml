@@ -3,7 +3,7 @@
 	<title>Adam Silver: Designing simple, human and inclusive websites.</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2017-10-20T07:25:42+01:00</updated>
+	<updated>2017-10-24T06:49:23+01:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -3804,17 +3804,17 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 			<link href="https://adamsilver.io/articles/the-disadvantages-of-single-page-applications/"/>
 			<updated>2014-08-11T10:00:01+01:00</updated>
 			<id>https://adamsilver.io/articles/the-disadvantages-of-single-page-applications</id>
-			<content type="html">&lt;p&gt;Many people think single page applications (SPAs) provide a better user experience. But, not only do they cause usability problems, they are significantly harder to design and build.&lt;/p&gt;
+			<content type="html">&lt;p&gt;Maybe you think single page applications (SPAs) provide a better user experience. But, not only do they cause usability problems, they are much harder to design and build.&lt;/p&gt;
 
-&lt;p&gt;Before getting into the issues, let’s first clarify what an SPA is.&lt;/p&gt;
+&lt;p&gt;Before getting into the issues, let’s clarify what an SPA is.&lt;/p&gt;
 
-&lt;h2 id=&quot;what-exactly-is-an-spa&quot;&gt;What exactly is an SPA?&lt;/h2&gt;
+&lt;h2 id=&quot;whats-an-spa&quot;&gt;What’s an SPA?&lt;/h2&gt;
 
-&lt;p&gt;We might associate MVC, AJAX and client-side templating with an SPA. But these are not the defining characteristics of an SPA. We can use all of these things to build a rich, &lt;a href=&quot;http://roca-style.org/&quot;&gt;ROCA-style&lt;/a&gt; website.&lt;/p&gt;
+&lt;p&gt;You might associate MVC, AJAX and client-side templating with an SPA. But these are not the defining characteristics of an SPA. We can use all of these things to build a rich, &lt;a href=&quot;http://roca-style.org/&quot;&gt;ROCA-style&lt;/a&gt; website.&lt;/p&gt;
 
-&lt;p&gt;What really defines an SPA as such, is the fact that client-side Javascript handles the routing &lt;em&gt;instead&lt;/em&gt; of the browser. That is, the application hijacks the behaviour that browsers inherently provide natively for &lt;em&gt;free&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;What really defines an SPA as such, is the fact that client-side JS handles the routing &lt;em&gt;instead&lt;/em&gt; of the browser. That is, the application hijacks the behaviour that browsers inherently provide natively for &lt;em&gt;free&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;When it’s put like that, it’s hardly surprising they cause so many problems:&lt;/p&gt;
+&lt;p&gt;Put like that, it’s hardly surprising that they cause so many problems:&lt;/p&gt;
 
 &lt;h2 id=&quot;history-and-fast-back&quot;&gt;1. History and fast back&lt;/h2&gt;
 
@@ -3826,24 +3826,24 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 “In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.”&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;If we want users to enjoy the same, fast experience, we’ll need to mimic the native browser behaviour in Javascript. The application will need to store pages in a cache by using memory, local storage, client-side databases or cookies.&lt;/p&gt;
+&lt;p&gt;If we want users to enjoy the same, fast experience, we need to mimic the native browser behaviour in JS. &lt;/p&gt;
 
-&lt;p&gt;The application will also need to determine &lt;em&gt;when&lt;/em&gt; to retrieve these pages. As part of this it will need to differentiate between:&lt;/p&gt;
+&lt;p&gt;First, the application will need to store pages in memory, local storage, client-side databases or cookies. Secon, the application will need to determine &lt;em&gt;when&lt;/em&gt; to retrieve these pages. As part of this it will need to differentiate between:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;a user changing the URL (by clicking a link or typing a URL in the location bar); and&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button&quot;&gt;manually pressing back or forward&lt;/a&gt; which is not easy to solve.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button&quot;&gt;manually pressing back or forward&lt;/a&gt; which isn’t simple.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;scroll-position&quot;&gt;2. Scroll position&lt;/h2&gt;
 
-&lt;p&gt;Browsers remember the scroll position of pages you have visited. Daniel Puplus explains how SPAs have trouble here:&lt;/p&gt;
+&lt;p&gt;Browsers remember the scroll position of pages you’ve visited. Daniel Puplus explains how SPAs cause trouble:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;“Lots of sites get this wrong and it’s really annoying. When the user navigates using the browser’s forward or back button the scroll position should be the same as it was last time they were on the page. This sometimes works correctly on Facebook but sometimes doesn’t. Google+ always seems to lose your scroll position.”&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;SPAs don’t navigate in the traditional sense. Therefore the application must store the scroll position and apply it when the user hits back or forward.&lt;/p&gt;
+&lt;p&gt;SPAs don’t navigate in the traditional sense. Therefore the application must store the scroll position and apply it when the user presses &lt;em&gt;back&lt;/em&gt; or &lt;em&gt;forward&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;cancelling-navigation&quot;&gt;3. Cancelling navigation&lt;/h2&gt;
 
@@ -3854,7 +3854,7 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
   &lt;li&gt;When a user clicks a link, the browser will again, stop any in-flight requests and make a new request.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;As SPAs retrieve pages (or data for a page) via AJAX, there could be several requests in-flight. The first page request could finish last. And, a user may click (and therefore request) the same link twice. This is problematic because:&lt;/p&gt;
+&lt;p&gt;As SPAs retrieve whole (data for) pages with AJAX, there could be several requests in-flight. The first page request could finish last. And, a user may click (and therefore request) the same link twice. This is problematic because:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;it’s inefficient;&lt;/li&gt;
@@ -3862,23 +3862,23 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
   &lt;li&gt;it causes visual glitches as a subsequent page request finishes (when the browser would normally have cancelled it).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The application will need to handle duplicate requests. And the UI will need a cancel button, which is highly undesirable.&lt;/p&gt;
+&lt;p&gt;The application will need to handle duplicate requests. And the interface will need a cancel button, which is obviously undesirable.&lt;/p&gt;
 
 &lt;h2 id=&quot;unsaved-changes&quot;&gt;4. Unsaved changes&lt;/h2&gt;
 
-&lt;p&gt;On occasion an application, upon leaving the page, will warn users about losing any unsaved changes. The browser allows us to use the &lt;code&gt;beforeunload&lt;/code&gt; event to do just this.&lt;/p&gt;
+&lt;p&gt;Sometimes an application needs to warn users of losing unsaved changes when they leave a page. The &lt;code&gt;beforeunload&lt;/code&gt; event lets us do this.&lt;/p&gt;
 
-&lt;p&gt;However, the application cannot use this feature because users don’t request real pages. Meaning, the application will need to reimplement this behaviour if needed.&lt;/p&gt;
+&lt;p&gt;But, the application can’t use this because users don’t request real pages. This means the app will need to reimplement this behaviour.&lt;/p&gt;
 
 &lt;h2 id=&quot;search-engine-ranking&quot;&gt;5. Search engine ranking&lt;/h2&gt;
 
-&lt;p&gt;For many SPAs SEO is an afterthought, which is problematic because retro fitting server side rendering is not trivial. The alternative is to create a &lt;em&gt;special&lt;/em&gt; website just for bots which isn’t ideal either. Either way, it’s another problem that needs consideration and action.&lt;/p&gt;
+&lt;p&gt;For many SPAs, SEO is an afterthought, which is problematic because retro fitting server side rendering is not trivial. The alternative is to create a &lt;em&gt;special&lt;/em&gt; website just for bots which isn’t ideal either. Either way, it’s another problem that needs consideration and action.&lt;/p&gt;
 
-&lt;h2 id=&quot;loading-css-amp-javascript&quot;&gt;6. Loading CSS &amp;amp; Javascript&lt;/h2&gt;
+&lt;h2 id=&quot;loading-css-and-js&quot;&gt;6. Loading CSS and JS&lt;/h2&gt;
 
-&lt;p&gt;If an SPA grows to a significant size, loading the entire application on page load will be slow. This leads to conditionally loading CSS and JS with a script loader.&lt;/p&gt;
+&lt;p&gt;If an SPA grows to a significant size, loading the entire application on load will be slow. This leads to conditionally loading CSS and JS with a script loader.&lt;/p&gt;
 
-&lt;p&gt;The problem is that &lt;a href=&quot;http://blog.getify.com/labjs-script-loading-the-way-it-should-be/&quot;&gt;script loading is notoriously difficult and contains  hacks&lt;/a&gt;. This slows down development and reduces the reliability of the application.&lt;/p&gt;
+&lt;p&gt;The problem is that &lt;a href=&quot;http://blog.getify.com/labjs-script-loading-the-way-it-should-be/&quot;&gt;script loading is notoriously difficult and contains hacks&lt;/a&gt;. This slows down development and reduces the reliability of the application.&lt;/p&gt;
 
 &lt;h2 id=&quot;analytics&quot;&gt;7. Analytics&lt;/h2&gt;
 
@@ -3899,21 +3899,25 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 
 &lt;h2 id=&quot;loading-indicators&quot;&gt;10. Loading indicators&lt;/h2&gt;
 
-&lt;p&gt;Browsers show a loading indicator during page load. SPAs use AJAX to load pages and so we need to implement a custom one. This requires extra work.&lt;/p&gt;
+&lt;p&gt;Browsers show a loading indicator when the page is loading. But, SPAs use AJAX to load pages, so we need to implement a custom one which is more work.&lt;/p&gt;
 
-&lt;p&gt;Also, the browser’s indicator displays &lt;em&gt;progress&lt;/em&gt;. That is, a user can tell how long until the request finishes. Javascript can only state that something is loading, not how long left there is. This leads users to request the link again.&lt;/p&gt;
+&lt;p&gt;Also, the browser’s indicator displays &lt;em&gt;progress&lt;/em&gt;. That is, a user can tell how long until the page loads. JS can only state that something is loading, not how long left there is. This leads to users clicking the link again which exacerbates problem 3.&lt;/p&gt;
 
-&lt;p&gt;Furthermore, the user’s browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use Javascript to do this, we break the third of Henny Swan’s &lt;a href=&quot;https://www.smashingmagazine.com/2015/02/bbc-iplayer-accessibility-case-study/#ux-principles&quot;&gt;UX principles&lt;/a&gt;, &lt;em&gt;design with familiarity in mind&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Furthermore, the user’s browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use JS to do this, we break the third of Henny Swan’s &lt;a href=&quot;https://www.smashingmagazine.com/2015/02/bbc-iplayer-accessibility-case-study/#ux-principles&quot;&gt;UX principles&lt;/a&gt;, &lt;em&gt;design with familiarity in mind&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;its-going-to-fail&quot;&gt;11. It’s going to fail&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://kryogenix.org/code/browser/everyonehasjs.html&quot;&gt;Everyone has Javascript, Right?&lt;/a&gt; explains that Javascript loading or executing will fail. SPAs &lt;em&gt;depend&lt;/em&gt; on many different enhancements, and they tend not to conform to &lt;a href=&quot;/articles/progressively-enhanced-javascript/&quot;&gt;Progressive Enhancement&lt;/a&gt;. This means when it does fail, the resulting experience will be a blank page.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://kryogenix.org/code/browser/everyonehasjs.html&quot;&gt;Everyone has JS, Right?&lt;/a&gt; explains that JS can fail in many ways. Maybe it doesn’t load. Maybe the browser doesn’t recognise the script and fails. SPAs &lt;em&gt;depend&lt;/em&gt; on many different enhancements, and they tend not to conform to &lt;a href=&quot;/articles/progressively-enhanced-javascript/&quot;&gt;Progressive Enhancement&lt;/a&gt;. This means when it does fail, the resulting experience will be a blank page.&lt;/p&gt;
+
+&lt;h2 id=&quot;theyre-probably-slower&quot;&gt;12. They’re probably slower&lt;/h2&gt;
+
+&lt;p&gt;Given that they require a whole load of extra code to load and fix all these issues, it’s probably going to be slower. And &lt;a href=&quot;/articles/designing-for-performance/&quot;&gt;don’t assume AJAX is always faster&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
-&lt;p&gt;Ironically, SPAs are harder to design and harder to build. And yet, they typically produce slow, disagreeable experiences for users.&lt;/p&gt;
+&lt;p&gt;Ironically, SPAs are harder to both design and build. And yet, they typically produce slow, disagreeable and exclusive experiences.&lt;/p&gt;
 
-&lt;p&gt;Twitter, Lifehacker and Delicious have reverted to traditional architectures because of these issues which you can read about in:&lt;/p&gt;
+&lt;p&gt;Twitter, Lifehacker and Delicious have reverted to traditional architectures because of these issues which you can read in:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://blog.twitter.com/2012/improving-performance-on-twittercom&quot;&gt;Improving performance on Twitter&lt;/a&gt;;&lt;/li&gt;
@@ -3923,7 +3927,7 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 
 &lt;p&gt;Javascript is never going to beat the browser at what it does best—&lt;em&gt;browsing&lt;/em&gt;. We can still give users rich and enhanced experiences without cramming an entire site into one document.&lt;/p&gt;
 
-&lt;p&gt;We should let the browser manage the browsing experience, and spend our time solving &lt;em&gt;real&lt;/em&gt; user problems.&lt;/p&gt;
+&lt;p&gt;We should let the browser manage the browsing experience, and spend our time solving &lt;em&gt;real&lt;/em&gt; problems.&lt;/p&gt;
 </content>
 		</entry>
 	
