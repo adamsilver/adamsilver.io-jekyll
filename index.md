@@ -9,7 +9,7 @@ id: home
 
 # Hey, I'm Adam Silver. I design (and build) simple, human and inclusive digital services.
 
-I write for [Smashing Magazine](https://www.smashingmagazine.com/author/adamsilver/), [Net Magazine](http://www.creativebloq.com/net-magazine), [MarvelApp](https://blog.marvelapp.com/author/adam-silver/) and  [Simple=Human](http://medium.com/simple-human). But I share my newest articles with my mailing list first. No spam and definitely no popups. Just one article a month, straight to your inbox. Sign up below:
+I've written for [Smashing Magazine](https://www.smashingmagazine.com/author/adamsilver/), [A List Apart](https://alistapart.com/author/adamsilver) and [Net Magazine](http://www.creativebloq.com/net-magazine). But I share my newest articles with my mailing list first. No spam and definitely no popups. Just one article a month, straight to your inbox. Sign up below:
 
 {% include signUpForm.html %}
 
