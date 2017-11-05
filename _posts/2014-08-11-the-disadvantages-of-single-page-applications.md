@@ -23,12 +23,12 @@ Put like that, it's hardly surprising that they cause so many problems:
 Browsers store history so that pages load quickly when the user clicks *back*. Daniel Puplus explains in [Building Single Page Applications](https://medium.com/joys-of-javascript/4353246f4480) that:
 
 > &ldquo;When a user presses the browser’s back button they expect the change to happen quickly and for the page to be in a similar state to how it was last time they saw it.<br><br>
-> &ldquo;In the traditional web model the browser will typically be able use a cached version of the page and linked resources.<br><br>
+> &ldquo;In the traditional web model the browser will typically be able [to] use a cached version of the page and linked resources.<br><br>
 > &ldquo;In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.&rdquo;
 
 If we want users to enjoy the same, fast experience, we need to mimic the native browser behaviour in JS. 
 
-First, the application will need to store pages in memory, local storage, client-side databases or cookies. Secon, the application will need to determine *when* to retrieve these pages. As part of this it will need to differentiate between:
+First, the application will need to store pages in memory, local storage, client-side databases or cookies. Second, the application will need to determine *when* to retrieve these pages. As part of this it will need to differentiate between:
 
 * a user changing the URL (by clicking a link or typing a URL in the location bar); and
 * [manually pressing back or forward](http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button) which isn't simple.
