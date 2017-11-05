@@ -139,13 +139,13 @@
 
 <blockquote>
   <p>“When a user presses the browser’s back button they expect the change to happen quickly and for the page to be in a similar state to how it was last time they saw it.<br /><br />
-“In the traditional web model the browser will typically be able use a cached version of the page and linked resources.<br /><br />
+“In the traditional web model the browser will typically be able [to] use a cached version of the page and linked resources.<br /><br />
 “In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.”</p>
 </blockquote>
 
 <p>If we want users to enjoy the same, fast experience, we need to mimic the native browser behaviour in JS. </p>
 
-<p>First, the application will need to store pages in memory, local storage, client-side databases or cookies. Secon, the application will need to determine <em>when</em> to retrieve these pages. As part of this it will need to differentiate between:</p>
+<p>First, the application will need to store pages in memory, local storage, client-side databases or cookies. Second, the application will need to determine <em>when</em> to retrieve these pages. As part of this it will need to differentiate between:</p>
 
 <ul>
   <li>a user changing the URL (by clicking a link or typing a URL in the location bar); and</li>

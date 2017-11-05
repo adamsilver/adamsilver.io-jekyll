@@ -3,7 +3,7 @@
 	<title>Adam Silver: Designing simple, human and inclusive websites.</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2017-11-03T09:35:13+00:00</updated>
+	<updated>2017-11-05T07:50:14+00:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -3822,13 +3822,13 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 
 &lt;blockquote&gt;
   &lt;p&gt;“When a user presses the browser’s back button they expect the change to happen quickly and for the page to be in a similar state to how it was last time they saw it.&lt;br /&gt;&lt;br /&gt;
-“In the traditional web model the browser will typically be able use a cached version of the page and linked resources.&lt;br /&gt;&lt;br /&gt;
+“In the traditional web model the browser will typically be able [to] use a cached version of the page and linked resources.&lt;br /&gt;&lt;br /&gt;
 “In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.”&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;If we want users to enjoy the same, fast experience, we need to mimic the native browser behaviour in JS. &lt;/p&gt;
 
-&lt;p&gt;First, the application will need to store pages in memory, local storage, client-side databases or cookies. Secon, the application will need to determine &lt;em&gt;when&lt;/em&gt; to retrieve these pages. As part of this it will need to differentiate between:&lt;/p&gt;
+&lt;p&gt;First, the application will need to store pages in memory, local storage, client-side databases or cookies. Second, the application will need to determine &lt;em&gt;when&lt;/em&gt; to retrieve these pages. As part of this it will need to differentiate between:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;a user changing the URL (by clicking a link or typing a URL in the location bar); and&lt;/li&gt;
