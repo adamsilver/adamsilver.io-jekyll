@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Articles about designing and building simple, human and inclusive experiences on the web.
+title: Articles about designing and building simple, human and inclusive digital services and websites
 id: articles
 permalink: /articles/
 ---
