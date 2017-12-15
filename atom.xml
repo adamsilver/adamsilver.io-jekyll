@@ -3,7 +3,7 @@
 	<title>Adam Silver: designer and interface developer from London, UK</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2017-11-06T16:39:05+00:00</updated>
+	<updated>2017-12-15T16:03:04+00:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -1335,11 +1335,11 @@ separation of concerns between back-end and front-end. You don’t need to use a
 			<link href="https://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor/"/>
 			<updated>2016-07-15T10:00:01+01:00</updated>
 			<id>https://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor</id>
-			<content type="html">&lt;p&gt;There is this belief that the hand cursor means ‘clickable’, but this is incorrect and potentially problematic. My hope is that by the end of the article, you’ll never want to use the hand cursor for buttons ever again.&lt;/p&gt;
+			<content type="html">&lt;p&gt;There’s a belief that the hand cursor means ‘clickable’, but this is wrong and potentially problematic. My hope is by the end of the article, you’ll never use the hand cursor for buttons ever again.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-hand-doesnt-mean-clickable&quot;&gt;The hand doesn’t mean clickable&lt;/h2&gt;
 
-&lt;p&gt;It’s no accident that browsers don’t give buttons (and other elements) a hand cursor — it’s because they’re not meant to. Take a look at the following screenshot:&lt;/p&gt;
+&lt;p&gt;It’s no accident that browsers don’t give buttons (and other elements) a hand cursor — it’s because they’re not meant to. Take a look at this screenshot:&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
@@ -1348,11 +1348,11 @@ separation of concerns between back-end and front-end. You don’t need to use a
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Almost every element is interactive and clickable — the menu, the tabs, the whitespace, the browser buttons, the bookmark bar and Google’s search box — but, none of them have a hand cursor.&lt;/p&gt;
+&lt;p&gt;Almost every element is interactive and clickable — the menu, the tabs, the whitespace, the browser buttons, the bookmark bar and Google’s search box — none of them have a hand cursor.&lt;/p&gt;
 
-&lt;p&gt;There are more interactive and clickable elements not shown above — select menus, sliders, checkboxes, radios, labels, images, empty space (e.g right click — view source) and text — again, none of them have a hand cursor.&lt;/p&gt;
+&lt;p&gt;There are interactive elements not shown above: select menus, sliders, checkboxes, radios, labels, images, empty space (e.g right click — view source) and text — again, none of them have a hand cursor.&lt;/p&gt;
 
-&lt;p&gt;The same goes for any computer you’ve ever used. You can tap, drag, select, press, left click and right click on a plethora of different elements including buttons. However, buttons are not afforded by a hand cursor displaying on hover.&lt;/p&gt;
+&lt;p&gt;The same goes for any computer you’ve ever used. You can tap, drag, select, press, left click and right click on a plethora of different elements including buttons. However, buttons are not signified by a the cursor changing to a hand on hover.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
@@ -1361,9 +1361,9 @@ separation of concerns between back-end and front-end. You don’t need to use a
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Affordance is provided by the way something looks regardless of the cursor. Remember, the cursor is only available when hovering with a pointing device such as a mouse.&lt;/p&gt;
+&lt;p&gt;Perceived affordance is signified by the way something looks regardless of the cursor. Remember, the cursor is only available when hovering with a pointing device such as a mouse.&lt;/p&gt;
 
-&lt;p&gt;This is why, for example, &lt;a href=&quot;http://danieldelaney.net/checkboxes&quot;&gt;checkboxes are never round&lt;/a&gt; (and radios are never square). This is also why &lt;a href=&quot;http://adrianroselli.com/2016/06/on-link-underlines.html&quot;&gt;links are typically underlined&lt;/a&gt;. This is why links do, in fact, have a hand cursor.&lt;/p&gt;
+&lt;p&gt;This is why, for example, &lt;a href=&quot;http://danieldelaney.net/checkboxes&quot;&gt;checkboxes are never round&lt;/a&gt;. This is also why &lt;a href=&quot;http://adrianroselli.com/2016/06/on-link-underlines.html&quot;&gt;links are typically underlined&lt;/a&gt;. This is why links do, in fact, have a hand cursor.&lt;/p&gt;
 
 &lt;h2 id=&quot;what-the-authorities-say&quot;&gt;What the authorities say&lt;/h2&gt;
 
@@ -1377,7 +1377,7 @@ separation of concerns between back-end and front-end. You don’t need to use a
   &lt;p&gt;To avoid confusion, it is imperative not to use the hand pointer for other purposes. For example, command buttons already have a strong affordance, so they don’t need a hand pointer. The hand pointer must mean “this target is a link” and nothing else.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/Pointers.html&quot;&gt;Apple’s Human Interface Guidelines&lt;/a&gt; states that the hand cursor should be used when “the content is a URL link”. &lt;a href=&quot;https://www.w3.org/TR/CSS21/ui.html#propdef-cursor&quot;&gt;W3C User Interface Guidelines&lt;/a&gt; says the same thing again with “The cursor is a pointer that indicates a link”.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/Pointers.html&quot;&gt;Apple’s Human Interface Guidelines&lt;/a&gt; says the hand cursor should be used when “the content is a URL link”. &lt;a href=&quot;https://www.w3.org/TR/CSS21/ui.html#propdef-cursor&quot;&gt;W3C User Interface Guidelines&lt;/a&gt; says the same thing again with “The cursor is a pointer that indicates a link”.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-hand-cursor-is-for-links&quot;&gt;The hand cursor is for links&lt;/h2&gt;
 
@@ -1386,15 +1386,15 @@ separation of concerns between back-end and front-end. You don’t need to use a
 &lt;ul&gt;
   &lt;li&gt;Clicking a link opens a web page or resource.&lt;/li&gt;
   &lt;li&gt;(On desktop) I can right-click on a link and do many things (that I can’t do with a button). Open in new tab/window, save a link, copy address, add to reading list, bookmark it and more.&lt;/li&gt;
-  &lt;li&gt;(On mobile devices) I can tap and hold on a link and get a similar context menu as per the previous point.&lt;/li&gt;
+  &lt;li&gt;(On mobile devices) I can tap and hold on a link and get a similar context menu, like the previous point.&lt;/li&gt;
   &lt;li&gt;A link also tells me that I am just going somewhere else. I am not modifying any data or making changes in anyway (like a button is likely to do).&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
-&lt;p&gt;When a button has the hand cursor, it subtly suggests that the user is interacting with a link when they’re not. If you want to give visual feedback when on hover, you can do so with other style changes such as background colour. A well-designed button doesn’t need a hand cursor to help the user realise it does something.&lt;/p&gt;
+&lt;p&gt;When a button has the hand cursor, it subtly suggests that the user is interacting with a link when they’re not. If you want to give users feedback on hover, change the background colour, for example. A well-designed button doesn’t need a hand cursor to help users realise it does something.&lt;/p&gt;
 
-&lt;p&gt;The hand cursor is reserved for links. This is because their behaviour is unique. Browsers and Operating Systems have done the work for you — because contrary to popular belief — browsers know best.&lt;/p&gt;
+&lt;p&gt;The hand cursor is reserved for links. This is because their behaviour is unique. Browsers and Operating Systems have done the work for you — because contrary to popular belief — browser vendors often know best.&lt;/p&gt;
 
 &lt;p&gt;Links have always been handled this way since the web came along — this is the convention of the web that you need not innovate on. You can rest easy knowing that browsers have your back. This leaves you and your team to solve real problems.&lt;/p&gt;
 
