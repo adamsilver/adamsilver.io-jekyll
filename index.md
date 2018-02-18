@@ -7,7 +7,7 @@ id: home
   	<img src="/assets/img/adam2.jpg" alt="" width="85" height="85">
 </div>
 
-# Hey, I'm Adam Silver. I design (and build) simple, human and inclusive digital services.
+# Hey, I'm Adam Silver and I design (and code) simple and inclusive digital services.
 
 I've written for [Smashing Magazine](https://www.smashingmagazine.com/author/adamsilver/), [A List Apart](https://alistapart.com/author/adamsilver) and [Net Magazine](http://www.creativebloq.com/net-magazine). But I share my newest articles with my mailing list first. No spam and definitely no popups. Just one article a month, straight to your inbox. Sign up below:
 

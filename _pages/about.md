@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "About Adam Silver: a designer and interface developer from London in the UK"
+title: "About Adam Silver: an interaciton designer and interface developer from London in the UK"
 id: about
 permalink: /about/
 ---
@@ -11,11 +11,11 @@ permalink: /about/
 
 # Adam Silver who?
 
-I design (and build) simple, human and inclusive digital services&mdash;websites really. But, my superhero power is fighting complexity at every turn.
+I design (and code) simple and inclusive digital services&mdash;websites really. But, my superhero power is fighting complexity at every turn.
 
 Since the turn of the century I've done this for Tesco, BBC, Argos, Boots, Just Eat, News Corp, Selfridges, The Financial Times, T-Mobile and many others too.
 
-I believe that design is a team sport. The best experiences are those produced by multi-disciplinary and diverse teams. I love working with other experts to help them avoid my past mistakes and to meet users' needs.
+I believe that design is a team sport. The best experiences are produced by multi-disciplinary and diverse teams. I love working with others to help them avoid my past mistakes, learn from theirs and ultimately, to design for users' needs (real problems).
 
 I wrote a little book about how to craft maintainable interfaces with CSS. Because I'm so creative I called it [MaintainableCSS](http://maintainablecss.com).
 
