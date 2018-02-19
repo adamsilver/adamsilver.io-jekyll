@@ -3,7 +3,7 @@
 	<title>Adam Silver: interaction designer and interface developer from London, UK</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2018-02-19T17:00:43+00:00</updated>
+	<updated>2018-02-19T17:01:21+00:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -490,7 +490,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 			<id>https://adamsilver.io/articles/float-labels-are-problematic</id>
 			<content type="html">&lt;p&gt;After writing &lt;a href=&quot;/articles/placeholders-are-problematic/&quot;&gt;Placeholders are Problematic&lt;/a&gt; some people suggested the float label pattern. &lt;/p&gt;
 
-&lt;p&gt;The float label pattern works by having the label start off inside the input (like a placeholder does). But &lt;code&gt;onfocus&lt;/code&gt; or when the user starts typing, the moves outside the input above the field.&lt;/p&gt;
+&lt;p&gt;The float label pattern works by having the label start off inside the input (like a placeholder does). But &lt;code&gt;onfocus&lt;/code&gt; or when the user starts typing, the label moves outside the input above the field.&lt;/p&gt;
 
 &lt;p&gt;While this is better than supplanting labels with placeholders, this seductive, novel and space-saving technique is problematic for a number of reasons:&lt;/p&gt;
 
