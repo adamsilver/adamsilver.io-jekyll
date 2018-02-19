@@ -8,7 +8,7 @@ description: We're often seduced by novel patterns that save space such as the f
 
 After writing [Placeholders are Problematic](/articles/placeholders-are-problematic/) some people suggested the float label pattern. 
 
-The float label pattern works by having the label start off inside the input (like a placeholder does). But `onfocus` or when the user starts typing, the moves outside the input above the field.
+The float label pattern works by having the label start off inside the input (like a placeholder does). But `onfocus` or when the user starts typing, the label moves outside the input above the field.
 
 While this is better than supplanting labels with placeholders, this seductive, novel and space-saving technique is problematic for a number of reasons:
 
