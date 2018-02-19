@@ -5,7 +5,7 @@ date: 2017-10-16 09:00:01
 categories: ui
 ---
 
-Sometimes we make links look like buttons. Sometimes we make buttons look like links. This is unfortunate. Maybe there is something we can do about this. Let’s talk through the four types of buttons/links.
+Sometimes we make links look like buttons. Sometimes we make buttons look like links. This is unfortunate and maybe there's something we can do about this. But before we get to it, let's discuss the four different types of buttons and links.
 
 ## 1. Submit buttons
 
@@ -42,7 +42,7 @@ Buttons (that have type="button") are not submit buttons. Buttons are used to cr
 
 ## 4. Call to action buttons
 
-Call to action buttons often look like buttons to make them prominent in an interface. There is no dedicated element. They are just regular links styled to call users to action—hence the name.
+Call to action buttons often look like buttons to make them prominent in an interface. There's no dedicated element. They are just regular links styled to call users to action—hence the name.
 
 <div class="image">
 	<figure>
@@ -61,7 +61,7 @@ In [Buttons In Design Systems](https://medium.com/eightshapes-llc/buttons-in-des
 
 For example, we can open a link in a new tab, copy the address or bookmark it for later. All of which we can’t do with buttons.
 
-Call to action buttons—which again, are just links—are deceptive. Users are blissfully unaware because this styling removes their natural affordance, obscuring their behaviour.
+Call to action buttons—which again, are just links—are deceptive. Users are blissfully unaware because this styling removes their perceived affordance, obscuring their behaviour.
 
 We could make call to action buttons look like regular links. But this makes them visually weak which negates their prominence. Hence the problem.
 
@@ -82,11 +82,11 @@ Clicking ‘Choose day’ opens a calendar, but it deceptively looks as if it wi
 
 Maybe it should open in a new page and that would solve the problem? Maybe that’s not the desired experience? In any case, the reason we’ve styled these items the same is because consistency is a quality of good design.
 
-But on this occasion we’ve taken consistency too far. We’ve stamped out the differences, removed the affordance and made a dishonest interface. Consistency is not about making different things the same. It’s about making the same things the same.
+But on this occasion we’ve taken consistency too far. We’ve stamped out the differences, removed the unique signifier and made a dishonest interface. Consistency is not about making different things the same. It’s about making the same things the same.
 
 ## How can we differentiate call to action buttons?
 
-If you’ve been nodding along so far, then you’ll probably agree that a call to action needs to stand out. But that it also needs to look different to buttons to afford the behaviour of a link.
+If you’ve been nodding along so far, then you’ll probably agree that a call to action needs to stand out. But that it also needs to look different to buttons to signify the behaviour of a link.
 
 One example is the Government Digital Service’s ‘start buttons’:
 
@@ -99,17 +99,17 @@ One example is the Government Digital Service’s ‘start buttons’:
 
 Start buttons stand out. They also look different to GDS’s standard submit button. The start button is slightly bigger and has an arrow. The arrow suggests the user is going to be taken to a new flow.
 
-There is a difference, but it’s subtle, and could be lost on users (more on this shortly). First, [submit buttons shouldn’t have a hand cursor](/articles/buttons-shouldnd-have-a-hand-cursor/). In doing so, the hand (pointer) helps those with a pointing device to promote the affordance of a link.
+There's a difference, but it’s subtle, and could be lost on users (more on this shortly). First, [submit buttons shouldn’t have a hand cursor](/articles/buttons-shouldnd-have-a-hand-cursor/). In doing so, the hand (pointer) helps those using a pointing device spot a link.
 
 Second, we need to make them less button-y and more link-y. To do this we could use a combination of whitespace, size and other visual treatment to make sure they stand out. Like using the right cursor, an underline would probably help.
 
-What may also help is not having a load of other stuff on the page. The more stuff there is, the more it fights for attention and diminishes the prominence of the call to action.
+What may also help is not having a load of other stuff on the page. The more stuff there's, the more it fights for attention and diminishes the prominence of the call to action.
 
 It’s wise to have only one primary link/action/button anyway. Admittedly this isn’t always possible, or even the right thing to do but we can explore this approach on a case by case basis.
 
 ## How can we differentiate buttons and links that form part of the same menu?
 
-The problem here is that we want the items to be equally weighted without removing the affordance. Buttons naturally dominate links!
+The problem here is that we want the items to be equally weighted without removing the perceived affordance. Buttons naturally dominate links!
 
 Kidly’s menu looks consistent and equally weighted due to the use of iconography. But in doing so the meaning (subtle or otherwise) is lost.
 
@@ -143,13 +143,13 @@ The one on the TV is solid, much bigger and concealed. It would be an odd experi
 
 Forms and links may take users to the same place. But just because the destination is the same, the journey (the interaction) is different.
 
-Pretending they are the same and removing the affordance in the process can’t be useful. Semantics are there for a reason, why design the meaning out of a component due to aesthetic minimalism?
+Pretending they are the same and removing the perceived affordance in the process isn't useful. Semantics are there for a reason, why design the meaning out of a component due to aesthetic minimalism?
 
 ## Summary
 
 I often go on about solving real problems. I get frustrated when we spend time solving problems that aren’t problems. Design, after all, is about solving problems.
 
-This is definitely not the biggest problem in the world. But I think there is something in this. I think there is something we can do about it. Something that promotes affordance and improves the experience by making it honest.
+This is definitely not the biggest problem in the world. But I think there's something to this. I think there's something we can do about it. Something that provides affordance and improves the experience by making it honest.
 
 In isolation this may not seem like a big deal, but in combination with other small gains this could make a big difference. What do you think?
 
