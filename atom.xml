@@ -3,7 +3,7 @@
 	<title>Adam Silver: interaction designer and interface developer from London, UK</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2018-02-18T10:20:42+00:00</updated>
+	<updated>2018-02-19T17:00:43+00:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -52,7 +52,7 @@
 
 &lt;h2 id=&quot;call-to-action-buttons&quot;&gt;4. Call to action buttons&lt;/h2&gt;
 
-&lt;p&gt;Call to action buttons often look like buttons to make them prominent in an interface. There is no dedicated element. They are just regular links styled to call users to action — hence the name.&lt;/p&gt;
+&lt;p&gt;Call to action buttons often look like buttons to make them prominent in an interface. There is no dedicated element. They are just regular links styled to call users to action—hence the name.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
@@ -71,7 +71,7 @@
 
 &lt;p&gt;For example, we can open a link in a new tab, copy the address or bookmark it for later. All of which we can’t do with buttons.&lt;/p&gt;
 
-&lt;p&gt;Call to action buttons — which again, are just links — are deceptive. Users are blissfully unaware because this styling removes their natural affordance, obscuring their behaviour.&lt;/p&gt;
+&lt;p&gt;Call to action buttons—which again, are just links—are deceptive. Users are blissfully unaware because this styling removes their natural affordance, obscuring their behaviour.&lt;/p&gt;
 
 &lt;p&gt;We could make call to action buttons look like regular links. But this makes them visually weak which negates their prominence. Hence the problem.&lt;/p&gt;
 
@@ -109,7 +109,7 @@
 
 &lt;p&gt;Start buttons stand out. They also look different to GDS’s standard submit button. The start button is slightly bigger and has an arrow. The arrow suggests the user is going to be taken to a new flow.&lt;/p&gt;
 
-&lt;p&gt;There is a difference, but it’s subtle, and could be lost on users (more on this shortly). First, &lt;a href=&quot;/articles/buttons-shouldnd-have-a-hand-cursor/&quot;&gt;submit buttons shouldn’t have a hand cursor&lt;/a&gt;. In doing so, the hand helps those with a pointing device to promote the affordance of a link.&lt;/p&gt;
+&lt;p&gt;There is a difference, but it’s subtle, and could be lost on users (more on this shortly). First, &lt;a href=&quot;/articles/buttons-shouldnd-have-a-hand-cursor/&quot;&gt;submit buttons shouldn’t have a hand cursor&lt;/a&gt;. In doing so, the hand (pointer) helps those with a pointing device to promote the affordance of a link.&lt;/p&gt;
 
 &lt;p&gt;Second, we need to make them less button-y and more link-y. To do this we could use a combination of whitespace, size and other visual treatment to make sure they stand out. Like using the right cursor, an underline would probably help.&lt;/p&gt;
 
@@ -129,7 +129,7 @@
 
 &lt;h2 id=&quot;do-users-care-would-they-care&quot;&gt;Do users care? Would they care?&lt;/h2&gt;
 
-&lt;p&gt;Because we have made links look like buttons and buttons look like links — and because we have exacerbated the problem by incorrectly using the hand cursor — users have acclimatised and the lines have blurred.&lt;/p&gt;
+&lt;p&gt;Because we have made links look like buttons and buttons look like links—and because we have exacerbated the problem by incorrectly using the hand cursor—users have acclimatised and the lines have blurred.&lt;/p&gt;
 
 &lt;p&gt;Perhaps, if users knew they could open a call to action in a new window, they would? I certainly might. Maybe others wouldn’t. But does that matter? Choice is an act of inclusive design.&lt;/p&gt;
 
@@ -168,10 +168,10 @@
 		</entry>
 	
 		<entry>
-			<title>Designing for performance</title>
-			<link href="https://adamsilver.io/articles/designing-for-performance/"/>
+			<title>Designing for actual performance</title>
+			<link href="https://adamsilver.io/articles/designing-for-actual-performance/"/>
 			<updated>2017-07-28T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/designing-for-performance</id>
+			<id>https://adamsilver.io/articles/designing-for-actual-performance</id>
 			<content type="html">&lt;p&gt;This is how it goes. We put a load of shit into a single web page. This makes the page slow. Slow to load, slow to render. Slow.&lt;/p&gt;
 
 &lt;p&gt;Instead of getting rid of the shit, we blame the page refresh. There’s only one way to avoid the page refresh and that’s AJAX.&lt;/p&gt;
@@ -484,11 +484,15 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 		</entry>
 	
 		<entry>
-			<title>Floating labels are problematic</title>
-			<link href="https://adamsilver.io/articles/floating-labels-are-problematic/"/>
+			<title>Float labels are problematic</title>
+			<link href="https://adamsilver.io/articles/float-labels-are-problematic/"/>
 			<updated>2017-05-24T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/floating-labels-are-problematic</id>
-			<content type="html">&lt;p&gt;After writing &lt;a href=&quot;/articles/placeholders-are-problematic/&quot;&gt;Placeholders are Problematic&lt;/a&gt; some people suggested the floating label. We are often seduced by novel patterns that save space but this pattern is problematic. Here’s why:&lt;/p&gt;
+			<id>https://adamsilver.io/articles/float-labels-are-problematic</id>
+			<content type="html">&lt;p&gt;After writing &lt;a href=&quot;/articles/placeholders-are-problematic/&quot;&gt;Placeholders are Problematic&lt;/a&gt; some people suggested the float label pattern. &lt;/p&gt;
+
+&lt;p&gt;The float label pattern works by having the label start off inside the input (like a placeholder does). But &lt;code&gt;onfocus&lt;/code&gt; or when the user starts typing, the moves outside the input above the field.&lt;/p&gt;
+
+&lt;p&gt;While this is better than supplanting labels with placeholders, this seductive, novel and space-saving technique is problematic for a number of reasons:&lt;/p&gt;
 
 &lt;h2 id=&quot;there-is-no-space-for-a-hint&quot;&gt;1. There is no space for a hint&lt;/h2&gt;
 
@@ -1335,7 +1339,7 @@ separation of concerns between back-end and front-end. You don’t need to use a
 			<link href="https://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor/"/>
 			<updated>2016-07-15T10:00:01+01:00</updated>
 			<id>https://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor</id>
-			<content type="html">&lt;p&gt;There’s a belief that the hand cursor means ‘clickable’, but this is wrong and potentially problematic. My hope is by the end of the article, you’ll never use the hand cursor for buttons ever again.&lt;/p&gt;
+			<content type="html">&lt;p&gt;There’s a belief that the hand (or pointer) cursor means ‘clickable’, but this is wrong and potentially problematic. My hope is by the end of the article, you’ll never use the hand cursor for buttons ever again.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-hand-doesnt-mean-clickable&quot;&gt;The hand doesn’t mean clickable&lt;/h2&gt;
 
@@ -3911,7 +3915,7 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 
 &lt;h2 id=&quot;theyre-probably-slower&quot;&gt;12. They’re probably slower&lt;/h2&gt;
 
-&lt;p&gt;Given that they require a whole load of extra code to load and fix all these issues, it’s probably going to be slower. And &lt;a href=&quot;/articles/designing-for-performance/&quot;&gt;don’t assume AJAX is always faster&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Given that they require a whole load of extra code to load and fix all these issues, it’s probably going to be slower. And &lt;a href=&quot;/articles/designing-for-actual-performance/&quot;&gt;don’t assume AJAX is always faster&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
