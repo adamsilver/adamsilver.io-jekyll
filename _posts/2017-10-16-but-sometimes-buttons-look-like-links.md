@@ -42,7 +42,7 @@ Buttons (that have type="button") are not submit buttons. Buttons are used to cr
 
 ## 4. Call to action buttons
 
-Call to action buttons often look like buttons to make them prominent in an interface. There is no dedicated element. They are just regular links styled to call users to action — hence the name.
+Call to action buttons often look like buttons to make them prominent in an interface. There is no dedicated element. They are just regular links styled to call users to action—hence the name.
 
 <div class="image">
 	<figure>
@@ -61,7 +61,7 @@ In [Buttons In Design Systems](https://medium.com/eightshapes-llc/buttons-in-des
 
 For example, we can open a link in a new tab, copy the address or bookmark it for later. All of which we can’t do with buttons.
 
-Call to action buttons — which again, are just links — are deceptive. Users are blissfully unaware because this styling removes their natural affordance, obscuring their behaviour.
+Call to action buttons—which again, are just links—are deceptive. Users are blissfully unaware because this styling removes their natural affordance, obscuring their behaviour.
 
 We could make call to action buttons look like regular links. But this makes them visually weak which negates their prominence. Hence the problem.
 
@@ -99,7 +99,7 @@ One example is the Government Digital Service’s ‘start buttons’:
 
 Start buttons stand out. They also look different to GDS’s standard submit button. The start button is slightly bigger and has an arrow. The arrow suggests the user is going to be taken to a new flow.
 
-There is a difference, but it’s subtle, and could be lost on users (more on this shortly). First, [submit buttons shouldn’t have a hand cursor](/articles/buttons-shouldnd-have-a-hand-cursor/). In doing so, the hand helps those with a pointing device to promote the affordance of a link.
+There is a difference, but it’s subtle, and could be lost on users (more on this shortly). First, [submit buttons shouldn’t have a hand cursor](/articles/buttons-shouldnd-have-a-hand-cursor/). In doing so, the hand (pointer) helps those with a pointing device to promote the affordance of a link.
 
 Second, we need to make them less button-y and more link-y. To do this we could use a combination of whitespace, size and other visual treatment to make sure they stand out. Like using the right cursor, an underline would probably help.
 
@@ -119,7 +119,7 @@ Locating them in the same place is a no brainer. Perhaps we can use whitespace a
 
 ## Do users care? Would they care?
 
-Because we have made links look like buttons and buttons look like links — and because we have exacerbated the problem by incorrectly using the hand cursor — users have acclimatised and the lines have blurred.
+Because we have made links look like buttons and buttons look like links—and because we have exacerbated the problem by incorrectly using the hand cursor—users have acclimatised and the lines have blurred.
 
 Perhaps, if users knew they could open a call to action in a new window, they would? I certainly might. Maybe others wouldn’t. But does that matter? Choice is an act of inclusive design.
 

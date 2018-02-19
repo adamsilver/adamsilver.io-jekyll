@@ -1,12 +1,16 @@
 ---
 layout: post
-title: Floating labels are problematic
+title: Float labels are problematic
 date: 2017-05-24 09:00:01
 categories: design patterns forms
 description: We're often seduced by novel patterns that save space such as the floating label. Find out why this is a problem for users.
 ---
 
-After writing [Placeholders are Problematic](/articles/placeholders-are-problematic/) some people suggested the floating label. We are often seduced by novel patterns that save space but this pattern is problematic. Here's why:
+After writing [Placeholders are Problematic](/articles/placeholders-are-problematic/) some people suggested the float label pattern. 
+
+The float label pattern works by having the label start off inside the input (like a placeholder does). But `onfocus` or when the user starts typing, the moves outside the input above the field.
+
+While this is better than supplanting labels with placeholders, this seductive, novel and space-saving technique is problematic for a number of reasons:
 
 ## 1. There is no space for a hint
 

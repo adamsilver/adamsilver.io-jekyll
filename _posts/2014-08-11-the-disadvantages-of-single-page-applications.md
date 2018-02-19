@@ -101,7 +101,7 @@ Furthermore, the user's browser provides a predictable and familiar loading indi
 
 ## 12. They're probably slower
 
-Given that they require a whole load of extra code to load and fix all these issues, it's probably going to be slower. And [don't assume AJAX is always faster](/articles/designing-for-performance/).
+Given that they require a whole load of extra code to load and fix all these issues, it's probably going to be slower. And [don't assume AJAX is always faster](/articles/designing-for-actual-performance/).
 
 ## Summary
 
