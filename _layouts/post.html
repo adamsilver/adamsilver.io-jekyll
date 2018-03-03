@@ -4,12 +4,12 @@
 	    {% include head.html %}
 	</head>
 	<body>
-	    {% include navigation.html %}
-	    <main class="mainContent">
+	  {% include header.html %}
+	  <main class="mainContent">
 			<h1 class="article-heading">{{ page.title }}</h1>
 			<!-- {% include articleMeta.html date=page.date cont=page.content %} -->
-	        {{ content }}
-	    </main>
+	      {{ content }}
+	  </main>
 		{% include signUpHero.html layout=page.layout %}
 	</body>
 </html>

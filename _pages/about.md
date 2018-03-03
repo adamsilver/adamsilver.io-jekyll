@@ -6,14 +6,14 @@ permalink: /about/
 ---
 
 <div class="face">
-  	<img src="/assets/img/adam2.jpg" alt="Adam Photo" width="85" height="85">
+  	<img src="/assets/img/adam3.jpg" alt="Adam Photo" width="85" height="85">
 </div>
 
 # Adam Silver who?
 
 I design (and code) simple and inclusive digital services&mdash;websites really. But, my superhero power is fighting complexity at every turn.
 
-Since the turn of the century I've done this for Tesco, BBC, Argos, Boots, Just Eat, News Corp, Selfridges, The Financial Times, T-Mobile and many others too.
+Since the turn of the century I've done this for Tesco, BBC, Argos, Boots, Just Eat, News Corp, Selfridges, The Financial Times, T-Mobile, the Department for Work and Pensions and others too.
 
 I believe that design is a team sport. The best experiences are produced by multi-disciplinary and diverse teams. I love working with others to help them avoid my past mistakes, learn from theirs and ultimately, to design for users' needs (real problems).
 

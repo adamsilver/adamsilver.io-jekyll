@@ -7,10 +7,10 @@ permalink: /now/
 
 # What I'm doing now
 
-- Writing a book about form design
+- Writing a book about form design patterns
 - Writing monthly articles for [my newsletter](/signup/)
-- Consulting for Department for Work and Pensions
-- Trying to reduce my expenses
-- Getting better at Tennis
+- Consulting as a designer and front-end developer
+- Reducing my expenses
+- Improving at tennis
 
 This is part of the [Now Now Now](http://nownownow.com/) project.

@@ -468,27 +468,54 @@ hr {
 * Header
 **********************************************************/
 
-.nav {
+header {
 	padding-top: 20px;
 	padding-bottom: 10px;
+	max-width: 41.25em;
+	margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: hidden;
+}
+
+header > a {
+	display: block;
+	width: 100px;
+	margin: 0 auto 10px;
+}
+
+@media(min-width: 28em) {
+	header > a {
+		float: left;
+	}	
+}
+
+header a img {
+	border: none;
+}
+
+.nav {
+	text-align: center;
+}
+
+@media(min-width: 28em) {
+	.nav {
+		float: right;
+	}	
 }
 
 .nav ul {
-	max-width: 41.25em;
-    list-style: none;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+  list-style: none;
 }
 
 .nav ul li {
 	display: inline-block;
-    margin-left: 7px;
-    margin-right: 7px;
-    font-size: 0.93em;
-    margin-bottom: 10px;
-    font-family: 'Open sans';
+  margin-left: 7px;
+  margin-right: 7px;
+  font-size: 0.93em;
+  margin-bottom: 10px;
+  font-family: 'Open sans';
 }
 
 .nav ul li:first-child {
