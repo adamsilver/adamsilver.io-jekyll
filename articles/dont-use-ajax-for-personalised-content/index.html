@@ -69,7 +69,7 @@
 	<meta itemprop="description" content="Sometimes developers are on a pursuit to reduce page-load time by utilising AJAX to get around personalised content. This is problematic.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.31406f36.css" media="all">
+<link rel="stylesheet" href="/assets/css/main.min.a945128f.css" media="all">
 
 <!--[if IE 8]>
 <link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
@@ -101,7 +101,9 @@
 
 	</head>
 	<body>
-	    <nav class="nav">
+	  <header role="banner">
+	<a href="/"><img src="/assets/img/logo2.png" alt="Home" width="100"></a>
+	<nav class="nav">
 	<ul>
 		<li><a class="" href="/">Home</a></li>
 		<li><a class="nav-active" href="/articles/">Articles</a></li>
@@ -109,7 +111,8 @@
 		<li><a class="" href="/signup/">Newsletter</a></li>
 	</ul>
 </nav>
-	    <main class="mainContent">
+</header>
+	  <main class="mainContent">
 			<h1 class="article-heading">Don't use AJAX for personalised content</h1>
 			<!-- <div class="meta">
 	<time class="meta-date" date-time="2014-12-29">29 December 2014</time> <span class="meta-divider">&#183;</span>
@@ -121,7 +124,7 @@
 	  
 	</span>
 </div> -->
-	        <p><a href="https://developer.akamai.com/stuff/Caching/Content_Caching.html">Content caching</a> is a useful technique to increase the loading speed of a page. If the page has personalised content this technique doesn’t work. This is is because one user may receive another user’s personalised content which is insecure and undesirable.</p>
+	      <p><a href="https://developer.akamai.com/stuff/Caching/Content_Caching.html">Content caching</a> is a useful technique to increase the loading speed of a page. If the page has personalised content this technique doesn’t work. This is is because one user may receive another user’s personalised content which is insecure and undesirable.</p>
 
 <p>The problem comes when someone suggests using AJAX to request the personalised content as a separate request. Before discussing the problem let’s define exactly what personalised content is.</p>
 
@@ -213,7 +216,7 @@
 
 -->
 
-	    </main>
+	  </main>
 		<div class="signUpHero">
 	<p class="signUpHero-description">I write articles like this and share them with my private mailing list. No spam and definitely no popups. Just one article a month, straight to your inbox. Sign up below:</p>
 </div>

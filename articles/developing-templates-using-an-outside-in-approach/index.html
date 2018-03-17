@@ -69,7 +69,7 @@
 	<meta itemprop="description" content="When backend developers have their way, HTML templates are a breeding ground for complexity. We should strive to develop templates using an outside-in perspective.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.31406f36.css" media="all">
+<link rel="stylesheet" href="/assets/css/main.min.a945128f.css" media="all">
 
 <!--[if IE 8]>
 <link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
@@ -101,7 +101,9 @@
 
 	</head>
 	<body>
-	    <nav class="nav">
+	  <header role="banner">
+	<a href="/"><img src="/assets/img/logo2.png" alt="Home" width="100"></a>
+	<nav class="nav">
 	<ul>
 		<li><a class="" href="/">Home</a></li>
 		<li><a class="nav-active" href="/articles/">Articles</a></li>
@@ -109,7 +111,8 @@
 		<li><a class="" href="/signup/">Newsletter</a></li>
 	</ul>
 </nav>
-	    <main class="mainContent">
+</header>
+	  <main class="mainContent">
 			<h1 class="article-heading">Developing templates using an outside-in approach</h1>
 			<!-- <div class="meta">
 	<time class="meta-date" date-time="2016-08-08">8 August 2016</time> <span class="meta-divider">&#183;</span>
@@ -121,7 +124,7 @@
 	  
 	</span>
 </div> -->
-	        <p>When we design websites, we start with a user problem and translate that into a set of screens and flows.</p>
+	      <p>When we design websites, we start with a user problem and translate that into a set of screens and flows.</p>
 
 <p>Next, we translate these screens into front-end code. We look at the best way to split up the design into pages,
 <a href="http://maintainablecss.com/chapters/modules/">modules</a> and components.</p>
@@ -146,45 +149,44 @@ demonstrated with a simple example.</p>
 
 <div class="image">
 	<figure>
-		<img src="https://adamsilver.io/assets/img/templates/anon.png" alt="Anonymous user" width="100%" />
+		<img src="https://adamsilver.io/assets/img/templates/anon.png" alt="Anonymous user" width="100%" style="max-width: 164px" />
 		<figcaption>Anonymous user</figcaption>
 	</figure>
 </div>
 
 <div class="image">
 	<figure>
-		<img src="https://adamsilver.io/assets/img/templates/recognised-with-name.png" alt="Authenticated with a name" width="100%" />
+		<img src="https://adamsilver.io/assets/img/templates/recognised-with-name.png" alt="Authenticated with a name" width="100%" style="max-width: 164px" />
 		<figcaption>Authenticated with a name</figcaption>
 	</figure>
 </div>
 
 <div class="image">
 	<figure>
-		<img src="https://adamsilver.io/assets/img/templates/recognised-no-name.png" alt="Authenticated without a name" width="100%" />
+		<img src="https://adamsilver.io/assets/img/templates/recognised-no-name.png" alt="Authenticated without a name" width="100%" style="max-width: 164px" />
 		<figcaption>Authenticated without a name</figcaption>
 	</figure>
 </div>
 
-<p>Consider the following template (built in
-<a href="http://paularmstrong.github.io/swig/">Swig</a>):</p>
+<p>Consider the following (<a href="http://paularmstrong.github.io/swig/">Swig</a>) template:</p>
 
 <pre><code>{% if isLoggedIn %}
-    {% if firstName &amp;&amp; lastName %}
-        &lt;div class="welcomeMessage"&gt;
-            &lt;p&gt;Hello {{firstName}} {{lastName}}&lt;/p&gt;
-            &lt;a href="{{signOutLink.href}}"&gt;{{signOutLink.text}}&lt;/a&gt;
-        &lt;/div&gt;
-    {% else %}
-        &lt;div class="welcomeMessage"&gt;
-            &lt;p&gt;Welcome back&lt;/p&gt;
-            &lt;a href="{{signOutLink.href}}"&gt;{{signOutLink.text}}&lt;/a&gt;
-        &lt;/div&gt;
-    {% endif %}
+	{% if firstName &amp;&amp; lastName %}
+		&lt;div class="welcomeMessage"&gt;
+			&lt;p&gt;Hello {{firstName}} {{lastName}}&lt;/p&gt;
+			&lt;a href="{{signOutLink.href}}"&gt;{{signOutLink.text}}&lt;/a&gt;
+		&lt;/div&gt;
+	{% else %}
+		&lt;div class="welcomeMessage"&gt;
+			&lt;p&gt;Welcome back&lt;/p&gt;
+			&lt;a href="{{signOutLink.href}}"&gt;{{signOutLink.text}}&lt;/a&gt;
+		&lt;/div&gt;
+	{% endif %}
 {% else %}
-    &lt;div class="welcomeMessage"&gt;
-        &lt;p&gt;Welcome&lt;/p&gt;
-        &lt;a href="{{signInLink.href}}"&gt;{{signInLink.text}}&lt;/a&gt;
-    &lt;/div&gt;
+	&lt;div class="welcomeMessage"&gt;
+		&lt;p&gt;Welcome&lt;/p&gt;
+		&lt;a href="{{signInLink.href}}"&gt;{{signInLink.text}}&lt;/a&gt;
+	&lt;/div&gt;
 {% endif %}
 </code></pre>
 
@@ -199,10 +201,10 @@ order to do its job. It’s been designed from little pieces, from the inside-ou
 
 <p>Instead, consider the following template:</p>
 
-<pre><code>&lt;div class=”welcomeMessage”&gt;
-    &lt;p&gt;{{message}}&lt;/p&gt;
-    &lt;a href=”{{link.href}}”&gt;{{link.text}}&lt;/a&gt;
-&lt;/div&gt;
+<pre><code>	&lt;div class=”welcomeMessage”&gt;
+			&lt;p&gt;{{message}}&lt;/p&gt;
+			&lt;a href=”{{link.href}}”&gt;{{link.text}}&lt;/a&gt;
+	&lt;/div&gt;
 </code></pre>
 
 <p>The view-model has been designed from the outside-in; it contains just what the template needs in order to render itself. And because there is always a message and a link, there is no need for conditionality. This template is dumb-by-design, and leaves complex logic to reside somewhere more appropriate in the stack.</p>
@@ -232,17 +234,17 @@ this data comes from — it’s just information exposed via the view-model.</p>
 <p>The view-model would be:</p>
 
 <pre><code>{
-  message: "Hello Adam Silver",
-  link: { href: "/sign-out", text: "Sign out" }
+	message: "Hello Adam Silver",
+		link: { href: "/sign-out", text: "Sign out" }
 }
 </code></pre>
 
 <p>And the template would be:</p>
 
-<pre><code>&lt;div class=”welcomeMessage”&gt;
-  &lt;p&gt;{{message}}&lt;/p&gt;
-  &lt;a href=”{{link.href}}”&gt;{{link.text}}&lt;/a&gt;
-&lt;/div&gt;
+<pre><code>	&lt;div class=”welcomeMessage”&gt;
+		&lt;p&gt;{{message}}&lt;/p&gt;
+		&lt;a href=”{{link.href}}”&gt;{{link.text}}&lt;/a&gt;
+	&lt;/div&gt;
 </code></pre>
 
 <p>The message consists of text that may ultimately be retrieved from resource
@@ -269,27 +271,27 @@ message when the the user is authenticated and has supplied their name:</p>
 <p>When the message should be shown, the view-model would be:</p>
 
 <pre><code>{
-  showMessage: true,
-  message: "Hello Adam Silver",
-  link: { href: '/sign-out', text: 'Sign out' }
+	showMessage: true,
+	message: "Hello Adam Silver",
+	link: { href: '/sign-out', text: 'Sign out' }
 }
 </code></pre>
 
 <p>When the message is hidden the view-model would be:</p>
 
-<pre><code>{
-  showMessage: false
-}
+<pre><code>	{
+		showMessage: false
+	}
 </code></pre>
 
 <p>And the template would be:</p>
 
-<pre><code>{% if showMessage %}
-  &lt;div class="welcomeMessage"&gt;
-    &lt;p&gt;Welcome&lt;/p&gt;
-    &lt;a href="{{signInLink.href}}"&gt;{{signInLink.text}}&lt;/a&gt;
-  &lt;/div&gt;
-{% endif %}
+<pre><code>	{% if showMessage %}
+		&lt;div class="welcomeMessage"&gt;
+			&lt;p&gt;Welcome&lt;/p&gt;
+			&lt;a href="{{signInLink.href}}"&gt;{{signInLink.text}}&lt;/a&gt;
+		&lt;/div&gt;
+	{% endif %}
 </code></pre>
 
 <p>Here the explicit boolean property determines whether it’s shown. Don’t be
@@ -301,23 +303,23 @@ tempted to expose lower-level logic that the template uses to infer visibility.<
 
 <p>The view-model would be:</p>
 
-<pre><code>{
-  restaurants: [{
-      name: "Pizza House",
-      address: "..."
-  }, ...]
-}
+<pre><code>	{
+		restaurants: [{
+				name: "Pizza House",
+				address: "..."
+		}, ...]
+	}
 </code></pre>
 
 <p>And the template would be:</p>
 
 <pre><code>&lt;div class="restaurants"&gt;
-  {% for restaurant in restaurants %}
-    &lt;div class=”restaurant”&gt;
-      &lt;h2&gt;{{restaurant.name}}&lt;/h2&gt;
-      &lt;p&gt;{{restaurant.address}}&lt;/h2&gt;
-    &lt;/div&gt;
-  {% endfor %}
+	{% for restaurant in restaurants %}
+		&lt;div class=”restaurant”&gt;
+				&lt;h2&gt;{{restaurant.name}}&lt;/h2&gt;
+			&lt;p&gt;{{restaurant.address}}&lt;/h2&gt;
+		&lt;/div&gt;
+	{% endfor %}
 &lt;/div&gt;
 </code></pre>
 
@@ -325,14 +327,14 @@ tempted to expose lower-level logic that the template uses to infer visibility.<
 collection. You may be tempted to interrogate the size of the collection in the template as follows:</p>
 
 <pre><code>{% if restaurants.length &gt; 0 %}
-   &lt;div class="restaurants"&gt;
-       {% for restaurant in restaurants %}
-           &lt;div class=”restaurant”&gt;
-               &lt;h2&gt;{{restaurant.name}}&lt;/h2&gt;
-               &lt;p&gt;{{restaurant.address}}&lt;/h2&gt;
-           &lt;/div&gt;
-       {% endfor %}
-   &lt;/div&gt;
+	 &lt;div class="restaurants"&gt;
+			 {% for restaurant in restaurants %}
+					 &lt;div class=”restaurant”&gt;
+							 &lt;h2&gt;{{restaurant.name}}&lt;/h2&gt;
+							 &lt;p&gt;{{restaurant.address}}&lt;/h2&gt;
+					 &lt;/div&gt;
+			 {% endfor %}
+	 &lt;/div&gt;
 {% endif %}
 </code></pre>
 
@@ -340,14 +342,14 @@ collection. You may be tempted to interrogate the size of the collection in the 
 Instead, continue to use the approach used in the previous example by explicitly checking a boolean property <em>before</em> iterating over the loop:</p>
 
 <pre><code>{% if showRestaurants %}
-   &lt;div class="restaurants"&gt;
-       {% for restaurant in restaurants %}
-         &lt;div class=”restaurant”&gt;
-               &lt;h2&gt;{{restaurant.name}}&lt;/h2&gt;
-               &lt;p&gt;{{restaurant.address}}&lt;/h2&gt;
-           &lt;/div&gt;
-       {% endfor %}
-   &lt;/div&gt;
+	 &lt;div class="restaurants"&gt;
+			 {% for restaurant in restaurants %}
+				 &lt;div class=”restaurant”&gt;
+							 &lt;h2&gt;{{restaurant.name}}&lt;/h2&gt;
+							 &lt;p&gt;{{restaurant.address}}&lt;/h2&gt;
+					 &lt;/div&gt;
+			 {% endfor %}
+	 &lt;/div&gt;
 {% endif%}
 </code></pre>
 
@@ -364,7 +366,7 @@ separation of concerns between back-end and front-end. You don’t need to use a
 
 <p>Designing a view-model <em>for</em> the View allows more logic to be unit-tested and drastically improves the maintainability of your templates.</p>
 
-	    </main>
+	  </main>
 		<div class="signUpHero">
 	<p class="signUpHero-description">I write articles like this and share them with my private mailing list. No spam and definitely no popups. Just one article a month, straight to your inbox. Sign up below:</p>
 </div>

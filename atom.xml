@@ -3,7 +3,7 @@
 	<title>Adam Silver: interaction designer and interface developer from London, UK</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2018-02-26T20:04:30+00:00</updated>
+	<updated>2018-03-17T10:25:24+00:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -1114,45 +1114,44 @@ demonstrated with a simple example.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/templates/anon.png&quot; alt=&quot;Anonymous user&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/templates/anon.png&quot; alt=&quot;Anonymous user&quot; width=&quot;100%&quot; style=&quot;max-width: 164px&quot; /&gt;
 		&lt;figcaption&gt;Anonymous user&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated with a name&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated with a name&quot; width=&quot;100%&quot; style=&quot;max-width: 164px&quot; /&gt;
 		&lt;figcaption&gt;Authenticated with a name&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/templates/recognised-no-name.png&quot; alt=&quot;Authenticated without a name&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/templates/recognised-no-name.png&quot; alt=&quot;Authenticated without a name&quot; width=&quot;100%&quot; style=&quot;max-width: 164px&quot; /&gt;
 		&lt;figcaption&gt;Authenticated without a name&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Consider the following template (built in
-&lt;a href=&quot;http://paularmstrong.github.io/swig/&quot;&gt;Swig&lt;/a&gt;):&lt;/p&gt;
+&lt;p&gt;Consider the following (&lt;a href=&quot;http://paularmstrong.github.io/swig/&quot;&gt;Swig&lt;/a&gt;) template:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{% if isLoggedIn %}
-    {% if firstName &amp;amp;&amp;amp; lastName %}
-        &amp;lt;div class=&quot;welcomeMessage&quot;&amp;gt;
-            &amp;lt;p&amp;gt;Hello {{firstName}} {{lastName}}&amp;lt;/p&amp;gt;
-            &amp;lt;a href=&quot;{{signOutLink.href}}&quot;&amp;gt;{{signOutLink.text}}&amp;lt;/a&amp;gt;
-        &amp;lt;/div&amp;gt;
-    {% else %}
-        &amp;lt;div class=&quot;welcomeMessage&quot;&amp;gt;
-            &amp;lt;p&amp;gt;Welcome back&amp;lt;/p&amp;gt;
-            &amp;lt;a href=&quot;{{signOutLink.href}}&quot;&amp;gt;{{signOutLink.text}}&amp;lt;/a&amp;gt;
-        &amp;lt;/div&amp;gt;
-    {% endif %}
+	{% if firstName &amp;amp;&amp;amp; lastName %}
+		&amp;lt;div class=&quot;welcomeMessage&quot;&amp;gt;
+			&amp;lt;p&amp;gt;Hello {{firstName}} {{lastName}}&amp;lt;/p&amp;gt;
+			&amp;lt;a href=&quot;{{signOutLink.href}}&quot;&amp;gt;{{signOutLink.text}}&amp;lt;/a&amp;gt;
+		&amp;lt;/div&amp;gt;
+	{% else %}
+		&amp;lt;div class=&quot;welcomeMessage&quot;&amp;gt;
+			&amp;lt;p&amp;gt;Welcome back&amp;lt;/p&amp;gt;
+			&amp;lt;a href=&quot;{{signOutLink.href}}&quot;&amp;gt;{{signOutLink.text}}&amp;lt;/a&amp;gt;
+		&amp;lt;/div&amp;gt;
+	{% endif %}
 {% else %}
-    &amp;lt;div class=&quot;welcomeMessage&quot;&amp;gt;
-        &amp;lt;p&amp;gt;Welcome&amp;lt;/p&amp;gt;
-        &amp;lt;a href=&quot;{{signInLink.href}}&quot;&amp;gt;{{signInLink.text}}&amp;lt;/a&amp;gt;
-    &amp;lt;/div&amp;gt;
+	&amp;lt;div class=&quot;welcomeMessage&quot;&amp;gt;
+		&amp;lt;p&amp;gt;Welcome&amp;lt;/p&amp;gt;
+		&amp;lt;a href=&quot;{{signInLink.href}}&quot;&amp;gt;{{signInLink.text}}&amp;lt;/a&amp;gt;
+	&amp;lt;/div&amp;gt;
 {% endif %}
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -1167,10 +1166,10 @@ order to do its job. It’s been designed from little pieces, from the inside-ou
 
 &lt;p&gt;Instead, consider the following template:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;div class=”welcomeMessage”&amp;gt;
-    &amp;lt;p&amp;gt;{{message}}&amp;lt;/p&amp;gt;
-    &amp;lt;a href=”{{link.href}}”&amp;gt;{{link.text}}&amp;lt;/a&amp;gt;
-&amp;lt;/div&amp;gt;
+&lt;pre&gt;&lt;code&gt;	&amp;lt;div class=”welcomeMessage”&amp;gt;
+			&amp;lt;p&amp;gt;{{message}}&amp;lt;/p&amp;gt;
+			&amp;lt;a href=”{{link.href}}”&amp;gt;{{link.text}}&amp;lt;/a&amp;gt;
+	&amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The view-model has been designed from the outside-in; it contains just what the template needs in order to render itself. And because there is always a message and a link, there is no need for conditionality. This template is dumb-by-design, and leaves complex logic to reside somewhere more appropriate in the stack.&lt;/p&gt;
@@ -1200,17 +1199,17 @@ this data comes from — it’s just information exposed via the view-model.&lt;
 &lt;p&gt;The view-model would be:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
-  message: &quot;Hello Adam Silver&quot;,
-  link: { href: &quot;/sign-out&quot;, text: &quot;Sign out&quot; }
+	message: &quot;Hello Adam Silver&quot;,
+		link: { href: &quot;/sign-out&quot;, text: &quot;Sign out&quot; }
 }
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;And the template would be:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;div class=”welcomeMessage”&amp;gt;
-  &amp;lt;p&amp;gt;{{message}}&amp;lt;/p&amp;gt;
-  &amp;lt;a href=”{{link.href}}”&amp;gt;{{link.text}}&amp;lt;/a&amp;gt;
-&amp;lt;/div&amp;gt;
+&lt;pre&gt;&lt;code&gt;	&amp;lt;div class=”welcomeMessage”&amp;gt;
+		&amp;lt;p&amp;gt;{{message}}&amp;lt;/p&amp;gt;
+		&amp;lt;a href=”{{link.href}}”&amp;gt;{{link.text}}&amp;lt;/a&amp;gt;
+	&amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The message consists of text that may ultimately be retrieved from resource
@@ -1237,27 +1236,27 @@ message when the the user is authenticated and has supplied their name:&lt;/p&gt
 &lt;p&gt;When the message should be shown, the view-model would be:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{
-  showMessage: true,
-  message: &quot;Hello Adam Silver&quot;,
-  link: { href: &#39;/sign-out&#39;, text: &#39;Sign out&#39; }
+	showMessage: true,
+	message: &quot;Hello Adam Silver&quot;,
+	link: { href: &#39;/sign-out&#39;, text: &#39;Sign out&#39; }
 }
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;When the message is hidden the view-model would be:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;{
-  showMessage: false
-}
+&lt;pre&gt;&lt;code&gt;	{
+		showMessage: false
+	}
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;And the template would be:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;{% if showMessage %}
-  &amp;lt;div class=&quot;welcomeMessage&quot;&amp;gt;
-    &amp;lt;p&amp;gt;Welcome&amp;lt;/p&amp;gt;
-    &amp;lt;a href=&quot;{{signInLink.href}}&quot;&amp;gt;{{signInLink.text}}&amp;lt;/a&amp;gt;
-  &amp;lt;/div&amp;gt;
-{% endif %}
+&lt;pre&gt;&lt;code&gt;	{% if showMessage %}
+		&amp;lt;div class=&quot;welcomeMessage&quot;&amp;gt;
+			&amp;lt;p&amp;gt;Welcome&amp;lt;/p&amp;gt;
+			&amp;lt;a href=&quot;{{signInLink.href}}&quot;&amp;gt;{{signInLink.text}}&amp;lt;/a&amp;gt;
+		&amp;lt;/div&amp;gt;
+	{% endif %}
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Here the explicit boolean property determines whether it’s shown. Don’t be
@@ -1269,23 +1268,23 @@ tempted to expose lower-level logic that the template uses to infer visibility.&
 
 &lt;p&gt;The view-model would be:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;{
-  restaurants: [{
-      name: &quot;Pizza House&quot;,
-      address: &quot;...&quot;
-  }, ...]
-}
+&lt;pre&gt;&lt;code&gt;	{
+		restaurants: [{
+				name: &quot;Pizza House&quot;,
+				address: &quot;...&quot;
+		}, ...]
+	}
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;And the template would be:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;div class=&quot;restaurants&quot;&amp;gt;
-  {% for restaurant in restaurants %}
-    &amp;lt;div class=”restaurant”&amp;gt;
-      &amp;lt;h2&amp;gt;{{restaurant.name}}&amp;lt;/h2&amp;gt;
-      &amp;lt;p&amp;gt;{{restaurant.address}}&amp;lt;/h2&amp;gt;
-    &amp;lt;/div&amp;gt;
-  {% endfor %}
+	{% for restaurant in restaurants %}
+		&amp;lt;div class=”restaurant”&amp;gt;
+				&amp;lt;h2&amp;gt;{{restaurant.name}}&amp;lt;/h2&amp;gt;
+			&amp;lt;p&amp;gt;{{restaurant.address}}&amp;lt;/h2&amp;gt;
+		&amp;lt;/div&amp;gt;
+	{% endfor %}
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -1293,14 +1292,14 @@ tempted to expose lower-level logic that the template uses to infer visibility.&
 collection. You may be tempted to interrogate the size of the collection in the template as follows:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{% if restaurants.length &amp;gt; 0 %}
-   &amp;lt;div class=&quot;restaurants&quot;&amp;gt;
-       {% for restaurant in restaurants %}
-           &amp;lt;div class=”restaurant”&amp;gt;
-               &amp;lt;h2&amp;gt;{{restaurant.name}}&amp;lt;/h2&amp;gt;
-               &amp;lt;p&amp;gt;{{restaurant.address}}&amp;lt;/h2&amp;gt;
-           &amp;lt;/div&amp;gt;
-       {% endfor %}
-   &amp;lt;/div&amp;gt;
+	 &amp;lt;div class=&quot;restaurants&quot;&amp;gt;
+			 {% for restaurant in restaurants %}
+					 &amp;lt;div class=”restaurant”&amp;gt;
+							 &amp;lt;h2&amp;gt;{{restaurant.name}}&amp;lt;/h2&amp;gt;
+							 &amp;lt;p&amp;gt;{{restaurant.address}}&amp;lt;/h2&amp;gt;
+					 &amp;lt;/div&amp;gt;
+			 {% endfor %}
+	 &amp;lt;/div&amp;gt;
 {% endif %}
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -1308,14 +1307,14 @@ collection. You may be tempted to interrogate the size of the collection in the 
 Instead, continue to use the approach used in the previous example by explicitly checking a boolean property &lt;em&gt;before&lt;/em&gt; iterating over the loop:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;{% if showRestaurants %}
-   &amp;lt;div class=&quot;restaurants&quot;&amp;gt;
-       {% for restaurant in restaurants %}
-         &amp;lt;div class=”restaurant”&amp;gt;
-               &amp;lt;h2&amp;gt;{{restaurant.name}}&amp;lt;/h2&amp;gt;
-               &amp;lt;p&amp;gt;{{restaurant.address}}&amp;lt;/h2&amp;gt;
-           &amp;lt;/div&amp;gt;
-       {% endfor %}
-   &amp;lt;/div&amp;gt;
+	 &amp;lt;div class=&quot;restaurants&quot;&amp;gt;
+			 {% for restaurant in restaurants %}
+				 &amp;lt;div class=”restaurant”&amp;gt;
+							 &amp;lt;h2&amp;gt;{{restaurant.name}}&amp;lt;/h2&amp;gt;
+							 &amp;lt;p&amp;gt;{{restaurant.address}}&amp;lt;/h2&amp;gt;
+					 &amp;lt;/div&amp;gt;
+			 {% endfor %}
+	 &amp;lt;/div&amp;gt;
 {% endif%}
 &lt;/code&gt;&lt;/pre&gt;
 
