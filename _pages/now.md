@@ -9,7 +9,7 @@ permalink: /now/
 
 - Writing a book about form design patterns
 - Writing monthly articles for [my newsletter](/signup/)
-- Consulting as a designer and front-end developer
+- Consulting as an interaction designer and front-end developer
 - Reducing my expenses
 - Improving at tennis
 

@@ -3,13 +3,13 @@ layout: default
 id: home
 ---
 
-<!-- <div class="face">
+<div class="face">
   	<img src="/assets/img/adam3.jpg" alt="" width="85" height="85">
-</div> -->
+</div>
 
-# Hey, I'm Adam Silver and I design (and code) simple and inclusive digital services.
+# Hey, I'm Adam Silver and I design (and code) simple and inclusive digital services, products and websites.
 
-I've written for [Smashing Magazine](https://www.smashingmagazine.com/author/adamsilver/), [A List Apart](https://alistapart.com/author/adamsilver) and [Net Magazine](http://www.creativebloq.com/net-magazine). But I share my newest articles with my mailing list first. No spam and definitely no popups. Just one article a month, straight to your inbox. Sign up below:
+I've written for [Smashing Magazine](https://www.smashingmagazine.com/author/adamsilver/), [A List Apart](https://alistapart.com/author/adamsilver) and [Net Magazine](http://www.creativebloq.com/net-magazine). But I share my newest articles with my mailing list first. No spam and definitely no popups. Just one article a month (ish), straight to your inbox. Sign up below:
 
 {% include signUpForm.html %}
 

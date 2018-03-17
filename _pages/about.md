@@ -11,7 +11,7 @@ permalink: /about/
 
 # Adam Silver who?
 
-I design (and code) simple and inclusive digital services&mdash;websites really. But, my superhero power is fighting complexity at every turn.
+I design (and code) simple and inclusive digital services, products and websites. My superhero power is fighting complexity at every turn.
 
 Since the turn of the century I've done this for Tesco, BBC, Argos, Boots, Just Eat, News Corp, Selfridges, The Financial Times, T-Mobile, the Department for Work and Pensions and others too.
 
