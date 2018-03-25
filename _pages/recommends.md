@@ -16,13 +16,14 @@ permalink: /recommends/
 * [Start With Why](https://www.startwithwhy.com/)
 * [Rework](https://37signals.com/rework)
 
-## User Experience articles
+## Design
 
+* [Context over consistency](https://signalvnoise.com/archives2/getting_real_context_over_consistency.php)
 * [The Hamburger doesn't work](http://deep.design/the-hamburger-menu/)
 * [Fixed positioning is a nightmare](http://bradfrost.com/blog/mobile/fixed-position/)
 * [Death to bullshit](http://deathtobullshit.com)
 
-## Front-end articles
+## Front-end
 
 * [Introducing awfulness.js](https://tommorris.org/posts/2547") by Tom Morris
 * [Cross browser widgets](http://peter.michaux.ca/articles/cross-browser-widgets) by Peter Michaux
@@ -33,7 +34,7 @@ permalink: /recommends/
 * [What's wrong with extending the DOM?](http://perfectionkills.com/whats-wrong-with-extending-the-dom/) by Kangax
 * [Everyone has Javascript right?](http://kryogenix.org/code/browser/everyonehasjs.html)
 
-## Progressive Enhancement Primers
+## Progressive enhancement primers
 
 * [Attaching and detaching event listeners](https://groups.google.com/group/comp.lang.javascript/browse_thread/thread/b94b12547ed572f8?hl=en&noredirect=true)
 * [The load problem and related matters](https://groups.google.com/group/comp.lang.javascript/browse_thread/thread/6d5575fd79d1169d?hl=en&noredirect=true)
