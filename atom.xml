@@ -3,7 +3,7 @@
 	<title>Adam Silver: interaction designer and interface developer from London, UK</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2018-03-30T10:09:29+01:00</updated>
+	<updated>2018-03-30T18:49:03+01:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -3991,9 +3991,9 @@ zoo.information = {
 			<link href="https://adamsilver.io/articles/forms-with-multiple-submit-buttons-are-problematic/"/>
 			<updated>2014-03-20T09:00:01+00:00</updated>
 			<id>https://adamsilver.io/articles/forms-with-multiple-submit-buttons-are-problematic</id>
-			<content type="html">&lt;p&gt;Forms with multiple submit buttons are problematic for keyboard users because of how submission works. A user can submit a form by pressing &lt;em&gt;enter&lt;/em&gt;, when the focus is within a field (as opposed to a button).&lt;/p&gt;
+			<content type="html">&lt;p&gt;Forms with multiple submit buttons are problematic for keyboard users because of how submission works. A user can submit a form by pressing &lt;kbd&gt;Enter&lt;/kbd&gt;, when a field is focused.&lt;/p&gt;
 
-&lt;p&gt;If there are multiple buttons, the form will behave as if the user pressed the &lt;em&gt;first&lt;/em&gt; button. This is not always desirable. For example, you might have an address form with a postcode look-up.&lt;/p&gt;
+&lt;p&gt;If there are multiple buttons, the form will behave as if the user pressed the &lt;em&gt;first&lt;/em&gt; button in the Document flow. This isn’t always desirable. For example, you might have an address form with a postcode look-up.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
@@ -4002,27 +4002,39 @@ zoo.information = {
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Pressing enter will always perform a postcode look-up because it’s first in the document flow. There are two solutions at our disposal.&lt;/p&gt;
+&lt;p&gt;Pressing &lt;kbd&gt;Enter&lt;/kbd&gt; will always perform a postcode look-up because the Find Address button is the first button. &lt;/p&gt;
+
+&lt;p&gt;There are two ways to solve this problem.&lt;/p&gt;
 
 &lt;h2 id=&quot;split-up-the-forms&quot;&gt;1. Split up the forms&lt;/h2&gt;
 
-&lt;p&gt;The best course of action is to split your form into two. This means each form will have a single button removing any ambiguity during submission.&lt;/p&gt;
+&lt;p&gt;The best solution is avoidance. This means splitting the form up into two separate ones. As a result each form will have just one button removing any ambiguity in submission and action.&lt;/p&gt;
 
-&lt;p&gt;All users benefit from this approach, not just keyboard users. Breaking down one big form into two small ones reduces the cognitive load on users. And having one call-to-action helps users make the next step.&lt;/p&gt;
-
-&lt;p&gt;If for some reason, you can’t split up your forms then there is another, less-than-ideal option.&lt;/p&gt;
+&lt;p&gt;All users benefit from this approach because breaking down big forms into little ones reduces the cognitive load. And, having just one primary call to action makes it obvious how to proceed.&lt;/p&gt;
 
 &lt;h2 id=&quot;choose-a-primary-button&quot;&gt;2. Choose a primary button&lt;/h2&gt;
 
-&lt;p&gt;If you &lt;em&gt;really&lt;/em&gt; can’t split the forms into two, then you’ll need to choose a primary action. This isn’t always easy because some forms have two buttons with similar weighting.&lt;/p&gt;
+&lt;p&gt;If you can’t split up the form, then the other approach involves having to choose a primary action which isn’t always obvious.&lt;/p&gt;
 
-&lt;p&gt;If the primary button doesn’t naturally come first then, if possible, you should modify the design so it does. If it doesn’t come first, then you’ll need to duplicate it and place it at the top of the form.&lt;/p&gt;
+&lt;p&gt;In any case, if the primary action’s button doesn’t come first in the Document flow, you can duplicate it and place it at the top of the form.&lt;/p&gt;
 
-&lt;p&gt;You’ll need to ensure it is visually hidden with CSS but this is problematic. As the user tabs to the hidden button, the UI will seem unresponsive. This is because the button is in focus, but is visually hidden. This can  disorientate users.&lt;/p&gt;
+&lt;p&gt;To remove it visually you’ll need to use CSS like this:&lt;/p&gt;
 
-&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;.visually-hidden {
+  border: 0!important;
+  clip: rect(0 0 0 0)!important;
+  height: 1px!important;
+  margin: -1px!important;
+  overflow: hidden!important;
+  padding: 0!important;
+  position: absolute!important;
+  width: 1px!important;
+}
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Forms with multiple submit buttons are problematic. But it’s easy to design this problem out of the system. To do this, split the large form into separate smaller forms. In doing so each form has a single call-to-action which will help users progress easily, whether they use the keyboard or otherwise.&lt;/p&gt;
+&lt;p&gt;However, as a user tabs to the hidden button, the interface will appear to be unresponsive. This is because the button is in focus but hidden, which can disorientate users.&lt;/p&gt;
+
+&lt;p&gt;To fix this you can give the button a &lt;code&gt;tabindex=&quot;-1&quot;&lt;/code&gt; attribute which stops the button from being navigable via the keyboard.&lt;/p&gt;
 </content>
 		</entry>
 	
