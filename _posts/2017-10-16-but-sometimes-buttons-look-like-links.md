@@ -31,7 +31,7 @@ Links let us navigate to pages or locations within a page. Either way, they’re
 
 ## 3. Buttons
 
-Buttons (that have type="button") are not submit buttons. Buttons are used to create features that rely on Javascript. Behaviours such as revealing a menu or showing a date picker.
+Buttons (that have `type="button"`) are not submit buttons. Buttons are used to create features that rely on Javascript. Behaviours such as revealing a menu or showing a date picker.
 
 <div class="image">
 	<figure>
