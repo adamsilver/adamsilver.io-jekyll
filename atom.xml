@@ -3,7 +3,7 @@
 	<title>Adam Silver: interaction designer and interface developer from London, UK</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2018-03-25T07:21:03+01:00</updated>
+	<updated>2018-03-30T08:44:33+01:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -41,7 +41,7 @@
 
 &lt;h2 id=&quot;buttons&quot;&gt;3. Buttons&lt;/h2&gt;
 
-&lt;p&gt;Buttons (that have type=”button”) are not submit buttons. Buttons are used to create features that rely on Javascript. Behaviours such as revealing a menu or showing a date picker.&lt;/p&gt;
+&lt;p&gt;Buttons (that have &lt;code&gt;type=&quot;button&quot;&lt;/code&gt;) are not submit buttons. Buttons are used to create features that rely on Javascript. Behaviours such as revealing a menu or showing a date picker.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
