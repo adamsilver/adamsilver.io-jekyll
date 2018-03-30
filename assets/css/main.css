@@ -251,7 +251,7 @@ hr {
 
 .mainContent pre {
 	font-family: Monaco,'Courier New','Courier',monospace;
-	font-size: 1.44em;
+	font-size: 1.2em;
 	color: #222;
 	background-color: #fffee1;
 	margin-bottom: 30px;
@@ -268,7 +268,7 @@ hr {
 
 @media(min-width: 37.5em) {
 	.mainContent pre {
-		font-size: 1.69em;
+		font-size: 1.4em;
 		margin-bottom: 45px;
 	}
 }

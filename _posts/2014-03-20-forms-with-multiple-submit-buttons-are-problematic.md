@@ -6,9 +6,9 @@ categories: forms a11y ux
 description: Keyboard users find forms with multiple buttons problematic. Find out why in this article.
 ---
 
-Forms with multiple submit buttons are problematic for keyboard users because of how submission works. A user can submit a form by pressing *enter*, when the focus is within a field (as opposed to a button).
+Forms with multiple submit buttons are problematic for keyboard users because of how submission works. A user can submit a form by pressing <kbd>Enter</kbd>, when a field is focused.
 
-If there are multiple buttons, the form will behave as if the user pressed the *first* button. This is not always desirable. For example, you might have an address form with a postcode look-up.
+If there are multiple buttons, the form will behave as if the user pressed the *first* button in the Document flow. This isn't always desirable. For example, you might have an address form with a postcode look-up.
 
 <div class="image">
 	<figure>
@@ -17,24 +17,35 @@ If there are multiple buttons, the form will behave as if the user pressed the *
 	</figure>
 </div>
 
-Pressing enter will always perform a postcode look-up because it's first in the document flow. There are two solutions at our disposal.
+Pressing <kbd>Enter</kbd> will always perform a postcode look-up because the Find Address button is the first button. 
+
+There are two ways to solve this problem.
 
 ## 1. Split up the forms
 
-The best course of action is to split your form into two. This means each form will have a single button removing any ambiguity during submission.
+The best solution is avoidance. This means splitting the form up into two separate ones. As a result each form will have just one button removing any ambiguity in submission and action.
 
-All users benefit from this approach, not just keyboard users. Breaking down one big form into two small ones reduces the cognitive load on users. And having one call-to-action helps users make the next step.
-
-If for some reason, you can't split up your forms then there is another, less-than-ideal option.
+All users benefit from this approach because breaking down big forms into little ones reduces the cognitive load. And, having just one primary call to action makes it obvious how to proceed.
 
 ## 2. Choose a primary button
 
-If you *really* can't split the forms into two, then you'll need to choose a primary action. This isn't always easy because some forms have two buttons with similar weighting.
+If you can't split up the form, then the other approach involves having to choose a primary action which isn't always obvious.
 
-If the primary button doesn't naturally come first then, if possible, you should modify the design so it does. If it doesn't come first, then you'll need to duplicate it and place it at the top of the form.
+In any case, if the primary action's button doesn't come first in the Document flow, you can duplicate it and place it at the top of the form.
 
-You'll need to ensure it is visually hidden with CSS but this is problematic. As the user tabs to the hidden button, the UI will seem unresponsive. This is because the button is in focus, but is visually hidden. This can  disorientate users.
+To remove it visually you'll need to use CSS like this:
 
-## Summary
+	.visually-hidden {
+	  border: 0!important;
+	  clip: rect(0 0 0 0)!important;
+	  height: 1px!important;
+	  margin: -1px!important;
+	  overflow: hidden!important;
+	  padding: 0!important;
+	  position: absolute!important;
+	  width: 1px!important;
+	}
 
-Forms with multiple submit buttons are problematic. But it's easy to design this problem out of the system. To do this, split the large form into separate smaller forms. In doing so each form has a single call-to-action which will help users progress easily, whether they use the keyboard or otherwise.
+However, as a user tabs to the hidden button, the interface will appear to be unresponsive. This is because the button is in focus but hidden, which can disorientate users.
+
+To fix this you can give the button a `tabindex="-1"` attribute which stops the button from being navigable via the keyboard.
