@@ -8,42 +8,42 @@ description: Using Javascript to design progressively enhanced interfaces is pro
 
 Using Javascript to design progressively enhanced interfaces is probably the most important yet, misunderstood subject in web development.
 
-In this article we're going to discuss these misunderstandings. Then, we'll explore cutting-edge techniques that have stood the test of time but that we've long forgotten.
+In this article we'll discuss these misunderstandings. Then, we'll explore long-forgotten techniques that have stood the test of time.
 
 > &ldquo;The problems we have with websites are ones we create ourselves&rdquo;
-<br>&mdash; <cite>Motherfuckingwebsite.com</cite>
+<br>— <cite>Motherfuckingwebsite.com</cite>
 
-By default, the web is accessible to everyone. That's the web's super power. It's us designers and developers that take this natural super power and lace it with kryptonite, hurting users in the process.
+By default, the web is accessible to everyone. That's the web's super power. It's us lot that take this natural super power and lace it with kryptonite, hurting users in the process.
 
-Most of us care about users, but most of us also fail in execution. Before we get to why let's first define Progressive Enhancement.
+Most of us care about users, but we also fail in the execution of that intent. Before we get to why, let's first define progressive enhancement.
 
-> Progressive Enhancement ensures we give everyone a useful experience; Then, where necessary, creating a better, enhanced experience for those using a more capable browser.
+Progressive enhancement first gives everyone a useful experience; Then, where necessary, it lets us create a better, enhanced experience for users using a more capable browser.
 
-Progessive Enhancement applies to HTML and CSS too. But Javascript is where most of us struggle. We don't seem to know how to write Javascript in a progressively enhanced way.
+We don't seem to know how to write Javascript in a progressively enhanced way.
 
-## Progressive Enhancement myths
+## Progressive enhancement myths
 
-Whilst there are many [myths about Progressive Enhancement](http://www.sitepoint.com/javascript-dependency-backlash-myth-busting-progressive-enhancement/) I want to point out a couple of things.
+While there are many [myths about progressive enhancement](http://www.sitepoint.com/javascript-dependency-backlash-myth-busting-progressive-enhancement/) I want to point out two in particular.
 
 First, unobstrusive Javascript (placing Javascript in external files), does not, in anyway, mean it's progresively enhanced.
 
-Second, this is not specifically about people who disable Javascript. Yes, some people do disable it but it's not the main problem. [Everyone has Javascript, Right?](http://kryogenix.org/code/browser/everyonehasjs.html) shows the many points of failure.
+Second, this is not about people who disable Javascript. Yes, some people do disable it but it's not the main problem. [Everyone has Javascript, Right?](http://kryogenix.org/code/browser/everyonehasjs.html) shows the many points of failure.
 
-The last of those points&mdash;*using Javascript that the browser doesn't recognise*&mdash;is the main thing we need to discuss. Javascript&mdash;unlike HTML and CSS&mdash;doesn't degrade gracefully without intervention.
+The last of those—*using Javascript that the browser doesn't recognise*—is the main thing we need to discuss. Javascript—unlike HTML and CSS—doesn't degrade gracefully without intervention.
 
-For example, `<input type="email">` degrades gracefully into a text box. And `border-radius` degrades gracefully by not showing rounded borders. No problem here.
+For example, `<input type="email">` degrades gracefully into a text box. And `border-radius` degrades gracefully by not showing rounded corners. No problem.
 
-Javascript, however, will error when the browser tries to execute code it doesn't recognise. Internet Explorer 8, for example, breaks on the last line of code:
+Javascript, however, will error when the browser tries to execute code it doesn't recognise. Internet Explorer 8, for example, breaks on the last line here:
 
 	var form = document.forms[0];
 	form.attachEvent('submit', function() {
-      window.event.returnValue = false;
-      var foos = document.getElementsByClassName('foo');
+    window.event.returnValue = false;
+    var foos = document.getElementsByClassName('foo');
 	});
 
-This is because it doesn't recognise `getElementsByClassName`. The page didn't degrade nor did it fully enhance. The script intercepts the form's submit event, but breaks in the process giving users a broken interface.
+This is because it doesn't recognise `getElementsByClassName()`. The page didn't degrade nor did it fully enhance. The script intercepts the form's submit event, but gives users a broken interface.
 
-This means when the user submits the form, nothing happens. Handling submit on the client (enhanced experience) to save a round trip is fine. Handling submit on the server (core experience) is also fine. But above, the user doesn't get either of these.
+This means when the user submits the form, nothing happens. Handling submit on the client (the enhanced experience) to save a round trip is fine. Handling submit on the server (the core experience) is also fine. But the implementation above doesn't allow for either experience.
 
 Neither the browser nor the features in this example are relevant. It could be any browser and any feature. It makes no difference how new a browser is or what (cutting edge) feature it supports.
 
@@ -53,27 +53,27 @@ It's often useful to explore problems with other solutions. Often it's easier to
 
 ### Don't ignore the problem exists
 
-I struggled for a long time with this. I always thought about the current set of browsers that particular project had to adhere to. But just because I ignored those who use ‘other’ browsers, doesn't mean they don't exist.
+I struggled a lot with this. I always thought about the current set of browsers that particular project had to adhere to. But just because I ignored users who use ‘other’ browsers, doesn't mean they don't exist.
 
-### Don't hand off responsibility to third party libraries
+### Don't give responsibility to third party scripts
 
-When we put that script in our project, it becomes our responsibility. We should check under the hood for quality and watch out for the typical [multi-browser approach](https://gist.github.com/david-mark/06b9879f963ebb0eed62) that opposes the principles of Progressive Enhancement.
+When we put a script in our project, it becomes our responsibility. We should check under the hood for quality and watch out for the typical [multi-browser approach](https://gist.github.com/david-mark/06b9879f963ebb0eed62) that opposes the principles of progressive enhancement.
 
-When a library releases a new version, they often drop support for various browsers. This is a never ending cycle. This is what Jeremy Keith means when he refers to the web as a [continuum](https://adactio.com/journal/6692).
+When a library releases a new version, they often drop support for various browsers. This is a never ending cycle. This is what Jeremy Keith calls the [continuum](https://adactio.com/journal/6692).
 
 ### Don't rely on Cutting The Mustard
 
-[Cutting The Mustard](http://responsivenews.co.uk/post/18948466399/cutting-the-mustard) (CTM) is a relatively new approach which poses as a reliable solution and one that is based on giving users a core or an enhanced experience. It's the implementation itself that is problematic.
+[Cutting The Mustard](http://responsivenews.co.uk/post/18948466399/cutting-the-mustard) (CTM) is a relatively new approach which promises reliability by giving users a core or an enhanced experience. It's intent is great; the implementation, however, is problematic.
 
 	if(document.querySelector && window.addEventListener && window.localStorage) {
-      // start application
+    // start application
 	}
 
-The script detects a few choice methods, to then infer that the browser is ‘modern’. This is impossible because of the sheer amount of new (versions of) browsers being released every day. And it's irrelevant because the release date doesn't determine capability.
+The script detects a few choice methods, to then infer that the browser is ‘modern’. This is impossible because of the vast amount of new (versions of) browsers being released every day. And it's irrelevant because the release date doesn't determine capability.
 
-If the check passes, the application starts and attempts to give users the enhanced experience (whatever it may be). Inferences are almost as frail as user agent sniffing, something that Richard Cornford explains in [Browser Detection and What To Do Instead](http://jibbering.com/faq/notes/detect-browser/).
+If the check passes, the application starts and attempts to give users the enhanced experience. Inferences are almost as frail as user agent sniffing, something that Richard Cornford explains in [Browser Detection and What To Do Instead](http://jibbering.com/faq/notes/detect-browser/).
 
-Specifically, CTM has the following problems:
+CTM has the following problems:
 
 - Detecting host objects this way is dangerous. [H is for Host](http://www.cinsoft.net/host.html) explains why and provides a robust alternative.
 - Merely detecting the existence of a method is not enough.  Nicholas Zakas' [The Problem with Native JavaScript APIs](http://chimera.labs.oreilly.com/books/1234000001655/index.html) demonstrates this. Peter Michaux's article [Feature Detection: State of the Art Browser Scripting](http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting) explains this further.
@@ -84,13 +84,13 @@ Specifically, CTM has the following problems:
 
 ## What is the solution?
 
-Like Jeremy Keith, *I’ve always maintained that, given the choice between making something my problem, and making something the user’s problem, I’ll choose to make it my problem every time.*
+Jeremy Keith says “I’ve always maintained that, given the choice between making something my problem, and making something the user’s problem, I’ll choose to make it my problem every time.”
 
-To give users a core experience, we must ensure the interface works without Javascript. This is because that's the experience they'll get, when the browser doesn't recognise the method.
+To give users a core experience, we must ensure the interface works without Javascript. This is because that's the experience users will get when the browser doesn't recognise some method.
 
-After this, we must detect, and where necessary, test *all* of the features the application references before the application uses them. This ensures the page doesn't end up half enhanced and therefore irrevocably broken.
+Then we must detect, and where necessary, test *all* of the features the application references before the application uses them. This ensures the page doesn't end up half enhanced and therefore irrevocably broken.
 
-To do this reliably we need to use wrappers (facades). The library should expose a dynamic API that adapts to the browser. This is how it might look:
+To do this reliably we need to use wrappers (facades). The library should expose a dynamic API that adapts to the browser, something like this:
 
 	if(hasFeatures('find', 'addListener', 'storeValue')) {
       var el = find('.whatever');
@@ -102,15 +102,15 @@ To do this reliably we need to use wrappers (facades). The library should expose
 ### Notes
 
 - It looks remarkably similar to CTM. The difference is that it doesn't reference browser methods directly. Facades are leaner and context specific, allowing the library to fix bugs enabling us to reliably enhance an interface.
-- There is a one to one mapping between what is in the condition and what the application uses. If the condition doesn't pass, the user gets the core experience.
-- There is no need for polyfills. The library provides the method or it doesn't, depending on the browser. No caveats.
+- There's a one to one mapping between what is in the condition and what the application uses. If the condition doesn't pass, the user gets the core experience.
+- There's no need for polyfills. The library provides the method or it doesn't, depending on the browser. No caveats.
 - The application logic is decoupled from the browser.
 
-## Engineering a dynamic API
+## A dynamic API
 
-Peter Michaux's [Cross-Browser Widgets](http://peter.michaux.ca/articles/cross-browser-widgets) has a detailed walk-through all in one article. However, let's create a little something here and now.
+Peter Michaux's [Cross-Browser Widgets](http://peter.michaux.ca/articles/cross-browser-widgets) has a detailed walk-through, but let's create a little something now.
 
-The application needs to add a class to an element. First we'll create that function and expose a dynamic API:
+Let's say our application needs to add a class to an element. First we'll create that function and expose a dynamic API:
 
 
 	// use isHostMethod
@@ -120,44 +120,44 @@ The application needs to add a class to an element. First we'll create that func
       };
 	}
 
-Then the calling application checks that `addClass` is defined before referencing it:
+Then the calling application checks that `addClass()` is defined before referencing it:
 
-    if(addClass) {
-      addClass(el, 'thing');
-    }
+  if(addClass) {
+    addClass(el, 'thing');
+  }
 
-The application is blissfully unaware that it only runs in browsers supporting `classList`. Those using Internet Explorer 9 and below get the degraded experience and that's okay. If you want to support Internet Explorer 9, add a fork:
+The application is blissfully unaware that it only runs in browsers supporting `classList()`. Those using Internet Explorer 9 and below get the degraded experience and that's okay. If you want to support Internet Explorer 9, add a fork like this:
 
 	var addClass;
 
 	// Use isHostMethod
 	if(document.documentElement.classList.add) {
-      addClass = function(el, className) {
-        return el.classList.add(className);
-      };
+    addClass = function(el, className) {
+      return el.classList.add(className);
+    };
 	} else if(typeof html.className === "string") {
-      addClass = function(el, className) {
-        var re;
-        if (!el.className) {
-          el.className = className;
-        } else {
-          re = new RegExp('(^|\\s)' + className + '(\\s|$)');
-          if (!re.test(el.className)) {
-            el.className += ' ' + className;
-          }
+    addClass = function(el, className) {
+      var re;
+      if (!el.className) {
+        el.className = className;
+      } else {
+        re = new RegExp('(^|\\s)' + className + '(\\s|$)');
+        if (!re.test(el.className)) {
+          el.className += ' ' + className;
         }
       }
+    }
 	}
 
-This implementation supports almost every browser and the application didn't need to change. In future you can remove this fork once the number of visitors diminishes to a suitable level.
+This implementation supports almost every browser and the application didn't need to change. In future you can remove this fork once the number of visitors diminishes to a suitable level—something only you can determine.
 
-That is something only you can determine. Either way, users get a working experience, proving that a library never needs to drop browser support, at least not in the traditional sense.
+Either way, users get a working experience, proving that a library never needs to drop browser support, at least not in the traditional sense.
 
 ## Summary
 
-Progressive Enhancement puts users first. Misunderstanding the application of Progressive Enhancement puts users last.
+Progressive enhancement puts users first. Misunderstanding the application of progressive enhancement puts users last.
 
-Progressive Enhancement is not more work, it's less work. We don't have to endlessly play catch up with browsers. We don't have to give users a broken experience.
+Progressive enhancement is not more work, it's less work. We don't have to endlessly play catch up with browsers. We don't have to give users a broken experience.
 
 Instead we can write backwards compatible and future proof code that creates robust and inclusive experiences for everyone.
 
