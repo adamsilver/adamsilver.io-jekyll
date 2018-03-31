@@ -3,7 +3,7 @@
 	<title>Adam Silver: interaction designer and interface developer from London, UK</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2018-03-30T18:49:03+01:00</updated>
+	<updated>2018-03-31T09:58:42+01:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -2772,54 +2772,57 @@ switched.&lt;/p&gt;
 			<link href="https://adamsilver.io/articles/designing-honestly-for-the-web/"/>
 			<updated>2015-10-09T10:00:01+01:00</updated>
 			<id>https://adamsilver.io/articles/designing-honestly-for-the-web</id>
-			<content type="html">&lt;p&gt;I’ve been working on websites for more than half my life. During this time I’ve witnessed designers, developers and businesses designing dishonestly over and over again.&lt;/p&gt;
+			<content type="html">&lt;p&gt;I’ve been working on websites for more than half my life. During this time I’ve witnessed the design of dishonest interfaces over and over again.&lt;/p&gt;
 
-&lt;p&gt;There are many aspects of dishonest design. This article hones in on just one of these. The aspect that ignores the platform you are designing for. In the context of the web, I call it “bending the web”.&lt;/p&gt;
+&lt;p&gt;There are several aspects of dishonest design. This article hones in on just one: ignoring the medium you’re designing for. I call it “bending the web.”&lt;/p&gt;
 
-&lt;p&gt;I must admit, I have been known to bend it on more than a few occasions myself over the course of my career. I think that’s okay though because only by experiencing or reading about the mistakes we make, can we avoid them in the future. Here are some examples of how I’ve bent the web:&lt;/p&gt;
+&lt;p&gt;I’ve been known to bend it myself in the past. That’s okay though: only through experiencing mistakes or reading about other people’s, can we avoid them in the future. &lt;/p&gt;
+
+&lt;p&gt;Here’s some of the mistakes I’ve made in the past:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;I used tables for layout.&lt;/li&gt;
   &lt;li&gt;I’ve given &lt;a href=&quot;/articles/buttons-shouldnt-have-a-hand-cursor/&quot;&gt;submit buttons the hand cursor&lt;/a&gt;.&lt;/li&gt;
   &lt;li&gt;I’ve made a custom looking file input to make it look “nicer”.&lt;/li&gt;
-  &lt;li&gt;I have hidden labels to “declutter” UI.&lt;/li&gt;
-  &lt;li&gt;I have used a &lt;a href=&quot;/articles/select-boxes-shouldnt-submit-on-change/&quot;&gt;select box for navigation&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;I’ve hidden labels to “declutter” UI.&lt;/li&gt;
+  &lt;li&gt;I’ve used a &lt;a href=&quot;/articles/select-boxes-shouldnt-submit-on-change/&quot;&gt;select box for navigation&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://alistapart.com/article/dao&quot;&gt;A Dao of Web Design&lt;/a&gt; written by John Allsopp over one and half decades ago, gives us some timeless insights that tell us why this happens and continues to happen today.&lt;/p&gt;
+&lt;p&gt;In &lt;a href=&quot;http://alistapart.com/article/dao&quot;&gt;A Dao of Web Design&lt;/a&gt;, John Allsopp shares timeless insights that tell us why we design dishonestly.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;“If you’ve never watched early television programs, it’s instructive viewing. Television was at that time often referred to as “radio with pictures,” and that’s a pretty accurate description. Much of television followed the format of popular radio at that time.”&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;And just like the relationship between television and radio, there is a relationship between print and web.&lt;/p&gt;
+&lt;p&gt;Like the relationship between television and radio, there’s a relationship between print and web.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;“In print the designer is god. An enormous industry has emerged from WYSIWYG, and many of the web’s designers are grounded in the beliefs and practices, the ritual of that medium. As designers we need to rethink this role, to abandon control, and seek a new relationship with the page.”&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;We don’t like change and we can’t let go of control. We take our long, deep-rooted belief and experience in a previous medium, and try and make the new one conform to it, however misguided and problematic it is.&lt;/p&gt;
+&lt;p&gt;We don’t like change and we can’t relinquish control. We take our long, deep-rooted belief and experience in a previous medium, and mindlesssly apply to the new one, despite the problems it causes.&lt;/p&gt;
 
-&lt;p&gt;When the web came along, we believed we should have the same visual control as we did in print design. Today, it seems, we still have this same, misguided belief. Today we don’t just think it should behave like print, but also more app like whatever that means.&lt;/p&gt;
+&lt;p&gt;When the web came along, we believed we should have the same visual control as we did in print design. Today, that belief is still prevalent. We don’t just think it should behave like print, but also more app-like, whatever that means.&lt;/p&gt;
 
-&lt;p&gt;But what does this have to do with dishonest design? When we bend the web we are designing dishonestly. And when we design dishonestly we tend to design an unfriendly, often unintuitive experience — which can actually break the inherent features of the web. The very same features which make the web so simple, so powerful, so amazing.&lt;/p&gt;
+&lt;p&gt;But what does this have to do with dishonest design? When we bend the web, we are designing dishonestly. When we design dishonestly we tend to design unfriendly, unintuitive experiences, which can actually break the inherent features of the web. The very same features which make the web so simple, so powerful, so amazing.&lt;/p&gt;
 
-&lt;p&gt;And truth be told, it comes down to ignorance. I was ignorant. You have been ignorant. The question is are you still?&lt;/p&gt;
+&lt;p&gt;Since the web has been around for a good while, this comes to down to ignorance.&lt;/p&gt;
 
-&lt;p&gt;The web and the web browser gives us an amazing set of tools, not to be trifled with. Elements such as links, buttons, pages, forms, back buttons, bookmarking, images, videos, headings, paragraphs and focus outlines etc.&lt;/p&gt;
+&lt;p&gt;The web and the web browser gives us an amazing set of tools, not to be messed up. Elements such as links, buttons, pages, forms, back buttons, bookmarking, images, videos, headings, paragraphs, focus outlines and more.&lt;/p&gt;
 
-&lt;p&gt;Do you understand what all these elements mean to the browser? And how different browsers utilise these elements to the benefit of the user? Or do you see visual manifestations of these features and try to change them or trample over them?&lt;/p&gt;
+&lt;p&gt;It’s worth understanding what these elements mean, how they work, and how we can present them to users to signify their behaviour and utility.&lt;/p&gt;
 
-&lt;p&gt;Do you look at what other websites do on your Macbook Pro and iPhone 6 and think “if it’s good enough for them, it’s good enough for me”?
-Do you sometimes design without a thought for how the browser does it?&lt;/p&gt;
+&lt;p&gt;These elements have meaning beyond just how they look.&lt;/p&gt;
 
-&lt;p&gt;Sometimes a solution works well for a mobile app, but works terribly on the web. I think &lt;a href=&quot;/articles/why-infinite-scrolling-is-probably-a-bad-idea/&quot;&gt;infinite scroll&lt;/a&gt; is an example of this.&lt;/p&gt;
+&lt;p&gt;Do you look at other websites on your Macbook Pro and iPhone 134 and think “if it’s good enough for them, it’s good enough for me”? That’s lazy.&lt;/p&gt;
 
-&lt;p&gt;Have you ever used, designed or built a drop down select menu without a submit button? I have. When you select an option, the page refreshes and this simple bending comes with a host of problems for the user. The point is, a select box is meant to be used for input, not for navigation; that is what links are for.&lt;/p&gt;
+&lt;p&gt;Sometimes a solution works well for a mobile app, but works badly on the web. &lt;a href=&quot;/articles/why-infinite-scrolling-is-probably-a-bad-idea/&quot;&gt;Infinite scroll&lt;/a&gt; is an example of this.&lt;/p&gt;
 
-&lt;p&gt;Another useful thing about the web, is that browsers and devices get better all the time. When we design honestly, the experience gets better and better all by itself with zero effort from us — for proof just interact with a form on your phone and notice how it helps you do that.&lt;/p&gt;
+&lt;p&gt;Have you designed a &lt;a href=&quot;/articles/select-boxes-shouldnt-submit-on-change/&quot;&gt;drop down menu to work without a submit button&lt;/a&gt;? This is also bending the web. A select box is for input, not for navigiation.&lt;/p&gt;
 
-&lt;p&gt;Designing dishonestly not only costs the user, but costs the developer time and the business money. You might get away with the odd bit of dishonest design, but why would you want to?&lt;/p&gt;
+&lt;p&gt;You should note that browsers and devices get better all the time. When we design honestly, the experience gets better all by itself, with no effort on our part—just use a form on your phone and notice how it helps you fill it out.&lt;/p&gt;
+
+&lt;p&gt;Designing dishonestly costs the user, costs the developer time and the business money, often because the results inadvertently exclude users unnecessary. You might get away with the odd bit of dishonest design, but why would you want to?&lt;/p&gt;
 </content>
 		</entry>
 	
