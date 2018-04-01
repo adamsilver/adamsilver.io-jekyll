@@ -3,12 +3,41 @@
 	<title>Adam Silver: interaction designer and interface developer from London, UK</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2018-03-31T09:58:42+01:00</updated>
+	<updated>2018-04-01T09:37:43+01:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
 	</author>
 
+	
+		<entry>
+			<title>Progressive enhancement explained simply</title>
+			<link href="https://adamsilver.io/articles/progressive-enhancement-explained-simply/"/>
+			<updated>2018-04-01T10:00:01+01:00</updated>
+			<id>https://adamsilver.io/articles/progressive-enhancement-explained-simply</id>
+			<content type="html">&lt;p&gt;&lt;em&gt;This is a little excerpt from my upcoming book, Form Design Patterns. &lt;a href=&quot;https://adamsilver.io/signup/&quot;&gt;Sign up to my newsletter&lt;/a&gt; and I’ll tell you when it’s on pre-sale.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Progressive enhancement is about users. It just happens to make our lives as designers and developers easier too. Instead of keeping up with a set of browsers and devices (which is impossible!) we can just focus on features.&lt;/p&gt;
+
+&lt;p&gt;First and foremost, progressive enhancement is about always giving users a reasonable experience, no matter their browser, device, or quality of connection. When things go wrong – and they will – users won’t suffer in that they can still get things done.&lt;/p&gt;
+
+&lt;p&gt;There are a lot of ways an experience can go wrong. Perhaps the style sheet or script fails to load. Maybe everything loads, but the user’s browser doesn’t recognize some HTML, CSS, or JavaScript. Whatever happens, using progressive enhancement when designing experiences stops users having an especially bad time.&lt;/p&gt;
+
+&lt;p&gt;It starts with HTML for structure and content. If CSS or JavaScript don’t load, it’s fine because the content is there.&lt;/p&gt;
+
+&lt;p&gt;If everything loads OK, perhaps various HTML elements aren’t recognized. For example, some browsers don’t understand &lt;code&gt;&amp;lt;input type=&quot;email&quot;&amp;gt;&lt;/code&gt;. That’s fine, though, because users will get a text box (&lt;code&gt;&amp;lt;input type=&quot;text&quot;&amp;gt;&lt;/code&gt;) instead. Users can still enter an email address; they just don’t get an email-specific keyboard on mobile.&lt;/p&gt;
+
+&lt;p&gt;Maybe the browser doesn’t understand some fancy CSS, and it will just ignore it. In most cases, this isn’t a problem. Let’s say you have a button with &lt;code&gt;border-radius: 10px&lt;/code&gt;. Browsers that don’t recognize this rule will show a button with angled corners. Arguably, the button’s perceived affordance is reduced, but users are left unharmed. In other cases it might be helpful to use feature queries.&lt;/p&gt;
+
+&lt;p&gt;Then there is JavaScript, which is more complicated. When the browser tries to parse methods it doesn’t recognize, it will throw a hissy fit. This can cause your other (valid and supported) scripts to fail. If your script doesn’t first check &lt;a href=&quot;https://adamsilver.io/articles/progressively-enhanced-javascript/&quot;&gt;that the methods exist (feature detection) and work (feature testing)&lt;/a&gt; before using them, then users may get a broken interface. For example, if a button’s click handler calls a method that’s not recognized, the button won’t work. That’s bad.&lt;/p&gt;
+
+&lt;p&gt;That’s how you enhance. But what’s better is not needing an enhancement at all. HTML with a little CSS can give users an excellent experience. It’s the content that counts and you don’t need JavaScript for that. The more you can rely on content (HTML) and style (CSS), the better. I can’t emphasize this enough: so often, &lt;a href=&quot;https://adamsilver.io/articles/designing-for-actual-performance/&quot;&gt;the basic experience is the best and most performant one&lt;/a&gt;. There’s no point in enhancing something if it doesn’t &lt;a href=&quot;http://inclusivedesignprinciples.org/#add-value&quot;&gt;add value&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Of course, there are times when the basic experience isn’t as good as it could be – that’s when it’s time to enhance. But if we follow the approach above, when a piece of CSS or JavaScript isn’t recognized or executed, things will still work.&lt;/p&gt;
+
+&lt;p&gt;Progressive enhancement makes us think about what happens when things fail. It allows us to build experiences with resilience baked in. But equally, it makes us think about whether an enhancement is needed at all; and if it is, how best to go about it.&lt;/p&gt;
+</content>
+		</entry>
 	
 		<entry>
 			<title>But sometimes buttons look like links</title>
