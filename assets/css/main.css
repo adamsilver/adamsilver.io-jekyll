@@ -453,13 +453,13 @@ header a img {
 }
 
 .nav {
-	text-align: center;
-}
-
-@media(min-width: 28em) {
-	.nav {
-		float: right;
-	}	
+	padding-top: 20px;
+	padding-bottom: 10px;
+	max-width: 41.25em;
+	margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .nav ul {
@@ -472,7 +472,6 @@ header a img {
   margin-right: 7px;
   font-size: 0.93em;
   margin-bottom: 10px;
-  /*font-family: 'Open sans';*/
 }
 
 .nav ul li:first-child {
