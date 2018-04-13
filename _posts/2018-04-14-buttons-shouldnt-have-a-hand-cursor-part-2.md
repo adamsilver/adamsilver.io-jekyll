@@ -30,7 +30,7 @@ With the history somewhat laid out, why then, did we (designers, developers but 
 	</figure>
 </div>
 
-Notice how the all the browser buttons are styled exactly the same as the search button within the page. Also notice how buttons and links look very different. None of these buttons have the pointer. 
+Notice how all the browser buttons are styled exactly the same as the search button within the page. Also notice how buttons and links look very different. None of these buttons have the pointer. 
 
 They didn’t need it. They had strong perceived affordance. [They looked like buttons](https://www.nngroup.com/articles/clickable-elements). They look like they can be pushed. And to top it of, they use the same styles as the OS, making them [consistent](https://developer.paciellogroup.com/blog/2017/08/inclusive-design-principle-be-consistent/).
 
