@@ -5,7 +5,7 @@ date: 2018-04-14 09:00:01
 categories: html css
 ---
 
-In [Buttons shouldn’t have a hand cursor](???) I explained that the hand (or pointer) cursor doesn’t mean clickable and that it’s meant to signify a link.
+In [Buttons shouldn’t have a hand cursor](/articles/buttons-shouldnt-have-a-hand-cursor/) I explained that the hand (or pointer) cursor doesn’t mean clickable and that it’s meant to signify a link.
 
 However, there were some important things I didn’t address: why did we start using the pointer cursor in the first place? Are conventions on the Web different to the OS? Have things changed? How does all of this affect users?
 
