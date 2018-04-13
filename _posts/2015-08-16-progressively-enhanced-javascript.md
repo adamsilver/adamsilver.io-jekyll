@@ -159,7 +159,7 @@ Progressive enhancement puts users first. Misunderstanding the application of pr
 
 Progressive enhancement is not more work, it's less work. We don't have to endlessly play catch up with browsers. We don't have to give users a broken experience.
 
-Instead we can write backwards-compatible and future-proof code that creates robust and [inclusive experiences](/articles/designing-inclusively) for everyone.
+Instead we can write backwards-compatible and future-proof code that creates robust and [inclusive experiences](/articles/designing-inclusively/) for everyone.
 
 <!--
 
