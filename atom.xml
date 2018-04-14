@@ -3,7 +3,7 @@
 	<title>Adam Silver: interaction designer and interface developer from London, UK</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2018-04-13T14:37:51+01:00</updated>
+	<updated>2018-04-14T08:10:27+01:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -40,7 +40,7 @@
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Notice how the all the browser buttons are styled exactly the same as the search button within the page. Also notice how buttons and links look very different. None of these buttons have the pointer. &lt;/p&gt;
+&lt;p&gt;Notice how all the browser buttons are styled exactly the same as the search button within the page. Also notice how buttons and links look very different. None of these buttons have the pointer. &lt;/p&gt;
 
 &lt;p&gt;They didn’t need it. They had strong perceived affordance. &lt;a href=&quot;https://www.nngroup.com/articles/clickable-elements&quot;&gt;They looked like buttons&lt;/a&gt;. They look like they can be pushed. And to top it of, they use the same styles as the OS, making them &lt;a href=&quot;https://developer.paciellogroup.com/blog/2017/08/inclusive-design-principle-be-consistent/&quot;&gt;consistent&lt;/a&gt;.&lt;/p&gt;
 
