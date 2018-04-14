@@ -3,6 +3,6 @@ markdown: kramdown
 permalink: /articles/:title/
 url: https://adamsilver.io
 include: ['_pages']
-description: Hello, I am Adam Silver, I specialise in UX, Front-end Engineering and Strategy. I help companies and people design simple, human and inclusive websites. Based in London.
+description: I'm Adam Silver, an interaction designer who codes simple and inclusive digital services, products and websites.
 future: true
 exclude: ['node_modules', 'Gruntfile.js']
