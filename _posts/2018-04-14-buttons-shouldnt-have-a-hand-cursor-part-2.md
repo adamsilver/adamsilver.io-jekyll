@@ -30,7 +30,7 @@ With the history somewhat laid out, why then, did we (designers, developers but 
 	</figure>
 </div>
 
-Notice how all the browser buttons are styled exactly the same as the search button within the page. Also notice how buttons and links look very different. None of these buttons have the pointer. 
+Notice how all the browser buttons are styled exactly the same as the search button within the page. Also notice how buttons and links look very different. None of these buttons have the pointer.
 
 They didn’t need it. They had strong perceived affordance. [They looked like buttons](https://www.nngroup.com/articles/clickable-elements). They look like they can be pushed. And to top it of, they use the same styles as the OS, making them [consistent](https://developer.paciellogroup.com/blog/2017/08/inclusive-design-principle-be-consistent/).
 
@@ -86,7 +86,7 @@ Sometimes the mistake is by accident. Maybe the developer uses a third-party CSS
 Some say that the web is different. The web has its own set of conventions. But to most people — people that aren’t us — the web is not a distinct thing. It’s a thing people use on their computer and their phone.
 
 > “There’s no distinction between what’s a browser, what’s a website, what’s an operating system” — [Jakob Nielsen, Mobile Usability Futures](https://www.youtube.com/watch?v=sELOUAmFHjA&feature=youtu.be&t=3m4s)
- 
+
 If the lines weren’t already blurred, many apps are just shells around web apps. And with form fields being heavily integrated with the OS, it’s hard for users to tell where the OS/browser ends and the web begins.
 
 ## Should buttons and links look different?
@@ -99,7 +99,7 @@ If we agree that buttons and links are different, and we agree that (some) users
 
 Presumably browser vendors would remove all the special behaviour tied to links if people weren’t right clicking on them (to open a context menu) and doing various things with them.
 
-Yes, sometimes links look like buttons for prominence but that’s not reason to normalise the cursor. It’s a reason to sort out your design language to differentiate them better than anyone else. That’s where I believe the challenge is.
+Yes, sometimes links look like buttons for prominence but that’s not reason to normalise the cursor. It’s reason to create a design language to differentiate buttons from links. That’s where I believe the challenge is.
 
 ## Does the pointer cursor on buttons stop users from achieving their goal?
 

@@ -6,29 +6,29 @@ categories: design ux
 description: Designers are confused about the meaning of the hand cursor. Find out all the details in this article.
 ---
 
-There's a belief that the hand (or pointer) cursor means clickable, but this is wrong and potentially problematic. My hope is by the end of the article, you’ll never use the pointer cursor for buttons ever again.
+There's a belief that the hand (or pointer) cursor means clickable, but this is wrong and potentially problematic.
 
 ## The hand doesn't mean clickable
 
-It’s no accident that browsers don’t give buttons (and other elements) a pointer cursor—it’s because they’re not meant to. Take a look at this screenshot:
+It’s no accident that browsers don’t give buttons (and other elements) a pointer cursor—it’s because they’re not meant to. See this screenshot:
 
 <div class="image">
 	<figure>
 		<img src="{{ site.url }}/assets/img/buttons/chrome.jpeg" alt="Chrome on Mac OS" width="100%">
-		<figcaption>Chrome on Mac OS</figcaption>
+		<figcaption>Google's search page on Chrome Mac OS</figcaption>
 	</figure>
 </div>
 
 Almost every element is interactive and clickable—the menu, the tabs, the whitespace, the browser buttons, the bookmark bar and Google’s search box—none of them have a pointer cursor.
 
-There are interactive elements not shown above: select menus, sliders, checkboxes, radios, labels, images, empty space (e.g right click—view source) and text—again, none of them have a pointer cursor.
+There are interactive elements not shown above: select menus, sliders, checkboxes, radios, labels, images, empty space (e.g right click—view source) and text—again, none of them have the pointer cursor.
 
-The same goes for any computer you've ever used. You can tap, drag, select, press, left click and right click on a plethora of different elements including buttons. However, buttons are not signified by a the cursor changing to a pointer on hover.
+The same applies for the operating system. You can tap, drag, select, press, left click and right click on a plethora of different elements including buttons. But, buttons are not signified by the cursor changing to a pointer on hover.
 
 <div class="image">
 	<figure>
 		<img src="{{ site.url }}/assets/img/buttons/license.jpeg" alt="" width="100%">
-		<figcaption>“License Agreement” is a link and uses the hand cursor. The buttons don’t.</figcaption>
+		<figcaption>License Agreement is a link and gets the pointer cursor. Buttons don’t.</figcaption>
 	</figure>
 </div>
 
