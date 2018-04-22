@@ -99,7 +99,7 @@ If we agree that buttons and links are different, and we agree that (some) users
 
 Presumably browser vendors would remove all the special behaviour tied to links if people weren’t right clicking on them (to open a context menu) and doing various things with them.
 
-Yes, sometimes links look like buttons for prominence but that’s not reason to normalise the cursor. It’s reason to create a design language to differentiate buttons from links. That’s where I believe the challenge is.
+Yes, sometimes links look like buttons for prominence but that’s not reason to normalise the cursor. It’s reason to create a design language that differentiates buttons from links. That’s where I believe the challenge is.
 
 ## Does the pointer cursor on buttons stop users from achieving their goal?
 
