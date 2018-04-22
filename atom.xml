@@ -3,7 +3,7 @@
 	<title>Adam Silver: interaction designer and interface developer from London, UK</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2018-04-22T07:56:21+01:00</updated>
+	<updated>2018-04-22T07:57:46+01:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -113,7 +113,7 @@
 
 &lt;p&gt;Presumably browser vendors would remove all the special behaviour tied to links if people weren’t right clicking on them (to open a context menu) and doing various things with them.&lt;/p&gt;
 
-&lt;p&gt;Yes, sometimes links look like buttons for prominence but that’s not reason to normalise the cursor. It’s reason to create a design language to differentiate buttons from links. That’s where I believe the challenge is.&lt;/p&gt;
+&lt;p&gt;Yes, sometimes links look like buttons for prominence but that’s not reason to normalise the cursor. It’s reason to create a design language that differentiates buttons from links. That’s where I believe the challenge is.&lt;/p&gt;
 
 &lt;h2 id=&quot;does-the-pointer-cursor-on-buttons-stop-users-from-achieving-their-goal&quot;&gt;Does the pointer cursor on buttons stop users from achieving their goal?&lt;/h2&gt;
 
