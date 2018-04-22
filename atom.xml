@@ -3,7 +3,7 @@
 	<title>Adam Silver: interaction designer and interface developer from London, UK</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2018-04-14T08:10:27+01:00</updated>
+	<updated>2018-04-22T07:56:21+01:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -40,7 +40,7 @@
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Notice how all the browser buttons are styled exactly the same as the search button within the page. Also notice how buttons and links look very different. None of these buttons have the pointer. &lt;/p&gt;
+&lt;p&gt;Notice how all the browser buttons are styled exactly the same as the search button within the page. Also notice how buttons and links look very different. None of these buttons have the pointer.&lt;/p&gt;
 
 &lt;p&gt;They didn’t need it. They had strong perceived affordance. &lt;a href=&quot;https://www.nngroup.com/articles/clickable-elements&quot;&gt;They looked like buttons&lt;/a&gt;. They look like they can be pushed. And to top it of, they use the same styles as the OS, making them &lt;a href=&quot;https://developer.paciellogroup.com/blog/2017/08/inclusive-design-principle-be-consistent/&quot;&gt;consistent&lt;/a&gt;.&lt;/p&gt;
 
@@ -113,7 +113,7 @@
 
 &lt;p&gt;Presumably browser vendors would remove all the special behaviour tied to links if people weren’t right clicking on them (to open a context menu) and doing various things with them.&lt;/p&gt;
 
-&lt;p&gt;Yes, sometimes links look like buttons for prominence but that’s not reason to normalise the cursor. It’s a reason to sort out your design language to differentiate them better than anyone else. That’s where I believe the challenge is.&lt;/p&gt;
+&lt;p&gt;Yes, sometimes links look like buttons for prominence but that’s not reason to normalise the cursor. It’s reason to create a design language to differentiate buttons from links. That’s where I believe the challenge is.&lt;/p&gt;
 
 &lt;h2 id=&quot;does-the-pointer-cursor-on-buttons-stop-users-from-achieving-their-goal&quot;&gt;Does the pointer cursor on buttons stop users from achieving their goal?&lt;/h2&gt;
 
@@ -1497,29 +1497,29 @@ separation of concerns between back-end and front-end. You don’t need to use a
 			<link href="https://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor/"/>
 			<updated>2016-07-15T10:00:01+01:00</updated>
 			<id>https://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor</id>
-			<content type="html">&lt;p&gt;There’s a belief that the hand (or pointer) cursor means clickable, but this is wrong and potentially problematic. My hope is by the end of the article, you’ll never use the pointer cursor for buttons ever again.&lt;/p&gt;
+			<content type="html">&lt;p&gt;There’s a belief that the hand (or pointer) cursor means clickable, but this is wrong and potentially problematic.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-hand-doesnt-mean-clickable&quot;&gt;The hand doesn’t mean clickable&lt;/h2&gt;
 
-&lt;p&gt;It’s no accident that browsers don’t give buttons (and other elements) a pointer cursor—it’s because they’re not meant to. Take a look at this screenshot:&lt;/p&gt;
+&lt;p&gt;It’s no accident that browsers don’t give buttons (and other elements) a pointer cursor—it’s because they’re not meant to. See this screenshot:&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
 		&lt;img src=&quot;https://adamsilver.io/assets/img/buttons/chrome.jpeg&quot; alt=&quot;Chrome on Mac OS&quot; width=&quot;100%&quot; /&gt;
-		&lt;figcaption&gt;Chrome on Mac OS&lt;/figcaption&gt;
+		&lt;figcaption&gt;Google&#39;s search page on Chrome Mac OS&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Almost every element is interactive and clickable—the menu, the tabs, the whitespace, the browser buttons, the bookmark bar and Google’s search box—none of them have a pointer cursor.&lt;/p&gt;
 
-&lt;p&gt;There are interactive elements not shown above: select menus, sliders, checkboxes, radios, labels, images, empty space (e.g right click—view source) and text—again, none of them have a pointer cursor.&lt;/p&gt;
+&lt;p&gt;There are interactive elements not shown above: select menus, sliders, checkboxes, radios, labels, images, empty space (e.g right click—view source) and text—again, none of them have the pointer cursor.&lt;/p&gt;
 
-&lt;p&gt;The same goes for any computer you’ve ever used. You can tap, drag, select, press, left click and right click on a plethora of different elements including buttons. However, buttons are not signified by a the cursor changing to a pointer on hover.&lt;/p&gt;
+&lt;p&gt;The same applies for the operating system. You can tap, drag, select, press, left click and right click on a plethora of different elements including buttons. But, buttons are not signified by the cursor changing to a pointer on hover.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
 		&lt;img src=&quot;https://adamsilver.io/assets/img/buttons/license.jpeg&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
-		&lt;figcaption&gt;“License Agreement” is a link and uses the hand cursor. The buttons don’t.&lt;/figcaption&gt;
+		&lt;figcaption&gt;License Agreement is a link and gets the pointer cursor. Buttons don’t.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
