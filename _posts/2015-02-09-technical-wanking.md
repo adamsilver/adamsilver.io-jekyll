@@ -6,36 +6,30 @@ categories: js spas
 description: Technical Wanking is the practice of using cool and new tech just for the sake of it. Are you technical wanking?
 ---
 
-Technical Wanking is the practice of using cool and new technology because &mdash; well &mdash; it's *cool* and *new*. Of course, we should choose technology on its technical merit and technical merit alone.
+Technical wanking is the practice of using cool and new technology because &mdash; well &mdash; it's *cool* and *new*. We should, however, choose technology on its technical merit and technical merit alone.
 
-I first heard this term in 2010 when I was building my first Single Page Application (SPA). We were using various "cutting-edge" libraries for DOM stuff and client-side templating, and we rolled our own client-side router.
+I first heard the term in 2010 when I was building my first Single Page Application (SPA). We were using "cutting-edge" libraries for client-side templating and other bits; we also wrote our own client-side router.
 
-The administration system we were building didn't need to consider SEO, and was only to be used in Chrome. It was a CRUD application with a bunch of rich interactions.
+The administration system we were building didn't need to consider SEO, and only needed to work in Chrome. The application contained various CRUD interfaces with a few rich interactions around it sich as drag and drop and sorting interfaces.
 
-I couldn't wait to get my teeth into this, get the experience under my belt and propel my career accordingly. How could anyone resist my talent, with all the new buzzwords littering my CV?
+I couldn't wait to start, solve a bunch of new, modern problems and propel my career accordingly. How could anyone resist the new buzzwords littering my CV?
 
-At about six months into the project, my friend James Norton joined the team. I accompanied him on one of his fag breaks. It didn't take long for us to get talking about the codebase. James was quite scathing and questioned the need and benefit of the architecture. He decided this was the time to call me a Technical Wanker (thanks James).
+Six months into the project, James Norton, a friend and colleague joined my team. We got talking about the codebase and James was quite scathing about the SPA architecture we were using. He said that I was technically wanking (which was amusing and hurtful, ha).
 
-Fortunately, he didn't just call me names. He went on to constructively explain how all the not-so-good aspects of the code and UX were self-induced. Here are a few of the problems we were solving:
+James actually went on to constructively explain why all the not-so-goodaspects of the user experience born out of the architecture were self-induced and unnecessary. For example, we wrote:
 
-**1. Writing a client-side Javascript router.** Server-side technology (in our case Rails) has perfectly reliable routing. Let the browser handle the browsing.
+- a client-side JavaScript router, when we already had a perfectly robust server-side router written in Rails. We should have just let the browser handle the browsing.
+- a client-side JavaScript view renderer which only re-rendered the parts of the Document tree that changed. Again Rails (in our case) had a good view templates. We should have just let the browser parse and render the HTML which is it what it does best.
+- a lot of code that adapted generic REST API responses into something that was [appropropriate for the view](/articles/developing-templates-using-an-outside-in-approach). Once again, Rails, made this easy with a well designed ORM and plenty of utility functions to help server-side view templates get what they need.
 
-**2. Writing a client-side Javascript view renderer to rebuild/render only parts of the DOM tree that changed.** Again server-side frameworks have you covered. The browser is an expert at parsing and rendering HTML. Script will never do it better.
+While I was chuffed with all the clever solutions I had created, if we had used a traditional (often seen as archaic) the application would have worked a lot better without all the [problems with SPAs](/articles/the-disadvantages-of-single-page-applications/). I was solving self-induced problems to help my team get their work done, as opposed to deliverijng robust and useful experiences for users.
 
-**3. Writing client-side Javascript to massage and work with generic REST APIs.** It's standard practice for a server-side framework to compose beautiful fit-for-purpose view-models ready for consumption by server-side view templates.
+If we avoided the lure of SPAs, the result would have been just as slick. Just as beautiful. Just as rich. And it would have taken half the time to build, with a far nicer split of responsibilities between the server and client, meaning we could iterate faster. Not to mention it would have had better performance and accessibility. All of which contributes to the [overall UX]({% post_url 2016-05-17-hello-ux-designer %}).
 
-James went on to explain the application could have been better had we used a traditional architecture, without all the inherent [problems with SPAs](/articles/the-disadvantages-of-single-page-applications/).
+## Don't mindlessly follow the crowd
 
-Whilst I was still quite chuffed with all the clever things I appeared to be doing, I couldn't help but realise he was right. I was solving self-induced problems to assist my team in get ting their work done, as opposed to delivering a great and reliable experience for our users.
+“Everyone's building them,” they say. But when everyone's doing something, that *something* is usually a bad idea. For example, most people eat McDonalds, but it doesn't make it good for you.
 
-If we had avoided the lure of the coolness behind building a SPA, the end result would have been just as slick. Just as beautiful. Just as rich. And it would have taken half the time to build, with a far nicer split of responsibilities between the server and client, meaning we could iterate faster. Not to mention it would have had better performance and accessibility. All of which contributes to the [overall UX]({% post_url 2016-05-17-hello-ux-designer %}).
+We're paid to do this. We're meant to be professionals. It's our duty to do the right thing for users and the client. Not to make decisions solely to improve our CV. That's developer driven design.
 
-## When did all this nonsense become standard practice?
-
-"Everyone's building them", they say. The problem is, when everyone is doing something, that *something* is usually a bad idea. This follows in all walks of life &mdash; **most people eat McDonalds, but it doesn't make it good for you.**
-
-In a paid profession, it is your duty to serve the client and their users to the very best of your ability. Not to use tech in order to improve your CV etc.
-
-I know many developers scattered across the industry, who are in the trenches having to use this cutting-edge tech that causes more problems than it solves.
-
-In many ways I wish I hadn't participated in Technical Wanking back then, but then again, I wouldn't be where I am today having learnt many lessons about what *not* to do.
+Sometimes it's hard to push back, but we can only learn and do our best.

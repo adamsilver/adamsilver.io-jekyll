@@ -6,7 +6,7 @@ categories: js a11y ux performance
 description: Sometimes developers are on a pursuit to reduce page-load time by utilising AJAX to get around personalised content. This is problematic.
 ---
 
-[Content caching](https://developer.akamai.com/stuff/Caching/Content_Caching.html) is a useful technique to increase the loading speed of a page. If the page has personalised content this technique doesn't work. This is is because one user may receive another user's personalised content which is insecure and undesirable.
+[Content caching](https://developer.akamai.com/stuff/Caching/Content_Caching.html) is a useful technique to increase the loading speed of a page. If the page has personalised content this technique doesn't work because one user may receive another user's personalised content which is insecure and undesirable.
 
 The problem comes when someone suggests using AJAX to request the personalised content as a separate request. Before discussing the problem let's define exactly what personalised content is.
 
