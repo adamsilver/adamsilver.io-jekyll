@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Adam Silver: interaction designer and interface developer from London, UK</title>
-	<link href="https://adamsilver.io/atom.xml" rel="self"/>
-	<link href="https://adamsilver.io/"/>
-	<updated>2018-04-30T18:11:34+01:00</updated>
-	<id>https://adamsilver.io</id>
+	<link href="//localhost:4000/atom.xml" rel="self"/>
+	<link href="//localhost:4000/"/>
+	<updated>2018-05-01T06:24:49+01:00</updated>
+	<id>//localhost:4000</id>
 	<author>
 		<name>Adam Silver</name>
 	</author>
@@ -12,9 +12,9 @@
 	
 		<entry>
 			<title>Buttons shouldn't have a hand cursor part 2</title>
-			<link href="https://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor-part-2/"/>
+			<link href="//localhost:4000/articles/buttons-shouldnt-have-a-hand-cursor-part-2/"/>
 			<updated>2018-04-14T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor-part-2</id>
+			<id>//localhost:4000/articles/buttons-shouldnt-have-a-hand-cursor-part-2</id>
 			<content type="html">&lt;p&gt;In &lt;a href=&quot;/articles/buttons-shouldnt-have-a-hand-cursor/&quot;&gt;Buttons shouldn’t have a hand cursor&lt;/a&gt; I explained that the hand (or pointer) cursor doesn’t mean clickable and that it’s meant to signify a link.&lt;/p&gt;
 
 &lt;p&gt;However, there were some important things I didn’t address: why did we start using the pointer cursor in the first place? Are conventions on the Web different to the OS? Have things changed? How does all of this affect users?&lt;/p&gt;
@@ -35,7 +35,7 @@
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/buttons2/mosaic.png&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/buttons2/mosaic.png&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Mosaic&#39;s buttons (both in-page and part of the shell) look the same and have strong perceived affordance.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -56,7 +56,7 @@
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/buttons2/button.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 100px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/buttons2/button.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 100px;&quot; /&gt;
 		&lt;figcaption&gt;Mac default button style&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -142,10 +142,10 @@
 	
 		<entry>
 			<title>Progressive enhancement explained simply</title>
-			<link href="https://adamsilver.io/articles/progressive-enhancement-explained-simply/"/>
+			<link href="//localhost:4000/articles/progressive-enhancement-explained-simply/"/>
 			<updated>2018-04-01T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/progressive-enhancement-explained-simply</id>
-			<content type="html">&lt;p&gt;&lt;em&gt;This is a little excerpt from my upcoming book, Form Design Patterns. &lt;a href=&quot;https://adamsilver.io/signup/&quot;&gt;Sign up to my newsletter&lt;/a&gt; and I’ll tell you when it’s on pre-sale.&lt;/em&gt;&lt;/p&gt;
+			<id>//localhost:4000/articles/progressive-enhancement-explained-simply</id>
+			<content type="html">&lt;p&gt;&lt;em&gt;This is a little excerpt from my upcoming book, Form Design Patterns. &lt;a href=&quot;//localhost:4000/signup/&quot;&gt;Sign up to my newsletter&lt;/a&gt; and I’ll tell you when it’s on pre-sale.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Progressive enhancement is about users. It just happens to make our lives as designers and developers easier too. Instead of keeping up with a set of browsers and devices (which is impossible!) we can just focus on features.&lt;/p&gt;
 
@@ -159,9 +159,9 @@
 
 &lt;p&gt;Maybe the browser doesn’t understand some fancy CSS, and it will just ignore it. In most cases, this isn’t a problem. Let’s say you have a button with &lt;code&gt;border-radius: 10px&lt;/code&gt;. Browsers that don’t recognize this rule will show a button with angled corners. Arguably, the button’s perceived affordance is reduced, but users are left unharmed. In other cases it might be helpful to use feature queries.&lt;/p&gt;
 
-&lt;p&gt;Then there is JavaScript, which is more complicated. When the browser tries to parse methods it doesn’t recognize, it will throw a hissy fit. This can cause your other (valid and supported) scripts to fail. If your script doesn’t first check &lt;a href=&quot;https://adamsilver.io/articles/progressively-enhanced-javascript/&quot;&gt;that the methods exist (feature detection) and work (feature testing)&lt;/a&gt; before using them, then users may get a broken interface. For example, if a button’s click handler calls a method that’s not recognized, the button won’t work. That’s bad.&lt;/p&gt;
+&lt;p&gt;Then there is JavaScript, which is more complicated. When the browser tries to parse methods it doesn’t recognize, it will throw a hissy fit. This can cause your other (valid and supported) scripts to fail. If your script doesn’t first check &lt;a href=&quot;//localhost:4000/articles/progressively-enhanced-javascript/&quot;&gt;that the methods exist (feature detection) and work (feature testing)&lt;/a&gt; before using them, then users may get a broken interface. For example, if a button’s click handler calls a method that’s not recognized, the button won’t work. That’s bad.&lt;/p&gt;
 
-&lt;p&gt;That’s how you enhance. But what’s better is not needing an enhancement at all. HTML with a little CSS can give users an excellent experience. It’s the content that counts and you don’t need JavaScript for that. The more you can rely on content (HTML) and style (CSS), the better. I can’t emphasize this enough: so often, &lt;a href=&quot;https://adamsilver.io/articles/designing-for-actual-performance/&quot;&gt;the basic experience is the best and most performant one&lt;/a&gt;. There’s no point in enhancing something if it doesn’t &lt;a href=&quot;http://inclusivedesignprinciples.org/#add-value&quot;&gt;add value&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;That’s how you enhance. But what’s better is not needing an enhancement at all. HTML with a little CSS can give users an excellent experience. It’s the content that counts and you don’t need JavaScript for that. The more you can rely on content (HTML) and style (CSS), the better. I can’t emphasize this enough: so often, &lt;a href=&quot;//localhost:4000/articles/designing-for-actual-performance/&quot;&gt;the basic experience is the best and most performant one&lt;/a&gt;. There’s no point in enhancing something if it doesn’t &lt;a href=&quot;http://inclusivedesignprinciples.org/#add-value&quot;&gt;add value&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Of course, there are times when the basic experience isn’t as good as it could be – that’s when it’s time to enhance. But if we follow the approach above, when a piece of CSS or JavaScript isn’t recognized or executed, things will still work.&lt;/p&gt;
 
@@ -171,9 +171,9 @@
 	
 		<entry>
 			<title>But sometimes buttons look like links</title>
-			<link href="https://adamsilver.io/articles/but-sometimes-buttons-look-like-links/"/>
+			<link href="//localhost:4000/articles/but-sometimes-buttons-look-like-links/"/>
 			<updated>2017-10-16T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/but-sometimes-buttons-look-like-links</id>
+			<id>//localhost:4000/articles/but-sometimes-buttons-look-like-links</id>
 			<content type="html">&lt;p&gt;Sometimes we make links look like buttons. Sometimes we make buttons look like links. This is unfortunate and maybe there’s something we can do about this. But before we get to it, let’s discuss the four different types of buttons and links.&lt;/p&gt;
 
 &lt;h2 id=&quot;submit-buttons&quot;&gt;1. Submit buttons&lt;/h2&gt;
@@ -182,7 +182,7 @@
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/buttonslinks/01-submit.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 340px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/buttonslinks/01-submit.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 340px;&quot; /&gt;
 		&lt;figcaption&gt;“Sign in” is a submit button.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -193,7 +193,7 @@
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/buttonslinks/02-link.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 340px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/buttonslinks/02-link.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 340px;&quot; /&gt;
 		&lt;figcaption&gt;Links are underlined to stand out against copy.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -204,7 +204,7 @@
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/buttonslinks/03-button.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 340px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/buttonslinks/03-button.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 340px;&quot; /&gt;
 		&lt;figcaption&gt;The person icon reveals the account menu.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -215,7 +215,7 @@
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/buttonslinks/04-cta.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 340px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/buttonslinks/04-cta.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 340px;&quot; /&gt;
 		&lt;figcaption&gt;“Checkout” is a link styled to call users to action.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -240,7 +240,7 @@
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/buttonslinks/05-menu.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 340px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/buttonslinks/05-menu.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 340px;&quot; /&gt;
 		&lt;figcaption&gt;“Previous day” and “Next day” are links. “Choose day” is a button styled as a link.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -261,7 +261,7 @@
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/buttonslinks/06-start.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 340px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/buttonslinks/06-start.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 340px;&quot; /&gt;
 		&lt;figcaption&gt;“Start now” is a link styled prominently to call users to action.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -328,9 +328,9 @@
 	
 		<entry>
 			<title>Designing for actual performance</title>
-			<link href="https://adamsilver.io/articles/designing-for-actual-performance/"/>
+			<link href="//localhost:4000/articles/designing-for-actual-performance/"/>
 			<updated>2017-07-28T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/designing-for-actual-performance</id>
+			<id>//localhost:4000/articles/designing-for-actual-performance</id>
 			<content type="html">&lt;p&gt;This is how it goes. We put a load of shit into a single web page. This makes the page slow. Slow to load, slow to render. Slow.&lt;/p&gt;
 
 &lt;p&gt;Instead of getting rid of the shit, we blame the page refresh. There’s only one way to avoid the page refresh and that’s AJAX.&lt;/p&gt;
@@ -512,9 +512,9 @@
 	
 		<entry>
 			<title>Inline validation is problematic</title>
-			<link href="https://adamsilver.io/articles/inline-validation-is-problematic/"/>
+			<link href="//localhost:4000/articles/inline-validation-is-problematic/"/>
 			<updated>2017-06-26T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/inline-validation-is-problematic</id>
+			<id>//localhost:4000/articles/inline-validation-is-problematic</id>
 			<content type="html">&lt;p&gt;Inline validation informs users whether what they type is valid as they type. The theory is that it’s easier to fix errors as soon as they occur instead of waiting until submission. The thing is, inline validation causes several problems:&lt;/p&gt;
 
 &lt;h2 id=&quot;interruption-causes-friction&quot;&gt;1. Interruption causes friction&lt;/h2&gt;
@@ -523,7 +523,7 @@
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/inline-validation/01-first-key-stroke.gif&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/inline-validation/01-first-key-stroke.gif&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -537,7 +537,7 @@
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/inline-validation/02-blur.gif&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/inline-validation/02-blur.gif&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -549,7 +549,7 @@
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/inline-validation/04-judder.gif&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/inline-validation/04-judder.gif&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -561,7 +561,7 @@
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/inline-validation/checkboxes.png&quot; alt=&quot;&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/inline-validation/checkboxes.png&quot; alt=&quot;&quot; style=&quot;max-width: 500px;&quot; /&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -569,7 +569,7 @@
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/inline-validation/dateofbirth.png&quot; alt=&quot;&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/inline-validation/dateofbirth.png&quot; alt=&quot;&quot; style=&quot;max-width: 500px;&quot; /&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -644,9 +644,9 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 	
 		<entry>
 			<title>Float labels are problematic</title>
-			<link href="https://adamsilver.io/articles/float-labels-are-problematic/"/>
+			<link href="//localhost:4000/articles/float-labels-are-problematic/"/>
 			<updated>2017-05-24T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/float-labels-are-problematic</id>
+			<id>//localhost:4000/articles/float-labels-are-problematic</id>
 			<content type="html">&lt;p&gt;After writing &lt;a href=&quot;/articles/placeholders-are-problematic/&quot;&gt;Placeholders are Problematic&lt;/a&gt; some people suggested the float label pattern. &lt;/p&gt;
 
 &lt;p&gt;The float label pattern works by having the label start off inside the input (like a placeholder does). But &lt;code&gt;onfocus&lt;/code&gt; or when the user starts typing, the label moves outside the input above the field.&lt;/p&gt;
@@ -659,7 +659,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/floatinglabels/1-hint.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/floatinglabels/1-hint.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
 		&lt;figcaption&gt;No space for hint&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -670,7 +670,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/floatinglabels/2-readability.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/floatinglabels/2-readability.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
 		&lt;figcaption&gt;Small text is hard-to-read&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -681,7 +681,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/floatinglabels/3-space.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/floatinglabels/3-space.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
 		&lt;figcaption&gt;They need space to move into&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -698,7 +698,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/floatinglabels/5-contrast.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/floatinglabels/5-contrast.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
 		&lt;figcaption&gt;They have poor contrast&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -717,7 +717,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/floatinglabels/7-consistency.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/floatinglabels/7-consistency.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
 		&lt;figcaption&gt;Inconsistent location&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -728,7 +728,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/floatinglabels/8-cutoff.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/floatinglabels/8-cutoff.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;max-width: 500px;&quot; /&gt;
 		&lt;figcaption&gt;The label may get cropped&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -749,9 +749,9 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 	
 		<entry>
 			<title>Stop using device breakpoints</title>
-			<link href="https://adamsilver.io/articles/stop-using-device-breakpoints/"/>
+			<link href="//localhost:4000/articles/stop-using-device-breakpoints/"/>
 			<updated>2017-03-28T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/stop-using-device-breakpoints</id>
+			<id>//localhost:4000/articles/stop-using-device-breakpoints</id>
 			<content type="html">&lt;p&gt;I see it all the time. Designers, and developers alike, setting breakpoints according to their favourite device. When will we learn from our past mistakes?&lt;/p&gt;
 
 &lt;p&gt;When the web came along we settled on 640 pixel widths. Then a few years later, when larger monitors came to market, we settled on 960 pixels. We no longer cared about people with smaller monitors.&lt;/p&gt;
@@ -784,7 +784,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/breakpoints/maintainablecss.png&quot; alt=&quot;MaintainableCSS subscribe form&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/breakpoints/maintainablecss.png&quot; alt=&quot;MaintainableCSS subscribe form&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;MaintainableCSS&#39; responsive subscribe form&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -811,9 +811,9 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 	
 		<entry>
 			<title>Designing inclusively</title>
-			<link href="https://adamsilver.io/articles/designing-inclusively/"/>
+			<link href="//localhost:4000/articles/designing-inclusively/"/>
 			<updated>2017-02-15T09:00:01+00:00</updated>
-			<id>https://adamsilver.io/articles/designing-inclusively</id>
+			<id>//localhost:4000/articles/designing-inclusively</id>
 			<content type="html">&lt;p&gt;Whilst the web is still young, it’s been around long enough for us to know about its power and its constraints. We know what these constraints are now because we’ve bent them so much over the years.&lt;/p&gt;
 
 &lt;p&gt;Before CSS we used tables and spacer gifs for layout. Before border-radius we used background images for rounded corners.&lt;/p&gt;
@@ -926,9 +926,9 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 	
 		<entry>
 			<title>Don't initialise Javascript automagically</title>
-			<link href="https://adamsilver.io/articles/dont-initialise-javascript-automagically/"/>
+			<link href="//localhost:4000/articles/dont-initialise-javascript-automagically/"/>
 			<updated>2016-12-06T09:00:01+00:00</updated>
-			<id>https://adamsilver.io/articles/dont-initialise-javascript-automagically</id>
+			<id>//localhost:4000/articles/dont-initialise-javascript-automagically</id>
 			<content type="html">&lt;p&gt;I used to write Javascript that initialises components automagically. Don’t
 worry I’ll explain what I mean. Take a look below:&lt;/p&gt;
 
@@ -1101,9 +1101,9 @@ HTML isn’t good at defining behaviour. But Javascript is.&lt;/p&gt;
 	
 		<entry>
 			<title>Semantic class names: are you being too generic or too specific?</title>
-			<link href="https://adamsilver.io/articles/semantic-class-names-are-you-being-too-generic-or-too-specific/"/>
+			<link href="//localhost:4000/articles/semantic-class-names-are-you-being-too-generic-or-too-specific/"/>
 			<updated>2016-10-31T09:00:01+00:00</updated>
-			<id>https://adamsilver.io/articles/semantic-class-names-are-you-being-too-generic-or-too-specific</id>
+			<id>//localhost:4000/articles/semantic-class-names-are-you-being-too-generic-or-too-specific</id>
 			<content type="html">&lt;p&gt;Even if you’re completely sold on &lt;a href=&quot;http://maintainablecss.com/chapters/semantics/&quot;&gt;semantic class names&lt;/a&gt; and avoid stylistic and behavioural class names altogether, choosing a good class name is hard.&lt;/p&gt;
 
 &lt;p&gt;The problem boils down to naming your classes either too generically or too specifically. Both of which have pros and cons. But I like to think we can choose a class name without any cons. Let’s see.&lt;/p&gt;
@@ -1198,9 +1198,9 @@ HTML isn’t good at defining behaviour. But Javascript is.&lt;/p&gt;
 	
 		<entry>
 			<title>Browsers are different but so what?</title>
-			<link href="https://adamsilver.io/articles/browsers-are-different-but-so-what/"/>
+			<link href="//localhost:4000/articles/browsers-are-different-but-so-what/"/>
 			<updated>2016-09-01T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/browsers-are-different-but-so-what</id>
+			<id>//localhost:4000/articles/browsers-are-different-but-so-what</id>
 			<content type="html">&lt;p&gt;You know, it’s funny, when the web came along, we used the medium of print to set expectations for how things should be.&lt;/p&gt;
 
 &lt;p&gt;When you print out a business card it always looks the same, no matter who you are or where you are. It’s a physical thing.&lt;/p&gt;
@@ -1245,9 +1245,9 @@ The “problem” is that when the file can’t be found, FireFox displays a “
 	
 		<entry>
 			<title>Developing templates using an outside-in approach</title>
-			<link href="https://adamsilver.io/articles/developing-templates-using-an-outside-in-approach/"/>
+			<link href="//localhost:4000/articles/developing-templates-using-an-outside-in-approach/"/>
 			<updated>2016-08-08T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/developing-templates-using-an-outside-in-approach</id>
+			<id>//localhost:4000/articles/developing-templates-using-an-outside-in-approach</id>
 			<content type="html">&lt;p&gt;When we design websites, we start with a user problem and translate that into a set of screens and flows.&lt;/p&gt;
 
 &lt;p&gt;Next, we translate these screens into front-end code. We look at the best way to split up the design into pages,
@@ -1273,21 +1273,21 @@ demonstrated with a simple example.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/templates/anon.png&quot; alt=&quot;Anonymous user&quot; width=&quot;100%&quot; style=&quot;max-width: 164px&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/templates/anon.png&quot; alt=&quot;Anonymous user&quot; width=&quot;100%&quot; style=&quot;max-width: 164px&quot; /&gt;
 		&lt;figcaption&gt;Anonymous user&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated with a name&quot; width=&quot;100%&quot; style=&quot;max-width: 164px&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated with a name&quot; width=&quot;100%&quot; style=&quot;max-width: 164px&quot; /&gt;
 		&lt;figcaption&gt;Authenticated with a name&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/templates/recognised-no-name.png&quot; alt=&quot;Authenticated without a name&quot; width=&quot;100%&quot; style=&quot;max-width: 164px&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/templates/recognised-no-name.png&quot; alt=&quot;Authenticated without a name&quot; width=&quot;100%&quot; style=&quot;max-width: 164px&quot; /&gt;
 		&lt;figcaption&gt;Authenticated without a name&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1350,7 +1350,7 @@ this data comes from — it’s just information exposed via the view-model.&lt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated with a name&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated with a name&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Authenticated with a name&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1387,7 +1387,7 @@ message when the the user is authenticated and has supplied their name:&lt;/p&gt
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated and name is supplied&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/templates/recognised-with-name.png&quot; alt=&quot;Authenticated and name is supplied&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Authenticated and name is supplied&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1494,9 +1494,9 @@ separation of concerns between back-end and front-end. You don’t need to use a
 	
 		<entry>
 			<title>Buttons shouldn't have a hand cursor</title>
-			<link href="https://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor/"/>
+			<link href="//localhost:4000/articles/buttons-shouldnt-have-a-hand-cursor/"/>
 			<updated>2016-07-15T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor</id>
+			<id>//localhost:4000/articles/buttons-shouldnt-have-a-hand-cursor</id>
 			<content type="html">&lt;p&gt;There’s a belief that the hand (or pointer) cursor means clickable, but this is wrong and potentially problematic.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-hand-doesnt-mean-clickable&quot;&gt;The hand doesn’t mean clickable&lt;/h2&gt;
@@ -1505,7 +1505,7 @@ separation of concerns between back-end and front-end. You don’t need to use a
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/buttons/chrome.jpeg&quot; alt=&quot;Chrome on Mac OS&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/buttons/chrome.jpeg&quot; alt=&quot;Chrome on Mac OS&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Google&#39;s search page on Chrome Mac OS&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1518,7 +1518,7 @@ separation of concerns between back-end and front-end. You don’t need to use a
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/buttons/license.jpeg&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/buttons/license.jpeg&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;License Agreement is a link and gets the pointer cursor. Buttons don’t.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1568,9 +1568,9 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 	
 		<entry>
 			<title>Always use a label</title>
-			<link href="https://adamsilver.io/articles/always-use-a-label/"/>
+			<link href="//localhost:4000/articles/always-use-a-label/"/>
 			<updated>2016-07-01T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/always-use-a-label</id>
+			<id>//localhost:4000/articles/always-use-a-label</id>
 			<content type="html">&lt;p&gt;Designers often remove labels to create a minimal aesthetic and save space. However, &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;minimal doesn’t always mean simple&lt;/a&gt;. Labels are essential to the user experience.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -1587,7 +1587,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/labels/asos.jpeg&quot; alt=&quot;ASOS’ product form omits labels on drop downs&quot; width=&quot;100%&quot; style=&quot;max-width: 350px&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/labels/asos.jpeg&quot; alt=&quot;ASOS’ product form omits labels on drop downs&quot; width=&quot;100%&quot; style=&quot;max-width: 350px&quot; /&gt;
 		&lt;figcaption&gt;The menus are mising labels&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1606,7 +1606,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/labels/selfridges.png&quot; alt=&quot;Selfridges’ search form omits the label&quot; width=&quot;100%&quot; style=&quot;max-width: 350px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/labels/selfridges.png&quot; alt=&quot;Selfridges’ search form omits the label&quot; width=&quot;100%&quot; style=&quot;max-width: 350px;&quot; /&gt;
 		&lt;figcaption&gt;The search field is missing a label&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1630,9 +1630,9 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 	
 		<entry>
 			<title>Placeholders are problematic</title>
-			<link href="https://adamsilver.io/articles/placeholders-are-problematic/"/>
+			<link href="//localhost:4000/articles/placeholders-are-problematic/"/>
 			<updated>2016-06-16T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/placeholders-are-problematic</id>
+			<id>//localhost:4000/articles/placeholders-are-problematic</id>
 			<content type="html">&lt;p&gt;Since placeholders came along, designers have adopted them as means of storing hints. Their appeal lies in their minimal aesthetic and the fact they save space.&lt;/p&gt;
 
 &lt;p&gt;Some designers go one one step further, and replace labels with placeholders. Either way, the placeholder is an Inclusive Design anti-pattern which causes problems for users. Here’s why:&lt;/p&gt;
@@ -1643,7 +1643,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/placeholders/forget.png&quot; alt=&quot;Placeholder disappears when typing&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/placeholders/forget.png&quot; alt=&quot;Placeholder disappears when typing&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Placeholder text disappears as you type.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1654,7 +1654,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/placeholders/support.png&quot; alt=&quot;Broken for browsers lacking support&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/placeholders/support.png&quot; alt=&quot;Broken for browsers lacking support&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Broken experience for browsers lacking support.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1665,7 +1665,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/placeholders/populated.png&quot; alt=&quot;Populated field are hard to use&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/placeholders/populated.png&quot; alt=&quot;Populated field are hard to use&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Populated fields are hard to use.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1680,7 +1680,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/placeholders/2.png&quot; alt=&quot;Error message with a label for context.&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/placeholders/2.png&quot; alt=&quot;Error message with a label for context.&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Different hint patterns when there are errors.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1693,7 +1693,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/placeholders/disappearing.png&quot; alt=&quot;Placeholders disappear on focus&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/placeholders/disappearing.png&quot; alt=&quot;Placeholders disappear on focus&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Placeholders disappear on focus.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1704,7 +1704,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/placeholders/empty.png&quot; alt=&quot;Placeholders mistaken for real values&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/placeholders/empty.png&quot; alt=&quot;Placeholders mistaken for real values&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Placeholders might be mistaken for real values.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1724,7 +1724,7 @@ equivalent of a blank box.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/placeholders/10.png&quot; alt=&quot;No label means a smaller hit area.&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/placeholders/10.png&quot; alt=&quot;No label means a smaller hit area.&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;No label means a smaller hit area..&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1735,7 +1735,7 @@ equivalent of a blank box.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/placeholders/11.png&quot; alt=&quot;Placeholder copy gets cropped.&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/placeholders/11.png&quot; alt=&quot;Placeholder copy gets cropped.&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Long text gets cropped.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -1760,12 +1760,12 @@ equivalent of a blank box.&lt;/p&gt;
 	
 		<entry>
 			<title>How we cut our MVP in half to launch KIDLY</title>
-			<link href="https://adamsilver.io/articles/how-we-cut-our-mvp-in-half-to-launch-kidly/"/>
+			<link href="//localhost:4000/articles/how-we-cut-our-mvp-in-half-to-launch-kidly/"/>
 			<updated>2016-05-20T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/how-we-cut-our-mvp-in-half-to-launch-kidly</id>
+			<id>//localhost:4000/articles/how-we-cut-our-mvp-in-half-to-launch-kidly</id>
 			<content type="html">&lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/kidly.jpg&quot; alt=&quot;The team&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/kidly.jpg&quot; alt=&quot;The team&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;The team&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2043,9 +2043,9 @@ space&lt;/a&gt;.&lt;/p&gt;
 	
 		<entry>
 			<title>Hello UX designer</title>
-			<link href="https://adamsilver.io/articles/hello-ux-designer/"/>
+			<link href="//localhost:4000/articles/hello-ux-designer/"/>
 			<updated>2016-05-17T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/hello-ux-designer</id>
+			<id>//localhost:4000/articles/hello-ux-designer</id>
 			<content type="html">&lt;p&gt;I always get a bit frustrated if an individual thinks they’re solely responsible for UX because that’s not true. Design is always better when people work together.&lt;/p&gt;
 
 &lt;p&gt;The world wouldn’t be what it is today if it wasn’t for humans working together to achieve what would previously seem impossible.&lt;/p&gt;
@@ -2087,9 +2087,9 @@ space&lt;/a&gt;.&lt;/p&gt;
 	
 		<entry>
 			<title>Everything I know about speaking at conferences</title>
-			<link href="https://adamsilver.io/articles/everything-i-know-about-speaking-at-conferences/"/>
+			<link href="//localhost:4000/articles/everything-i-know-about-speaking-at-conferences/"/>
 			<updated>2016-04-01T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/everything-i-know-about-speaking-at-conferences</id>
+			<id>//localhost:4000/articles/everything-i-know-about-speaking-at-conferences</id>
 			<content type="html">&lt;p&gt;I spent nearly 2 months preparing to speak at &lt;a href=&quot;http://enhanceconf.com/&quot;&gt;Enhanceconf
 2016&lt;/a&gt; in front of 180 people at the RSA in London.&lt;/p&gt;
 
@@ -2264,16 +2264,16 @@ equivalent.&lt;/li&gt;
 	
 		<entry>
 			<title>Embracing simplicity</title>
-			<link href="https://adamsilver.io/articles/embracing-simplicity/"/>
+			<link href="//localhost:4000/articles/embracing-simplicity/"/>
 			<updated>2016-03-06T09:00:01+00:00</updated>
-			<id>https://adamsilver.io/articles/embracing-simplicity</id>
+			<id>//localhost:4000/articles/embracing-simplicity</id>
 			<content type="html">&lt;p&gt;This is the talk I gave at &lt;a href=&quot;http://enhanceconf.com/&quot;&gt;Enhanceconf&lt;/a&gt; 2016, a conference dedicated to Progressive Enhancement.&lt;/p&gt;
 
 &lt;iframe width=&quot;100%&quot; height=&quot;415&quot; src=&quot;https://www.youtube.com/embed/UlzG6-fI00g&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
 &lt;!-- &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/enhanceconf.jpg&quot; alt=&quot;Enhanceconf Q&amp;amp;A&quot; width=&quot;100%&quot;&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/enhanceconf.jpg&quot; alt=&quot;Enhanceconf Q&amp;amp;A&quot; width=&quot;100%&quot;&gt;
 		&lt;figcaption&gt;Photo by &lt;a href=&quot;https://www.flickr.com/photos/psd/&quot;&gt;Paul Downey&lt;/a&gt;&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt; --&gt;
@@ -2292,7 +2292,7 @@ equivalent.&lt;/li&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/bullshit.jpg&quot; alt=&quot;Enhanceconf Q&amp;amp;A&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/bullshit.jpg&quot; alt=&quot;Enhanceconf Q&amp;amp;A&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;&lt;a href=&quot;http://deathtobullshit.com&quot;&gt;Death To Bullshit&lt;/a&gt;&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2317,7 +2317,7 @@ equivalent.&lt;/li&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/desktop.jpg&quot; alt=&quot;My desktop&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/desktop.jpg&quot; alt=&quot;My desktop&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;My desktop&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2328,7 +2328,7 @@ equivalent.&lt;/li&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/homescreen.jpg&quot; alt=&quot;My homescreen&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/homescreen.jpg&quot; alt=&quot;My homescreen&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;My homescreen&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2353,7 +2353,7 @@ equivalent.&lt;/li&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/gawande.jpg&quot; alt=&quot;Atul Gawande&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/gawande.jpg&quot; alt=&quot;Atul Gawande&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Atul Gawande, Professor of Surgery, Harvard Medical School&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2433,7 +2433,7 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/value.jpg&quot; alt=&quot;Value only has a value when it&#39;s value is valued&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/value.jpg&quot; alt=&quot;Value only has a value when it&#39;s value is valued&quot; width=&quot;100%&quot; /&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -2441,7 +2441,7 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/boots.jpg&quot; alt=&quot;Boots logo&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/boots.jpg&quot; alt=&quot;Boots logo&quot; width=&quot;100%&quot; /&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -2451,7 +2451,7 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/boots_single.jpg&quot; alt=&quot;Boots.com single-page checkout diagram&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/boots_single.jpg&quot; alt=&quot;Boots.com single-page checkout diagram&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Boots.com single-page checkout diagram&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2460,7 +2460,7 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/boots_page.jpg&quot; alt=&quot;Boots.com multi-page checkout diagram&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/boots_page.jpg&quot; alt=&quot;Boots.com multi-page checkout diagram&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Boots.com multi-page checkout diagram&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2469,7 +2469,7 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/justeat.jpg&quot; alt=&quot;Just Eat logo&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/justeat.jpg&quot; alt=&quot;Just Eat logo&quot; width=&quot;100%&quot; /&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -2477,7 +2477,7 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/justeat_checkout.jpg&quot; alt=&quot;Multi-page checkout on Just Eat&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/justeat_checkout.jpg&quot; alt=&quot;Multi-page checkout on Just Eat&quot; width=&quot;100%&quot; /&gt;
 		&lt;figcaption&gt;Multi-page checkout on Just Eat&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2488,7 +2488,7 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/twomillion.jpg&quot; alt=&quot;Two million extra orders per year&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/twomillion.jpg&quot; alt=&quot;Two million extra orders per year&quot; width=&quot;100%&quot; /&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -2520,7 +2520,7 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/problem.jpg&quot; alt=&quot;Make it your problem, not your users.&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/problem.jpg&quot; alt=&quot;Make it your problem, not your users.&quot; width=&quot;100%&quot; /&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -2544,7 +2544,7 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/essential.jpg&quot; alt=&quot;Mobile first is really just essential only&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/essential.jpg&quot; alt=&quot;Mobile first is really just essential only&quot; width=&quot;100%&quot; /&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -2592,9 +2592,9 @@ He talked to experts in other high-risk professions, such as aviation.
 	
 		<entry>
 			<title>The design challenge</title>
-			<link href="https://adamsilver.io/articles/the-design-challenge/"/>
+			<link href="//localhost:4000/articles/the-design-challenge/"/>
 			<updated>2016-01-08T09:00:01+00:00</updated>
-			<id>https://adamsilver.io/articles/the-design-challenge</id>
+			<id>//localhost:4000/articles/the-design-challenge</id>
 			<content type="html">&lt;p&gt;In &lt;a href=&quot;https://medium.com/intercom-inside/how-to-hire-designers-960663e3a3e6#.5het3jvgw&quot;&gt;How To Hire Designers&lt;/a&gt; Paul Adams the four main aspects of design: outcome, system, interaction and visual.&lt;/p&gt;
 
 &lt;p&gt;We often spend too much time obsessing over the visual aspect. So much so that it becomes detrimental to the resulting experience.&lt;/p&gt;
@@ -2665,9 +2665,9 @@ Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a h
 	
 		<entry>
 			<title>Hover menus are problematic</title>
-			<link href="https://adamsilver.io/articles/hover-menus-are-problematic/"/>
+			<link href="//localhost:4000/articles/hover-menus-are-problematic/"/>
 			<updated>2015-12-27T09:00:01+00:00</updated>
-			<id>https://adamsilver.io/articles/hover-menus-are-problematic</id>
+			<id>//localhost:4000/articles/hover-menus-are-problematic</id>
 			<content type="html">&lt;p&gt;Designers think hover menus are popular because they &lt;em&gt;aid discoverability&lt;/em&gt; and &lt;em&gt;save users a click&lt;/em&gt;, the latter of which is a common &lt;a href=&quot;http://uxmyths.com/post/654026581/myth-all-pages-should-be-accessible-in-3-clicks&quot;&gt;UX fallacy&lt;/a&gt;. The thing is, hover menus are problematic and here’s why:&lt;/p&gt;
 
 &lt;h2 id=&quot;the-hover-tunnel-and-accidental-deactivation&quot;&gt;1. The hover tunnel and accidental deactivation&lt;/h2&gt;
@@ -2738,9 +2738,9 @@ Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a h
 	
 		<entry>
 			<title>We stopped tasking</title>
-			<link href="https://adamsilver.io/articles/we-stopped-tasking/"/>
+			<link href="//localhost:4000/articles/we-stopped-tasking/"/>
 			<updated>2015-12-15T09:00:01+00:00</updated>
-			<id>https://adamsilver.io/articles/we-stopped-tasking</id>
+			<id>//localhost:4000/articles/we-stopped-tasking</id>
 			<content type="html">&lt;p&gt;Scrum advocates breaking down stories into tasks because it:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -2801,9 +2801,9 @@ Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a h
 	
 		<entry>
 			<title>Infinite scrolling is probably a bad idea</title>
-			<link href="https://adamsilver.io/articles/infinite-scrolling-is-probably-a-bad-idea/"/>
+			<link href="//localhost:4000/articles/infinite-scrolling-is-probably-a-bad-idea/"/>
 			<updated>2015-11-24T09:00:01+00:00</updated>
-			<id>https://adamsilver.io/articles/infinite-scrolling-is-probably-a-bad-idea</id>
+			<id>//localhost:4000/articles/infinite-scrolling-is-probably-a-bad-idea</id>
 			<content type="html">&lt;p&gt;On more than one occasion I have found myself trying to convince team-mates that infinite scrolling and its close relative &lt;em&gt;show more&lt;/em&gt; is more likely to degrade the experience than improve upon it. I thought I would jot down my notes on the matter and share them with you. Here they are:&lt;/p&gt;
 
 &lt;h2 id=&quot;the-footer-becomes-unusable&quot;&gt;1. The footer becomes unusable&lt;/h2&gt;
@@ -2861,14 +2861,14 @@ Or should I try filtering instead?&lt;br /&gt;&lt;/p&gt;
 	
 		<entry>
 			<title>Designing a bad experience on purpose</title>
-			<link href="https://adamsilver.io/articles/designing-a-bad-experience-on-purpose/"/>
+			<link href="//localhost:4000/articles/designing-a-bad-experience-on-purpose/"/>
 			<updated>2015-11-14T09:00:01+00:00</updated>
-			<id>https://adamsilver.io/articles/designing-a-bad-experience-on-purpose</id>
+			<id>//localhost:4000/articles/designing-a-bad-experience-on-purpose</id>
 			<content type="html">&lt;p&gt;Who, in their right mind would design something that’s hard-to-use on purpose? That’s what happened to me once. Let’s just say the website sold stuff. And they wanted users to be able to pay using PayPal. Here’s the design that the business blocked:&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/paymentchoice.png&quot; alt=&quot;Payment choice page&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/paymentchoice.png&quot; alt=&quot;Payment choice page&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
 		&lt;figcaption&gt;Payment choice page&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -2928,9 +2928,9 @@ switched.&lt;/p&gt;
 	
 		<entry>
 			<title>Designing honestly for the web</title>
-			<link href="https://adamsilver.io/articles/designing-honestly-for-the-web/"/>
+			<link href="//localhost:4000/articles/designing-honestly-for-the-web/"/>
 			<updated>2015-10-09T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/designing-honestly-for-the-web</id>
+			<id>//localhost:4000/articles/designing-honestly-for-the-web</id>
 			<content type="html">&lt;p&gt;I’ve been working on websites for more than half my life. During this time I’ve witnessed the design of dishonest interfaces over and over again.&lt;/p&gt;
 
 &lt;p&gt;There are several aspects of dishonest design. This article hones in on just one: ignoring the medium you’re designing for. I call it “bending the web.”&lt;/p&gt;
@@ -2987,9 +2987,9 @@ switched.&lt;/p&gt;
 	
 		<entry>
 			<title>Designing a responsive menu without a hamburger</title>
-			<link href="https://adamsilver.io/articles/designing-a-responsive-menu-without-a-hamburger/"/>
+			<link href="//localhost:4000/articles/designing-a-responsive-menu-without-a-hamburger/"/>
 			<updated>2015-09-14T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/designing-a-responsive-menu-without-a-hamburger</id>
+			<id>//localhost:4000/articles/designing-a-responsive-menu-without-a-hamburger</id>
 			<content type="html">&lt;p&gt;I’m not going to tell you &lt;em&gt;why&lt;/em&gt; the hamburger sucks. James Archer has &lt;a href=&quot;http://deep.design/the-hamburger-menu/&quot;&gt;done that&lt;/a&gt; for me. Instead, I’ll provide some alternative responsive menus that avoid the hamburger.&lt;/p&gt;
 
 &lt;h2 id=&quot;medium&quot;&gt;1. Medium&lt;/h2&gt;
@@ -2998,7 +2998,7 @@ switched.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/hamburger/medium.png&quot; alt=&quot;Medium menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/hamburger/medium.png&quot; alt=&quot;Medium menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
 		&lt;figcaption&gt;Medium&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -3015,7 +3015,7 @@ size.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/hamburger/producthunt.png&quot; alt=&quot;Product Hunt menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/hamburger/producthunt.png&quot; alt=&quot;Product Hunt menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
 		&lt;figcaption&gt;Product Hunt&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -3031,7 +3031,7 @@ menus”. So, I give you Nodejs.org with &lt;strong&gt;eight&lt;/strong&gt; link
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/hamburger/node.png&quot; alt=&quot;Node menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/hamburger/node.png&quot; alt=&quot;Node menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
 		&lt;figcaption&gt;Node&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -3047,7 +3047,7 @@ room, the links are simply put into two columns.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/hamburger/adamsilver.png&quot; alt=&quot;Adam Silver menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/hamburger/adamsilver.png&quot; alt=&quot;Adam Silver menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
 		&lt;figcaption&gt;Adamsilver.io&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -3058,7 +3058,7 @@ room, the links are simply put into two columns.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/hamburger/googledesign.png&quot; alt=&quot;Google Design menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/hamburger/googledesign.png&quot; alt=&quot;Google Design menu&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
 		&lt;figcaption&gt;Google Design&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -3071,7 +3071,7 @@ room, the links are simply put into two columns.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/hamburger/minimalists.png&quot; alt=&quot;The Minimalists&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
+		&lt;img src=&quot;//localhost:4000/assets/img/hamburger/minimalists.png&quot; alt=&quot;The Minimalists&quot; width=&quot;100%&quot; style=&quot;max-width: 400px;&quot; /&gt;
 		&lt;figcaption&gt;The Minimalists&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
@@ -3085,9 +3085,9 @@ room, the links are simply put into two columns.&lt;/p&gt;
 	
 		<entry>
 			<title>Progressively enhanced Javascript</title>
-			<link href="https://adamsilver.io/articles/progressively-enhanced-javascript/"/>
+			<link href="//localhost:4000/articles/progressively-enhanced-javascript/"/>
 			<updated>2015-08-16T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/progressively-enhanced-javascript</id>
+			<id>//localhost:4000/articles/progressively-enhanced-javascript</id>
 			<content type="html">&lt;p&gt;Using Javascript to design progressively enhanced interfaces is probably the most important yet, misunderstood subject in web development.&lt;/p&gt;
 
 &lt;p&gt;In this article we’ll discuss these misunderstandings. Then, we’ll explore long-forgotten techniques that have stood the test of time.&lt;/p&gt;
@@ -3285,9 +3285,9 @@ This example will also demonstrate that Progressive Enhancement is not a drag in
 	
 		<entry>
 			<title>Addendum to the boring front-end developer</title>
-			<link href="https://adamsilver.io/articles/addendum-to-the-boring-front-end-developer/"/>
+			<link href="//localhost:4000/articles/addendum-to-the-boring-front-end-developer/"/>
 			<updated>2015-07-15T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/addendum-to-the-boring-front-end-developer</id>
+			<id>//localhost:4000/articles/addendum-to-the-boring-front-end-developer</id>
 			<content type="html">&lt;p&gt;Thanks to everyone who took the time to read &lt;a href=&quot;/articles/the-boring-front-end-developer/&quot;&gt;The Boring Front-end
 Developer&lt;/a&gt;. There were some outrageous and funny comments which I found entertaining and there were also some points worth addressing.&lt;/p&gt;
 
@@ -3371,9 +3371,9 @@ Mosaic, but there are front-end engineering approaches that ensure “any” bro
 	
 		<entry>
 			<title>The disadvantages of Javascript polyfills</title>
-			<link href="https://adamsilver.io/articles/the-disadvantages-of-javascript-polyfills/"/>
+			<link href="//localhost:4000/articles/the-disadvantages-of-javascript-polyfills/"/>
 			<updated>2015-06-22T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/the-disadvantages-of-javascript-polyfills</id>
+			<id>//localhost:4000/articles/the-disadvantages-of-javascript-polyfills</id>
 			<content type="html">&lt;p&gt;A polyfill, also known as a shim, is a user-defined implementation of an API that some browsers provide natively, normalising browser differences.&lt;/p&gt;
 
 &lt;p&gt;As a proponent of &lt;a href=&quot;/articles/developing-templates-using-an-outside-in-approach&quot;&gt;outside-in development&lt;/a&gt;, I see the lure of trying to develop as if all browsers are the same. The problem is that &lt;a href=&quot;/articles/browsers-are-different-but-so-what/&quot;&gt;browsers are not the same&lt;/a&gt;. Polyfills are problematic because:&lt;/p&gt;
@@ -3411,7 +3411,7 @@ As Nicholas Zakas says in [Scalable JavaScript Application Architecture](https:/
 
 --&gt;
 
-&lt;h2 id=&quot;we-rarely-need-need-the-full-api&quot;&gt;2. We rarely need need the full API&lt;/h2&gt;
+&lt;h2 id=&quot;the-full-api-is-rarely-needed&quot;&gt;2. The full API is rarely needed&lt;/h2&gt;
 
 &lt;p&gt;We may not need the full API to solve the problem. We may not even be &lt;em&gt;able&lt;/em&gt; to implement a polyfill because there’s just no way to do so. This is why context is important.&lt;/p&gt;
 
@@ -3504,9 +3504,9 @@ if(Object.create) {
 	
 		<entry>
 			<title>The disadvantages of CSS preprocessors</title>
-			<link href="https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/"/>
+			<link href="//localhost:4000/articles/the-disadvantages-of-css-preprocessors/"/>
 			<updated>2015-05-05T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors</id>
+			<id>//localhost:4000/articles/the-disadvantages-of-css-preprocessors</id>
 			<content type="html">&lt;p&gt;CSS preprocessors are well lauded in our industry. But, like all technology on offer, it comes with trade-offs. Trade-offs that need our consideration before accepting the added complexity they bring.&lt;/p&gt;
 
 &lt;h2 id=&quot;debugging-is-harder&quot;&gt;1. Debugging is harder&lt;/h2&gt;
@@ -3578,9 +3578,9 @@ anotherSelector {
 	
 		<entry>
 			<title>The role of the Front-end Developer</title>
-			<link href="https://adamsilver.io/articles/the-role-of-the-front-end-developer/"/>
+			<link href="//localhost:4000/articles/the-role-of-the-front-end-developer/"/>
 			<updated>2015-03-11T09:00:01+00:00</updated>
-			<id>https://adamsilver.io/articles/the-role-of-the-front-end-developer</id>
+			<id>//localhost:4000/articles/the-role-of-the-front-end-developer</id>
 			<content type="html">&lt;p&gt;The role of the Front-end developer extends far beyond translating  designs into code. They should be heavily involved in many other aspects of the design and development process…&lt;/p&gt;
 
 &lt;h2 id=&quot;user-experience-amp-interaction-design&quot;&gt;User Experience &amp;amp; Interaction Design&lt;/h2&gt;
@@ -3636,9 +3636,9 @@ anotherSelector {
 	
 		<entry>
 			<title>Technical wanking</title>
-			<link href="https://adamsilver.io/articles/technical-wanking/"/>
+			<link href="//localhost:4000/articles/technical-wanking/"/>
 			<updated>2015-02-09T09:00:01+00:00</updated>
-			<id>https://adamsilver.io/articles/technical-wanking</id>
+			<id>//localhost:4000/articles/technical-wanking</id>
 			<content type="html">&lt;p&gt;Technical wanking is the practice of using cool and new technology because — well — it’s &lt;em&gt;cool&lt;/em&gt; and &lt;em&gt;new&lt;/em&gt;. We should, however, choose technology on its technical merit and technical merit alone.&lt;/p&gt;
 
 &lt;p&gt;I first heard the term in 2010 when I was building my first Single Page Application (SPA). We were using “cutting-edge” libraries for client-side templating and other bits; we also wrote our own client-side router.&lt;/p&gt;
@@ -3673,9 +3673,9 @@ anotherSelector {
 	
 		<entry>
 			<title>Don't use AJAX for personalised content</title>
-			<link href="https://adamsilver.io/articles/dont-use-ajax-for-personalised-content/"/>
+			<link href="//localhost:4000/articles/dont-use-ajax-for-personalised-content/"/>
 			<updated>2014-12-29T09:00:01+00:00</updated>
-			<id>https://adamsilver.io/articles/dont-use-ajax-for-personalised-content</id>
+			<id>//localhost:4000/articles/dont-use-ajax-for-personalised-content</id>
 			<content type="html">&lt;p&gt;&lt;a href=&quot;https://developer.akamai.com/stuff/Caching/Content_Caching.html&quot;&gt;Content caching&lt;/a&gt; is a useful technique to increase the loading speed of a page. If the page has personalised content this technique doesn’t work because one user may receive another user’s personalised content which is insecure and undesirable.&lt;/p&gt;
 
 &lt;p&gt;The problem comes when someone suggests using AJAX to request the personalised content as a separate request. Before discussing the problem let’s define exactly what personalised content is.&lt;/p&gt;
@@ -3772,9 +3772,9 @@ anotherSelector {
 	
 		<entry>
 			<title>The boring front-end developer</title>
-			<link href="https://adamsilver.io/articles/the-boring-front-end-developer/"/>
+			<link href="//localhost:4000/articles/the-boring-front-end-developer/"/>
 			<updated>2014-10-01T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/the-boring-front-end-developer</id>
+			<id>//localhost:4000/articles/the-boring-front-end-developer</id>
 			<content type="html">&lt;p&gt;&lt;em&gt;Cool&lt;/em&gt; front-end developers are always &lt;em&gt;pushing the envelope&lt;/em&gt;, jumping out of their seat to use the latest and greatest and shiniest of UI frameworks and libraries.&lt;/p&gt;
 
 &lt;p&gt;They’re often found bridging the gap between native apps and web and so will strive to make the UI look and behave like an app. &lt;em&gt;Which app?&lt;/em&gt; you may ask. &lt;em&gt;iPhone? Android? What version?&lt;/em&gt; All good questions, alas another topic altogether.&lt;/p&gt;
@@ -3840,9 +3840,9 @@ anotherSelector {
 	
 		<entry>
 			<title>Select boxes shouldn't submit on change</title>
-			<link href="https://adamsilver.io/articles/select-boxes-shouldnt-submit-on-change/"/>
+			<link href="//localhost:4000/articles/select-boxes-shouldnt-submit-on-change/"/>
 			<updated>2014-09-17T00:00:00+01:00</updated>
-			<id>https://adamsilver.io/articles/select-boxes-shouldnt-submit-on-change</id>
+			<id>//localhost:4000/articles/select-boxes-shouldnt-submit-on-change</id>
 			<content type="html">&lt;p&gt;Some sites will submit the form when the user selects an option in a select box (or drop down menu) &lt;code&gt;onchange&lt;/code&gt;. The idea is that removing the button declutters the interface and saves users an extra click. First, &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;minimal does not mean simple&lt;/a&gt;, second &lt;a href=&quot;http://idyeah.com/blog/2012/06/stop-counting-clicks/&quot;&gt;stop counting clicks&lt;/a&gt; and third, read on.&lt;/p&gt;
 
 &lt;!-- &lt;div class=&quot;image&quot; style=&quot;max-width: 320px;margin: 0 auto;&quot;&gt;
@@ -3878,9 +3878,9 @@ Should a GO Button be Included with a Drop-down List?
 	
 		<entry>
 			<title>Javascript inheritance</title>
-			<link href="https://adamsilver.io/articles/javascript-inheritance/"/>
+			<link href="//localhost:4000/articles/javascript-inheritance/"/>
 			<updated>2014-09-09T10:00:59+01:00</updated>
-			<id>https://adamsilver.io/articles/javascript-inheritance</id>
+			<id>//localhost:4000/articles/javascript-inheritance</id>
 			<content type="html">&lt;p&gt;ECMAScript doesn’t have an &lt;em&gt;inherit&lt;/em&gt; function. But you can mimic the functionality yourself if you need to.&lt;/p&gt;
 
 &lt;p&gt;Here’s a ready made inherit function you can use in your project:&lt;/p&gt;
@@ -3964,9 +3964,9 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 	
 		<entry>
 			<title>The disadvantages of single page applications</title>
-			<link href="https://adamsilver.io/articles/the-disadvantages-of-single-page-applications/"/>
+			<link href="//localhost:4000/articles/the-disadvantages-of-single-page-applications/"/>
 			<updated>2014-08-11T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/the-disadvantages-of-single-page-applications</id>
+			<id>//localhost:4000/articles/the-disadvantages-of-single-page-applications</id>
 			<content type="html">&lt;p&gt;Maybe you think single page applications (SPAs) provide a better user experience. But, not only do they cause usability problems, they are much harder to design and build.&lt;/p&gt;
 
 &lt;p&gt;Before getting into the issues, let’s clarify what an SPA is.&lt;/p&gt;
@@ -4096,9 +4096,9 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 	
 		<entry>
 			<title>Javascript namespacing</title>
-			<link href="https://adamsilver.io/articles/javascript-namespacing/"/>
+			<link href="//localhost:4000/articles/javascript-namespacing/"/>
 			<updated>2014-07-11T10:00:01+01:00</updated>
-			<id>https://adamsilver.io/articles/javascript-namespacing</id>
+			<id>//localhost:4000/articles/javascript-namespacing</id>
 			<content type="html">&lt;p&gt;Namespaces help you organise code so that it’s easy for others to find their way around it. In Javascript, they also minimise the number of &lt;a href=&quot;http://www.yuiblog.com/blog/2006/06/01/global-domination/&quot;&gt;global variables&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Javascript doesn’t (at the time of writing) have a dedicated way to namespace components. But we can do it using object literals.&lt;/p&gt;
@@ -4151,9 +4151,9 @@ zoo.information = {
 	
 		<entry>
 			<title>Forms with multiple submit buttons are problematic</title>
-			<link href="https://adamsilver.io/articles/forms-with-multiple-submit-buttons-are-problematic/"/>
+			<link href="//localhost:4000/articles/forms-with-multiple-submit-buttons-are-problematic/"/>
 			<updated>2014-03-20T09:00:01+00:00</updated>
-			<id>https://adamsilver.io/articles/forms-with-multiple-submit-buttons-are-problematic</id>
+			<id>//localhost:4000/articles/forms-with-multiple-submit-buttons-are-problematic</id>
 			<content type="html">&lt;p&gt;Forms with multiple submit buttons are problematic for keyboard users because of how submission works. A user can submit a form by pressing &lt;kbd&gt;Enter&lt;/kbd&gt;, when a field is focused.&lt;/p&gt;
 
 &lt;p&gt;If there are multiple buttons, the form will behave as if the user pressed the &lt;em&gt;first&lt;/em&gt; button in the Document flow. This isn’t always desirable. For example, you might have an address form with a postcode look-up.&lt;/p&gt;
@@ -4203,9 +4203,9 @@ zoo.information = {
 	
 		<entry>
 			<title>How to create accessible forms</title>
-			<link href="https://adamsilver.io/articles/how-to-create-accessible-forms/"/>
+			<link href="//localhost:4000/articles/how-to-create-accessible-forms/"/>
 			<updated>2014-01-22T09:00:01+00:00</updated>
-			<id>https://adamsilver.io/articles/how-to-create-accessible-forms</id>
+			<id>//localhost:4000/articles/how-to-create-accessible-forms</id>
 			<content type="html">&lt;p&gt;Interacting with forms is one of the most important interactions a person can have on the web. The great news is, forms can be made to be accessible and in-turn more human-friendly with very little effort. This article describes the simple techniques you can utilise to ensure your forms are accessible.&lt;/p&gt;
 
 &lt;h2 id=&quot;labels&quot;&gt;Labels&lt;/h2&gt;
