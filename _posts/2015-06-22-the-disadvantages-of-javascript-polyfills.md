@@ -39,7 +39,7 @@ As Nicholas Zakas says in [Scalable JavaScript Application Architecture](https:/
 
 -->
 
-## 2. We rarely need need the full API
+## 2. The full API is rarely needed
 
 We may not need the full API to solve the problem. We may not even be *able* to implement a polyfill because there's just no way to do so. This is why context is important.
 
