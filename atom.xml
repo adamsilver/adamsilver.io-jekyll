@@ -3,7 +3,7 @@
 	<title>Adam Silver: interaction designer and interface developer from London, UK</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2018-05-01T16:04:51+01:00</updated>
+	<updated>2018-05-07T08:01:45+01:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -77,7 +77,7 @@
 
 &lt;p&gt;Even if I had ran tests, and those tests showed that these particular users found it useful, wouldn’t I also need to test that it doesn’t take away the perceived affordance of a link?&lt;/p&gt;
 
-&lt;p&gt;I can’t speak for everyone, but I’ve never seen, nor heard users complain that a well-designed button didn’t have the pointer cursor and decided not to click it (and that’s considering the sad state of affairs regarding inconsistency and blurring the lines). And by well-designed, I mean a button that looks like a button. If you’re going to expect users to click a button that doesn’t look like one, then that’s another debate altogether.&lt;/p&gt;
+&lt;p&gt;I can’t speak for everyone, but I’ve never seen, nor heard users complain that a well-designed button didn’t have the pointer cursor and decided not to click it (and that’s considering the prevalent inconsistency and blurring of the lines). And by well-designed, I mean a button that looks like a button. If you’re going to expect users to click a button that doesn’t look like one, then that’s another debate altogether.&lt;/p&gt;
 
 &lt;p&gt;Now, if you asked a user what the pointer cursor means, they might well say that it means clickable. But &lt;a href=&quot;https://alistapart.com/article/what-the-failure-of-new-coke-can-teach-us-about-user-research-and-design&quot;&gt;what users say and what they do are different things&lt;/a&gt;.&lt;/p&gt;
 
@@ -3288,84 +3288,54 @@ This example will also demonstrate that Progressive Enhancement is not a drag in
 			<link href="https://adamsilver.io/articles/addendum-to-the-boring-front-end-developer/"/>
 			<updated>2015-07-15T10:00:01+01:00</updated>
 			<id>https://adamsilver.io/articles/addendum-to-the-boring-front-end-developer</id>
-			<content type="html">&lt;p&gt;Thanks to everyone who took the time to read &lt;a href=&quot;/articles/the-boring-front-end-developer/&quot;&gt;The Boring Front-end
+			<content type="html">&lt;p&gt;Thanks to everyone who read &lt;a href=&quot;/articles/the-boring-front-end-developer/&quot;&gt;The Boring Front-end
 Developer&lt;/a&gt;. There were some outrageous and funny comments which I found entertaining and there were also some points worth addressing.&lt;/p&gt;
 
 &lt;h2 id=&quot;css-preprocessors&quot;&gt;1. CSS preprocessors&lt;/h2&gt;
 
-&lt;p&gt;I know I’m in the minority here.&lt;/p&gt;
+&lt;p&gt;I know I’m in the minority here. I know a lot of developers who like them, and a lot who don’t. I can see their many advantages too.&lt;/p&gt;
 
-&lt;p&gt;I know a lot of developers who like them, I know a lot of developers who don’t.
-I can see advantages in them too.&lt;/p&gt;
+&lt;p&gt;It’s just that I’ve worked on enough projects to know some of the problems they induce. Such as performance, maintainability and &lt;a href=&quot;/articles/the-disadvantages-of-css-preprocessors/&quot;&gt;more&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;But I have worked on enough projects to know that these things come with very
-real and painful disadvantages.&lt;/p&gt;
+&lt;p&gt;It’s relatively easy (cheap) to add a CSS preprocessor to a tech stack,
+but it’s relatively hard (costly) to remove it down the line. I’m just saying we should be more conscious of the issues before making that choice.&lt;/p&gt;
 
-&lt;p&gt;Important issues like performance, maintainability (the thing they’re trying to
-&lt;a href=&quot;http://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/&quot;&gt;more&lt;/a&gt;.
-It’s relatively easy (read: cheap) to add a CSS preprocessor to the tech stack,
-but it’s relatively hard (read: costly) to remove it down the line.&lt;/p&gt;
+&lt;h2 id=&quot;new-doesnt-mean-good-or-bad&quot;&gt;2. New doesn’t mean good or bad&lt;/h2&gt;
 
-&lt;p&gt;I just advise, as with everything else, to be conscious of the issues before
-deciding to use one and putting that on to your current and future team mates.&lt;/p&gt;
+&lt;p&gt;I use a lot of new and old technology. I use them because they work. I don’t use them so much due to popularity, newness or how many stars they have on Github. At most these are secondary reasons.&lt;/p&gt;
 
-&lt;h2 id=&quot;new--good--new--bad&quot;&gt;2. New != good &amp;amp;&amp;amp; New != bad&lt;/h2&gt;
-
-&lt;p&gt;I use a lot of “new” technology and I use a lot of “old” technology.&lt;/p&gt;
-
-&lt;p&gt;FWIW I use Github, Jekyll, Grunt, Node and Bower to name a few.&lt;/p&gt;
-
-&lt;p&gt;I choose to use these things for many good reasons. Those reasons are not to do
-with popularity, newness or how many stars they have on Github. At most these
-are secondary reasons.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, I don’t believe this to be the case for the majority of
-developers in the front-end space right now.&lt;/p&gt;
-
-&lt;p&gt;I am simply advocating critical and deliberate analysis, so that any decision is a &lt;em&gt;conscious&lt;/em&gt; one.&lt;/p&gt;
+&lt;p&gt;This doesn’t seeem to be the case for a lot of people. It’s often about popularity, authority and newness.&lt;/p&gt;
 
 &lt;h2 id=&quot;bfeds-dont-get-paid-well&quot;&gt;3. BFEDs don’t get paid well&lt;/h2&gt;
 
-&lt;p&gt;I know several developers that would be classed as “boring”, all of which are
-paid very well.&lt;/p&gt;
+&lt;p&gt;I know several developers that would be classed as boring. All are paid very well.&lt;/p&gt;
 
 &lt;h2 id=&quot;change-isnt-necessarily-progress&quot;&gt;4. Change isn’t necessarily progress&lt;/h2&gt;
 
-&lt;p&gt;(Disclaimer: this is not my own thought)&lt;/p&gt;
-
 &lt;blockquote&gt;
-  &lt;p&gt;I also find people touting “progress” don’t realise that a lot of the time they &amp;gt; just mean “change”. I mean, sure, if a new way of doing things is demonstrably better, by all means let’s use it. But a lot of the time you’re just swapping one (well-understood) set of tradeoffs and considerations for a new, less understood set, because “That’s what we’re doing now”. — qu4z-2&lt;/p&gt;
+  &lt;p&gt;”I also find people touting ‘progress’ don’t realise that a lot of the time they just mean ‘change’. I mean, sure, if a new way of doing things is demonstrably better, by all means let’s use it. But a lot of the time you’re just swapping one (well-understood) set of tradeoffs and considerations for a new, less understood set, because ‘That’s what we’re doing now’.”&lt;br /&gt;
+—qu4z-2&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;There’s a &lt;em&gt;lot&lt;/em&gt; of “change” going on in the industry, developers are having a
-whale of a time in doing so.&lt;/p&gt;
-
-&lt;p&gt;But is this &lt;em&gt;really&lt;/em&gt; adding value to the user or business?&lt;/p&gt;
+&lt;p&gt;There’s a lot of change happening but does that change add value to the user or business?&lt;/p&gt;
 
 &lt;h2 id=&quot;people-first-developers-second&quot;&gt;5. People first, developers second&lt;/h2&gt;
 
-&lt;p&gt;It is very common to hear developers berating old browsers and dropping support
-in the name of cost and security but &lt;em&gt;your&lt;/em&gt; users don’t care and are unaware,
-and sometimes not in control of what browsers they use. Corporations locking
-down IE6 is a common example.&lt;/p&gt;
+&lt;p&gt;It’s common to hear teammates berating old browsers and dropping support
+in the name of cost and security but your users don’t care and are unaware anyway. Often they’re not in control of what browser they use.&lt;/p&gt;
 
-&lt;p&gt;Heck some people don’t even know what a browser *is *and yet, these people
-manage to surf and buy shit using one.&lt;/p&gt;
+&lt;p&gt;Some users don’t know what a browser is and yet, they
+manage to surf and buy things using one. Amazing.&lt;/p&gt;
 
-&lt;p&gt;These users arrive at your site because they can, and they leave because you
-have unnecessarily and irresponsibly not given a thought to them.&lt;/p&gt;
+&lt;p&gt;These users arrive at our sites because they can, and they leave because we unnecessarily and irresponsibly exclude them.&lt;/p&gt;
+
+&lt;p&gt;Has browser usage dropped because the browser is “old” or because the website doesn’t work in that browser anymore?&lt;/p&gt;
+
+&lt;p&gt;It’s true that you probably shouldn’t be testing your site in IE1 but there are some techniques that ensure any browser can be used to access a website (for the most part anyway). These techniques are just as much for new browsers as they are fold old.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Question: Has browser usage dropped because the browser is “old” &lt;strong&gt;or&lt;/strong&gt; because the website doesn’t work in that browser anymore?
-&lt;a href=&quot;http://motherfuckingwebsite.com/&quot;&gt;Motherfuckingwebsite.com&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;“If I had to choose between making something my problem and making something the users problem, I would make it mine every time.”&lt;br /&gt;—Jeremy Keith&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;Yes, it’s true that you probably shouldn’t be testing your site in IE1 or
-Mosaic, but there are front-end engineering approaches that ensure “any” browser can be used to access a website (for the most part anyway). These techniques serve new browsers just as much as old browsers.&lt;/p&gt;
-
-&lt;p&gt;It’s our job to serve the user first.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;People first, developers second.&lt;/strong&gt;&lt;/p&gt;
 </content>
 		</entry>
 	
