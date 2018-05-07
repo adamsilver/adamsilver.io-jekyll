@@ -67,7 +67,7 @@ I reasoned that the pointer meant clickable. So I “fixed” it with CSS. No re
 
 Even if I had ran tests, and those tests showed that these particular users found it useful, wouldn’t I also need to test that it doesn’t take away the perceived affordance of a link?
 
-I can’t speak for everyone, but I’ve never seen, nor heard users complain that a well-designed button didn’t have the pointer cursor and decided not to click it (and that’s considering the sad state of affairs regarding inconsistency and blurring the lines). And by well-designed, I mean a button that looks like a button. If you’re going to expect users to click a button that doesn’t look like one, then that’s another debate altogether.
+I can’t speak for everyone, but I’ve never seen, nor heard users complain that a well-designed button didn’t have the pointer cursor and decided not to click it (and that’s considering the prevalent inconsistency and blurring of the lines). And by well-designed, I mean a button that looks like a button. If you’re going to expect users to click a button that doesn’t look like one, then that’s another debate altogether.
 
 Now, if you asked a user what the pointer cursor means, they might well say that it means clickable. But [what users say and what they do are different things](https://alistapart.com/article/what-the-failure-of-new-coke-can-teach-us-about-user-research-and-design).
 
