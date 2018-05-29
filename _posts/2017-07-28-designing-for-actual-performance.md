@@ -3,6 +3,7 @@ layout: post
 title: Designing for actual performance
 date: 2017-07-28 09:00:01
 categories: ux performance
+description: So often we cram a load of crap onto a single web page and then play silly buggers trying to get them to load efficiently. Instead design for actual performance.
 ---
 
 This is how it goes. We put a load of shit into a single web page. This makes the page slow. Slow to load, slow to render. Slow.

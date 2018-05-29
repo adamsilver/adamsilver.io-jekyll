@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "About Adam Silver: an interaciton designer and interface developer from London in the UK"
+title: "About Adam Silver: an interaction designer and interface developer from London in the UK"
 id: about
 permalink: /about/
 ---
