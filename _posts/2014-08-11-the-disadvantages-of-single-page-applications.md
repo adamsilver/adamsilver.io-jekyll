@@ -26,7 +26,7 @@ Browsers store history so that pages load quickly when the user clicks *back*. D
 > &ldquo;In the traditional web model the browser will typically be able [to] use a cached version of the page and linked resources.<br><br>
 > &ldquo;In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.&rdquo;
 
-If we want users to enjoy the same, fast experience, we need to mimic the native browser behaviour in JS. 
+If we want users to enjoy the same, fast experience, we need to mimic the native browser behaviour in JS.
 
 First, the application will need to store pages in memory, local storage, client-side databases or cookies. Second, the application will need to determine *when* to retrieve these pages. As part of this it will need to differentiate between:
 
@@ -102,6 +102,14 @@ Furthermore, the user's browser provides a predictable and familiar loading indi
 ## 12. They're probably slower
 
 Given that they require a whole load of extra code to load and fix all these issues, it's probably going to be slower. And [don't assume AJAX is always faster](/articles/designing-for-actual-performance/).
+
+## 13. They're inaccessible
+
+I'll defer to Craig's excellent article: [One-page-applications are not accessible](http://www.craigabbott.co.uk/one-page-applications-are-not-accessible).
+
+## 14. They just don't feel right
+
+I'll defer to Stefan's excellent article: [Why I hate your Single Page App](https://medium.freecodecamp.org/why-i-hate-your-single-page-app-f08bb4ff9134)
 
 ## Summary
 
