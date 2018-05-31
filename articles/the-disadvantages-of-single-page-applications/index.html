@@ -69,28 +69,20 @@
 	<meta itemprop="description" content="Single page applications promise a better experience. This is rarely the case. Find out why in this article.">
 
 
-<!-- build:css /assets/css/main.min.css -->
-<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all">
-<!-- endbuild -->
+<link rel="stylesheet" href="/assets/css/main.min.0d1c1dfa.css" media="all">
 
-<!-- build:css /assets/css/ie8.min.css -->
 <!--[if IE 8]>
-<link rel="stylesheet" href="/assets/css/ie8.css" type="text/css" media="all">
+<link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
 <![endif]-->
-<!-- endbuild -->
 
-<!-- build:css /assets/css/ie7.min.css -->
 <!--[if IE 7]>
-<link rel="stylesheet" href="/assets/css/ie7.css" type="text/css" media="all">
+<link rel="stylesheet" href="/assets/css/ie7.min.d41d8cd9.css" media="all">
 <![endif]-->
-<!-- endbuild -->
 
 
-<!-- build:css /assets/css/ie6.min.css -->
 <!--[if IE 6]>
-<link rel="stylesheet" href="/assets/css/ie6.css" type="text/css" media="all">
+<link rel="stylesheet" href="/assets/css/ie6.min.2d22a25b.css" media="all">
 <![endif]-->
-<!-- endbuild -->
 
 
 <link rel="canonical" href="https://adamsilver.io/articles/the-disadvantages-of-single-page-applications/">
@@ -154,7 +146,7 @@
 “In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.”</p>
 </blockquote>
 
-<p>If we want users to enjoy the same, fast experience, we need to mimic the native browser behaviour in JS. </p>
+<p>If we want users to enjoy the same, fast experience, we need to mimic the native browser behaviour in JS.</p>
 
 <p>First, the application will need to store pages in memory, local storage, client-side databases or cookies. Second, the application will need to determine <em>when</em> to retrieve these pages. As part of this it will need to differentiate between:</p>
 
@@ -240,6 +232,14 @@
 <h2 id="theyre-probably-slower">12. They’re probably slower</h2>
 
 <p>Given that they require a whole load of extra code to load and fix all these issues, it’s probably going to be slower. And <a href="/articles/designing-for-actual-performance/">don’t assume AJAX is always faster</a>.</p>
+
+<h2 id="theyre-inaccessible">13. They’re inaccessible</h2>
+
+<p>I’ll defer to Craig’s excellent article: <a href="http://www.craigabbott.co.uk/one-page-applications-are-not-accessible">One-page-applications are not accessible</a>.</p>
+
+<h2 id="they-just-dont-feel-right">14. They just don’t feel right</h2>
+
+<p>I’ll defer to Stefan’s excellent article: <a href="https://medium.freecodecamp.org/why-i-hate-your-single-page-app-f08bb4ff9134">Why I hate your Single Page App</a></p>
 
 <h2 id="summary">Summary</h2>
 

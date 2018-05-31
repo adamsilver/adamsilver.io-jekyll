@@ -3,7 +3,7 @@
 	<title>Adam Silver: interaction designer and interface developer from London, UK</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2018-05-29T19:48:40+01:00</updated>
+	<updated>2018-05-31T09:37:23+01:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -3959,7 +3959,7 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 “In a naive implementation of a SPA hitting back will do the same thing as clicking a link, resulting in a server request, additional latency, and possibly visual data changes.”&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;If we want users to enjoy the same, fast experience, we need to mimic the native browser behaviour in JS. &lt;/p&gt;
+&lt;p&gt;If we want users to enjoy the same, fast experience, we need to mimic the native browser behaviour in JS.&lt;/p&gt;
 
 &lt;p&gt;First, the application will need to store pages in memory, local storage, client-side databases or cookies. Second, the application will need to determine &lt;em&gt;when&lt;/em&gt; to retrieve these pages. As part of this it will need to differentiate between:&lt;/p&gt;
 
@@ -4045,6 +4045,14 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 &lt;h2 id=&quot;theyre-probably-slower&quot;&gt;12. They’re probably slower&lt;/h2&gt;
 
 &lt;p&gt;Given that they require a whole load of extra code to load and fix all these issues, it’s probably going to be slower. And &lt;a href=&quot;/articles/designing-for-actual-performance/&quot;&gt;don’t assume AJAX is always faster&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;theyre-inaccessible&quot;&gt;13. They’re inaccessible&lt;/h2&gt;
+
+&lt;p&gt;I’ll defer to Craig’s excellent article: &lt;a href=&quot;http://www.craigabbott.co.uk/one-page-applications-are-not-accessible&quot;&gt;One-page-applications are not accessible&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;they-just-dont-feel-right&quot;&gt;14. They just don’t feel right&lt;/h2&gt;
+
+&lt;p&gt;I’ll defer to Stefan’s excellent article: &lt;a href=&quot;https://medium.freecodecamp.org/why-i-hate-your-single-page-app-f08bb4ff9134&quot;&gt;Why I hate your Single Page App&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
