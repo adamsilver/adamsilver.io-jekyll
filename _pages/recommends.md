@@ -22,8 +22,10 @@ permalink: /recommends/
 * [The Hamburger doesn't work](http://deep.design/the-hamburger-menu/)
 * [Fixed positioning is a nightmare](http://bradfrost.com/blog/mobile/fixed-position/)
 * [Death to bullshit](http://deathtobullshit.com)
+* [The cult of the complex](https://alistapart.com/article/cult-of-the-complex)
+* [Simple made easy](https://www.infoq.com/presentations/Simple-Made-Easy)
 
-## Front-end
+## Frontend
 
 * [Introducing awfulness.js](https://tommorris.org/posts/2547") by Tom Morris
 * [Cross browser widgets](http://peter.michaux.ca/articles/cross-browser-widgets) by Peter Michaux
