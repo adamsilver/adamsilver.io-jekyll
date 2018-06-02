@@ -3,7 +3,7 @@
 	<title>Adam Silver: interaction designer and interface developer from London, UK</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2018-05-31T09:37:23+01:00</updated>
+	<updated>2018-06-02T07:35:33+01:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -3937,9 +3937,9 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 			<link href="https://adamsilver.io/articles/the-disadvantages-of-single-page-applications/"/>
 			<updated>2014-08-11T10:00:01+01:00</updated>
 			<id>https://adamsilver.io/articles/the-disadvantages-of-single-page-applications</id>
-			<content type="html">&lt;p&gt;Maybe you think single page applications (SPAs) provide a better user experience. But, not only do they cause usability problems, they are much harder to design and build.&lt;/p&gt;
+			<content type="html">&lt;p&gt;Single page applications (SPAs) are meant to provide a better user experience. But, not only do they cause many usability problems, they’re much harder to design and build.&lt;/p&gt;
 
-&lt;p&gt;Before getting into the issues, let’s clarify what an SPA is.&lt;/p&gt;
+&lt;p&gt;Before getting to the issues, let’s clarify what an SPA is.&lt;/p&gt;
 
 &lt;h2 id=&quot;whats-an-spa&quot;&gt;What’s an SPA?&lt;/h2&gt;
 
@@ -3947,7 +3947,7 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 
 &lt;p&gt;What really defines an SPA as such, is the fact that client-side JS handles the routing &lt;em&gt;instead&lt;/em&gt; of the browser. That is, the application hijacks the behaviour that browsers inherently provide natively for &lt;em&gt;free&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Put like that, it’s hardly surprising that they cause so many problems:&lt;/p&gt;
+&lt;p&gt;Put like that, it’s hardly surprising that SPAs cause so many problems:&lt;/p&gt;
 
 &lt;h2 id=&quot;history-and-fast-back&quot;&gt;1. History and fast back&lt;/h2&gt;
 
