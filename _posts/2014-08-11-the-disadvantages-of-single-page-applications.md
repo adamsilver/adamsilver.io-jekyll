@@ -6,9 +6,9 @@ categories: js spas featured
 description: Single page applications promise a better experience. This is rarely the case. Find out why in this article.
 ---
 
-Maybe you think single page applications (SPAs) provide a better user experience. But, not only do they cause usability problems, they are much harder to design and build.
+Single page applications (SPAs) are meant to provide a better user experience. But, not only do they cause many usability problems, they're much harder to design and build.
 
-Before getting into the issues, let's clarify what an SPA is.
+Before getting to the issues, let's clarify what an SPA is.
 
 ## What's an SPA?
 
@@ -16,7 +16,7 @@ You might associate MVC, AJAX and client-side templating with an SPA. But these 
 
 What really defines an SPA as such, is the fact that client-side JS handles the routing *instead* of the browser. That is, the application hijacks the behaviour that browsers inherently provide natively for *free*.
 
-Put like that, it's hardly surprising that they cause so many problems:
+Put like that, it's hardly surprising that SPAs cause so many problems:
 
 ## 1. History and fast back
 
