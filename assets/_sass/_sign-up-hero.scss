@@ -1,0 +1,29 @@
+.signUpHero {
+	padding-bottom: 24px;
+	margin: 0 auto;
+	max-width: 41.25em;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.signUpHero-description {
+	font-size: 1em;
+	line-height: 1.7;
+	max-width: 43.75em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 24px;
+	color: #222;
+	font-style: italic;
+}
+
+@media(min-width: 37.5em) {
+	.signUpHero-description {
+		font-size: 1.1877em;
+		margin-bottom: 32px;
+	}
+}
+
+.signUpHero a {
+	color: #fff;
+}

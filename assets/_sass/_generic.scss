@@ -1,0 +1,37 @@
+input {
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+html {
+	font-size: 100%;
+	font-family: 'Roboto', arial, sans-serif;
+}
+
+body {
+	border-top: 6px solid #0074D9;
+  text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+kbd {
+  padding: 0.0625rem 0.5rem;
+  border-radius: 0.125rem;
+  border: 1px solid #000;
+  box-shadow: 1px 1px 0 currentColor, 1px 1px 0 currentColor;
+}
+
+a:link,
+a:visited {
+	color: #0074D9;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+}
+
+a:active {
+	background-color: #0074D9;
+	color: #fff;
+}

@@ -11,7 +11,7 @@ id: home
 
 I've written for [Smashing Magazine](https://www.smashingmagazine.com/author/adamsilver/), [A List Apart](https://alistapart.com/author/adamsilver) and [Net Magazine](http://www.creativebloq.com/net-magazine). But I share my newest articles with my mailing list first. No spam and definitely no popups. Just one article a month (ish), straight to your inbox. Sign up below:
 
-{% include signUpForm.html %}
+{% include subscribeForm.html %}
 
 See what I'm doing [now](/now/) or find me on [Twitter](http://www.twitter.com/adambsilver/), [Github](http://www.github.com/adamsilver/), [Linkedin](http://uk.linkedin.com/in/adambsilver/) and [Medium](http://medium.com/@adambsilver).
 

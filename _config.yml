@@ -6,3 +6,5 @@ include: ['_pages']
 description: I'm Adam Silver, an interaction designer who codes simple and inclusive digital services, products and websites.
 future: true
 exclude: ['node_modules', 'Gruntfile.js']
+sass:
+  sass_dir: assets/_sass
