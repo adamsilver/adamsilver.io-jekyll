@@ -1,11 +1,6 @@
 module.exports = function(grunt) {
 
 	grunt.initConfig({
-		clean: {
-			css: [
-				'_site/assets/css/*.css'
-			]
-		},
 		cssmin: {
 			options: {
 				report: 'gzip'
@@ -13,16 +8,16 @@ module.exports = function(grunt) {
 		},
 		filerev: {
 			dist: {
-                src: [
-                    '_site/assets/css/*.css'
-                ]
-            }
+        src: [
+          '_site/assets/css/*.css'
+        ]
+      }
 		},
 		useminPrepare: {
 			html: '_includes/headCss.html',
 			options: {
 				dest: '_site/',
-				root: './'
+				root: '_site/'
 			}
 		},
 		usemin: {
@@ -30,6 +25,12 @@ module.exports = function(grunt) {
 			options: {
 				assetsDirs: ['_site', '_site/css']
 			}
+		},
+		clean: {
+			css: [
+				'_site/assets/css/*.css',
+				'!_site/assets/css/*.min.*.css'
+			]
 		}
 	});
 
@@ -44,13 +45,12 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerTask('default', [
-		'clean:css',
 		'useminPrepare',
-		'concat:generated',
 		'concat:generated',
 		'cssmin:generated',
 		'filerev:dist',
-		'usemin'
+		'usemin',
+		'clean:css'
 	]);
 
 };
