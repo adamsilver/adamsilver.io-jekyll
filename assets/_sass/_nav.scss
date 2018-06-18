@@ -1,24 +1,25 @@
 .nav {
-	padding-top: 17px;
-	padding-bottom: 7px;
+	padding-top: $spacing-scale-2;
+	padding-bottom: $spacing-scale-1;
 	max-width: 41.25em;
 	margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: $spacing-scale-3;
+  padding-right: $spacing-scale-3;
 }
 
 .nav ul {
 	list-style: none;
 	line-height: 1;
+	margin: 0 auto;
 }
 
 .nav li {
 	display: inline-block;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: $spacing-scale-1;
+  margin-right: $spacing-scale-1;
+	margin-bottom: $spacing-scale-1;
   font-size: 1em;
-	margin-bottom: 8px;
 	line-height: 1;
 }
 

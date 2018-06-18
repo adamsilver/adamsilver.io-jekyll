@@ -1,102 +1,60 @@
 .mainContent {
-	padding-top: 32px;
+	padding-top: $spacing-scale-4;
 	max-width: 43.75em;
-	padding-bottom: 24px;
+	padding-bottom: $spacing-scale-4;
 	margin: 0 auto;
 	display: block;
-}
-
-@media(min-width: 37.5em) {
-	.mainContent {
-		padding-top: 40px;
+	@include mq($from: md) {
+		padding-top: $spacing-scale-5;
 	}
 }
 
 .mainContent h1 {
-	font-size: 1.88em;
-	font-size: 2em;
-	line-height: 1.2;
-	line-height: 1.25;
+	@include typography(xl);
 	max-width: 43.75em;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0 20px;
-	/* padding: 0 24px; */
-	margin-bottom: 20px;
-	margin-bottom: 24px;
+	padding: 0 $spacing-scale-3;
+	margin-bottom: $spacing-scale-4;
 	color: #222;
-}
-
-@media(min-width: 37.5em) {
-	.mainContent h1 {
-		font-size: 2.8em;
-		font-size: 3em;
-		line-height: 1.166666667;
-	}
 }
 
 .mainContent h2 {
-	font-size: 1.38em;
-	font-size: 1.5em;
-	line-height: 1.2;
-	line-height: 1.3333333333;
+	@include typography(l);
 	max-width: 43.75em;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 8px;
-	padding: 0 20px;
+	margin-bottom: $spacing-scale-1;
+	padding: 0 $spacing-scale-3;
 	color: #222;
-	margin-top: 32px;
-}
+	margin-top: $spacing-scale-4;
 
-@media(min-width: 37.5em) {
-	.mainContent h2 {
-		font-size: 1.56em;
-		font-size: 2em;
-		line-height: 1.25;
-
-		margin-top: 40px;
+	@include mq($from: md) {
+		margin-top: $spacing-scale-5;
 	}
 }
 
 .mainContent h3 {
-	font-size: 1em;
-	line-height: 1.5;
+	@include typography(body);
 	max-width: 43.75em;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 8px;
-	padding: 0 20px;
+	margin-bottom: $spacing-scale-1;
+	padding: 0 $spacing-scale-3;
 	color: #222;
-	margin-top: 24px;
-}
-
-@media(min-width: 37.5em) {
-	.mainContent h3 {
-		font-size: 1.25em;
-		line-height: 1.2;
-	}
+	margin-top: $spacing-scale-4;
 }
 
 .mainContent p {
-	font-size: 1em;
-	line-height: 1.5;
+	@include typography(body);
 	max-width: 43.75em;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 20px;
-	margin-bottom: 24px;
-	padding: 0 20px 10px;
-	padding: 0 20px;
+	margin-bottom: $spacing-scale-4;
+	padding: 0 $spacing-scale-3;
 	color: #222;
-}
-
-@media(min-width: 37.5em) {
-	.mainContent p {
-		font-size: 1.125em;
-		font-size: 1.1875em;
-		line-height: 1.684210526;
-		margin-bottom: 32px;
+	@include mq($from: md) {
+		margin-bottom: $spacing-scale-4;
 	}
 }
 
@@ -105,31 +63,25 @@
 	max-width: 43.75em;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 25px;
-	padding: 0 20px 10px;
+	margin-bottom: $spacing-scale-3;
+	padding: 0 $spacing-scale-3 $spacing-scale-1;
 	color: #222;
 }
 
 @media(min-width: 37.5em) {
 	.mainContent ol,
 	.mainContent ul {
-		margin-bottom: 30px;
+		margin-bottom: $spacing-scale-4;
 	}
 }
 
 .mainContent ol li,
 .mainContent ul li {
-	font-size: 1em;
-	line-height: 1.5;
-	margin-left: 30px;
-	margin-bottom: 5px;
-}
-
-@media(min-width: 37.5em) {
-	.mainContent ol li,
-	.mainContent ul li {
-		font-size: 1.19em;
-		margin-bottom: 10px;
+	@include typography(body);
+	margin-left: $spacing-scale-4;
+	margin-bottom: $spacing-scale-1;
+	@include mq($from: md) {
+		margin-bottom: $spacing-scale-1;
 	}
 }
 
@@ -138,8 +90,8 @@
 	max-width: 43.75em;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 32px;
-	padding: 0 20px;
+	margin-bottom: $spacing-scale-4;
+	padding: 0 $spacing-scale-3;
 	color: #222;
 }
 
@@ -156,11 +108,10 @@
 
 .mainContent pre {
 	font-family: Monaco,'Courier New','Courier',monospace;
-	/* font-size: 1.25em; */
 	color: #222;
 	background-color: #fffee1;
-	margin-bottom: 32px;
-	padding: 24px;
+	margin-bottom: $spacing-scale-4;
+	padding: $spacing-scale-4;
 	white-space: pre-wrap;       /* css-3 */
 	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
 	white-space: -pre-wrap;      /* Opera 4-6 */
@@ -169,59 +120,45 @@
 	max-width: 43.75em;
 	margin-left: auto;
 	margin-right: auto;
+	@include mq($from: md) {
+		margin-bottom: $spacing-scale-5;
+		font-size: inherit;
+	}
 }
 
 .mainContent pre code {
-	font-size: 16px;
-	line-height: 24px;
-}
-
-@media(min-width: 37.5em) {
-	.mainContent pre {
-		margin-bottom: 40px;
-		font-size: inherit;
-	}
-
-	.mainContent pre code {
+	font-size: 1em;
+	line-height: $spacing-scale-4;
+	@include mq($from: md) {
 		font-size: 1.462em;
-		line-height: 32px;
-		line-height: 1.5999999999;
+		line-height: 32/19;
 	}
 }
 
 .mainContent figure {
-	margin-bottom: 30px;
-	padding: 0 20px;
-}
-
-@media(min-width: 37.5em) {
-	.mainContent figure {
-		margin-bottom: 45px;
+	margin-bottom: $spacing-scale-4;
+	padding: 0 $spacing-scale-3;
+	@include mq($from: md) {
+		margin-bottom: $spacing-scale-5;
 	}
 }
 
 .mainContent figure img {
-	margin-bottom: 5px;
+	margin-bottom: $spacing-scale-1;
 	display: block;
 }
 
 .mainContent figure figcaption {
 	font-size: 0.81em;
 	font-style: italic;
-}
-
-@media(min-width: 37.5em) {
-	.mainContent figure figcaption {
+	@include mq($from: md) {
 		font-size: 1em;
 	}
 }
 
 .mainContent iframe {
-	margin-bottom: 30px;
-}
-
-@media(min-width: 37.5em) {
-	.mainContent iframe {
-		margin-bottom: 45px;
+	margin-bottom: $spacing-scale-4;
+	@include mq($from: md) {
+		margin-bottom: $spacing-scale-5;
 	}
 }
