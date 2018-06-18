@@ -15,7 +15,7 @@
   line-height: 1.684210526;
 	display: block;
 	font-weight: 700;
-	color: #0074D9;
+	color: $colour-blue;
 }
 
 @media(min-width: 37em) {
@@ -32,7 +32,7 @@
 	font-size: 1em;
 	border-radius: 0;
 	-webkit-appearance: none;
-	border: 3px solid #0074D9;
+	border: 3px solid $colour-blue;
 
 	width: 100%;
 	box-sizing: border-box;
@@ -53,9 +53,9 @@
 	font-size: 1em;
 	border-radius: 8px;
 	-webkit-appearance: none;
-	border: 3px solid #0074D9;
-	background-color: #0074D9;
-	color: #fff;
+	border: 3px solid $colour-blue;
+	background-color: $colour-blue;
+	color: $colour-white;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -69,6 +69,6 @@
 }
 
 .subscribeForm-button:hover {
-	background-color: #0056a0;
-	border-color: #0056a0;
+	background-color: $colour-blue-dark;
+	border-color: $colour-blue-dark;
 }

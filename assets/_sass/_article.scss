@@ -16,7 +16,7 @@
 	margin-right: auto;
 	padding: 0 $spacing-scale-3;
 	margin-bottom: $spacing-scale-4;
-	color: #222;
+	color: $colour-black;
 }
 
 .mainContent h2 {
@@ -26,7 +26,7 @@
 	margin-right: auto;
 	margin-bottom: $spacing-scale-1;
 	padding: 0 $spacing-scale-3;
-	color: #222;
+	color: $colour-black;
 	margin-top: $spacing-scale-4;
 
 	@include mq($from: md) {
@@ -41,7 +41,7 @@
 	margin-right: auto;
 	margin-bottom: $spacing-scale-1;
 	padding: 0 $spacing-scale-3;
-	color: #222;
+	color: $colour-black;
 	margin-top: $spacing-scale-4;
 }
 
@@ -52,7 +52,7 @@
 	margin-right: auto;
 	margin-bottom: $spacing-scale-4;
 	padding: 0 $spacing-scale-3;
-	color: #222;
+	color: $colour-black;
 	@include mq($from: md) {
 		margin-bottom: $spacing-scale-4;
 	}
@@ -65,7 +65,7 @@
 	margin-right: auto;
 	margin-bottom: $spacing-scale-3;
 	padding: 0 $spacing-scale-3 $spacing-scale-1;
-	color: #222;
+	color: $colour-black;
 }
 
 @media(min-width: 37.5em) {
@@ -92,7 +92,7 @@
 	margin-right: auto;
 	margin-bottom: $spacing-scale-4;
 	padding: 0 $spacing-scale-3;
-	color: #222;
+	color: $colour-black;
 }
 
 .mainContent blockquote cite {
@@ -103,13 +103,13 @@
 .mainContent ul code,
 .mainContent li code {
 	font-size: 1.2em;
-	color: #0074D9;
+	color: $colour-blue;
 }
 
 .mainContent pre {
 	font-family: Monaco,'Courier New','Courier',monospace;
-	color: #222;
-	background-color: #fffee1;
+	color: $colour-black;
+	background-color: $colour-yellow-light;
 	margin-bottom: $spacing-scale-4;
 	padding: $spacing-scale-4;
 	white-space: pre-wrap;       /* css-3 */

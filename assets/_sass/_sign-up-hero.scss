@@ -13,7 +13,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 24px;
-	color: #222;
+	color: $colour-black;
 	font-style: italic;
 }
 
@@ -25,5 +25,5 @@
 }
 
 .signUpHero a {
-	color: #fff;
+	color: $colour-white;
 }

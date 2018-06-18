@@ -35,21 +35,21 @@
 .nav a:visited {
 	text-decoration: none;
 	display: block;
-	color: #333;
-	background-color: #fff;
+	color: $colour-black;
+	background-color: $colour-white;
 }
 
 .nav a:hover {
-  color: #0074D9;
+  color: $colour-blue;
 }
 
 .nav a:active,
 .nav a.nav-active:active {
-	color: #fff;
-	background-color: #0074D9;
+	color: $colour-white;
+	background-color: $colour-blue;
 }
 
 .nav a.nav-active {
 	font-weight: bold;
-	color: #0074D9;
+	color: $colour-blue;
 }

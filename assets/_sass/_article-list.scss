@@ -1,54 +1,14 @@
-.articleList {
-	padding-top: 30px;
-	max-width: 43.75em;
-	margin: 0 auto 0px;
-}
-
-@media(min-width: 37.5em) {
-	.articleList {
-		padding-top: 40px;
-	}
-}
-
-.articleList h1 {
-	margin: 0 20px 35px;
-	font-size: 3.1em;
-	line-height: 1.25em;
-}
-
-@media(min-width: 37.5em) {
-	.articleList h1 {
-		font-size: 3.8em;
-	}
-}
-
-.articleList-article {
-	margin-bottom: 30px;
-}
-
-@media(min-width: 37.5em) {
-	.articleList-article {
-		margin-bottom: 45px;
-	}
-}
-
 .mainContent .articleList-articleTitle {
 	max-width: 25em;
 	margin: 0;
-	font-size: 1.13em;
-}
-
-@media(min-width: 37.5em) {
-	.mainContent .articleList-articleTitle {
-		font-size: 1.38em;
+	@include typography(body);
+	margin-bottom: $spacing-scale-3;
+	@include mq($from: md) {
+		margin-bottom: $spacing-scale-4;
 	}
 }
 
-.articleList a:active {
-    color: #fff;
-    background-color: #0074D9;
-}
-
-.articleList-articleTitle a:active {
-    background-color: #0074D9;
+.mainContent .articleList-articleTitle a:active {
+	color: $colour-white;
+  background-color: $colour-blue;
 }

@@ -9,7 +9,7 @@ html {
 }
 
 body {
-	border-top: 6px solid #0074D9;
+	border-top: 6px solid $colour-blue;
   text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 }
@@ -17,13 +17,13 @@ body {
 kbd {
   padding: 0.0625rem 0.5rem;
   border-radius: 0.125rem;
-  border: 1px solid #000;
+  border: 1px solid $colour-black;
   box-shadow: 1px 1px 0 currentColor, 1px 1px 0 currentColor;
 }
 
 a:link,
 a:visited {
-	color: #0074D9;
+	color: $colour-blue;
 }
 
 a:hover,
@@ -32,6 +32,6 @@ a:focus {
 }
 
 a:active {
-	background-color: #0074D9;
-	color: #fff;
+	background-color: $colour-blue;
+	color: $colour-white;
 }
