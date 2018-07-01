@@ -7,7 +7,7 @@ categories: content design
 
 *(This is something I first sent out to my private mailing list.)*
 
-Toward the end end of writing my upcoming book (Form Design Patterns in case you didn't know), I had to attribute this quote:
+Toward the end of writing my upcoming book (Form Design Patterns in case you didn't know), I had to attribute this quote:
 
 > “Content is the user experience”
 
