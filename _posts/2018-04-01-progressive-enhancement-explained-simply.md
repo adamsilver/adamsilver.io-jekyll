@@ -2,7 +2,7 @@
 layout: post
 title: Progressive enhancement explained simply
 date: 2018-04-01 09:00:01
-categories: js
+categories: design progressive enhancement
 ---
 
 *This is a little excerpt from my upcoming book, Form Design Patterns. [Sign up to my newsletter]({{site.url}}/signup/) and I'll tell you when it's on pre-sale.*

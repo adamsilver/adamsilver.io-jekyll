@@ -1,7 +1,7 @@
 .subscribeForm {
 	max-width: 41.25em;
 	margin: 0 auto 40px;
-	padding: 0 20px;
+	padding: 0 $spacing-scale-2;
 }
 
 @media(min-width: 37em) {

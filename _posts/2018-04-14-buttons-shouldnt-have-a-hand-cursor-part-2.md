@@ -2,7 +2,7 @@
 layout: post
 title: Buttons shouldn't have a hand cursor part 2
 date: 2018-04-14 09:00:01
-categories: html css
+categories: design html css
 ---
 
 In [Buttons shouldn’t have a hand cursor](/articles/buttons-shouldnt-have-a-hand-cursor/) I explained that the hand (or pointer) cursor doesn’t mean clickable and that it’s meant to signify a link.

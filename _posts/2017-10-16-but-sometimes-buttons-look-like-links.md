@@ -2,7 +2,7 @@
 layout: post
 title: But sometimes buttons look like links
 date: 2017-10-16 09:00:01
-categories: ui
+categories: design
 ---
 
 Sometimes we make links look like buttons. Sometimes we make buttons look like links. This is unfortunate and maybe there's something we can do about this. But before we get to it, let's discuss the four different types of buttons and links.
