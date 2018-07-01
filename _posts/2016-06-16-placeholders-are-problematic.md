@@ -6,13 +6,13 @@ categories: design ux
 description: Placeholders have 13 problems and one simple solution. Find out everything you need to know in this article.
 ---
 
-Since placeholders came along, designers have adopted them as means of storing hints. Their appeal lies in their minimal aesthetic and the fact they save space.
+Since the placeholder attribute came along, designers have used it as means of storing hints. The appeal lies in their minimal aesthetic (they save space).
 
-Some designers go one one step further, and replace labels with placeholders. Either way, the placeholder is an Inclusive Design anti-pattern which causes problems for users. Here's why:
+Some designers go one one step further, and replace labels with placeholders. Either way, placeholders are an inclusive design anti-pattern which causes problems for users. Here's why:
 
-## 1. It's easy to forget
+## 1. They are hard to remember
 
-The placeholder disappears when the user types. Once it's gone it's hard to remember.
+The placeholder disappears when the user types. Once it's gone it's hard to recall.
 
 <div class="image">
 	<figure>
@@ -23,7 +23,7 @@ The placeholder disappears when the user types. Once it's gone it's hard to reme
 
 ## 2. Lack of browser support
 
-[Not all browsers support the placeholder](http://caniuse.com/#feat=input-placeholder). In which case, the user will suffer a broken experience.
+[Not all browsers support placeholders](http://caniuse.com/#feat=input-placeholder). In which case, the user will suffer a broken experience.
 
 <div class="image">
 	<figure>
@@ -45,7 +45,7 @@ It's obvious that a missing label is fatal. But if the hint is missing, a user w
 
 ## 4. Reviewing entries before submission is difficult
 
-A user will need to memorise all the hints in order to check their form entries before submission. This is because as each form field is filled out, the hint disappears. The more fields there are the bigger the problem.
+A user will need to memorise all the hints in order to check their form entries before submission. This is because as each form field is filled out, the hint disappears. The more fields there are, the bigger the problem.
 
 ## 5. Errors are hard to fix
 
@@ -58,7 +58,7 @@ Errors are hard to fix because the message and the value lack context. And the h
 	</figure>
 </div>
 
-You could write a verbose error message. For example *"Your password must be at least 8 characters"* instead of *"Must be at least 8 characters"*. But this doesn't entirely solve the problem.
+You could write a verbose error message. For example “Your password must be at least 8 characters” instead of “Must be at least 8 characters”. But this doesn't entirely solve the problem.
 
 ## 6. Some browsers hide the placeholder on focus
 
@@ -82,18 +82,19 @@ People that don't notice the subtle difference in contrast will skip the field m
 	</figure>
 </div>
 
+Or some users will try and select the placeholder text (because they think it's actual text) and it will be confusing when they can't.
+
 ## 8. They have insufficient contrast
 
 Placeholder text has a lower contrast to help users realise it's not a value. Some people will struggle to read the text due to the lack of contrast.
 
 ## 9. Screen readers may not announce them
 
-Placeholders may not be read out by screen readers which is the visual
-equivalent of a blank box.
+Placeholders may not be read out by screen readers making this exclusive to sighted users.
 
 ## 10. The hit area is reduced
 
-Clicking a label moves the focus to the field. This is helpful to everyone but even moreso to people with fine motor skill impairments. Fields with the label and hint outside, increases the size of the hit area.
+Clicking a label moves the focus to the field. This helps everyone but even moreso to users with fine motor skill impairments. Fields with the label and hint outside, increases the size of the hit area.
 
 <div class="image">
 	<figure>
@@ -120,6 +121,17 @@ For example, when Chrome translates a web page, it will fail to translate the te
 ## 13. Browser auto-complete exacerbates the problem
 
 The browser's auto-completion routine populates the fields automatically. This means the placeholder text disappears making it difficult for the user to check the values against what the fields intended.
+
+## 14. In Windows High Contrast Mode placeholder text looks like an actual value
+
+In High Contrast Mode, placeholder text is given high contrast colors, making it look like an actual value.
+
+<div class="image">
+	<figure>
+		<img src="{{ site.url }}/assets/img/placeholders/14.png" alt="Placeholder copy gets cropped." width="100%">
+		<figcaption>Placeholder text in Windows 10 High Contrast Mode</figcaption>
+	</figure>
+</div>
 
 ## Summary
 
