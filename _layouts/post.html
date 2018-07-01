@@ -6,9 +6,13 @@
 	<body>
 	  {% include header.html %}
 	  <main class="mainContent">
-			<h1 class="article-heading">{{ page.title }}</h1>
-	      {{ content }}
+		  <h1 class="article-heading">{{ page.title }}</h1>
+	    {{ content }}
+      <div class="signUpHero">
+        —
+        <p class="signUpHero-description">I write articles like this and share them with my private mailing list. No spam and definitely no popups. Just one article a month, straight to your inbox. Sign up below:</p>
+      </div>
+      {% include subscribeForm.html %}
 	  </main>
-		{% include signUpHero.html layout=page.layout %}
 	</body>
 </html>

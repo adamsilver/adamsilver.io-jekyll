@@ -1,12 +1,7 @@
 .subscribeForm {
-	max-width: 41.25em;
-	margin: 0 auto 40px;
-	padding: 0 $spacing-scale-2;
-}
-
-@media(min-width: 37em) {
-	.subscribeForm {
-		margin-bottom: 80px;
+	margin: 0 auto $spacing-scale-5;
+	@include mq($from: md) {
+		margin-bottom: $spacing-scale-9;
 	}
 }
 

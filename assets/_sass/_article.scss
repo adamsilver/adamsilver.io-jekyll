@@ -1,7 +1,9 @@
 .mainContent {
 	padding-top: $spacing-scale-4;
-	max-width: 43.75em;
+	max-width: em(600);
 	padding-bottom: $spacing-scale-4;
+	padding-left: $spacing-scale-2;
+	padding-right: $spacing-scale-2;
 	margin: 0 auto;
 	display: block;
 	@include mq($from: md) {
@@ -11,21 +13,15 @@
 
 .mainContent h1 {
 	@include typography(xl);
-	max-width: 43.75em;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 0 $spacing-scale-3;
 	margin-bottom: $spacing-scale-4;
 	color: $colour-black;
 }
 
 .mainContent h2 {
 	@include typography(l);
-	max-width: 43.75em;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: $spacing-scale-2;
-	padding: 0 $spacing-scale-3;
 	color: $colour-black;
 	margin-top: $spacing-scale-4;
 
@@ -36,22 +32,14 @@
 
 .mainContent h3 {
 	@include typography(body);
-	max-width: 43.75em;
-	margin-left: auto;
-	margin-right: auto;
 	margin-bottom: $spacing-scale-1;
-	padding: 0 $spacing-scale-3;
 	color: $colour-black;
 	margin-top: $spacing-scale-4;
 }
 
 .mainContent p {
 	@include typography(body);
-	max-width: 43.75em;
-	margin-left: auto;
-	margin-right: auto;
 	margin-bottom: $spacing-scale-4;
-	padding: 0 $spacing-scale-3;
 	color: $colour-black;
 	@include mq($from: md) {
 		margin-bottom: $spacing-scale-4;
@@ -60,19 +48,8 @@
 
 .mainContent ol,
 .mainContent ul {
-	max-width: 43.75em;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: $spacing-scale-3;
-	padding: 0 $spacing-scale-3 $spacing-scale-1;
+	margin-bottom: $spacing-scale-4;
 	color: $colour-black;
-}
-
-@media(min-width: 37.5em) {
-	.mainContent ol,
-	.mainContent ul {
-		margin-bottom: $spacing-scale-4;
-	}
 }
 
 .mainContent ol li,
@@ -80,16 +57,10 @@
 	@include typography(body);
 	margin-left: $spacing-scale-4;
 	margin-bottom: $spacing-scale-1;
-	@include mq($from: md) {
-		margin-bottom: $spacing-scale-1;
-	}
 }
 
 .mainContent blockquote {
 	font-style: italic;
-	max-width: 43.75em;
-	margin-left: auto;
-	margin-right: auto;
 	margin-bottom: $spacing-scale-4;
 	padding: 0 $spacing-scale-3;
 	color: $colour-black;
@@ -117,9 +88,6 @@
 	white-space: -pre-wrap;      /* Opera 4-6 */
 	white-space: -o-pre-wrap;    /* Opera 7 */
 	word-wrap: break-word;       /* Internet Explorer 5.5+ */
-	max-width: 43.75em;
-	margin-left: auto;
-	margin-right: auto;
 	@include mq($from: md) {
 		margin-bottom: $spacing-scale-5;
 		font-size: inherit;
@@ -137,7 +105,6 @@
 
 .mainContent figure {
 	margin-bottom: $spacing-scale-4;
-	padding: 0 $spacing-scale-3;
 	@include mq($from: md) {
 		margin-bottom: $spacing-scale-5;
 	}

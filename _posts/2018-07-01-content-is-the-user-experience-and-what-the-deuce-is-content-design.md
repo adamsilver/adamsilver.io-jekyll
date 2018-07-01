@@ -114,4 +114,4 @@ In my confusion, I thought I’d ask Amy Hupe. She’s a brilliant content desig
 
 Amy nailed it. But it still doesn’t make the boundaries of responsibility clearer, but I think that’s the point.
 
-Remove the boundaries.g
+Remove the boundaries.
