@@ -114,13 +114,13 @@
 </nav>
 	  <main class="mainContent">
 		  <h1 class="article-heading">Placeholders are problematic</h1>
-	    <p>Since placeholders came along, designers have adopted them as means of storing hints. Their appeal lies in their minimal aesthetic and the fact they save space.</p>
+	    <p>Since the placeholder attribute came along, designers have used it as means of storing hints. The appeal lies in their minimal aesthetic (they save space).</p>
 
-<p>Some designers go one one step further, and replace labels with placeholders. Either way, the placeholder is an Inclusive Design anti-pattern which causes problems for users. Here’s why:</p>
+<p>Some designers go one one step further, and replace labels with placeholders. Either way, placeholders are an inclusive design anti-pattern which causes problems for users. Here’s why:</p>
 
-<h2 id="its-easy-to-forget">1. It’s easy to forget</h2>
+<h2 id="they-are-hard-to-remember">1. They are hard to remember</h2>
 
-<p>The placeholder disappears when the user types. Once it’s gone it’s hard to remember.</p>
+<p>The placeholder disappears when the user types. Once it’s gone it’s hard to recall.</p>
 
 <div class="image">
 	<figure>
@@ -131,7 +131,7 @@
 
 <h2 id="lack-of-browser-support">2. Lack of browser support</h2>
 
-<p><a href="http://caniuse.com/#feat=input-placeholder">Not all browsers support the placeholder</a>. In which case, the user will suffer a broken experience.</p>
+<p><a href="http://caniuse.com/#feat=input-placeholder">Not all browsers support placeholders</a>. In which case, the user will suffer a broken experience.</p>
 
 <div class="image">
 	<figure>
@@ -153,7 +153,7 @@
 
 <h2 id="reviewing-entries-before-submission-is-difficult">4. Reviewing entries before submission is difficult</h2>
 
-<p>A user will need to memorise all the hints in order to check their form entries before submission. This is because as each form field is filled out, the hint disappears. The more fields there are the bigger the problem.</p>
+<p>A user will need to memorise all the hints in order to check their form entries before submission. This is because as each form field is filled out, the hint disappears. The more fields there are, the bigger the problem.</p>
 
 <h2 id="errors-are-hard-to-fix">5. Errors are hard to fix</h2>
 
@@ -166,7 +166,7 @@
 	</figure>
 </div>
 
-<p>You could write a verbose error message. For example <em>“Your password must be at least 8 characters”</em> instead of <em>“Must be at least 8 characters”</em>. But this doesn’t entirely solve the problem.</p>
+<p>You could write a verbose error message. For example “Your password must be at least 8 characters” instead of “Must be at least 8 characters”. But this doesn’t entirely solve the problem.</p>
 
 <h2 id="some-browsers-hide-the-placeholder-on-focus">6. Some browsers hide the placeholder on focus</h2>
 
@@ -190,18 +190,19 @@
 	</figure>
 </div>
 
+<p>Or some users will try and select the placeholder text (because they think it’s actual text) and it will be confusing when they can’t.</p>
+
 <h2 id="they-have-insufficient-contrast">8. They have insufficient contrast</h2>
 
 <p>Placeholder text has a lower contrast to help users realise it’s not a value. Some people will struggle to read the text due to the lack of contrast.</p>
 
 <h2 id="screen-readers-may-not-announce-them">9. Screen readers may not announce them</h2>
 
-<p>Placeholders may not be read out by screen readers which is the visual
-equivalent of a blank box.</p>
+<p>Placeholders may not be read out by screen readers making this exclusive to sighted users.</p>
 
 <h2 id="the-hit-area-is-reduced">10. The hit area is reduced</h2>
 
-<p>Clicking a label moves the focus to the field. This is helpful to everyone but even moreso to people with fine motor skill impairments. Fields with the label and hint outside, increases the size of the hit area.</p>
+<p>Clicking a label moves the focus to the field. This helps everyone but even moreso to users with fine motor skill impairments. Fields with the label and hint outside, increases the size of the hit area.</p>
 
 <div class="image">
 	<figure>
@@ -228,6 +229,17 @@ equivalent of a blank box.</p>
 <h2 id="browser-auto-complete-exacerbates-the-problem">13. Browser auto-complete exacerbates the problem</h2>
 
 <p>The browser’s auto-completion routine populates the fields automatically. This means the placeholder text disappears making it difficult for the user to check the values against what the fields intended.</p>
+
+<h2 id="in-windows-high-contrast-mode-placeholder-text-looks-like-an-actual-value">14. In Windows High Contrast Mode placeholder text looks like an actual value</h2>
+
+<p>In High Contrast Mode, placeholder text is given high contrast colors, making it look like an actual value.</p>
+
+<div class="image">
+	<figure>
+		<img src="https://adamsilver.io/assets/img/placeholders/14.png" alt="Placeholder copy gets cropped." width="100%" />
+		<figcaption>Placeholder text in Windows 10 High Contrast Mode</figcaption>
+	</figure>
+</div>
 
 <h2 id="summary">Summary</h2>
 
