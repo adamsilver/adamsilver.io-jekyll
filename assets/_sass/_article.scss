@@ -17,6 +17,15 @@
 	color: $colour-black;
 }
 
+.mainContent .article-heading {
+	margin-bottom: 0;
+}
+
+.mainContent .article-date {
+	font-style: italic;
+	// margin-bottom: $spacing-scale-4;
+}
+
 .mainContent h2 {
 	@include typography(l);
 	margin-left: auto;

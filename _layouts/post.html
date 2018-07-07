@@ -6,7 +6,9 @@
 	<body>
 	  {% include header.html %}
 	  <main class="mainContent">
-		  <h1 class="article-heading">{{ page.title }}</h1>
+			<h1 class="article-heading">{{ page.title }}</h1>
+			<p class="article-date">Published on <time date-time="{{page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%-d %B %Y" }}</time></p>
+		</div>
 	    {{ content }}
       <div class="signUpHero">
         —

@@ -1,14 +1,20 @@
 .mainContent .articleList-articleTitle {
 	max-width: 25em;
 	margin: 0;
-	@include typography(body);
-	margin-bottom: $spacing-scale-3;
-	@include mq($from: md) {
-		margin-bottom: $spacing-scale-4;
-	}
 }
 
 .mainContent .articleList-articleTitle a:active {
 	color: $colour-white;
   background-color: $colour-blue;
+}
+
+.articleList-article {
+	margin-bottom: $spacing-scale-3;
+	@include mq($from: md) {
+		margin-bottom: $spacing-scale-4;
+	}
+
+	time {
+		font-style: italic;
+	}
 }
