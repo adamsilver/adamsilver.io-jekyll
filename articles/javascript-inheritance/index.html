@@ -69,7 +69,7 @@
 	<meta itemprop="description" content="Developers often complicate Javascript inheritance. Here is a powerful, yet simple technique for doing it.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.4176503a.css" media="all">
+<link rel="stylesheet" href="/assets/css/main.min.e851813f.css" media="all">
 
 <!--[if IE 8]>
 <link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
@@ -120,7 +120,7 @@
 
 <p>Here’s a ready made inherit function you can use in your project:</p>
 
-<pre><code>/**** The namespace ****/
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/**** The namespace ****/
 var lib = {};
 
 /**** The cloneObject function ****/
@@ -153,11 +153,11 @@ lib.inherit = function(Sub, Super) {
     // Assign child as the child constructor
     Sub.prototype.constructor = Sub;
 };
-</code></pre>
+</code></pre></div></div>
 
 <p>As an example you might want a superhero to inherit the features of a regular person. A person constructor might look like this:</p>
 
-<pre><code>function Person(name) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function Person(name) {
     this.name = name;
 }
 
@@ -167,11 +167,11 @@ Person.prototype.sayName = function() {
 
 var bob = new Person('Bob');
 bob.sayName(); // "My name is Bob"
-</code></pre>
+</code></pre></div></div>
 
 <p>A superhero has some differences. They won’t tell you their identity. Instead they will tell you their alias. The code for this is as follows:</p>
 
-<pre><code>function Superhero(name, alias) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function Superhero(name, alias) {
     // call parent constructor so that Superheros have a name
     Superhero.superConstructor.call(this, name);
     this.alias = alias;
@@ -193,7 +193,7 @@ Superhero.prototype.revealIdentity = function() {
 var batman = new Superhero("Bruce Wayne", "Batman");
 batman.sayName(); // "Can't tell you that but my alias is Batman"
 batman.revealIdentity(); // "My name is Bruce Wayne"
-</code></pre>
+</code></pre></div></div>
 
       <div class="signUpHero">
         —

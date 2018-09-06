@@ -69,7 +69,7 @@
 	<meta itemprop="description" content="Most CSS developers I know don't think too hard about their choice of class names. In this article we'll take a good look at the impact of our choices.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.4176503a.css" media="all">
+<link rel="stylesheet" href="/assets/css/main.min.e851813f.css" media="all">
 
 <!--[if IE 8]>
 <link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
@@ -126,7 +126,7 @@
 
 <p>To start, we could name these elements as follows:</p>
 
-<pre><code>&lt;form class=”loginForm”&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;form class=”loginForm”&gt;
   &lt;div class=”loginForm-email”&gt;
     &lt;label&gt;…&lt;/label&gt;
     &lt;input type=”email”&gt;
@@ -136,28 +136,28 @@
     &lt;input type=”password”&gt;
   &lt;/div&gt;
 &lt;/form&gt;
-</code></pre>
+</code></pre></div></div>
 
 <p>These class names are coupled to this one module. They can’t be reused elsewhere. This is good because we can style the form without affecting other forms. On the other hand, by using a mixin or comma-delimitting selectors we <em>can</em> reuse the <em>styles</em>:</p>
 
-<pre><code>.loginForm-email,
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.loginForm-email,
 .loginForm-password,
 .someOtherForm-someField {
   /* Common field style */
 }
-</code></pre>
+</code></pre></div></div>
 
 <p>There are problems with this approach. First, you could end up with quite a lot of CSS which seems a bit unnecessary. Second, every new field requires CSS changes. Simple changes, but changes nonetheless.</p>
 
 <p>Now if your forms have a different structure and aesthetic this isn’t a problem at all. In fact it’s a benefit. But I would guess that most, if not all forms will have the same styling. Afterall, good design is consistent.</p>
 
-<p>We could improve our approach by upgrading a field to a module and naming it <code>.formField</code>. This feels better to me, at least at this stage of the analysis. This module doesn’t require a mixin or comma-delimitted selectors. And each new field does not require CSS changes.</p>
+<p>We could improve our approach by upgrading a field to a module and naming it <code class="highlighter-rouge">.formField</code>. This feels better to me, at least at this stage of the analysis. This module doesn’t require a mixin or comma-delimitted selectors. And each new field does not require CSS changes.</p>
 
-<p>Let’s continue by finding some problems with this generic, reusable <code>.formField</code> module. What if some fields need to accomodate a hint, for example? And for the purposes of this example this sort of field needs different styles to accomodate the hint.</p>
+<p>Let’s continue by finding some problems with this generic, reusable <code class="highlighter-rouge">.formField</code> module. What if some fields need to accomodate a hint, for example? And for the purposes of this example this sort of field needs different styles to accomodate the hint.</p>
 
 <p>This is where <a href="http://maintainablecss.com/chapters/modifiers/">modifiers</a> come in. Just add an extra class name and make the required tweaks.</p>
 
-<pre><code>&lt;form class=”someForm”&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;form class=”someForm”&gt;
   &lt;div class=”formField”&gt;
     &lt;label&gt;…&lt;/label&gt;
     &lt;input type=”text”&gt;
@@ -168,19 +168,19 @@
     &lt;input type=”text”&gt;
   &lt;/div&gt;
 &lt;/form&gt;
-</code></pre>
+</code></pre></div></div>
 
 <p>In this case we just needed a few tweaks and so this generic class name works well. But what if we had something that’s significantly different? For example, you might need a field with radio buttons.</p>
 
-<p>Using a modifier is problematic because there is little to inherit. When we named our module <code>.formField</code> we didn’t consider radio buttons, or any other type of control for that matter.</p>
+<p>Using a modifier is problematic because there is little to inherit. When we named our module <code class="highlighter-rouge">.formField</code> we didn’t consider radio buttons, or any other type of control for that matter.</p>
 
 <p>This isn’t necessarily a bad thing. In fact, in many ways this is good. If we try too early to find commonality in a design system, it can lead to over-engineered solutions.</p>
 
 <p>Text fields are very different to radios. The latter requires a legend, fieldset and a different structure. They’re so different that despite them both being form fields, we shouldn’t consider them to be the <em>same</em> at all. This point is worth deliberating over.</p>
 
-<p>Earlier, <code>.formField</code> felt like a good name for a class. But now, with this new information it doesn’t seem so good. We don’t want to update styles for a radio field and worry about regressing the text fields.  And, we don’t want to work out the few bits of commanility between these two entities, just to shave a little CSS.</p>
+<p>Earlier, <code class="highlighter-rouge">.formField</code> felt like a good name for a class. But now, with this new information it doesn’t seem so good. We don’t want to update styles for a radio field and worry about regressing the text fields.  And, we don’t want to work out the few bits of commanility between these two entities, just to shave a little CSS.</p>
 
-<p>Having analysed the situation, it’s much easier to decide on a good name. I would suggest naming the text field <code>.textField</code> and the radios <code>.radioField</code>.</p>
+<p>Having analysed the situation, it’s much easier to decide on a good name. I would suggest naming the text field <code class="highlighter-rouge">.textField</code> and the radios <code class="highlighter-rouge">.radioField</code>.</p>
 
 <p>This enables us to treat them as the distinct modules they are. They’re specific enough to be able to differentiate. Yet they are generic enough to be reused across multiple forms, without writing unnecessary CSS.</p>
 
@@ -188,7 +188,7 @@
 
 <p>I’d rather have a little more CSS and the flexibility to style elements consistently (or differently whatever the case may be). Otherwise, I’d have to contend with overrides and regression.</p>
 
-<p>This affords us the space and time to learn what is worth abstracting and what isn’t. You may learn that even <code>.textField</code> is too generic. For example, you might have many different types of text fields that are better off being their own modules. You might not.</p>
+<p>This affords us the space and time to learn what is worth abstracting and what isn’t. You may learn that even <code class="highlighter-rouge">.textField</code> is too generic. For example, you might have many different types of text fields that are better off being their own modules. You might not.</p>
 
 <p>What’s important is that we think about these things frequently and rigorously. I’ve found the following questions useful over the years:</p>
 

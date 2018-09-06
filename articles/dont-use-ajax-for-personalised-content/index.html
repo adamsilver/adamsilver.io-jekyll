@@ -69,7 +69,7 @@
 	<meta itemprop="description" content="Sometimes developers are on a pursuit to reduce page-load time by utilising AJAX to get around personalised content. This is problematic.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.4176503a.css" media="all">
+<link rel="stylesheet" href="/assets/css/main.min.e851813f.css" media="all">
 
 <!--[if IE 8]>
 <link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
@@ -130,7 +130,7 @@
 
 <p>Now that’s clear, we can discuss the issues with using AJAX to request personalised content:</p>
 
-<h2 id="the-architecture-becomes-complex">1. The architecture becomes complex</h2>
+<h2 id="1-the-architecture-becomes-complex">1. The architecture becomes complex</h2>
 
 <p>Using AJAX has a significant impact on architecture.</p>
 
@@ -142,13 +142,13 @@
   <li>At what point is personalised content not essential to the experience?</li>
 </ul>
 
-<h2 id="some-people-will-have-a-broken-experience">2. Some people will have a broken experience</h2>
+<h2 id="2-some-people-will-have-a-broken-experience">2. Some people will have a broken experience</h2>
 
 <p>If the user doesn’t have Javascript (and there are <a href="http://kryogenix.org/code/browser/everyonehasjs.html">many reasons why they won’t</a>), they’ll get an incomplete or broken page. Not being able to logout, or not being able to see their basket is an example.</p>
 
 <p>This goes against Progressive Enhancement which in-turn goes against the spirit of the web. We shouldn’t unnecessarily exclude people.</p>
 
-<h2 id="replacing-browser-behaviour-degrades-the-experience">3. Replacing browser behaviour degrades the experience</h2>
+<h2 id="3-replacing-browser-behaviour-degrades-the-experience">3. Replacing browser behaviour degrades the experience</h2>
 
 <p>Using AJAX to load content stops us using the inherent functionality browsers provide for free. This functionality is an intuitive aspect of the browsing experience.</p>
 
@@ -160,11 +160,11 @@
 
 <p>Moreover, the request may finish after scrolling down the page. This means the user may not notice this new personalised content and the page may jump unexpectedly.</p>
 
-<h2 id="extra-work-is-needed">4. Extra work is needed</h2>
+<h2 id="4-extra-work-is-needed">4. Extra work is needed</h2>
 
 <p>First, a designer needs to design a loading spinner and transitions. Second, developers need to implement this functionality in good order for browsers and assistive technology. Third, testers will need to test and AJAX makes functional tests harder to write.</p>
 
-<h2 id="performance-actually-degrades">5. Performance actually degrades</h2>
+<h2 id="5-performance-actually-degrades">5. Performance actually degrades</h2>
 
 <p>Instead of a single HTTP request containing the whole response, there will now be multiple. The first would be for the Document containing non-personalised content. The next request(s) will be via AJAX and <em>will</em> hit the web server, therefore subject to the same latency as always.</p>
 

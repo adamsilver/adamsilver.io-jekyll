@@ -69,7 +69,7 @@
 	<meta itemprop="description" content="So often we cram a load of crap onto a single web page and then play silly buggers trying to get them to load efficiently. Instead design for actual performance.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.4176503a.css" media="all">
+<link rel="stylesheet" href="/assets/css/main.min.e851813f.css" media="all">
 
 <!--[if IE 8]>
 <link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
@@ -138,7 +138,7 @@
 
 <p>The real problem is that we’ve designed something that can never be fast. Therefore the question really is <em>how do we design for performance?</em></p>
 
-<h2 id="simplify-the-interface">1. Simplify the interface</h2>
+<h2 id="1-simplify-the-interface">1. Simplify the interface</h2>
 
 <p>The best way to make pages fast, is to have less stuff in them. You’d be forgiven for wanting to punch me in the face as this is obvious. And yet <a href="https://www.keycdn.com/support/the-growth-of-web-page-size/">web pages keep getting fatter and fatter</a>.</p>
 
@@ -192,13 +192,13 @@
 
 <p>Less code, less problems and a faster, better experience. I’m seeing a theme here. Scroll jacking, <a href="/articles/floating-labels-are-problematic/">floating labels</a>, <a href="http://adrianroselli.com/2016/12/dont-re-create-browser-features.html">font-size widgets</a>, <a href="http://usabilitygeek.com/ux-designers-ditch-sidebar-2016/">side bars</a>, custom select boxes—kill.</p>
 
-<h2 id="reduce-code">2. Reduce code</h2>
+<h2 id="2-reduce-code">2. Reduce code</h2>
 
 <p>By simplifying the interface we’ve already reduced the code by literally not writing any. But coding the remaining features brings forth a different opportunity—to write less code.</p>
 
 <h3 id="create-lean-html">Create lean HTML</h3>
 
-<p>Sometimes developers use the wrong element. A <code>&lt;button&gt;</code> is half the size of <code>&lt;div role="button" tabinidex="0"&gt;</code> and doesn’t require script to make it accessible again.</p>
+<p>Sometimes developers use the wrong element. A <code class="highlighter-rouge">&lt;button&gt;</code> is half the size of <code class="highlighter-rouge">&lt;div role="button" tabinidex="0"&gt;</code> and doesn’t require script to make it accessible again.</p>
 
 <p><a href="https://csscreator.com/divitis">Divitus</a> is an antiquated buzzword but its still prevalent today. We often use <a href="http://getbootstrap.com/components/#navbar-brand-image">additional elements unncessarily</a>. These make the request longer to make, parse and render. We should be able to justify the existence of every element.</p>
 
@@ -208,23 +208,23 @@
 
 <p>We may also find ourselves adding various <a href="(https://silktide.com/i-thought-title-text-improved-accessibility-i-was-wrong/)">attributes in the name of accessibility</a>. But, they aren’t always necessary or valuable, and they add further weight to the page.</p>
 
-<p>Similarly, the first rule of ARIA is not to use it. To associate errors to a form control we might use <code>aria-describedby</code>:</p>
+<p>Similarly, the first rule of ARIA is not to use it. To associate errors to a form control we might use <code class="highlighter-rouge">aria-describedby</code>:</p>
 
-<pre><code>&lt;label for="age"&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;label for="age"&gt;
   Age
 &lt;/label&gt;
 &lt;div id="age_error"&gt;Enter your age&lt;/div&gt;
 &lt;input id="age" aria-describedby="age_error"&gt;
-</code></pre>
+</code></pre></div></div>
 
 <p>Instead putting the error in the label is more performant <em>and</em> more inclusive:</p>
 
-<pre><code>&lt;label for="age"&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;label for="age"&gt;
   Age
   &lt;div&gt;Enter your age&lt;/div&gt;
 &lt;/label&gt;
 &lt;input id="age"&gt;
-</code></pre>
+</code></pre></div></div>
 
 <p>Using <a href="/articles/dont-initialise-javascript-automagically/">HTML attributes to automagically initialise script</a> increases the HTML (and has other problems too).</p>
 
@@ -252,7 +252,7 @@
 
 <p>Often a module may need just one breakpoint or even no breakpoints. Designing to a predefined set of breakpoints encourages the unnecessary tweaking of a design that results in more code.</p>
 
-<h2 id="images">3. Images</h2>
+<h2 id="3-images">3. Images</h2>
 
 <p>Not everyone has access to the <a href="https://www.smashingmagazine.com/2017/03/world-wide-web-not-wealthy-western-web-part-1/">world western web</a>. Not everybody is on high-end devices either. So, if you really need that high resolution image help the user by:</p>
 
@@ -262,7 +262,7 @@
   <li><a href="https://blog.codinghorror.com/progressive-image-rendering/">using progressive rendering</a></li>
 </ul>
 
-<h2 id="backend-stuff">4. Backend stuff</h2>
+<h2 id="4-backend-stuff">4. Backend stuff</h2>
 
 <p>Enable <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding#Chunked_encoding">chunking</a> and progressive rendering. Don’t engineer it away.</p>
 
@@ -272,7 +272,7 @@
 
 <p>Cache assets with long expiry dates so that users don’t have to download assets again.</p>
 
-<p>Place scripts at the bottom and use <code>async</code> and <code>defer</code> attributes. Async is good for completley independent scripts that can run later like analytics.</p>
+<p>Place scripts at the bottom and use <code class="highlighter-rouge">async</code> and <code class="highlighter-rouge">defer</code> attributes. Async is good for completley independent scripts that can run later like analytics.</p>
 
 <p>Use <a href="https://www.troyhunt.com/i-wanna-go-fast-https-massive-speed-advantage/">HTTPS over HTTP2</a> with Gzip compression. Gzip, by the way, works better with a well-designed and consistent design system—the more HTML is repeated the better the compression.</p>
 

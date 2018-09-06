@@ -69,7 +69,7 @@
 	<meta itemprop="description" content="Sometimes forms submitted when the user selects an option. This is problematic.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.4176503a.css" media="all">
+<link rel="stylesheet" href="/assets/css/main.min.e851813f.css" media="all">
 
 <!--[if IE 8]>
 <link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
@@ -116,7 +116,7 @@
 			<h1 class="article-heading">Select boxes shouldn't submit on change</h1>
 			<p class="article-date">Published on <time date-time="2014-09-17">17 September 2014</time></p>
 		</div>
-	    <p>Some sites will submit the form when the user selects an option in a select box (or drop down menu) <code>onchange</code>. The idea is that removing the button declutters the interface and saves users an extra click. First, <a href="http://uxmyths.com/post/115783813605/myth-34-simple-minimal">minimal does not mean simple</a>, second <a href="http://idyeah.com/blog/2012/06/stop-counting-clicks/">stop counting clicks</a> and third, read on.</p>
+	    <p>Some sites will submit the form when the user selects an option in a select box (or drop down menu) <code class="highlighter-rouge">onchange</code>. The idea is that removing the button declutters the interface and saves users an extra click. First, <a href="http://uxmyths.com/post/115783813605/myth-34-simple-minimal">minimal does not mean simple</a>, second <a href="http://idyeah.com/blog/2012/06/stop-counting-clicks/">stop counting clicks</a> and third, read on.</p>
 
 <!-- <div class="image" style="max-width: 320px;margin: 0 auto;">
 	<figure>
@@ -125,7 +125,7 @@
 	</figure>
 </div> -->
 
-<p>Unfortunately, some browsers will fire the <code>onchange</code> event as the user presses <kbd>Down</kbd>. As a user moves from the first to the second option, for example, the <a href="http://html.cita.illinois.edu/script/onchange/onchange-example.php">form will submit before the user had a chance to move further down the list</a>. To my knowledge, this happens in a plethora of Windows browsers including Chrome, Opera, Internet Explorer 9 and below.</p>
+<p>Unfortunately, some browsers will fire the <code class="highlighter-rouge">onchange</code> event as the user presses <kbd>Down</kbd>. As a user moves from the first to the second option, for example, the <a href="http://html.cita.illinois.edu/script/onchange/onchange-example.php">form will submit before the user had a chance to move further down the list</a>. To my knowledge, this happens in a plethora of Windows browsers including Chrome, Opera, Internet Explorer 9 and below.</p>
 
 <p>Screen reader users can struggle too. This is because the act of reading an option, selects it, causing the form to submit. This means users can never get past the first option. Navigating users automatically can also be disorientating as users don’t expect a form control to do this.</p>
 

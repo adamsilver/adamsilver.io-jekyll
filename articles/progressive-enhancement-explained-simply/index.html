@@ -69,7 +69,7 @@
 	<meta itemprop="description" content="I'm Adam Silver, an interaction designer who codes simple and inclusive digital services, products and websites.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.4176503a.css" media="all">
+<link rel="stylesheet" href="/assets/css/main.min.e851813f.css" media="all">
 
 <!--[if IE 8]>
 <link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
@@ -126,9 +126,9 @@
 
 <p>It starts with HTML for structure and content. If CSS or JavaScript don’t load, it’s fine because the content is there.</p>
 
-<p>If everything loads OK, perhaps various HTML elements aren’t recognized. For example, some browsers don’t understand <code>&lt;input type="email"&gt;</code>. That’s fine, though, because users will get a text box (<code>&lt;input type="text"&gt;</code>) instead. Users can still enter an email address; they just don’t get an email-specific keyboard on mobile.</p>
+<p>If everything loads OK, perhaps various HTML elements aren’t recognized. For example, some browsers don’t understand <code class="highlighter-rouge">&lt;input type="email"&gt;</code>. That’s fine, though, because users will get a text box (<code class="highlighter-rouge">&lt;input type="text"&gt;</code>) instead. Users can still enter an email address; they just don’t get an email-specific keyboard on mobile.</p>
 
-<p>Maybe the browser doesn’t understand some fancy CSS, and it will just ignore it. In most cases, this isn’t a problem. Let’s say you have a button with <code>border-radius: 10px</code>. Browsers that don’t recognize this rule will show a button with angled corners. Arguably, the button’s perceived affordance is reduced, but users are left unharmed. In other cases it might be helpful to use feature queries.</p>
+<p>Maybe the browser doesn’t understand some fancy CSS, and it will just ignore it. In most cases, this isn’t a problem. Let’s say you have a button with <code class="highlighter-rouge">border-radius: 10px</code>. Browsers that don’t recognize this rule will show a button with angled corners. Arguably, the button’s perceived affordance is reduced, but users are left unharmed. In other cases it might be helpful to use feature queries.</p>
 
 <p>Then there is JavaScript, which is more complicated. When the browser tries to parse methods it doesn’t recognize, it will throw a hissy fit. This can cause your other (valid and supported) scripts to fail. If your script doesn’t first check <a href="https://adamsilver.io/articles/progressively-enhanced-javascript/">that the methods exist (feature detection) and work (feature testing)</a> before using them, then users may get a broken interface. For example, if a button’s click handler calls a method that’s not recognized, the button won’t work. That’s bad.</p>
 

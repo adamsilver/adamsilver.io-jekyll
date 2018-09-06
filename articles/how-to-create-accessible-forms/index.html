@@ -69,7 +69,7 @@
 	<meta itemprop="description" content="Create accessible forms following these simple steps.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.4176503a.css" media="all">
+<link rel="stylesheet" href="/assets/css/main.min.e851813f.css" media="all">
 
 <!--[if IE 8]>
 <link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
@@ -126,11 +126,11 @@
 
 <p>Associating a control with a label as follows:</p>
 
-<pre><code>&lt;label for="username"&gt;Username&lt;/label&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;label for="username"&gt;Username&lt;/label&gt;
 &lt;input id="username"&gt;
-</code></pre>
+</code></pre></div></div>
 
-<p>Note: the <code>for</code> attribute associates a label with another control explicitly by matching the id attribute of the control.</p>
+<p>Note: the <code class="highlighter-rouge">for</code> attribute associates a label with another control explicitly by matching the id attribute of the control.</p>
 
 <h2 id="fieldsets-and-related-controls">Fieldsets and related controls</h2>
 
@@ -140,19 +140,19 @@
 
 <p>“Red” doesn’t convey enough information on its own. However, wrapping the group of radios in a fieldset with a legend of “Favourite colour” will ensure the control can be read out by a screen reader as “Favourite colour, Red”.</p>
 
-<pre><code>&lt;fieldset&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;fieldset&gt;
 	&lt;legend&gt;Favourite colour&lt;/legend&gt;
 	&lt;input type="radio" name="colour" id="colourRed" value="red"&gt;
 	&lt;label for="colourRed"&gt;Red&lt;/label&gt;
 	&lt;!-- ... --&gt;
 &lt;/fieldset&gt;
-</code></pre>
+</code></pre></div></div>
 
 <h2 id="optional-radio-group-control">Optional radio group control</h2>
 
 <p>Radio controls can not be toggled; once marked as checked they cannot be unchecked until a different radio control is checked. Therefore it is imperative that an additional radio control is added with a ‘None selected’ option so that the user may change their mind. An example follows:</p>
 
-<pre><code>&lt;fieldset&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;fieldset&gt;
 	&lt;legend&gt;Favourite colour&lt;/legend&gt;
 	&lt;input type="radio" name="colour" id="colourNone" value="none"&gt;
 	&lt;label for="colourNone"&gt;None selected&lt;/label&gt;
@@ -161,20 +161,20 @@
 	&lt;input type="radio" name="colour" id="colourBlue" value="blue"&gt;
 	&lt;label for="colourBlue"&gt;Blue&lt;/label&gt;
 &lt;/fieldset&gt;
-</code></pre>
+</code></pre></div></div>
 
 <h2 id="option-groups-and-options">Option groups and options</h2>
 
 <p>The optgroup element can improve accessibility of the options within a select control by adding information to groups of options. If a user had to select their favourite fruit including variety then adding an optgroup named “Apple” containing options such as “Pink Lady” would be advisable as follows:</p>
 
-<pre><code>&lt;select&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;select&gt;
 	&lt;optgroup label="Apples"&gt;
 		&lt;option&gt;Pink lady&lt;/option&gt;
 		&lt;!-- ... --&gt;
 	&lt;/optgroup&gt;
 	&lt;!-- ... --&gt;
 &lt;/select&gt;
-</code></pre>
+</code></pre></div></div>
 
 <h2 id="dont-abuse-select-controls">Don’t abuse select controls</h2>
 

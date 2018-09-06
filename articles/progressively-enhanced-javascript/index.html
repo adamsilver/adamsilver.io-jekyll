@@ -69,7 +69,7 @@
 	<meta itemprop="description" content="Using Javascript to design progressively enhanced interfaces is probably the most important and misunderstood subject in web development. Find out why and what you can do about it in this article.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.4176503a.css" media="all">
+<link rel="stylesheet" href="/assets/css/main.min.e851813f.css" media="all">
 
 <!--[if IE 8]>
 <link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
@@ -143,18 +143,18 @@
 
 <p>The last of those points—<em>using Javascript that the browser doesn’t recognise</em>—is what we need to discuss. Javascript—unlike HTML and CSS—doesn’t degrade gracefully without intervention.</p>
 
-<p>For example, <code>&lt;input type="email"&gt;</code> degrades gracefully into a text box. And <code>border-radius</code> degrades gracefully by not showing rounded corners. No problem.</p>
+<p>For example, <code class="highlighter-rouge">&lt;input type="email"&gt;</code> degrades gracefully into a text box. And <code class="highlighter-rouge">border-radius</code> degrades gracefully by not showing rounded corners. No problem.</p>
 
 <p>Javascript, however, will error when the browser tries to execute code it doesn’t recognise. Internet Explorer 8, for example, breaks on the last line here:</p>
 
-<pre><code>var form = document.forms[0];
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var form = document.forms[0];
 form.attachEvent('submit', function() {
   window.event.returnValue = false;
   var foos = document.getElementsByClassName('foo');
 });
-</code></pre>
+</code></pre></div></div>
 
-<p>This is because it doesn’t recognise <code>getElementsByClassName()</code>. The page didn’t degrade nor did it fully enhance. The script intercepts the form’s submit event, but gives users a broken interface.</p>
+<p>This is because it doesn’t recognise <code class="highlighter-rouge">getElementsByClassName()</code>. The page didn’t degrade nor did it fully enhance. The script intercepts the form’s submit event, but gives users a broken interface.</p>
 
 <p>So, when the user submits the form, nothing happens. Handling submit on the client (the enhanced experience) to save a round trip is fine. Handling submit on the server (the core experience) is fine too. But the implementation above doesn’t allow for either experience.</p>
 
@@ -164,24 +164,24 @@ form.attachEvent('submit', function() {
 
 <p>It’s often easier to deduce what it is we should do, once we found out what we shouldn’t. Let’s do that now.</p>
 
-<h3 id="dont-ignore-the-problem-exists">1. Don’t ignore the problem exists</h3>
+<h3 id="1-dont-ignore-the-problem-exists">1. Don’t ignore the problem exists</h3>
 
 <p>I struggled a lot with this. I always thought about the current set of browsers that a particular project adheres to. But just because I ignored users who use ‘other’ browsers, doesn’t mean they don’t exist.</p>
 
-<h3 id="dont-abdicate-responsibility">2. Don’t abdicate responsibility</h3>
+<h3 id="2-dont-abdicate-responsibility">2. Don’t abdicate responsibility</h3>
 
 <p>When we add a third-party script to the project, it becomes our responsibility. We should check under the hood for quality and watch out for the typical <a href="https://gist.github.com/david-mark/06b9879f963ebb0eed62">multi-browser approach</a> that opposes the principles of progressive enhancement.</p>
 
 <p>Moreover, when a library releases a new version, they often drop support for various browsers. This is a never ending cycle. This is what Jeremy Keith calls the <a href="https://adactio.com/journal/6692">continuum</a>.</p>
 
-<h3 id="dont-rely-on-cutting-the-mustard">3.Don’t rely on Cutting The Mustard</h3>
+<h3 id="3dont-rely-on-cutting-the-mustard">3.Don’t rely on Cutting The Mustard</h3>
 
 <p><a href="http://responsivenews.co.uk/post/18948466399/cutting-the-mustard">Cutting The Mustard</a> (CTM) is a relatively new approach which promises reliability by giving users a core or an enhanced experience. It’s intent is great but the implementation falls a little short.</p>
 
-<pre><code>if(document.querySelector &amp;&amp; window.addEventListener &amp;&amp; window.localStorage) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if(document.querySelector &amp;&amp; window.addEventListener &amp;&amp; window.localStorage) {
   // start application
 }
-</code></pre>
+</code></pre></div></div>
 
 <p>The script detects a few choice methods, to then infer that the browser is ‘modern’. This is impossible because of the vast amount of new (versions of) browsers being released every day. And it’s irrelevant because the release date doesn’t determine capability.</p>
 
@@ -208,13 +208,13 @@ form.attachEvent('submit', function() {
 
 <p>To do this reliably we need to use wrappers (facades). The library should expose a dynamic API that adapts to the browser, something like this:</p>
 
-<pre><code>if(hasFeatures('find', 'addListener', 'storeValue')) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if(hasFeatures('find', 'addListener', 'storeValue')) {
   var el = find('.whatever');
   addListener(el, "click", function() {
     storeValue('key', 'value');
   });
 }
-</code></pre>
+</code></pre></div></div>
 
 <h3 id="notes">Notes</h3>
 
@@ -231,24 +231,24 @@ form.attachEvent('submit', function() {
 
 <p>Let’s say our application needs to add a class to an element. First we’ll create that function and expose a dynamic API:</p>
 
-<pre><code>// use isHostMethod
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// use isHostMethod
 if(document.documentElement.classList.add) {
 var addClass = function(el, className) {
   return el.classList.add(className);
 };
 }
-</code></pre>
+</code></pre></div></div>
 
-<p>Then the calling application checks <code>addClass()</code> is defined before referencing it:</p>
+<p>Then the calling application checks <code class="highlighter-rouge">addClass()</code> is defined before referencing it:</p>
 
-<pre><code>if(addClass) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if(addClass) {
   addClass(el, 'thing');
 }
-</code></pre>
+</code></pre></div></div>
 
-<p>The application is blissfully unaware that it only runs in browsers supporting <code>classList()</code>. Users using Internet Explorer 9 and below get the degraded experience and that’s okay. If you want to support Internet Explorer 9, add a fork like this:</p>
+<p>The application is blissfully unaware that it only runs in browsers supporting <code class="highlighter-rouge">classList()</code>. Users using Internet Explorer 9 and below get the degraded experience and that’s okay. If you want to support Internet Explorer 9, add a fork like this:</p>
 
-<pre><code>var addClass;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var addClass;
 
 // Use isHostMethod
 if(document.documentElement.classList.add) {
@@ -268,7 +268,7 @@ addClass = function(el, className) {
   }
 }
 }
-</code></pre>
+</code></pre></div></div>
 
 <p>This implementation supports almost every browser and the application didn’t need to change. In future you can remove this fork once the number of visitors diminishes to a suitable level—something only you can determine.</p>
 

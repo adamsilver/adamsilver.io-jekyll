@@ -69,7 +69,7 @@
 	<meta itemprop="description" content="Keyboard users find forms with multiple buttons problematic. Find out why in this article.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.4176503a.css" media="all">
+<link rel="stylesheet" href="/assets/css/main.min.e851813f.css" media="all">
 
 <!--[if IE 8]>
 <link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
@@ -127,17 +127,17 @@
 	</figure>
 </div>
 
-<p>Pressing <kbd>Enter</kbd> will always perform a postcode look-up because the Find Address button is the first button. </p>
+<p>Pressing <kbd>Enter</kbd> will always perform a postcode look-up because the Find Address button is the first button.</p>
 
 <p>There are two ways to solve this problem.</p>
 
-<h2 id="split-up-the-forms">1. Split up the forms</h2>
+<h2 id="1-split-up-the-forms">1. Split up the forms</h2>
 
 <p>The best solution is avoidance. This means splitting the form up into two separate ones. As a result each form will have just one button removing any ambiguity in submission and action.</p>
 
 <p>All users benefit from this approach because breaking down big forms into little ones reduces the cognitive load. And, having just one primary call to action makes it obvious how to proceed.</p>
 
-<h2 id="choose-a-primary-button">2. Choose a primary button</h2>
+<h2 id="2-choose-a-primary-button">2. Choose a primary button</h2>
 
 <p>If you can’t split up the form, then the other approach involves having to choose a primary action which isn’t always obvious.</p>
 
@@ -145,7 +145,7 @@
 
 <p>To remove it visually you’ll need to use CSS like this:</p>
 
-<pre><code>.visually-hidden {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.visually-hidden {
   border: 0!important;
   clip: rect(0 0 0 0)!important;
   height: 1px!important;
@@ -155,11 +155,11 @@
   position: absolute!important;
   width: 1px!important;
 }
-</code></pre>
+</code></pre></div></div>
 
 <p>However, as a user tabs to the hidden button, the interface will appear to be unresponsive. This is because the button is in focus but hidden, which can disorientate users.</p>
 
-<p>To fix this you can give the button a <code>tabindex="-1"</code> attribute which stops the button from being navigable via the keyboard.</p>
+<p>To fix this you can give the button a <code class="highlighter-rouge">tabindex="-1"</code> attribute which stops the button from being navigable via the keyboard.</p>
 
       <div class="signUpHero">
         —

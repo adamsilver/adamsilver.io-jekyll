@@ -69,7 +69,7 @@
 	<meta itemprop="description" content="Organising your client-side Javascript is important. Namespaces are a sane, cross-browser approach to help with this.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.4176503a.css" media="all">
+<link rel="stylesheet" href="/assets/css/main.min.e851813f.css" media="all">
 
 <!--[if IE 8]>
 <link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
@@ -124,43 +124,43 @@
 
 <p>This is the directory structure for the zoo:</p>
 
-<pre><code>zoo/
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>zoo/
   zoo.js
   zoo.information.js
   animals/
     zoo.animals.js
     zoo.animals.Penguin.js
     zoo.animals.Tiger.js
-</code></pre>
+</code></pre></div></div>
 
-<p>The root namespace resides inside <code>zoo.js</code>.</p>
+<p>The root namespace resides inside <code class="highlighter-rouge">zoo.js</code>.</p>
 
-<pre><code>var zoo = {};
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var zoo = {};
+</code></pre></div></div>
 
-<p>The animals need a sub level namespace too which resides inside <code>zoo.animals.js</code>.</p>
+<p>The animals need a sub level namespace too which resides inside <code class="highlighter-rouge">zoo.animals.js</code>.</p>
 
-<pre><code>// zoo.animals.js
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// zoo.animals.js
 zoo.animals = {};
-</code></pre>
+</code></pre></div></div>
 
 <p>You will notice that the namespace matches the name of the file. This consistency helps you find the relevant component later.</p>
 
-<p>The zoo has a penguin and a tiger definition which reside inside <code>zoo.animals.Penguin.js</code> and <code>zoo.animals.Tiger.js</code> respectively. The penguin definition is shown below:</p>
+<p>The zoo has a penguin and a tiger definition which reside inside <code class="highlighter-rouge">zoo.animals.Penguin.js</code> and <code class="highlighter-rouge">zoo.animals.Tiger.js</code> respectively. The penguin definition is shown below:</p>
 
-<pre><code>zoo.animals.Penguin = function() {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>zoo.animals.Penguin = function() {
   // constructor
 };
-</code></pre>
+</code></pre></div></div>
 
 <p>If you need to store some information in the zoo you can do so as follows:</p>
 
-<pre><code>// zoo.information.js
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// zoo.information.js
 zoo.information = {
   name: "My Awesome Zoo",
   address: "52 Zoo Lane, ZA1 2AP"
 };
-</code></pre>
+</code></pre></div></div>
 
 <p>Where possible, you should avoid deeply nested hierarchies. But don’t worry about having a lot of files. You should be concatenating them for production anyway.</p>
 

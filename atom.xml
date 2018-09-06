@@ -3,7 +3,7 @@
 	<title>Adam Silver: interaction designer and interface developer from London, UK</title>
 	<link href="https://adamsilver.io/atom.xml" rel="self"/>
 	<link href="https://adamsilver.io/"/>
-	<updated>2018-07-07T17:37:46+01:00</updated>
+	<updated>2018-09-06T08:09:28+01:00</updated>
 	<id>https://adamsilver.io</id>
 	<author>
 		<name>Adam Silver</name>
@@ -68,7 +68,7 @@ If everything on a screen is content, are content designers responsible for ever
 
 &lt;p&gt;But the choice to split things up across pages or to make a form field smaller in width feels more like interaction design. But it’s definitely not a clear cut thing. It’s the boundaries of responsibility that are hard to define.&lt;/p&gt;
 
-&lt;p&gt;When I design an interface, I first like to understand what I’m trying to communicate. There are parts of Form Design Patterns that go into detail about how to present certain information. For example, when designing an inbox, should we present the list of emails as a &lt;code&gt;&amp;lt;ul&amp;gt;&lt;/code&gt; or a &lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt; or something else?&lt;/p&gt;
+&lt;p&gt;When I design an interface, I first like to understand what I’m trying to communicate. There are parts of Form Design Patterns that go into detail about how to present certain information. For example, when designing an inbox, should we present the list of emails as a &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;ul&amp;gt;&lt;/code&gt; or a &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;table&amp;gt;&lt;/code&gt; or something else?&lt;/p&gt;
 
 &lt;p&gt;Most of the time I’d say content drives design. But on some occasions design influences the content, this is applicable to form validation because how and where errors need to go, drives the content needed to make the errors clear.&lt;/p&gt;
 
@@ -169,7 +169,7 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
 		&lt;img src=&quot;https://adamsilver.io/assets/img/buttons2/mosaic.png&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
-		&lt;figcaption&gt;Mosaic&#39;s buttons (both in-page and part of the shell) look the same and have strong perceived affordance.&lt;/figcaption&gt;
+		&lt;figcaption&gt;Mosaic's buttons (both in-page and part of the shell) look the same and have strong perceived affordance.&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -194,7 +194,7 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Back then the way to give buttons an “on brand” style was to use &lt;code&gt;&amp;lt;input type=&quot;image&quot;&amp;gt;&lt;/code&gt; setting the src to an image URL. And for links, we’d do the same thing by nesting an &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; inside the link (calls to action).&lt;/p&gt;
+&lt;p&gt;Back then the way to give buttons an “on brand” style was to use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;input type=&quot;image&quot;&amp;gt;&lt;/code&gt; setting the src to an image URL. And for links, we’d do the same thing by nesting an &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;img&amp;gt;&lt;/code&gt; inside the link (calls to action).&lt;/p&gt;
 
 &lt;p&gt;So links and buttons started to look (but not behave) the same. Around this time, we noticed that some buttons had the default cursor and some links-styled-as-buttons had the pointer. Inevitably, we normalised the cursor too.&lt;/p&gt;
 
@@ -214,7 +214,7 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
 
 &lt;p&gt;Now, if you asked a user what the pointer cursor means, they might well say that it means clickable. But &lt;a href=&quot;https://alistapart.com/article/what-the-failure-of-new-coke-can-teach-us-about-user-research-and-design&quot;&gt;what users say and what they do are different things&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;but-microsoft-and-apple-use-the-pointer-cursor-for-buttons&quot;&gt;“But Microsoft and Apple use the pointer cursor for buttons”&lt;/h2&gt;
+&lt;p&gt;##“But Microsoft and Apple use the pointer cursor for buttons”&lt;/p&gt;
 
 &lt;p&gt;You’re right, they don’t always follow their own standards and guidance. But is this a reason? I’ve worked in many teams that don’t follow their own standards due to a myriad of reasons. Maybe they forgot, or maybe they weren’t aware the standards existed.&lt;/p&gt;
 
@@ -288,9 +288,9 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
 
 &lt;p&gt;It starts with HTML for structure and content. If CSS or JavaScript don’t load, it’s fine because the content is there.&lt;/p&gt;
 
-&lt;p&gt;If everything loads OK, perhaps various HTML elements aren’t recognized. For example, some browsers don’t understand &lt;code&gt;&amp;lt;input type=&quot;email&quot;&amp;gt;&lt;/code&gt;. That’s fine, though, because users will get a text box (&lt;code&gt;&amp;lt;input type=&quot;text&quot;&amp;gt;&lt;/code&gt;) instead. Users can still enter an email address; they just don’t get an email-specific keyboard on mobile.&lt;/p&gt;
+&lt;p&gt;If everything loads OK, perhaps various HTML elements aren’t recognized. For example, some browsers don’t understand &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;input type=&quot;email&quot;&amp;gt;&lt;/code&gt;. That’s fine, though, because users will get a text box (&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;input type=&quot;text&quot;&amp;gt;&lt;/code&gt;) instead. Users can still enter an email address; they just don’t get an email-specific keyboard on mobile.&lt;/p&gt;
 
-&lt;p&gt;Maybe the browser doesn’t understand some fancy CSS, and it will just ignore it. In most cases, this isn’t a problem. Let’s say you have a button with &lt;code&gt;border-radius: 10px&lt;/code&gt;. Browsers that don’t recognize this rule will show a button with angled corners. Arguably, the button’s perceived affordance is reduced, but users are left unharmed. In other cases it might be helpful to use feature queries.&lt;/p&gt;
+&lt;p&gt;Maybe the browser doesn’t understand some fancy CSS, and it will just ignore it. In most cases, this isn’t a problem. Let’s say you have a button with &lt;code class=&quot;highlighter-rouge&quot;&gt;border-radius: 10px&lt;/code&gt;. Browsers that don’t recognize this rule will show a button with angled corners. Arguably, the button’s perceived affordance is reduced, but users are left unharmed. In other cases it might be helpful to use feature queries.&lt;/p&gt;
 
 &lt;p&gt;Then there is JavaScript, which is more complicated. When the browser tries to parse methods it doesn’t recognize, it will throw a hissy fit. This can cause your other (valid and supported) scripts to fail. If your script doesn’t first check &lt;a href=&quot;https://adamsilver.io/articles/progressively-enhanced-javascript/&quot;&gt;that the methods exist (feature detection) and work (feature testing)&lt;/a&gt; before using them, then users may get a broken interface. For example, if a button’s click handler calls a method that’s not recognized, the button won’t work. That’s bad.&lt;/p&gt;
 
@@ -309,7 +309,7 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
 			<id>https://adamsilver.io/articles/but-sometimes-buttons-look-like-links</id>
 			<content type="html">&lt;p&gt;Sometimes we make links look like buttons. Sometimes we make buttons look like links. This is unfortunate and maybe there’s something we can do about this. But before we get to it, let’s discuss the four different types of buttons and links.&lt;/p&gt;
 
-&lt;h2 id=&quot;submit-buttons&quot;&gt;1. Submit buttons&lt;/h2&gt;
+&lt;h2 id=&quot;1-submit-buttons&quot;&gt;1. Submit buttons&lt;/h2&gt;
 
 &lt;p&gt;When we login, register or add to basket we’re using a form. These buttons are submit buttons.&lt;/p&gt;
 
@@ -320,7 +320,7 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;links&quot;&gt;2. Links&lt;/h2&gt;
+&lt;h2 id=&quot;2-links&quot;&gt;2. Links&lt;/h2&gt;
 
 &lt;p&gt;Links let us navigate to pages or locations within a page. Either way, they’re typically underlined to stand out amongst prose content. Or they might reside in a special place like a header to help cognition.&lt;/p&gt;
 
@@ -331,9 +331,9 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;buttons&quot;&gt;3. Buttons&lt;/h2&gt;
+&lt;h2 id=&quot;3-buttons&quot;&gt;3. Buttons&lt;/h2&gt;
 
-&lt;p&gt;Buttons (that have &lt;code&gt;type=&quot;button&quot;&lt;/code&gt;) are not submit buttons. Buttons are used to create features that rely on Javascript. Behaviours such as revealing a menu or showing a date picker.&lt;/p&gt;
+&lt;p&gt;Buttons (that have &lt;code class=&quot;highlighter-rouge&quot;&gt;type=&quot;button&quot;&lt;/code&gt;) are not submit buttons. Buttons are used to create features that rely on Javascript. Behaviours such as revealing a menu or showing a date picker.&lt;/p&gt;
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
@@ -342,7 +342,7 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;call-to-action-buttons&quot;&gt;4. Call to action buttons&lt;/h2&gt;
+&lt;h2 id=&quot;4-call-to-action-buttons&quot;&gt;4. Call to action buttons&lt;/h2&gt;
 
 &lt;p&gt;Call to action buttons often look like buttons to make them prominent in an interface. There’s no dedicated element. They are just regular links styled to call users to action—hence the name.&lt;/p&gt;
 
@@ -486,7 +486,7 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
 
 &lt;p&gt;The real problem is that we’ve designed something that can never be fast. Therefore the question really is &lt;em&gt;how do we design for performance?&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;simplify-the-interface&quot;&gt;1. Simplify the interface&lt;/h2&gt;
+&lt;h2 id=&quot;1-simplify-the-interface&quot;&gt;1. Simplify the interface&lt;/h2&gt;
 
 &lt;p&gt;The best way to make pages fast, is to have less stuff in them. You’d be forgiven for wanting to punch me in the face as this is obvious. And yet &lt;a href=&quot;https://www.keycdn.com/support/the-growth-of-web-page-size/&quot;&gt;web pages keep getting fatter and fatter&lt;/a&gt;.&lt;/p&gt;
 
@@ -540,13 +540,13 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
 
 &lt;p&gt;Less code, less problems and a faster, better experience. I’m seeing a theme here. Scroll jacking, &lt;a href=&quot;/articles/floating-labels-are-problematic/&quot;&gt;floating labels&lt;/a&gt;, &lt;a href=&quot;http://adrianroselli.com/2016/12/dont-re-create-browser-features.html&quot;&gt;font-size widgets&lt;/a&gt;, &lt;a href=&quot;http://usabilitygeek.com/ux-designers-ditch-sidebar-2016/&quot;&gt;side bars&lt;/a&gt;, custom select boxes—kill.&lt;/p&gt;
 
-&lt;h2 id=&quot;reduce-code&quot;&gt;2. Reduce code&lt;/h2&gt;
+&lt;h2 id=&quot;2-reduce-code&quot;&gt;2. Reduce code&lt;/h2&gt;
 
 &lt;p&gt;By simplifying the interface we’ve already reduced the code by literally not writing any. But coding the remaining features brings forth a different opportunity—to write less code.&lt;/p&gt;
 
 &lt;h3 id=&quot;create-lean-html&quot;&gt;Create lean HTML&lt;/h3&gt;
 
-&lt;p&gt;Sometimes developers use the wrong element. A &lt;code&gt;&amp;lt;button&amp;gt;&lt;/code&gt; is half the size of &lt;code&gt;&amp;lt;div role=&quot;button&quot; tabinidex=&quot;0&quot;&amp;gt;&lt;/code&gt; and doesn’t require script to make it accessible again.&lt;/p&gt;
+&lt;p&gt;Sometimes developers use the wrong element. A &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;button&amp;gt;&lt;/code&gt; is half the size of &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;div role=&quot;button&quot; tabinidex=&quot;0&quot;&amp;gt;&lt;/code&gt; and doesn’t require script to make it accessible again.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://csscreator.com/divitis&quot;&gt;Divitus&lt;/a&gt; is an antiquated buzzword but its still prevalent today. We often use &lt;a href=&quot;http://getbootstrap.com/components/#navbar-brand-image&quot;&gt;additional elements unncessarily&lt;/a&gt;. These make the request longer to make, parse and render. We should be able to justify the existence of every element.&lt;/p&gt;
 
@@ -556,23 +556,23 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
 
 &lt;p&gt;We may also find ourselves adding various &lt;a href=&quot;(https://silktide.com/i-thought-title-text-improved-accessibility-i-was-wrong/)&quot;&gt;attributes in the name of accessibility&lt;/a&gt;. But, they aren’t always necessary or valuable, and they add further weight to the page.&lt;/p&gt;
 
-&lt;p&gt;Similarly, the first rule of ARIA is not to use it. To associate errors to a form control we might use &lt;code&gt;aria-describedby&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Similarly, the first rule of ARIA is not to use it. To associate errors to a form control we might use &lt;code class=&quot;highlighter-rouge&quot;&gt;aria-describedby&lt;/code&gt;:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;label for=&quot;age&quot;&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;label for=&quot;age&quot;&amp;gt;
   Age
 &amp;lt;/label&amp;gt;
 &amp;lt;div id=&quot;age_error&quot;&amp;gt;Enter your age&amp;lt;/div&amp;gt;
 &amp;lt;input id=&quot;age&quot; aria-describedby=&quot;age_error&quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Instead putting the error in the label is more performant &lt;em&gt;and&lt;/em&gt; more inclusive:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;label for=&quot;age&quot;&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;label for=&quot;age&quot;&amp;gt;
   Age
   &amp;lt;div&amp;gt;Enter your age&amp;lt;/div&amp;gt;
 &amp;lt;/label&amp;gt;
 &amp;lt;input id=&quot;age&quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Using &lt;a href=&quot;/articles/dont-initialise-javascript-automagically/&quot;&gt;HTML attributes to automagically initialise script&lt;/a&gt; increases the HTML (and has other problems too).&lt;/p&gt;
 
@@ -600,7 +600,7 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
 
 &lt;p&gt;Often a module may need just one breakpoint or even no breakpoints. Designing to a predefined set of breakpoints encourages the unnecessary tweaking of a design that results in more code.&lt;/p&gt;
 
-&lt;h2 id=&quot;images&quot;&gt;3. Images&lt;/h2&gt;
+&lt;h2 id=&quot;3-images&quot;&gt;3. Images&lt;/h2&gt;
 
 &lt;p&gt;Not everyone has access to the &lt;a href=&quot;https://www.smashingmagazine.com/2017/03/world-wide-web-not-wealthy-western-web-part-1/&quot;&gt;world western web&lt;/a&gt;. Not everybody is on high-end devices either. So, if you really need that high resolution image help the user by:&lt;/p&gt;
 
@@ -610,7 +610,7 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
   &lt;li&gt;&lt;a href=&quot;https://blog.codinghorror.com/progressive-image-rendering/&quot;&gt;using progressive rendering&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;backend-stuff&quot;&gt;4. Backend stuff&lt;/h2&gt;
+&lt;h2 id=&quot;4-backend-stuff&quot;&gt;4. Backend stuff&lt;/h2&gt;
 
 &lt;p&gt;Enable &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding#Chunked_encoding&quot;&gt;chunking&lt;/a&gt; and progressive rendering. Don’t engineer it away.&lt;/p&gt;
 
@@ -620,7 +620,7 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
 
 &lt;p&gt;Cache assets with long expiry dates so that users don’t have to download assets again.&lt;/p&gt;
 
-&lt;p&gt;Place scripts at the bottom and use &lt;code&gt;async&lt;/code&gt; and &lt;code&gt;defer&lt;/code&gt; attributes. Async is good for completley independent scripts that can run later like analytics.&lt;/p&gt;
+&lt;p&gt;Place scripts at the bottom and use &lt;code class=&quot;highlighter-rouge&quot;&gt;async&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;defer&lt;/code&gt; attributes. Async is good for completley independent scripts that can run later like analytics.&lt;/p&gt;
 
 &lt;p&gt;Use &lt;a href=&quot;https://www.troyhunt.com/i-wanna-go-fast-https-massive-speed-advantage/&quot;&gt;HTTPS over HTTP2&lt;/a&gt; with Gzip compression. Gzip, by the way, works better with a well-designed and consistent design system—the more HTML is repeated the better the compression.&lt;/p&gt;
 
@@ -650,7 +650,7 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
 			<id>https://adamsilver.io/articles/inline-validation-is-problematic</id>
 			<content type="html">&lt;p&gt;Inline validation informs users whether what they type is valid as they type. The theory is that it’s easier to fix errors as soon as they occur instead of waiting until submission. The thing is, inline validation causes several problems:&lt;/p&gt;
 
-&lt;h2 id=&quot;interruption-causes-friction&quot;&gt;1. Interruption causes friction&lt;/h2&gt;
+&lt;h2 id=&quot;1-interruption-causes-friction&quot;&gt;1. Interruption causes friction&lt;/h2&gt;
 
 &lt;p&gt;For fields thats require a certain number of characters, the first keystroke will cause an error. Meaning users will be interrupted early and often.&lt;/p&gt;
 
@@ -662,9 +662,9 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
 
 &lt;p&gt;We could wait until the user has entered enough characters but this means the only way a user will get feedback is after completing the field successfully which is pointless.&lt;/p&gt;
 
-&lt;h2 id=&quot;interruption-on-blur-is-too-late&quot;&gt;2. Interruption on blur is too late&lt;/h2&gt;
+&lt;h2 id=&quot;2-interruption-on-blur-is-too-late&quot;&gt;2. Interruption on blur is too late&lt;/h2&gt;
 
-&lt;p&gt;We could provide feedback when the user leaves the field (&lt;code&gt;onblur&lt;/code&gt;) but this is too late. The user has already started to mentally prepare for, and to fill out the next field.&lt;/p&gt;
+&lt;p&gt;We could provide feedback when the user leaves the field (&lt;code class=&quot;highlighter-rouge&quot;&gt;onblur&lt;/code&gt;) but this is too late. The user has already started to mentally prepare for, and to fill out the next field.&lt;/p&gt;
 
 &lt;p&gt;Many people switch windows or use password managers to assist in filling out forms. Leaving the field (which triggers the blur event) causes an error to show prematurely before the user finishes typing.&lt;/p&gt;
 
@@ -676,7 +676,7 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
 
 &lt;p&gt;And tabbing to the next field causes an error in the first. Due to this error, the user leaves the second field to fix the error in the first. This causes an error in two fields. This sucks.&lt;/p&gt;
 
-&lt;h2 id=&quot;visual-glitches-are-disorientating&quot;&gt;3. Visual glitches are disorientating&lt;/h2&gt;
+&lt;h2 id=&quot;3-visual-glitches-are-disorientating&quot;&gt;3. Visual glitches are disorientating&lt;/h2&gt;
 
 &lt;p&gt;When a field switches between valid and invalid states, the error appears and disappears respectively. This causes the page to judder which is disorientating and can cause problems for mouse users.&lt;/p&gt;
 
@@ -686,9 +686,9 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Ideally error messages should be hidden as the user starts to fix the field—either &lt;code&gt;onfocus&lt;/code&gt; or &lt;code&gt;onkeypress&lt;/code&gt;. However, this exacerbates the problem.&lt;/p&gt;
+&lt;p&gt;Ideally error messages should be hidden as the user starts to fix the field—either &lt;code class=&quot;highlighter-rouge&quot;&gt;onfocus&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;onkeypress&lt;/code&gt;. However, this exacerbates the problem.&lt;/p&gt;
 
-&lt;h2 id=&quot;field-groups-are-inconsistent&quot;&gt;4. Field groups are inconsistent&lt;/h2&gt;
+&lt;h2 id=&quot;4-field-groups-are-inconsistent&quot;&gt;4. Field groups are inconsistent&lt;/h2&gt;
 
 &lt;p&gt;Groups of fields need to be considered holistically. Take a group of checkboxes, for example. The user must choose at least two options. If the user clicks &lt;em&gt;yellow&lt;/em&gt; and blurs is that an error?&lt;/p&gt;
 
@@ -706,39 +706,39 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Designing something that relies on the user doing something in the right order is not ideal. We could validate these fields &lt;code&gt;onsubmit&lt;/code&gt; but that gives users a false positive as they have grown to expect fields to validate inline.&lt;/p&gt;
+&lt;p&gt;Designing something that relies on the user doing something in the right order is not ideal. We could validate these fields &lt;code class=&quot;highlighter-rouge&quot;&gt;onsubmit&lt;/code&gt; but that gives users a false positive as they have grown to expect fields to validate inline.&lt;/p&gt;
 
-&lt;h2 id=&quot;server-side-validation-makes-for-an-inconsistent-experience&quot;&gt;5. Server side validation makes for an inconsistent experience&lt;/h2&gt;
+&lt;h2 id=&quot;5-server-side-validation-makes-for-an-inconsistent-experience&quot;&gt;5. Server side validation makes for an inconsistent experience&lt;/h2&gt;
 
 &lt;p&gt;Some validation routines can only be performed on the server via submission. For example, checking someone’s login credentials. This inconsistency in behaviour is confusing.&lt;/p&gt;
 
-&lt;h2 id=&quot;false-positives-are-untrustworthy&quot;&gt;6. False positives are untrustworthy&lt;/h2&gt;
+&lt;h2 id=&quot;6-false-positives-are-untrustworthy&quot;&gt;6. False positives are untrustworthy&lt;/h2&gt;
 
 &lt;p&gt;Some implementations use inline validation to show &lt;em&gt;green ticks&lt;/em&gt; when the user fills out a field successfully. This may provide a sense of progression and stop people feeling like they need to check through their answers later on.&lt;/p&gt;
 
 &lt;p&gt;However, inline validation typically checks the &lt;em&gt;format&lt;/em&gt;. This means that a correctly formatted field may still be erroneous once it’s submitted. This not makes the experience untrustworthy and unpleasant.&lt;/p&gt;
 
-&lt;h2 id=&quot;pre-populated-fields-are-tricky&quot;&gt;7. Pre-populated fields are tricky&lt;/h2&gt;
+&lt;h2 id=&quot;7-pre-populated-fields-are-tricky&quot;&gt;7. Pre-populated fields are tricky&lt;/h2&gt;
 
 &lt;p&gt;Pre-populated fields cause further issue. Should we display them in the success state, if there is one? If they appear to have been validated already, should we then hide the success message until they have left the field again?&lt;/p&gt;
 
-&lt;h2 id=&quot;validation-inconsistency&quot;&gt;8. Validation inconsistency&lt;/h2&gt;
+&lt;h2 id=&quot;8-validation-inconsistency&quot;&gt;8. Validation inconsistency&lt;/h2&gt;
 
 &lt;p&gt;Some fields can be validated as the user types. For example, if typing a letter in a numerical field. But this causes inconsistency and is rarely applicable to the slew of fields requiring various different validation routines.&lt;/p&gt;
 
-&lt;h2 id=&quot;users-might-not-notice-it&quot;&gt;9. Users might not notice it&lt;/h2&gt;
+&lt;h2 id=&quot;9-users-might-not-notice-it&quot;&gt;9. Users might not notice it&lt;/h2&gt;
 
 &lt;p&gt;Many users look at the keyboard as opposed to their screen when typing. In this case users won’t see the error until later or at all.&lt;/p&gt;
 
-&lt;h2 id=&quot;it-forces-users-to-switch-contexts&quot;&gt;10. It forces users to switch contexts&lt;/h2&gt;
+&lt;h2 id=&quot;10-it-forces-users-to-switch-contexts&quot;&gt;10. It forces users to switch contexts&lt;/h2&gt;
 
 &lt;p&gt;Apart from interruption, inline validation causes users to frequently switch between &lt;em&gt;filling in a form&lt;/em&gt; and &lt;em&gt;fixing mistakes&lt;/em&gt; modes. This is a cognitive burden on the user.&lt;/p&gt;
 
-&lt;h2 id=&quot;marking-success-is-confusing&quot;&gt;11. Marking success is confusing&lt;/h2&gt;
+&lt;h2 id=&quot;11-marking-success-is-confusing&quot;&gt;11. Marking success is confusing&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://alistapart.com/article/inline-validation-in-web-forms&quot;&gt;Luke Wobrelski’s testing&lt;/a&gt; showed that users weren’t sure how to interpret a green tick. He says the &lt;em&gt;participants knew we had no way to know their correct name, so they knew that the green check mark didn’t mean “correct.” But they weren’t sure and that was the problem.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;problems-for-screen-reader-users&quot;&gt;12. Problems for screen reader users&lt;/h2&gt;
+&lt;h2 id=&quot;12-problems-for-screen-reader-users&quot;&gt;12. Problems for screen reader users&lt;/h2&gt;
 
 &lt;p&gt;When someone is using a screen reader they may want to go through the form fields to get a feel for what is coming before attempting to fill each field out. This could cause errors in all fields before the user even started their journey.&lt;/p&gt;
 
@@ -766,7 +766,7 @@ This is a bit of a rhetorical question because I don’t think for one minute Gi
 
 E.g. blur tab error issue https://www.wayfair.co.uk/v/checkout/authentication/register
 
-If going to do Ajax then it&#39;s not instant and could slow users down. And then user has to do two server calls. One for Ajax for each field and one for whole submission.
+If going to do Ajax then it's not instant and could slow users down. And then user has to do two server calls. One for Ajax for each field and one for whole submission.
 
 https://simplyaccessible.com/article/accessible-forms-angular/
 
@@ -780,13 +780,13 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 			<link href="https://adamsilver.io/articles/float-labels-are-problematic/"/>
 			<updated>2017-05-24T10:00:01+01:00</updated>
 			<id>https://adamsilver.io/articles/float-labels-are-problematic</id>
-			<content type="html">&lt;p&gt;After writing &lt;a href=&quot;/articles/placeholders-are-problematic/&quot;&gt;Placeholders are Problematic&lt;/a&gt; some people suggested the float label pattern. &lt;/p&gt;
+			<content type="html">&lt;p&gt;After writing &lt;a href=&quot;/articles/placeholders-are-problematic/&quot;&gt;Placeholders are Problematic&lt;/a&gt; some people suggested the float label pattern.&lt;/p&gt;
 
-&lt;p&gt;The float label pattern works by having the label start off inside the input (like a placeholder does). But &lt;code&gt;onfocus&lt;/code&gt; or when the user starts typing, the label moves outside the input above the field.&lt;/p&gt;
+&lt;p&gt;The float label pattern works by having the label start off inside the input (like a placeholder does). But &lt;code class=&quot;highlighter-rouge&quot;&gt;onfocus&lt;/code&gt; or when the user starts typing, the label moves outside the input above the field.&lt;/p&gt;
 
 &lt;p&gt;While this is better than supplanting labels with placeholders, this seductive, novel and space-saving technique is problematic for a number of reasons:&lt;/p&gt;
 
-&lt;h2 id=&quot;there-is-no-space-for-a-hint&quot;&gt;1. There is no space for a hint&lt;/h2&gt;
+&lt;h2 id=&quot;1-there-is-no-space-for-a-hint&quot;&gt;1. There is no space for a hint&lt;/h2&gt;
 
 &lt;p&gt;Floating labels start inside the text box leaving no space for an additional hint.&lt;/p&gt;
 
@@ -797,7 +797,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;they-are-hard-to-read&quot;&gt;2. They are hard-to-read&lt;/h2&gt;
+&lt;h2 id=&quot;2-they-are-hard-to-read&quot;&gt;2. They are hard-to-read&lt;/h2&gt;
 
 &lt;p&gt;Floating labels typically have small text, so that as it floats, it takes up a small amount of space. But small text is hard-to-read.&lt;/p&gt;
 
@@ -808,7 +808,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;they-need-space-to-move-into&quot;&gt;3. They need space to move into&lt;/h2&gt;
+&lt;h2 id=&quot;3-they-need-space-to-move-into&quot;&gt;3. They need space to move into&lt;/h2&gt;
 
 &lt;p&gt;Floating labels needs space to move into. If label text is friendly (see previous point), there would be no saved space anyway—just more &lt;em&gt;white&lt;/em&gt; space.&lt;/p&gt;
 
@@ -821,11 +821,11 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;p&gt;Alternatively, we could create space &lt;em&gt;as&lt;/em&gt; the label moves into position. But this makes the page judder, creating a disorientating experience as the user starts typing.&lt;/p&gt;
 
-&lt;h2 id=&quot;the-animation-is-problematic&quot;&gt;4. The animation is problematic&lt;/h2&gt;
+&lt;h2 id=&quot;4-the-animation-is-problematic&quot;&gt;4. The animation is problematic&lt;/h2&gt;
 
 &lt;p&gt;Animation, even if it’s done well, could be distracting and disorientating, particularly for low confidence or visually impaired users. And, when zooming in, the label may disappear off screen.&lt;/p&gt;
 
-&lt;h2 id=&quot;they-have-poor-contrast&quot;&gt;5. They have poor contrast&lt;/h2&gt;
+&lt;h2 id=&quot;5-they-have-poor-contrast&quot;&gt;5. They have poor contrast&lt;/h2&gt;
 
 &lt;p&gt;Like placeholder text, floating labels have low contrast to differentiate it but low contrast text is hard-to-read.&lt;/p&gt;
 
@@ -838,11 +838,11 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;p&gt;Depending on the design, when the label floats outside of the field, its colour will need to change. Otherwise the text will be lost against the background colour.&lt;/p&gt;
 
-&lt;h2 id=&quot;they-may-be-mistaken-for-a-value&quot;&gt;6. They may be mistaken for a value&lt;/h2&gt;
+&lt;h2 id=&quot;6-they-may-be-mistaken-for-a-value&quot;&gt;6. They may be mistaken for a value&lt;/h2&gt;
 
 &lt;p&gt;People may skip the field thinking it’s completed already. When they submit, they will see an error which needs fixing. This is frustrating and time consuming.&lt;/p&gt;
 
-&lt;h2 id=&quot;they-are-inconsistently-located&quot;&gt;7. They are inconsistently located&lt;/h2&gt;
+&lt;h2 id=&quot;7-they-are-inconsistently-located&quot;&gt;7. They are inconsistently located&lt;/h2&gt;
 
 &lt;p&gt;Radio buttons, checkboxes and select boxes have static labels and legends. Where as text boxes have floating labels. This creates an inconsistent experience.&lt;/p&gt;
 
@@ -855,7 +855,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;the-label-may-get-cropped&quot;&gt;8. The label may get cropped&lt;/h2&gt;
+&lt;h2 id=&quot;8-the-label-may-get-cropped&quot;&gt;8. The label may get cropped&lt;/h2&gt;
 
 &lt;p&gt;If the floating label is longer than the size of the field, it will be cut off by the field. We should &lt;a href=&quot;/articles/stop-using-device-breakpoints/&quot;&gt;design for content&lt;/a&gt;, we shouldn’t make content fit the design.&lt;/p&gt;
 
@@ -866,7 +866,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;it-ignores-the-standards&quot;&gt;9. It ignores the standards&lt;/h2&gt;
+&lt;h2 id=&quot;9-it-ignores-the-standards&quot;&gt;9. It ignores the standards&lt;/h2&gt;
 
 &lt;p&gt;We know placeholders are problematic anyway. However, if we’re going to put text inside a text box, it should be a hint, not a label.&lt;/p&gt;
 
@@ -918,7 +918,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
 		&lt;img src=&quot;https://adamsilver.io/assets/img/breakpoints/maintainablecss.png&quot; alt=&quot;MaintainableCSS subscribe form&quot; width=&quot;100%&quot; /&gt;
-		&lt;figcaption&gt;MaintainableCSS&#39; responsive subscribe form&lt;/figcaption&gt;
+		&lt;figcaption&gt;MaintainableCSS' responsive subscribe form&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -969,13 +969,13 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;p&gt;In order to be creative we need to know what these constraints are. So I’ve jotted them down so we can remember them easily. Here they are:&lt;/p&gt;
 
-&lt;h2 id=&quot;human-outlook-and-understanding&quot;&gt;1. Human outlook and understanding&lt;/h2&gt;
+&lt;h2 id=&quot;1-human-outlook-and-understanding&quot;&gt;1. Human outlook and understanding&lt;/h2&gt;
 
 &lt;p&gt;Everybody’s different. How people think and see the world is unique to the individual.&lt;/p&gt;
 
 &lt;p&gt;We’re influenced by our environment, upbringing and the people we spend most time with. And we speak different languages.&lt;/p&gt;
 
-&lt;h2 id=&quot;disability&quot;&gt;2. Disability&lt;/h2&gt;
+&lt;h2 id=&quot;2-disability&quot;&gt;2. Disability&lt;/h2&gt;
 
 &lt;p&gt;My left eye sucks (it won’t move left) and so I have to turn my head to use it properly.&lt;/p&gt;
 
@@ -985,7 +985,7 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;p&gt;If we can create something great for people with one arm, then we’ll be creating something even better for people with two.&lt;/p&gt;
 
-&lt;h2 id=&quot;preference&quot;&gt;3. Preference&lt;/h2&gt;
+&lt;h2 id=&quot;3-preference&quot;&gt;3. Preference&lt;/h2&gt;
 
 &lt;p&gt;Even someone who is fully-abled (should such a person exist), still has preferences. And those preferences can change under different circumstances.&lt;/p&gt;
 
@@ -995,37 +995,37 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;p&gt;And whilst I rarely print pages, not everyone is like me. Ensuring pages are easy to read when printed is something we must also consider.&lt;/p&gt;
 
-&lt;h2 id=&quot;internet-speed-and-connectivity&quot;&gt;4. Internet speed and connectivity&lt;/h2&gt;
+&lt;h2 id=&quot;4-internet-speed-and-connectivity&quot;&gt;4. Internet speed and connectivity&lt;/h2&gt;
 
 &lt;p&gt;We (people who work in the industry) tend to have fast connections. But many people out there are not like us.&lt;/p&gt;
 
 &lt;p&gt;We must consider performance and connectivity from the beginning. Make the slow fast, and the fast faster.&lt;/p&gt;
 
-&lt;h2 id=&quot;screen-size&quot;&gt;5. Screen size&lt;/h2&gt;
+&lt;h2 id=&quot;5-screen-size&quot;&gt;5. Screen size&lt;/h2&gt;
 
 &lt;p&gt;People use all sorts of devices, from watches to huge TVs, and everything in between. We need to consider how things work across the board.&lt;/p&gt;
 
 &lt;p&gt;Responsive design isn’t about 3 different sized containers according to device. It’s about &lt;a href=&quot;/articles/stop-using-device-breakpoints/&quot;&gt;fixing content where it breaks&lt;/a&gt; (if at all).&lt;/p&gt;
 
-&lt;h2 id=&quot;browser-capability&quot;&gt;6. Browser capability&lt;/h2&gt;
+&lt;h2 id=&quot;6-browser-capability&quot;&gt;6. Browser capability&lt;/h2&gt;
 
 &lt;p&gt;The devices and browsers people use have varying capabilities. This impacts what they can do and the features we offer them.&lt;/p&gt;
 
 &lt;p&gt;We should deliver a core experience, and &lt;a href=&quot;/articles/progressively-enhanced-javascript/&quot;&gt;enhance only when the feature is available&lt;/a&gt;. Everything but content is an enhancement.&lt;/p&gt;
 
-&lt;h2 id=&quot;internet-data-cost&quot;&gt;7. Internet data cost&lt;/h2&gt;
+&lt;h2 id=&quot;7-internet-data-cost&quot;&gt;7. Internet data cost&lt;/h2&gt;
 
 &lt;p&gt;Again whilst you and I may have expensive data contracts, many people do not. And even if it’s cheap, data can run out. Either way, we must think about this when we want to design inclusive experiences.&lt;/p&gt;
 
 &lt;p&gt;This is not just about making lightweight experiences (though that’s essential). Breaking up content across pages allows people to load content as they see fit.&lt;/p&gt;
 
-&lt;h2 id=&quot;environment&quot;&gt;8. Environment&lt;/h2&gt;
+&lt;h2 id=&quot;8-environment&quot;&gt;8. Environment&lt;/h2&gt;
 
 &lt;p&gt;Experiences are affected by low lighting and screen glare. Or being outside in the cold wearing touch-screen friendly winter gloves. Or choosing to interact verbally. Or turning down brightness to save battery.&lt;/p&gt;
 
 &lt;p&gt;Either way, we need to test our designs in the real world.&lt;/p&gt;
 
-&lt;h2 id=&quot;standards-and-conventions&quot;&gt;9. Standards and conventions&lt;/h2&gt;
+&lt;h2 id=&quot;9-standards-and-conventions&quot;&gt;9. Standards and conventions&lt;/h2&gt;
 
 &lt;p&gt;Android and IOS have standards and guides for designing apps. These guides act as constraints. This ensures we solve the same problems in the same way.&lt;/p&gt;
 
@@ -1035,13 +1035,13 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 
 &lt;p&gt;You can &lt;a href=&quot;https://medium.com/@mibosc/responsive-design-why-and-how-we-ditched-the-good-old-select-element-bc190d62eff5#.8m0u1kb7p&quot;&gt;break conventions&lt;/a&gt; but you need a good reason for doing so.&lt;/p&gt;
 
-&lt;h2 id=&quot;interoperability&quot;&gt;10. Interoperability&lt;/h2&gt;
+&lt;h2 id=&quot;10-interoperability&quot;&gt;10. Interoperability&lt;/h2&gt;
 
 &lt;p&gt;People don’t just consume content directly through websites. They use Safari’s reading mode or a feed reader. And they rely on how Google displays a search result.&lt;/p&gt;
 
 &lt;p&gt;Therefore, we need to design experiences that are interoperable because this is how people use our services.&lt;/p&gt;
 
-&lt;h2 id=&quot;configuration&quot;&gt;11. Configuration&lt;/h2&gt;
+&lt;h2 id=&quot;11-configuration&quot;&gt;11. Configuration&lt;/h2&gt;
 
 &lt;p&gt;People customise their phone and their browser to their liking. They may add plugins, or adjust the font size.&lt;/p&gt;
 
@@ -1065,11 +1065,11 @@ In *Inclusive Design Patterns*, Heydon Pickering discusses a hybrid approach whi
 			<content type="html">&lt;p&gt;I used to write Javascript that initialises components automagically. Don’t
 worry I’ll explain what I mean. Take a look below:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var datepickers = document.getElementsByClassName(‘datepicker’);
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var datepickers = document.getElementsByClassName(‘datepicker’);
 for(var i = 0; i &amp;lt; datepickers.length; i++) {
   new DatePicker(datepickers[i]);
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The technique works by looping over every element with a particular behavioural
 class name. If the Document contains the class name several times, the script
@@ -1082,7 +1082,7 @@ picker, just add a class of date picker. Job done.&lt;/p&gt;
 
 &lt;p&gt;This approach is problematic for many reasons. Here’s why:&lt;/p&gt;
 
-&lt;h2 id=&quot;its-harder-to-understand-the-codebase-at-a-glance&quot;&gt;1. It’s harder to understand the codebase at a glance&lt;/h2&gt;
+&lt;h2 id=&quot;1-its-harder-to-understand-the-codebase-at-a-glance&quot;&gt;1. It’s harder to understand the codebase at a glance&lt;/h2&gt;
 
 &lt;p&gt;To understand the codebase at a glance, you need to know what behaviour exists
 and where.&lt;/p&gt;
@@ -1091,44 +1091,44 @@ and where.&lt;/p&gt;
 thousand instances or there could be one (or none) — in which case the loop is
 misleading. Either way you don’t know.&lt;/p&gt;
 
-&lt;h2 id=&quot;you-might-apply-behaviour-by-accident&quot;&gt;2. You might apply behaviour by accident&lt;/h2&gt;
+&lt;h2 id=&quot;2-you-might-apply-behaviour-by-accident&quot;&gt;2. You might apply behaviour by accident&lt;/h2&gt;
 
 &lt;p&gt;If you happen to use a class that corresponds to a component, then you might
 accidentally initialise behaviour.&lt;/p&gt;
 
-&lt;h2 id=&quot;its-difficult-to-estimate-stories&quot;&gt;3. It’s difficult to estimate stories&lt;/h2&gt;
+&lt;h2 id=&quot;3-its-difficult-to-estimate-stories&quot;&gt;3. It’s difficult to estimate stories&lt;/h2&gt;
 
 &lt;p&gt;If you can’t document what you’re changing and where, it’s difficult to define
 and estimate a story.&lt;/p&gt;
 
-&lt;h2 id=&quot;its-difficult-to-qa&quot;&gt;4. It’s difficult to QA&lt;/h2&gt;
+&lt;h2 id=&quot;4-its-difficult-to-qa&quot;&gt;4. It’s difficult to QA&lt;/h2&gt;
 
 &lt;p&gt;After modifying a date picker, a tester will ask you what parts of the system
 you’ve affected. The loop doesn’t help you answer this question.&lt;/p&gt;
 
-&lt;h2 id=&quot;its-harder-to-debug&quot;&gt;5. It’s harder to debug&lt;/h2&gt;
+&lt;h2 id=&quot;5-its-harder-to-debug&quot;&gt;5. It’s harder to debug&lt;/h2&gt;
 
 &lt;p&gt;If there’s a problem with one date picker, finding and debugging it is more
 tricky. You will have to find the problematic instance by searching the HTML
 templates. Then you will need to step through the loop until you find the
 erroneous one.&lt;/p&gt;
 
-&lt;h2 id=&quot;its-harder-to-delete&quot;&gt;6. It’s harder to delete&lt;/h2&gt;
+&lt;h2 id=&quot;6-its-harder-to-delete&quot;&gt;6. It’s harder to delete&lt;/h2&gt;
 
 &lt;p&gt;As you don’t know where the loop is executing, you can’t delete code in
 confidence. Thus, the code stays in the codebase for a long time.&lt;/p&gt;
 
-&lt;h2 id=&quot;its-hard-to-determine-behaviour&quot;&gt;7. It’s hard to determine behaviour&lt;/h2&gt;
+&lt;h2 id=&quot;7-its-hard-to-determine-behaviour&quot;&gt;7. It’s hard to determine behaviour&lt;/h2&gt;
 
 &lt;p&gt;This approach forces you to store behaviour in HTML attributes. This isn’t an
 elegant way to define behavioural relationships. HTML becomes bloated and hard
 to read. Every attribute value is a string, when you might, for example, want a
 number.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&quot;datepicker otherComponent&quot; data-datepicker-attr=&quot;etc&quot; data-datapicker-event=&quot;listener&quot; data-othercomponent-attr=&quot;blah&quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div class=&quot;datepicker otherComponent&quot; data-datepicker-attr=&quot;etc&quot; data-datapicker-event=&quot;listener&quot; data-othercomponent-attr=&quot;blah&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;its-painful-to-customise&quot;&gt;8. It’s painful to customise&lt;/h2&gt;
+&lt;h2 id=&quot;8-its-painful-to-customise&quot;&gt;8. It’s painful to customise&lt;/h2&gt;
 
 &lt;p&gt;When you need to use models and XHR etc, it becomes painful to work with this
 approach.&lt;/p&gt;
@@ -1141,25 +1141,25 @@ ensure the end-date is always after the start-date.&lt;/p&gt;
 
 &lt;p&gt;This is hard to define in HTML. In Javascript it’s easy:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var startDate = new DatePicker();
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var startDate = new DatePicker();
 var endDate = new DatePicker();
-startDate.on(&#39;changed&#39;, function() { endDate.whatever(); });
-&lt;/code&gt;&lt;/pre&gt;
+startDate.on('changed', function() { endDate.whatever(); });
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;its-painful-to-infer-behaviour-from-html&quot;&gt;9. It’s painful to infer behaviour from HTML&lt;/h2&gt;
+&lt;h2 id=&quot;9-its-painful-to-infer-behaviour-from-html&quot;&gt;9. It’s painful to infer behaviour from HTML&lt;/h2&gt;
 
 &lt;p&gt;The loop doesn’t allow you to customise an instance by passing in options. Instead, you have to store behaviour in HTML. When you change behaviour, you must update the HTML. This goes against recommended​ &lt;a href=&quot;https://en.wikipedia.org/wiki/Separation_of_concerns&quot;&gt;practices&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;its-painful-to-override-behaviour&quot;&gt;10. It’s painful to override behaviour&lt;/h2&gt;
+&lt;h2 id=&quot;10-its-painful-to-override-behaviour&quot;&gt;10. It’s painful to override behaviour&lt;/h2&gt;
 
 &lt;p&gt;To override behaviour, you will need to add an extra class to the HTML. Then the date picker (or the loop) will determine the override by checking for this extra class. At this point, the component (or the loop) is no longer generic.​&lt;/p&gt;
 
-&lt;h2 id=&quot;its-hard-to-destroy-instances&quot;&gt;11. It’s hard to destroy instances&lt;/h2&gt;
+&lt;h2 id=&quot;11-its-hard-to-destroy-instances&quot;&gt;11. It’s hard to destroy instances&lt;/h2&gt;
 
 &lt;p&gt;It’s easy to store the instances during initialisation. But, determining and
 retrieving one later so you can destroy it, is harder this way.&lt;/p&gt;
 
-&lt;h2 id=&quot;it-increases-the-chance-of-performance-issues&quot;&gt;12. It increases the chance of performance issues&lt;/h2&gt;
+&lt;h2 id=&quot;12-it-increases-the-chance-of-performance-issues&quot;&gt;12. It increases the chance of performance issues&lt;/h2&gt;
 
 &lt;p&gt;This approach means the Javascript has to crawl the DOM a lot more than is
 otherwise necessary. First to find elements that need enhancing, and second to
@@ -1167,14 +1167,14 @@ determine behaviour from attributes.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.nczonline.net/blog/2009/02/03/speed-up-your-javascript-part-4/&quot;&gt;Touching the DOM is expensive&lt;/a&gt;, which increases the risk of performance issues. The risk increases further when you have many components and many instances of a component.&lt;/p&gt;
 
-&lt;h2 id=&quot;its-harder-to-unit-test&quot;&gt;13. It’s harder to unit test&lt;/h2&gt;
+&lt;h2 id=&quot;13-its-harder-to-unit-test&quot;&gt;13. It’s harder to unit test&lt;/h2&gt;
 
 &lt;p&gt;It’s difficult to unit test behaviour when you store behaviour in HTML. You
 might then decide to use HTML fixtures. But they are slow and you’re no longer
 writing unit tests. You &lt;em&gt;could&lt;/em&gt; mock the DOM but this is tedious and
 problematic. The less you store in HTML the easier it is to test.&lt;/p&gt;
 
-&lt;h2 id=&quot;it-exposes-a-security-hole&quot;&gt;14. It exposes a security hole&lt;/h2&gt;
+&lt;h2 id=&quot;14-it-exposes-a-security-hole&quot;&gt;14. It exposes a security hole&lt;/h2&gt;
 
 &lt;p&gt;You can read about the &lt;a href=&quot;https://githubengineering.com/githubs-csp-journey/#object-src&quot;&gt;security hole here&lt;/a&gt;.&lt;/p&gt;
 
@@ -1247,7 +1247,7 @@ HTML isn’t good at defining behaviour. But Javascript is.&lt;/p&gt;
 
 &lt;p&gt;To start, we could name these elements as follows:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;form class=”loginForm”&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;form class=”loginForm”&amp;gt;
   &amp;lt;div class=”loginForm-email”&amp;gt;
     &amp;lt;label&amp;gt;…&amp;lt;/label&amp;gt;
     &amp;lt;input type=”email”&amp;gt;
@@ -1257,28 +1257,28 @@ HTML isn’t good at defining behaviour. But Javascript is.&lt;/p&gt;
     &amp;lt;input type=”password”&amp;gt;
   &amp;lt;/div&amp;gt;
 &amp;lt;/form&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;These class names are coupled to this one module. They can’t be reused elsewhere. This is good because we can style the form without affecting other forms. On the other hand, by using a mixin or comma-delimitting selectors we &lt;em&gt;can&lt;/em&gt; reuse the &lt;em&gt;styles&lt;/em&gt;:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;.loginForm-email,
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.loginForm-email,
 .loginForm-password,
 .someOtherForm-someField {
   /* Common field style */
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;There are problems with this approach. First, you could end up with quite a lot of CSS which seems a bit unnecessary. Second, every new field requires CSS changes. Simple changes, but changes nonetheless.&lt;/p&gt;
 
 &lt;p&gt;Now if your forms have a different structure and aesthetic this isn’t a problem at all. In fact it’s a benefit. But I would guess that most, if not all forms will have the same styling. Afterall, good design is consistent.&lt;/p&gt;
 
-&lt;p&gt;We could improve our approach by upgrading a field to a module and naming it &lt;code&gt;.formField&lt;/code&gt;. This feels better to me, at least at this stage of the analysis. This module doesn’t require a mixin or comma-delimitted selectors. And each new field does not require CSS changes.&lt;/p&gt;
+&lt;p&gt;We could improve our approach by upgrading a field to a module and naming it &lt;code class=&quot;highlighter-rouge&quot;&gt;.formField&lt;/code&gt;. This feels better to me, at least at this stage of the analysis. This module doesn’t require a mixin or comma-delimitted selectors. And each new field does not require CSS changes.&lt;/p&gt;
 
-&lt;p&gt;Let’s continue by finding some problems with this generic, reusable &lt;code&gt;.formField&lt;/code&gt; module. What if some fields need to accomodate a hint, for example? And for the purposes of this example this sort of field needs different styles to accomodate the hint.&lt;/p&gt;
+&lt;p&gt;Let’s continue by finding some problems with this generic, reusable &lt;code class=&quot;highlighter-rouge&quot;&gt;.formField&lt;/code&gt; module. What if some fields need to accomodate a hint, for example? And for the purposes of this example this sort of field needs different styles to accomodate the hint.&lt;/p&gt;
 
 &lt;p&gt;This is where &lt;a href=&quot;http://maintainablecss.com/chapters/modifiers/&quot;&gt;modifiers&lt;/a&gt; come in. Just add an extra class name and make the required tweaks.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;form class=”someForm”&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;form class=”someForm”&amp;gt;
   &amp;lt;div class=”formField”&amp;gt;
     &amp;lt;label&amp;gt;…&amp;lt;/label&amp;gt;
     &amp;lt;input type=”text”&amp;gt;
@@ -1289,19 +1289,19 @@ HTML isn’t good at defining behaviour. But Javascript is.&lt;/p&gt;
     &amp;lt;input type=”text”&amp;gt;
   &amp;lt;/div&amp;gt;
 &amp;lt;/form&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;In this case we just needed a few tweaks and so this generic class name works well. But what if we had something that’s significantly different? For example, you might need a field with radio buttons.&lt;/p&gt;
 
-&lt;p&gt;Using a modifier is problematic because there is little to inherit. When we named our module &lt;code&gt;.formField&lt;/code&gt; we didn’t consider radio buttons, or any other type of control for that matter.&lt;/p&gt;
+&lt;p&gt;Using a modifier is problematic because there is little to inherit. When we named our module &lt;code class=&quot;highlighter-rouge&quot;&gt;.formField&lt;/code&gt; we didn’t consider radio buttons, or any other type of control for that matter.&lt;/p&gt;
 
 &lt;p&gt;This isn’t necessarily a bad thing. In fact, in many ways this is good. If we try too early to find commonality in a design system, it can lead to over-engineered solutions.&lt;/p&gt;
 
 &lt;p&gt;Text fields are very different to radios. The latter requires a legend, fieldset and a different structure. They’re so different that despite them both being form fields, we shouldn’t consider them to be the &lt;em&gt;same&lt;/em&gt; at all. This point is worth deliberating over.&lt;/p&gt;
 
-&lt;p&gt;Earlier, &lt;code&gt;.formField&lt;/code&gt; felt like a good name for a class. But now, with this new information it doesn’t seem so good. We don’t want to update styles for a radio field and worry about regressing the text fields.  And, we don’t want to work out the few bits of commanility between these two entities, just to shave a little CSS.&lt;/p&gt;
+&lt;p&gt;Earlier, &lt;code class=&quot;highlighter-rouge&quot;&gt;.formField&lt;/code&gt; felt like a good name for a class. But now, with this new information it doesn’t seem so good. We don’t want to update styles for a radio field and worry about regressing the text fields.  And, we don’t want to work out the few bits of commanility between these two entities, just to shave a little CSS.&lt;/p&gt;
 
-&lt;p&gt;Having analysed the situation, it’s much easier to decide on a good name. I would suggest naming the text field &lt;code&gt;.textField&lt;/code&gt; and the radios &lt;code&gt;.radioField&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Having analysed the situation, it’s much easier to decide on a good name. I would suggest naming the text field &lt;code class=&quot;highlighter-rouge&quot;&gt;.textField&lt;/code&gt; and the radios &lt;code class=&quot;highlighter-rouge&quot;&gt;.radioField&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;This enables us to treat them as the distinct modules they are. They’re specific enough to be able to differentiate. Yet they are generic enough to be reused across multiple forms, without writing unnecessary CSS.&lt;/p&gt;
 
@@ -1309,7 +1309,7 @@ HTML isn’t good at defining behaviour. But Javascript is.&lt;/p&gt;
 
 &lt;p&gt;I’d rather have a little more CSS and the flexibility to style elements consistently (or differently whatever the case may be). Otherwise, I’d have to contend with overrides and regression.&lt;/p&gt;
 
-&lt;p&gt;This affords us the space and time to learn what is worth abstracting and what isn’t. You may learn that even &lt;code&gt;.textField&lt;/code&gt; is too generic. For example, you might have many different types of text fields that are better off being their own modules. You might not.&lt;/p&gt;
+&lt;p&gt;This affords us the space and time to learn what is worth abstracting and what isn’t. You may learn that even &lt;code class=&quot;highlighter-rouge&quot;&gt;.textField&lt;/code&gt; is too generic. For example, you might have many different types of text fields that are better off being their own modules. You might not.&lt;/p&gt;
 
 &lt;p&gt;What’s important is that we think about these things frequently and rigorously. I’ve found the following questions useful over the years:&lt;/p&gt;
 
@@ -1362,8 +1362,8 @@ HTML isn’t good at defining behaviour. But Javascript is.&lt;/p&gt;
 
 &lt;p&gt;Case in point. On a recent project a download attribute was added to a link:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;a href=”/path/to/file.pdf” download&amp;gt;Download PDF file&amp;lt;/a&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;a href=”/path/to/file.pdf” download&amp;gt;Download PDF file&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Without this, some browsers — depending on the file-type — will load that file in the browser like a web page. This is the case for a PDF file for example.&lt;/p&gt;
 
@@ -1427,7 +1427,7 @@ demonstrated with a simple example.&lt;/p&gt;
 
 &lt;p&gt;Consider the following (&lt;a href=&quot;http://paularmstrong.github.io/swig/&quot;&gt;Swig&lt;/a&gt;) template:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;{% if isLoggedIn %}
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{% if isLoggedIn %}
 	{% if firstName &amp;amp;&amp;amp; lastName %}
 		&amp;lt;div class=&quot;welcomeMessage&quot;&amp;gt;
 			&amp;lt;p&amp;gt;Hello {{firstName}} {{lastName}}&amp;lt;/p&amp;gt;
@@ -1445,7 +1445,7 @@ demonstrated with a simple example.&lt;/p&gt;
 		&amp;lt;a href=&quot;{{signInLink.href}}&quot;&amp;gt;{{signInLink.text}}&amp;lt;/a&amp;gt;
 	&amp;lt;/div&amp;gt;
 {% endif %}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Forget for the moment that you might be able to factor out the nested
 if-statement — and, that you could reuse the HTML by abstracting it into a
@@ -1458,11 +1458,11 @@ order to do its job. It’s been designed from little pieces, from the inside-ou
 
 &lt;p&gt;Instead, consider the following template:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;	&amp;lt;div class=”welcomeMessage”&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&amp;lt;div class=”welcomeMessage”&amp;gt;
 			&amp;lt;p&amp;gt;{{message}}&amp;lt;/p&amp;gt;
 			&amp;lt;a href=”{{link.href}}”&amp;gt;{{link.text}}&amp;lt;/a&amp;gt;
 	&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The view-model has been designed from the outside-in; it contains just what the template needs in order to render itself. And because there is always a message and a link, there is no need for conditionality. This template is dumb-by-design, and leaves complex logic to reside somewhere more appropriate in the stack.&lt;/p&gt;
 
@@ -1472,7 +1472,7 @@ order to do its job. It’s been designed from little pieces, from the inside-ou
 
 &lt;p&gt;With this in-mind let’s have a look at the common scenarios we need to design for when developing a template.&lt;/p&gt;
 
-&lt;h2 id=&quot;when-a-module-has-dynamic-properties&quot;&gt;1. When a module has dynamic properties&lt;/h2&gt;
+&lt;h2 id=&quot;1-when-a-module-has-dynamic-properties&quot;&gt;1. When a module has dynamic properties&lt;/h2&gt;
 
 &lt;p&gt;When data or text is dynamic it will reside somewhere else in a system e.g. a database. In fact, even if it is &lt;em&gt;static&lt;/em&gt; it may still reside somewhere else for internationalisation or maintenance purposes.&lt;/p&gt;
 
@@ -1490,26 +1490,26 @@ this data comes from — it’s just information exposed via the view-model.&lt;
 
 &lt;p&gt;The view-model would be:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;{
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
 	message: &quot;Hello Adam Silver&quot;,
 		link: { href: &quot;/sign-out&quot;, text: &quot;Sign out&quot; }
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;And the template would be:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;	&amp;lt;div class=”welcomeMessage”&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&amp;lt;div class=”welcomeMessage”&amp;gt;
 		&amp;lt;p&amp;gt;{{message}}&amp;lt;/p&amp;gt;
 		&amp;lt;a href=”{{link.href}}”&amp;gt;{{link.text}}&amp;lt;/a&amp;gt;
 	&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The message consists of text that may ultimately be retrieved from resource
 files and a database. Perhaps the link’s href property could come from a routes configuration object etc.&lt;/p&gt;
 
 &lt;p&gt;Regardless, the template doesn’t care — it leaves this responsibility to other parts of the system. The view-model is lean and provides just enough information for the View to render itself.&lt;/p&gt;
 
-&lt;h2 id=&quot;when-a-module-has-conditionality&quot;&gt;2. When a module has conditionality&lt;/h2&gt;
+&lt;h2 id=&quot;2-when-a-module-has-conditionality&quot;&gt;2. When a module has conditionality&lt;/h2&gt;
 
 &lt;p&gt;Conditionally showing a portion of a View involves display-logic. The simplest of its type is based on a condition: if-this-show-that.&lt;/p&gt;
 
@@ -1527,50 +1527,50 @@ message when the the user is authenticated and has supplied their name:&lt;/p&gt
 
 &lt;p&gt;When the message should be shown, the view-model would be:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;{
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
 	showMessage: true,
 	message: &quot;Hello Adam Silver&quot;,
-	link: { href: &#39;/sign-out&#39;, text: &#39;Sign out&#39; }
+	link: { href: '/sign-out', text: 'Sign out' }
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;When the message is hidden the view-model would be:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;	{
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	{
 		showMessage: false
 	}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;And the template would be:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;	{% if showMessage %}
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	{% if showMessage %}
 		&amp;lt;div class=&quot;welcomeMessage&quot;&amp;gt;
 			&amp;lt;p&amp;gt;Welcome&amp;lt;/p&amp;gt;
 			&amp;lt;a href=&quot;{{signInLink.href}}&quot;&amp;gt;{{signInLink.text}}&amp;lt;/a&amp;gt;
 		&amp;lt;/div&amp;gt;
 	{% endif %}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Here the explicit boolean property determines whether it’s shown. Don’t be
 tempted to expose lower-level logic that the template uses to infer visibility.&lt;/p&gt;
 
-&lt;h2 id=&quot;when-showing-a-collection-of-items&quot;&gt;3. When showing a collection of items&lt;/h2&gt;
+&lt;h2 id=&quot;3-when-showing-a-collection-of-items&quot;&gt;3. When showing a collection of items&lt;/h2&gt;
 
 &lt;p&gt;When showing a number of similar items you will need to loop over a collection or array. As an example, let’s display a list of restaurants by area.&lt;/p&gt;
 
 &lt;p&gt;The view-model would be:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;	{
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	{
 		restaurants: [{
 				name: &quot;Pizza House&quot;,
 				address: &quot;...&quot;
 		}, ...]
 	}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;And the template would be:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&quot;restaurants&quot;&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div class=&quot;restaurants&quot;&amp;gt;
 	{% for restaurant in restaurants %}
 		&amp;lt;div class=”restaurant”&amp;gt;
 				&amp;lt;h2&amp;gt;{{restaurant.name}}&amp;lt;/h2&amp;gt;
@@ -1578,12 +1578,12 @@ tempted to expose lower-level logic that the template uses to infer visibility.&
 		&amp;lt;/div&amp;gt;
 	{% endfor %}
 &amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Often with loops, you will only show the items if there are items in the
 collection. You may be tempted to interrogate the size of the collection in the template as follows:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;{% if restaurants.length &amp;gt; 0 %}
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{% if restaurants.length &amp;gt; 0 %}
 	 &amp;lt;div class=&quot;restaurants&quot;&amp;gt;
 			 {% for restaurant in restaurants %}
 					 &amp;lt;div class=”restaurant”&amp;gt;
@@ -1593,12 +1593,12 @@ collection. You may be tempted to interrogate the size of the collection in the 
 			 {% endfor %}
 	 &amp;lt;/div&amp;gt;
 {% endif %}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Whilst this isn’t the end of the world, it can lead to maintenance problems.
 Instead, continue to use the approach used in the previous example by explicitly checking a boolean property &lt;em&gt;before&lt;/em&gt; iterating over the loop:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;{% if showRestaurants %}
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{% if showRestaurants %}
 	 &amp;lt;div class=&quot;restaurants&quot;&amp;gt;
 			 {% for restaurant in restaurants %}
 				 &amp;lt;div class=”restaurant”&amp;gt;
@@ -1608,7 +1608,7 @@ Instead, continue to use the approach used in the previous example by explicitly
 			 {% endfor %}
 	 &amp;lt;/div&amp;gt;
 {% endif%}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;This way templates are consistent, and the logic behind the conditionality can evolve over time without having to change the template — perhaps the restaurants are only shown to authenticated users for example.&lt;/p&gt;
 
@@ -1639,7 +1639,7 @@ separation of concerns between back-end and front-end. You don’t need to use a
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
 		&lt;img src=&quot;https://adamsilver.io/assets/img/buttons/chrome.jpeg&quot; alt=&quot;Chrome on Mac OS&quot; width=&quot;100%&quot; /&gt;
-		&lt;figcaption&gt;Google&#39;s search page on Chrome Mac OS&lt;/figcaption&gt;
+		&lt;figcaption&gt;Google's search page on Chrome Mac OS&lt;/figcaption&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -1714,7 +1714,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;p&gt;Let’s take a look at two examples whereby designers frequently ditch the label.&lt;/p&gt;
 
-&lt;h2 id=&quot;add-to-basket-form&quot;&gt;1. Add to basket form&lt;/h2&gt;
+&lt;h2 id=&quot;1-add-to-basket-form&quot;&gt;1. Add to basket form&lt;/h2&gt;
 
 &lt;p&gt;When a form uses a select menu, designers sometimes rely on the first option in the list to denote meaning. Take a look at ASOS’s &lt;em&gt;add to basket&lt;/em&gt; form.&lt;/p&gt;
 
@@ -1733,7 +1733,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
   &lt;li&gt;Screen reader users will struggle to understand what’s going on. The values will be announced as “Select size, Small, Medium, Large”—that is, they’re a mix of instructions and options to pick.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;search-form&quot;&gt;2. Search form&lt;/h2&gt;
+&lt;h2 id=&quot;2-search-form&quot;&gt;2. Search form&lt;/h2&gt;
 
 &lt;p&gt;When a form has just one field—as would be the case with a search form—designers rely on placeholder text and the submit button to denote meaning. Take a look at &lt;a href=&quot;http://www.selfridges.com/&quot;&gt;Selfridges’&lt;/a&gt; search form.&lt;/p&gt;
 
@@ -1770,7 +1770,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;p&gt;Some designers go one one step further, and replace labels with placeholders. Either way, placeholders are an inclusive design anti-pattern which causes problems for users. Here’s why:&lt;/p&gt;
 
-&lt;h2 id=&quot;they-are-hard-to-remember&quot;&gt;1. They are hard to remember&lt;/h2&gt;
+&lt;h2 id=&quot;1-they-are-hard-to-remember&quot;&gt;1. They are hard to remember&lt;/h2&gt;
 
 &lt;p&gt;The placeholder disappears when the user types. Once it’s gone it’s hard to recall.&lt;/p&gt;
 
@@ -1781,7 +1781,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;lack-of-browser-support&quot;&gt;2. Lack of browser support&lt;/h2&gt;
+&lt;h2 id=&quot;2-lack-of-browser-support&quot;&gt;2. Lack of browser support&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://caniuse.com/#feat=input-placeholder&quot;&gt;Not all browsers support placeholders&lt;/a&gt;. In which case, the user will suffer a broken experience.&lt;/p&gt;
 
@@ -1792,7 +1792,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;populated-values-lack-clarity&quot;&gt;3. Populated values lack clarity&lt;/h2&gt;
+&lt;h2 id=&quot;3-populated-values-lack-clarity&quot;&gt;3. Populated values lack clarity&lt;/h2&gt;
 
 &lt;p&gt;It’s obvious that a missing label is fatal. But if the hint is missing, a user will find it harder to provide an answer.&lt;/p&gt;
 
@@ -1803,11 +1803,11 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;reviewing-entries-before-submission-is-difficult&quot;&gt;4. Reviewing entries before submission is difficult&lt;/h2&gt;
+&lt;h2 id=&quot;4-reviewing-entries-before-submission-is-difficult&quot;&gt;4. Reviewing entries before submission is difficult&lt;/h2&gt;
 
 &lt;p&gt;A user will need to memorise all the hints in order to check their form entries before submission. This is because as each form field is filled out, the hint disappears. The more fields there are, the bigger the problem.&lt;/p&gt;
 
-&lt;h2 id=&quot;errors-are-hard-to-fix&quot;&gt;5. Errors are hard to fix&lt;/h2&gt;
+&lt;h2 id=&quot;5-errors-are-hard-to-fix&quot;&gt;5. Errors are hard to fix&lt;/h2&gt;
 
 &lt;p&gt;Errors are hard to fix because the message and the value lack context. And the hint may contain information to help fix the error.&lt;/p&gt;
 
@@ -1820,7 +1820,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;p&gt;You could write a verbose error message. For example “Your password must be at least 8 characters” instead of “Must be at least 8 characters”. But this doesn’t entirely solve the problem.&lt;/p&gt;
 
-&lt;h2 id=&quot;some-browsers-hide-the-placeholder-on-focus&quot;&gt;6. Some browsers hide the placeholder on focus&lt;/h2&gt;
+&lt;h2 id=&quot;6-some-browsers-hide-the-placeholder-on-focus&quot;&gt;6. Some browsers hide the placeholder on focus&lt;/h2&gt;
 
 &lt;p&gt;Some browsers hide the placeholder when the user focuses, instead of when they start typing. This means the user has to read ahead of the current field to read the hint.&lt;/p&gt;
 
@@ -1831,7 +1831,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;placeholder-text-may-be-mistaken-for-a-value&quot;&gt;7. Placeholder text may be mistaken for a value&lt;/h2&gt;
+&lt;h2 id=&quot;7-placeholder-text-may-be-mistaken-for-a-value&quot;&gt;7. Placeholder text may be mistaken for a value&lt;/h2&gt;
 
 &lt;p&gt;People that don’t notice the subtle difference in contrast will skip the field mistaking it for a value. One test showed that &lt;a href=&quot;http://www.uxmatters.com/mt/archives/2010/03/dont-put-hints-inside-text-boxes-in-web-forms.php&quot;&gt;99% of users thought they didn’t need to enter a value&lt;/a&gt;. When the user submits the form they will be frustratingly shown an error.&lt;/p&gt;
 
@@ -1844,15 +1844,15 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 
 &lt;p&gt;Or some users will try and select the placeholder text (because they think it’s actual text) and it will be confusing when they can’t.&lt;/p&gt;
 
-&lt;h2 id=&quot;they-have-insufficient-contrast&quot;&gt;8. They have insufficient contrast&lt;/h2&gt;
+&lt;h2 id=&quot;8-they-have-insufficient-contrast&quot;&gt;8. They have insufficient contrast&lt;/h2&gt;
 
 &lt;p&gt;Placeholder text has a lower contrast to help users realise it’s not a value. Some people will struggle to read the text due to the lack of contrast.&lt;/p&gt;
 
-&lt;h2 id=&quot;screen-readers-may-not-announce-them&quot;&gt;9. Screen readers may not announce them&lt;/h2&gt;
+&lt;h2 id=&quot;9-screen-readers-may-not-announce-them&quot;&gt;9. Screen readers may not announce them&lt;/h2&gt;
 
 &lt;p&gt;Placeholders may not be read out by screen readers making this exclusive to sighted users.&lt;/p&gt;
 
-&lt;h2 id=&quot;the-hit-area-is-reduced&quot;&gt;10. The hit area is reduced&lt;/h2&gt;
+&lt;h2 id=&quot;10-the-hit-area-is-reduced&quot;&gt;10. The hit area is reduced&lt;/h2&gt;
 
 &lt;p&gt;Clicking a label moves the focus to the field. This helps everyone but even moreso to users with fine motor skill impairments. Fields with the label and hint outside, increases the size of the hit area.&lt;/p&gt;
 
@@ -1863,7 +1863,7 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;placeholder-text-can-be-cut-off&quot;&gt;11. Placeholder text can be cut off&lt;/h2&gt;
+&lt;h2 id=&quot;11-placeholder-text-can-be-cut-off&quot;&gt;11. Placeholder text can be cut off&lt;/h2&gt;
 
 &lt;p&gt;If the placeholder is longer than the size of the field, it will be cut off. This means you’re unnecessarily constrained to what information you can put inside it.&lt;/p&gt;
 
@@ -1874,15 +1874,15 @@ http://ux.stackexchange.com/questions/3788/default-cursor-on-mouse-over-of-a-but
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;some-browsers-dont-translate-them&quot;&gt;12. Some browsers don’t translate them&lt;/h2&gt;
+&lt;h2 id=&quot;12-some-browsers-dont-translate-them&quot;&gt;12. Some browsers don’t translate them&lt;/h2&gt;
 
 &lt;p&gt;For example, when Chrome translates a web page, it will fail to translate the text inside a placeholder.&lt;/p&gt;
 
-&lt;h2 id=&quot;browser-auto-complete-exacerbates-the-problem&quot;&gt;13. Browser auto-complete exacerbates the problem&lt;/h2&gt;
+&lt;h2 id=&quot;13-browser-auto-complete-exacerbates-the-problem&quot;&gt;13. Browser auto-complete exacerbates the problem&lt;/h2&gt;
 
 &lt;p&gt;The browser’s auto-completion routine populates the fields automatically. This means the placeholder text disappears making it difficult for the user to check the values against what the fields intended.&lt;/p&gt;
 
-&lt;h2 id=&quot;in-windows-high-contrast-mode-placeholder-text-looks-like-an-actual-value&quot;&gt;14. In Windows High Contrast Mode placeholder text looks like an actual value&lt;/h2&gt;
+&lt;h2 id=&quot;14-in-windows-high-contrast-mode-placeholder-text-looks-like-an-actual-value&quot;&gt;14. In Windows High Contrast Mode placeholder text looks like an actual value&lt;/h2&gt;
 
 &lt;p&gt;In High Contrast Mode, placeholder text is given high contrast colors, making it look like an actual value.&lt;/p&gt;
 
@@ -1982,17 +1982,17 @@ integration with the warehouse and 2 courier companies.&lt;/p&gt;
 
 &lt;p&gt;I put &lt;em&gt;failed&lt;/em&gt; in quotation marks because it wasn’t a critical failure as such. This is more of a “why we didn’t get as much done as we might have” type thing. Here’s why I think that was:&lt;/p&gt;
 
-&lt;h3 id=&quot;the-original-mvp-was-too-big-in-the-first-place&quot;&gt;1. The Original MVP was too big in the first place&lt;/h3&gt;
+&lt;h3 id=&quot;1-the-original-mvp-was-too-big-in-the-first-place&quot;&gt;1. The Original MVP was too big in the first place&lt;/h3&gt;
 
 &lt;p&gt;Self explanatory really. When something is too big, it’s just too big. The
 problem wasn’t that it was too big, it was that it took us a while to come to
 terms with that — something I will explain shortly.&lt;/p&gt;
 
-&lt;h3 id=&quot;we-had-a-fixed-deadline-and-a-fixed-scope&quot;&gt;2. We had a fixed deadline &lt;em&gt;and&lt;/em&gt; a fixed scope.&lt;/h3&gt;
+&lt;h3 id=&quot;2-we-had-a-fixed-deadline-and-a-fixed-scope&quot;&gt;2. We had a fixed deadline &lt;em&gt;and&lt;/em&gt; a fixed scope.&lt;/h3&gt;
 
 &lt;p&gt;You can have either a fixed deadline or a fixed scope but not both — we inadvertently set ourselves up for failure.&lt;/p&gt;
 
-&lt;h3 id=&quot;we-zoomed-in-to-details-too-early&quot;&gt;3. We zoomed in to details too early&lt;/h3&gt;
+&lt;h3 id=&quot;3-we-zoomed-in-to-details-too-early&quot;&gt;3. We zoomed in to details too early&lt;/h3&gt;
 
 &lt;p&gt;What I mean by this is that every single piece of copy, every pixel and every
 micro interaction was scrutinised over and over. Ultimately it
@@ -2080,7 +2080,7 @@ vital feedback before opening up to public.&lt;/li&gt;
 
 &lt;p&gt;Here’s the other big things we suggested:&lt;/p&gt;
 
-&lt;h3 id=&quot;we-halved-the-amount-of-products&quot;&gt;1. We halved the amount of products&lt;/h3&gt;
+&lt;h3 id=&quot;1-we-halved-the-amount-of-products&quot;&gt;1. We halved the amount of products&lt;/h3&gt;
 
 &lt;p&gt;Instead of launching with 1000 products we decided it would be okay to launch
 with less than half of that. This itself had two far reaching benefits:&lt;/p&gt;
@@ -2089,11 +2089,11 @@ with less than half of that. This itself had two far reaching benefits:&lt;/p&gt
 
 &lt;p&gt;&lt;em&gt;Second&lt;/em&gt;, we could significantly reduce the complexity of the site. For example we no longer needed sub categories — there was going to be less than 40 products on each category page, so why offer people the ability to drill down? In a similar vein, we no longer needed filtering or pagination.&lt;/p&gt;
 
-&lt;h3 id=&quot;we-removed-brand-pages&quot;&gt;2. We removed brand pages&lt;/h3&gt;
+&lt;h3 id=&quot;2-we-removed-brand-pages&quot;&gt;2. We removed brand pages&lt;/h3&gt;
 
 &lt;p&gt;Brand pages are a nice-to-have feature but we still took the option to cut these out. In doing so we removed “super” brand, “simple” brand and brand directory pages. This also meant that our navigation was simplified — customers could only shop by category. Easy.&lt;/p&gt;
 
-&lt;h3 id=&quot;no-paypal&quot;&gt;3. No PayPal&lt;/h3&gt;
+&lt;h3 id=&quot;3-no-paypal&quot;&gt;3. No PayPal&lt;/h3&gt;
 
 &lt;p&gt;This was a big decision for us as we know how important PayPal is to increasing conversion in checkout. We already had to integrate Stripe and just didn’t have the capacity for this. It’s high up on the post launch backlog though.&lt;/p&gt;
 
@@ -2131,7 +2131,7 @@ with less than half of that. This itself had two far reaching benefits:&lt;/p&gt
 
 &lt;p&gt;Here are all the things we learnt from this experience:&lt;/p&gt;
 
-&lt;h3 id=&quot;everyones-idea-of-mvp-is-different&quot;&gt;1. Everyones idea of MVP is different&lt;/h3&gt;
+&lt;h3 id=&quot;1-everyones-idea-of-mvp-is-different&quot;&gt;1. Everyones idea of MVP is different&lt;/h3&gt;
 
 &lt;p&gt;James’ idea of MVP and my idea of MVP are quite different. We have often disagreed on macro and micro aspects of the product but that’s to be expected not only because we are different people but because we are bound to see KIDLY from different perspectives.&lt;/p&gt;
 
@@ -2143,7 +2143,7 @@ with less than half of that. This itself had two far reaching benefits:&lt;/p&gt
 
 &lt;p&gt;But ultimately, what is right for KIDLY is somewhere in between. There is no “right” or “wrong” MVP — you just have to get your team on the same page and as soon as possible.&lt;/p&gt;
 
-&lt;h3 id=&quot;good-enough-is-good-enough&quot;&gt;2. “Good enough” is good enough&lt;/h3&gt;
+&lt;h3 id=&quot;2-good-enough-is-good-enough&quot;&gt;2. “Good enough” is good enough&lt;/h3&gt;
 
 &lt;p&gt;During the first few months at KIDLY James gave us &lt;em&gt;Rework&lt;/em&gt; by Jason Fried, to read. In it there is a chapter explaining the concept of “Good Enough”.&lt;/p&gt;
 
@@ -2153,25 +2153,25 @@ with less than half of that. This itself had two far reaching benefits:&lt;/p&gt
 
 &lt;p&gt;If it feels wrong holistically you can rectify without destroying the detail. If it feels right you can go ahead and dive into the detail. Win Win.&lt;/p&gt;
 
-&lt;h3 id=&quot;bite-off-half-of-what-you-think-you-can-chew&quot;&gt;3. Bite off half of what you think you can chew&lt;/h3&gt;
+&lt;h3 id=&quot;3-bite-off-half-of-what-you-think-you-can-chew&quot;&gt;3. Bite off half of what you think you can chew&lt;/h3&gt;
 
 &lt;p&gt;Whatever it is you think you are capable of achieving, stop and remove 50% of it right there and then. Get rid of the other half until the first half is complete. Obviously “half” is a horizontal slice as opposed to a vertical slice.&lt;/p&gt;
 
-&lt;h3 id=&quot;give-your-teams-problems-to-solve-not-solutions-to-adopt&quot;&gt;4. Give your teams problems to solve, not solutions to adopt.&lt;/h3&gt;
+&lt;h3 id=&quot;4-give-your-teams-problems-to-solve-not-solutions-to-adopt&quot;&gt;4. Give your teams problems to solve, not solutions to adopt.&lt;/h3&gt;
 
 &lt;p&gt;When it came to crunch time, James gave us a difficult problem and empowered us to make it work. There is nothing like challenge, accountability and trust to unite a team, in order to set yourself up for success. James showed great leadership which lead us to success quickly.&lt;/p&gt;
 
-&lt;h3 id=&quot;its-either-a-fixed-deadline-or-a-fixed-scope-not-both&quot;&gt;5. It’s either a fixed deadline or a fixed scope, not both!&lt;/h3&gt;
+&lt;h3 id=&quot;5-its-either-a-fixed-deadline-or-a-fixed-scope-not-both&quot;&gt;5. It’s either a fixed deadline or a fixed scope, not both!&lt;/h3&gt;
 
 &lt;p&gt;There is nothing more to say here.&lt;/p&gt;
 
-&lt;h3 id=&quot;pressure-forces-you-to-think-creatively&quot;&gt;6. Pressure forces you to think creatively&lt;/h3&gt;
+&lt;h3 id=&quot;6-pressure-forces-you-to-think-creatively&quot;&gt;6. Pressure forces you to think creatively&lt;/h3&gt;
 
 &lt;p&gt;Pressure can ignite an individual or a team to think differently, and accept the (what might have previously been deemed) unacceptable.&lt;/p&gt;
 
 &lt;p&gt;I never thought we could launch in 4 weeks and I didn’t think we would go for such a tiny version of our Original MVP. But we managed both of those things.&lt;/p&gt;
 
-&lt;h3 id=&quot;a-lack-of-features-can-be-a-very-good-thing&quot;&gt;7. A lack of features can be a very good thing&lt;/h3&gt;
+&lt;h3 id=&quot;7-a-lack-of-features-can-be-a-very-good-thing&quot;&gt;7. A lack of features can be a very good thing&lt;/h3&gt;
 
 &lt;p&gt;If you go by just the feedback, sales and conversion so far, it would be easy to think that the product is great as it is — that’s because it &lt;em&gt;is&lt;/em&gt; great as it is — even with half an MVP. It just goes to show that &lt;em&gt;less&lt;/em&gt; is often &lt;em&gt;better&lt;/em&gt;.&lt;/p&gt;
 
@@ -2245,25 +2245,25 @@ because it’s fucking scary and I have (had?) no idea what I am doing. But for 
 
 &lt;h2 id=&quot;before-accepting-the-gig&quot;&gt;Before accepting the gig&lt;/h2&gt;
 
-&lt;h3 id=&quot;choose-the-right-timing-and-gig&quot;&gt;1. Choose the right timing and gig&lt;/h3&gt;
+&lt;h3 id=&quot;1-choose-the-right-timing-and-gig&quot;&gt;1. Choose the right timing and gig&lt;/h3&gt;
 
 &lt;p&gt;There is never a perfect time to do it. You will always be fearful. I was
 fearful that I would make mistakes, that people wouldn’t find value or that I can’t inspire others, or that the audience weren’t right for my talk. But all in all, my values and the conference’s values aligned and I decided to go for it.&lt;/p&gt;
 
-&lt;h3 id=&quot;choose-the-right-theme&quot;&gt;2. Choose the right theme&lt;/h3&gt;
+&lt;h3 id=&quot;2-choose-the-right-theme&quot;&gt;2. Choose the right theme&lt;/h3&gt;
 
 &lt;p&gt;There is no point in giving a talk on something that a) you don’t know about and b) you’re not absolutely passionate about sharing with others. You need to show enthusiasm for your topic, otherwise don’t bother.&lt;/p&gt;
 
-&lt;h3 id=&quot;choose-the-right-duration&quot;&gt;3. Choose the right duration&lt;/h3&gt;
+&lt;h3 id=&quot;3-choose-the-right-duration&quot;&gt;3. Choose the right duration&lt;/h3&gt;
 
 &lt;p&gt;All Ted talks are somewhere between 15 and 20 mins. The is because people can’t concentrate for longer than that and if you can’t explain your message with inspiration in that time, then you’re buggered anyway.&lt;/p&gt;
 
-&lt;h3 id=&quot;make-sure-you-have-enough-time-to-prep&quot;&gt;4. Make sure you have enough time to prep&lt;/h3&gt;
+&lt;h3 id=&quot;4-make-sure-you-have-enough-time-to-prep&quot;&gt;4. Make sure you have enough time to prep&lt;/h3&gt;
 
 &lt;p&gt;I gave myself a clean schedule for 2 months as I prefer to be over-prepared.
 Otherwise I would be more nervous.&lt;/p&gt;
 
-&lt;h3 id=&quot;choose-the-right-remuneration&quot;&gt;5. Choose the right remuneration&lt;/h3&gt;
+&lt;h3 id=&quot;5-choose-the-right-remuneration&quot;&gt;5. Choose the right remuneration&lt;/h3&gt;
 
 &lt;p&gt;I never negotiated but I probably should have. ‘They’ say that you should
 negotiate for about 5 times the ticket price. In reality it’s not about the
@@ -2272,115 +2272,115 @@ mind.&lt;/p&gt;
 
 &lt;h2 id=&quot;after-accepting-the-the-talk&quot;&gt;After accepting the the talk&lt;/h2&gt;
 
-&lt;h3 id=&quot;purchase-a-kensington-clicker&quot;&gt;1. Purchase a Kensington clicker&lt;/h3&gt;
+&lt;h3 id=&quot;1-purchase-a-kensington-clicker&quot;&gt;1. Purchase a Kensington clicker&lt;/h3&gt;
 
 &lt;p&gt;You want to be free to deliver the talk, not shackled to your computer fumbling around the trackpad, mouse or keyboard to progress the slides. This one is good value, well recommended and very good.&lt;/p&gt;
 
-&lt;h3 id=&quot;design-your-slides-last&quot;&gt;2. Design your slides last&lt;/h3&gt;
+&lt;h3 id=&quot;2-design-your-slides-last&quot;&gt;2. Design your slides last&lt;/h3&gt;
 
 &lt;p&gt;Whatever you do, don’t design your slides first. Slides are props. Nail down
 your script first, then add slides as an enhancement to your talk if necessary. You might find you don’t even need slides.&lt;/p&gt;
 
-&lt;h3 id=&quot;write-down-your-ideas&quot;&gt;3. Write down your ideas&lt;/h3&gt;
+&lt;h3 id=&quot;3-write-down-your-ideas&quot;&gt;3. Write down your ideas&lt;/h3&gt;
 
 &lt;p&gt;Always write down what pops into your head or what you come across in life.
 Ideas, links, photos, thoughts, videos, quotes, books, articles, tweets,
 peoples, work, case studies, experiences, anything. Don’t underestimate your
 ability to forget.&lt;/p&gt;
 
-&lt;h3 id=&quot;design-your-talk&quot;&gt;4. Design your talk&lt;/h3&gt;
+&lt;h3 id=&quot;4-design-your-talk&quot;&gt;4. Design your talk&lt;/h3&gt;
 
 &lt;p&gt;You need to work out what the message is and how you’re going to present it.
 Make sure the message is close to your heart. My talk was about “embracing
 simplicity” which touches so many parts of my life from different angles. From minimalism, to essentialism, to web design and coding websites, I strive for simplicity.&lt;/p&gt;
 
-&lt;h3 id=&quot;start-fleshing-out-your-talk&quot;&gt;5. Start fleshing out your talk&lt;/h3&gt;
+&lt;h3 id=&quot;5-start-fleshing-out-your-talk&quot;&gt;5. Start fleshing out your talk&lt;/h3&gt;
 
 &lt;p&gt;You need to find some quiet time to start fleshing out your talk. Whatever is easier, just start writing and sharing stories that back up your points.&lt;/p&gt;
 
-&lt;h3 id=&quot;tell-stories&quot;&gt;6. Tell stories&lt;/h3&gt;
+&lt;h3 id=&quot;6-tell-stories&quot;&gt;6. Tell stories&lt;/h3&gt;
 
 &lt;p&gt;Tell personal or other peoples stories that convey what you’re saying. Make sure the stories come first, make sure they last at least 1/3 of the entire presentation. Reason being is you need to connect emotionally to your audience. Stories are the way to do this.&lt;/p&gt;
 
-&lt;h3 id=&quot;start-to-practice-the-script&quot;&gt;7. Start to practice the script&lt;/h3&gt;
+&lt;h3 id=&quot;7-start-to-practice-the-script&quot;&gt;7. Start to practice the script&lt;/h3&gt;
 
 &lt;p&gt;The script won’t be perfect, nor will your delivery but start practicing it,
 thinking about it and delivering to someone you know. Over and over and over. Then keep refining, adding, reducing. You want to get to the point where you’re thinking about delivery — not what it is that you have to say. I practiced at least once a day to anyone that will listen. Thanks wife.&lt;/p&gt;
 
-&lt;h3 id=&quot;deliver-something-new&quot;&gt;8. Deliver something new&lt;/h3&gt;
+&lt;h3 id=&quot;8-deliver-something-new&quot;&gt;8. Deliver something new&lt;/h3&gt;
 
 &lt;p&gt;It doesn’t have to be completely new, but if you have a unique spin on
 something, share it. It will help your audience engage with you.&lt;/p&gt;
 
-&lt;h3 id=&quot;deliver-stats-and-logic-later-in-the-talk&quot;&gt;9. Deliver stats and logic later in the talk&lt;/h3&gt;
+&lt;h3 id=&quot;9-deliver-stats-and-logic-later-in-the-talk&quot;&gt;9. Deliver stats and logic later in the talk&lt;/h3&gt;
 
 &lt;p&gt;After connecting emotionally via stories, add logic and stats to back it up.&lt;/p&gt;
 
-&lt;h3 id=&quot;deliver-a-jaw-dropping-moment&quot;&gt;10. Deliver a jaw dropping moment&lt;/h3&gt;
+&lt;h3 id=&quot;10-deliver-a-jaw-dropping-moment&quot;&gt;10. Deliver a jaw dropping moment&lt;/h3&gt;
 
 &lt;p&gt;Deliver a jaw dropping moment if you can. Something the audience will remember. This could be anything, it could be a stat, it could be you playing an instrument, it could be anything, as long as it relates to your talk.&lt;/p&gt;
 
-&lt;h3 id=&quot;consider-not-having-slides&quot;&gt;11. Consider not having slides&lt;/h3&gt;
+&lt;h3 id=&quot;11-consider-not-having-slides&quot;&gt;11. Consider not having slides&lt;/h3&gt;
 
 &lt;p&gt;Consider giving a talk without slides. I ended up using slides because I thought they were appropriate and added value during parts of my talk. Also, whilst I memorised the script, the slides were semi-prompting and that made me feel more secure.&lt;/p&gt;
 
 &lt;p&gt;If your content doesn’t require it, then ditch the slides and free yourself from technology and having to sync your words up to your slides.&lt;/p&gt;
 
-&lt;h3 id=&quot;dont-put-lots-of-text-on-a-slide&quot;&gt;12. Don’t put lots of text on a slide&lt;/h3&gt;
+&lt;h3 id=&quot;12-dont-put-lots-of-text-on-a-slide&quot;&gt;12. Don’t put lots of text on a slide&lt;/h3&gt;
 
 &lt;p&gt;Whatever you do, don’t put lots of text on a slide. Especially if you’re not
 reading it out word-for-word. Nobody can listen to you talk and read text on a slide.&lt;/p&gt;
 
-&lt;h3 id=&quot;be-you&quot;&gt;13. Be you&lt;/h3&gt;
+&lt;h3 id=&quot;13-be-you&quot;&gt;13. Be you&lt;/h3&gt;
 
 &lt;p&gt;Don’t try and be someone else (everyone else is taken anyway). Don’t change the way you speak just for the talk. Go up, have a chat with the audience, be honest and you can’t go wrong.&lt;/p&gt;
 
-&lt;h3 id=&quot;watch-other-amazing-talks&quot;&gt;14. Watch other amazing talks&lt;/h3&gt;
+&lt;h3 id=&quot;14-watch-other-amazing-talks&quot;&gt;14. Watch other amazing talks&lt;/h3&gt;
 
 &lt;p&gt;I watched other great talks in my field. I also watched great Ted talks. It all helps. Watch out for the details, why it works so well. And what bits didn’t work so well.&lt;/p&gt;
 
 &lt;h2 id=&quot;on-the-day-of-your-talk&quot;&gt;On the day of your talk&lt;/h2&gt;
 
-&lt;h3 id=&quot;arrive-early&quot;&gt;1. Arrive early&lt;/h3&gt;
+&lt;h3 id=&quot;1-arrive-early&quot;&gt;1. Arrive early&lt;/h3&gt;
 
 &lt;p&gt;You don’t want to feel rushed. It’s stressful enough as it is, so plan your
 routes and get there comfortably.&lt;/p&gt;
 
-&lt;h3 id=&quot;find-the-bathroom&quot;&gt;2. Find the bathroom&lt;/h3&gt;
+&lt;h3 id=&quot;2-find-the-bathroom&quot;&gt;2. Find the bathroom&lt;/h3&gt;
 
 &lt;p&gt;You will need this. Having hardly drunk any water, I went for a wee at least 5 times until I was on in the early afternoon.&lt;/p&gt;
 
-&lt;h3 id=&quot;travel-light&quot;&gt;3. Travel light&lt;/h3&gt;
+&lt;h3 id=&quot;3-travel-light&quot;&gt;3. Travel light&lt;/h3&gt;
 
 &lt;p&gt;Bring your essentials, I brought too much stuff “just in case”, but I should
 have only brought my clicker (and spare batteries), my laptop and my charger.&lt;/p&gt;
 
-&lt;h3 id=&quot;familiarise-yourself-with-the-stage&quot;&gt;4. Familiarise yourself with the stage&lt;/h3&gt;
+&lt;h3 id=&quot;4-familiarise-yourself-with-the-stage&quot;&gt;4. Familiarise yourself with the stage&lt;/h3&gt;
 
 &lt;p&gt;I was on in the afternoon, but having arrived early before the conference
 started in the morning, I found the organiser and got my bearings. It was very different to the photos online so was well worth doing this.&lt;/p&gt;
 
-&lt;h3 id=&quot;bring-someone-for-support&quot;&gt;5. Bring someone for support&lt;/h3&gt;
+&lt;h3 id=&quot;5-bring-someone-for-support&quot;&gt;5. Bring someone for support&lt;/h3&gt;
 
 &lt;p&gt;I did and it helped a lot.&lt;/p&gt;
 
-&lt;h3 id=&quot;speak-to-other-people-and-speakers&quot;&gt;6. Speak to other people and speakers&lt;/h3&gt;
+&lt;h3 id=&quot;6-speak-to-other-people-and-speakers&quot;&gt;6. Speak to other people and speakers&lt;/h3&gt;
 
 &lt;p&gt;It’s great to speak to others, it calms you down. Most people are nervous (like you) even if they’ve given lots of talks before. And part of the day is about getting to know others.&lt;/p&gt;
 
-&lt;h3 id=&quot;dont-eat-too-much-or-too-little&quot;&gt;7. Don’t eat too much or too little&lt;/h3&gt;
+&lt;h3 id=&quot;7-dont-eat-too-much-or-too-little&quot;&gt;7. Don’t eat too much or too little&lt;/h3&gt;
 
 &lt;p&gt;I didn’t eat enough, I felt too nervous to eat and I ended up with a headache, but adrenaline carried me through. Work out your timings based on what time your talk is. Give yourself at &lt;em&gt;least&lt;/em&gt; 1 hour before your talk to digest.&lt;/p&gt;
 
-&lt;h3 id=&quot;sound-checks&quot;&gt;8. Sound checks&lt;/h3&gt;
+&lt;h3 id=&quot;8-sound-checks&quot;&gt;8. Sound checks&lt;/h3&gt;
 
 &lt;p&gt;Get your shit in order early. My slot was in the afternoon so while people were at lunch I was on the stage making sure my computer hooked up to the projector and that my mic worked.&lt;/p&gt;
 
-&lt;h3 id=&quot;drink-water-10-mins-before&quot;&gt;9. Drink water 10 mins before&lt;/h3&gt;
+&lt;h3 id=&quot;9-drink-water-10-mins-before&quot;&gt;9. Drink water 10 mins before&lt;/h3&gt;
 
 &lt;p&gt;Drink it 10 mins before your talk. The reason why it’s 10 mins is so you don’t need to go to the toilet when your talk begins. Even if you do this, you might still be dry from nerves when your talk starts.&lt;/p&gt;
 
-&lt;h3 id=&quot;bring-water-on-stage&quot;&gt;10. Bring water on stage&lt;/h3&gt;
+&lt;h3 id=&quot;10-bring-water-on-stage&quot;&gt;10. Bring water on stage&lt;/h3&gt;
 
 &lt;p&gt;I decided not to do this — big mistake for me. A couple of minutes into my talk, I had to jump of stage for 5 seconds to get water because my mouth went dry from the nerves. It was seconds, but felt like hours. It broke up my talk, and made me feel awkward. Silly!&lt;/p&gt;
 
@@ -2578,7 +2578,7 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;div class=&quot;image&quot;&gt;
 	&lt;figure&gt;
-		&lt;img src=&quot;https://adamsilver.io/assets/img/value.jpg&quot; alt=&quot;Value only has a value when it&#39;s value is valued&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;https://adamsilver.io/assets/img/value.jpg&quot; alt=&quot;Value only has a value when it's value is valued&quot; width=&quot;100%&quot; /&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
@@ -2746,55 +2746,55 @@ He talked to experts in other high-risk professions, such as aviation.
 
 &lt;p&gt;Here are some real examples:&lt;/p&gt;
 
-&lt;h2 id=&quot;buttons-and-links-should-look-the-same&quot;&gt;1. “Buttons and links should look the same.”&lt;/h2&gt;
+&lt;h2 id=&quot;1-buttons-and-links-should-look-the-same&quot;&gt;1. “Buttons and links should look the same.”&lt;/h2&gt;
 
 &lt;p&gt;Clarity trumps minimalism every time. &lt;a href=&quot;/articles/buttons-shouldnt-have-a-hand-cursor&quot;&gt;Buttons and links are different&lt;/a&gt;. We should design to accomodate those differences. Not ignore them.&lt;/p&gt;
 
-&lt;h2 id=&quot;remove-the-outline-when-the-user-focuses-on-an-element-it-doesnt-look-good-most-people-dont-use-their-keyboard-anyway-we-cant-legislate-for-all-users-be-realastic&quot;&gt;2. “Remove the outline when the user focuses on an element. It doesn’t look good. Most people don’t use their keyboard anyway. We can’t legislate for all users. Be realastic.”&lt;/h2&gt;
+&lt;h2 id=&quot;2-remove-the-outline-when-the-user-focuses-on-an-element-it-doesnt-look-good-most-people-dont-use-their-keyboard-anyway-we-cant-legislate-for-all-users-be-realastic&quot;&gt;2. “Remove the outline when the user focuses on an element. It doesn’t look good. Most people don’t use their keyboard anyway. We can’t legislate for all users. Be realastic.”&lt;/h2&gt;
 
 &lt;p&gt;If we know there are people that use the keyboard then we should design for them. It’s not just about how something looks, it’s about how it works.&lt;/p&gt;
 
-&lt;h2 id=&quot;most-people-with-large-screens-use-a-mouse-so-we-dont-need-to-make-it-touch-friendly&quot;&gt;3. “Most people with large screens use a mouse so we don’t need to make it touch friendly.”&lt;/h2&gt;
+&lt;h2 id=&quot;3-most-people-with-large-screens-use-a-mouse-so-we-dont-need-to-make-it-touch-friendly&quot;&gt;3. “Most people with large screens use a mouse so we don’t need to make it touch friendly.”&lt;/h2&gt;
 
 &lt;p&gt;Maybe more people use a mouse. But some people have large touch-enabled screens. Why not design the hit area so it is good for everyone? Then if they use a mouse it’s easy, if they use touch it’s easy.&lt;/p&gt;
 
-&lt;h2 id=&quot;for-small-screens-lets-hide-the-arrow-buttons-on-the-carousel-small-screen-devices-allow-the-user-to-swipe&quot;&gt;4. “For small screens, let’s hide the arrow buttons on the carousel. Small screen devices allow the user to swipe.”&lt;/h2&gt;
+&lt;h2 id=&quot;4-for-small-screens-lets-hide-the-arrow-buttons-on-the-carousel-small-screen-devices-allow-the-user-to-swipe&quot;&gt;4. “For small screens, let’s hide the arrow buttons on the carousel. Small screen devices allow the user to swipe.”&lt;/h2&gt;
 
 &lt;p&gt;Maybe some browsers don’t support gestures. Maybe users don’t realise an interface is swipable. Including buttons helps.&lt;/p&gt;
 
-&lt;h2 id=&quot;mobile-users-swipe-desktop-users-dont&quot;&gt;5. “Mobile users swipe, desktop users don’t”&lt;/h2&gt;
+&lt;h2 id=&quot;5-mobile-users-swipe-desktop-users-dont&quot;&gt;5. “Mobile users swipe, desktop users don’t”&lt;/h2&gt;
 
 &lt;p&gt;There is no desktop, there is no mobile. There are browsers of varying sizes and capabilities. There are people with different preferences and abilities. They need our help and consideration.&lt;/p&gt;
 
-&lt;h2 id=&quot;the-colour-contrasts-are-fine-they-work-great-on-most-new-devices-and-thats-our-target-audience&quot;&gt;6. “The colour contrasts are fine, they work great on most new devices and that’s our target audience”&lt;/h2&gt;
+&lt;h2 id=&quot;6-the-colour-contrasts-are-fine-they-work-great-on-most-new-devices-and-thats-our-target-audience&quot;&gt;6. “The colour contrasts are fine, they work great on most new devices and that’s our target audience”&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://backchannel.com/how-the-web-became-unreadable-a781ddc711b6#.c9zxfsiep&quot;&gt;You’re making the web unreadable&lt;/a&gt;. Your challenge is to use visually pleasing acceptable contrasts.&lt;/p&gt;
 
 &lt;p&gt;This makes the clear clearer and the unclear clear. &lt;a href=&quot;https://www.smashingmagazine.com/2016/06/improving-ux-for-color-blind-users/&quot;&gt;Not everyone can see like you can&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;a-select-box-without-a-label-is-fine-its-unnecessary-clutter&quot;&gt;7. “A select box without a label is fine, it’s unnecessary clutter.”&lt;/h2&gt;
+&lt;h2 id=&quot;7-a-select-box-without-a-label-is-fine-its-unnecessary-clutter&quot;&gt;7. “A select box without a label is fine, it’s unnecessary clutter.”&lt;/h2&gt;
 
 &lt;p&gt;Every &lt;a href=&quot;/articles/always-use-a-label/&quot;&gt;form field needs a label&lt;/a&gt;. There are good reasons why. Legislate for this and make the design look good as well.&lt;/p&gt;
 
-&lt;h2 id=&quot;most-users-are-on-a-fast-connection-10-high-resolution-images-on-one-page-is-essential&quot;&gt;8. “Most users are on a fast connection, 10 high resolution images on one page is essential”&lt;/h2&gt;
+&lt;h2 id=&quot;8-most-users-are-on-a-fast-connection-10-high-resolution-images-on-one-page-is-essential&quot;&gt;8. “Most users are on a fast connection, 10 high resolution images on one page is essential”&lt;/h2&gt;
 
 &lt;p&gt;People on low-speed connections don’t want to wait. Consider performance and how we can trim the fat for all. Faster connections become super fast, slow connections become satisfactory.&lt;/p&gt;
 
-&lt;h2 id=&quot;fix-it-with-javascript-we-dont-need-to-worry-about-the-1-of-users-without-it-its-important-that-the-design-looks-good-for-the-99&quot;&gt;9. “Fix it with Javascript. We don’t need to worry about the 1% of users without it. It’s important that the design looks good for the 99%.”&lt;/h2&gt;
+&lt;h2 id=&quot;9-fix-it-with-javascript-we-dont-need-to-worry-about-the-1-of-users-without-it-its-important-that-the-design-looks-good-for-the-99&quot;&gt;9. “Fix it with Javascript. We don’t need to worry about the 1% of users without it. It’s important that the design looks good for the 99%.”&lt;/h2&gt;
 
 &lt;p&gt;First, &lt;a href=&quot;http://kryogenix.org/code/browser/everyonehasjs.html&quot;&gt;this&lt;/a&gt;. Second,
 it’s not the amount of &lt;em&gt;users&lt;/em&gt;, its the amount of *visits. *Javascript will fail to download/execute at some point. Embrace &lt;a href=&quot;http://adamsilver.io/articles/writing-javascript-that-conforms-to-progressive-enhancement/&quot;&gt;Progressive
 Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a hit in performance, maintenance and usability.&lt;/p&gt;
 
-&lt;h2 id=&quot;we-need-to-fix-that-by-disabling-zoom-on-mobile&quot;&gt;10. “We need to fix that by disabling zoom on mobile”&lt;/h2&gt;
+&lt;h2 id=&quot;10-we-need-to-fix-that-by-disabling-zoom-on-mobile&quot;&gt;10. “We need to fix that by disabling zoom on mobile”&lt;/h2&gt;
 
 &lt;p&gt;Zoom is essential. Not everyone has &lt;a href=&quot;http://mrmrs.io/writing/2016/03/23/the-veil-of-ignorance/&quot;&gt;good vision like you do&lt;/a&gt;. Let go, be &lt;a href=&quot;http://blog.capwatkins.com/the-boring-designer&quot;&gt;boring&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;i-dont-like-the-way-the-text-wraps-on-small-screens-well-get-the-copywriter-to-make-the-words-fit&quot;&gt;11. “I don’t like the way the text wraps on small screens, we’ll get the copywriter to make the words fit.”&lt;/h2&gt;
+&lt;h2 id=&quot;11-i-dont-like-the-way-the-text-wraps-on-small-screens-well-get-the-copywriter-to-make-the-words-fit&quot;&gt;11. “I don’t like the way the text wraps on small screens, we’ll get the copywriter to make the words fit.”&lt;/h2&gt;
 
 &lt;p&gt;Again, clarity trumps minimalism. &lt;a href=&quot;https://medium.com/uie-brain-sparks/content-and-design-are-inseparable-work-partners-5e1450ac5bba&quot;&gt;Design for content&lt;/a&gt;. Not the other way around.&lt;/p&gt;
 
-&lt;h2 id=&quot;website-x-does-it-so-we-should-do-it&quot;&gt;12. “Website X does it, so we should do it.”&lt;/h2&gt;
+&lt;h2 id=&quot;12-website-x-does-it-so-we-should-do-it&quot;&gt;12. “Website X does it, so we should do it.”&lt;/h2&gt;
 
 &lt;p&gt;Sometimes website X does things, sometimes those things are ill-advised. Take this opportunity to do it better. You’re probably testing the website in a cutting edge browser and &lt;a href=&quot;http://uxmyths.com/post/715988395/myth-you-are-like-your-users&quot;&gt;you’re not your users&lt;/a&gt;.&lt;/p&gt;
 
@@ -2815,7 +2815,7 @@ Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a h
 			<id>https://adamsilver.io/articles/hover-menus-are-problematic</id>
 			<content type="html">&lt;p&gt;Designers think hover menus are popular because they &lt;em&gt;aid discoverability&lt;/em&gt; and &lt;em&gt;save users a click&lt;/em&gt;, the latter of which is a common &lt;a href=&quot;http://uxmyths.com/post/654026581/myth-all-pages-should-be-accessible-in-3-clicks&quot;&gt;UX fallacy&lt;/a&gt;. The thing is, hover menus are problematic and here’s why:&lt;/p&gt;
 
-&lt;h2 id=&quot;the-hover-tunnel-and-accidental-deactivation&quot;&gt;1. The hover tunnel and accidental deactivation&lt;/h2&gt;
+&lt;h2 id=&quot;1-the-hover-tunnel-and-accidental-deactivation&quot;&gt;1. The hover tunnel and accidental deactivation&lt;/h2&gt;
 
 &lt;p&gt;When a user opens a menu, they can’t intuitively move the mouse directly to a sub link because it accidentally closes the menu—either by leaving the menu or activating another one by accident. This frustrates users and drains their energy.&lt;/p&gt;
 
@@ -2833,7 +2833,7 @@ Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a h
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;understanding-user-intention-and-accidental-activation&quot;&gt;2. Understanding user intention and accidental activation&lt;/h2&gt;
+&lt;h2 id=&quot;2-understanding-user-intention-and-accidental-activation&quot;&gt;2. Understanding user intention and accidental activation&lt;/h2&gt;
 
 &lt;p&gt;Hovering is not an intention to activate. At most, it suggests that the user &lt;em&gt;might&lt;/em&gt; interact. Technically, the user is always hovering. This is why hover states are beneficial to the user, such as a &lt;a href=&quot;/articles/buttons-shouldnt-have-a-hand-cursor/&quot;&gt;change of cursor&lt;/a&gt; (browsers do this by default) and a change of style.&lt;/p&gt;
 
@@ -2857,11 +2857,11 @@ Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a h
 
 &lt;p&gt;To work around these issues, you can add a small delay before showing a menu. But, this creates another problem: when the user does intend to open the menu, they have to wait for the delay to finish which makes the menu feel unresponsive.&lt;/p&gt;
 
-&lt;h2 id=&quot;accessibility-and-fine-motor-skills&quot;&gt;3. Accessibility and fine motor skills&lt;/h2&gt;
+&lt;h2 id=&quot;3-accessibility-and-fine-motor-skills&quot;&gt;3. Accessibility and fine motor skills&lt;/h2&gt;
 
 &lt;p&gt;Items on the bottom of the menu are hard to click because the user might accidentally move the mouse off, leaving the user to reopen the menu again.&lt;/p&gt;
 
-&lt;h2 id=&quot;touch-enabled-devices-and-responsive-design&quot;&gt;4. Touch-enabled devices and Responsive Design&lt;/h2&gt;
+&lt;h2 id=&quot;4-touch-enabled-devices-and-responsive-design&quot;&gt;4. Touch-enabled devices and Responsive Design&lt;/h2&gt;
 
 &lt;p&gt;There is no hover on touch-enabled devices—unless the user plugs in a pointing device. Touch-enabled devices are everywhere and they come in all shapes and sizes.&lt;/p&gt;
 
@@ -2896,11 +2896,11 @@ Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a h
 
 &lt;p&gt;When one of my colleagues convinced me and the team to stop it we increased our velocity significantly. Here’s why:&lt;/p&gt;
 
-&lt;h2 id=&quot;we-didnt-need-to-spend-time-tasking&quot;&gt;1. We didn’t need to spend time tasking&lt;/h2&gt;
+&lt;h2 id=&quot;1-we-didnt-need-to-spend-time-tasking&quot;&gt;1. We didn’t need to spend time tasking&lt;/h2&gt;
 
 &lt;p&gt;At least 50% of our Sprint Planning sessions was spent breaking down stories into tasks. For our team of over 20 people, we gained almost 60 man-hours back per sprint.&lt;/p&gt;
 
-&lt;h2 id=&quot;tasking-ahead-of-development-is-inaccurate&quot;&gt;2. Tasking ahead of development is inaccurate&lt;/h2&gt;
+&lt;h2 id=&quot;2-tasking-ahead-of-development-is-inaccurate&quot;&gt;2. Tasking ahead of development is inaccurate&lt;/h2&gt;
 
 &lt;p&gt;Solutions change during development due to unforseen scenarios. Only through coding might you find opportunites for improvement. A lot of our tasks weren’t accurate which meant tasking had negative value.&lt;/p&gt;
 
@@ -2910,31 +2910,31 @@ Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a h
 
 &lt;p&gt;Don’t bother, give yourself more time to code instead.&lt;/p&gt;
 
-&lt;h2 id=&quot;tasks-are-repetitive&quot;&gt;3. Tasks are repetitive&lt;/h2&gt;
+&lt;h2 id=&quot;3-tasks-are-repetitive&quot;&gt;3. Tasks are repetitive&lt;/h2&gt;
 
 &lt;p&gt;A lot of the stories required many of the same tasks. For example unit tests, a controller action, a template, some Javascript and styling enhancements etc. These things were always going to happen.&lt;/p&gt;
 
 &lt;p&gt;Writing them as tasks wasn’t valuable. Instead we relied on a clear Definition of Done and Acceptance Criteria. Both of which ensured the smooth delivery of each story.&lt;/p&gt;
 
-&lt;h2 id=&quot;many-tasks-are-carried-out-in-parallel&quot;&gt;4. Many tasks are carried out in parallel&lt;/h2&gt;
+&lt;h2 id=&quot;4-many-tasks-are-carried-out-in-parallel&quot;&gt;4. Many tasks are carried out in parallel&lt;/h2&gt;
 
 &lt;p&gt;Tasks are often carried out at the same time. For example, we would  write HTML &amp;amp; CSS together. Often the JS-enhanced version would need extra HTML and CSS.&lt;/p&gt;
 
 &lt;p&gt;This meant that a lot of tasks moved from “in-progress” to “complete” at the same time. We never showed granular progress. In the end we just moved the Story card.&lt;/p&gt;
 
-&lt;h2 id=&quot;estimates-didnt-improve&quot;&gt;5. Estimates didn’t improve&lt;/h2&gt;
+&lt;h2 id=&quot;5-estimates-didnt-improve&quot;&gt;5. Estimates didn’t improve&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://illustratedagile.com/2012/11/13/the-5-stages-of-user-story-sizing/&quot;&gt;Estimation is based on several things&lt;/a&gt;. Estimation comes from experience. Experience working together with a team you know well, on a particular project within a particular organisation. Only then will you have a predictable velocity.&lt;/p&gt;
 
-&lt;h2 id=&quot;its-easier-to-understand-the-task-board&quot;&gt;6. It’s easier to understand the task board&lt;/h2&gt;
+&lt;h2 id=&quot;6-its-easier-to-understand-the-task-board&quot;&gt;6. It’s easier to understand the task board&lt;/h2&gt;
 
 &lt;p&gt;Removing tasks decluttered the task board significantly. We no longer had to fit tasks into each swim lane. Instead we had a single card per story.&lt;/p&gt;
 
-&lt;h2 id=&quot;we-wasted-less-paper&quot;&gt;7. We wasted less paper&lt;/h2&gt;
+&lt;h2 id=&quot;7-we-wasted-less-paper&quot;&gt;7. We wasted less paper&lt;/h2&gt;
 
 &lt;p&gt;We saved trees. We saved money. What’s not to like about that?&lt;/p&gt;
 
-&lt;h2 id=&quot;the-overall-process-encouraged-us-to-collaborate&quot;&gt;8. The overall process encouraged us to collaborate&lt;/h2&gt;
+&lt;h2 id=&quot;8-the-overall-process-encouraged-us-to-collaborate&quot;&gt;8. The overall process encouraged us to collaborate&lt;/h2&gt;
 
 &lt;p&gt;We didn’t need tasks to help us collaborate. We sat in close proximity. We had regular, useful and well-timed meetings. We paired when appropriate and had regular productive feedback loops. All of this added up to a collaborative environment.&lt;/p&gt;
 
@@ -2951,38 +2951,38 @@ Enhancement&lt;/a&gt;. Every time you fix something with Javascript you take a h
 			<id>https://adamsilver.io/articles/infinite-scrolling-is-probably-a-bad-idea</id>
 			<content type="html">&lt;p&gt;On more than one occasion I have found myself trying to convince team-mates that infinite scrolling and its close relative &lt;em&gt;show more&lt;/em&gt; is more likely to degrade the experience than improve upon it. I thought I would jot down my notes on the matter and share them with you. Here they are:&lt;/p&gt;
 
-&lt;h2 id=&quot;the-footer-becomes-unusable&quot;&gt;1. The footer becomes unusable&lt;/h2&gt;
+&lt;h2 id=&quot;1-the-footer-becomes-unusable&quot;&gt;1. The footer becomes unusable&lt;/h2&gt;
 
 &lt;p&gt;People understand what a footer is and that it is likely to contain links to important secondary information. Infinite scrolling means the footer keeps getting pushed just out of reach by the freshly loaded content.&lt;/p&gt;
 
-&lt;h2 id=&quot;performance-degrades&quot;&gt;2. Performance degrades&lt;/h2&gt;
+&lt;h2 id=&quot;2-performance-degrades&quot;&gt;2. Performance degrades&lt;/h2&gt;
 
 &lt;p&gt;If you’re using infinite scrolling on a long page, you’re constantly loading more and more content into memory. This will have a negative impact on page performance, since the browser has much more work to do in order to render the page.&lt;/p&gt;
 
 &lt;p&gt;Also, the page needs to listen constantly for scroll events which can cause client-side performance problems.&lt;/p&gt;
 
-&lt;h2 id=&quot;analytics-is-harder-to-implement&quot;&gt;3. Analytics is harder to implement&lt;/h2&gt;
+&lt;h2 id=&quot;3-analytics-is-harder-to-implement&quot;&gt;3. Analytics is harder to implement&lt;/h2&gt;
 
 &lt;p&gt;Due to the way infinite scrolling works, dropping some Google Analytics code into the page isn’t going to give you much insight. Therefore you will need to write your own analytics implementation to track newly loaded content. This is then more costly to develop, maintain and test.&lt;/p&gt;
 
-&lt;h2 id=&quot;bookmarking-and-the-back-button-become-problematic&quot;&gt;4. Bookmarking and the back button become problematic&lt;/h2&gt;
+&lt;h2 id=&quot;4-bookmarking-and-the-back-button-become-problematic&quot;&gt;4. Bookmarking and the back button become problematic&lt;/h2&gt;
 
 &lt;p&gt;You can’t easily bookmark a segment of results to come back to or share with your friends.&lt;/p&gt;
 
 &lt;p&gt;Even if you do manage it and you end up bookmarking segment 15 (where each segment is say 40 items) then when you return to that bookmark, you suffer from long page-load times.
 Similarly, you can’t use the back button as it doesn’t go back to the previous segment of results. Instead it goes back to the previous page.&lt;/p&gt;
 
-&lt;h2 id=&quot;people-may-suffer-from-choice-paralysis&quot;&gt;5. People may suffer from choice paralysis&lt;/h2&gt;
+&lt;h2 id=&quot;5-people-may-suffer-from-choice-paralysis&quot;&gt;5. People may suffer from choice paralysis&lt;/h2&gt;
 
 &lt;p&gt;With very long pages people can feel paralysed by the amount of content and choices—infinite scrolling may well cause inaction and in-turn, lower click through rates. Just see &lt;a href=&quot;http://danwin.com/2013/01/infinite-scroll-fail-etsy/&quot;&gt;what happened to Etsy&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;the-scrollbar-becomes-unusable-and-untrustworthy&quot;&gt;6. The scrollbar becomes unusable and untrustworthy&lt;/h2&gt;
+&lt;h2 id=&quot;6-the-scrollbar-becomes-unusable-and-untrustworthy&quot;&gt;6. The scrollbar becomes unusable and untrustworthy&lt;/h2&gt;
 
 &lt;p&gt;The scroll bar inevitably becomes very small and hard to use. It’s hard to place your mouse on the scrollbar and the slightest movement might scroll a large part of the page when you only wanted to scroll a little bit.&lt;/p&gt;
 
 &lt;p&gt;Even worse, the scrollbar plays a trick on users as it displays the page length inaccurately — the scrollbar will be near the bottom and then suddenly when the items are loaded in, it will jump up and reveal there is now more content to scroll through. &lt;strong&gt;It’s dishonest design to tell people that they’re almost done when they’re not&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;its-generally-hard-to-use&quot;&gt;7. It’s generally hard to use&lt;/h2&gt;
+&lt;h2 id=&quot;7-its-generally-hard-to-use&quot;&gt;7. It’s generally hard to use&lt;/h2&gt;
 
 &lt;p&gt;Design is about communication. When someone arrives at a set of results, they want to instantly be able to understand what’s going on…&lt;/p&gt;
 
@@ -3080,7 +3080,7 @@ switched.&lt;/p&gt;
 
 &lt;p&gt;There are several aspects of dishonest design. This article hones in on just one: ignoring the medium you’re designing for. I call it “bending the web.”&lt;/p&gt;
 
-&lt;p&gt;I’ve been known to bend it myself in the past. That’s okay though: only through experiencing mistakes or reading about other people’s, can we avoid them in the future. &lt;/p&gt;
+&lt;p&gt;I’ve been known to bend it myself in the past. That’s okay though: only through experiencing mistakes or reading about other people’s, can we avoid them in the future.&lt;/p&gt;
 
 &lt;p&gt;Here’s some of the mistakes I’ve made in the past:&lt;/p&gt;
 
@@ -3137,7 +3137,7 @@ switched.&lt;/p&gt;
 			<id>https://adamsilver.io/articles/designing-a-responsive-menu-without-a-hamburger</id>
 			<content type="html">&lt;p&gt;I’m not going to tell you &lt;em&gt;why&lt;/em&gt; the hamburger sucks. James Archer has &lt;a href=&quot;http://deep.design/the-hamburger-menu/&quot;&gt;done that&lt;/a&gt; for me. Instead, I’ll provide some alternative responsive menus that avoid the hamburger.&lt;/p&gt;
 
-&lt;h2 id=&quot;medium&quot;&gt;1. Medium&lt;/h2&gt;
+&lt;h2 id=&quot;1-medium&quot;&gt;1. Medium&lt;/h2&gt;
 
 &lt;p&gt;A big part of Medium’s success is in its simplicity and it can be seen in its menu. If you’re reading this on a small screen you will see the menu takes up a little more space by dropping down below the header.&lt;/p&gt;
 
@@ -3153,7 +3153,7 @@ switched.&lt;/p&gt;
 &lt;p&gt;That’s because like most people, you don’t care about the fine detail of
 Medium’s design, you just want to use the site for its content.&lt;/p&gt;
 
-&lt;h2 id=&quot;product-hunt&quot;&gt;2. Product Hunt&lt;/h2&gt;
+&lt;h2 id=&quot;2-product-hunt&quot;&gt;2. Product Hunt&lt;/h2&gt;
 
 &lt;p&gt;Product Hunt always displays the menu below the header, regardless of screen
 size.&lt;/p&gt;
@@ -3169,7 +3169,7 @@ size.&lt;/p&gt;
 
 &lt;p&gt;And, this particular website has a target audience of highly critical, industry designers and developers, and it is still a very much loved website.&lt;/p&gt;
 
-&lt;h2 id=&quot;node&quot;&gt;3. Node&lt;/h2&gt;
+&lt;h2 id=&quot;3-node&quot;&gt;3. Node&lt;/h2&gt;
 
 &lt;p&gt;You might be thinking “this guy is only show sites with small
 menus”. So, I give you Nodejs.org with &lt;strong&gt;eight&lt;/strong&gt; links!&lt;/p&gt;
@@ -3186,7 +3186,7 @@ room, the links are simply put into two columns.&lt;/p&gt;
 
 &lt;p&gt;Out of all the examples this one takes up the most space. A few pixels could be trimmed via reducing the size and space around the logo. But they needn’t bother, this works.&lt;/p&gt;
 
-&lt;h2 id=&quot;adamsilverio&quot;&gt;4. Adamsilver.io&lt;/h2&gt;
+&lt;h2 id=&quot;4-adamsilverio&quot;&gt;4. Adamsilver.io&lt;/h2&gt;
 
 &lt;p&gt;Shamefully, I include my own site for your pleasure :)&lt;/p&gt;
 
@@ -3197,7 +3197,7 @@ room, the links are simply put into two columns.&lt;/p&gt;
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;google-design&quot;&gt;5. Google Design&lt;/h2&gt;
+&lt;h2 id=&quot;5-google-design&quot;&gt;5. Google Design&lt;/h2&gt;
 
 &lt;p&gt;Google Design allows users to horizontally scroll through the options.&lt;/p&gt;
 
@@ -3210,7 +3210,7 @@ room, the links are simply put into two columns.&lt;/p&gt;
 
 &lt;p&gt;Horizontal scrolling is normally ill-advised but on mobile devices this simple approach works well. And it scales pretty nicely too.&lt;/p&gt;
 
-&lt;h2 id=&quot;the-minimalists&quot;&gt;6. The Minimalists&lt;/h2&gt;
+&lt;h2 id=&quot;6-the-minimalists&quot;&gt;6. The Minimalists&lt;/h2&gt;
 
 &lt;p&gt;The Minimalists website is designed true to their message. When there’s not enough room, the links wrap on to the next line. No biggie.&lt;/p&gt;
 
@@ -3260,18 +3260,18 @@ room, the links are simply put into two columns.&lt;/p&gt;
 
 &lt;p&gt;The last of those points—&lt;em&gt;using Javascript that the browser doesn’t recognise&lt;/em&gt;—is what we need to discuss. Javascript—unlike HTML and CSS—doesn’t degrade gracefully without intervention.&lt;/p&gt;
 
-&lt;p&gt;For example, &lt;code&gt;&amp;lt;input type=&quot;email&quot;&amp;gt;&lt;/code&gt; degrades gracefully into a text box. And &lt;code&gt;border-radius&lt;/code&gt; degrades gracefully by not showing rounded corners. No problem.&lt;/p&gt;
+&lt;p&gt;For example, &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;input type=&quot;email&quot;&amp;gt;&lt;/code&gt; degrades gracefully into a text box. And &lt;code class=&quot;highlighter-rouge&quot;&gt;border-radius&lt;/code&gt; degrades gracefully by not showing rounded corners. No problem.&lt;/p&gt;
 
 &lt;p&gt;Javascript, however, will error when the browser tries to execute code it doesn’t recognise. Internet Explorer 8, for example, breaks on the last line here:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var form = document.forms[0];
-form.attachEvent(&#39;submit&#39;, function() {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var form = document.forms[0];
+form.attachEvent('submit', function() {
   window.event.returnValue = false;
-  var foos = document.getElementsByClassName(&#39;foo&#39;);
+  var foos = document.getElementsByClassName('foo');
 });
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is because it doesn’t recognise &lt;code&gt;getElementsByClassName()&lt;/code&gt;. The page didn’t degrade nor did it fully enhance. The script intercepts the form’s submit event, but gives users a broken interface.&lt;/p&gt;
+&lt;p&gt;This is because it doesn’t recognise &lt;code class=&quot;highlighter-rouge&quot;&gt;getElementsByClassName()&lt;/code&gt;. The page didn’t degrade nor did it fully enhance. The script intercepts the form’s submit event, but gives users a broken interface.&lt;/p&gt;
 
 &lt;p&gt;So, when the user submits the form, nothing happens. Handling submit on the client (the enhanced experience) to save a round trip is fine. Handling submit on the server (the core experience) is fine too. But the implementation above doesn’t allow for either experience.&lt;/p&gt;
 
@@ -3281,24 +3281,24 @@ form.attachEvent(&#39;submit&#39;, function() {
 
 &lt;p&gt;It’s often easier to deduce what it is we should do, once we found out what we shouldn’t. Let’s do that now.&lt;/p&gt;
 
-&lt;h3 id=&quot;dont-ignore-the-problem-exists&quot;&gt;1. Don’t ignore the problem exists&lt;/h3&gt;
+&lt;h3 id=&quot;1-dont-ignore-the-problem-exists&quot;&gt;1. Don’t ignore the problem exists&lt;/h3&gt;
 
 &lt;p&gt;I struggled a lot with this. I always thought about the current set of browsers that a particular project adheres to. But just because I ignored users who use ‘other’ browsers, doesn’t mean they don’t exist.&lt;/p&gt;
 
-&lt;h3 id=&quot;dont-abdicate-responsibility&quot;&gt;2. Don’t abdicate responsibility&lt;/h3&gt;
+&lt;h3 id=&quot;2-dont-abdicate-responsibility&quot;&gt;2. Don’t abdicate responsibility&lt;/h3&gt;
 
 &lt;p&gt;When we add a third-party script to the project, it becomes our responsibility. We should check under the hood for quality and watch out for the typical &lt;a href=&quot;https://gist.github.com/david-mark/06b9879f963ebb0eed62&quot;&gt;multi-browser approach&lt;/a&gt; that opposes the principles of progressive enhancement.&lt;/p&gt;
 
 &lt;p&gt;Moreover, when a library releases a new version, they often drop support for various browsers. This is a never ending cycle. This is what Jeremy Keith calls the &lt;a href=&quot;https://adactio.com/journal/6692&quot;&gt;continuum&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&quot;dont-rely-on-cutting-the-mustard&quot;&gt;3.Don’t rely on Cutting The Mustard&lt;/h3&gt;
+&lt;h3 id=&quot;3dont-rely-on-cutting-the-mustard&quot;&gt;3.Don’t rely on Cutting The Mustard&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://responsivenews.co.uk/post/18948466399/cutting-the-mustard&quot;&gt;Cutting The Mustard&lt;/a&gt; (CTM) is a relatively new approach which promises reliability by giving users a core or an enhanced experience. It’s intent is great but the implementation falls a little short.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;if(document.querySelector &amp;amp;&amp;amp; window.addEventListener &amp;amp;&amp;amp; window.localStorage) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if(document.querySelector &amp;amp;&amp;amp; window.addEventListener &amp;amp;&amp;amp; window.localStorage) {
   // start application
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The script detects a few choice methods, to then infer that the browser is ‘modern’. This is impossible because of the vast amount of new (versions of) browsers being released every day. And it’s irrelevant because the release date doesn’t determine capability.&lt;/p&gt;
 
@@ -3325,13 +3325,13 @@ form.attachEvent(&#39;submit&#39;, function() {
 
 &lt;p&gt;To do this reliably we need to use wrappers (facades). The library should expose a dynamic API that adapts to the browser, something like this:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;if(hasFeatures(&#39;find&#39;, &#39;addListener&#39;, &#39;storeValue&#39;)) {
-  var el = find(&#39;.whatever&#39;);
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if(hasFeatures('find', 'addListener', 'storeValue')) {
+  var el = find('.whatever');
   addListener(el, &quot;click&quot;, function() {
-    storeValue(&#39;key&#39;, &#39;value&#39;);
+    storeValue('key', 'value');
   });
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;notes&quot;&gt;Notes&lt;/h3&gt;
 
@@ -3348,24 +3348,24 @@ form.attachEvent(&#39;submit&#39;, function() {
 
 &lt;p&gt;Let’s say our application needs to add a class to an element. First we’ll create that function and expose a dynamic API:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// use isHostMethod
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// use isHostMethod
 if(document.documentElement.classList.add) {
 var addClass = function(el, className) {
   return el.classList.add(className);
 };
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Then the calling application checks &lt;code&gt;addClass()&lt;/code&gt; is defined before referencing it:&lt;/p&gt;
+&lt;p&gt;Then the calling application checks &lt;code class=&quot;highlighter-rouge&quot;&gt;addClass()&lt;/code&gt; is defined before referencing it:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;if(addClass) {
-  addClass(el, &#39;thing&#39;);
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if(addClass) {
+  addClass(el, 'thing');
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;The application is blissfully unaware that it only runs in browsers supporting &lt;code&gt;classList()&lt;/code&gt;. Users using Internet Explorer 9 and below get the degraded experience and that’s okay. If you want to support Internet Explorer 9, add a fork like this:&lt;/p&gt;
+&lt;p&gt;The application is blissfully unaware that it only runs in browsers supporting &lt;code class=&quot;highlighter-rouge&quot;&gt;classList()&lt;/code&gt;. Users using Internet Explorer 9 and below get the degraded experience and that’s okay. If you want to support Internet Explorer 9, add a fork like this:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var addClass;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var addClass;
 
 // Use isHostMethod
 if(document.documentElement.classList.add) {
@@ -3378,14 +3378,14 @@ addClass = function(el, className) {
   if (!el.className) {
     el.className = className;
   } else {
-    re = new RegExp(&#39;(^|\\s)&#39; + className + &#39;(\\s|$)&#39;);
+    re = new RegExp('(^|\\s)' + className + '(\\s|$)');
     if (!re.test(el.className)) {
-      el.className += &#39; &#39; + className;
+      el.className += ' ' + className;
     }
   }
 }
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;This implementation supports almost every browser and the application didn’t need to change. In future you can remove this fork once the number of visitors diminishes to a suitable level—something only you can determine.&lt;/p&gt;
 
@@ -3402,7 +3402,7 @@ addClass = function(el, className) {
 &lt;!--
 
 Cornford:
-The combination of the facts that it is impossible to determine which browser is executing the script, and that it is impossible to be familiar with all browser DOMs can be rendered insignificant by using feature detection to match code execution with any browser&#39;s ability to support it. But there is still going to be a diversity of outcomes, ranging from total failure to execute any scripts (on browsers that do not support javascript, or have it disabled) to full successful execution on the most capable javascript enabled browsers.
+The combination of the facts that it is impossible to determine which browser is executing the script, and that it is impossible to be familiar with all browser DOMs can be rendered insignificant by using feature detection to match code execution with any browser's ability to support it. But there is still going to be a diversity of outcomes, ranging from total failure to execute any scripts (on browsers that do not support javascript, or have it disabled) to full successful execution on the most capable javascript enabled browsers.
 
 Veal:
 I would add - and with a mobile connection you have no choice but to use the proxy because that is the way the network is configured. They are not as open as your home broadband and companies often employ a proxy to save bandwidth, and again you cannot avoid this
@@ -3420,7 +3420,7 @@ I would add - and with a mobile connection you have no choice but to use the pro
 
 The idea of abstractions are good, the idea of several abstractions i.e. a library, is also good. But if that library is monolithic in nature, context-less, lacks feature detection and feature testing, leans on polyfills (or browser sniffing or object inferences etc) and does **not** expose a dynamic API, then ultimately you are unable to Progressively Enhance your application and your users and the business you work for, will suffer for it.
 
-At the very least, it is beneficial to be able to spot code that does not conform to the principles of Progressive Enhancement. Particularly, the kind that doesn&#39;t even attempt to degrade gracefully in the face of danger.
+At the very least, it is beneficial to be able to spot code that does not conform to the principles of Progressive Enhancement. Particularly, the kind that doesn't even attempt to degrade gracefully in the face of danger.
 
 This example will also demonstrate that Progressive Enhancement is not a drag in the way of &quot;having to support old irrelevant browsers&quot;. Quite the opposite in-fact. The words &quot;drops support for&quot; changes to &quot;degrades gracefully in&quot;. You also get to determine an appropriate degradation point suitable for your project.
 
@@ -3436,7 +3436,7 @@ This example will also demonstrate that Progressive Enhancement is not a drag in
 			<content type="html">&lt;p&gt;Thanks to everyone who read &lt;a href=&quot;/articles/the-boring-front-end-developer/&quot;&gt;The Boring Front-end
 Developer&lt;/a&gt;. There were some outrageous and funny comments which I found entertaining and there were also some points worth addressing.&lt;/p&gt;
 
-&lt;h2 id=&quot;css-preprocessors&quot;&gt;1. CSS preprocessors&lt;/h2&gt;
+&lt;h2 id=&quot;1-css-preprocessors&quot;&gt;1. CSS preprocessors&lt;/h2&gt;
 
 &lt;p&gt;I know I’m in the minority here. I know a lot of developers who like them, and a lot who don’t. I can see their many advantages too.&lt;/p&gt;
 
@@ -3445,17 +3445,17 @@ Developer&lt;/a&gt;. There were some outrageous and funny comments which I found
 &lt;p&gt;It’s relatively easy (cheap) to add a CSS preprocessor to a tech stack,
 but it’s relatively hard (costly) to remove it down the line. I’m just saying we should be more conscious of the issues before making that choice.&lt;/p&gt;
 
-&lt;h2 id=&quot;new-doesnt-mean-good-or-bad&quot;&gt;2. New doesn’t mean good or bad&lt;/h2&gt;
+&lt;h2 id=&quot;2-new-doesnt-mean-good-or-bad&quot;&gt;2. New doesn’t mean good or bad&lt;/h2&gt;
 
 &lt;p&gt;I use a lot of new and old technology. I use them because they work. I don’t use them so much due to popularity, newness or how many stars they have on Github. At most these are secondary reasons.&lt;/p&gt;
 
 &lt;p&gt;This doesn’t seeem to be the case for a lot of people. It’s often about popularity, authority and newness.&lt;/p&gt;
 
-&lt;h2 id=&quot;bfeds-dont-get-paid-well&quot;&gt;3. BFEDs don’t get paid well&lt;/h2&gt;
+&lt;h2 id=&quot;3-bfeds-dont-get-paid-well&quot;&gt;3. BFEDs don’t get paid well&lt;/h2&gt;
 
 &lt;p&gt;I know several developers that would be classed as boring. All are paid very well.&lt;/p&gt;
 
-&lt;h2 id=&quot;change-isnt-necessarily-progress&quot;&gt;4. Change isn’t necessarily progress&lt;/h2&gt;
+&lt;h2 id=&quot;4-change-isnt-necessarily-progress&quot;&gt;4. Change isn’t necessarily progress&lt;/h2&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;”I also find people touting ‘progress’ don’t realise that a lot of the time they just mean ‘change’. I mean, sure, if a new way of doing things is demonstrably better, by all means let’s use it. But a lot of the time you’re just swapping one (well-understood) set of tradeoffs and considerations for a new, less understood set, because ‘That’s what we’re doing now’.”&lt;br /&gt;
@@ -3464,7 +3464,7 @@ but it’s relatively hard (costly) to remove it down the line. I’m just sayin
 
 &lt;p&gt;There’s a lot of change happening but does that change add value to the user or business?&lt;/p&gt;
 
-&lt;h2 id=&quot;people-first-developers-second&quot;&gt;5. People first, developers second&lt;/h2&gt;
+&lt;h2 id=&quot;5-people-first-developers-second&quot;&gt;5. People first, developers second&lt;/h2&gt;
 
 &lt;p&gt;It’s common to hear teammates berating old browsers and dropping support
 in the name of cost and security but your users don’t care and are unaware anyway. Often they’re not in control of what browser they use.&lt;/p&gt;
@@ -3493,7 +3493,7 @@ manage to surf and buy things using one. Amazing.&lt;/p&gt;
 
 &lt;p&gt;As a proponent of &lt;a href=&quot;/articles/developing-templates-using-an-outside-in-approach&quot;&gt;outside-in development&lt;/a&gt;, I see the lure of trying to develop as if all browsers are the same. The problem is that &lt;a href=&quot;/articles/browsers-are-different-but-so-what/&quot;&gt;browsers are not the same&lt;/a&gt;. Polyfills are problematic because:&lt;/p&gt;
 
-&lt;h2 id=&quot;they-augment-host-objects&quot;&gt;1. They augment host objects&lt;/h2&gt;
+&lt;h2 id=&quot;1-they-augment-host-objects&quot;&gt;1. They augment host objects&lt;/h2&gt;
 
 &lt;p&gt;Polyfills augment host and native objects. Experts such as Richard Cornford, David Mark, Thomas Lahn and Kangax have told us this is a bad idea. The latter of which published two articles on the subject:&lt;/p&gt;
 
@@ -3514,7 +3514,7 @@ manage to surf and buy things using one. Amazing.&lt;/p&gt;
 
 As Peter Michaux shows us in [Feature Detection: State of the art browser scripting](http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting), the mere presence of an API is not always enough to determine its reliablity. This is where feature *testing* comes in.
 
-Polyfills tend to just detect the presence of an API. They don&#39;t iron out the bugs or inconsistencies found in different browsers. Even if they did, they would have to override the original, whereby the override may contain a reference to it. This is dangerous and unnecessary. Instead, use facades, which we&#39;ll discuss shortly.
+Polyfills tend to just detect the presence of an API. They don't iron out the bugs or inconsistencies found in different browsers. Even if they did, they would have to override the original, whereby the override may contain a reference to it. This is dangerous and unnecessary. Instead, use facades, which we'll discuss shortly.
 
 
 
@@ -3526,15 +3526,15 @@ As Nicholas Zakas says in [Scalable JavaScript Application Architecture](https:/
 
 --&gt;
 
-&lt;h2 id=&quot;the-full-api-is-rarely-needed&quot;&gt;2. The full API is rarely needed&lt;/h2&gt;
+&lt;h2 id=&quot;2-the-full-api-is-rarely-needed&quot;&gt;2. The full API is rarely needed&lt;/h2&gt;
 
 &lt;p&gt;We may not need the full API to solve the problem. We may not even be &lt;em&gt;able&lt;/em&gt; to implement a polyfill because there’s just no way to do so. This is why context is important.&lt;/p&gt;
 
 &lt;p&gt;We should first look to understand the problem precisely. And then solve &lt;em&gt;that&lt;/em&gt; problem only. We rarely need &lt;em&gt;all&lt;/em&gt; of an API, which I’ll demonstrate in a moment. With polyfills it’s all or nothing.&lt;/p&gt;
 
-&lt;h2 id=&quot;they-come-with-caveats&quot;&gt;3. They come with caveats&lt;/h2&gt;
+&lt;h2 id=&quot;3-they-come-with-caveats&quot;&gt;3. They come with caveats&lt;/h2&gt;
 
-&lt;p&gt;It takes little effort to find problematic polyfills. Take the &lt;a href=&quot;https://github.com/es-shims/es5-shim&quot;&gt;ES5 Shim&lt;/a&gt; documentation. In describing the &lt;code&gt;Object.create&lt;/code&gt; polyfill it states:&lt;/p&gt;
+&lt;p&gt;It takes little effort to find problematic polyfills. Take the &lt;a href=&quot;https://github.com/es-shims/es5-shim&quot;&gt;ES5 Shim&lt;/a&gt; documentation. In describing the &lt;code class=&quot;highlighter-rouge&quot;&gt;Object.create&lt;/code&gt; polyfill it states:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;“For the case of simply “begetting” an object that inherits prototypically from another, this &lt;strong&gt;should&lt;/strong&gt; work fine across legacy engines.”&lt;/p&gt;
@@ -3554,21 +3554,21 @@ As Nicholas Zakas says in [Scalable JavaScript Application Architecture](https:/
 
 &lt;p&gt;Inside the wrapper there’s nothing to stop us using bits of an API, and feature testing various implementations and acting accordingly, like Peter Michaux shows us in &lt;a href=&quot;http://peter.michaux.ca/articles/cross-browser-widgets&quot;&gt;Cross browser Widgets&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Cloning an object is pertinent to this article because &lt;code&gt;Object.create&lt;/code&gt; solves this problem. If we want to support &lt;em&gt;modern&lt;/em&gt; browsers only—that is those that provide &lt;code&gt;Object.create&lt;/code&gt;—then an implementation might look like this:&lt;/p&gt;
+&lt;p&gt;Cloning an object is pertinent to this article because &lt;code class=&quot;highlighter-rouge&quot;&gt;Object.create&lt;/code&gt; solves this problem. If we want to support &lt;em&gt;modern&lt;/em&gt; browsers only—that is those that provide &lt;code class=&quot;highlighter-rouge&quot;&gt;Object.create&lt;/code&gt;—then an implementation might look like this:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var lib = {};
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var lib = {};
 if(Object.create) {
   lib.cloneObject = function(obj) {
     return Object.create(obj);
   };
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;As this implementation only uses a small part of the entire API, the exposed method signature has just one argument, solving the precise problem and no more. But what about browsers lacking &lt;code&gt;Object.create&lt;/code&gt;?&lt;/p&gt;
+&lt;p&gt;As this implementation only uses a small part of the entire API, the exposed method signature has just one argument, solving the precise problem and no more. But what about browsers lacking &lt;code class=&quot;highlighter-rouge&quot;&gt;Object.create&lt;/code&gt;?&lt;/p&gt;
 
 &lt;p&gt;If we want to degrade gracefully, we don’t have to do anything (hello Progressive enhancement!). If we want to support other browsers add a second fork:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// Code credited to David Mark. Thanks.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Code credited to David Mark. Thanks.
 var lib = {};
 if(Object.create) {
   lib.cloneObject = function(obj) {
@@ -3583,21 +3583,21 @@ if(Object.create) {
     };
   })();
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;The problem got a bit more challenging but the implementation is still lean and the method signature holds up. But, we didn’t need to worry about recreating &lt;code&gt;Object.create&lt;/code&gt; in its entirety.&lt;/p&gt;
+&lt;p&gt;The problem got a bit more challenging but the implementation is still lean and the method signature holds up. But, we didn’t need to worry about recreating &lt;code class=&quot;highlighter-rouge&quot;&gt;Object.create&lt;/code&gt; in its entirety.&lt;/p&gt;
 
 &lt;p&gt;But if we did need the full API, we could make two changes. First, change the name of the function to something more appropriate. Second, expand the method signature to allow for property descriptors like this:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var lib = {};
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var lib = {};
 if(Object.create) {
   lib.createObject = function(obj, props) {
     return Object.create(obj, props);
   };
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;What about browsers lacking &lt;code&gt;Object.create&lt;/code&gt;? Same as before. Either degrade gracefully or add another fork. This is progressive enhancement.&lt;/p&gt;
+&lt;p&gt;What about browsers lacking &lt;code class=&quot;highlighter-rouge&quot;&gt;Object.create&lt;/code&gt;? Same as before. Either degrade gracefully or add another fork. This is progressive enhancement.&lt;/p&gt;
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
@@ -3609,7 +3609,7 @@ if(Object.create) {
 
 &lt;!--
 
-* ADDED IMPLEMENTATION Just because an API is implemented in a browser doesn&#39;t mean it&#39;s trustworthy. Sometimes, the spec is simply misunderstood and implemented differently across browser vendors. Adding a polyfill to the mix just adds complexity in the form of another user-defined implementation.
+* ADDED IMPLEMENTATION Just because an API is implemented in a browser doesn't mean it's trustworthy. Sometimes, the spec is simply misunderstood and implemented differently across browser vendors. Adding a polyfill to the mix just adds complexity in the form of another user-defined implementation.
 
 * CONSISTENCY Then there is the question of consistency. Do you want to use some polyfills and some facades. Probably not. Just use a consistent abstraction, a facade.
 
@@ -3624,7 +3624,7 @@ if(Object.create) {
 			<id>https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors</id>
 			<content type="html">&lt;p&gt;CSS preprocessors are well lauded in our industry. But, like all technology on offer, it comes with trade-offs. Trade-offs that need our consideration before accepting the added complexity they bring.&lt;/p&gt;
 
-&lt;h2 id=&quot;debugging-is-harder&quot;&gt;1. Debugging is harder&lt;/h2&gt;
+&lt;h2 id=&quot;1-debugging-is-harder&quot;&gt;1. Debugging is harder&lt;/h2&gt;
 
 &lt;p&gt;Preprocessors have a compilation step, meaning that CSS line numbers are irrelevant when trying to debug our code. But debugging is twice as hard as programming, so this alone is a &lt;em&gt;huge&lt;/em&gt; downside.&lt;/p&gt;
 
@@ -3637,35 +3637,35 @@ if(Object.create) {
 
 &lt;p&gt;Without source maps, we are left to search for rules in the hope that we find what we’re looking for.&lt;/p&gt;
 
-&lt;h2 id=&quot;compilation-slows-down-development&quot;&gt;2. Compilation slows down development&lt;/h2&gt;
+&lt;h2 id=&quot;2-compilation-slows-down-development&quot;&gt;2. Compilation slows down development&lt;/h2&gt;
 
 &lt;p&gt;Compilation times can be &lt;em&gt;painfully&lt;/em&gt; slow, even when using the fastest techniques on a cutting edge machine. You know that feeling you get when you refresh and don’t see any changes? &lt;em&gt;That&lt;/em&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;performance-is-compromised&quot;&gt;3. Performance is compromised&lt;/h2&gt;
+&lt;h2 id=&quot;3-performance-is-compromised&quot;&gt;3. Performance is compromised&lt;/h2&gt;
 
 &lt;p&gt;Source files may be small, but the &lt;a href=&quot;http://jaketrent.com/post/cons-css-preprocessors/&quot;&gt;generated CSS could be huge&lt;/a&gt;. And it’s the generated CSS that counts.&lt;/p&gt;
 
 &lt;p&gt;We should be aware that in using a CSS preprocessor, we’re losing some inportant control.&lt;/p&gt;
 
-&lt;h2 id=&quot;maintainence-and-overengineering&quot;&gt;4. Maintainence and overengineering&lt;/h2&gt;
+&lt;h2 id=&quot;4-maintainence-and-overengineering&quot;&gt;4. Maintainence and overengineering&lt;/h2&gt;
 
-&lt;p&gt;It’s common to see developers employing a &lt;code&gt;red&lt;/code&gt; variable, for example. But this is of little value in terms of maintainability.&lt;/p&gt;
+&lt;p&gt;It’s common to see developers employing a &lt;code class=&quot;highlighter-rouge&quot;&gt;red&lt;/code&gt; variable, for example. But this is of little value in terms of maintainability.&lt;/p&gt;
 
 &lt;p&gt;If the colour changes, then we need to update the name and the value, making the abstraction pointless.&lt;/p&gt;
 
 &lt;p&gt;Not only are there alternatives to variables and mixins (which we’ll cover later), but a search and replace maybe all we need.&lt;/p&gt;
 
-&lt;h2 id=&quot;tooling-and-developer-convenience&quot;&gt;5. Tooling and developer convenience&lt;/h2&gt;
+&lt;h2 id=&quot;5-tooling-and-developer-convenience&quot;&gt;5. Tooling and developer convenience&lt;/h2&gt;
 
 &lt;p&gt;CSS preprocessors require extra tooling. Developers shouldn’t be forced to use a particular editor just to be able to use the tool. That’s the tail wagging the dog.&lt;/p&gt;
 
 &lt;p&gt;Also, extra stuff adds complexity. This needs to be understood, upgraded and maintained—all of which increases cost and the chance of issues.&lt;/p&gt;
 
-&lt;h2 id=&quot;saving-generated-files-or-not&quot;&gt;6. Saving generated files (or not)&lt;/h2&gt;
+&lt;h2 id=&quot;6-saving-generated-files-or-not&quot;&gt;6. Saving generated files (or not)&lt;/h2&gt;
 
 &lt;p&gt;Whether we should &lt;a href=&quot;http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo&quot;&gt;save the generated CSS&lt;/a&gt; or not is something we don’t agree on as a community. In which case, it’s time for some &lt;a href=&quot;http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/&quot;&gt;Concensus Driven Development&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;capability-and-understanding&quot;&gt;7. Capability and understanding&lt;/h2&gt;
+&lt;h2 id=&quot;7-capability-and-understanding&quot;&gt;7. Capability and understanding&lt;/h2&gt;
 
 &lt;p&gt;Whilst CSS preprocessors and the workflows around them have become widespread, there is still a knowledge gap. Particularly, when it comes to understanding the trade-offs.&lt;/p&gt;
 
@@ -3675,11 +3675,11 @@ if(Object.create) {
 
 &lt;p&gt;A solid approach to writing &lt;a href=&quot;http://maintainablecss.com&quot;&gt;maintainable CSS&lt;/a&gt; solves most problems. In anycase, we can mimick &lt;em&gt;variables&lt;/em&gt; and &lt;em&gt;mixins&lt;/em&gt; by using comma-delimited CSS selectors:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;selector,
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;selector,
 anotherSelector {
   /* common rules */
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;And, whilst we can repetitively qualify our selectors to mimick &lt;em&gt;nesting&lt;/em&gt;, it’s not something that makes for performant CSS. Instead, we should &lt;a href=&quot;http://maintainablecss.com/chapters/conventions/&quot;&gt;use a convention&lt;/a&gt;.&lt;/p&gt;
 
@@ -3698,7 +3698,7 @@ anotherSelector {
 			<id>https://adamsilver.io/articles/the-role-of-the-front-end-developer</id>
 			<content type="html">&lt;p&gt;The role of the Front-end developer extends far beyond translating  designs into code. They should be heavily involved in many other aspects of the design and development process…&lt;/p&gt;
 
-&lt;h2 id=&quot;user-experience-amp-interaction-design&quot;&gt;User Experience &amp;amp; Interaction Design&lt;/h2&gt;
+&lt;h2 id=&quot;user-experience--interaction-design&quot;&gt;User Experience &amp;amp; Interaction Design&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.disambiguity.com/there-is-no-ux/&quot;&gt;Everyone is responsible for UX&lt;/a&gt; and &lt;a href=&quot;http://www.smashingmagazine.com/2014/11/21/why-you-should-include-your-developer-in-the-design-process/&quot;&gt;Front-end Developers play an essential role&lt;/a&gt; due to their intimate relationship with a huge range browsers, across devices and operating systems. &lt;strong&gt;How can you design for the web if you don’t understand the platforms’ constraints and powers?&lt;/strong&gt;&lt;/p&gt;
 
@@ -3805,7 +3805,7 @@ anotherSelector {
 
 &lt;p&gt;Now that’s clear, we can discuss the issues with using AJAX to request personalised content:&lt;/p&gt;
 
-&lt;h2 id=&quot;the-architecture-becomes-complex&quot;&gt;1. The architecture becomes complex&lt;/h2&gt;
+&lt;h2 id=&quot;1-the-architecture-becomes-complex&quot;&gt;1. The architecture becomes complex&lt;/h2&gt;
 
 &lt;p&gt;Using AJAX has a significant impact on architecture.&lt;/p&gt;
 
@@ -3817,13 +3817,13 @@ anotherSelector {
   &lt;li&gt;At what point is personalised content not essential to the experience?&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;some-people-will-have-a-broken-experience&quot;&gt;2. Some people will have a broken experience&lt;/h2&gt;
+&lt;h2 id=&quot;2-some-people-will-have-a-broken-experience&quot;&gt;2. Some people will have a broken experience&lt;/h2&gt;
 
 &lt;p&gt;If the user doesn’t have Javascript (and there are &lt;a href=&quot;http://kryogenix.org/code/browser/everyonehasjs.html&quot;&gt;many reasons why they won’t&lt;/a&gt;), they’ll get an incomplete or broken page. Not being able to logout, or not being able to see their basket is an example.&lt;/p&gt;
 
 &lt;p&gt;This goes against Progressive Enhancement which in-turn goes against the spirit of the web. We shouldn’t unnecessarily exclude people.&lt;/p&gt;
 
-&lt;h2 id=&quot;replacing-browser-behaviour-degrades-the-experience&quot;&gt;3. Replacing browser behaviour degrades the experience&lt;/h2&gt;
+&lt;h2 id=&quot;3-replacing-browser-behaviour-degrades-the-experience&quot;&gt;3. Replacing browser behaviour degrades the experience&lt;/h2&gt;
 
 &lt;p&gt;Using AJAX to load content stops us using the inherent functionality browsers provide for free. This functionality is an intuitive aspect of the browsing experience.&lt;/p&gt;
 
@@ -3835,11 +3835,11 @@ anotherSelector {
 
 &lt;p&gt;Moreover, the request may finish after scrolling down the page. This means the user may not notice this new personalised content and the page may jump unexpectedly.&lt;/p&gt;
 
-&lt;h2 id=&quot;extra-work-is-needed&quot;&gt;4. Extra work is needed&lt;/h2&gt;
+&lt;h2 id=&quot;4-extra-work-is-needed&quot;&gt;4. Extra work is needed&lt;/h2&gt;
 
 &lt;p&gt;First, a designer needs to design a loading spinner and transitions. Second, developers need to implement this functionality in good order for browsers and assistive technology. Third, testers will need to test and AJAX makes functional tests harder to write.&lt;/p&gt;
 
-&lt;h2 id=&quot;performance-actually-degrades&quot;&gt;5. Performance actually degrades&lt;/h2&gt;
+&lt;h2 id=&quot;5-performance-actually-degrades&quot;&gt;5. Performance actually degrades&lt;/h2&gt;
 
 &lt;p&gt;Instead of a single HTTP request containing the whole response, there will now be multiple. The first would be for the Document containing non-personalised content. The next request(s) will be via AJAX and &lt;em&gt;will&lt;/em&gt; hit the web server, therefore subject to the same latency as always.&lt;/p&gt;
 
@@ -3958,7 +3958,7 @@ anotherSelector {
 			<link href="https://adamsilver.io/articles/select-boxes-shouldnt-submit-on-change/"/>
 			<updated>2014-09-17T00:00:00+01:00</updated>
 			<id>https://adamsilver.io/articles/select-boxes-shouldnt-submit-on-change</id>
-			<content type="html">&lt;p&gt;Some sites will submit the form when the user selects an option in a select box (or drop down menu) &lt;code&gt;onchange&lt;/code&gt;. The idea is that removing the button declutters the interface and saves users an extra click. First, &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;minimal does not mean simple&lt;/a&gt;, second &lt;a href=&quot;http://idyeah.com/blog/2012/06/stop-counting-clicks/&quot;&gt;stop counting clicks&lt;/a&gt; and third, read on.&lt;/p&gt;
+			<content type="html">&lt;p&gt;Some sites will submit the form when the user selects an option in a select box (or drop down menu) &lt;code class=&quot;highlighter-rouge&quot;&gt;onchange&lt;/code&gt;. The idea is that removing the button declutters the interface and saves users an extra click. First, &lt;a href=&quot;http://uxmyths.com/post/115783813605/myth-34-simple-minimal&quot;&gt;minimal does not mean simple&lt;/a&gt;, second &lt;a href=&quot;http://idyeah.com/blog/2012/06/stop-counting-clicks/&quot;&gt;stop counting clicks&lt;/a&gt; and third, read on.&lt;/p&gt;
 
 &lt;!-- &lt;div class=&quot;image&quot; style=&quot;max-width: 320px;margin: 0 auto;&quot;&gt;
 	&lt;figure&gt;
@@ -3967,7 +3967,7 @@ anotherSelector {
 	&lt;/figure&gt;
 &lt;/div&gt; --&gt;
 
-&lt;p&gt;Unfortunately, some browsers will fire the &lt;code&gt;onchange&lt;/code&gt; event as the user presses &lt;kbd&gt;Down&lt;/kbd&gt;. As a user moves from the first to the second option, for example, the &lt;a href=&quot;http://html.cita.illinois.edu/script/onchange/onchange-example.php&quot;&gt;form will submit before the user had a chance to move further down the list&lt;/a&gt;. To my knowledge, this happens in a plethora of Windows browsers including Chrome, Opera, Internet Explorer 9 and below.&lt;/p&gt;
+&lt;p&gt;Unfortunately, some browsers will fire the &lt;code class=&quot;highlighter-rouge&quot;&gt;onchange&lt;/code&gt; event as the user presses &lt;kbd&gt;Down&lt;/kbd&gt;. As a user moves from the first to the second option, for example, the &lt;a href=&quot;http://html.cita.illinois.edu/script/onchange/onchange-example.php&quot;&gt;form will submit before the user had a chance to move further down the list&lt;/a&gt;. To my knowledge, this happens in a plethora of Windows browsers including Chrome, Opera, Internet Explorer 9 and below.&lt;/p&gt;
 
 &lt;p&gt;Screen reader users can struggle too. This is because the act of reading an option, selects it, causing the form to submit. This means users can never get past the first option. Navigating users automatically can also be disorientating as users don’t expect a form control to do this.&lt;/p&gt;
 
@@ -4000,7 +4000,7 @@ Should a GO Button be Included with a Drop-down List?
 
 &lt;p&gt;Here’s a ready made inherit function you can use in your project:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;/**** The namespace ****/
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/**** The namespace ****/
 var lib = {};
 
 /**** The cloneObject function ****/
@@ -4024,7 +4024,7 @@ if(Object.create) {
 /**** The inherit function which uses cloneObject ****/
 
 lib.inherit = function(Sub, Super) {
-    // Clone the parent&#39;s prototype object and assign to child&#39;s prototype object
+    // Clone the parent's prototype object and assign to child's prototype object
     Sub.prototype = lib.cloneObject(Super.prototype);
 
     // Assign reference to super constructor onto the child constructor
@@ -4033,11 +4033,11 @@ lib.inherit = function(Sub, Super) {
     // Assign child as the child constructor
     Sub.prototype.constructor = Sub;
 };
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;As an example you might want a superhero to inherit the features of a regular person. A person constructor might look like this:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;function Person(name) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function Person(name) {
     this.name = name;
 }
 
@@ -4045,13 +4045,13 @@ Person.prototype.sayName = function() {
     return &quot;My name is:&quot; + this.name;
 };
 
-var bob = new Person(&#39;Bob&#39;);
+var bob = new Person('Bob');
 bob.sayName(); // &quot;My name is Bob&quot;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;A superhero has some differences. They won’t tell you their identity. Instead they will tell you their alias. The code for this is as follows:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;function Superhero(name, alias) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function Superhero(name, alias) {
     // call parent constructor so that Superheros have a name
     Superhero.superConstructor.call(this, name);
     this.alias = alias;
@@ -4062,7 +4062,7 @@ lib.inherit(Superhero, Person);
 
 // Override method so that Superheros only tell you their alias
 Superhero.prototype.sayName = function() {
-    return &quot;Can&#39;t tell you that but my alias is: &quot; + this.alias;
+    return &quot;Can't tell you that but my alias is: &quot; + this.alias;
 }
 
 // Call parent method if you need to
@@ -4071,9 +4071,9 @@ Superhero.prototype.revealIdentity = function() {
 };
 
 var batman = new Superhero(&quot;Bruce Wayne&quot;, &quot;Batman&quot;);
-batman.sayName(); // &quot;Can&#39;t tell you that but my alias is Batman&quot;
+batman.sayName(); // &quot;Can't tell you that but my alias is Batman&quot;
 batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </content>
 		</entry>
 	
@@ -4094,7 +4094,7 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 
 &lt;p&gt;Put like that, it’s hardly surprising that SPAs cause so many problems:&lt;/p&gt;
 
-&lt;h2 id=&quot;history-and-fast-back&quot;&gt;1. History and fast back&lt;/h2&gt;
+&lt;h2 id=&quot;1-history-and-fast-back&quot;&gt;1. History and fast back&lt;/h2&gt;
 
 &lt;p&gt;Browsers store history so that pages load quickly when the user clicks &lt;em&gt;back&lt;/em&gt;. Daniel Puplus explains in &lt;a href=&quot;https://medium.com/joys-of-javascript/4353246f4480&quot;&gt;Building Single Page Applications&lt;/a&gt; that:&lt;/p&gt;
 
@@ -4113,7 +4113,7 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button&quot;&gt;manually pressing back or forward&lt;/a&gt; which isn’t simple.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;scroll-position&quot;&gt;2. Scroll position&lt;/h2&gt;
+&lt;h2 id=&quot;2-scroll-position&quot;&gt;2. Scroll position&lt;/h2&gt;
 
 &lt;p&gt;Browsers remember the scroll position of pages you’ve visited. Daniel Puplus explains how SPAs cause trouble:&lt;/p&gt;
 
@@ -4123,7 +4123,7 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 
 &lt;p&gt;SPAs don’t navigate in the traditional sense. Therefore the application must store the scroll position and apply it when the user presses &lt;em&gt;back&lt;/em&gt; or &lt;em&gt;forward&lt;/em&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;cancelling-navigation&quot;&gt;3. Cancelling navigation&lt;/h2&gt;
+&lt;h2 id=&quot;3-cancelling-navigation&quot;&gt;3. Cancelling navigation&lt;/h2&gt;
 
 &lt;p&gt;Consider what a browser gives us for free:&lt;/p&gt;
 
@@ -4142,27 +4142,27 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 
 &lt;p&gt;The application will need to handle duplicate requests. And the interface will need a cancel button, which is obviously undesirable.&lt;/p&gt;
 
-&lt;h2 id=&quot;unsaved-changes&quot;&gt;4. Unsaved changes&lt;/h2&gt;
+&lt;h2 id=&quot;4-unsaved-changes&quot;&gt;4. Unsaved changes&lt;/h2&gt;
 
-&lt;p&gt;Sometimes an application needs to warn users of losing unsaved changes when they leave a page. The &lt;code&gt;beforeunload&lt;/code&gt; event lets us do this.&lt;/p&gt;
+&lt;p&gt;Sometimes an application needs to warn users of losing unsaved changes when they leave a page. The &lt;code class=&quot;highlighter-rouge&quot;&gt;beforeunload&lt;/code&gt; event lets us do this.&lt;/p&gt;
 
 &lt;p&gt;But, the application can’t use this because users don’t request real pages. This means the app will need to reimplement this behaviour.&lt;/p&gt;
 
-&lt;h2 id=&quot;search-engine-ranking&quot;&gt;5. Search engine ranking&lt;/h2&gt;
+&lt;h2 id=&quot;5-search-engine-ranking&quot;&gt;5. Search engine ranking&lt;/h2&gt;
 
 &lt;p&gt;For many SPAs, SEO is an afterthought, which is problematic because retro fitting server side rendering is not trivial. The alternative is to create a &lt;em&gt;special&lt;/em&gt; website just for bots which isn’t ideal either. Either way, it’s another problem that needs consideration and action.&lt;/p&gt;
 
-&lt;h2 id=&quot;loading-css-and-js&quot;&gt;6. Loading CSS and JS&lt;/h2&gt;
+&lt;h2 id=&quot;6-loading-css-and-js&quot;&gt;6. Loading CSS and JS&lt;/h2&gt;
 
 &lt;p&gt;If an SPA grows to a significant size, loading the entire application on load will be slow. This leads to conditionally loading CSS and JS with a script loader.&lt;/p&gt;
 
 &lt;p&gt;The problem is that &lt;a href=&quot;http://blog.getify.com/labjs-script-loading-the-way-it-should-be/&quot;&gt;script loading is notoriously difficult and contains hacks&lt;/a&gt;. This slows down development and reduces the reliability of the application.&lt;/p&gt;
 
-&lt;h2 id=&quot;analytics&quot;&gt;7. Analytics&lt;/h2&gt;
+&lt;h2 id=&quot;7-analytics&quot;&gt;7. Analytics&lt;/h2&gt;
 
 &lt;p&gt;Analytics tools track page views by default. But SPA pages aren’t really pages. This means the application will have to notify the analytics tool that a pseudo page has been loaded.&lt;/p&gt;
 
-&lt;h2 id=&quot;automated-functional-testing&quot;&gt;8. Automated functional testing&lt;/h2&gt;
+&lt;h2 id=&quot;8-automated-functional-testing&quot;&gt;8. Automated functional testing&lt;/h2&gt;
 
 &lt;p&gt;Selenium knows when a page has finished loading. However, SPAs load pages with AJAX. This means that:&lt;/p&gt;
 
@@ -4171,11 +4171,11 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
   &lt;li&gt;the tests will be slower to execute.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;memory-leaks&quot;&gt;9. Memory leaks&lt;/h2&gt;
+&lt;h2 id=&quot;9-memory-leaks&quot;&gt;9. Memory leaks&lt;/h2&gt;
 
 &lt;p&gt;Pages are “long lived” increasing the chance of memory leak issues. This can degrade UX and cause battery drain on mobile devices.&lt;/p&gt;
 
-&lt;h2 id=&quot;loading-indicators&quot;&gt;10. Loading indicators&lt;/h2&gt;
+&lt;h2 id=&quot;10-loading-indicators&quot;&gt;10. Loading indicators&lt;/h2&gt;
 
 &lt;p&gt;Browsers show a loading indicator when the page is loading. But, SPAs use AJAX to load pages, so we need to implement a custom one which is more work.&lt;/p&gt;
 
@@ -4183,19 +4183,19 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 
 &lt;p&gt;Furthermore, the user’s browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use JS to do this, we break the third of Henny Swan’s &lt;a href=&quot;https://www.smashingmagazine.com/2015/02/bbc-iplayer-accessibility-case-study/#ux-principles&quot;&gt;UX principles&lt;/a&gt;, &lt;em&gt;design with familiarity in mind&lt;/em&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;its-going-to-fail&quot;&gt;11. It’s going to fail&lt;/h2&gt;
+&lt;h2 id=&quot;11-its-going-to-fail&quot;&gt;11. It’s going to fail&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://kryogenix.org/code/browser/everyonehasjs.html&quot;&gt;Everyone has JS, Right?&lt;/a&gt; explains that JS can fail in many ways. Maybe it doesn’t load. Maybe the browser doesn’t recognise the script and fails. SPAs &lt;em&gt;depend&lt;/em&gt; on many different enhancements, and they tend not to conform to &lt;a href=&quot;/articles/progressively-enhanced-javascript/&quot;&gt;Progressive Enhancement&lt;/a&gt;. This means when it does fail, the resulting experience will be a blank page.&lt;/p&gt;
 
-&lt;h2 id=&quot;theyre-probably-slower&quot;&gt;12. They’re probably slower&lt;/h2&gt;
+&lt;h2 id=&quot;12-theyre-probably-slower&quot;&gt;12. They’re probably slower&lt;/h2&gt;
 
 &lt;p&gt;Given that they require a whole load of extra code to load and fix all these issues, it’s probably going to be slower. And &lt;a href=&quot;/articles/designing-for-actual-performance/&quot;&gt;don’t assume AJAX is always faster&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;theyre-inaccessible&quot;&gt;13. They’re inaccessible&lt;/h2&gt;
+&lt;h2 id=&quot;13-theyre-inaccessible&quot;&gt;13. They’re inaccessible&lt;/h2&gt;
 
 &lt;p&gt;I’ll defer to Craig’s excellent article: &lt;a href=&quot;http://www.craigabbott.co.uk/one-page-applications-are-not-accessible&quot;&gt;One-page-applications are not accessible&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;they-just-dont-feel-right&quot;&gt;14. They just don’t feel right&lt;/h2&gt;
+&lt;h2 id=&quot;14-they-just-dont-feel-right&quot;&gt;14. They just don’t feel right&lt;/h2&gt;
 
 &lt;p&gt;I’ll defer to Stefan’s excellent article: &lt;a href=&quot;https://medium.freecodecamp.org/why-i-hate-your-single-page-app-f08bb4ff9134&quot;&gt;Why I hate your Single Page App&lt;/a&gt;&lt;/p&gt;
 
@@ -4230,43 +4230,43 @@ batman.revealIdentity(); // &quot;My name is Bruce Wayne&quot;
 
 &lt;p&gt;This is the directory structure for the zoo:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;zoo/
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;zoo/
   zoo.js
   zoo.information.js
   animals/
     zoo.animals.js
     zoo.animals.Penguin.js
     zoo.animals.Tiger.js
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;The root namespace resides inside &lt;code&gt;zoo.js&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The root namespace resides inside &lt;code class=&quot;highlighter-rouge&quot;&gt;zoo.js&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var zoo = {};
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var zoo = {};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;The animals need a sub level namespace too which resides inside &lt;code&gt;zoo.animals.js&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The animals need a sub level namespace too which resides inside &lt;code class=&quot;highlighter-rouge&quot;&gt;zoo.animals.js&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// zoo.animals.js
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// zoo.animals.js
 zoo.animals = {};
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;You will notice that the namespace matches the name of the file. This consistency helps you find the relevant component later.&lt;/p&gt;
 
-&lt;p&gt;The zoo has a penguin and a tiger definition which reside inside &lt;code&gt;zoo.animals.Penguin.js&lt;/code&gt; and &lt;code&gt;zoo.animals.Tiger.js&lt;/code&gt; respectively. The penguin definition is shown below:&lt;/p&gt;
+&lt;p&gt;The zoo has a penguin and a tiger definition which reside inside &lt;code class=&quot;highlighter-rouge&quot;&gt;zoo.animals.Penguin.js&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;zoo.animals.Tiger.js&lt;/code&gt; respectively. The penguin definition is shown below:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;zoo.animals.Penguin = function() {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;zoo.animals.Penguin = function() {
   // constructor
 };
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;If you need to store some information in the zoo you can do so as follows:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// zoo.information.js
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// zoo.information.js
 zoo.information = {
   name: &quot;My Awesome Zoo&quot;,
   address: &quot;52 Zoo Lane, ZA1 2AP&quot;
 };
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Where possible, you should avoid deeply nested hierarchies. But don’t worry about having a lot of files. You should be concatenating them for production anyway.&lt;/p&gt;
 </content>
@@ -4288,17 +4288,17 @@ zoo.information = {
 	&lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Pressing &lt;kbd&gt;Enter&lt;/kbd&gt; will always perform a postcode look-up because the Find Address button is the first button. &lt;/p&gt;
+&lt;p&gt;Pressing &lt;kbd&gt;Enter&lt;/kbd&gt; will always perform a postcode look-up because the Find Address button is the first button.&lt;/p&gt;
 
 &lt;p&gt;There are two ways to solve this problem.&lt;/p&gt;
 
-&lt;h2 id=&quot;split-up-the-forms&quot;&gt;1. Split up the forms&lt;/h2&gt;
+&lt;h2 id=&quot;1-split-up-the-forms&quot;&gt;1. Split up the forms&lt;/h2&gt;
 
 &lt;p&gt;The best solution is avoidance. This means splitting the form up into two separate ones. As a result each form will have just one button removing any ambiguity in submission and action.&lt;/p&gt;
 
 &lt;p&gt;All users benefit from this approach because breaking down big forms into little ones reduces the cognitive load. And, having just one primary call to action makes it obvious how to proceed.&lt;/p&gt;
 
-&lt;h2 id=&quot;choose-a-primary-button&quot;&gt;2. Choose a primary button&lt;/h2&gt;
+&lt;h2 id=&quot;2-choose-a-primary-button&quot;&gt;2. Choose a primary button&lt;/h2&gt;
 
 &lt;p&gt;If you can’t split up the form, then the other approach involves having to choose a primary action which isn’t always obvious.&lt;/p&gt;
 
@@ -4306,7 +4306,7 @@ zoo.information = {
 
 &lt;p&gt;To remove it visually you’ll need to use CSS like this:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;.visually-hidden {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.visually-hidden {
   border: 0!important;
   clip: rect(0 0 0 0)!important;
   height: 1px!important;
@@ -4316,11 +4316,11 @@ zoo.information = {
   position: absolute!important;
   width: 1px!important;
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;However, as a user tabs to the hidden button, the interface will appear to be unresponsive. This is because the button is in focus but hidden, which can disorientate users.&lt;/p&gt;
 
-&lt;p&gt;To fix this you can give the button a &lt;code&gt;tabindex=&quot;-1&quot;&lt;/code&gt; attribute which stops the button from being navigable via the keyboard.&lt;/p&gt;
+&lt;p&gt;To fix this you can give the button a &lt;code class=&quot;highlighter-rouge&quot;&gt;tabindex=&quot;-1&quot;&lt;/code&gt; attribute which stops the button from being navigable via the keyboard.&lt;/p&gt;
 </content>
 		</entry>
 	
@@ -4339,11 +4339,11 @@ zoo.information = {
 
 &lt;p&gt;Associating a control with a label as follows:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;label for=&quot;username&quot;&amp;gt;Username&amp;lt;/label&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;label for=&quot;username&quot;&amp;gt;Username&amp;lt;/label&amp;gt;
 &amp;lt;input id=&quot;username&quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Note: the &lt;code&gt;for&lt;/code&gt; attribute associates a label with another control explicitly by matching the id attribute of the control.&lt;/p&gt;
+&lt;p&gt;Note: the &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; attribute associates a label with another control explicitly by matching the id attribute of the control.&lt;/p&gt;
 
 &lt;h2 id=&quot;fieldsets-and-related-controls&quot;&gt;Fieldsets and related controls&lt;/h2&gt;
 
@@ -4353,19 +4353,19 @@ zoo.information = {
 
 &lt;p&gt;“Red” doesn’t convey enough information on its own. However, wrapping the group of radios in a fieldset with a legend of “Favourite colour” will ensure the control can be read out by a screen reader as “Favourite colour, Red”.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;fieldset&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;fieldset&amp;gt;
 	&amp;lt;legend&amp;gt;Favourite colour&amp;lt;/legend&amp;gt;
 	&amp;lt;input type=&quot;radio&quot; name=&quot;colour&quot; id=&quot;colourRed&quot; value=&quot;red&quot;&amp;gt;
 	&amp;lt;label for=&quot;colourRed&quot;&amp;gt;Red&amp;lt;/label&amp;gt;
 	&amp;lt;!-- ... --&amp;gt;
 &amp;lt;/fieldset&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;optional-radio-group-control&quot;&gt;Optional radio group control&lt;/h2&gt;
 
 &lt;p&gt;Radio controls can not be toggled; once marked as checked they cannot be unchecked until a different radio control is checked. Therefore it is imperative that an additional radio control is added with a ‘None selected’ option so that the user may change their mind. An example follows:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;fieldset&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;fieldset&amp;gt;
 	&amp;lt;legend&amp;gt;Favourite colour&amp;lt;/legend&amp;gt;
 	&amp;lt;input type=&quot;radio&quot; name=&quot;colour&quot; id=&quot;colourNone&quot; value=&quot;none&quot;&amp;gt;
 	&amp;lt;label for=&quot;colourNone&quot;&amp;gt;None selected&amp;lt;/label&amp;gt;
@@ -4374,20 +4374,20 @@ zoo.information = {
 	&amp;lt;input type=&quot;radio&quot; name=&quot;colour&quot; id=&quot;colourBlue&quot; value=&quot;blue&quot;&amp;gt;
 	&amp;lt;label for=&quot;colourBlue&quot;&amp;gt;Blue&amp;lt;/label&amp;gt;
 &amp;lt;/fieldset&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;option-groups-and-options&quot;&gt;Option groups and options&lt;/h2&gt;
 
 &lt;p&gt;The optgroup element can improve accessibility of the options within a select control by adding information to groups of options. If a user had to select their favourite fruit including variety then adding an optgroup named “Apple” containing options such as “Pink Lady” would be advisable as follows:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;select&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;select&amp;gt;
 	&amp;lt;optgroup label=&quot;Apples&quot;&amp;gt;
 		&amp;lt;option&amp;gt;Pink lady&amp;lt;/option&amp;gt;
 		&amp;lt;!-- ... --&amp;gt;
 	&amp;lt;/optgroup&amp;gt;
 	&amp;lt;!-- ... --&amp;gt;
 &amp;lt;/select&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;dont-abuse-select-controls&quot;&gt;Don’t abuse select controls&lt;/h2&gt;
 

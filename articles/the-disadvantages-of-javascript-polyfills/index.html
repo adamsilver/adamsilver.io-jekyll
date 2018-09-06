@@ -69,7 +69,7 @@
 	<meta itemprop="description" content="Javascript polyfills are ever-present in the front end industry, but they are very problematic and unnecessary.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.4176503a.css" media="all">
+<link rel="stylesheet" href="/assets/css/main.min.e851813f.css" media="all">
 
 <!--[if IE 8]>
 <link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
@@ -120,7 +120,7 @@
 
 <p>As a proponent of <a href="/articles/developing-templates-using-an-outside-in-approach">outside-in development</a>, I see the lure of trying to develop as if all browsers are the same. The problem is that <a href="/articles/browsers-are-different-but-so-what/">browsers are not the same</a>. Polyfills are problematic because:</p>
 
-<h2 id="they-augment-host-objects">1. They augment host objects</h2>
+<h2 id="1-they-augment-host-objects">1. They augment host objects</h2>
 
 <p>Polyfills augment host and native objects. Experts such as Richard Cornford, David Mark, Thomas Lahn and Kangax have told us this is a bad idea. The latter of which published two articles on the subject:</p>
 
@@ -153,15 +153,15 @@ As Nicholas Zakas says in [Scalable JavaScript Application Architecture](https:/
 
 -->
 
-<h2 id="the-full-api-is-rarely-needed">2. The full API is rarely needed</h2>
+<h2 id="2-the-full-api-is-rarely-needed">2. The full API is rarely needed</h2>
 
 <p>We may not need the full API to solve the problem. We may not even be <em>able</em> to implement a polyfill because there’s just no way to do so. This is why context is important.</p>
 
 <p>We should first look to understand the problem precisely. And then solve <em>that</em> problem only. We rarely need <em>all</em> of an API, which I’ll demonstrate in a moment. With polyfills it’s all or nothing.</p>
 
-<h2 id="they-come-with-caveats">3. They come with caveats</h2>
+<h2 id="3-they-come-with-caveats">3. They come with caveats</h2>
 
-<p>It takes little effort to find problematic polyfills. Take the <a href="https://github.com/es-shims/es5-shim">ES5 Shim</a> documentation. In describing the <code>Object.create</code> polyfill it states:</p>
+<p>It takes little effort to find problematic polyfills. Take the <a href="https://github.com/es-shims/es5-shim">ES5 Shim</a> documentation. In describing the <code class="highlighter-rouge">Object.create</code> polyfill it states:</p>
 
 <blockquote>
   <p>“For the case of simply “begetting” an object that inherits prototypically from another, this <strong>should</strong> work fine across legacy engines.”</p>
@@ -181,21 +181,21 @@ As Nicholas Zakas says in [Scalable JavaScript Application Architecture](https:/
 
 <p>Inside the wrapper there’s nothing to stop us using bits of an API, and feature testing various implementations and acting accordingly, like Peter Michaux shows us in <a href="http://peter.michaux.ca/articles/cross-browser-widgets">Cross browser Widgets</a>.</p>
 
-<p>Cloning an object is pertinent to this article because <code>Object.create</code> solves this problem. If we want to support <em>modern</em> browsers only—that is those that provide <code>Object.create</code>—then an implementation might look like this:</p>
+<p>Cloning an object is pertinent to this article because <code class="highlighter-rouge">Object.create</code> solves this problem. If we want to support <em>modern</em> browsers only—that is those that provide <code class="highlighter-rouge">Object.create</code>—then an implementation might look like this:</p>
 
-<pre><code>var lib = {};
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var lib = {};
 if(Object.create) {
   lib.cloneObject = function(obj) {
     return Object.create(obj);
   };
 }
-</code></pre>
+</code></pre></div></div>
 
-<p>As this implementation only uses a small part of the entire API, the exposed method signature has just one argument, solving the precise problem and no more. But what about browsers lacking <code>Object.create</code>?</p>
+<p>As this implementation only uses a small part of the entire API, the exposed method signature has just one argument, solving the precise problem and no more. But what about browsers lacking <code class="highlighter-rouge">Object.create</code>?</p>
 
 <p>If we want to degrade gracefully, we don’t have to do anything (hello Progressive enhancement!). If we want to support other browsers add a second fork:</p>
 
-<pre><code>// Code credited to David Mark. Thanks.
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Code credited to David Mark. Thanks.
 var lib = {};
 if(Object.create) {
   lib.cloneObject = function(obj) {
@@ -210,21 +210,21 @@ if(Object.create) {
     };
   })();
 }
-</code></pre>
+</code></pre></div></div>
 
-<p>The problem got a bit more challenging but the implementation is still lean and the method signature holds up. But, we didn’t need to worry about recreating <code>Object.create</code> in its entirety.</p>
+<p>The problem got a bit more challenging but the implementation is still lean and the method signature holds up. But, we didn’t need to worry about recreating <code class="highlighter-rouge">Object.create</code> in its entirety.</p>
 
 <p>But if we did need the full API, we could make two changes. First, change the name of the function to something more appropriate. Second, expand the method signature to allow for property descriptors like this:</p>
 
-<pre><code>var lib = {};
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var lib = {};
 if(Object.create) {
   lib.createObject = function(obj, props) {
     return Object.create(obj, props);
   };
 }
-</code></pre>
+</code></pre></div></div>
 
-<p>What about browsers lacking <code>Object.create</code>? Same as before. Either degrade gracefully or add another fork. This is progressive enhancement.</p>
+<p>What about browsers lacking <code class="highlighter-rouge">Object.create</code>? Same as before. Either degrade gracefully or add another fork. This is progressive enhancement.</p>
 
 <h2 id="summary">Summary</h2>
 

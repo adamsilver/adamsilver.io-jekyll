@@ -69,7 +69,7 @@
 	<meta itemprop="description" content="When backend developers have their way, HTML templates are a breeding ground for complexity. We should strive to develop templates using an outside-in perspective.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.4176503a.css" media="all">
+<link rel="stylesheet" href="/assets/css/main.min.e851813f.css" media="all">
 
 <!--[if IE 8]>
 <link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
@@ -162,7 +162,7 @@ demonstrated with a simple example.</p>
 
 <p>Consider the following (<a href="http://paularmstrong.github.io/swig/">Swig</a>) template:</p>
 
-<pre><code>{% if isLoggedIn %}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% if isLoggedIn %}
 	{% if firstName &amp;&amp; lastName %}
 		&lt;div class="welcomeMessage"&gt;
 			&lt;p&gt;Hello {{firstName}} {{lastName}}&lt;/p&gt;
@@ -180,7 +180,7 @@ demonstrated with a simple example.</p>
 		&lt;a href="{{signInLink.href}}"&gt;{{signInLink.text}}&lt;/a&gt;
 	&lt;/div&gt;
 {% endif %}
-</code></pre>
+</code></pre></div></div>
 
 <p>Forget for the moment that you might be able to factor out the nested
 if-statement — and, that you could reuse the HTML by abstracting it into a
@@ -193,11 +193,11 @@ order to do its job. It’s been designed from little pieces, from the inside-ou
 
 <p>Instead, consider the following template:</p>
 
-<pre><code>	&lt;div class=”welcomeMessage”&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	&lt;div class=”welcomeMessage”&gt;
 			&lt;p&gt;{{message}}&lt;/p&gt;
 			&lt;a href=”{{link.href}}”&gt;{{link.text}}&lt;/a&gt;
 	&lt;/div&gt;
-</code></pre>
+</code></pre></div></div>
 
 <p>The view-model has been designed from the outside-in; it contains just what the template needs in order to render itself. And because there is always a message and a link, there is no need for conditionality. This template is dumb-by-design, and leaves complex logic to reside somewhere more appropriate in the stack.</p>
 
@@ -207,7 +207,7 @@ order to do its job. It’s been designed from little pieces, from the inside-ou
 
 <p>With this in-mind let’s have a look at the common scenarios we need to design for when developing a template.</p>
 
-<h2 id="when-a-module-has-dynamic-properties">1. When a module has dynamic properties</h2>
+<h2 id="1-when-a-module-has-dynamic-properties">1. When a module has dynamic properties</h2>
 
 <p>When data or text is dynamic it will reside somewhere else in a system e.g. a database. In fact, even if it is <em>static</em> it may still reside somewhere else for internationalisation or maintenance purposes.</p>
 
@@ -225,26 +225,26 @@ this data comes from — it’s just information exposed via the view-model.</p>
 
 <p>The view-model would be:</p>
 
-<pre><code>{
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
 	message: "Hello Adam Silver",
 		link: { href: "/sign-out", text: "Sign out" }
 }
-</code></pre>
+</code></pre></div></div>
 
 <p>And the template would be:</p>
 
-<pre><code>	&lt;div class=”welcomeMessage”&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	&lt;div class=”welcomeMessage”&gt;
 		&lt;p&gt;{{message}}&lt;/p&gt;
 		&lt;a href=”{{link.href}}”&gt;{{link.text}}&lt;/a&gt;
 	&lt;/div&gt;
-</code></pre>
+</code></pre></div></div>
 
 <p>The message consists of text that may ultimately be retrieved from resource
 files and a database. Perhaps the link’s href property could come from a routes configuration object etc.</p>
 
 <p>Regardless, the template doesn’t care — it leaves this responsibility to other parts of the system. The view-model is lean and provides just enough information for the View to render itself.</p>
 
-<h2 id="when-a-module-has-conditionality">2. When a module has conditionality</h2>
+<h2 id="2-when-a-module-has-conditionality">2. When a module has conditionality</h2>
 
 <p>Conditionally showing a portion of a View involves display-logic. The simplest of its type is based on a condition: if-this-show-that.</p>
 
@@ -262,50 +262,50 @@ message when the the user is authenticated and has supplied their name:</p>
 
 <p>When the message should be shown, the view-model would be:</p>
 
-<pre><code>{
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
 	showMessage: true,
 	message: "Hello Adam Silver",
 	link: { href: '/sign-out', text: 'Sign out' }
 }
-</code></pre>
+</code></pre></div></div>
 
 <p>When the message is hidden the view-model would be:</p>
 
-<pre><code>	{
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	{
 		showMessage: false
 	}
-</code></pre>
+</code></pre></div></div>
 
 <p>And the template would be:</p>
 
-<pre><code>	{% if showMessage %}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	{% if showMessage %}
 		&lt;div class="welcomeMessage"&gt;
 			&lt;p&gt;Welcome&lt;/p&gt;
 			&lt;a href="{{signInLink.href}}"&gt;{{signInLink.text}}&lt;/a&gt;
 		&lt;/div&gt;
 	{% endif %}
-</code></pre>
+</code></pre></div></div>
 
 <p>Here the explicit boolean property determines whether it’s shown. Don’t be
 tempted to expose lower-level logic that the template uses to infer visibility.</p>
 
-<h2 id="when-showing-a-collection-of-items">3. When showing a collection of items</h2>
+<h2 id="3-when-showing-a-collection-of-items">3. When showing a collection of items</h2>
 
 <p>When showing a number of similar items you will need to loop over a collection or array. As an example, let’s display a list of restaurants by area.</p>
 
 <p>The view-model would be:</p>
 
-<pre><code>	{
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	{
 		restaurants: [{
 				name: "Pizza House",
 				address: "..."
 		}, ...]
 	}
-</code></pre>
+</code></pre></div></div>
 
 <p>And the template would be:</p>
 
-<pre><code>&lt;div class="restaurants"&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="restaurants"&gt;
 	{% for restaurant in restaurants %}
 		&lt;div class=”restaurant”&gt;
 				&lt;h2&gt;{{restaurant.name}}&lt;/h2&gt;
@@ -313,12 +313,12 @@ tempted to expose lower-level logic that the template uses to infer visibility.<
 		&lt;/div&gt;
 	{% endfor %}
 &lt;/div&gt;
-</code></pre>
+</code></pre></div></div>
 
 <p>Often with loops, you will only show the items if there are items in the
 collection. You may be tempted to interrogate the size of the collection in the template as follows:</p>
 
-<pre><code>{% if restaurants.length &gt; 0 %}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% if restaurants.length &gt; 0 %}
 	 &lt;div class="restaurants"&gt;
 			 {% for restaurant in restaurants %}
 					 &lt;div class=”restaurant”&gt;
@@ -328,12 +328,12 @@ collection. You may be tempted to interrogate the size of the collection in the 
 			 {% endfor %}
 	 &lt;/div&gt;
 {% endif %}
-</code></pre>
+</code></pre></div></div>
 
 <p>Whilst this isn’t the end of the world, it can lead to maintenance problems.
 Instead, continue to use the approach used in the previous example by explicitly checking a boolean property <em>before</em> iterating over the loop:</p>
 
-<pre><code>{% if showRestaurants %}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% if showRestaurants %}
 	 &lt;div class="restaurants"&gt;
 			 {% for restaurant in restaurants %}
 				 &lt;div class=”restaurant”&gt;
@@ -343,7 +343,7 @@ Instead, continue to use the approach used in the previous example by explicitly
 			 {% endfor %}
 	 &lt;/div&gt;
 {% endif%}
-</code></pre>
+</code></pre></div></div>
 
 <p>This way templates are consistent, and the logic behind the conditionality can evolve over time without having to change the template — perhaps the restaurants are only shown to authenticated users for example.</p>
 

@@ -69,7 +69,7 @@
 	<meta itemprop="description" content="Single page applications promise a better experience. This is rarely the case. Find out why in this article.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.4176503a.css" media="all">
+<link rel="stylesheet" href="/assets/css/main.min.e851813f.css" media="all">
 
 <!--[if IE 8]>
 <link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
@@ -128,7 +128,7 @@
 
 <p>Put like that, it’s hardly surprising that SPAs cause so many problems:</p>
 
-<h2 id="history-and-fast-back">1. History and fast back</h2>
+<h2 id="1-history-and-fast-back">1. History and fast back</h2>
 
 <p>Browsers store history so that pages load quickly when the user clicks <em>back</em>. Daniel Puplus explains in <a href="https://medium.com/joys-of-javascript/4353246f4480">Building Single Page Applications</a> that:</p>
 
@@ -147,7 +147,7 @@
   <li><a href="http://stackoverflow.com/questions/2008806/how-to-detect-if-the-user-clicked-the-back-button">manually pressing back or forward</a> which isn’t simple.</li>
 </ul>
 
-<h2 id="scroll-position">2. Scroll position</h2>
+<h2 id="2-scroll-position">2. Scroll position</h2>
 
 <p>Browsers remember the scroll position of pages you’ve visited. Daniel Puplus explains how SPAs cause trouble:</p>
 
@@ -157,7 +157,7 @@
 
 <p>SPAs don’t navigate in the traditional sense. Therefore the application must store the scroll position and apply it when the user presses <em>back</em> or <em>forward</em>.</p>
 
-<h2 id="cancelling-navigation">3. Cancelling navigation</h2>
+<h2 id="3-cancelling-navigation">3. Cancelling navigation</h2>
 
 <p>Consider what a browser gives us for free:</p>
 
@@ -176,27 +176,27 @@
 
 <p>The application will need to handle duplicate requests. And the interface will need a cancel button, which is obviously undesirable.</p>
 
-<h2 id="unsaved-changes">4. Unsaved changes</h2>
+<h2 id="4-unsaved-changes">4. Unsaved changes</h2>
 
-<p>Sometimes an application needs to warn users of losing unsaved changes when they leave a page. The <code>beforeunload</code> event lets us do this.</p>
+<p>Sometimes an application needs to warn users of losing unsaved changes when they leave a page. The <code class="highlighter-rouge">beforeunload</code> event lets us do this.</p>
 
 <p>But, the application can’t use this because users don’t request real pages. This means the app will need to reimplement this behaviour.</p>
 
-<h2 id="search-engine-ranking">5. Search engine ranking</h2>
+<h2 id="5-search-engine-ranking">5. Search engine ranking</h2>
 
 <p>For many SPAs, SEO is an afterthought, which is problematic because retro fitting server side rendering is not trivial. The alternative is to create a <em>special</em> website just for bots which isn’t ideal either. Either way, it’s another problem that needs consideration and action.</p>
 
-<h2 id="loading-css-and-js">6. Loading CSS and JS</h2>
+<h2 id="6-loading-css-and-js">6. Loading CSS and JS</h2>
 
 <p>If an SPA grows to a significant size, loading the entire application on load will be slow. This leads to conditionally loading CSS and JS with a script loader.</p>
 
 <p>The problem is that <a href="http://blog.getify.com/labjs-script-loading-the-way-it-should-be/">script loading is notoriously difficult and contains hacks</a>. This slows down development and reduces the reliability of the application.</p>
 
-<h2 id="analytics">7. Analytics</h2>
+<h2 id="7-analytics">7. Analytics</h2>
 
 <p>Analytics tools track page views by default. But SPA pages aren’t really pages. This means the application will have to notify the analytics tool that a pseudo page has been loaded.</p>
 
-<h2 id="automated-functional-testing">8. Automated functional testing</h2>
+<h2 id="8-automated-functional-testing">8. Automated functional testing</h2>
 
 <p>Selenium knows when a page has finished loading. However, SPAs load pages with AJAX. This means that:</p>
 
@@ -205,11 +205,11 @@
   <li>the tests will be slower to execute.</li>
 </ul>
 
-<h2 id="memory-leaks">9. Memory leaks</h2>
+<h2 id="9-memory-leaks">9. Memory leaks</h2>
 
 <p>Pages are “long lived” increasing the chance of memory leak issues. This can degrade UX and cause battery drain on mobile devices.</p>
 
-<h2 id="loading-indicators">10. Loading indicators</h2>
+<h2 id="10-loading-indicators">10. Loading indicators</h2>
 
 <p>Browsers show a loading indicator when the page is loading. But, SPAs use AJAX to load pages, so we need to implement a custom one which is more work.</p>
 
@@ -217,19 +217,19 @@
 
 <p>Furthermore, the user’s browser provides a predictable and familiar loading indicator, no matter which website they visit. When we use JS to do this, we break the third of Henny Swan’s <a href="https://www.smashingmagazine.com/2015/02/bbc-iplayer-accessibility-case-study/#ux-principles">UX principles</a>, <em>design with familiarity in mind</em>.</p>
 
-<h2 id="its-going-to-fail">11. It’s going to fail</h2>
+<h2 id="11-its-going-to-fail">11. It’s going to fail</h2>
 
 <p><a href="http://kryogenix.org/code/browser/everyonehasjs.html">Everyone has JS, Right?</a> explains that JS can fail in many ways. Maybe it doesn’t load. Maybe the browser doesn’t recognise the script and fails. SPAs <em>depend</em> on many different enhancements, and they tend not to conform to <a href="/articles/progressively-enhanced-javascript/">Progressive Enhancement</a>. This means when it does fail, the resulting experience will be a blank page.</p>
 
-<h2 id="theyre-probably-slower">12. They’re probably slower</h2>
+<h2 id="12-theyre-probably-slower">12. They’re probably slower</h2>
 
 <p>Given that they require a whole load of extra code to load and fix all these issues, it’s probably going to be slower. And <a href="/articles/designing-for-actual-performance/">don’t assume AJAX is always faster</a>.</p>
 
-<h2 id="theyre-inaccessible">13. They’re inaccessible</h2>
+<h2 id="13-theyre-inaccessible">13. They’re inaccessible</h2>
 
 <p>I’ll defer to Craig’s excellent article: <a href="http://www.craigabbott.co.uk/one-page-applications-are-not-accessible">One-page-applications are not accessible</a>.</p>
 
-<h2 id="they-just-dont-feel-right">14. They just don’t feel right</h2>
+<h2 id="14-they-just-dont-feel-right">14. They just don’t feel right</h2>
 
 <p>I’ll defer to Stefan’s excellent article: <a href="https://medium.freecodecamp.org/why-i-hate-your-single-page-app-f08bb4ff9134">Why I hate your Single Page App</a></p>
 

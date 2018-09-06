@@ -69,7 +69,7 @@
 	<meta itemprop="description" content="CSS preprocessors have obvious advantages but they also come with a host of problems. Learn about these to avoid pain for you and your team.">
 
 
-<link rel="stylesheet" href="/assets/css/main.min.4176503a.css" media="all">
+<link rel="stylesheet" href="/assets/css/main.min.e851813f.css" media="all">
 
 <!--[if IE 8]>
 <link rel="stylesheet" href="/assets/css/ie8.min.d41d8cd9.css" media="all">
@@ -118,7 +118,7 @@
 		</div>
 	    <p>CSS preprocessors are well lauded in our industry. But, like all technology on offer, it comes with trade-offs. Trade-offs that need our consideration before accepting the added complexity they bring.</p>
 
-<h2 id="debugging-is-harder">1. Debugging is harder</h2>
+<h2 id="1-debugging-is-harder">1. Debugging is harder</h2>
 
 <p>Preprocessors have a compilation step, meaning that CSS line numbers are irrelevant when trying to debug our code. But debugging is twice as hard as programming, so this alone is a <em>huge</em> downside.</p>
 
@@ -131,35 +131,35 @@
 
 <p>Without source maps, we are left to search for rules in the hope that we find what we’re looking for.</p>
 
-<h2 id="compilation-slows-down-development">2. Compilation slows down development</h2>
+<h2 id="2-compilation-slows-down-development">2. Compilation slows down development</h2>
 
 <p>Compilation times can be <em>painfully</em> slow, even when using the fastest techniques on a cutting edge machine. You know that feeling you get when you refresh and don’t see any changes? <em>That</em>.</p>
 
-<h2 id="performance-is-compromised">3. Performance is compromised</h2>
+<h2 id="3-performance-is-compromised">3. Performance is compromised</h2>
 
 <p>Source files may be small, but the <a href="http://jaketrent.com/post/cons-css-preprocessors/">generated CSS could be huge</a>. And it’s the generated CSS that counts.</p>
 
 <p>We should be aware that in using a CSS preprocessor, we’re losing some inportant control.</p>
 
-<h2 id="maintainence-and-overengineering">4. Maintainence and overengineering</h2>
+<h2 id="4-maintainence-and-overengineering">4. Maintainence and overengineering</h2>
 
-<p>It’s common to see developers employing a <code>red</code> variable, for example. But this is of little value in terms of maintainability.</p>
+<p>It’s common to see developers employing a <code class="highlighter-rouge">red</code> variable, for example. But this is of little value in terms of maintainability.</p>
 
 <p>If the colour changes, then we need to update the name and the value, making the abstraction pointless.</p>
 
 <p>Not only are there alternatives to variables and mixins (which we’ll cover later), but a search and replace maybe all we need.</p>
 
-<h2 id="tooling-and-developer-convenience">5. Tooling and developer convenience</h2>
+<h2 id="5-tooling-and-developer-convenience">5. Tooling and developer convenience</h2>
 
 <p>CSS preprocessors require extra tooling. Developers shouldn’t be forced to use a particular editor just to be able to use the tool. That’s the tail wagging the dog.</p>
 
 <p>Also, extra stuff adds complexity. This needs to be understood, upgraded and maintained—all of which increases cost and the chance of issues.</p>
 
-<h2 id="saving-generated-files-or-not">6. Saving generated files (or not)</h2>
+<h2 id="6-saving-generated-files-or-not">6. Saving generated files (or not)</h2>
 
 <p>Whether we should <a href="http://stackoverflow.com/questions/13185170/using-less-and-version-control-should-generated-css-be-included-in-a-repo">save the generated CSS</a> or not is something we don’t agree on as a community. In which case, it’s time for some <a href="http://www.nczonline.net/blog/2015/04/14/consensus-driven-development/">Concensus Driven Development</a>.</p>
 
-<h2 id="capability-and-understanding">7. Capability and understanding</h2>
+<h2 id="7-capability-and-understanding">7. Capability and understanding</h2>
 
 <p>Whilst CSS preprocessors and the workflows around them have become widespread, there is still a knowledge gap. Particularly, when it comes to understanding the trade-offs.</p>
 
@@ -169,11 +169,11 @@
 
 <p>A solid approach to writing <a href="http://maintainablecss.com">maintainable CSS</a> solves most problems. In anycase, we can mimick <em>variables</em> and <em>mixins</em> by using comma-delimited CSS selectors:</p>
 
-<pre><code>selector,
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>selector,
 anotherSelector {
   /* common rules */
 }
-</code></pre>
+</code></pre></div></div>
 
 <p>And, whilst we can repetitively qualify our selectors to mimick <em>nesting</em>, it’s not something that makes for performant CSS. Instead, we should <a href="http://maintainablecss.com/chapters/conventions/">use a convention</a>.</p>
 
