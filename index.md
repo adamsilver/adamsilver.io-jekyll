@@ -4,7 +4,7 @@ id: home
 ---
 
 <div class="face">
-  	<img src="/assets/img/adam3.jpg" alt="" width="85" height="85">
+  	<img src="/assets/img/adam4.jpg" alt="" width="85" height="85">
 </div>
 
 # Hey, I'm Adam Silver and I design (and code) simple and inclusive digital services, products and websites.

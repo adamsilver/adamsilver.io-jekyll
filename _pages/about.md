@@ -6,7 +6,7 @@ permalink: /about/
 ---
 
 <div class="face">
-  	<img src="/assets/img/adam3.jpg" alt="Adam Photo" width="85" height="85">
+  	<img src="/assets/img/adam4.jpg" alt="Adam Photo" width="85" height="85">
 </div>
 
 # Adam Silver who?
